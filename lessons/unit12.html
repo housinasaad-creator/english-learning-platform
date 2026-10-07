@@ -1,0 +1,1823 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 12: Future Plans | MOHAMMED ELHUSEYIN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#1a3a6e;--primary-dark:#0f2548;--accent:#f4a624;--al:rgba(244,166,36,0.12);--bg:#0d1b2a;--card:#162030;--card2:#1e2d40;--border:#2d4560;--text:#e8edf5;--muted:#8899b0;--green:#22c55e;--red:#ef4444;--blue:#4a9eff;--purple:#a855f7}
+body{font-family:'Poppins','Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.ar{font-family:'Cairo','Segoe UI',Arial,sans-serif}
+.topnav{background:var(--primary-dark);border-bottom:2px solid var(--accent);padding:10px 24px;display:flex;align-items:center;justify-content:space-between}
+.hero{background:linear-gradient(135deg,#1a3a6e 0%,#0f2548 55%,#0d1f3c 100%);padding:55px 24px 48px;text-align:center;border-bottom:3px solid var(--accent);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;border-radius:50%;background:rgba(244,166,36,0.06)}
+.hero::after{content:'';position:absolute;bottom:-60px;left:-60px;width:300px;height:300px;border-radius:50%;background:rgba(74,158,255,0.05)}
+.unit-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(244,166,36,0.15);border:1px solid rgba(244,166,36,0.4);color:var(--accent);font-weight:800;padding:6px 18px;border-radius:20px;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
+.hero-title{font-size:clamp(28px,6vw,52px);font-weight:900;color:white;line-height:1.15;margin-bottom:8px}
+.hero-title i{color:var(--accent);font-style:italic}
+.hero-ar{font-size:18px;color:var(--muted);margin-bottom:12px;direction:rtl;font-family:'Cairo',sans-serif}
+.hero-sub{color:var(--muted);max-width:620px;margin:0 auto 22px;font-size:14px}
+.hero-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.tag{display:inline-flex;align-items:center;gap:6px;padding:6px 15px;border-radius:16px;font-size:12px;font-weight:700}
+.tag-grammar{background:rgba(244,166,36,0.15);color:var(--accent);border:1px solid rgba(244,166,36,0.3)}
+.tag-other{background:rgba(74,158,255,0.1);color:var(--blue);border:1px solid rgba(74,158,255,0.25)}
+.tag-btn{cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif}
+.tag-btn:hover{transform:translateY(-2px);opacity:.85}
+.main-tabs{display:flex;gap:4px;padding:14px 24px;background:var(--primary-dark);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;flex-wrap:wrap}
+.main-tab{padding:8px 18px;border-radius:8px;border:1px solid transparent;background:none;color:var(--muted);font-weight:700;cursor:pointer;font-size:13px;font-family:'Poppins',sans-serif;transition:all .2s}
+.main-tab.active{background:var(--accent);color:#0d1b2a;border-color:var(--accent)}
+.main-tab:hover:not(.active){background:rgba(244,166,36,.1);color:var(--accent);border-color:rgba(244,166,36,.3)}
+.tab-panel{display:none;padding:20px 24px}
+.tab-panel.active{display:block}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;margin-bottom:16px}
+.card-title{font-size:16px;font-weight:800;color:white;margin-bottom:5px;display:flex;align-items:center;gap:8px}
+.card-ar{font-size:13px;color:var(--muted);margin-bottom:14px;direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.card-note{background:var(--al);border:1px solid rgba(244,166,36,.3);border-radius:10px;padding:10px 14px;font-size:12.5px;color:var(--accent);margin:10px 0;direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.sub-tabs{display:flex;gap:4px;margin:14px 0 18px;flex-wrap:wrap}
+.sub-tab{padding:6px 14px;border-radius:8px;border:1px solid var(--border);background:none;color:var(--muted);font-weight:700;cursor:pointer;font-size:12px;font-family:'Poppins',sans-serif;transition:all .2s}
+.sub-tab.active{background:rgba(244,166,36,.15);border-color:var(--accent);color:var(--accent)}
+.sub-tab:hover:not(.active){border-color:var(--accent);color:var(--accent)}
+.sub-panel{display:none}
+.sub-panel.active{display:block}
+.tts-box{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.tts-btn{background:var(--card2);border:1px solid var(--blue);color:var(--blue);padding:7px 16px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif}
+.tts-btn:hover{background:rgba(74,158,255,.15);transform:translateY(-1px)}
+.tts-stop{border-color:var(--muted);color:var(--muted)}
+.tts-stop:hover{background:rgba(136,153,176,.1)}
+.formula-box{background:rgba(10,30,53,0.8);border:2px solid var(--border);border-radius:14px;padding:18px 22px;margin:14px 0}
+.formula-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid rgba(45,69,96,0.4);flex-wrap:wrap}
+.formula-row:last-child{border-bottom:none}
+.formula-subj{font-size:14px;font-weight:800;color:var(--blue);min-width:160px}
+.formula-be{font-size:15px;font-weight:900;color:var(--accent);background:rgba(244,166,36,.12);padding:4px 12px;border-radius:8px}
+.formula-be.neg{color:var(--red);background:rgba(239,68,68,.1)}
+.formula-be.grn{color:var(--green);background:rgba(34,197,94,.1)}
+.formula-be.pur{color:var(--purple);background:rgba(168,85,247,.1)}
+.formula-be.blu{color:var(--blue);background:rgba(74,158,255,.1)}
+.formula-note{font-size:11px;color:var(--muted);font-style:italic;margin-left:auto}
+.ex-section-title{font-size:12px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin:16px 0 8px}
+.ex-list{margin-top:4px}
+.ex-item{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid rgba(45,69,96,0.3)}
+.ex-item:last-child{border-bottom:none}
+.sp{background:none;border:none;font-size:16px;cursor:pointer;color:var(--blue);flex-shrink:0;padding:2px 0;transition:transform .2s;line-height:1}
+.sp:hover{transform:scale(1.2)}
+.sp-group{display:inline-flex;align-items:center;gap:3px;flex-shrink:0}
+.sp-pp,.sp-st{background:var(--card2);border:1px solid var(--border);color:var(--muted);font-size:12px;padding:3px 7px;border-radius:6px;cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif;line-height:1;min-width:26px;text-align:center}
+.sp-pp:hover{background:rgba(74,158,255,.15);border-color:var(--blue);color:var(--blue)}
+.sp-st:hover{background:rgba(239,68,68,.1);border-color:var(--red);color:var(--red)}
+.ex-en{font-size:13.5px;color:var(--text);font-weight:600;line-height:1.4}
+.ex-en b{color:var(--accent)}
+.ex-ar{font-size:12px;color:var(--muted);margin-top:2px;direction:rtl;font-family:'Cairo',sans-serif}
+.sa-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13px}
+.sa-table th{background:rgba(26,58,110,0.5);color:var(--accent);padding:8px 12px;font-weight:800;text-align:left;border:1px solid var(--border)}
+.sa-table td{padding:8px 12px;border:1px solid rgba(45,69,96,0.4);vertical-align:top}
+.sa-table tr:nth-child(even) td{background:rgba(30,45,64,0.3)}
+.sa-grn{color:var(--green);font-weight:800}
+.sa-acc{color:var(--accent);font-weight:800}
+.sa-blu{color:var(--blue);font-weight:800}
+.sa-pur{color:var(--purple);font-weight:800}
+.fut-cols{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}
+@media(max-width:600px){.fut-cols{grid-template-columns:1fr}}
+.fut-col{background:var(--card2);border-radius:12px;padding:14px;border:1px solid var(--border)}
+.fut-col-head{font-size:20px;font-weight:900;text-align:center;margin-bottom:6px}
+.fut-col.gto .fut-col-head{color:#4a9eff}
+.fut-col.wll .fut-col-head{color:#22c55e}
+.fut-col-sub{font-size:10px;font-weight:700;text-align:center;color:var(--muted);margin-bottom:10px;letter-spacing:1px}
+.fut-tag{display:inline-block;padding:3px 10px;border-radius:6px;font-size:11.5px;font-weight:700;margin:3px 2px}
+.fut-col.gto .fut-tag{background:rgba(74,158,255,0.12);color:#4a9eff;border:1px solid rgba(74,158,255,0.25)}
+.fut-col.wll .fut-tag{background:rgba(34,197,94,0.1);color:#22c55e;border:1px solid rgba(34,197,94,0.25)}
+.mistake-item{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.m-wrong{font-size:13px;color:var(--red);margin-bottom:3px}
+.m-wrong::before{content:'❌ '}
+.m-right{font-size:13px;color:var(--green);font-weight:700;margin-bottom:3px}
+.m-right::before{content:'✅ '}
+.m-why{font-size:11.5px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;border-top:1px solid rgba(45,69,96,.4);padding-top:5px;margin-top:5px}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:8px;margin-top:12px}
+.vocab-item{background:var(--card2);border:1px solid var(--border);border-radius:9px;padding:9px 12px;cursor:pointer;transition:border-color .2s}
+.vocab-item:hover{border-color:var(--accent)}
+.vocab-en{font-size:14px;font-weight:800;color:var(--text)}
+.vocab-form{font-size:11.5px;color:var(--accent);margin-top:2px;font-weight:700}
+.vocab-ar{font-size:11px;color:var(--muted);margin-top:3px;font-family:'Cairo',sans-serif;direction:rtl}
+.vs-wrap{overflow-x:auto;margin:18px 0;padding:4px 0}
+.vs-caption{font-size:11px;color:var(--muted);text-align:center;margin-top:8px;font-style:italic}
+.dlg-card{background:var(--card);border:1px solid var(--border);border-radius:16px;margin-bottom:16px;overflow:hidden}
+.dlg-header{background:linear-gradient(to right,var(--primary),#1a1a4e);padding:13px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.dlg-meta{flex:1}
+.dlg-num{font-size:10px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:2px}
+.dlg-title{font-weight:800;font-size:14px;color:white}
+.dlg-ctx{font-size:11px;color:rgba(255,255,255,.5);font-style:italic;margin-top:2px}
+.dlg-tts{background:rgba(244,166,36,.15);border:1px solid rgba(244,166,36,.4);color:var(--accent);padding:6px 14px;border-radius:8px;font-size:11px;font-weight:700;cursor:pointer;font-family:'Poppins',sans-serif;transition:all .2s;white-space:nowrap}
+.dlg-tts:hover{background:rgba(244,166,36,.3)}
+.dlg-body{padding:20px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:640px){.dlg-body{grid-template-columns:1fr}}
+.dlg-col-head{font-size:10px;font-weight:700;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+.bubble{padding:9px 13px;border-radius:12px;font-size:13px;line-height:1.55;margin-bottom:7px}
+.bubble-a{background:rgba(26,58,110,0.5);border:1px solid rgba(74,158,255,0.2)}
+.bubble-b{background:var(--card2);border:1px solid var(--border)}
+.bubble-name{font-size:9px;font-weight:800;color:var(--muted);margin-bottom:4px;letter-spacing:.5px;text-transform:uppercase}
+.bubble-name.b{color:var(--accent)}
+.bubble-ar{direction:rtl;font-family:'Cairo',sans-serif;font-size:13px;color:var(--text)}
+.layout{display:flex;min-height:100vh}
+.sidebar{width:30%;max-width:320px;min-width:220px;position:fixed;top:0;left:0;bottom:0;background:var(--primary-dark);border-right:2px solid var(--border);display:flex;flex-direction:column;z-index:200;overflow:hidden}
+.sidebar-header{padding:18px 20px 14px;border-bottom:2px solid var(--accent);flex-shrink:0}
+.sidebar-logo{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+.sidebar-logo-icon{width:34px;height:34px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900;color:#0d1b2a;flex-shrink:0}
+.sidebar-logo-text{font-family:'Cairo',sans-serif;font-size:15px;font-weight:800;color:white}
+.sidebar-logo-sub{font-size:10px;color:var(--muted);font-weight:500;margin-top:-1px}
+.sidebar-label{font-family:'Cairo',sans-serif;font-size:11px;font-weight:700;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-top:12px}
+.sidebar-units{flex:1;overflow-y:auto;padding:10px 12px;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+.sidebar-units::-webkit-scrollbar{width:4px}
+.sidebar-units::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+.su-item{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;text-decoration:none;margin-bottom:4px;transition:background .2s,transform .2s}
+.su-item:not(.su-locked):hover{background:rgba(244,166,36,0.12);transform:translateX(3px)}
+.su-item.su-locked{opacity:.45;cursor:default;pointer-events:none}
+.su-item.su-active{background:rgba(244,166,36,0.15);border:1px solid rgba(244,166,36,0.3)}
+.su-num{width:28px;height:28px;border-radius:7px;background:rgba(255,255,255,0.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:var(--accent);flex-shrink:0}
+.su-item:not(.su-locked) .su-num{background:rgba(244,166,36,0.12);border-color:rgba(244,166,36,0.3)}
+.su-texts{flex:1;min-width:0}
+.su-en{font-size:13px;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.su-ar{font-family:'Cairo',sans-serif;font-size:11px;color:var(--muted);direction:rtl;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.su-check{font-size:12px;flex-shrink:0}
+.su-lock{font-size:11px;color:var(--muted);flex-shrink:0}
+.main-content{margin-left:min(30%,320px);flex:1;min-width:0}
+footer{padding:20px 24px;text-align:center;color:var(--muted);font-size:12px;border-top:1px solid var(--border);margin-top:10px}
+
+/* ══ Hamburger (desktop: hidden) ══ */
+.nav-hamburger{display:none;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.3);border-radius:8px;cursor:pointer;flex-direction:column;gap:5px;padding:8px;flex-shrink:0;margin-left:6px}
+.nav-hamburger span{display:block;width:100%;height:2px;background:var(--accent);border-radius:2px}
+/* Backdrop */
+.sb-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:199}
+.sb-backdrop.sb-open{display:block}
+@media(max-width:768px){
+  .sidebar{position:fixed;left:-100%;width:82%;max-width:300px;min-width:unset;transition:left .3s ease;z-index:200}
+  .sidebar.sb-open{left:0}
+  .main-content{margin-left:0}
+  .nav-brand{display:none}
+  .nav-hamburger{display:flex}
+  .topnav{padding:10px 12px;gap:6px}
+  .nav-lesson-name{display:none}
+  .nav-left{gap:5px}
+  .hero{padding:22px 13px 20px}
+  .hero-title{font-size:22px;letter-spacing:-.5px}
+  .hero-ar{font-size:12px}
+  .hero-sub{font-size:12px}
+  .hero-tags{gap:5px;justify-content:center}
+  .tag{font-size:10px;padding:3px 9px}
+  .rule-section{padding:0 12px}
+  .read-wrap{padding:0 12px}
+  .ci-wrap{padding:12px 12px}
+  .ci-hero{padding:18px 12px}
+  .dlg-block{padding:0 12px}
+  .eu-cat-grid{grid-template-columns:1fr}
+  .nu-scale{gap:3px}
+  .nu-word{font-size:10px;padding:3px 7px}
+  .nu-cmp-head,.nu-cmp-row{grid-template-columns:1fr 1fr;font-size:10px}
+  .nu-cmp-head span:last-child,.nu-cmp-row span:last-child{display:none}
+  .reg-ladder{padding:10px 12px}
+  .cmp-table{font-size:11px}
+  .chat-wrap{padding:0 4px}
+  .ci-q{margin-bottom:10px}
+  .ci-opts{gap:5px}
+  .ci-btn{font-size:12px;padding:9px 10px}
+  .vocab-grid{grid-template-columns:1fr 1fr}
+  .rq-opts{gap:5px}
+}
+
+.read-pass{background:rgba(10,25,45,0.6);border:1px solid rgba(45,69,96,0.5);border-radius:12px;padding:18px 20px;line-height:2;font-size:14px;margin:14px 0}
+.read-pass p{margin-bottom:12px}.read-pass p:last-child{margin-bottom:0}
+.read-pass b{color:var(--accent)}.read-pass h4{color:var(--blue);font-size:13px;margin-bottom:4px;margin-top:10px}
+.read-vocab-wrap{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.read-vocab-item{background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:7px 12px;display:flex;gap:8px;align-items:center}
+.rv-en{font-weight:800;font-size:13px;color:var(--text)}
+.rv-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl}
+.read-q{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:14px 16px;margin-bottom:10px}
+.rq-text{font-size:13.5px;font-weight:700;margin-bottom:10px;color:var(--text)}
+.read-opts{display:flex;flex-direction:column;gap:6px}
+.read-opt{text-align:left;background:rgba(10,25,45,0.5);border:1px solid var(--border);border-radius:8px;padding:8px 12px;font-size:12.5px;color:var(--text);cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif}
+.read-opt:hover:not(:disabled){border-color:var(--accent);color:var(--accent);transform:translateY(-1px)}
+.read-opt.correct{background:rgba(34,197,94,0.15)!important;border-color:var(--green)!important;color:var(--green)!important;font-weight:700}
+.read-opt.wrong{background:rgba(239,68,68,0.12)!important;border-color:var(--red)!important;color:var(--red)!important}
+.read-ctx{display:none;background:rgba(244,166,36,0.1);border:1px solid rgba(244,166,36,0.3);border-radius:8px;padding:8px 12px;font-size:12px;color:var(--accent);margin-top:8px;font-style:italic}
+.ci-progress{height:3px;background:rgba(45,69,96,0.5);margin-bottom:16px;border-radius:2px}
+.ci-progress-fill{height:100%;background:var(--accent);border-radius:2px;transition:width .3s}
+.ci-q{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px 20px;margin-bottom:12px}
+.ci-num{font-size:10px;font-weight:800;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px}
+.ci-text{font-size:14px;font-weight:700;color:var(--text);margin-bottom:12px;line-height:1.5}
+.ci-hint{font-size:11px;color:var(--muted);font-style:italic;font-weight:400}
+.ci-opts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(max-width:520px){.ci-opts{grid-template-columns:1fr}}
+.ci-btn{background:var(--card2);border:1px solid var(--border);border-radius:9px;padding:10px 14px;color:var(--text);font-size:12.5px;font-weight:600;cursor:pointer;text-align:left;transition:all .18s;font-family:'Poppins',sans-serif;line-height:1.4}
+.ci-btn:hover:not(:disabled){border-color:var(--accent);color:var(--accent);transform:translateY(-1px)}
+.ci-fib{display:flex;gap:8px;margin-top:8px}
+.ci-fib-in{flex:1;background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:9px 12px;color:var(--text);font-size:13px;font-family:'Poppins',sans-serif;outline:none}
+.ci-fib-in:focus{border-color:var(--accent)}
+.ci-fib-btn{background:rgba(244,166,36,0.15);border:1px solid rgba(244,166,36,0.4);color:var(--accent);padding:9px 16px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;font-family:'Poppins',sans-serif;transition:all .2s;white-space:nowrap}
+.ci-fib-btn:hover:not(:disabled){background:rgba(244,166,36,0.3)}
+.ci-fib-fb{display:none;font-size:12px;font-weight:700;margin-top:6px}
+.ci-brk{display:none;background:linear-gradient(135deg,rgba(244,166,36,0.15),rgba(244,166,36,0.08));border:1px solid rgba(244,166,36,0.35);border-radius:12px;padding:14px 20px;margin-bottom:12px;font-size:14px;font-weight:800;color:var(--accent);text-align:center}
+.ci-score{background:var(--card);border:2px solid var(--accent);border-radius:16px;padding:24px;text-align:center;margin-bottom:20px}
+.ci-score-num{font-size:48px;font-weight:900;color:var(--accent);line-height:1}
+.ci-score-bar{background:rgba(45,69,96,0.5);border-radius:8px;height:12px;margin:14px 0 8px;overflow:hidden}
+.ci-score-fill{height:100%;background:linear-gradient(to right,var(--accent),#ff9500);border-radius:8px;transition:width .6s}
+.ci-score-msg{font-size:16px;font-weight:700;color:var(--text);margin-bottom:16px}
+.ci-reset-btn{background:var(--accent);color:#0d1b2a;border:none;border-radius:10px;padding:10px 28px;font-size:14px;font-weight:800;cursor:pointer;font-family:'Poppins',sans-serif;transition:all .2s}
+.ci-reset-btn:hover{transform:translateY(-2px);opacity:.9}
+.chat-wrap{padding:18px 24px 26px;display:flex;flex-direction:column;gap:14px;background-image:radial-gradient(circle,rgba(244,166,36,0.22) 1.5px,transparent 1.5px),radial-gradient(circle,rgba(74,158,255,0.22) 1.5px,transparent 1.5px);background-size:28px 28px;background-position:0 0,14px 14px}
+.chat-msg{display:flex;flex-direction:column;max-width:70%}
+.chat-msg.right{align-self:flex-end;align-items:flex-end}
+.chat-msg.left{align-self:flex-start;align-items:flex-start}
+.chat-name-tag{font-size:11px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;margin-bottom:5px;padding:0 4px}
+.chat-msg.right .chat-name-tag{color:var(--accent)}
+.chat-msg.left .chat-name-tag{color:var(--blue)}
+.chat-bubble{padding:14px 17px 10px;border-radius:20px;width:100%}
+.chat-msg.right .chat-bubble{background:rgba(55,36,6,0.75);border:1px solid rgba(244,166,36,0.4);border-bottom-right-radius:4px;box-shadow:0 6px 28px rgba(0,0,0,0.65),0 0 18px rgba(244,166,36,0.22)}
+.chat-msg.left .chat-bubble{background:rgba(12,32,72,0.8);border:1px solid rgba(74,158,255,0.35);border-bottom-left-radius:4px;box-shadow:0 6px 28px rgba(0,0,0,0.65),0 0 18px rgba(74,158,255,0.20)}
+.chat-en{font-size:15px;color:var(--text);line-height:1.65;font-weight:500}
+.chat-en b{color:var(--accent)}
+.chat-msg.left .chat-en b{color:var(--blue)}
+.chat-ar{font-size:14px;color:rgba(232,237,245,0.8);direction:rtl;font-family:'Cairo',sans-serif;line-height:1.75;border-top:1px solid rgba(255,255,255,0.09);padding-top:9px;margin-top:9px}
+.chat-bubble-foot{display:flex;justify-content:flex-end;margin-top:9px;padding-top:7px;border-top:1px solid rgba(255,255,255,0.07)}
+.chat-sp-btn{font-size:14px;cursor:pointer;padding:5px 13px;border-radius:20px;transition:all .2s;line-height:1;font-weight:700;letter-spacing:.3px}
+.chat-msg.right .chat-sp-btn{background:rgba(244,166,36,0.18);border:1px solid rgba(244,166,36,0.45);color:var(--accent)}
+.chat-msg.left .chat-sp-btn{background:rgba(74,158,255,0.15);border:1px solid rgba(74,158,255,0.4);color:var(--blue)}
+.chat-sp-btn:hover{transform:scale(1.08);filter:brightness(1.25)}
+
+.nav-home-btn{display:inline-flex;align-items:center;gap:6px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.4);color:var(--accent);font-size:12px;font-weight:800;padding:5px 13px;border-radius:8px;text-decoration:none;transition:all .2s;white-space:nowrap;flex-shrink:0}
+.nav-home-btn:hover{background:rgba(244,166,36,.25);transform:translateY(-2px)}
+.nav-lesson-badge{background:var(--accent);color:#0a1628;font-size:12px;font-weight:900;padding:5px 13px;border-radius:7px;white-space:nowrap;letter-spacing:.3px;flex-shrink:0}
+.nav-lesson-name{font-size:13px;color:rgba(232,237,245,.7);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-sep{color:rgba(136,153,176,.5);font-size:13px;flex-shrink:0}
+.nav-left{display:flex;align-items:center;gap:8px;flex:1;min-width:0}
+.nav-right{display:flex;align-items:center;flex-shrink:0}
+
+.su-level-hd{padding:8px 12px 5px;margin-top:8px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(255,255,255,.05)}
+.su-level-code{font-size:11px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;padding:2px 8px;border-radius:5px;display:inline-block}
+.su-level-name{font-family:'Cairo',sans-serif;font-size:12px;font-weight:700;color:#f4c430;direction:rtl;margin:0;line-height:1}
+.lvl-a1{background:rgba(52,211,153,.15);color:#34d399;border:1px solid rgba(52,211,153,.35)}
+.lvl-a2{background:rgba(74,158,255,.15);color:#4a9eff;border:1px solid rgba(74,158,255,.35)}
+.lvl-b1{background:rgba(245,158,11,.15);color:#f59e0b;border:1px solid rgba(245,158,11,.35)}
+.lvl-b2{background:rgba(244,166,36,.15);color:var(--accent);border:1px solid rgba(244,166,36,.35)}
+.lvl-b2p{background:rgba(251,146,60,.15);color:#fb923c;border:1px solid rgba(251,146,60,.35)}
+.lvl-c1{background:rgba(168,85,247,.15);color:#a855f7;border:1px solid rgba(168,85,247,.35)}
+.su-coming{opacity:.28;cursor:default;pointer-events:none}
+.su-prog{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:6px;overflow:hidden}
+.su-prog-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:2px;width:0%;transition:width .6s ease}
+</style>
+
+<style>
+/* Watermark on print */
+@media print {
+  body::before {
+    content: 'Mohammed Elhuseyin — English Learning Platform — محمية الحقوق';
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-35deg);
+    font-size: 48px;
+    font-weight: 900;
+    color: rgba(244,166,36,0.18);
+    z-index: 9999;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+}
+</style>
+
+<style>
+.float-menu-btn{display:none;position:fixed;bottom:22px;left:18px;z-index:9998;width:48px;height:48px;background:var(--primary-dark,#0f2548);border:2px solid rgba(244,166,36,.5);border-radius:14px;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:12px;box-shadow:0 4px 20px rgba(0,0,0,.4);transition:transform .15s,box-shadow .15s}
+.float-menu-btn:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,.5)}
+.float-menu-btn span{display:block;width:22px;height:2px;background:#f4a624;border-radius:2px;transition:all .25s}
+@media(max-width:768px){.float-menu-btn{display:flex}}
+</style>
+</head>
+<body>
+<div class="layout">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-logo">
+      <div class="sidebar-logo-icon">A</div>
+      <div><div class="sidebar-logo-text ar">MOHAMMED ELHUSEYIN</div><div class="sidebar-logo-sub">English Learning Platform</div></div>
+    </div>
+    <div class="sidebar-label ar">الوحدات الدراسية</div>
+  </div>
+  <div class="sidebar-units">
+  <div class="su-level-hd"><span class="su-level-code lvl-a1">A1</span><span class="su-level-name">مستوى المبتدئ تماماً</span></div>
+  <a href="lesson1.html" class="su-item"><div class="su-num">1</div><div class="su-texts"><div class="su-en">Alphabet & Numbers</div><div class="su-ar">الأحرف والأرقام</div><div class="su-prog"><div class="su-prog-fill" id="sp1"></div></div></div></a>
+  <a href="lesson2.html" class="su-item"><div class="su-num">2</div><div class="su-texts"><div class="su-en">Classroom Language & Greetings</div><div class="su-ar">لغة الصف والتحيات</div><div class="su-prog"><div class="su-prog-fill" id="sp2"></div></div></div></a>
+  <a href="lesson3.html" class="su-item"><div class="su-num">3</div><div class="su-texts"><div class="su-en">Nationalities & Countries</div><div class="su-ar">الجنسيات والدول</div><div class="su-prog"><div class="su-prog-fill" id="sp3"></div></div></div></a>
+  <a href="lesson4.html" class="su-item"><div class="su-num">4</div><div class="su-texts"><div class="su-en">Singular & Plural Nouns</div><div class="su-ar">الأسماء المفردة والجمع</div><div class="su-prog"><div class="su-prog-fill" id="sp4"></div></div></div></a>
+  <a href="lesson5.html" class="su-item"><div class="su-num">5</div><div class="su-texts"><div class="su-en">Days & Telling the Time</div><div class="su-ar">الأيام وإخبار الوقت</div><div class="su-prog"><div class="su-prog-fill" id="sp5"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-a2">A2</span><span class="su-level-name">المستوى الابتدائي</span></div>
+  <a href="unit1.html" class="su-item"><div class="su-num">6</div><div class="su-texts"><div class="su-en">Verb to <i>be</i></div><div class="su-ar">فعل التكوين</div><div class="su-prog"><div class="su-prog-fill" id="sp6"></div></div></div></a>
+  <a href="unit2.html" class="su-item"><div class="su-num">7</div><div class="su-texts"><div class="su-en">Present Simple</div><div class="su-ar">المضارع البسيط</div><div class="su-prog"><div class="su-prog-fill" id="sp7"></div></div></div></a>
+  <a href="unit3.html" class="su-item"><div class="su-num">8</div><div class="su-texts"><div class="su-en">Present Continuous</div><div class="su-ar">المضارع المستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp8"></div></div></div></a>
+  <a href="unit4.html" class="su-item"><div class="su-num">9</div><div class="su-texts"><div class="su-en">Past Simple: was / were</div><div class="su-ar">الماضي البسيط: كان</div><div class="su-prog"><div class="su-prog-fill" id="sp9"></div></div></div></a>
+  <a href="unit6.html" class="su-item"><div class="su-num">10</div><div class="su-texts"><div class="su-en">Past Simple: Regular & Irreg.</div><div class="su-ar">الماضي البسيط للأفعال</div><div class="su-prog"><div class="su-prog-fill" id="sp10"></div></div></div></a>
+  <a href="unit5.html" class="su-item"><div class="su-num">11</div><div class="su-texts"><div class="su-en">Can / Can't</div><div class="su-ar">القدرة والعجز</div><div class="su-prog"><div class="su-prog-fill" id="sp11"></div></div></div></a>
+  <a href="lesson12.html" class="su-item"><div class="su-num">12</div><div class="su-texts"><div class="su-en">Possessive Pronouns</div><div class="su-ar">ضمائر الملكية</div><div class="su-prog"><div class="su-prog-fill" id="sp12"></div></div></div></a>
+  <a href="unit7.html" class="su-item"><div class="su-num">13</div><div class="su-texts"><div class="su-en">There is / There are</div><div class="su-ar">يوجد / توجد</div><div class="su-prog"><div class="su-prog-fill" id="sp13"></div></div></div></a>
+  <a href="unit8.html" class="su-item"><div class="su-num">14</div><div class="su-texts"><div class="su-en">Adjectives</div><div class="su-ar">الصفات</div><div class="su-prog"><div class="su-prog-fill" id="sp14"></div></div></div></a>
+  <a href="unit9.html" class="su-item"><div class="su-num">15</div><div class="su-texts"><div class="su-en">Imperatives</div><div class="su-ar">صيغة الأمر والنهي</div><div class="su-prog"><div class="su-prog-fill" id="sp15"></div></div></div></a>
+  <a href="unit10.html" class="su-item"><div class="su-num">16</div><div class="su-texts"><div class="su-en">Object Pronouns</div><div class="su-ar">ضمائر المفعول به</div><div class="su-prog"><div class="su-prog-fill" id="sp16"></div></div></div></a>
+  <a href="unit11.html" class="su-item"><div class="su-num">17</div><div class="su-texts"><div class="su-en">Prepositions of Time & Place</div><div class="su-ar">حروف جر الوقت والمكان</div><div class="su-prog"><div class="su-prog-fill" id="sp17"></div></div></div></a>
+  <a href="unit12.html" class="su-item su-active"><div class="su-num">18</div><div class="su-texts"><div class="su-en">Future Plans: going to</div><div class="su-ar">خطط المستقبل</div><div class="su-prog"><div class="su-prog-fill" id="sp18"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b1">B1</span><span class="su-level-name">تحت المتوسط</span></div>
+  <a href="lesson19.html" class="su-item"><div class="su-num">19</div><div class="su-texts"><div class="su-en">Present Perfect Introduction</div><div class="su-ar">مقدمة المضارع التام</div><div class="su-prog"><div class="su-prog-fill" id="sp19"></div></div></div></a>
+  <a href="lesson20.html" class="su-item"><div class="su-num">20</div><div class="su-texts"><div class="su-en">Past Continuous</div><div class="su-ar">الماضي المستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp20"></div></div></div></a>
+  <a href="lesson21.html" class="su-item"><div class="su-num">21</div><div class="su-texts"><div class="su-en">will vs. going to</div><div class="su-ar">المستقبل: إرادة أم تخطيط؟</div><div class="su-prog"><div class="su-prog-fill" id="sp21"></div></div></div></a>
+  <a href="lesson22.html" class="su-item"><div class="su-num">22</div><div class="su-texts"><div class="su-en">like / love / hate + -ing</div><div class="su-ar">التعبير عن التفضيلات</div><div class="su-prog"><div class="su-prog-fill" id="sp22"></div></div></div></a>
+  <a href="lesson23.html" class="su-item"><div class="su-num">23</div><div class="su-texts"><div class="su-en">Comparatives & Superlatives</div><div class="su-ar">المقارنة والتفضيل</div><div class="su-prog"><div class="su-prog-fill" id="sp23"></div></div></div></a>
+  <a href="lesson24.html" class="su-item"><div class="su-num">24</div><div class="su-texts"><div class="su-en">must / have to / should</div><div class="su-ar">أفعال الإلزام والنصيحة</div><div class="su-prog"><div class="su-prog-fill" id="sp24"></div></div></div></a>
+  <a href="lesson25.html" class="su-item"><div class="su-num">25</div><div class="su-texts"><div class="su-en">Infinitives & Gerunds</div><div class="su-ar">المصدر وصيغة الـ ing</div><div class="su-prog"><div class="su-prog-fill" id="sp25"></div></div></div></a>
+  <a href="lesson26.html" class="su-item"><div class="su-num">26</div><div class="su-texts"><div class="su-en">Articles: a/an / the</div><div class="su-ar">أدوات التعريف والتنكير</div><div class="su-prog"><div class="su-prog-fill" id="sp26"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b2">B2</span><span class="su-level-name">المستوى المتوسط</span></div>
+  <a href="lesson27.html" class="su-item"><div class="su-num">27</div><div class="su-texts"><div class="su-en">Present Perfect vs. Past Simple</div><div class="su-ar">المقارنة بين الماضي والتام</div><div class="su-prog"><div class="su-prog-fill" id="sp27"></div></div></div></a>
+  <a href="lesson28.html" class="su-item"><div class="su-num">28</div><div class="su-texts"><div class="su-en">Passive Voice</div><div class="su-ar">المبني للمجهول</div><div class="su-prog"><div class="su-prog-fill" id="sp28"></div></div></div></a>
+  <a href="lesson29.html" class="su-item"><div class="su-num">29</div><div class="su-texts"><div class="su-en">Zero / First / Second Cond.</div><div class="su-ar">الجمل الشرطية 0-1-2</div><div class="su-prog"><div class="su-prog-fill" id="sp29"></div></div></div></a>
+  <a href="lesson30.html" class="su-item"><div class="su-num">30</div><div class="su-texts"><div class="su-en">Reported Speech</div><div class="su-ar">الكلام غير المباشر</div><div class="su-prog"><div class="su-prog-fill" id="sp30"></div></div></div></a>
+  <a href="lesson31.html" class="su-item"><div class="su-num">31</div><div class="su-texts"><div class="su-en">Relative Clauses</div><div class="su-ar">جمل الوصل: who / which</div><div class="su-prog"><div class="su-prog-fill" id="sp31"></div></div></div></a>
+  <a href="lesson32.html" class="su-item"><div class="su-num">32</div><div class="su-texts"><div class="su-en">Quantifiers</div><div class="su-ar">محددات الكمية</div><div class="su-prog"><div class="su-prog-fill" id="sp32"></div></div></div></a>
+  <a href="lesson33.html" class="su-item"><div class="su-num">33</div><div class="su-texts"><div class="su-en">Phrasal Verbs Introduction</div><div class="su-ar">مقدمة الأفعال المركبة</div><div class="su-prog"><div class="su-prog-fill" id="sp33"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b2p">B2+</span><span class="su-level-name">فوق المتوسط</span></div>
+  <a href="lesson34.html" class="su-item"><div class="su-num">34</div><div class="su-texts"><div class="su-en">Narrative Tenses & Past Perfect</div><div class="su-ar">أزمنة السرد والماضي التام</div><div class="su-prog"><div class="su-prog-fill" id="sp34"></div></div></div></a>
+  <a href="lesson35.html" class="su-item"><div class="su-num">35</div><div class="su-texts"><div class="su-en">Future Perfect & Continuous</div><div class="su-ar">المستقبل التام والمستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp35"></div></div></div></a>
+  <a href="lesson36.html" class="su-item"><div class="su-num">36</div><div class="su-texts"><div class="su-en">Third Conditional & Regrets</div><div class="su-ar">الشرط الثالث والندم</div><div class="su-prog"><div class="su-prog-fill" id="sp36"></div></div></div></a>
+  <a href="lesson37.html" class="su-item"><div class="su-num">37</div><div class="su-texts"><div class="su-en">Causative: have/get done</div><div class="su-ar">الأفعال السببية</div><div class="su-prog"><div class="su-prog-fill" id="sp37"></div></div></div></a>
+  <a href="lesson38.html" class="su-item"><div class="su-num">38</div><div class="su-texts"><div class="su-en">Advanced Passive</div><div class="su-ar">المبني للمجهول المتقدم</div><div class="su-prog"><div class="su-prog-fill" id="sp38"></div></div></div></a>
+  <a href="lesson39.html" class="su-item"><div class="su-num">39</div><div class="su-texts"><div class="su-en">Speculation: must/might/can't</div><div class="su-ar">التخمين والاستنتاج</div><div class="su-prog"><div class="su-prog-fill" id="sp39"></div></div></div></a>
+  <a href="lesson40.html" class="su-item"><div class="su-num">40</div><div class="su-texts"><div class="su-en">Idioms & Collocations</div><div class="su-ar">المصطلحات والتعبيرات</div><div class="su-prog"><div class="su-prog-fill" id="sp40"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-c1">C1</span><span class="su-level-name">المستوى المتقدم الأكاديمي</span></div>
+  <a href="lesson41.html" class="su-item"><div class="su-num">41</div><div class="su-texts"><div class="su-en">Inversion & Emphatic Structures</div><div class="su-ar">التقديم والتأخير للتأكيد</div><div class="su-prog"><div class="su-prog-fill" id="sp41"></div></div></div></a>
+  <a href="lesson42.html" class="su-item"><div class="su-num">42</div><div class="su-texts"><div class="su-en">Mixed Conditionals</div><div class="su-ar">الجمل الشرطية المختلطة</div><div class="su-prog"><div class="su-prog-fill" id="sp42"></div></div></div></a>
+  <a href="lesson43.html" class="su-item"><div class="su-num">43</div><div class="su-texts"><div class="su-en">Advanced Gerunds & Infinitives</div><div class="su-ar">المصادر المتقدمة</div><div class="su-prog"><div class="su-prog-fill" id="sp43"></div></div></div></a>
+  <a href="lesson44.html" class="su-item"><div class="su-num">44</div><div class="su-texts"><div class="su-en">Cleft Sentences</div><div class="su-ar">الجمل المشقوقة</div><div class="su-prog"><div class="su-prog-fill" id="sp44"></div></div></div></a>
+  <a href="lesson45.html" class="su-item"><div class="su-num">45</div><div class="su-texts"><div class="su-en">Discourse Markers</div><div class="su-ar">أدوات الربط الأكاديمية</div><div class="su-prog"><div class="su-prog-fill" id="sp45"></div></div></div></a>
+  <a href="lesson46.html" class="su-item"><div class="su-num">46</div><div class="su-texts"><div class="su-en">Nuances & Euphemisms</div><div class="su-ar">الفروقات الدقيقة والتلطيف</div><div class="su-prog"><div class="su-prog-fill" id="sp46"></div></div></div></a>
+</div>
+</aside>
+
+<!-- MAIN CONTENT -->
+<div class="main-content">
+
+<nav class="topnav">
+  <div class="nav-left">
+    <a href="../index.html">🏠 Home</a>
+    <span class="nav-sep">›</span>
+    <span>Unit 12</span>
+  </div>
+  <div class="nav-brand">AO English</div>
+</nav>
+
+<div class="hero">
+  <div class="unit-badge">📚 Unit 12</div>
+  <h1 class="hero-title">Future <i>Plans</i></h1>
+  <p class="hero-ar">خطط المستقبل — going to / will / تعبيرات الزمن المستقبل</p>
+  <p class="hero-sub">Learn to talk about your plans, make promises, and predict the future.</p>
+  <div class="hero-tags">
+    <button class="tag tag-grammar tag-btn" onclick="jumpTab('grammar')">📖 Grammar</button>
+    <button class="tag tag-other tag-btn" onclick="jumpTab('everyday')">🗣 Everyday English</button>
+    <button class="tag tag-other tag-btn" onclick="jumpTab('reading')">📚 Reading</button>
+    <button class="tag tag-other tag-btn" onclick="jumpTab('checkit')">✏️ 25 سؤال</button>
+  </div>
+</div>
+
+<div class="main-tabs">
+  <button class="main-tab active" onclick="showTab('grammar',this)">📖 Grammar</button>
+  <button class="main-tab" onclick="showTab('everyday',this)">🗣 Everyday English</button>
+  <button class="main-tab" onclick="showTab('reading',this)">📚 Reading</button>
+  <button class="main-tab" onclick="showTab('checkit',this)">✏️ Check It</button>
+</div>
+
+<!-- ══════════════════════════════════════ GRAMMAR TAB -->
+<div id="tab-grammar" class="tab-panel active">
+<div style="max-width:960px;margin:0 auto">
+
+<div class="card">
+  <h2 class="card-title">🔭 Future Plans — going to &amp; will</h2>
+  <p class="card-ar">نستخدم going to للخطط المسبقة والتوقعات المبنية على دليل، ونستخدم will للقرارات اللحظية والوعود والتوقعات</p>
+
+  <div style="overflow-x:auto;margin:18px 0;padding:4px 0">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;min-width:500px">
+
+      <!-- GOING TO -->
+      <svg viewBox="0 0 390 290" xmlns="http://www.w3.org/2000/svg" font-family="Poppins,sans-serif" style="width:100%;display:block;border-radius:12px">
+        <rect width="390" height="290" rx="12" fill="#0d1b2a"/>
+        <rect x="10" y="10" width="368" height="268" rx="10" fill="rgba(74,158,255,0.06)" stroke="rgba(74,158,255,0.3)" stroke-width="1.5"/>
+        <text x="194" y="46" text-anchor="middle" font-size="26" font-weight="900" fill="#4a9eff">GOING TO</text>
+        <text x="194" y="64" text-anchor="middle" font-size="10" fill="#8899b0">S + am/is/are + going to + V</text>
+        <rect x="22" y="74" width="344" height="28" rx="6" fill="rgba(74,158,255,0.1)"/>
+        <text x="194" y="92" text-anchor="middle" font-size="12" font-weight="700" fill="#4a9eff">Subject + am/is/are + going to + V</text>
+        <text x="22" y="122" fill="#e8edf5" font-size="11.5" font-weight="600">✦  I'm going to visit my parents.</text>
+        <text x="22" y="140" fill="#e8edf5" font-size="11.5" font-weight="600">✦  She's going to study medicine.</text>
+        <text x="22" y="158" fill="#e8edf5" font-size="11.5" font-weight="600">✦  They aren't going to wait for us.</text>
+        <text x="22" y="176" fill="#e8edf5" font-size="11.5" font-weight="600">✦  Are you going to apply for the job?</text>
+        <text x="22" y="202" fill="#8899b0" font-size="10" font-weight="700" letter-spacing="1">WHEN TO USE:</text>
+        <rect x="22" y="210" width="112" height="22" rx="5" fill="rgba(74,158,255,0.12)" stroke="rgba(74,158,255,0.3)" stroke-width="1"/>
+        <text x="78" y="225" text-anchor="middle" font-size="11" font-weight="700" fill="#4a9eff">📅 Plans &amp; Intentions</text>
+        <rect x="142" y="210" width="134" height="22" rx="5" fill="rgba(74,158,255,0.12)" stroke="rgba(74,158,255,0.3)" stroke-width="1"/>
+        <text x="209" y="225" text-anchor="middle" font-size="11" font-weight="700" fill="#4a9eff">🔍 Evidence Predictions</text>
+        <text x="22" y="258" fill="#8899b0" font-size="10.5">❌ I'm <tspan fill="#ef4444" font-weight="700">not going to</tspan> be late.</text>
+        <text x="22" y="274" fill="#8899b0" font-size="10.5">? <tspan fill="#4a9eff" font-weight="700">Are</tspan> they going to come?</text>
+      </svg>
+
+      <!-- WILL -->
+      <svg viewBox="0 0 390 290" xmlns="http://www.w3.org/2000/svg" font-family="Poppins,sans-serif" style="width:100%;display:block;border-radius:12px">
+        <rect width="390" height="290" rx="12" fill="#0d1b2a"/>
+        <rect x="10" y="10" width="368" height="268" rx="10" fill="rgba(34,197,94,0.06)" stroke="rgba(34,197,94,0.3)" stroke-width="1.5"/>
+        <text x="194" y="46" text-anchor="middle" font-size="26" font-weight="900" fill="#22c55e">WILL</text>
+        <text x="194" y="64" text-anchor="middle" font-size="10" fill="#8899b0">S + will / won't + V (base form)</text>
+        <rect x="22" y="74" width="344" height="28" rx="6" fill="rgba(34,197,94,0.08)"/>
+        <text x="194" y="92" text-anchor="middle" font-size="12" font-weight="700" fill="#22c55e">Subject + will / won't + base verb</text>
+        <text x="22" y="122" fill="#e8edf5" font-size="11.5" font-weight="600">✦  I'll call you this evening.</text>
+        <text x="22" y="140" fill="#e8edf5" font-size="11.5" font-weight="600">✦  She'll probably be late.</text>
+        <text x="22" y="158" fill="#e8edf5" font-size="11.5" font-weight="600">✦  He won't forget your birthday.</text>
+        <text x="22" y="176" fill="#e8edf5" font-size="11.5" font-weight="600">✦  Will you help me with this?</text>
+        <text x="22" y="202" fill="#8899b0" font-size="10" font-weight="700" letter-spacing="1">WHEN TO USE:</text>
+        <rect x="22" y="210" width="108" height="22" rx="5" fill="rgba(34,197,94,0.1)" stroke="rgba(34,197,94,0.3)" stroke-width="1"/>
+        <text x="76" y="225" text-anchor="middle" font-size="11" font-weight="700" fill="#22c55e">⚡ Quick Decisions</text>
+        <rect x="138" y="210" width="84" height="22" rx="5" fill="rgba(34,197,94,0.1)" stroke="rgba(34,197,94,0.3)" stroke-width="1"/>
+        <text x="180" y="225" text-anchor="middle" font-size="11" font-weight="700" fill="#22c55e">🤝 Promises</text>
+        <rect x="230" y="210" width="76" height="22" rx="5" fill="rgba(34,197,94,0.1)" stroke="rgba(34,197,94,0.3)" stroke-width="1"/>
+        <text x="268" y="225" text-anchor="middle" font-size="11" font-weight="700" fill="#22c55e">💭 Opinions</text>
+        <text x="22" y="258" fill="#8899b0" font-size="10.5">I will → <tspan fill="#22c55e" font-weight="700">I'll</tspan>  ·  will not → <tspan fill="#22c55e" font-weight="700">won't</tspan></text>
+        <text x="22" y="274" fill="#8899b0" font-size="10.5">he will → <tspan fill="#22c55e" font-weight="700">he'll</tspan>  ·  they will → <tspan fill="#22c55e" font-weight="700">they'll</tspan></text>
+      </svg>
+
+    </div>
+  </div>
+  <p class="vs-caption">GOING TO للخطط المسبقة والأدلة · WILL للقرارات اللحظية والوعود والآراء</p>
+</div>
+
+<!-- SUB-TABS -->
+<div class="card">
+  <div class="sub-tabs">
+    <button class="sub-tab active" onclick="showSub('sub-gto',this)">Going To</button>
+    <button class="sub-tab" onclick="showSub('sub-wll',this)">Will</button>
+    <button class="sub-tab" onclick="showSub('sub-vs',this)">Going To vs Will</button>
+    <button class="sub-tab" onclick="showSub('sub-time',this)">Future Time</button>
+    <button class="sub-tab" onclick="showSub('sub-tips',this)">Tips</button>
+  </div>
+
+  <!-- SUB: Going To -->
+  <div id="sub-gto" class="sub-panel active">
+    <h3 class="card-title" style="margin-bottom:12px">📅 Going To — الهيكل الكامل</h3>
+    <p class="card-ar">نستخدم going to لخطط قررناها مسبقاً أو للتوقع بناءً على دليل واضح أمامنا</p>
+    <div class="tts-box">
+      <button class="tts-btn" onclick="ttsGrammar('gto')">🔊 Listen to examples</button>
+      <button class="tts-btn tts-stop" onclick="window.speechSynthesis.cancel()">⏹ Stop</button>
+    </div>
+    <div class="formula-box">
+      <div class="formula-row">
+        <span class="formula-subj">✅ Positive</span>
+        <span class="formula-be blu">Subject</span>
+        <span style="color:var(--accent);font-weight:800">+</span>
+        <span class="formula-be">am / is / are</span>
+        <span style="color:var(--accent);font-weight:800">+</span>
+        <span class="formula-be grn">going to</span>
+        <span style="color:var(--accent);font-weight:800">+</span>
+        <span class="formula-be pur">base verb</span>
+      </div>
+      <div class="formula-row">
+        <span class="formula-subj">❌ Negative</span>
+        <span class="formula-be blu">Subject</span>
+        <span style="color:var(--accent);font-weight:800">+</span>
+        <span class="formula-be neg">am not / isn't / aren't</span>
+        <span style="color:var(--accent);font-weight:800">+</span>
+        <span class="formula-be grn">going to</span>
+        <span style="color:var(--accent);font-weight:800">+</span>
+        <span class="formula-be pur">base verb</span>
+      </div>
+      <div class="formula-row">
+        <span class="formula-subj">❓ Question</span>
+        <span class="formula-be">Am / Is / Are</span>
+        <span style="color:var(--accent);font-weight:800">+</span>
+        <span class="formula-be blu">Subject</span>
+        <span style="color:var(--accent);font-weight:800">+</span>
+        <span class="formula-be grn">going to</span>
+        <span style="color:var(--accent);font-weight:800">+</span>
+        <span class="formula-be pur">base verb</span>
+        <span style="color:var(--accent);font-weight:800">?</span>
+      </div>
+    </div>
+    <div class="ex-section-title">✅ Positive Examples</div>
+    <div class="ex-list">
+      <div class="ex-item"><button class="sp" onclick="ttsRead('I am going to visit my parents this weekend.',0.9)">🔊</button><div><div class="ex-en">I <b>am going to</b> visit my parents this weekend.</div><div class="ex-ar">أنا سأزور والديّ هذا الأسبوع.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('She is going to study medicine at university.',0.9)">🔊</button><div><div class="ex-en">She <b>is going to</b> study medicine at university.</div><div class="ex-ar">هي ستدرس الطب في الجامعة.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('They are going to move to a new city next year.',0.9)">🔊</button><div><div class="ex-en">They <b>are going to</b> move to a new city next year.</div><div class="ex-ar">هم سينتقلون إلى مدينة جديدة العام القادم.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('We are going to save money for a holiday.',0.9)">🔊</button><div><div class="ex-en">We <b>are going to</b> save money for a holiday.</div><div class="ex-ar">سنوفّر المال لعطلة.</div></div></div>
+    </div>
+    <div class="ex-section-title">❌ Negative Examples</div>
+    <div class="ex-list">
+      <div class="ex-item"><button class="sp" onclick="ttsRead('He is not going to come to the party.',0.9)">🔊</button><div><div class="ex-en">He <b>isn't going to</b> come to the party.</div><div class="ex-ar">هو لن يأتي إلى الحفلة.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('We are not going to order pizza tonight.',0.9)">🔊</button><div><div class="ex-en">We <b>aren't going to</b> order pizza tonight.</div><div class="ex-ar">لن نطلب بيتزا الليلة.</div></div></div>
+    </div>
+    <div class="ex-section-title">❓ Question Examples</div>
+    <div class="ex-list">
+      <div class="ex-item"><button class="sp" onclick="ttsRead('Are you going to cook dinner tonight?',0.9)">🔊</button><div><div class="ex-en"><b>Are</b> you <b>going to</b> cook dinner tonight?</div><div class="ex-ar">هل ستطبخ العشاء الليلة؟</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('Is she going to apply for the job?',0.9)">🔊</button><div><div class="ex-en"><b>Is</b> she <b>going to</b> apply for the job?</div><div class="ex-ar">هل ستتقدم للوظيفة؟</div></div></div>
+    </div>
+    <div class="card-note">💡 الإجابات القصيرة: Yes, I am. / No, she isn't. / Yes, they are. / No, we aren't.</div>
+    <div class="ex-section-title">🔍 استخدام going to للتوقع بدليل</div>
+    <div class="ex-list">
+      <div class="ex-item"><button class="sp" onclick="ttsRead('Look at those clouds! It is going to rain.',0.9)">🔊</button><div><div class="ex-en">Look at those clouds! It <b>is going to</b> rain.</div><div class="ex-ar">انظر إلى تلك الغيوم! ستمطر. (دليل: الغيوم)</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('He is running so fast. He is going to win the race!',0.9)">🔊</button><div><div class="ex-en">He is running so fast. He <b>is going to</b> win the race!</div><div class="ex-ar">هو يجري بسرعة كبيرة. سيفوز بالسباق! (دليل: الجري السريع)</div></div></div>
+    </div>
+  </div>
+
+  <!-- SUB: Will -->
+  <div id="sub-wll" class="sub-panel">
+    <h3 class="card-title" style="margin-bottom:12px">⚡ Will — الهيكل الكامل</h3>
+    <p class="card-ar">نستخدم will للقرارات اللحظية والوعود والعروض وكذلك للتوقعات والآراء عن المستقبل</p>
+    <div class="tts-box">
+      <button class="tts-btn" onclick="ttsGrammar('wll')">🔊 Listen to examples</button>
+      <button class="tts-btn tts-stop" onclick="window.speechSynthesis.cancel()">⏹ Stop</button>
+    </div>
+    <div class="formula-box">
+      <div class="formula-row">
+        <span class="formula-subj">✅ Positive</span>
+        <span class="formula-be blu">Subject</span>
+        <span style="color:var(--accent);font-weight:800">+</span>
+        <span class="formula-be grn">will (= 'll)</span>
+        <span style="color:var(--accent);font-weight:800">+</span>
+        <span class="formula-be pur">base verb</span>
+        <span class="formula-note">لا to بعد will</span>
+      </div>
+      <div class="formula-row">
+        <span class="formula-subj">❌ Negative</span>
+        <span class="formula-be blu">Subject</span>
+        <span style="color:var(--accent);font-weight:800">+</span>
+        <span class="formula-be neg">won't</span>
+        <span style="color:var(--accent);font-weight:800">+</span>
+        <span class="formula-be pur">base verb</span>
+        <span class="formula-note">won't = will not</span>
+      </div>
+      <div class="formula-row">
+        <span class="formula-subj">❓ Question</span>
+        <span class="formula-be grn">Will</span>
+        <span style="color:var(--accent);font-weight:800">+</span>
+        <span class="formula-be blu">Subject</span>
+        <span style="color:var(--accent);font-weight:800">+</span>
+        <span class="formula-be pur">base verb</span>
+        <span style="color:var(--accent);font-weight:800">?</span>
+      </div>
+    </div>
+    <div class="ex-section-title">⚡ Spontaneous Decisions — قرار لحظي</div>
+    <div class="ex-list">
+      <div class="ex-item"><button class="sp" onclick="ttsRead('The phone is ringing. I will answer it.',0.9)">🔊</button><div><div class="ex-en">The phone is ringing. <b>I'll</b> answer it.</div><div class="ex-ar">الهاتف يرن. سأرد عليه. (قرار الآن)</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('I am hungry. I will make a sandwich.',0.9)">🔊</button><div><div class="ex-en">I'm hungry. <b>I'll</b> make a sandwich.</div><div class="ex-ar">أنا جائع. سأصنع شطيرة. (قرار الآن)</div></div></div>
+    </div>
+    <div class="ex-section-title">🤝 Offers &amp; Promises — عروض ووعود</div>
+    <div class="ex-list">
+      <div class="ex-item"><button class="sp" onclick="ttsRead('Do not worry. I will help you with your homework.',0.9)">🔊</button><div><div class="ex-en">Don't worry. <b>I'll</b> help you with your homework.</div><div class="ex-ar">لا تقلق. سأساعدك في واجبك. (عرض)</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('I promise I will never tell anyone your secret.',0.9)">🔊</button><div><div class="ex-en">I promise <b>I'll</b> never tell anyone your secret.</div><div class="ex-ar">أعدك، لن أخبر أحداً بسرّك. (وعد)</div></div></div>
+    </div>
+    <div class="ex-section-title">💭 Predictions &amp; Opinions — توقعات وآراء</div>
+    <div class="ex-list">
+      <div class="ex-item"><button class="sp" onclick="ttsRead('I think she will pass the exam. She studied hard.',0.9)">🔊</button><div><div class="ex-en">I think <b>she'll</b> pass the exam. She studied hard.</div><div class="ex-ar">أعتقد أنها ستنجح في الامتحان.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('It will probably be sunny tomorrow.',0.9)">🔊</button><div><div class="ex-en">It <b>will</b> probably be sunny tomorrow.</div><div class="ex-ar">من المحتمل أن يكون الجو مشمساً غداً.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('He won't be late. He is always on time.',0.9)">🔊</button><div><div class="ex-en">He <b>won't</b> be late. He is always on time.</div><div class="ex-ar">لن يتأخر. هو دائماً في الوقت.</div></div></div>
+    </div>
+    <div class="card-note">💡 الإجابات القصيرة: Will you come? — Yes, I will. / No, I won't.</div>
+  </div>
+
+  <!-- SUB: Going To vs Will -->
+  <div id="sub-vs" class="sub-panel">
+    <h3 class="card-title" style="margin-bottom:12px">⚖️ Going To vs Will — متى نستخدم كل واحد؟</h3>
+    <table class="sa-table">
+      <tr><th>الموقف</th><th>الأداة</th><th>مثال</th></tr>
+      <tr><td>خطة قررتها قبل الكلام</td><td class="sa-blu">going to</td><td>"I'm going to visit my aunt tomorrow." (قرار سابق)</td></tr>
+      <tr><td>قرار لحظي عند الكلام</td><td class="sa-grn">will</td><td>"The phone's ringing — I'll get it!" (قرار الآن)</td></tr>
+      <tr><td>توقع بدليل مرئي</td><td class="sa-blu">going to</td><td>"Look! It's going to snow!" (السماء ملبدة)</td></tr>
+      <tr><td>رأي أو توقع عام</td><td class="sa-grn">will</td><td>"I think it will rain tomorrow." (رأي شخصي)</td></tr>
+      <tr><td>عرض المساعدة</td><td class="sa-grn">will</td><td>"I'll carry that for you." (عرض لحظي)</td></tr>
+      <tr><td>وعد</td><td class="sa-grn">will</td><td>"I'll always be there for you." (وعد)</td></tr>
+    </table>
+    <div class="card-note">🔑 الفرق الأساسي: going to = قبل هذه اللحظة · will = في هذه اللحظة</div>
+    <div class="ex-list" style="margin-top:14px">
+      <div class="ex-item"><button class="sp" onclick="ttsRead('I am going to cook pasta tonight. I already bought the ingredients.',0.9)">🔊</button><div><div class="ex-en"><b>Going to:</b> "I'm going to cook pasta tonight." <span style="color:var(--muted);font-size:12px">(bought ingredients already)</span></div><div class="ex-ar">خطة مسبقة — اشترى المكونات بالفعل</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('I am hungry. I will make some pasta.',0.9)">🔊</button><div><div class="ex-en"><b>Will:</b> "I'm hungry. I'll make some pasta." <span style="color:var(--muted);font-size:12px">(decided just now)</span></div><div class="ex-ar">قرار لحظي — قررها الآن للتو</div></div></div>
+    </div>
+  </div>
+
+  <!-- SUB: Future Time -->
+  <div id="sub-time" class="sub-panel">
+    <h3 class="card-title" style="margin-bottom:12px">🗓 Future Time Expressions — تعبيرات الزمن المستقبل</h3>
+    <p class="card-ar">هذه الكلمات تخبرنا متى سيحدث الشيء في المستقبل</p>
+    <div class="tts-box">
+      <button class="tts-btn" onclick="ttsGrammar('time')">🔊 Listen</button>
+      <button class="tts-btn tts-stop" onclick="window.speechSynthesis.cancel()">⏹ Stop</button>
+    </div>
+    <table class="sa-table">
+      <tr><th>English</th><th>عربي</th><th>مثال</th></tr>
+      <tr><td class="sa-acc">tomorrow</td><td>غداً</td><td>I'll call you tomorrow.</td></tr>
+      <tr><td class="sa-acc">tonight</td><td>الليلة</td><td>We're going to eat out tonight.</td></tr>
+      <tr><td class="sa-acc">this evening</td><td>هذا المساء</td><td>She'll be here this evening.</td></tr>
+      <tr><td class="sa-acc">next week</td><td>الأسبوع القادم</td><td>They're going to move next week.</td></tr>
+      <tr><td class="sa-acc">next month</td><td>الشهر القادم</td><td>I'll start my new job next month.</td></tr>
+      <tr><td class="sa-acc">next year</td><td>العام القادم</td><td>She's going to graduate next year.</td></tr>
+      <tr><td class="sa-acc">next summer</td><td>الصيف القادم</td><td>We'll travel to Europe next summer.</td></tr>
+      <tr><td class="sa-acc">in three days</td><td>بعد ثلاثة أيام</td><td>He'll be back in three days.</td></tr>
+      <tr><td class="sa-acc">in the future</td><td>في المستقبل</td><td>I'm going to retire in the future.</td></tr>
+      <tr><td class="sa-acc">soon</td><td>قريباً</td><td>She'll finish soon.</td></tr>
+      <tr><td class="sa-acc">later</td><td>لاحقاً</td><td>I'll do it later.</td></tr>
+      <tr><td class="sa-acc">one day</td><td>يوماً ما</td><td>One day I'll buy a house.</td></tr>
+    </table>
+    <div class="card-note">⏰ هذه التعبيرات تُستخدم مع كل من will و going to بحسب السياق</div>
+  </div>
+
+  <!-- SUB: Tips -->
+  <div id="sub-tips" class="sub-panel">
+    <h3 class="card-title" style="margin-bottom:12px">💡 Tips — نصائح مهمة</h3>
+    <div class="ex-list">
+      <div class="ex-item"><div><div class="ex-en">1. After <b>will</b>, use the <b>base form</b> — no "to"!</div><div class="ex-ar">بعد will نستخدم الفعل الأساسي مباشرة — لا to</div></div></div>
+      <div class="ex-item"><div><div class="ex-en">2. Contractions: <b>I'll / She'll / They'll / won't</b></div><div class="ex-ar">نختصر will في الكلام: I will → I'll · will not → won't</div></div></div>
+      <div class="ex-item"><div><div class="ex-en">3. <b>"Gonna"</b> = going to (spoken only — avoid in writing!)</div><div class="ex-ar">gonna تُستخدم في الكلام فقط — لا في الكتابة الرسمية</div></div></div>
+      <div class="ex-item"><div><div class="ex-en">4. In time clauses (when / after / before / as soon as) — use <b>Present Simple</b>, NOT will or going to</div><div class="ex-ar">في جمل الوقت — نستخدم المضارع البسيط وليس will</div></div></div>
+    </div>
+    <div class="ex-list" style="margin-top:8px">
+      <div class="ex-item"><button class="sp" onclick="ttsRead('I will call you when I arrive. Not: when I will arrive.',0.9)">🔊</button><div><div class="ex-en">✅ I'll call you <b>when I arrive</b>. &nbsp; ❌ when I will arrive.</div><div class="ex-ar">نستخدم Present Simple في جملة الوقت</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('As soon as she finishes, she will call us.',0.9)">🔊</button><div><div class="ex-en">✅ As soon as <b>she finishes</b>, she'll call us.</div><div class="ex-ar">as soon as + مضارع — ليس will</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- COMMON MISTAKES -->
+<div class="card">
+  <h3 class="card-title">⚠️ Common Mistakes — أخطاء شائعة</h3>
+  <div class="mistake-item"><div class="m-wrong">I go to buy a new phone tomorrow.</div><div class="m-right">I'm going to buy a new phone tomorrow.</div><div class="m-why">going to يحتاج am/is/are قبله — لا يُستخدم فعل go مباشرة</div></div>
+  <div class="mistake-item"><div class="m-wrong">She will to study tonight.</div><div class="m-right">She will study tonight.</div><div class="m-why">بعد will نضع الفعل الأساسي مباشرة بدون to</div></div>
+  <div class="mistake-item"><div class="m-wrong">We going to travel next week.</div><div class="m-right">We are going to travel next week.</div><div class="m-why">لازم فعل be (am/is/are) قبل going to</div></div>
+  <div class="mistake-item"><div class="m-wrong">I will going to cook dinner.</div><div class="m-right">I'm going to cook dinner. / I will cook dinner.</div><div class="m-why">will و going to لا يُستخدمان معاً في نفس الجملة</div></div>
+  <div class="mistake-item"><div class="m-wrong">He don't will come to the party.</div><div class="m-right">He won't come to the party.</div><div class="m-why">النفي مع will هو won't وليس don't/doesn't will</div></div>
+  <div class="mistake-item"><div class="m-wrong">Will you going to join us?</div><div class="m-right">Are you going to join us?</div><div class="m-why">السؤال مع going to يستخدم am/is/are — وليس will</div></div>
+</div>
+
+<!-- VOCABULARY -->
+<div class="card">
+  <h3 class="card-title">📚 Key Vocabulary — المفردات الأساسية</h3>
+  <p class="card-ar">24 كلمة مرتبطة بالخطط والمستقبل — اضغط على أي كلمة للاستماع</p>
+  <div class="vocab-grid">
+    <div class="vocab-item" onclick="ttsRead('plan',0.85)"><div class="vocab-en">plan</div><div class="vocab-form">plans / planned</div><div class="vocab-ar">يخطط / خطة</div></div>
+    <div class="vocab-item" onclick="ttsRead('decide',0.85)"><div class="vocab-en">decide</div><div class="vocab-form">decides / decided</div><div class="vocab-ar">يقرر</div></div>
+    <div class="vocab-item" onclick="ttsRead('promise',0.85)"><div class="vocab-en">promise</div><div class="vocab-form">promises / promised</div><div class="vocab-ar">يعد / وعد</div></div>
+    <div class="vocab-item" onclick="ttsRead('predict',0.85)"><div class="vocab-en">predict</div><div class="vocab-form">predicts / predicted</div><div class="vocab-ar">يتوقع</div></div>
+    <div class="vocab-item" onclick="ttsRead('travel',0.85)"><div class="vocab-en">travel</div><div class="vocab-form">travels / travelled</div><div class="vocab-ar">يسافر</div></div>
+    <div class="vocab-item" onclick="ttsRead('visit',0.85)"><div class="vocab-en">visit</div><div class="vocab-form">visits / visited</div><div class="vocab-ar">يزور</div></div>
+    <div class="vocab-item" onclick="ttsRead('study',0.85)"><div class="vocab-en">study</div><div class="vocab-form">studies / studied</div><div class="vocab-ar">يدرس</div></div>
+    <div class="vocab-item" onclick="ttsRead('save',0.85)"><div class="vocab-en">save</div><div class="vocab-form">saves / saved</div><div class="vocab-ar">يوفّر (money)</div></div>
+    <div class="vocab-item" onclick="ttsRead('move',0.85)"><div class="vocab-en">move</div><div class="vocab-form">moves / moved</div><div class="vocab-ar">ينتقل</div></div>
+    <div class="vocab-item" onclick="ttsRead('buy',0.85)"><div class="vocab-en">buy</div><div class="vocab-form">buys / bought</div><div class="vocab-ar">يشتري</div></div>
+    <div class="vocab-item" onclick="ttsRead('start',0.85)"><div class="vocab-en">start</div><div class="vocab-form">starts / started</div><div class="vocab-ar">يبدأ</div></div>
+    <div class="vocab-item" onclick="ttsRead('finish',0.85)"><div class="vocab-en">finish</div><div class="vocab-form">finishes / finished</div><div class="vocab-ar">ينهي</div></div>
+    <div class="vocab-item" onclick="ttsRead('apply',0.85)"><div class="vocab-en">apply</div><div class="vocab-form">applies / applied</div><div class="vocab-ar">يتقدم (for)</div></div>
+    <div class="vocab-item" onclick="ttsRead('graduate',0.85)"><div class="vocab-en">graduate</div><div class="vocab-form">graduates / graduated</div><div class="vocab-ar">يتخرج</div></div>
+    <div class="vocab-item" onclick="ttsRead('retire',0.85)"><div class="vocab-en">retire</div><div class="vocab-form">retires / retired</div><div class="vocab-ar">يتقاعد</div></div>
+    <div class="vocab-item" onclick="ttsRead('improve',0.85)"><div class="vocab-en">improve</div><div class="vocab-form">improves / improved</div><div class="vocab-ar">يحسّن</div></div>
+    <div class="vocab-item" onclick="ttsRead('tomorrow',0.85)"><div class="vocab-en">tomorrow</div><div class="vocab-form">adverb</div><div class="vocab-ar">غداً</div></div>
+    <div class="vocab-item" onclick="ttsRead('next week',0.85)"><div class="vocab-en">next week</div><div class="vocab-form">phrase</div><div class="vocab-ar">الأسبوع القادم</div></div>
+    <div class="vocab-item" onclick="ttsRead('next year',0.85)"><div class="vocab-en">next year</div><div class="vocab-form">phrase</div><div class="vocab-ar">العام القادم</div></div>
+    <div class="vocab-item" onclick="ttsRead('soon',0.85)"><div class="vocab-en">soon</div><div class="vocab-form">adverb</div><div class="vocab-ar">قريباً</div></div>
+    <div class="vocab-item" onclick="ttsRead('later',0.85)"><div class="vocab-en">later</div><div class="vocab-form">adverb</div><div class="vocab-ar">لاحقاً</div></div>
+    <div class="vocab-item" onclick="ttsRead('in the future',0.85)"><div class="vocab-en">in the future</div><div class="vocab-form">phrase</div><div class="vocab-ar">في المستقبل</div></div>
+    <div class="vocab-item" onclick="ttsRead('definitely',0.85)"><div class="vocab-en">definitely</div><div class="vocab-form">adverb</div><div class="vocab-ar">بالتأكيد</div></div>
+    <div class="vocab-item" onclick="ttsRead('probably',0.85)"><div class="vocab-en">probably</div><div class="vocab-form">adverb</div><div class="vocab-ar">على الأرجح</div></div>
+  </div>
+</div>
+
+</div><!-- /max-width -->
+</div><!-- /tab-grammar -->
+
+<!-- ══════════════════════════════════════ EVERYDAY ENGLISH TAB -->
+<div id="tab-everyday" class="tab-panel">
+<div style="max-width:960px;margin:0 auto">
+
+<div class="card">
+  <h2 class="card-title">🗣 Everyday English — خطط المستقبل في الحياة اليومية</h2>
+  <p class="card-ar">محادثات حقيقية · كل جملة مع ترجمتها · اضغط 🔊 لتسمع أي جملة</p>
+</div>
+
+<!-- Dialogue 1 -->
+<div class="dlg-card">
+  <div class="dlg-header">
+    <div class="dlg-meta">
+      <div class="dlg-num">Dialogue 01</div>
+      <div class="dlg-title">🎉 Weekend Plans</div>
+      <div class="dlg-ctx">Sam (right) · Jay (left)</div>
+    </div>
+  </div>
+  <div class="chat-wrap">
+    <div class="chat-msg right">
+      <div class="chat-name-tag">Sam</div>
+      <div class="chat-bubble">
+        <div class="chat-en">What are you <b>going to</b> do this weekend?</div>
+        <div class="chat-ar">ماذا ستفعل هذا الأسبوع؟</div>
+        <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="What are you going to do this weekend?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+      </div>
+    </div>
+    <div class="chat-msg left">
+      <div class="chat-name-tag">Jay</div>
+      <div class="chat-bubble">
+        <div class="chat-en">I<b>'m going to</b> visit my parents in Bristol. What about you?</div>
+        <div class="chat-ar">سأزور والديّ في بريستول. وأنت؟</div>
+        <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="I'm going to visit my parents in Bristol. What about you?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+      </div>
+    </div>
+    <div class="chat-msg right">
+      <div class="chat-name-tag">Sam</div>
+      <div class="chat-bubble">
+        <div class="chat-en">I haven't decided yet. I think <b>I'll</b> stay at home and watch a film.</div>
+        <div class="chat-ar">لم أقرر بعد. أعتقد أنني سأبقى في البيت وأشاهد فيلماً.</div>
+        <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="I haven't decided yet. I think I'll stay at home and watch a film." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+      </div>
+    </div>
+    <div class="chat-msg left">
+      <div class="chat-name-tag">Jay</div>
+      <div class="chat-bubble">
+        <div class="chat-en">That sounds relaxing! Are you <b>going to</b> cook something nice?</div>
+        <div class="chat-ar">يبدو مريحاً! هل ستطبخ شيئاً لذيذاً؟</div>
+        <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="That sounds relaxing! Are you going to cook something nice?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+      </div>
+    </div>
+    <div class="chat-msg right">
+      <div class="chat-name-tag">Sam</div>
+      <div class="chat-bubble">
+        <div class="chat-en">Maybe. <b>I'll</b> probably order a pizza, actually.</div>
+        <div class="chat-ar">ربما. على الأرجح سأطلب بيتزا في الواقع.</div>
+        <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Maybe. I'll probably order a pizza, actually." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+      </div>
+    </div>
+    <div class="chat-msg left">
+      <div class="chat-name-tag">Jay</div>
+      <div class="chat-bubble">
+        <div class="chat-en"><b>Will</b> you call me later this evening?</div>
+        <div class="chat-ar">هل ستتصل بي لاحقاً هذا المساء؟</div>
+        <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Will you call me later this evening?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+      </div>
+    </div>
+    <div class="chat-msg right">
+      <div class="chat-name-tag">Sam</div>
+      <div class="chat-bubble">
+        <div class="chat-en">Sure, <b>I'll</b> call you at about seven. Have a great weekend!</div>
+        <div class="chat-ar">بالتأكيد، سأتصل بك حوالي السابعة. أسبوع رائع!</div>
+        <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Sure, I'll call you at about seven. Have a great weekend!" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Dialogue 2 -->
+<div class="dlg-card">
+  <div class="dlg-header">
+    <div class="dlg-meta">
+      <div class="dlg-num">Dialogue 02</div>
+      <div class="dlg-title">✈️ At the Travel Agency</div>
+      <div class="dlg-ctx">Agent (right) · Emma (left)</div>
+    </div>
+  </div>
+  <div class="chat-wrap">
+    <div class="chat-msg right">
+      <div class="chat-name-tag">Agent</div>
+      <div class="chat-bubble">
+        <div class="chat-en">Good morning! How can I help you?</div>
+        <div class="chat-ar">صباح الخير! كيف أستطيع مساعدتك؟</div>
+        <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Good morning! How can I help you?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+      </div>
+    </div>
+    <div class="chat-msg left">
+      <div class="chat-name-tag">Emma</div>
+      <div class="chat-bubble">
+        <div class="chat-en">Hi! I<b>'m going to</b> travel to Italy next summer. Can you help me?</div>
+        <div class="chat-ar">أهلاً! أنا سأسافر إلى إيطاليا الصيف القادم. هل يمكنك مساعدتي؟</div>
+        <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Hi! I'm going to travel to Italy next summer. Can you help me?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+      </div>
+    </div>
+    <div class="chat-msg right">
+      <div class="chat-name-tag">Agent</div>
+      <div class="chat-bubble">
+        <div class="chat-en">Of course! Are you <b>going to</b> travel alone or with family?</div>
+        <div class="chat-ar">بالطبع! هل ستسافرين وحدك أم مع العائلة؟</div>
+        <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Of course! Are you going to travel alone or with family?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+      </div>
+    </div>
+    <div class="chat-msg left">
+      <div class="chat-name-tag">Emma</div>
+      <div class="chat-bubble">
+        <div class="chat-en">With my husband. We<b>'re going to</b> spend ten days there.</div>
+        <div class="chat-ar">مع زوجي. سنقضي عشرة أيام هناك.</div>
+        <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="With my husband. We're going to spend ten days there." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+      </div>
+    </div>
+    <div class="chat-msg right">
+      <div class="chat-name-tag">Agent</div>
+      <div class="chat-bubble">
+        <div class="chat-en">Excellent. <b>I'll</b> find the best deals for you. <b>Will</b> you need a hotel?</div>
+        <div class="chat-ar">ممتاز. سأجد أفضل العروض لك. هل ستحتاجين لفندق أيضاً؟</div>
+        <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Excellent. I'll find the best deals for you. Will you need a hotel?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+      </div>
+    </div>
+    <div class="chat-msg left">
+      <div class="chat-name-tag">Emma</div>
+      <div class="chat-bubble">
+        <div class="chat-en">Yes please. We<b>'re going to</b> stay in Rome for five days, then go to Florence.</div>
+        <div class="chat-ar">نعم من فضلك. سنبقى في روما خمسة أيام ثم نذهب إلى فلورنسا.</div>
+        <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Yes please. We're going to stay in Rome for five days, then go to Florence." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+      </div>
+    </div>
+    <div class="chat-msg right">
+      <div class="chat-name-tag">Agent</div>
+      <div class="chat-bubble">
+        <div class="chat-en">Great choice! <b>I'll</b> send you all the details by email this afternoon.</div>
+        <div class="chat-ar">خيار رائع! سأرسل لك جميع التفاصيل على الإيميل بعد الظهر.</div>
+        <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Great choice! I'll send you all the details by email this afternoon." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Dialogue 3 -->
+<div class="dlg-card">
+  <div class="dlg-header">
+    <div class="dlg-meta">
+      <div class="dlg-num">Dialogue 03</div>
+      <div class="dlg-title">🎊 New Year Resolutions</div>
+      <div class="dlg-ctx">Sara (right) · Reem (left)</div>
+    </div>
+  </div>
+  <div class="chat-wrap">
+    <div class="chat-msg right">
+      <div class="chat-name-tag">Sara</div>
+      <div class="chat-bubble">
+        <div class="chat-en">Happy New Year! Do you have any resolutions?</div>
+        <div class="chat-ar">سنة سعيدة! هل لديك قرارات للسنة الجديدة؟</div>
+        <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Happy New Year! Do you have any resolutions?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+      </div>
+    </div>
+    <div class="chat-msg left">
+      <div class="chat-name-tag">Reem</div>
+      <div class="chat-bubble">
+        <div class="chat-en">Yes! I<b>'m going to</b> start exercising three times a week.</div>
+        <div class="chat-ar">نعم! سأبدأ ممارسة الرياضة ثلاث مرات في الأسبوع.</div>
+        <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Yes! I'm going to start exercising three times a week." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+      </div>
+    </div>
+    <div class="chat-msg right">
+      <div class="chat-name-tag">Sara</div>
+      <div class="chat-bubble">
+        <div class="chat-en">That's great! <b>I'll</b> try to wake up earlier every morning.</div>
+        <div class="chat-ar">رائع! سأحاول الاستيقاظ مبكراً كل صباح.</div>
+        <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="That's great! I'll try to wake up earlier every morning." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+      </div>
+    </div>
+    <div class="chat-msg left">
+      <div class="chat-name-tag">Reem</div>
+      <div class="chat-bubble">
+        <div class="chat-en">I<b>'m going to</b> save money to buy a new car too.</div>
+        <div class="chat-ar">سأوفر المال أيضاً لأشتري سيارة جديدة.</div>
+        <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="I'm going to save money to buy a new car too." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+      </div>
+    </div>
+    <div class="chat-msg right">
+      <div class="chat-name-tag">Sara</div>
+      <div class="chat-bubble">
+        <div class="chat-en"><b>I'll</b> stop spending so much on coffee! Are you <b>going to</b> join a gym?</div>
+        <div class="chat-ar">سأتوقف عن إنفاق الكثير على القهوة! هل ستنضمين لصالة رياضية؟</div>
+        <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="I'll stop spending so much on coffee! Are you going to join a gym?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+      </div>
+    </div>
+    <div class="chat-msg left">
+      <div class="chat-name-tag">Reem</div>
+      <div class="chat-bubble">
+        <div class="chat-en">I think <b>I will</b>. <b>Will</b> you come with me?</div>
+        <div class="chat-ar">أعتقد ذلك. هل ستأتين معي؟</div>
+        <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="I think I will. Will you come with me?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+      </div>
+    </div>
+    <div class="chat-msg right">
+      <div class="chat-name-tag">Sara</div>
+      <div class="chat-bubble">
+        <div class="chat-en">Definitely! <b>We'll</b> go together every Monday. Deal!</div>
+        <div class="chat-ar">بالتأكيد! سنذهب معاً كل يوم اثنين. اتفقنا!</div>
+        <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Definitely! We'll go together every Monday. Deal!" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Dialogue 4 -->
+<div class="dlg-card">
+  <div class="dlg-header">
+    <div class="dlg-meta">
+      <div class="dlg-num">Dialogue 04</div>
+      <div class="dlg-title">💼 Job Interview</div>
+      <div class="dlg-ctx">Interviewer (right) · Nour (left)</div>
+    </div>
+  </div>
+  <div class="chat-wrap">
+    <div class="chat-msg right">
+      <div class="chat-name-tag">Interviewer</div>
+      <div class="chat-bubble">
+        <div class="chat-en">Where do you see yourself in five years?</div>
+        <div class="chat-ar">أين ترين نفسك بعد خمس سنوات؟</div>
+        <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Where do you see yourself in five years?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+      </div>
+    </div>
+    <div class="chat-msg left">
+      <div class="chat-name-tag">Nour</div>
+      <div class="chat-bubble">
+        <div class="chat-en">I<b>'m going to</b> complete my master's degree next year. After that, <b>I'll</b> focus on growing in this field.</div>
+        <div class="chat-ar">سأنهي درجة الماجستير العام القادم. بعد ذلك، سأركز على النمو في هذا المجال.</div>
+        <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="I'm going to complete my master's degree next year. After that, I'll focus on growing in this field." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+      </div>
+    </div>
+    <div class="chat-msg right">
+      <div class="chat-name-tag">Interviewer</div>
+      <div class="chat-bubble">
+        <div class="chat-en">That's great. <b>Will</b> you be available to work weekends sometimes?</div>
+        <div class="chat-ar">رائع. هل ستكونين متاحة للعمل في عطل نهاية الأسبوع أحياناً؟</div>
+        <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="That's great. Will you be available to work weekends sometimes?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+      </div>
+    </div>
+    <div class="chat-msg left">
+      <div class="chat-name-tag">Nour</div>
+      <div class="chat-bubble">
+        <div class="chat-en">Yes, <b>I will</b>. I<b>'m also going to</b> take extra courses in marketing to improve my skills.</div>
+        <div class="chat-ar">نعم بالتأكيد. سأأخذ أيضاً دورات إضافية في التسويق لتطوير مهاراتي.</div>
+        <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Yes, I will. I'm also going to take extra courses in marketing to improve my skills." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+      </div>
+    </div>
+    <div class="chat-msg right">
+      <div class="chat-name-tag">Interviewer</div>
+      <div class="chat-bubble">
+        <div class="chat-en">Impressive! We <b>will</b> contact you by Friday with our decision.</div>
+        <div class="chat-ar">مثير للإعجاب! سنتواصل معك بحلول يوم الجمعة بقرارنا.</div>
+        <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Impressive! We will contact you by Friday with our decision." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+      </div>
+    </div>
+    <div class="chat-msg left">
+      <div class="chat-name-tag">Nour</div>
+      <div class="chat-bubble">
+        <div class="chat-en">Thank you so much. I<b>'m</b> really <b>going to</b> give this role everything I have.</div>
+        <div class="chat-ar">شكراً جزيلاً. سأعطي هذا المنصب كل ما لديّ.</div>
+        <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Thank you so much. I'm really going to give this role everything I have." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Dialogue 5 -->
+<div class="dlg-card">
+  <div class="dlg-header">
+    <div class="dlg-meta">
+      <div class="dlg-num">Dialogue 05</div>
+      <div class="dlg-title">🏙 Moving to a New City</div>
+      <div class="dlg-ctx">Khaled (right) · Omar (left)</div>
+    </div>
+  </div>
+  <div class="chat-wrap">
+    <div class="chat-msg right">
+      <div class="chat-name-tag">Khaled</div>
+      <div class="chat-bubble">
+        <div class="chat-en">I heard you're moving! Is that true?</div>
+        <div class="chat-ar">سمعت أنك ستنتقل! هل هذا صحيح؟</div>
+        <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="I heard you're moving! Is that true?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+      </div>
+    </div>
+    <div class="chat-msg left">
+      <div class="chat-name-tag">Omar</div>
+      <div class="chat-bubble">
+        <div class="chat-en">Yes! I<b>'m going to</b> move to Dubai next month.</div>
+        <div class="chat-ar">نعم! سأنتقل إلى دبي الشهر القادم.</div>
+        <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Yes! I'm going to move to Dubai next month." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+      </div>
+    </div>
+    <div class="chat-msg right">
+      <div class="chat-name-tag">Khaled</div>
+      <div class="chat-bubble">
+        <div class="chat-en">Wow! <b>Will</b> you sell your flat here?</div>
+        <div class="chat-ar">واو! هل ستبيع شقتك هنا؟</div>
+        <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Wow! Will you sell your flat here?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+      </div>
+    </div>
+    <div class="chat-msg left">
+      <div class="chat-name-tag">Omar</div>
+      <div class="chat-bubble">
+        <div class="chat-en">No, I<b>'m going to</b> rent it out. My cousin <b>will</b> manage it for me.</div>
+        <div class="chat-ar">لا، سأؤجّرها. ابن عمي سيديرها بدلاً عني.</div>
+        <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="No, I'm going to rent it out. My cousin will manage it for me." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+      </div>
+    </div>
+    <div class="chat-msg right">
+      <div class="chat-name-tag">Khaled</div>
+      <div class="chat-bubble">
+        <div class="chat-en">What <b>will</b> you do about your job here?</div>
+        <div class="chat-ar">ماذا ستفعل بشأن عملك هنا؟</div>
+        <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="What will you do about your job here?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+      </div>
+    </div>
+    <div class="chat-msg left">
+      <div class="chat-name-tag">Omar</div>
+      <div class="chat-bubble">
+        <div class="chat-en">I<b>'m going to</b> start a new job there. It's a big opportunity!</div>
+        <div class="chat-ar">سأبدأ وظيفة جديدة هناك. إنها فرصة كبيرة!</div>
+        <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="I'm going to start a new job there. It's a big opportunity!" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+      </div>
+    </div>
+    <div class="chat-msg right">
+      <div class="chat-name-tag">Khaled</div>
+      <div class="chat-bubble">
+        <div class="chat-en">That's amazing! <b>I'll</b> visit you when you're settled.</div>
+        <div class="chat-ar">هذا رائع! سأزورك عندما تستقر.</div>
+        <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="That's amazing! I'll visit you when you're settled." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+      </div>
+    </div>
+    <div class="chat-msg left">
+      <div class="chat-name-tag">Omar</div>
+      <div class="chat-bubble">
+        <div class="chat-en">Please do! <b>I'll</b> show you around. It<b>'s going to</b> be a great adventure!</div>
+        <div class="chat-ar">تفضّل! سأريك المدينة. ستكون مغامرة رائعة!</div>
+        <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Please do! I'll show you around. It's going to be a great adventure!" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /max-width -->
+</div><!-- /tab-everyday -->
+
+<!-- ══════════════════════════════════════ READING TAB -->
+<div id="tab-reading" class="tab-panel">
+<div style="max-width:960px;margin:0 auto">
+
+<div class="card">
+  <h2 class="card-title">📖 Reading — Maya's Big Year</h2>
+  <p class="card-ar">اقرأ النص — going to و will بالخط العريض · خطط مايا للسنة القادمة</p>
+  <div class="tts-box">
+    <button class="tts-btn" onclick="ttsPassage()">🔊 Listen to passage</button>
+    <button class="tts-btn tts-stop" onclick="window.speechSynthesis.cancel()">⏹ Stop</button>
+  </div>
+  <div class="read-pass">
+    <p>Maya is 22 years old and she has just finished university. She is very excited because she has many plans for the year ahead.</p>
+    <h4>✈️ The Gap Year Trip</h4>
+    <p>"<b>I'm going to</b> take a gap year before I start work," she says. "First, <b>I'm going to</b> travel to Southeast Asia with my friend Sara. <b>We're going to</b> visit Thailand, Vietnam, and Cambodia. <b>We'll</b> stay in each country for about two weeks. I think it<b>'s going to</b> be an amazing experience!"</p>
+    <h4>💼 The New Job</h4>
+    <p>After her trip, Maya <b>is going to</b> start a new job. She has already found a position at a marketing company in London. "<b>I'll</b> move to London in September," she says. "My aunt lives there, so <b>I'll</b> stay with her at first. After a few months, <b>I'm going to</b> look for my own flat."</p>
+    <h4>🎯 Personal Goals</h4>
+    <p>Maya also has some personal goals. "<b>I'm going to</b> join a gym and get fit," she says. "<b>I'll</b> probably start running too. And <b>I'm definitely going to</b> save money every month. I want to buy a car by the end of the year."</p>
+    <h4>👨‍👩‍👧 Family Support</h4>
+    <p>Her family is very supportive. "My parents <b>will</b> help me if I need them," she says. "But I think <b>I'll</b> manage on my own. It<b>'s going to</b> be a great year. I can't wait!"</p>
+  </div>
+</div>
+
+<div class="card">
+  <h3 class="card-title">📊 Going To vs Will in the Text</h3>
+  <div style="overflow-x:auto;margin:18px 0;padding:4px 0">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;min-width:460px">
+      <svg viewBox="0 0 340 230" xmlns="http://www.w3.org/2000/svg" font-family="Poppins,sans-serif" style="width:100%;display:block;border-radius:12px">
+        <rect width="340" height="230" rx="12" fill="#0d1b2a"/>
+        <rect x="8" y="8" width="324" height="214" rx="10" fill="rgba(74,158,255,0.06)" stroke="rgba(74,158,255,0.3)" stroke-width="1.5"/>
+        <text x="170" y="38" text-anchor="middle" font-size="20" font-weight="900" fill="#4a9eff">GOING TO</text>
+        <text x="170" y="54" text-anchor="middle" font-size="10" fill="#8899b0">خطط مسبقة + دليل مرئي</text>
+        <text x="20" y="78" fill="#4a9eff" font-size="11" font-weight="700">📅 I'm going to take a gap year.</text>
+        <text x="20" y="96" fill="#4a9eff" font-size="11" font-weight="700">📅 We're going to visit Thailand.</text>
+        <text x="20" y="114" fill="#4a9eff" font-size="11" font-weight="700">📅 I'm going to look for my own flat.</text>
+        <text x="20" y="132" fill="#4a9eff" font-size="11" font-weight="700">📅 I'm going to join a gym.</text>
+        <text x="20" y="150" fill="#4a9eff" font-size="11" font-weight="700">📅 I'm going to save money.</text>
+        <text x="20" y="168" fill="#4a9eff" font-size="11" font-weight="700">📅 It's going to be a great year.</text>
+        <text x="20" y="186" fill="#8899b0" font-size="10">قررتها قبل الحديث</text>
+      </svg>
+      <svg viewBox="0 0 340 230" xmlns="http://www.w3.org/2000/svg" font-family="Poppins,sans-serif" style="width:100%;display:block;border-radius:12px">
+        <rect width="340" height="230" rx="12" fill="#0d1b2a"/>
+        <rect x="8" y="8" width="324" height="214" rx="10" fill="rgba(34,197,94,0.06)" stroke="rgba(34,197,94,0.3)" stroke-width="1.5"/>
+        <text x="170" y="38" text-anchor="middle" font-size="20" font-weight="900" fill="#22c55e">WILL</text>
+        <text x="170" y="54" text-anchor="middle" font-size="10" fill="#8899b0">قرارات · وعود · تنبؤات</text>
+        <text x="20" y="78" fill="#22c55e" font-size="11" font-weight="700">⚡ We'll stay two weeks each. (plan)</text>
+        <text x="20" y="96" fill="#22c55e" font-size="11" font-weight="700">⚡ I'll move to London in September.</text>
+        <text x="20" y="114" fill="#22c55e" font-size="11" font-weight="700">⚡ I'll stay with my aunt at first.</text>
+        <text x="20" y="132" fill="#22c55e" font-size="11" font-weight="700">⚡ I'll probably start running.</text>
+        <text x="20" y="150" fill="#22c55e" font-size="11" font-weight="700">⚡ My parents will help me.</text>
+        <text x="20" y="168" fill="#22c55e" font-size="11" font-weight="700">⚡ I think I'll manage on my own.</text>
+        <text x="20" y="186" fill="#8899b0" font-size="10">توقع / وعد / رأي</text>
+      </svg>
+    </div>
+  </div>
+  <p class="vs-caption">going to للخطط المقررة سلفاً · will للتوقعات والوعود والآراء اللحظية</p>
+</div>
+
+<div class="card">
+  <h3 class="card-title">📌 Key Words — كلمات مفتاحية</h3>
+  <div class="read-vocab-wrap">
+    <div class="read-vocab-item"><span class="rv-en">gap year</span><span class="rv-ar">سنة استراحة</span></div>
+    <div class="read-vocab-item"><span class="rv-en">experience</span><span class="rv-ar">تجربة</span></div>
+    <div class="read-vocab-item"><span class="rv-en">position</span><span class="rv-ar">منصب / وظيفة</span></div>
+    <div class="read-vocab-item"><span class="rv-en">supportive</span><span class="rv-ar">داعم</span></div>
+    <div class="read-vocab-item"><span class="rv-en">manage</span><span class="rv-ar">يتدبّر / يستطيع</span></div>
+    <div class="read-vocab-item"><span class="rv-en">goal</span><span class="rv-ar">هدف</span></div>
+    <div class="read-vocab-item"><span class="rv-en">flat</span><span class="rv-ar">شقة</span></div>
+    <div class="read-vocab-item"><span class="rv-en">get fit</span><span class="rv-ar">يحسّن لياقته</span></div>
+  </div>
+</div>
+
+<div class="card">
+  <h3 class="card-title">❓ Comprehension Questions — أسئلة الفهم</h3>
+  <p class="card-ar">اختر الإجابة الصحيحة</p>
+
+  <div class="read-q" id="rq1">
+    <p class="rq-text"><b>1.</b> What is Maya going to do before she starts work?</p>
+    <div class="read-opts">
+      <button class="read-opt" onclick="pickComp(this,'wrong')">a) Start a new job immediately</button>
+      <button class="read-opt" onclick="pickComp(this,'right')">b) Take a gap year</button>
+      <button class="read-opt" onclick="pickComp(this,'wrong')">c) Move to London</button>
+      <button class="read-opt" onclick="pickComp(this,'wrong')">d) Join a gym</button>
+    </div>
+    <div class="read-ctx" id="ctx-rq1">"I'm going to take a gap year before I start work."</div>
+  </div>
+
+  <div class="read-q" id="rq2">
+    <p class="rq-text"><b>2.</b> Which countries is Maya going to visit?</p>
+    <div class="read-opts">
+      <button class="read-opt" onclick="pickComp(this,'wrong')">a) France, Spain, and Italy</button>
+      <button class="read-opt" onclick="pickComp(this,'wrong')">b) Japan, China, and Korea</button>
+      <button class="read-opt" onclick="pickComp(this,'right')">c) Thailand, Vietnam, and Cambodia</button>
+      <button class="read-opt" onclick="pickComp(this,'wrong')">d) India, Egypt, and Morocco</button>
+    </div>
+    <div class="read-ctx" id="ctx-rq2">"We're going to visit Thailand, Vietnam, and Cambodia."</div>
+  </div>
+
+  <div class="read-q" id="rq3">
+    <p class="rq-text"><b>3.</b> When is Maya going to move to London?</p>
+    <div class="read-opts">
+      <button class="read-opt" onclick="pickComp(this,'wrong')">a) Next January</button>
+      <button class="read-opt" onclick="pickComp(this,'wrong')">b) After she finds a flat</button>
+      <button class="read-opt" onclick="pickComp(this,'right')">c) In September</button>
+      <button class="read-opt" onclick="pickComp(this,'wrong')">d) Next summer</button>
+    </div>
+    <div class="read-ctx" id="ctx-rq3">"I'll move to London in September."</div>
+  </div>
+
+  <div class="read-q" id="rq4">
+    <p class="rq-text"><b>4.</b> Where will Maya stay when she first arrives in London?</p>
+    <div class="read-opts">
+      <button class="read-opt" onclick="pickComp(this,'wrong')">a) In her own flat</button>
+      <button class="read-opt" onclick="pickComp(this,'wrong')">b) In a hotel</button>
+      <button class="read-opt" onclick="pickComp(this,'right')">c) With her aunt</button>
+      <button class="read-opt" onclick="pickComp(this,'wrong')">d) With her friend Sara</button>
+    </div>
+    <div class="read-ctx" id="ctx-rq4">"My aunt lives there, so I'll stay with her at first."</div>
+  </div>
+
+  <div class="read-q" id="rq5">
+    <p class="rq-text"><b>5.</b> What is one of Maya's personal goals?</p>
+    <div class="read-opts">
+      <button class="read-opt" onclick="pickComp(this,'wrong')">a) Learn a new language</button>
+      <button class="read-opt" onclick="pickComp(this,'right')">b) Save money every month</button>
+      <button class="read-opt" onclick="pickComp(this,'wrong')">c) Become a teacher</button>
+      <button class="read-opt" onclick="pickComp(this,'wrong')">d) Travel to Europe</button>
+    </div>
+    <div class="read-ctx" id="ctx-rq5">"I'm definitely going to save money every month."</div>
+  </div>
+
+  <div class="read-q" id="rq6">
+    <p class="rq-text"><b>6.</b> What does Maya say about managing on her own?</p>
+    <div class="read-opts">
+      <button class="read-opt" onclick="pickComp(this,'wrong')">a) She won't manage without her parents.</button>
+      <button class="read-opt" onclick="pickComp(this,'wrong')">b) She is going to ask her parents for help.</button>
+      <button class="read-opt" onclick="pickComp(this,'right')">c) She thinks she'll manage on her own.</button>
+      <button class="read-opt" onclick="pickComp(this,'wrong')">d) She is going to live with her parents.</button>
+    </div>
+    <div class="read-ctx" id="ctx-rq6">"I think I'll manage on my own."</div>
+  </div>
+</div>
+
+</div><!-- /max-width -->
+</div><!-- /tab-reading -->
+
+<!-- ══════════════════════════════════════ CHECK IT TAB -->
+<div id="tab-checkit" class="tab-panel" style="padding:0">
+<div style="max-width:960px;margin:0 auto;padding:20px 24px">
+
+<div class="ci-score" id="ci-score-panel" style="display:none">
+  <div class="ci-score-num" id="ci-score-num">0/25</div>
+  <div class="ci-score-bar"><div class="ci-score-fill" id="ci-score-fill"></div></div>
+  <div class="ci-score-msg" id="ci-score-msg"></div>
+  <button class="ci-reset-btn" onclick="ciReset()">🔄 Try Again</button>
+</div>
+<div class="ci-progress"><div class="ci-progress-fill" id="ci-progress-fill" style="width:0%"></div></div>
+
+<div class="ci-q" id="ciq1">
+  <div class="ci-num">Q1</div>
+  <div class="ci-text">She ___ visit her parents this weekend. She booked the tickets yesterday. <span class="ci-hint">(خطة مسبقة)</span></div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,false)">will</button>
+    <button class="ci-btn" onclick="ciPick(this,true)">is going to</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">visits</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">visited</button>
+  </div>
+</div>
+
+<div class="ci-q" id="ciq2">
+  <div class="ci-num">Q2</div>
+  <div class="ci-text">The phone is ringing! I ___ answer it. <span class="ci-hint">(قرار لحظي)</span></div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,false)">am going to</button>
+    <button class="ci-btn" onclick="ciPick(this,true)">'ll</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">won't</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">going to</button>
+  </div>
+</div>
+
+<div class="ci-q" id="ciq3">
+  <div class="ci-num">Q3</div>
+  <div class="ci-text">Look at those clouds! It ___ rain. <span class="ci-hint">(دليل مرئي)</span></div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,false)">will</button>
+    <button class="ci-btn" onclick="ciPick(this,true)">is going to</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">rains</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">rained</button>
+  </div>
+</div>
+
+<div class="ci-q" id="ciq4">
+  <div class="ci-num">Q4</div>
+  <div class="ci-text">Don't worry, I ___ help you with the project. <span class="ci-hint">(وعد / عرض)</span></div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,false)">going to</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">am going</button>
+    <button class="ci-btn" onclick="ciPick(this,true)">'ll</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">won't</button>
+  </div>
+</div>
+
+<div class="ci-q" id="ciq5">
+  <div class="ci-num">Q5</div>
+  <div class="ci-text">They ___ move to Dubai next month. They've already signed the contract. <span class="ci-hint">(خطة مسبقة)</span></div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,false)">will</button>
+    <button class="ci-btn" onclick="ciPick(this,true)">are going to</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">would</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">are</button>
+  </div>
+</div>
+
+<div class="ci-brk" id="cibrk1">🎉 أحسنت! 5 أسئلة صح — استمر!</div>
+
+<div class="ci-q" id="ciq6">
+  <div class="ci-num">Q6</div>
+  <div class="ci-text">He ___ probably be late — he's always late. <span class="ci-hint">(رأي / تنبؤ)</span></div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,false)">is going to</button>
+    <button class="ci-btn" onclick="ciPick(this,true)">will</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">would</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">was</button>
+  </div>
+</div>
+
+<div class="ci-q" id="ciq7">
+  <div class="ci-num">Q7</div>
+  <div class="ci-text">___ you going to study medicine next year? <span class="ci-hint">(سؤال مع going to)</span></div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,false)">Will</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">Do</button>
+    <button class="ci-btn" onclick="ciPick(this,true)">Are</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">Is</button>
+  </div>
+</div>
+
+<div class="ci-q" id="ciq8">
+  <div class="ci-num">Q8</div>
+  <div class="ci-text">I think the weather ___ be nice tomorrow. <span class="ci-hint">(رأي شخصي)</span></div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,false)">is going to</button>
+    <button class="ci-btn" onclick="ciPick(this,true)">will</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">goes to</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">would</button>
+  </div>
+</div>
+
+<div class="ci-q" id="ciq9">
+  <div class="ci-num">Q9</div>
+  <div class="ci-text">She's bought all the ingredients. She ___ cook pasta tonight. <span class="ci-hint">(خطة + دليل)</span></div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,false)">will</button>
+    <button class="ci-btn" onclick="ciPick(this,true)">is going to</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">cooks</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">cooked</button>
+  </div>
+</div>
+
+<div class="ci-q" id="ciq10">
+  <div class="ci-num">Q10</div>
+  <div class="ci-text">The train leaves in two minutes! We ___ miss it! <span class="ci-hint">(دليل = الوقت)</span></div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,false)">will</button>
+    <button class="ci-btn" onclick="ciPick(this,true)">are going to</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">go to</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">miss</button>
+  </div>
+</div>
+
+<div class="ci-q" id="ciq11">
+  <div class="ci-num">Q11</div>
+  <div class="ci-text">Which sentence is CORRECT?</div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,false)">I'll call you when I will arrive.</button>
+    <button class="ci-btn" onclick="ciPick(this,true)">I'll call you when I arrive.</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">She will to help you.</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">We going to travel next week.</button>
+  </div>
+</div>
+
+<div class="ci-brk" id="cibrk2">💪 ممتاز! أكثر من النصف — أكمل!</div>
+
+<div class="ci-q" id="ciq12">
+  <div class="ci-num">Q12</div>
+  <div class="ci-text">She ___ probably start running next month. <span class="ci-hint">(تنبؤ + probably)</span></div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,true)">will</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">is going to</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">goes to</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">would</button>
+  </div>
+</div>
+
+<div class="ci-q" id="ciq13">
+  <div class="ci-num">Q13</div>
+  <div class="ci-text">We ___ travel to Europe next summer. We already bought the tickets! <span class="ci-hint">(خطة محددة)</span></div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,false)">will</button>
+    <button class="ci-btn" onclick="ciPick(this,true)">are going to</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">travel</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">travelled</button>
+  </div>
+</div>
+
+<div class="ci-q" id="ciq14">
+  <div class="ci-num">Q14</div>
+  <div class="ci-text">Which word does NOT express future time?</div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,false)">tomorrow</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">next week</button>
+    <button class="ci-btn" onclick="ciPick(this,true)">yesterday</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">soon</button>
+  </div>
+</div>
+
+<div class="ci-q" id="ciq15">
+  <div class="ci-num">Q15</div>
+  <div class="ci-text">"Don't worry, I ___ always be here for you." <span class="ci-hint">(وعد)</span></div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,false)">going to</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">am going to</button>
+    <button class="ci-btn" onclick="ciPick(this,true)">'ll</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">would</button>
+  </div>
+</div>
+
+<div class="ci-q" id="ciq16">
+  <div class="ci-num">Q16</div>
+  <div class="ci-text">Which sentence has a MISTAKE?</div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,false)">She isn't going to come.</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">I'll probably be late.</button>
+    <button class="ci-btn" onclick="ciPick(this,true)">Will you going to join us?</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">They're going to move next week.</button>
+  </div>
+</div>
+
+<div class="ci-brk" id="cibrk3">🏆 رائع جداً! آخر 9 أسئلة — أنت قادر!</div>
+
+<div class="ci-q" id="ciq17">
+  <div class="ci-num">Q17</div>
+  <div class="ci-text">He ___ not come to the party. (نفي will)</div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,false)">doesn't</button>
+    <button class="ci-btn" onclick="ciPick(this,true)">won't</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">isn't going</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">don't</button>
+  </div>
+</div>
+
+<div class="ci-q" id="ciq18">
+  <div class="ci-num">Q18</div>
+  <div class="ci-text">I'm ___ to start a new job next month. <span class="ci-hint">(أكمل)</span></div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,true)">going</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">will</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">gone</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">go</button>
+  </div>
+</div>
+
+<div class="ci-q" id="ciq19">
+  <div class="ci-num">Q19</div>
+  <div class="ci-text">After she finishes her course, she ___ apply for a job. <span class="ci-hint">(مستقبل عام)</span></div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,true)">will</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">is going to</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">will to</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">would</button>
+  </div>
+</div>
+
+<div class="ci-q" id="ciq20">
+  <div class="ci-num">Q20</div>
+  <div class="ci-text">Which uses "will" CORRECTLY?</div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,false)">I will to go to the shop.</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">She will going to study.</button>
+    <button class="ci-btn" onclick="ciPick(this,true)">He won't forget your birthday.</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">Are they will come?</button>
+  </div>
+</div>
+
+<div class="ci-q" id="ciq21">
+  <div class="ci-num">Q21</div>
+  <div class="ci-text">"She ___ going to take a gap year." <span class="ci-hint">(اكتب: is / am / are)</span></div>
+  <div class="ci-fib">
+    <input type="text" class="ci-fib-in" id="fib21" placeholder="is / am / are">
+    <button class="ci-fib-btn" onclick="ciFibCheck(21,'is')">Check ✓</button>
+  </div>
+  <div class="ci-fib-fb" id="fib21-fb"></div>
+</div>
+
+<div class="ci-q" id="ciq22">
+  <div class="ci-num">Q22</div>
+  <div class="ci-text">"I ___ call you this evening." = I will <span class="ci-hint">(اكتب الاختصار فقط)</span></div>
+  <div class="ci-fib">
+    <input type="text" class="ci-fib-in" id="fib22" placeholder="'ll / will">
+    <button class="ci-fib-btn" onclick="ciFibCheck(22,&quot;'ll&quot;)">Check ✓</button>
+  </div>
+  <div class="ci-fib-fb" id="fib22-fb"></div>
+</div>
+
+<div class="ci-q" id="ciq23">
+  <div class="ci-num">Q23</div>
+  <div class="ci-text">"Are you going ___ apply for the job?" <span class="ci-hint">(كلمة واحدة)</span></div>
+  <div class="ci-fib">
+    <input type="text" class="ci-fib-in" id="fib23" placeholder="to / ...">
+    <button class="ci-fib-btn" onclick="ciFibCheck(23,'to')">Check ✓</button>
+  </div>
+  <div class="ci-fib-fb" id="fib23-fb"></div>
+</div>
+
+<div class="ci-q" id="ciq24">
+  <div class="ci-num">Q24</div>
+  <div class="ci-text">"He ___ be late. He's always on time." (نفي will) <span class="ci-hint">(كلمة واحدة)</span></div>
+  <div class="ci-fib">
+    <input type="text" class="ci-fib-in" id="fib24" placeholder="won't / will not">
+    <button class="ci-fib-btn" onclick="ciFibCheck(24,'won\'t')">Check ✓</button>
+  </div>
+  <div class="ci-fib-fb" id="fib24-fb"></div>
+</div>
+
+<div class="ci-q" id="ciq25">
+  <div class="ci-num">Q25</div>
+  <div class="ci-text">"I'll call you when I ___ to London." <span class="ci-hint">(المضارع البسيط في جملة الوقت)</span></div>
+  <div class="ci-fib">
+    <input type="text" class="ci-fib-in" id="fib25" placeholder="arrive / get / ...">
+    <button class="ci-fib-btn" onclick="ciFibCheck(25,'arrive')">Check ✓</button>
+  </div>
+  <div class="ci-fib-fb" id="fib25-fb"></div>
+</div>
+
+</div><!-- /max-width -->
+</div><!-- /tab-checkit -->
+
+<footer>Unit 12 — Future Plans &nbsp;|&nbsp; MOHAMMED ELHUSEYIN English Learning Platform</footer>
+</div><!-- /main-content -->
+</div><!-- /layout -->
+
+<script>
+function showTab(id,btn){
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.main-tab').forEach(b=>b.classList.remove('active'));
+  document.getElementById('tab-'+id).classList.add('active');
+  if(btn)btn.classList.add('active');
+}
+function showSub(id,btn){
+  const card=btn.closest('.card');
+  card.querySelectorAll('.sub-panel').forEach(p=>p.classList.remove('active'));
+  card.querySelectorAll('.sub-tab').forEach(b=>b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+function jumpTab(id){
+  const btn=document.querySelector(`.main-tab[onclick*="${id}"]`);
+  showTab(id,btn);
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function ttsRead(text,rate){
+  window.speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(text);
+  u.lang='en-GB';u.rate=rate||0.9;u.pitch=1;
+  window.speechSynthesis.speak(u);
+}
+function ttsStop(){window.speechSynthesis.cancel();}
+
+const grammarTexts={
+  gto:[
+    'I am going to visit my parents this weekend.',
+    'She is going to study medicine at university.',
+    'They are going to move to a new city next year.',
+    'We are going to save money for a holiday.',
+    'He is not going to come to the party.',
+    'Are you going to cook dinner tonight?',
+    'Is she going to apply for the job?',
+    'Look at those clouds! It is going to rain.'
+  ],
+  wll:[
+    'The phone is ringing. I will answer it.',
+    'I am hungry. I will make a sandwich.',
+    'Do not worry. I will help you with your homework.',
+    'I promise I will never tell anyone your secret.',
+    'I think she will pass the exam. She studied hard.',
+    'It will probably be sunny tomorrow.',
+    'He will not be late. He is always on time.'
+  ],
+  time:[
+    'I will call you tomorrow.',
+    'We are going to eat out tonight.',
+    'She will be here this evening.',
+    'They are going to move next week.',
+    'I will start my new job next month.',
+    'She is going to graduate next year.',
+    'We will travel to Europe next summer.',
+    'He will be back in three days.',
+    'One day I will buy a house.'
+  ]
+};
+function ttsGrammar(type){
+  const texts=grammarTexts[type]||[];
+  if(!texts.length)return;
+  let i=0;
+  function next(){
+    if(i>=texts.length)return;
+    const u=new SpeechSynthesisUtterance(texts[i++]);
+    u.lang='en-GB';u.rate=0.9;u.pitch=1;
+    u.onend=()=>setTimeout(next,500);
+    window.speechSynthesis.speak(u);
+  }
+  window.speechSynthesis.cancel();
+  setTimeout(next,200);
+}
+
+const dlgTexts={
+  dlg1:"What are you going to do this weekend? I'm going to visit my parents in Bristol. What about you? I haven't decided yet. I think I'll stay at home and watch a film. That sounds relaxing! Are you going to cook something nice? Maybe. I'll probably order a pizza, actually. Will you call me later this evening? Sure, I'll call you at about seven. Have a great weekend!",
+  dlg2:"Good morning! How can I help you? Hi! I'm going to travel to Italy next summer. Can you help me? Of course! Are you going to travel alone or with family? With my husband. We're going to spend ten days there. Excellent. I'll find the best deals for you. Will you need a hotel? Yes please. We're going to stay in Rome for five days, then go to Florence. Great choice! I'll send you all the details by email this afternoon.",
+  dlg3:"Happy New Year! Do you have any resolutions? Yes! I'm going to start exercising three times a week. That's great! I'll try to wake up earlier every morning. I'm going to save money to buy a new car too. I'll stop spending so much on coffee! Are you going to join a gym? I think I will. Will you come with me? Definitely! We'll go together every Monday. Deal!",
+  dlg4:"Where do you see yourself in five years? I'm going to complete my master's degree next year. After that, I'll focus on growing in this field. That's great. Will you be available to work weekends sometimes? Yes, I will. I'm also going to take extra courses in marketing to improve my skills. Impressive! We will contact you by Friday with our decision. Thank you so much. I'm really going to give this role everything I have.",
+  dlg5:"I heard you're moving! Is that true? Yes! I'm going to move to Dubai next month. Wow! Will you sell your flat here? No, I'm going to rent it out. My cousin will manage it for me. What will you do about your job here? I'm going to start a new job there. It's a big opportunity! That's amazing! I'll visit you when you're settled. Please do! I'll show you around. It's going to be a great adventure!"
+};
+function ttsDlg(id){
+  window.speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(dlgTexts[id]||'');
+  u.lang='en-GB';u.rate=0.88;u.pitch=1;
+  window.speechSynthesis.speak(u);
+}
+
+let spActiveGroup=null;
+function spPlay(btn,text){
+  const g=btn.closest('.sp-group');
+  if(spActiveGroup&&spActiveGroup!==g){window.speechSynthesis.cancel();const pp=spActiveGroup.querySelector('.sp-pp');if(pp)pp.textContent='⏸';spActiveGroup=null;}
+  const pp=g.querySelector('.sp-pp');
+  if(window.speechSynthesis.speaking&&spActiveGroup===g){
+    if(window.speechSynthesis.paused){window.speechSynthesis.resume();if(pp)pp.textContent='⏸';}
+    else{window.speechSynthesis.pause();if(pp)pp.textContent='▶';}
+    return;
+  }
+  spActiveGroup=g;window.speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(text);
+  u.lang='en-GB';u.rate=0.9;u.pitch=1;
+  u.onend=()=>{if(pp)pp.textContent='⏸';spActiveGroup=null;};
+  window.speechSynthesis.speak(u);if(pp)pp.textContent='⏸';
+}
+function spStopBtn(){
+  window.speechSynthesis.cancel();
+  if(spActiveGroup){const pp=spActiveGroup.querySelector('.sp-pp');if(pp)pp.textContent='⏸';spActiveGroup=null;}
+}
+
+/* ══════════════════════════════════════ READING */
+const passageText12=`Maya is 22 years old and she has just finished university. She is very excited because she has many plans for the year ahead. I'm going to take a gap year before I start work, she says. First, I'm going to travel to Southeast Asia with my friend Sara. We're going to visit Thailand, Vietnam, and Cambodia. We'll stay in each country for about two weeks. I think it's going to be an amazing experience! After her trip, Maya is going to start a new job. She has already found a position at a marketing company in London. I'll move to London in September, she says. My aunt lives there, so I'll stay with her at first. After a few months, I'm going to look for my own flat. Maya also has some personal goals. I'm going to join a gym and get fit, she says. I'll probably start running too. And I'm definitely going to save money every month. I want to buy a car by the end of the year. Her family is very supportive. My parents will help me if I need them, she says. But I think I'll manage on my own. It's going to be a great year. I can't wait!`;
+
+function ttsPassage(){ttsRead(passageText12,0.85);}
+
+function pickComp(btn,type){
+  const wrap=btn.closest('.read-q');
+  if(wrap.classList.contains('answered'))return;
+  wrap.classList.add('answered');
+  const id=wrap.id;
+  wrap.querySelectorAll('.read-opt').forEach(b=>{
+    if(b===btn)b.classList.add(type==='right'?'correct':'wrong');
+    else if(type==='wrong'&&b.getAttribute('onclick').includes("'right'"))b.classList.add('correct');
+    b.disabled=true;
+  });
+  const ctx=document.getElementById('ctx-'+id);
+  if(ctx)ctx.style.display='block';
+}
+
+/* ══════════════════════════════════════ CHECK IT */
+const ciBreaks={6:'cibrk1',12:'cibrk2',17:'cibrk3'};
+let ciScore=0,ciAnswered=0;
+const ciTotal=25;
+
+function ciUpdateProgress(){
+  document.getElementById('ci-progress-fill').style.width=(ciAnswered/ciTotal*100)+'%';
+}
+
+function ciCheckBreakAndDone(){
+  if(ciBreaks[ciAnswered]){const brk=document.getElementById(ciBreaks[ciAnswered]);if(brk)brk.style.display='block';}
+  if(ciAnswered===ciTotal){
+    const panel=document.getElementById('ci-score-panel');
+    panel.style.display='block';
+    document.getElementById('ci-score-num').textContent=ciScore+'/'+ciTotal;
+    const pct=Math.round(ciScore/ciTotal*100);
+    document.getElementById('ci-score-fill').style.width=pct+'%';
+    let msg='';
+    if(pct>=90)msg='🏆 ممتاز جداً! أداء رائع!';
+    else if(pct>=70)msg='💪 جيد جداً! استمر!';
+    else if(pct>=50)msg='📚 جيد! راجع going to و will.';
+    else msg='🔄 لا بأس، حاول مرة أخرى!';
+    document.getElementById('ci-score-msg').textContent=msg;
+    playSound(pct>=70?'win':'try');
+    panel.scrollIntoView({behavior:'smooth'});
+  }
+}
+
+function ciPick(btn,correct){
+  const card=btn.closest('.ci-q');
+  if(card.classList.contains('done'))return;
+  card.classList.add('done');
+  card.querySelectorAll('.ci-btn').forEach(b=>{b.disabled=true;b.style.opacity='0.5';});
+  btn.style.opacity='1';
+  if(correct){btn.style.background='rgba(34,197,94,0.2)';btn.style.borderColor='#22c55e';btn.style.color='#22c55e';ciScore++;}
+  else{
+    btn.style.background='rgba(239,68,68,0.2)';btn.style.borderColor='#ef4444';btn.style.color='#ef4444';
+    card.querySelectorAll('.ci-btn').forEach(b=>{
+      if(b.getAttribute('onclick').includes('true')&&b!==btn){b.style.opacity='1';b.style.background='rgba(34,197,94,0.15)';b.style.borderColor='#22c55e';}
+    });
+  }
+  ciAnswered++;ciUpdateProgress();ciCheckBreakAndDone();
+}
+
+function ciFibCheck(n,answer){
+  const inp=document.getElementById('fib'+n);
+  const fb=document.getElementById('fib'+n+'-fb');
+  const card=document.getElementById('ciq'+n);
+  if(card.classList.contains('done'))return;
+  const val=inp.value.trim().toLowerCase().replace(/\s+/g,' ');
+  const acc=answer.toLowerCase().trim();
+  const alts={22:["'ll","ll","will"],24:["won't","wont","will not"],25:['arrive','get','come']};
+  const accepted=alts[n]?alts[n].includes(val):val===acc;
+  card.classList.add('done');
+  inp.disabled=true;card.querySelector('.ci-fib-btn').disabled=true;
+  if(accepted){fb.textContent='✅ صحيح!';fb.style.color='#22c55e';fb.style.display='block';ciScore++;}
+  else{fb.textContent='❌ الإجابة: '+answer;fb.style.color='#ef4444';fb.style.display='block';}
+  ciAnswered++;ciUpdateProgress();ciCheckBreakAndDone();
+}
+
+function ciReset(){
+  ciScore=0;ciAnswered=0;
+  document.getElementById('ci-progress-fill').style.width='0%';
+  document.getElementById('ci-score-panel').style.display='none';
+  document.querySelectorAll('.ci-q').forEach(c=>{
+    c.classList.remove('done');
+    c.querySelectorAll('.ci-btn').forEach(b=>{b.disabled=false;b.style.opacity='1';b.style.background='';b.style.borderColor='';b.style.color='';});
+    c.querySelectorAll('.ci-fib-in').forEach(i=>{i.value='';i.disabled=false;});
+    c.querySelectorAll('.ci-fib-btn').forEach(b=>{b.disabled=false;});
+    c.querySelectorAll('.ci-fib-fb').forEach(f=>{f.textContent='';f.style.display='none';});
+  });
+  document.querySelectorAll('.ci-brk').forEach(b=>b.style.display='none');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function playSound(type){
+  try{
+    const ctx=new(window.AudioContext||window.webkitAudioContext)();
+    const o=ctx.createOscillator();const g=ctx.createGain();
+    o.connect(g);g.connect(ctx.destination);
+    if(type==='win'){o.frequency.setValueAtTime(523,ctx.currentTime);o.frequency.setValueAtTime(659,ctx.currentTime+0.1);o.frequency.setValueAtTime(784,ctx.currentTime+0.2);}
+    else{o.frequency.setValueAtTime(330,ctx.currentTime);o.frequency.setValueAtTime(294,ctx.currentTime+0.15);}
+    g.gain.setValueAtTime(0.3,ctx.currentTime);g.gain.exponentialRampToValueAtTime(0.001,ctx.currentTime+0.5);
+    o.start();o.stop(ctx.currentTime+0.5);
+  }catch(e){}
+}
+
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('button.sp').forEach(btn=>{
+    const m=btn.getAttribute('onclick').match(/ttsRead\('(.+?)'\)/);
+    if(!m)return;
+    const text=m[1];
+    const g=document.createElement('div');g.className='sp-group';
+    btn.parentNode.insertBefore(g,btn);g.appendChild(btn);
+    btn.setAttribute('onclick',`spPlay(this,'${text}')`);
+    const pp=document.createElement('button');pp.className='sp-pp';pp.textContent='⏸';pp.title='Pause/Resume';pp.onclick=()=>spPlay(btn,text);
+    const st=document.createElement('button');st.className='sp-st';st.textContent='■';st.title='Stop';st.onclick=spStopBtn;
+    g.appendChild(pp);g.appendChild(st);
+  });
+});
+</script>
+<script src="../media/global-player.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+(function(){
+  var map={1: "up_l1", 2: "up_l2", 3: "up_l3", 4: "up_l4", 5: "up_l5", 6: "up1", 7: "up2", 8: "up3", 9: "up4", 10: "up6", 11: "up5", 12: "up_l12", 13: "up7", 14: "up8", 15: "up9", 16: "up10", 17: "up11", 19: "up_l19", 20: "up_l20", 21: "up_l21", 22: "up_l22", 23: "up_l23", 24: "up_l24", 25: "up_l25", 26: "up_l26", 27: "up_l27", 28: "up_l28", 29: "up_l29", 30: "up_l30", 31: "up_l31", 32: "up_l32", 33: "up_l33", 34: "up_l34", 35: "up_l35", 36: "up_l36", 37: "up_l37", 38: "up_l38", 39: "up_l39", 40: "up_l40", 41: "up_l41", 42: "up_l42", 43: "up_l43", 44: "up_l44", 45: "up_l45", 46: "up_l46"};
+  for(var lid in map){
+    var f=document.getElementById('sp'+lid);
+    if(f){var v=parseInt(localStorage.getItem(map[lid])||'0',10);f.style.width=v+'%';}
+  }
+  setTimeout(function(){
+    var a=document.querySelector('.su-item.su-active');
+    if(a){var u=a.closest('.sidebar-units');if(u)u.scrollTop=Math.max(0,a.offsetTop-a.offsetHeight);}
+  },80);
+})();
+</script>
+<script>
+function toggleSidebar(){
+  var sb=document.querySelector('.sidebar');
+  var bd=document.getElementById('sbBackdrop');
+  if(!sb||!bd)return;
+  sb.classList.toggle('sb-open');
+  bd.classList.toggle('sb-open');
+  document.body.style.overflow=sb.classList.contains('sb-open')?'hidden':'';
+}
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.su-item').forEach(function(a){
+    a.addEventListener('click',function(){
+      var sb=document.querySelector('.sidebar');
+      if(sb&&sb.classList.contains('sb-open'))toggleSidebar();
+    });
+  });
+});
+</script>
+
+<script>
+(function(){
+  // Disable right-click
+  document.addEventListener('contextmenu', function(e){ e.preventDefault(); });
+
+  // Disable keyboard shortcuts
+  document.addEventListener('keydown', function(e){
+    // F12
+    if(e.key==='F12'){e.preventDefault();return false;}
+    // Ctrl+U (view source), Ctrl+S (save), Ctrl+A (select all), Ctrl+P (print)
+    if(e.ctrlKey && ['u','U','s','S','a','A','p','P'].indexOf(e.key)!==-1){
+      e.preventDefault();return false;
+    }
+    // Ctrl+Shift+I (DevTools), Ctrl+Shift+J, Ctrl+Shift+C
+    if(e.ctrlKey && e.shiftKey && ['i','I','j','J','c','C','k','K'].indexOf(e.key)!==-1){
+      e.preventDefault();return false;
+    }
+  });
+
+  // Disable text selection via CSS
+  document.documentElement.style.webkitUserSelect='none';
+  document.documentElement.style.userSelect='none';
+
+  // Allow selection inside inputs/textareas only
+  document.addEventListener('mousedown', function(e){
+    var t=e.target.tagName;
+    if(t==='INPUT'||t==='TEXTAREA'){
+      e.target.style.userSelect='text';
+      e.target.style.webkitUserSelect='text';
+    }
+  });
+
+  // Block drag
+  document.addEventListener('dragstart', function(e){ e.preventDefault(); });
+})();
+</script>
+<button class="float-menu-btn" onclick="toggleSidebar()" aria-label="القائمة">
+  <span></span><span></span><span></span>
+</button>
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=FREE"></script>
+<script src="../media/rv.js"></script>
+</body>
+</html>

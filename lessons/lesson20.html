@@ -1,0 +1,1378 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lesson 20 — Past Continuous</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#1a3a6e;--primary-dark:#0f2548;--accent:#f4a624;--al:rgba(244,166,36,0.12);--bg:#0d1b2a;--card:#162030;--card2:#1e2d40;--border:#2d4560;--text:#e8edf5;--muted:#8899b0;--green:#22c55e;--red:#ef4444;--blue:#4a9eff;--purple:#a855f7}
+body{font-family:'Poppins','Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.ar{font-family:'Cairo','Segoe UI',Arial,sans-serif}
+.topnav{background:var(--primary-dark);border-bottom:2px solid var(--accent);padding:10px 24px;display:flex;align-items:center;justify-content:space-between}
+.hero{background:linear-gradient(135deg,#1a3a6e 0%,#0f2548 55%,#0d1f3c 100%);padding:55px 24px 48px;text-align:center;border-bottom:3px solid var(--accent);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;border-radius:50%;background:rgba(244,166,36,0.06)}
+.hero::after{content:'';position:absolute;bottom:-60px;left:-60px;width:300px;height:300px;border-radius:50%;background:rgba(74,158,255,0.05)}
+.unit-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(244,166,36,0.15);border:1px solid rgba(244,166,36,0.4);color:var(--accent);font-weight:800;padding:6px 18px;border-radius:20px;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
+.hero-title{font-size:clamp(28px,6vw,52px);font-weight:900;color:white;line-height:1.15;margin-bottom:8px}
+.hero-title i{color:var(--accent);font-style:italic}
+.hero-ar{font-size:18px;color:var(--muted);margin-bottom:12px;direction:rtl}
+.hero-sub{color:var(--muted);max-width:620px;margin:0 auto 22px;font-size:14px}
+.hero-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.tag{display:inline-flex;align-items:center;gap:6px;padding:6px 15px;border-radius:16px;font-size:12px;font-weight:700}
+.tag-grammar{background:rgba(244,166,36,0.15);color:var(--accent);border:1px solid rgba(244,166,36,0.3)}
+.tag-other{background:rgba(74,158,255,0.1);color:var(--blue);border:1px solid rgba(74,158,255,0.25)}
+.tag-btn{cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif}
+.tag-btn:hover{transform:translateY(-2px);opacity:.85}
+.main-tabs{display:flex;gap:4px;padding:14px 24px;background:var(--primary-dark);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;flex-wrap:wrap}
+.main-tab{padding:8px 18px;border-radius:8px;border:1px solid transparent;background:none;color:var(--muted);font-weight:700;cursor:pointer;font-size:13px;font-family:'Poppins',sans-serif;transition:all .2s}
+.main-tab.active{background:var(--accent);color:#0d1b2a;border-color:var(--accent)}
+.main-tab:hover:not(.active){background:rgba(244,166,36,.1);color:var(--accent);border-color:rgba(244,166,36,.3)}
+.tab-panel{display:none;padding:20px 24px}
+.tab-panel.active{display:block}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;margin-bottom:16px}
+.card-title{font-size:16px;font-weight:800;color:white;margin-bottom:5px;display:flex;align-items:center;gap:8px}
+.card-ar{font-size:13px;color:var(--muted);margin-bottom:14px;direction:rtl;font-family:'Cairo',sans-serif}
+.card-note{background:var(--al);border:1px solid rgba(244,166,36,.3);border-radius:10px;padding:10px 14px;font-size:12.5px;color:var(--accent);margin:10px 0;direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.sub-tabs{display:flex;gap:4px;margin:14px 0 18px;flex-wrap:wrap}
+.sub-tab{padding:6px 14px;border-radius:8px;border:1px solid var(--border);background:none;color:var(--muted);font-weight:700;cursor:pointer;font-size:12px;font-family:'Poppins',sans-serif;transition:all .2s}
+.sub-tab.active{background:rgba(244,166,36,.15);border-color:var(--accent);color:var(--accent)}
+.sub-tab:hover:not(.active){border-color:var(--accent);color:var(--accent)}
+.sub-panel{display:none}
+.sub-panel.active{display:block}
+.tts-box{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.tts-btn{background:var(--card2);border:1px solid var(--blue);color:var(--blue);padding:7px 16px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif}
+.tts-btn:hover{background:rgba(74,158,255,.15);transform:translateY(-1px)}
+.tts-stop{border-color:var(--muted);color:var(--muted)}
+.tts-stop:hover{background:rgba(136,153,176,.1)}
+.formula-box{background:rgba(10,30,53,0.8);border:2px solid var(--border);border-radius:14px;padding:18px 22px;margin:14px 0}
+.formula-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid rgba(45,69,96,0.4);flex-wrap:wrap}
+.formula-row:last-child{border-bottom:none}
+.formula-subj{font-size:14px;font-weight:800;color:var(--blue);min-width:160px}
+.formula-be{font-size:15px;font-weight:900;color:var(--accent);background:rgba(244,166,36,.12);padding:4px 12px;border-radius:8px}
+.formula-be.neg{color:var(--red);background:rgba(239,68,68,.1)}
+.formula-be.q{color:var(--green);background:rgba(34,197,94,.1)}
+.formula-note{font-size:11px;color:var(--muted);font-style:italic;margin-left:auto}
+.formula-plus{font-size:16px;color:var(--muted)}
+.ex-section-title{font-size:12px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin:16px 0 8px}
+.ex-list{margin-top:4px}
+.ex-item{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid rgba(45,69,96,0.3)}
+.ex-item:last-child{border-bottom:none}
+.sp{background:none;border:none;font-size:16px;cursor:pointer;color:var(--blue);flex-shrink:0;padding:2px 0;transition:transform .2s;line-height:1}
+.sp:hover{transform:scale(1.2)}
+.sp-group{display:inline-flex;align-items:center;gap:3px;flex-shrink:0}
+.sp-pp,.sp-st{background:var(--card2);border:1px solid var(--border);color:var(--muted);font-size:12px;padding:3px 7px;border-radius:6px;cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif;line-height:1;min-width:26px;text-align:center}
+.sp-pp:hover{background:rgba(74,158,255,.15);border-color:var(--blue);color:var(--blue)}
+.sp-st:hover{background:rgba(239,68,68,.1);border-color:var(--red);color:var(--red)}
+.ex-en{font-size:13.5px;color:var(--text);font-weight:600;line-height:1.4}
+.ex-en b{color:var(--accent)}
+.ex-ar{font-size:12px;color:var(--muted);margin-top:2px;direction:rtl;font-family:'Cairo',sans-serif}
+.sa-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13px}
+.sa-table th{background:rgba(26,58,110,0.5);color:var(--accent);padding:8px 12px;font-weight:800;text-align:left;border:1px solid var(--border)}
+.sa-table td{padding:8px 12px;border:1px solid rgba(45,69,96,0.4);vertical-align:middle}
+.sa-table tr:nth-child(even) td{background:rgba(30,45,64,0.3)}
+.sa-yes{color:var(--green);font-weight:800}
+.sa-no{color:var(--red);font-weight:800}
+.wh-grid{display:flex;flex-direction:column;gap:7px;margin:12px 0}
+.wh-row{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px;font-size:13px}
+.wh-q{color:var(--text);margin-bottom:3px}
+.wh-q b{color:var(--blue)}
+.wh-a{color:var(--muted);font-style:italic}
+.time-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;margin:12px 0}
+.time-item{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px}
+.time-en{font-size:13px;font-weight:700;color:var(--accent)}
+.time-ar{font-size:11px;color:var(--muted);margin-top:3px;direction:rtl;font-family:'Cairo',sans-serif}
+.time-eg{font-size:11px;color:var(--text);margin-top:4px;font-style:italic}
+.mistake-item{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.m-wrong{font-size:13px;color:var(--red);margin-bottom:3px}
+.m-wrong::before{content:'❌ '}
+.m-right{font-size:13px;color:var(--green);font-weight:700;margin-bottom:3px}
+.m-right::before{content:'✅ '}
+.m-why{font-size:11.5px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;border-top:1px solid rgba(45,69,96,.4);padding-top:5px;margin-top:5px}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:8px;margin-top:12px}
+.vocab-item{background:var(--card2);border:1px solid var(--border);border-radius:9px;padding:9px 12px;cursor:pointer;transition:border-color .2s}
+.vocab-item:hover{border-color:var(--accent)}
+.vocab-en{font-size:14px;font-weight:800;color:var(--text)}
+.vocab-past{font-size:11.5px;color:var(--accent);margin-top:2px;font-weight:700}
+.vocab-ar{font-size:11px;color:var(--muted);margin-top:3px;font-family:'Cairo',sans-serif;direction:rtl}
+.vs-wrap{overflow-x:auto;margin:18px 0;padding:4px 0}
+.vs-caption{font-size:11px;color:var(--muted);text-align:center;margin-top:8px;font-style:italic}
+.dlg-card{background:var(--card);border:1px solid var(--border);border-radius:16px;margin-bottom:16px;overflow:hidden}
+.dlg-header{background:linear-gradient(to right,var(--primary),#1a1a4e);padding:13px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.dlg-meta{flex:1}
+.dlg-num{font-size:10px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:2px}
+.dlg-title{font-weight:800;font-size:14px;color:white}
+.dlg-ctx{font-size:11px;color:rgba(255,255,255,.5);font-style:italic;margin-top:2px}
+.dlg-tts{background:rgba(244,166,36,.15);border:1px solid rgba(244,166,36,.4);color:var(--accent);padding:6px 14px;border-radius:8px;font-size:11px;font-weight:700;cursor:pointer;font-family:'Poppins',sans-serif;transition:all .2s;white-space:nowrap}
+.dlg-tts:hover{background:rgba(244,166,36,.3)}
+.dlg-body{padding:20px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:640px){.dlg-body{grid-template-columns:1fr}}
+.dlg-col-head{font-size:10px;font-weight:700;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+.bubble{padding:9px 13px;border-radius:12px;font-size:13px;line-height:1.55;margin-bottom:7px}
+.bubble-a{background:rgba(26,58,110,0.5);border:1px solid rgba(74,158,255,0.2)}
+.bubble-b{background:var(--card2);border:1px solid var(--border)}
+.bubble-name{font-size:9px;font-weight:800;color:var(--muted);margin-bottom:4px;letter-spacing:.5px;text-transform:uppercase}
+.bubble-name.b{color:var(--accent)}
+.bubble-ar{direction:rtl;font-family:'Cairo',sans-serif;font-size:13px;color:var(--text)}
+.layout{display:flex;min-height:100vh}
+.sidebar{width:30%;max-width:320px;min-width:220px;position:fixed;top:0;left:0;bottom:0;background:var(--primary-dark);border-right:2px solid var(--border);display:flex;flex-direction:column;z-index:200;overflow:hidden}
+.sidebar-header{padding:18px 20px 14px;border-bottom:2px solid var(--accent);flex-shrink:0}
+.sidebar-logo{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+.sidebar-logo-icon{width:34px;height:34px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900;color:#0d1b2a;flex-shrink:0}
+.sidebar-logo-text{font-family:'Cairo',sans-serif;font-size:15px;font-weight:800;color:white}
+.sidebar-logo-sub{font-size:10px;color:var(--muted);font-weight:500;margin-top:-1px}
+.sidebar-label{font-family:'Cairo',sans-serif;font-size:11px;font-weight:700;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-top:12px}
+.sidebar-units{flex:1;overflow-y:auto;padding:10px 12px;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+.sidebar-units::-webkit-scrollbar{width:4px}
+.sidebar-units::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+.su-item{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;text-decoration:none;margin-bottom:4px;transition:background .2s,transform .2s}
+.su-item:not(.su-locked):hover{background:rgba(244,166,36,0.12);transform:translateX(3px)}
+.su-item.su-locked{opacity:.45;cursor:default;pointer-events:none}
+.su-item.su-active{background:rgba(244,166,36,0.15);border:1px solid rgba(244,166,36,0.3)}
+.su-num{width:28px;height:28px;border-radius:7px;background:rgba(255,255,255,0.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:var(--accent);flex-shrink:0}
+.su-item:not(.su-locked) .su-num{background:rgba(244,166,36,0.12);border-color:rgba(244,166,36,0.3)}
+.su-texts{flex:1;min-width:0}
+.su-en{font-size:13px;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.su-ar{font-family:'Cairo',sans-serif;font-size:11px;color:var(--muted);direction:rtl;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.su-check{font-size:12px;flex-shrink:0}
+.su-lock{font-size:11px;color:var(--muted);flex-shrink:0}
+.main-content{margin-left:min(30%,320px);flex:1;min-width:0}
+footer{padding:20px 24px;text-align:center;color:var(--muted);font-size:12px;border-top:1px solid var(--border);margin-top:10px}
+
+/* ══ Hamburger (desktop: hidden) ══ */
+.nav-hamburger{display:none;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.3);border-radius:8px;cursor:pointer;flex-direction:column;gap:5px;padding:8px;flex-shrink:0;margin-left:6px}
+.nav-hamburger span{display:block;width:100%;height:2px;background:var(--accent);border-radius:2px}
+/* Backdrop */
+.sb-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:199}
+.sb-backdrop.sb-open{display:block}
+@media(max-width:768px){
+  .sidebar{position:fixed;left:-100%;width:82%;max-width:300px;min-width:unset;transition:left .3s ease;z-index:200}
+  .sidebar.sb-open{left:0}
+  .main-content{margin-left:0}
+  .nav-brand{display:none}
+  .nav-hamburger{display:flex}
+  .topnav{padding:10px 12px;gap:6px}
+  .nav-lesson-name{display:none}
+  .nav-left{gap:5px}
+  .hero{padding:22px 13px 20px}
+  .hero-title{font-size:22px;letter-spacing:-.5px}
+  .hero-ar{font-size:12px}
+  .hero-sub{font-size:12px}
+  .hero-tags{gap:5px;justify-content:center}
+  .tag{font-size:10px;padding:3px 9px}
+  .rule-section{padding:0 12px}
+  .read-wrap{padding:0 12px}
+  .ci-wrap{padding:12px 12px}
+  .ci-hero{padding:18px 12px}
+  .dlg-block{padding:0 12px}
+  .eu-cat-grid{grid-template-columns:1fr}
+  .nu-scale{gap:3px}
+  .nu-word{font-size:10px;padding:3px 7px}
+  .nu-cmp-head,.nu-cmp-row{grid-template-columns:1fr 1fr;font-size:10px}
+  .nu-cmp-head span:last-child,.nu-cmp-row span:last-child{display:none}
+  .reg-ladder{padding:10px 12px}
+  .cmp-table{font-size:11px}
+  .chat-wrap{padding:0 4px}
+  .ci-q{margin-bottom:10px}
+  .ci-opts{gap:5px}
+  .ci-btn{font-size:12px;padding:9px 10px}
+  .vocab-grid{grid-template-columns:1fr 1fr}
+  .rq-opts{gap:5px}
+}
+
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+/* some/any pill styles */
+.pill-wrap{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.pill{padding:5px 14px;border-radius:20px;font-size:12.5px;font-weight:800}
+.pill-green{background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.35);color:var(--green)}
+.pill-blue{background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.3);color:var(--blue)}
+.pill-red{background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3);color:var(--red)}
+/* Reading */
+.read-tts-bar{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;align-items:center}
+.read-label{font-size:12px;font-weight:700;color:var(--muted)}
+.read-pass{background:var(--card2);border:1px solid var(--border);border-radius:14px;padding:22px;font-size:14px;line-height:1.9;margin-bottom:24px}
+.read-pass p{margin-bottom:12px}
+.read-pass p:last-child{margin-bottom:0}
+.read-pass b{color:var(--accent);font-weight:700}
+.comp-section-title{font-size:14px;font-weight:800;color:var(--accent);margin-bottom:14px;text-transform:uppercase;letter-spacing:1px}
+.read-q{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:12px}
+.read-q-text{font-weight:700;font-size:14px;margin-bottom:12px;color:var(--text);line-height:1.4}
+.read-opts{display:flex;flex-direction:column;gap:7px}
+.read-opt{background:var(--card2);border:1px solid var(--border);color:var(--text);padding:9px 14px;border-radius:8px;font-size:13px;cursor:pointer;text-align:left;font-family:'Poppins',sans-serif;transition:all .2s;display:flex;align-items:center;gap:8px}
+.read-opt:hover:not(.done){background:rgba(244,166,36,.06);border-color:rgba(244,166,36,.35);transform:translateY(-1px)}
+.read-opt.correct{background:rgba(34,197,94,.12);border-color:var(--green);color:var(--green)}
+.read-opt.wrong{background:rgba(239,68,68,.12);border-color:var(--red);color:var(--red)}
+.read-opt.done{cursor:default;transform:none!important}
+.read-ctx{background:linear-gradient(135deg,rgba(26,58,110,.55),rgba(15,37,72,.55));border:1px solid rgba(244,166,36,.22);border-radius:14px;padding:16px 22px;margin-bottom:20px;display:flex;flex-wrap:wrap;gap:20px;align-items:center}
+.read-ctx-fact{display:flex;flex-direction:column;gap:2px}
+.read-ctx-label{font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+.read-ctx-val{font-size:13.5px;font-weight:800;color:var(--text)}
+.read-ctx-sep{width:1px;background:var(--border);align-self:stretch}
+.read-vocab-wrap{margin:18px 0}
+.read-vocab-title{font-size:11px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.read-vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:7px}
+.read-vocab-item{background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:8px 12px}
+.read-vocab-en{font-size:13px;font-weight:700;color:var(--accent)}
+.read-vocab-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-top:2px}
+/* Check It */
+.ci-hero{background:linear-gradient(135deg,#12285a 0%,#1a1242 60%,#0d1b2a 100%);padding:36px 24px 30px;text-align:center;border-bottom:2px solid var(--accent)}
+.ci-hero-icon{font-size:38px;margin-bottom:10px}
+.ci-hero-title{font-size:clamp(22px,5vw,36px);font-weight:900;color:white;margin-bottom:6px}
+.ci-hero-sub{color:var(--muted);font-size:13px;max-width:460px;margin:0 auto}
+.ci-hero-types{display:flex;gap:10px;justify-content:center;margin-top:14px;flex-wrap:wrap}
+.ci-progress-wrap{background:var(--primary-dark);padding:10px 24px;border-bottom:1px solid var(--border);position:sticky;top:52px;z-index:99}
+.ci-progress-inner{max-width:760px;margin:0 auto}
+.ci-progress-bar{background:rgba(255,255,255,.07);border-radius:20px;height:7px;overflow:hidden;margin-bottom:5px}
+.ci-progress-fill{background:linear-gradient(90deg,var(--accent),var(--blue));height:100%;border-radius:20px;transition:width .4s ease;width:0%}
+.ci-progress-txt{font-size:11px;color:var(--muted);font-weight:700;display:flex;justify-content:space-between}
+.ci-wrap{max-width:100%;padding:12px 16px}
+.ci-q{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px 14px;margin-bottom:7px;transition:border-color .2s;border-left:3px solid rgba(244,166,36,.4)}
+.ci-q.ci-fib-q{border-left-color:rgba(74,158,255,.5)}
+.ci-q-head{display:flex;align-items:center;gap:6px;margin-bottom:9px;flex-wrap:nowrap}
+.ci-q-num{width:22px;height:22px;border-radius:50%;background:rgba(244,166,36,.18);border:1.5px solid rgba(244,166,36,.4);color:var(--accent);font-size:10px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ci-fib-q .ci-q-num{background:rgba(74,158,255,.15);border-color:rgba(74,158,255,.4);color:var(--blue)}
+.ci-q-tag{background:rgba(244,166,36,.08);border:1px solid rgba(244,166,36,.18);color:var(--accent);font-size:9px;font-weight:800;padding:2px 8px;border-radius:8px;text-transform:uppercase;letter-spacing:.4px;white-space:nowrap}
+.ci-type-badge{font-size:9px;font-weight:800;padding:2px 8px;border-radius:8px;text-transform:uppercase;letter-spacing:.4px;margin-left:auto;flex-shrink:0}
+.ci-type-mcq{background:rgba(244,166,36,.12);border:1px solid rgba(244,166,36,.25);color:var(--accent)}
+.ci-type-fib{background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.25);color:var(--blue)}
+.ci-q-prompt{font-size:12px;color:var(--muted);font-style:italic;margin-bottom:8px;padding:5px 10px;background:rgba(255,255,255,.03);border-left:2px solid var(--border);border-radius:0 6px 6px 0}
+.ci-opts{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.ci-btn{background:var(--card2);border:1.5px solid var(--border);color:var(--text);padding:9px 12px;border-radius:9px;font-size:12.5px;cursor:pointer;text-align:left;font-family:'Poppins',sans-serif;transition:all .2s;display:flex;align-items:center;gap:9px;line-height:1.35;width:100%}
+.ci-btn:hover:not(.done){background:rgba(244,166,36,.07);border-color:rgba(244,166,36,.45);transform:translateY(-2px)}
+.ci-btn.ci-correct{background:rgba(34,197,94,.1);border-color:var(--green);color:var(--green)}
+.ci-btn.ci-wrong{background:rgba(239,68,68,.1);border-color:var(--red);color:var(--red)}
+.ci-lbl{font-size:11px;font-weight:900;background:rgba(255,255,255,.09);border-radius:5px;padding:2px 7px;flex-shrink:0;min-width:22px;text-align:center}
+.ci-btn.ci-correct .ci-lbl{background:rgba(34,197,94,.2);color:var(--green)}
+.ci-btn.ci-wrong .ci-lbl{background:rgba(239,68,68,.2);color:var(--red)}
+.ci-fib-sent{font-size:13.5px;color:var(--text);font-weight:600;line-height:1.7;margin-bottom:9px}
+.ci-fib-sent b{color:var(--accent)}
+.ci-fib-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:4px}
+.ci-fib-input{background:var(--card2);border:2px solid var(--border);color:var(--text);padding:7px 13px;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;outline:none;min-width:160px;max-width:260px;transition:border-color .2s}
+.ci-fib-input:focus{border-color:var(--accent);background:rgba(244,166,36,.04)}
+.ci-fib-check{background:var(--accent);border:none;color:#0d1b2a;padding:7px 18px;border-radius:8px;font-weight:800;cursor:pointer;font-size:12px;font-family:'Poppins',sans-serif;transition:all .2s;flex-shrink:0}
+.ci-fib-check:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 4px 12px rgba(244,166,36,.3)}
+.ci-fib-check:disabled{opacity:.35;cursor:default;transform:none!important}
+.ci-hint{font-size:10.5px;color:var(--muted);font-style:italic;margin-top:3px}
+.ci-sol{display:none;margin-top:9px;border-radius:9px;overflow:hidden;animation:fadeIn .3s ease}
+.ci-sol-head{padding:7px 12px;font-size:11.5px;font-weight:800;border-bottom:1px solid rgba(255,255,255,.05)}
+.ci-sol-body{padding:8px 12px;display:flex;flex-direction:column;gap:4px}
+.ci-sol-ans{font-size:12.5px;font-weight:700;color:var(--accent)}
+.ci-sol-exp{font-size:11.5px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.ci-brk{display:none;background:linear-gradient(135deg,#12285a,#1a1242);border:2px solid var(--accent);border-radius:20px;padding:28px 24px;margin:16px 0;text-align:center;animation:fadeIn .5s ease;position:relative;overflow:hidden}
+.ci-brk::before{content:'';position:absolute;top:-50px;right:-50px;width:200px;height:200px;border-radius:50%;background:rgba(244,166,36,.07);pointer-events:none}
+.ci-brk-emoji{font-size:44px;margin-bottom:10px}
+.ci-brk-title{font-size:17px;font-weight:900;color:var(--accent);margin-bottom:16px}
+.ci-brk-cols{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:580px;margin:0 auto;text-align:left}
+@media(max-width:580px){.ci-brk-cols{grid-template-columns:1fr}}
+.ci-brk-col{background:rgba(255,255,255,.04);border:1px solid rgba(244,166,36,.2);border-radius:12px;padding:14px 16px}
+.ci-brk-col-title{font-size:10px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid rgba(244,166,36,.2)}
+.ci-brk-text{font-size:13px;color:var(--text);line-height:1.75}
+.ci-brk-text b{color:var(--accent)}
+.ci-brk-ar{font-size:12px;color:var(--muted);margin-top:14px;direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.ci-score{display:none;background:linear-gradient(135deg,#0f2548,#1a1242);border:2px solid var(--accent);border-radius:24px;padding:44px 32px;text-align:center;margin-top:24px;position:relative;overflow:hidden;animation:fadeIn .6s ease}
+.ci-score::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,rgba(244,166,36,.07) 0%,transparent 65%);pointer-events:none}
+.ci-score-emoji{font-size:60px;margin-bottom:14px}
+.ci-score-num{font-size:68px;font-weight:900;color:var(--accent);line-height:1;margin-bottom:4px}
+.ci-score-of{font-size:18px;color:var(--muted);margin-bottom:18px}
+.ci-score-bar-wrap{background:rgba(255,255,255,.06);border-radius:20px;height:10px;max-width:320px;margin:0 auto 24px;overflow:hidden}
+.ci-score-bar-fill{height:100%;border-radius:20px;background:linear-gradient(90deg,var(--accent),var(--green));transition:width 1.2s ease;width:0%}
+.ci-score-msg{font-size:18px;font-weight:900;color:white;margin-bottom:6px}
+.ci-score-ar{font-size:14px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;margin-bottom:24px;line-height:1.6}
+.ci-reset{background:var(--accent);border:none;color:#0d1b2a;padding:13px 32px;border-radius:12px;font-weight:900;cursor:pointer;font-family:'Poppins',sans-serif;font-size:14px;transition:all .25s;letter-spacing:.5px}
+.ci-reset:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(244,166,36,.35)}
+.chat-wrap{padding:18px 24px 26px;display:flex;flex-direction:column;gap:14px;background-image:radial-gradient(circle,rgba(244,166,36,0.22) 1.5px,transparent 1.5px),radial-gradient(circle,rgba(74,158,255,0.22) 1.5px,transparent 1.5px);background-size:28px 28px;background-position:0 0,14px 14px}
+.chat-msg{display:flex;flex-direction:column;max-width:70%}
+.chat-msg.right{align-self:flex-end;align-items:flex-end}
+.chat-msg.left{align-self:flex-start;align-items:flex-start}
+.chat-name-tag{font-size:11px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;margin-bottom:5px;padding:0 4px}
+.chat-msg.right .chat-name-tag{color:var(--accent)}
+.chat-msg.left .chat-name-tag{color:var(--blue)}
+.chat-bubble{padding:14px 17px 10px;border-radius:20px;width:100%}
+.chat-msg.right .chat-bubble{background:rgba(55,36,6,0.75);border:1px solid rgba(244,166,36,0.4);border-bottom-right-radius:4px;box-shadow:0 6px 28px rgba(0,0,0,0.65),0 0 18px rgba(244,166,36,0.22)}
+.chat-msg.left .chat-bubble{background:rgba(12,32,72,0.8);border:1px solid rgba(74,158,255,0.35);border-bottom-left-radius:4px;box-shadow:0 6px 28px rgba(0,0,0,0.65),0 0 18px rgba(74,158,255,0.20)}
+.chat-en{font-size:15px;color:var(--text);line-height:1.65;font-weight:500}
+.chat-en b{color:var(--accent)}
+.chat-msg.left .chat-en b{color:var(--blue)}
+.chat-ar{font-size:14px;color:rgba(232,237,245,0.8);direction:rtl;font-family:'Cairo',sans-serif;line-height:1.75;border-top:1px solid rgba(255,255,255,0.09);padding-top:9px;margin-top:9px}
+.chat-bubble-foot{display:flex;justify-content:flex-end;margin-top:9px;padding-top:7px;border-top:1px solid rgba(255,255,255,0.07)}
+.chat-sp-btn{font-size:14px;cursor:pointer;padding:5px 13px;border-radius:20px;transition:all .2s;line-height:1;font-weight:700;letter-spacing:.3px}
+.chat-msg.right .chat-sp-btn{background:rgba(244,166,36,0.18);border:1px solid rgba(244,166,36,0.45);color:var(--accent)}
+.chat-msg.left .chat-sp-btn{background:rgba(74,158,255,0.15);border:1px solid rgba(74,158,255,0.4);color:var(--blue)}
+.chat-sp-btn:hover{transform:scale(1.08);filter:brightness(1.25)}
+.su-prog{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:6px;overflow:hidden}
+.su-prog-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:2px;width:0%;transition:width .6s ease}
+
+.su-level-hd{padding:8px 12px 5px;margin-top:8px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(255,255,255,.05)}
+.su-level-code{font-size:11px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;padding:2px 8px;border-radius:5px;display:inline-block}
+.su-level-name{font-family:'Cairo',sans-serif;font-size:12px;font-weight:700;color:#f4c430;direction:rtl;margin:0;line-height:1}
+.lvl-a1{background:rgba(52,211,153,.15);color:#34d399;border:1px solid rgba(52,211,153,.35)}
+.lvl-a2{background:rgba(74,158,255,.15);color:#4a9eff;border:1px solid rgba(74,158,255,.35)}
+.lvl-b1{background:rgba(245,158,11,.15);color:#f59e0b;border:1px solid rgba(245,158,11,.35)}
+.lvl-b2{background:rgba(244,166,36,.15);color:var(--accent);border:1px solid rgba(244,166,36,.35)}
+.lvl-b2p{background:rgba(251,146,60,.15);color:#fb923c;border:1px solid rgba(251,146,60,.35)}
+.lvl-c1{background:rgba(168,85,247,.15);color:#a855f7;border:1px solid rgba(168,85,247,.35)}
+.su-coming{opacity:.28;cursor:default;pointer-events:none}
+.su-prog{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:6px;overflow:hidden}
+.su-prog-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:2px;width:0%;transition:width .6s ease}
+
+/* Lesson 1 specific styles */
+.alpha-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(68px,1fr));gap:8px;margin:18px 0}
+.alpha-card{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:12px 8px;text-align:center;cursor:pointer;transition:all .22s;position:relative}
+.alpha-card:hover{transform:translateY(-3px);border-color:var(--accent);background:rgba(244,166,36,.08)}
+.alpha-card.vowel{border-color:rgba(244,166,36,.5);background:rgba(244,166,36,.07)}
+.alpha-card.vowel:hover{background:rgba(244,166,36,.15)}
+.alpha-up{font-size:22px;font-weight:900;color:var(--text);line-height:1}
+.alpha-lo{font-size:14px;color:var(--muted);margin:2px 0}
+.alpha-ar{font-size:10px;color:var(--accent);font-family:'Cairo',sans-serif;margin-top:4px}
+.alpha-card.vowel .alpha-up{color:var(--accent)}
+.vowel-badge{display:inline-block;background:rgba(244,166,36,.15);border:1px solid rgba(244,166,36,.4);color:var(--accent);font-size:10px;font-weight:800;padding:2px 8px;border-radius:10px;margin-right:4px}
+.cons-badge{display:inline-block;background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.3);color:var(--blue);font-size:10px;font-weight:800;padding:2px 8px;border-radius:10px;margin-right:4px}
+.num-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:9px;margin:14px 0}
+.num-card{background:var(--card2);border:1px solid var(--border);border-radius:11px;padding:12px 14px;cursor:pointer;transition:all .2s}
+.num-card:hover{transform:translateY(-2px);border-color:var(--blue)}
+.num-digit{font-size:22px;font-weight:900;color:var(--blue);line-height:1}
+.num-word{font-size:13px;font-weight:700;color:var(--text);margin-top:3px}
+.num-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-top:3px}
+.num-grid-sm{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:8px;margin:14px 0}
+.num-sm{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:9px 12px;cursor:pointer;transition:all .2s}
+.num-sm:hover{border-color:var(--blue);transform:translateY(-2px)}
+.num-sm .num-digit{font-size:17px}
+.num-sm .num-word{font-size:12px}
+.ord-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin:14px 0}
+.ord-card{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px;cursor:pointer;transition:all .2s}
+.ord-card:hover{border-color:var(--purple);transform:translateY(-2px)}
+.ord-num{font-size:18px;font-weight:900;color:var(--purple);line-height:1}
+.ord-word{font-size:12.5px;font-weight:700;color:var(--text);margin-top:3px}
+.ord-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-top:3px}
+.rule-box{background:linear-gradient(135deg,rgba(168,85,247,.12),rgba(74,158,255,.08));border:1px solid rgba(168,85,247,.3);border-radius:14px;padding:16px 20px;margin:14px 0}
+.rule-title{font-size:12px;font-weight:800;color:#a855f7;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.rule-body{font-size:13px;color:var(--text);line-height:1.75}
+.rule-body b{color:#a855f7}
+.rule-body .eg{color:var(--accent);font-style:italic}
+
+
+
+.nav-home-btn{display:inline-flex;align-items:center;gap:6px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.4);color:var(--accent);font-size:12px;font-weight:800;padding:5px 13px;border-radius:8px;text-decoration:none;transition:all .2s;white-space:nowrap;flex-shrink:0}
+.nav-home-btn:hover{background:rgba(244,166,36,.25);transform:translateY(-2px)}
+.nav-lesson-badge{background:var(--accent);color:#0a1628;font-size:12px;font-weight:900;padding:5px 13px;border-radius:7px;white-space:nowrap;letter-spacing:.3px;flex-shrink:0}
+.nav-lesson-name{font-size:13px;color:rgba(232,237,245,.7);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-sep{color:rgba(136,153,176,.5);font-size:13px;flex-shrink:0}
+.nav-left{display:flex;align-items:center;gap:8px;flex:1;min-width:0}
+.nav-right{display:flex;align-items:center;flex-shrink:0}
+
+/* ── Lesson 20 — Past Continuous ── */
+.was-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
+.was-card{background:var(--card2);border-radius:12px;padding:16px 20px;border:2px solid var(--border);text-align:center;transition:transform .2s,border-color .2s}
+.was-card:hover{transform:translateY(-3px);border-color:var(--accent)}
+.was-subj{font-size:14px;font-weight:800;color:var(--text);margin-bottom:6px}
+.was-verb{font-size:22px;font-weight:900;color:var(--accent)}
+.was-ar{font-family:'Cairo',sans-serif;font-size:11px;color:var(--muted);margin-top:4px;direction:rtl}
+
+.form-box{background:linear-gradient(135deg,rgba(26,58,110,.5),rgba(30,45,64,.5));border:2px solid rgba(74,158,255,.4);border-radius:14px;padding:20px 24px;margin:16px 0;text-align:center}
+.form-box .form-en{font-size:17px;font-weight:900;color:var(--blue);letter-spacing:.5px;margin-bottom:8px}
+.form-box .form-parts{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:10px}
+.form-part{background:rgba(74,158,255,.12);border:1px solid rgba(74,158,255,.4);border-radius:8px;padding:6px 14px;font-size:13px;font-weight:800;color:var(--blue)}
+.form-plus{color:var(--muted);font-size:18px;font-weight:900}
+
+.ing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}
+@media(max-width:600px){.ing-grid{grid-template-columns:1fr 1fr}}
+.ing-card{background:var(--card2);border-radius:10px;padding:12px;border:1px solid var(--border);text-align:center;cursor:pointer;transition:transform .2s,border-color .2s}
+.ing-card:hover{transform:translateY(-2px);border-color:var(--blue)}
+.ing-base{font-size:12px;color:var(--muted);margin-bottom:4px}
+.ing-rule{font-size:10px;color:var(--accent);margin-bottom:3px}
+.ing-result{font-size:15px;font-weight:900;color:var(--blue)}
+
+.use-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+@media(max-width:600px){.use-grid{grid-template-columns:1fr}}
+.use-card{background:var(--card2);border-radius:12px;padding:16px;border-left:4px solid var(--accent);transition:transform .2s}
+.use-card:hover{transform:translateY(-3px)}
+.use-card.blue{border-left-color:var(--blue)}
+.use-card.green{border-left-color:var(--green)}
+.use-card.purple{border-left-color:#a855f7}
+.use-title{font-size:12px;font-weight:900;color:var(--accent);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
+.use-card.blue .use-title{color:var(--blue)}
+.use-card.green .use-title{color:var(--green)}
+.use-card.purple .use-title{color:#a855f7}
+.use-ex{font-size:13px;color:var(--text);margin-top:6px;cursor:pointer}
+.use-ex:hover{color:var(--accent)}
+.use-ar{font-family:'Cairo',sans-serif;font-size:11px;color:var(--muted);margin-top:3px;direction:rtl}
+
+.contrast-wrap{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+@media(max-width:600px){.contrast-wrap{grid-template-columns:1fr}}
+.contrast-box{background:var(--card2);border-radius:12px;padding:16px 18px;border:2px solid var(--border)}
+.contrast-box.pc{border-color:rgba(74,158,255,.4)}
+.contrast-box.ps{border-color:rgba(244,166,36,.4)}
+.contrast-title{font-size:12px;font-weight:900;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px}
+.contrast-box.pc .contrast-title{color:var(--blue)}
+.contrast-box.ps .contrast-title{color:var(--accent)}
+.contrast-ex{font-size:13px;color:var(--text);margin:5px 0;cursor:pointer}
+.contrast-ex:hover{color:var(--blue)}
+.contrast-ar{font-family:'Cairo',sans-serif;font-size:11px;color:var(--muted);direction:rtl;margin-bottom:8px}
+
+.neg-q-wrap{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+@media(max-width:600px){.neg-q-wrap{grid-template-columns:1fr}}
+.nq-box{background:var(--card2);border-radius:12px;padding:16px 18px;border:2px solid var(--border)}
+.nq-title{font-size:12px;font-weight:900;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px}
+.nq-box.neg .nq-title{color:var(--red)}
+.nq-box.neg{border-color:rgba(239,68,68,.3)}
+.nq-box.qst .nq-title{color:var(--blue)}
+.nq-box.qst{border-color:rgba(74,158,255,.3)}
+.nq-form{font-size:14px;font-weight:800;color:var(--text);margin-bottom:8px}
+.nq-ex{font-size:12px;color:var(--muted);margin-top:5px;cursor:pointer}
+.nq-ex:hover{color:var(--text)}
+
+.su-level-hd{padding:8px 12px 5px;margin-top:8px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(255,255,255,.05)}
+.su-level-code{font-size:11px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;padding:2px 8px;border-radius:5px;display:inline-block}
+.su-level-name{font-family:'Cairo',sans-serif;font-size:12px;font-weight:700;color:#f4c430;direction:rtl;margin:0;line-height:1}
+.lvl-a1{background:rgba(52,211,153,.15);color:#34d399;border:1px solid rgba(52,211,153,.35)}
+.lvl-a2{background:rgba(74,158,255,.15);color:#4a9eff;border:1px solid rgba(74,158,255,.35)}
+.lvl-b1{background:rgba(245,158,11,.15);color:#f59e0b;border:1px solid rgba(245,158,11,.35)}
+.lvl-b2{background:rgba(244,166,36,.15);color:var(--accent);border:1px solid rgba(244,166,36,.35)}
+.lvl-b2p{background:rgba(251,146,60,.15);color:#fb923c;border:1px solid rgba(251,146,60,.35)}
+.lvl-c1{background:rgba(168,85,247,.15);color:#a855f7;border:1px solid rgba(168,85,247,.35)}
+.su-coming{opacity:.28;cursor:default;pointer-events:none}
+.su-prog{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:6px;overflow:hidden}
+.su-prog-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:2px;width:0%;transition:width .6s ease}
+
+.nav-home-btn{display:inline-flex;align-items:center;gap:6px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.4);color:var(--accent);font-size:12px;font-weight:800;padding:5px 13px;border-radius:8px;text-decoration:none;transition:all .2s;white-space:nowrap;flex-shrink:0}
+.nav-home-btn:hover{background:rgba(244,166,36,.25);transform:translateY(-2px)}
+.nav-lesson-badge{background:var(--accent);color:#0a1628;font-size:12px;font-weight:900;padding:5px 13px;border-radius:7px;white-space:nowrap;letter-spacing:.3px;flex-shrink:0}
+.nav-lesson-name{font-size:13px;color:rgba(232,237,245,.7);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-sep{color:rgba(136,153,176,.5);font-size:13px;flex-shrink:0}
+.nav-left{display:flex;align-items:center;gap:8px;flex:1;min-width:0}
+.nav-right{display:flex;align-items:center;flex-shrink:0}
+
+.read-body b{color:var(--accent)}
+.read-body p b{color:var(--accent)}
+</style>
+
+<style>
+/* Watermark on print */
+@media print {
+  body::before {
+    content: 'Mohammed Elhuseyin — English Learning Platform — محمية الحقوق';
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-35deg);
+    font-size: 48px;
+    font-weight: 900;
+    color: rgba(244,166,36,0.18);
+    z-index: 9999;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+}
+</style>
+
+<style>
+.float-menu-btn{display:none;position:fixed;bottom:22px;left:18px;z-index:9998;width:48px;height:48px;background:var(--primary-dark,#0f2548);border:2px solid rgba(244,166,36,.5);border-radius:14px;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:12px;box-shadow:0 4px 20px rgba(0,0,0,.4);transition:transform .15s,box-shadow .15s}
+.float-menu-btn:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,.5)}
+.float-menu-btn span{display:block;width:22px;height:2px;background:#f4a624;border-radius:2px;transition:all .25s}
+@media(max-width:768px){.float-menu-btn{display:flex}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-logo">
+      <div class="sidebar-logo-icon">A</div>
+      <div>
+        <div class="sidebar-logo-text">English Course</div>
+        <div class="sidebar-logo-sub">MOHAMMED ELHUSEYIN</div>
+      </div>
+    </div>
+    <div class="sidebar-label ar">الوحدات الدراسية</div>
+  </div>
+  <div class="sidebar-units">
+  <div class="su-level-hd"><span class="su-level-code lvl-a1">A1</span><span class="su-level-name">مستوى المبتدئ تماماً</span></div>
+  <a href="lesson1.html" class="su-item"><div class="su-num">1</div><div class="su-texts"><div class="su-en">Alphabet & Numbers</div><div class="su-ar">الأحرف والأرقام</div><div class="su-prog"><div class="su-prog-fill" id="sp1"></div></div></div></a>
+  <a href="lesson2.html" class="su-item"><div class="su-num">2</div><div class="su-texts"><div class="su-en">Classroom Language & Greetings</div><div class="su-ar">لغة الصف والتحيات</div><div class="su-prog"><div class="su-prog-fill" id="sp2"></div></div></div></a>
+  <a href="lesson3.html" class="su-item"><div class="su-num">3</div><div class="su-texts"><div class="su-en">Nationalities & Countries</div><div class="su-ar">الجنسيات والدول</div><div class="su-prog"><div class="su-prog-fill" id="sp3"></div></div></div></a>
+  <a href="lesson4.html" class="su-item"><div class="su-num">4</div><div class="su-texts"><div class="su-en">Singular & Plural Nouns</div><div class="su-ar">الأسماء المفردة والجمع</div><div class="su-prog"><div class="su-prog-fill" id="sp4"></div></div></div></a>
+  <a href="lesson5.html" class="su-item"><div class="su-num">5</div><div class="su-texts"><div class="su-en">Days & Telling the Time</div><div class="su-ar">الأيام وإخبار الوقت</div><div class="su-prog"><div class="su-prog-fill" id="sp5"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-a2">A2</span><span class="su-level-name">المستوى الابتدائي</span></div>
+  <a href="unit1.html" class="su-item"><div class="su-num">6</div><div class="su-texts"><div class="su-en">Verb to <i>be</i></div><div class="su-ar">فعل التكوين</div><div class="su-prog"><div class="su-prog-fill" id="sp6"></div></div></div></a>
+  <a href="unit2.html" class="su-item"><div class="su-num">7</div><div class="su-texts"><div class="su-en">Present Simple</div><div class="su-ar">المضارع البسيط</div><div class="su-prog"><div class="su-prog-fill" id="sp7"></div></div></div></a>
+  <a href="unit3.html" class="su-item"><div class="su-num">8</div><div class="su-texts"><div class="su-en">Present Continuous</div><div class="su-ar">المضارع المستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp8"></div></div></div></a>
+  <a href="unit4.html" class="su-item"><div class="su-num">9</div><div class="su-texts"><div class="su-en">Past Simple: was / were</div><div class="su-ar">الماضي البسيط: كان</div><div class="su-prog"><div class="su-prog-fill" id="sp9"></div></div></div></a>
+  <a href="unit6.html" class="su-item"><div class="su-num">10</div><div class="su-texts"><div class="su-en">Past Simple: Regular & Irreg.</div><div class="su-ar">الماضي البسيط للأفعال</div><div class="su-prog"><div class="su-prog-fill" id="sp10"></div></div></div></a>
+  <a href="unit5.html" class="su-item"><div class="su-num">11</div><div class="su-texts"><div class="su-en">Can / Can't</div><div class="su-ar">القدرة والعجز</div><div class="su-prog"><div class="su-prog-fill" id="sp11"></div></div></div></a>
+  <a href="lesson12.html" class="su-item"><div class="su-num">12</div><div class="su-texts"><div class="su-en">Possessive Pronouns</div><div class="su-ar">ضمائر الملكية</div><div class="su-prog"><div class="su-prog-fill" id="sp12"></div></div></div></a>
+  <a href="unit7.html" class="su-item"><div class="su-num">13</div><div class="su-texts"><div class="su-en">There is / There are</div><div class="su-ar">يوجد / توجد</div><div class="su-prog"><div class="su-prog-fill" id="sp13"></div></div></div></a>
+  <a href="unit8.html" class="su-item"><div class="su-num">14</div><div class="su-texts"><div class="su-en">Adjectives</div><div class="su-ar">الصفات</div><div class="su-prog"><div class="su-prog-fill" id="sp14"></div></div></div></a>
+  <a href="unit9.html" class="su-item"><div class="su-num">15</div><div class="su-texts"><div class="su-en">Imperatives</div><div class="su-ar">صيغة الأمر والنهي</div><div class="su-prog"><div class="su-prog-fill" id="sp15"></div></div></div></a>
+  <a href="unit10.html" class="su-item"><div class="su-num">16</div><div class="su-texts"><div class="su-en">Object Pronouns</div><div class="su-ar">ضمائر المفعول به</div><div class="su-prog"><div class="su-prog-fill" id="sp16"></div></div></div></a>
+  <a href="unit11.html" class="su-item"><div class="su-num">17</div><div class="su-texts"><div class="su-en">Prepositions of Time & Place</div><div class="su-ar">حروف جر الوقت والمكان</div><div class="su-prog"><div class="su-prog-fill" id="sp17"></div></div></div></a>
+  <a href="unit12.html" class="su-item"><div class="su-num">18</div><div class="su-texts"><div class="su-en">Future Plans: going to</div><div class="su-ar">خطط المستقبل</div><div class="su-prog"><div class="su-prog-fill" id="sp18"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b1">B1</span><span class="su-level-name">تحت المتوسط</span></div>
+  <a href="lesson19.html" class="su-item"><div class="su-num">19</div><div class="su-texts"><div class="su-en">Present Perfect Introduction</div><div class="su-ar">مقدمة المضارع التام</div><div class="su-prog"><div class="su-prog-fill" id="sp19"></div></div></div></a>
+  <a href="lesson20.html" class="su-item su-active"><div class="su-num">20</div><div class="su-texts"><div class="su-en">Past Continuous</div><div class="su-ar">الماضي المستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp20"></div></div></div></a>
+  <a href="lesson21.html" class="su-item"><div class="su-num">21</div><div class="su-texts"><div class="su-en">will vs. going to</div><div class="su-ar">المستقبل: إرادة أم تخطيط؟</div><div class="su-prog"><div class="su-prog-fill" id="sp21"></div></div></div></a>
+  <a href="lesson22.html" class="su-item"><div class="su-num">22</div><div class="su-texts"><div class="su-en">like / love / hate + -ing</div><div class="su-ar">التعبير عن التفضيلات</div><div class="su-prog"><div class="su-prog-fill" id="sp22"></div></div></div></a>
+  <a href="lesson23.html" class="su-item"><div class="su-num">23</div><div class="su-texts"><div class="su-en">Comparatives & Superlatives</div><div class="su-ar">المقارنة والتفضيل</div><div class="su-prog"><div class="su-prog-fill" id="sp23"></div></div></div></a>
+  <a href="lesson24.html" class="su-item"><div class="su-num">24</div><div class="su-texts"><div class="su-en">must / have to / should</div><div class="su-ar">أفعال الإلزام والنصيحة</div><div class="su-prog"><div class="su-prog-fill" id="sp24"></div></div></div></a>
+  <a href="lesson25.html" class="su-item"><div class="su-num">25</div><div class="su-texts"><div class="su-en">Infinitives & Gerunds</div><div class="su-ar">المصدر وصيغة الـ ing</div><div class="su-prog"><div class="su-prog-fill" id="sp25"></div></div></div></a>
+  <a href="lesson26.html" class="su-item"><div class="su-num">26</div><div class="su-texts"><div class="su-en">Articles: a/an / the</div><div class="su-ar">أدوات التعريف والتنكير</div><div class="su-prog"><div class="su-prog-fill" id="sp26"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b2">B2</span><span class="su-level-name">المستوى المتوسط</span></div>
+  <a href="lesson27.html" class="su-item"><div class="su-num">27</div><div class="su-texts"><div class="su-en">Present Perfect vs. Past Simple</div><div class="su-ar">المقارنة بين الماضي والتام</div><div class="su-prog"><div class="su-prog-fill" id="sp27"></div></div></div></a>
+  <a href="lesson28.html" class="su-item"><div class="su-num">28</div><div class="su-texts"><div class="su-en">Passive Voice</div><div class="su-ar">المبني للمجهول</div><div class="su-prog"><div class="su-prog-fill" id="sp28"></div></div></div></a>
+  <a href="lesson29.html" class="su-item"><div class="su-num">29</div><div class="su-texts"><div class="su-en">Zero / First / Second Cond.</div><div class="su-ar">الجمل الشرطية 0-1-2</div><div class="su-prog"><div class="su-prog-fill" id="sp29"></div></div></div></a>
+  <a href="lesson30.html" class="su-item"><div class="su-num">30</div><div class="su-texts"><div class="su-en">Reported Speech</div><div class="su-ar">الكلام غير المباشر</div><div class="su-prog"><div class="su-prog-fill" id="sp30"></div></div></div></a>
+  <a href="lesson31.html" class="su-item"><div class="su-num">31</div><div class="su-texts"><div class="su-en">Relative Clauses</div><div class="su-ar">جمل الوصل: who / which</div><div class="su-prog"><div class="su-prog-fill" id="sp31"></div></div></div></a>
+  <a href="lesson32.html" class="su-item"><div class="su-num">32</div><div class="su-texts"><div class="su-en">Quantifiers</div><div class="su-ar">محددات الكمية</div><div class="su-prog"><div class="su-prog-fill" id="sp32"></div></div></div></a>
+  <a href="lesson33.html" class="su-item"><div class="su-num">33</div><div class="su-texts"><div class="su-en">Phrasal Verbs Introduction</div><div class="su-ar">مقدمة الأفعال المركبة</div><div class="su-prog"><div class="su-prog-fill" id="sp33"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b2p">B2+</span><span class="su-level-name">فوق المتوسط</span></div>
+  <a href="lesson34.html" class="su-item"><div class="su-num">34</div><div class="su-texts"><div class="su-en">Narrative Tenses & Past Perfect</div><div class="su-ar">أزمنة السرد والماضي التام</div><div class="su-prog"><div class="su-prog-fill" id="sp34"></div></div></div></a>
+  <a href="lesson35.html" class="su-item"><div class="su-num">35</div><div class="su-texts"><div class="su-en">Future Perfect & Continuous</div><div class="su-ar">المستقبل التام والمستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp35"></div></div></div></a>
+  <a href="lesson36.html" class="su-item"><div class="su-num">36</div><div class="su-texts"><div class="su-en">Third Conditional & Regrets</div><div class="su-ar">الشرط الثالث والندم</div><div class="su-prog"><div class="su-prog-fill" id="sp36"></div></div></div></a>
+  <a href="lesson37.html" class="su-item"><div class="su-num">37</div><div class="su-texts"><div class="su-en">Causative: have/get done</div><div class="su-ar">الأفعال السببية</div><div class="su-prog"><div class="su-prog-fill" id="sp37"></div></div></div></a>
+  <a href="lesson38.html" class="su-item"><div class="su-num">38</div><div class="su-texts"><div class="su-en">Advanced Passive</div><div class="su-ar">المبني للمجهول المتقدم</div><div class="su-prog"><div class="su-prog-fill" id="sp38"></div></div></div></a>
+  <a href="lesson39.html" class="su-item"><div class="su-num">39</div><div class="su-texts"><div class="su-en">Speculation: must/might/can't</div><div class="su-ar">التخمين والاستنتاج</div><div class="su-prog"><div class="su-prog-fill" id="sp39"></div></div></div></a>
+  <a href="lesson40.html" class="su-item"><div class="su-num">40</div><div class="su-texts"><div class="su-en">Idioms & Collocations</div><div class="su-ar">المصطلحات والتعبيرات</div><div class="su-prog"><div class="su-prog-fill" id="sp40"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-c1">C1</span><span class="su-level-name">المستوى المتقدم الأكاديمي</span></div>
+  <a href="lesson41.html" class="su-item"><div class="su-num">41</div><div class="su-texts"><div class="su-en">Inversion & Emphatic Structures</div><div class="su-ar">التقديم والتأخير للتأكيد</div><div class="su-prog"><div class="su-prog-fill" id="sp41"></div></div></div></a>
+  <a href="lesson42.html" class="su-item"><div class="su-num">42</div><div class="su-texts"><div class="su-en">Mixed Conditionals</div><div class="su-ar">الجمل الشرطية المختلطة</div><div class="su-prog"><div class="su-prog-fill" id="sp42"></div></div></div></a>
+  <a href="lesson43.html" class="su-item"><div class="su-num">43</div><div class="su-texts"><div class="su-en">Advanced Gerunds & Infinitives</div><div class="su-ar">المصادر المتقدمة</div><div class="su-prog"><div class="su-prog-fill" id="sp43"></div></div></div></a>
+  <a href="lesson44.html" class="su-item"><div class="su-num">44</div><div class="su-texts"><div class="su-en">Cleft Sentences</div><div class="su-ar">الجمل المشقوقة</div><div class="su-prog"><div class="su-prog-fill" id="sp44"></div></div></div></a>
+  <a href="lesson45.html" class="su-item"><div class="su-num">45</div><div class="su-texts"><div class="su-en">Discourse Markers</div><div class="su-ar">أدوات الربط الأكاديمية</div><div class="su-prog"><div class="su-prog-fill" id="sp45"></div></div></div></a>
+  <a href="lesson46.html" class="su-item"><div class="su-num">46</div><div class="su-texts"><div class="su-en">Nuances & Euphemisms</div><div class="su-ar">الفروقات الدقيقة والتلطيف</div><div class="su-prog"><div class="su-prog-fill" id="sp46"></div></div></div></a>
+</div>
+</aside>
+
+<div class="main-content">
+
+<nav class="topnav">
+  <div class="nav-left">
+    <a href="../index.html" class="nav-home-btn">&#x1F3E0; الرئيسية</a>
+    <span class="nav-sep">&#x203A;</span>
+    <span class="nav-lesson-badge">Lesson 20</span>
+    <span class="nav-sep">&#x203A;</span>
+    <span class="nav-lesson-name">Past Continuous</span>
+  </div>
+  <div class="nav-right"><span class="nav-brand">MOHAMMED ELHUSEYIN</span></div>
+</nav>
+
+<div class="hero">
+  <div class="unit-badge">&#x1F4DA; Lesson 20 &nbsp;&middot;&nbsp; B1 Lower-Intermediate</div>
+  <h1 class="hero-title">Past <i>Continuous</i></h1>
+  <div class="hero-ar ar">الماضي المستمر</div>
+  <p class="hero-sub">Learn how to describe actions that were in progress at a specific time in the past, and how they interact with other past events.</p>
+  <div class="hero-tags">
+    <span class="tag tag-grammar">&#x1F4D6; Grammar</span>
+    <span class="tag tag-other">&#x1F4AC; Everyday English</span>
+    <span class="tag tag-other">&#x1F4D8; Reading</span>
+    <span class="tag tag-green">&#x2705; Check It!</span>
+  </div>
+</div>
+
+<div class="main-tabs">
+  <button class="main-tab active" onclick="showTab('grammar',this)">&#x1F4D6; Grammar</button>
+  <button class="main-tab" onclick="showTab('everyday',this)">&#x1F4AC; Everyday English</button>
+  <button class="main-tab" onclick="showTab('reading',this)">&#x1F4D8; Reading</button>
+  <button class="main-tab" onclick="showTab('checkit',this)">&#x2705; Check It!</button>
+</div>
+
+<!-- ════════════════════ GRAMMAR TAB ════════════════════ -->
+<div id="tab-grammar" class="tab-panel active">
+
+  <!-- Rule 1: What is Past Continuous -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F4A1; What is the Past Continuous? — ما هو الماضي المستمر؟</div>
+    <div class="rule-ar">نستخدم الماضي المستمر للحديث عن حدث كان مستمراً في لحظة معينة في الماضي — كان يحدث في ذلك الوقت</div>
+    <div class="form-box">
+      <div class="form-en">Subject + was / were + Verb-ing</div>
+      <div class="form-parts">
+        <span class="form-part">Subject</span>
+        <span class="form-plus">+</span>
+        <span class="form-part" style="color:var(--accent)">was / were</span>
+        <span class="form-plus">+</span>
+        <span class="form-part" style="color:var(--green)">Verb + ing</span>
+      </div>
+    </div>
+    <div class="ex-wrap">
+      <div class="ex-item" onclick="ttsRead(&quot;I was studying at 9 o'clock last night.&quot;,0.88)"><span class="ex-num">1</span><span class="ex-en">I <b>was studying</b> at 9 o'clock last night.</span><span class="ex-ar ar">كنت أدرس الساعة التاسعة ليلة البارحة.</span><span class="ex-sp">&#x1F509;</span></div>
+      <div class="ex-item" onclick="ttsRead(&quot;They were playing football when it started raining.&quot;,0.88)"><span class="ex-num">2</span><span class="ex-en">They <b>were playing</b> football when it started raining.</span><span class="ex-ar ar">كانوا يلعبون كرة القدم عندما بدأ المطر.</span><span class="ex-sp">&#x1F509;</span></div>
+      <div class="ex-item" onclick="ttsRead(&quot;She was cooking dinner at 7 pm.&quot;,0.88)"><span class="ex-num">3</span><span class="ex-en">She <b>was cooking</b> dinner at 7 pm.</span><span class="ex-ar ar">كانت تطبخ العشاء الساعة السابعة مساءً.</span><span class="ex-sp">&#x1F509;</span></div>
+    </div>
+  </div>
+
+  <!-- Rule 2: was vs were -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F501; was vs were — متى نستخدم was أو were؟</div>
+    <div class="rule-ar">نفس قاعدة فعل <b>to be</b> في الماضي — was للمفرد وwere للجمع والمخاطب</div>
+    <div class="was-grid">
+      <div class="was-card">
+        <div class="was-subj">I &nbsp;·&nbsp; He &nbsp;·&nbsp; She &nbsp;·&nbsp; It</div>
+        <div class="was-verb">was</div>
+        <div class="was-ar">أنا / هو / هي / هو (شيء)</div>
+      </div>
+      <div class="was-card">
+        <div class="was-subj">You &nbsp;·&nbsp; We &nbsp;·&nbsp; They</div>
+        <div class="was-verb" style="color:var(--blue)">were</div>
+        <div class="was-ar">أنت / نحن / هم</div>
+      </div>
+    </div>
+    <div class="ex-wrap">
+      <div class="ex-item" onclick="ttsRead(&quot;He was reading a book.&quot;,0.88)"><span class="ex-num">1</span><span class="ex-en">He <b>was</b> reading a book.</span><span class="ex-ar ar">كان يقرأ كتاباً.</span><span class="ex-sp">&#x1F509;</span></div>
+      <div class="ex-item" onclick="ttsRead(&quot;We were watching a film.&quot;,0.88)"><span class="ex-num">2</span><span class="ex-en">We <b>were</b> watching a film.</span><span class="ex-ar ar">كنّا نشاهد فيلماً.</span><span class="ex-sp">&#x1F509;</span></div>
+      <div class="ex-item" onclick="ttsRead(&quot;It was raining all day.&quot;,0.88)"><span class="ex-num">3</span><span class="ex-en">It <b>was</b> raining all day.</span><span class="ex-ar ar">كانت تمطر طوال اليوم.</span><span class="ex-sp">&#x1F509;</span></div>
+    </div>
+  </div>
+
+  <!-- Rule 3: Forming -ing -->
+  <div class="rule-section">
+    <div class="rule-title">&#x270F; Forming the -ing — تكوين صيغة الـ ing</div>
+    <div class="rule-ar">نفس قواعد المضارع المستمر — اضغط على أي كرت للاستماع</div>
+    <div class="ing-grid">
+      <div class="ing-card" onclick="ttsRead(&quot;work, working&quot;,0.88)"><div class="ing-base">work</div><div class="ing-rule">+ ing</div><div class="ing-result">working</div></div>
+      <div class="ing-card" onclick="ttsRead(&quot;play, playing&quot;,0.88)"><div class="ing-base">play</div><div class="ing-rule">+ ing</div><div class="ing-result">playing</div></div>
+      <div class="ing-card" onclick="ttsRead(&quot;study, studying&quot;,0.88)"><div class="ing-base">study</div><div class="ing-rule">+ ing</div><div class="ing-result">studying</div></div>
+      <div class="ing-card" onclick="ttsRead(&quot;make, making&quot;,0.88)"><div class="ing-base">make</div><div class="ing-rule">drop e + ing</div><div class="ing-result">making</div></div>
+      <div class="ing-card" onclick="ttsRead(&quot;write, writing&quot;,0.88)"><div class="ing-base">write</div><div class="ing-rule">drop e + ing</div><div class="ing-result">writing</div></div>
+      <div class="ing-card" onclick="ttsRead(&quot;have, having&quot;,0.88)"><div class="ing-base">have</div><div class="ing-rule">drop e + ing</div><div class="ing-result">having</div></div>
+      <div class="ing-card" onclick="ttsRead(&quot;run, running&quot;,0.88)"><div class="ing-base">run</div><div class="ing-rule">double + ing</div><div class="ing-result">running</div></div>
+      <div class="ing-card" onclick="ttsRead(&quot;sit, sitting&quot;,0.88)"><div class="ing-base">sit</div><div class="ing-rule">double + ing</div><div class="ing-result">sitting</div></div>
+      <div class="ing-card" onclick="ttsRead(&quot;swim, swimming&quot;,0.88)"><div class="ing-base">swim</div><div class="ing-rule">double + ing</div><div class="ing-result">swimming</div></div>
+    </div>
+  </div>
+
+  <!-- Rule 4: Uses -->
+  <div class="rule-section">
+    <div class="rule-title">&#x23F1; Uses of Past Continuous — استخدامات الماضي المستمر</div>
+    <div class="rule-ar">للماضي المستمر أربعة استخدامات رئيسية — اضغط على الأمثلة للاستماع</div>
+    <div class="use-grid">
+      <div class="use-card">
+        <div class="use-title">&#x1F553; Action in Progress</div>
+        <div class="use-ex" onclick="ttsRead(&quot;At 8 pm I was having dinner.&quot;,0.88)">At 8 pm I <b>was having</b> dinner. &#x1F509;</div>
+        <div class="use-ex" onclick="ttsRead(&quot;What were you doing at noon?&quot;,0.88)">What <b>were</b> you <b>doing</b> at noon? &#x1F509;</div>
+        <div class="use-ar">حدث كان مستمراً في وقت محدد في الماضي</div>
+      </div>
+      <div class="use-card blue">
+        <div class="use-title">&#x26A1; Interrupted Action — when</div>
+        <div class="use-ex" onclick="ttsRead(&quot;I was sleeping when the phone rang.&quot;,0.88)">I <b>was sleeping</b> when the phone rang. &#x1F509;</div>
+        <div class="use-ex" onclick="ttsRead(&quot;She was reading when he arrived.&quot;,0.88)">She <b>was reading</b> when he arrived. &#x1F509;</div>
+        <div class="use-ar">حدث مستمر + <b>when</b> + حدث قصير قاطع (Past Simple)</div>
+      </div>
+      <div class="use-card green">
+        <div class="use-title">&#x1F500; Two Parallel Actions — while</div>
+        <div class="use-ex" onclick="ttsRead(&quot;While I was cooking, she was setting the table.&quot;,0.88)">While I <b>was cooking</b>, she <b>was setting</b> the table. &#x1F509;</div>
+        <div class="use-ex" onclick="ttsRead(&quot;He was singing while she was playing guitar.&quot;,0.88)">He <b>was singing</b> while she <b>was playing</b> guitar. &#x1F509;</div>
+        <div class="use-ar">حدثان مستمران في نفس الوقت — <b>while</b> يربطهما</div>
+      </div>
+      <div class="use-card purple">
+        <div class="use-title">&#x1F4D6; Background / Scene Setting</div>
+        <div class="use-ex" onclick="ttsRead(&quot;The sun was shining and the birds were singing.&quot;,0.88)">The sun <b>was shining</b> and the birds <b>were singing</b>. &#x1F509;</div>
+        <div class="use-ex" onclick="ttsRead(&quot;It was raining and the wind was blowing hard.&quot;,0.88)">It <b>was raining</b> and the wind <b>was blowing</b> hard. &#x1F509;</div>
+        <div class="use-ar">وصف المشهد في القصص — الخلفية التي يجري فيها الحدث</div>
+      </div>
+    </div>
+    <div class="rule-box">
+      <b>when</b> + Past Simple = الحدث القاطع القصير &nbsp;·&nbsp; <b>while</b> + Past Continuous = الحدث المستمر الأطول
+    </div>
+  </div>
+
+  <!-- Rule 5: Negative & Questions -->
+  <div class="rule-section">
+    <div class="rule-title">&#x274C; Negative &amp; Questions — النفي والاستفهام</div>
+    <div class="rule-ar">لتحويل الجملة للنفي نضيف <b>not</b> بعد was/were — وللسؤال نقدم was/were</div>
+    <div class="neg-q-wrap">
+      <div class="nq-box neg">
+        <div class="nq-title">&#x274C; Negative</div>
+        <div class="nq-form">Subject + <b style="color:var(--red)">wasn't / weren't</b> + V-ing</div>
+        <div class="nq-ex" onclick="ttsRead(&quot;I wasn't sleeping, I was studying.&quot;,0.88)">I <b>wasn't</b> sleeping, I was studying. &#x1F509;</div>
+        <div class="nq-ex" onclick="ttsRead(&quot;They weren't listening to the teacher.&quot;,0.88)">They <b>weren't</b> listening to the teacher. &#x1F509;</div>
+        <div class="nq-ex" onclick="ttsRead(&quot;She wasn't working yesterday morning.&quot;,0.88)">She <b>wasn't</b> working yesterday morning. &#x1F509;</div>
+      </div>
+      <div class="nq-box qst">
+        <div class="nq-title">&#x2753; Questions</div>
+        <div class="nq-form"><b style="color:var(--blue)">Was / Were</b> + Subject + V-ing?</div>
+        <div class="nq-ex" onclick="ttsRead(&quot;Was she working late last night?&quot;,0.88)"><b>Was</b> she working late last night? &#x1F509;</div>
+        <div class="nq-ex" onclick="ttsRead(&quot;Were they having a good time?&quot;,0.88)"><b>Were</b> they having a good time? &#x1F509;</div>
+        <div class="nq-ex" onclick="ttsRead(&quot;What were you doing at midnight?&quot;,0.88)">What <b>were</b> you doing at midnight? &#x1F509;</div>
+      </div>
+    </div>
+    <div class="rule-box">
+      <b>Short answers:</b> Yes, I <b>was</b>. &nbsp;/&nbsp; No, I <b>wasn't</b>. &nbsp;/&nbsp; Yes, they <b>were</b>. &nbsp;/&nbsp; No, they <b>weren't</b>.
+    </div>
+  </div>
+
+  <!-- Rule 6: PC vs PS -->
+  <div class="rule-section">
+    <div class="rule-title">&#x2194; Past Continuous vs Past Simple — مقارنة</div>
+    <div class="rule-ar">الماضي المستمر للحدث الطويل المستمر — الماضي البسيط للحدث القصير القاطع</div>
+    <div class="contrast-wrap">
+      <div class="contrast-box pc">
+        <div class="contrast-title">&#x1F535; Past Continuous — الحدث المستمر</div>
+        <div class="contrast-ex" onclick="ttsRead(&quot;I was watching TV...&quot;,0.88)">I <b>was watching</b> TV... &#x1F509;</div>
+        <div class="contrast-ar">الحدث الأطول المستمر</div>
+        <div class="contrast-ex" onclick="ttsRead(&quot;She was cooking dinner...&quot;,0.88)">She <b>was cooking</b> dinner... &#x1F509;</div>
+        <div class="contrast-ar">خلفية الحدث</div>
+      </div>
+      <div class="contrast-box ps">
+        <div class="contrast-title">&#x1F7E0; Past Simple — الحدث القاطع</div>
+        <div class="contrast-ex" onclick="ttsRead(&quot;...when the lights went off.&quot;,0.88)">...when the lights <b>went</b> off. &#x1F509;</div>
+        <div class="contrast-ar">الحدث القصير الذي قطع الأول</div>
+        <div class="contrast-ex" onclick="ttsRead(&quot;...when the doorbell rang.&quot;,0.88)">...when the doorbell <b>rang</b>. &#x1F509;</div>
+        <div class="contrast-ar">بدأ وانتهى في لحظة</div>
+      </div>
+    </div>
+    <div class="ex-wrap">
+      <div class="ex-item" onclick="ttsRead(&quot;I was having a shower when my phone rang.&quot;,0.88)"><span class="ex-num">1</span><span class="ex-en">I <b>was having</b> a shower <b>when</b> my phone <b>rang</b>.</span><span class="ex-ar ar">كنت أستحم عندما رنّ هاتفي.</span><span class="ex-sp">&#x1F509;</span></div>
+      <div class="ex-item" onclick="ttsRead(&quot;While she was studying, her friend knocked on the door.&quot;,0.88)"><span class="ex-num">2</span><span class="ex-en">While she <b>was studying</b>, her friend <b>knocked</b> on the door.</span><span class="ex-ar ar">بينما كانت تدرس، طرق صديقها الباب.</span><span class="ex-sp">&#x1F509;</span></div>
+      <div class="ex-item" onclick="ttsRead(&quot;They were walking home when it started to snow.&quot;,0.88)"><span class="ex-num">3</span><span class="ex-en">They <b>were walking</b> home when it <b>started</b> to snow.</span><span class="ex-ar ar">كانوا يمشون للبيت عندما بدأ الثلج.</span><span class="ex-sp">&#x1F509;</span></div>
+    </div>
+  </div>
+
+</div><!-- /tab-grammar -->
+
+<!-- ════════════════════ EVERYDAY ENGLISH TAB ════════════════════ -->
+<div id="tab-everyday" class="tab-panel">
+
+  <!-- Dialogue 1 -->
+  <div class="dlg-block">
+    <div class="dlg-header">
+      <div>
+        <div class="dlg-title">&#x1F4DE; Why Didn't You Answer?</div>
+        <div class="dlg-sub ar">لماذا لم ترد على الهاتف؟</div>
+      </div>
+      <div class="dlg-tags"><span class="tag tag-grammar">was/were + ing</span><span class="tag tag-other">phone call</span></div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;I called you three times last night! Why didn't you answer?&quot;,0.88)">I called you three times last night! Why didn't you answer? <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">اتصلت بك ثلاث مرات الليلة الماضية! لماذا لم ترد؟</div>
+          <div class="chat-bubble-foot">Sara</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Sorry! I was having a shower when you called the first time.&quot;,0.88)">Sorry! I <b>was having</b> a shower when you called the first time. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">آسف! كنت أستحم عندما اتصلتِ المرة الأولى.</div>
+          <div class="chat-bubble-foot">Liam</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;And the second time? What were you doing then?&quot;,0.88)">And the second time? What <b>were</b> you <b>doing</b> then? <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">والمرة الثانية؟ ماذا كنت تفعل؟</div>
+          <div class="chat-bubble-foot">Sara</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;I was watching a really important match. I wasn't ignoring you, I promise!&quot;,0.88)">I <b>was watching</b> a really important match. I <b>wasn't</b> ignoring you, I promise! <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">كنت أشاهد مباراة مهمة جداً. لم أكن أتجاهلك، أعدك!</div>
+          <div class="chat-bubble-foot">Liam</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dialogue 2 -->
+  <div class="dlg-block">
+    <div class="dlg-header">
+      <div>
+        <div class="dlg-title">&#x1F6AA; A Surprise Visit</div>
+        <div class="dlg-sub ar">زيارة مفاجئة</div>
+      </div>
+      <div class="dlg-tags"><span class="tag tag-grammar">when — interrupted action</span></div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Hi! I was just passing by. Were you busy?&quot;,0.88)">Hi! I was just passing by. <b>Were</b> you busy? <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">مرحباً! كنت أمر من هنا. هل كنت مشغولاً؟</div>
+          <div class="chat-bubble-foot">Omar</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Actually, I was working on my project when you knocked. But it's fine, I needed a break!&quot;,0.88)">Actually, I <b>was working</b> on my project when you knocked. But it's fine, I needed a break! <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">في الواقع، كنت أعمل على مشروعي عندما طرقت. لكن لا بأس، كنت بحاجة لاستراحة!</div>
+          <div class="chat-bubble-foot">Nadia</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;What were you working on?&quot;,0.88)">What <b>were</b> you <b>working on</b>? <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">على ماذا كنت تعملين؟</div>
+          <div class="chat-bubble-foot">Omar</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;I was writing a report for my professor. It's due tomorrow!&quot;,0.88)">I <b>was writing</b> a report for my professor. It's due tomorrow! <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">كنت أكتب تقريراً لأستاذي. موعد تسليمه غداً!</div>
+          <div class="chat-bubble-foot">Nadia</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dialogue 3 -->
+  <div class="dlg-block">
+    <div class="dlg-header">
+      <div>
+        <div class="dlg-title">&#x1F6A8; Witness Report</div>
+        <div class="dlg-sub ar">شاهد على حادثة</div>
+      </div>
+      <div class="dlg-tags"><span class="tag tag-grammar">background scene</span><span class="tag tag-other">past cont. + past simple</span></div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Can you tell me what was happening when the accident occurred?&quot;,0.88)">Can you tell me what <b>was happening</b> when the accident occurred? <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">هل يمكنك إخباري بما كان يحدث عندما وقع الحادث؟</div>
+          <div class="chat-bubble-foot">Officer</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Well, I was standing at the bus stop. A car was driving very fast and then it hit the wall.&quot;,0.88)">Well, I <b>was standing</b> at the bus stop. A car <b>was driving</b> very fast and then it <b>hit</b> the wall. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">حسناً، كنت واقفاً عند محطة الباص. كانت سيارة تسير بسرعة كبيرة ثم اصطدمت بالجدار.</div>
+          <div class="chat-bubble-foot">Witness</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Were other people watching too?&quot;,0.88)">Were other people watching too? <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">هل كان أشخاص آخرون يشاهدون أيضاً؟</div>
+          <div class="chat-bubble-foot">Officer</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Yes, two women were waiting for the bus and a man was walking his dog nearby.&quot;,0.88)">Yes, two women <b>were waiting</b> for the bus and a man <b>was walking</b> his dog nearby. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">نعم، كانت امرأتان تنتظران الباص ورجل كان يمشي بكلبه قريباً.</div>
+          <div class="chat-bubble-foot">Witness</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dialogue 4 -->
+  <div class="dlg-block">
+    <div class="dlg-header">
+      <div>
+        <div class="dlg-title">&#x1F389; At the Party — while</div>
+        <div class="dlg-sub ar">في الحفلة — حدثان متوازيان</div>
+      </div>
+      <div class="dlg-tags"><span class="tag tag-grammar">while — parallel actions</span></div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Did you have fun at Karim's party last night?&quot;,0.88)">Did you have fun at Karim's party last night? <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">هل استمتعت في حفلة كريم الليلة الماضية؟</div>
+          <div class="chat-bubble-foot">Tom</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Yes! While some people were dancing, others were playing games. It was great.&quot;,0.88)">Yes! While some people <b>were dancing</b>, others <b>were playing</b> games. It was great. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">نعم! بينما كان بعض الناس يرقصون، كان الآخرون يلعبون الألعاب. كان رائعاً.</div>
+          <div class="chat-bubble-foot">Maya</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;What were you doing the whole time?&quot;,0.88)">What <b>were</b> you <b>doing</b> the whole time? <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">وماذا كنتِ تفعلين طوال الوقت؟</div>
+          <div class="chat-bubble-foot">Tom</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;I was talking to Sara while she was showing me photos from her trip!&quot;,0.88)">I <b>was talking</b> to Sara while she <b>was showing</b> me photos from her trip! <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">كنت أتحدث مع سارة بينما كانت تريني صور من رحلتها!</div>
+          <div class="chat-bubble-foot">Maya</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dialogue 5 -->
+  <div class="dlg-block">
+    <div class="dlg-header">
+      <div>
+        <div class="dlg-title">&#x1F575; The Alibi — Where Were You?</div>
+        <div class="dlg-sub ar">أين كنت وقت الحادثة؟</div>
+      </div>
+      <div class="dlg-tags"><span class="tag tag-grammar">past cont. questions</span><span class="tag tag-other">detective story</span></div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Mr. Ali, what were you doing between 9 and 10 pm last Tuesday?&quot;,0.88)">Mr. Ali, what <b>were</b> you <b>doing</b> between 9 and 10 pm last Tuesday? <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">السيد علي، ماذا كنت تفعل بين الساعة التاسعة والعاشرة مساء الثلاثاء الماضي؟</div>
+          <div class="chat-bubble-foot">Detective</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;I was having dinner with my family. My wife was cooking and my children were doing their homework.&quot;,0.88)">I <b>was having</b> dinner with my family. My wife <b>was cooking</b> and my children <b>were doing</b> their homework. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">كنت أتناول العشاء مع عائلتي. كانت زوجتي تطبخ وأطفالي كانوا يذاكرون.</div>
+          <div class="chat-bubble-foot">Mr. Ali</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Was anyone else with you? Were you watching TV perhaps?&quot;,0.88)"><b>Was</b> anyone else with you? <b>Were</b> you watching TV perhaps? <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">هل كان أحد آخر معك؟ هل كنت تشاهد التلفاز ربما؟</div>
+          <div class="chat-bubble-foot">Detective</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Yes! My neighbour was visiting us. We were all watching the football match together!&quot;,0.88)">Yes! My neighbour <b>was visiting</b> us. We <b>were</b> all <b>watching</b> the football match together! <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">نعم! كان جارنا يزورنا. كنّا جميعاً نشاهد مباراة كرة القدم معاً!</div>
+          <div class="chat-bubble-foot">Mr. Ali</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /tab-everyday -->
+
+<!-- ════════════════════ READING TAB ════════════════════ -->
+<div id="tab-reading" class="tab-panel">
+  <div class="read-wrap">
+    <div class="read-header">
+      <div class="read-title">&#x1F4D8; The Night of the Storm</div>
+      <div class="read-sub ar">ليلة العاصفة</div>
+    </div>
+    <div class="read-body">
+      <p onclick="ttsRead(&quot;It was a dark and stormy night last December.&quot;,0.88)">It <b>was</b> a dark and stormy night last December. <span class="read-sp">&#x1F509;</span></p>
+      <p onclick="ttsRead(&quot;The wind was blowing strongly and the rain was hitting the windows hard.&quot;,0.88)">The wind <b>was blowing</b> strongly and the rain <b>was hitting</b> the windows hard. <span class="read-sp">&#x1F509;</span></p>
+      <p onclick="ttsRead(&quot;Inside the house, the Karim family were spending a quiet evening together.&quot;,0.88)">Inside the house, the Karim family <b>were spending</b> a quiet evening together. <span class="read-sp">&#x1F509;</span></p>
+      <p onclick="ttsRead(&quot;The father was reading a book by the fire while the mother was knitting.&quot;,0.88)">The father <b>was reading</b> a book by the fire while the mother <b>was knitting</b>. <span class="read-sp">&#x1F509;</span></p>
+      <p onclick="ttsRead(&quot;The children were playing a board game on the floor and laughing loudly.&quot;,0.88)">The children <b>were playing</b> a board game on the floor and laughing loudly. <span class="read-sp">&#x1F509;</span></p>
+      <p onclick="ttsRead(&quot;Suddenly, while they were enjoying their evening, the lights went off.&quot;,0.88)">Suddenly, while they <b>were enjoying</b> their evening, the lights <b>went</b> off. <span class="read-sp">&#x1F509;</span></p>
+      <p onclick="ttsRead(&quot;The youngest child screamed because she was not expecting the darkness.&quot;,0.88)">The youngest child <b>screamed</b> because she <b>was not expecting</b> the darkness. <span class="read-sp">&#x1F509;</span></p>
+      <p onclick="ttsRead(&quot;But the father quickly found some candles and soon they were all laughing again, telling stories by candlelight.&quot;,0.88)">But the father quickly <b>found</b> some candles and soon they <b>were</b> all <b>laughing</b> again, telling stories by candlelight. <span class="read-sp">&#x1F509;</span></p>
+    </div>
+
+    <div class="vocab-wrap">
+      <div class="vocab-title">&#x1F4DA; Key Vocabulary</div>
+      <div class="vocab-grid">
+        <div class="vocab-card" onclick="ttsRead(&quot;stormy&quot;,0.88)"><div class="vocab-en">stormy</div><div class="vocab-ar ar">عاصف</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;blowing&quot;,0.88)"><div class="vocab-en">blowing</div><div class="vocab-ar ar">يهبّ / ينفخ</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;knitting&quot;,0.88)"><div class="vocab-en">knitting</div><div class="vocab-ar ar">الحياكة بالإبر</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;board game&quot;,0.88)"><div class="vocab-en">board game</div><div class="vocab-ar ar">لعبة لوحية</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;suddenly&quot;,0.88)"><div class="vocab-en">suddenly</div><div class="vocab-ar ar">فجأة</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;screamed&quot;,0.88)"><div class="vocab-en">screamed</div><div class="vocab-ar ar">صرخ</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;darkness&quot;,0.88)"><div class="vocab-en">darkness</div><div class="vocab-ar ar">الظلام</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;candlelight&quot;,0.88)"><div class="vocab-en">candlelight</div><div class="vocab-ar ar">ضوء الشمعة</div></div>
+      </div>
+    </div>
+
+    <div class="rq-wrap">
+      <div class="rq-title">&#x2753; Comprehension Questions</div>
+
+      <div class="rq-item" id="rq1">
+        <div class="rq-q" onclick="ttsRead(&quot;What was the weather like that night?&quot;,0.88)">1. What was the weather like that night? &#x1F509;</div>
+        <div class="rq-opts">
+          <button class="read-opt" onclick="rqPick(this,'rq1',false)">Sunny and warm</button>
+          <button class="read-opt" onclick="rqPick(this,'rq1',true)">Dark and stormy</button>
+          <button class="read-opt" onclick="rqPick(this,'rq1',false)">Cold but clear</button>
+          <button class="read-opt" onclick="rqPick(this,'rq1',false)">Foggy</button>
+        </div>
+      </div>
+
+      <div class="rq-item" id="rq2">
+        <div class="rq-q" onclick="ttsRead(&quot;What was the father doing while the mother was knitting?&quot;,0.88)">2. What was the father doing while the mother was knitting? &#x1F509;</div>
+        <div class="rq-opts">
+          <button class="read-opt" onclick="rqPick(this,'rq2',false)">Watching TV</button>
+          <button class="read-opt" onclick="rqPick(this,'rq2',true)">Reading a book by the fire</button>
+          <button class="read-opt" onclick="rqPick(this,'rq2',false)">Playing with the children</button>
+          <button class="read-opt" onclick="rqPick(this,'rq2',false)">Sleeping</button>
+        </div>
+      </div>
+
+      <div class="rq-item" id="rq3">
+        <div class="rq-q" onclick="ttsRead(&quot;What happened while they were enjoying their evening?&quot;,0.88)">3. What happened while they were enjoying their evening? &#x1F509;</div>
+        <div class="rq-opts">
+          <button class="read-opt" onclick="rqPick(this,'rq3',false)">Someone knocked on the door</button>
+          <button class="read-opt" onclick="rqPick(this,'rq3',false)">The storm got worse</button>
+          <button class="read-opt" onclick="rqPick(this,'rq3',true)">The lights went off</button>
+          <button class="read-opt" onclick="rqPick(this,'rq3',false)">The children fell asleep</button>
+        </div>
+      </div>
+
+      <div class="rq-item" id="rq4">
+        <div class="rq-q" onclick="ttsRead(&quot;Why did the youngest child scream?&quot;,0.88)">4. Why did the youngest child scream? &#x1F509;</div>
+        <div class="rq-opts">
+          <button class="read-opt" onclick="rqPick(this,'rq4',false)">She was hurt</button>
+          <button class="read-opt" onclick="rqPick(this,'rq4',true)">She was not expecting the darkness</button>
+          <button class="read-opt" onclick="rqPick(this,'rq4',false)">She lost the board game</button>
+          <button class="read-opt" onclick="rqPick(this,'rq4',false)">She heard a strange noise</button>
+        </div>
+      </div>
+
+      <div class="rq-item" id="rq5">
+        <div class="rq-q" onclick="ttsRead(&quot;How did the evening end?&quot;,0.88)">5. How did the evening end? &#x1F509;</div>
+        <div class="rq-opts">
+          <button class="read-opt" onclick="rqPick(this,'rq5',false)">The family went to bed early</button>
+          <button class="read-opt" onclick="rqPick(this,'rq5',false)">They called for help</button>
+          <button class="read-opt" onclick="rqPick(this,'rq5',true)">They were telling stories by candlelight</button>
+          <button class="read-opt" onclick="rqPick(this,'rq5',false)">The lights came back immediately</button>
+        </div>
+      </div>
+
+      <div class="rq-score" id="rqScore20" style="display:none">
+        <div class="rqs-icon">&#x1F3AF;</div>
+        <div class="rqs-num" id="rqScoreNum20"></div>
+        <div class="rqs-msg" id="rqScoreMsg20"></div>
+        <div class="rqs-ar ar" id="rqScoreAr20"></div>
+        <button class="rqs-btn" onclick="rqReset20()">&#x1F504; Try Again</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /tab-reading -->
+
+<!-- ════════════════════ CHECK IT! TAB ════════════════════ -->
+<div id="tab-checkit" class="tab-panel">
+
+  <div class="ci-hero">
+    <div class="ci-hero-icon">&#x2705;</div>
+    <h2 class="ci-hero-title">Check It!</h2>
+    <p class="ci-hero-sub">25 questions on Past Continuous — 20 MCQ + 5 Fill-in-the-Blank</p>
+    <div class="ci-hero-types">
+      <span class="tag tag-grammar">20 Multiple Choice</span>
+      <span class="tag tag-other">5 Fill in the Blank</span>
+    </div>
+  </div>
+
+  <div class="ci-progress-wrap">
+    <div class="ci-progress-inner">
+      <div class="ci-progress-bar"><div class="ci-progress-fill" id="ciProgressFill20"></div></div>
+      <div class="ci-progress-txt">
+        <span id="ciProgressTxt20">0 / 25 answered</span>
+        <span id="ciScoreTxt20">Score: 0</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="ci-wrap" id="ciWrap20">
+
+    <div class="ci-q" id="ciq1"><div class="ci-q-num">Q1</div><div class="ci-q-text" onclick="ttsRead(&quot;She ___ watching TV when I arrived.&quot;,0.88)">She ___ watching TV when I arrived. &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq1',true)">was</button><button class="ci-btn" onclick="ciPick(this,'ciq1',false)">were</button><button class="ci-btn" onclick="ciPick(this,'ciq1',false)">is</button><button class="ci-btn" onclick="ciPick(this,'ciq1',false)">did</button></div></div>
+
+    <div class="ci-q" id="ciq2"><div class="ci-q-num">Q2</div><div class="ci-q-text" onclick="ttsRead(&quot;They ___ playing football at 5 pm.&quot;,0.88)">They ___ playing football at 5 pm. &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq2',false)">was</button><button class="ci-btn" onclick="ciPick(this,'ciq2',true)">were</button><button class="ci-btn" onclick="ciPick(this,'ciq2',false)">are</button><button class="ci-btn" onclick="ciPick(this,'ciq2',false)">be</button></div></div>
+
+    <div class="ci-q" id="ciq3"><div class="ci-q-num">Q3</div><div class="ci-q-text" onclick="ttsRead(&quot;What is the correct ing form of run?&quot;,0.88)">What is the correct -ing form of <i>run</i>? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq3',false)">runing</button><button class="ci-btn" onclick="ciPick(this,'ciq3',true)">running</button><button class="ci-btn" onclick="ciPick(this,'ciq3',false)">runeing</button><button class="ci-btn" onclick="ciPick(this,'ciq3',false)">runed</button></div></div>
+
+    <div class="ci-q" id="ciq4"><div class="ci-q-num">Q4</div><div class="ci-q-text" onclick="ttsRead(&quot;I was cooking when the phone rang.&quot;,0.88)">I <b>was cooking</b> when the phone <b>rang</b>. The "rang" is: &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq4',false)">the longer action</button><button class="ci-btn" onclick="ciPick(this,'ciq4',true)">the interrupting action</button><button class="ci-btn" onclick="ciPick(this,'ciq4',false)">a background description</button><button class="ci-btn" onclick="ciPick(this,'ciq4',false)">a parallel action</button></div></div>
+
+    <div class="ci-q" id="ciq5"><div class="ci-q-num">Q5</div><div class="ci-q-text" onclick="ttsRead(&quot;While she was reading, he was sleeping.&quot;,0.88)">While she <b>was reading</b>, he ___. &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq5',false)">slept</button><button class="ci-btn" onclick="ciPick(this,'ciq5',true)">was sleeping</button><button class="ci-btn" onclick="ciPick(this,'ciq5',false)">sleeps</button><button class="ci-btn" onclick="ciPick(this,'ciq5',false)">has slept</button></div></div>
+
+    <div class="ci-q" id="ciq6"><div class="ci-q-num">Q6</div><div class="ci-q-text" onclick="ttsRead(&quot;He was not listening. Contracted form?&quot;,0.88)">He was not listening. What is the contracted form? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq6',false)">He weren't listening.</button><button class="ci-btn" onclick="ciPick(this,'ciq6',true)">He wasn't listening.</button><button class="ci-btn" onclick="ciPick(this,'ciq6',false)">He didn't listening.</button><button class="ci-btn" onclick="ciPick(this,'ciq6',false)">He not was listening.</button></div></div>
+
+    <div class="ci-q" id="ciq7"><div class="ci-q-num">Q7</div><div class="ci-q-text" onclick="ttsRead(&quot;Were they having dinner at 8?&quot;,0.88)">Were they having dinner at 8? — Correct short answer: &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq7',false)">Yes, they had.</button><button class="ci-btn" onclick="ciPick(this,'ciq7',true)">Yes, they were.</button><button class="ci-btn" onclick="ciPick(this,'ciq7',false)">Yes, they did.</button><button class="ci-btn" onclick="ciPick(this,'ciq7',false)">Yes, they are.</button></div></div>
+
+    <div class="ci-q" id="ciq8"><div class="ci-q-num">Q8</div><div class="ci-q-text" onclick="ttsRead(&quot;What is the ing form of make?&quot;,0.88)">What is the -ing form of <i>make</i>? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq8',false)">makeing</button><button class="ci-btn" onclick="ciPick(this,'ciq8',true)">making</button><button class="ci-btn" onclick="ciPick(this,'ciq8',false)">macking</button><button class="ci-btn" onclick="ciPick(this,'ciq8',false)">maked</button></div></div>
+
+    <div class="ci-q" id="ciq9"><div class="ci-q-num">Q9</div><div class="ci-q-text" onclick="ttsRead(&quot;The sun was shining and the birds were singing.&quot;,0.88)">The sun <b>was shining</b> and the birds <b>were singing</b>. This is: &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq9',false)">an interrupted action</button><button class="ci-btn" onclick="ciPick(this,'ciq9',false)">a future plan</button><button class="ci-btn" onclick="ciPick(this,'ciq9',true)">a background / scene setting</button><button class="ci-btn" onclick="ciPick(this,'ciq9',false)">a question</button></div></div>
+
+    <div class="ci-q" id="ciq10"><div class="ci-q-num">Q10</div><div class="ci-q-text" onclick="ttsRead(&quot;I was sitting. What is the base verb?&quot;,0.88)">I <b>was sitting</b>. What is the base verb? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq10',false)">siting</button><button class="ci-btn" onclick="ciPick(this,'ciq10',true)">sit</button><button class="ci-btn" onclick="ciPick(this,'ciq10',false)">sitten</button><button class="ci-btn" onclick="ciPick(this,'ciq10',false)">sat</button></div></div>
+
+    <div class="ci-break" id="brk10" style="display:none">
+      <div class="ci-break-icon">&#x2615;</div>
+      <div class="ci-break-title">Halfway! Keep Going!</div>
+      <div class="ci-break-ar ar">منتصف الطريق! استمر</div>
+      <div class="ci-break-score">Score so far: <span id="ciBreakScore20"></span> / 10</div>
+    </div>
+
+    <div class="ci-q" id="ciq11"><div class="ci-q-num">Q11</div><div class="ci-q-text" onclick="ttsRead(&quot;She was write a letter. Is this correct?&quot;,0.88)">She was <u>write</u> a letter. — Correct it: &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq11',false)">She was wrote a letter.</button><button class="ci-btn" onclick="ciPick(this,'ciq11',true)">She was writing a letter.</button><button class="ci-btn" onclick="ciPick(this,'ciq11',false)">She were writing a letter.</button><button class="ci-btn" onclick="ciPick(this,'ciq11',false)">She is writing a letter.</button></div></div>
+
+    <div class="ci-q" id="ciq12"><div class="ci-q-num">Q12</div><div class="ci-q-text" onclick="ttsRead(&quot;What were you doing at this time yesterday?&quot;,0.88)">What <b>were</b> you <b>doing</b> at this time yesterday? — This asks about: &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq12',false)">a future plan</button><button class="ci-btn" onclick="ciPick(this,'ciq12',true)">an action in progress at a past time</button><button class="ci-btn" onclick="ciPick(this,'ciq12',false)">a completed action</button><button class="ci-btn" onclick="ciPick(this,'ciq12',false)">a habit</button></div></div>
+
+    <div class="ci-q" id="ciq13"><div class="ci-q-num">Q13</div><div class="ci-q-text" onclick="ttsRead(&quot;I was having a shower when the doorbell rang.&quot;,0.88)">I <b>was having</b> a shower when the doorbell <b>rang</b>. Which is Past Continuous? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq13',false)">the doorbell rang</button><button class="ci-btn" onclick="ciPick(this,'ciq13',true)">was having</button><button class="ci-btn" onclick="ciPick(this,'ciq13',false)">both are Past Continuous</button><button class="ci-btn" onclick="ciPick(this,'ciq13',false)">neither</button></div></div>
+
+    <div class="ci-q" id="ciq14"><div class="ci-q-num">Q14</div><div class="ci-q-text" onclick="ttsRead(&quot;They were not coming to the party.&quot;,0.88)">They were not coming. — Contracted: &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq14',false)">They wasn't coming.</button><button class="ci-btn" onclick="ciPick(this,'ciq14',true)">They weren't coming.</button><button class="ci-btn" onclick="ciPick(this,'ciq14',false)">They didn't coming.</button><button class="ci-btn" onclick="ciPick(this,'ciq14',false)">They not were coming.</button></div></div>
+
+    <div class="ci-q" id="ciq15"><div class="ci-q-num">Q15</div><div class="ci-q-text" onclick="ttsRead(&quot;While I was cooking, she set the table.&quot;,0.88)">While I <b>was cooking</b>, she <b>set</b> the table. Which word links the two actions? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq15',false)">when</button><button class="ci-btn" onclick="ciPick(this,'ciq15',true)">while</button><button class="ci-btn" onclick="ciPick(this,'ciq15',false)">since</button><button class="ci-btn" onclick="ciPick(this,'ciq15',false)">during</button></div></div>
+
+    <div class="ci-q" id="ciq16"><div class="ci-q-num">Q16</div><div class="ci-q-text" onclick="ttsRead(&quot;What is the ing form of swim?&quot;,0.88)">What is the -ing form of <i>swim</i>? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq16',false)">swiming</button><button class="ci-btn" onclick="ciPick(this,'ciq16',true)">swimming</button><button class="ci-btn" onclick="ciPick(this,'ciq16',false)">swimeing</button><button class="ci-btn" onclick="ciPick(this,'ciq16',false)">swammed</button></div></div>
+
+    <div class="ci-q" id="ciq17"><div class="ci-q-num">Q17</div><div class="ci-q-text" onclick="ttsRead(&quot;Was he driving or were he driving?&quot;,0.88)">Which is correct? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq17',true)">He was driving fast.</button><button class="ci-btn" onclick="ciPick(this,'ciq17',false)">He were driving fast.</button><button class="ci-btn" onclick="ciPick(this,'ciq17',false)">He is driving fast.</button><button class="ci-btn" onclick="ciPick(this,'ciq17',false)">He did driving fast.</button></div></div>
+
+    <div class="ci-q" id="ciq18"><div class="ci-q-num">Q18</div><div class="ci-q-text" onclick="ttsRead(&quot;I was sleeping when the alarm went off. Which action started first?&quot;,0.88)">I <b>was sleeping</b> when the alarm <b>went off</b>. Which action started FIRST? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq18',false)">the alarm went off</button><button class="ci-btn" onclick="ciPick(this,'ciq18',true)">I was sleeping</button><button class="ci-btn" onclick="ciPick(this,'ciq18',false)">both started at the same time</button><button class="ci-btn" onclick="ciPick(this,'ciq18',false)">impossible to tell</button></div></div>
+
+    <div class="ci-q" id="ciq19"><div class="ci-q-num">Q19</div><div class="ci-q-text" onclick="ttsRead(&quot;Choose the correct sentence.&quot;,0.88)">Choose the correct sentence: &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq19',false)">We was eating dinner.</button><button class="ci-btn" onclick="ciPick(this,'ciq19',true)">We were eating dinner.</button><button class="ci-btn" onclick="ciPick(this,'ciq19',false)">We were eat dinner.</button><button class="ci-btn" onclick="ciPick(this,'ciq19',false)">We eating dinner.</button></div></div>
+
+    <div class="ci-q" id="ciq20"><div class="ci-q-num">Q20</div><div class="ci-q-text" onclick="ttsRead(&quot;What is the ing form of write?&quot;,0.88)">What is the -ing form of <i>write</i>? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq20',false)">writeing</button><button class="ci-btn" onclick="ciPick(this,'ciq20',true)">writing</button><button class="ci-btn" onclick="ciPick(this,'ciq20',false)">writting</button><button class="ci-btn" onclick="ciPick(this,'ciq20',false)">writed</button></div></div>
+
+    <!-- FIB 21 -->
+    <div class="ci-q ci-fib" id="ciq21">
+      <div class="ci-q-num">Q21 — Fill in the Blank</div>
+      <div class="ci-q-text" onclick="ttsRead(&quot;He was studying when his friend called.&quot;,0.88)">He ___ studying when his friend called. &#x1F509;</div>
+      <div class="ci-fib-wrap"><input class="ci-fib-input" id="fib21" type="text" placeholder="Type your answer..."><button class="ci-fib-btn" id="fibBtn21" onclick="ciFibCheck('fib21','fibBtn21','ciq21','fibSol21','was')">Check</button></div>
+      <div class="ci-fib-solution" id="fibSol21" style="display:none">✅ Answer: <b>was</b> &nbsp;|&nbsp; He <b>was</b> studying when his friend called.</div>
+    </div>
+
+    <!-- FIB 22 -->
+    <div class="ci-q ci-fib" id="ciq22">
+      <div class="ci-q-num">Q22 — Fill in the Blank</div>
+      <div class="ci-q-text" onclick="ttsRead(&quot;They were not sleeping. Contracted: They were not sleeping.&quot;,0.88)">They ___ sleeping. (negative contracted) &#x1F509;</div>
+      <div class="ci-fib-wrap"><input class="ci-fib-input" id="fib22" type="text" placeholder="Type your answer..."><button class="ci-fib-btn" id="fibBtn22" onclick="ciFibCheck('fib22','fibBtn22','ciq22','fibSol22','weren't')">Check</button></div>
+      <div class="ci-fib-solution" id="fibSol22" style="display:none">✅ Answer: <b>weren't</b> &nbsp;|&nbsp; They <b>weren't</b> sleeping.</div>
+    </div>
+
+    <!-- FIB 23 -->
+    <div class="ci-q ci-fib" id="ciq23">
+      <div class="ci-q-num">Q23 — Fill in the Blank</div>
+      <div class="ci-q-text" onclick="ttsRead(&quot;While I was cooking she was setting the table.&quot;,0.88)">___ I was cooking, she was setting the table. &#x1F509;</div>
+      <div class="ci-fib-wrap"><input class="ci-fib-input" id="fib23" type="text" placeholder="Type your answer..."><button class="ci-fib-btn" id="fibBtn23" onclick="ciFibCheck('fib23','fibBtn23','ciq23','fibSol23','while')">Check</button></div>
+      <div class="ci-fib-solution" id="fibSol23" style="display:none">✅ Answer: <b>while</b> &nbsp;|&nbsp; <b>While</b> I was cooking, she was setting the table.</div>
+    </div>
+
+    <!-- FIB 24 -->
+    <div class="ci-q ci-fib" id="ciq24">
+      <div class="ci-q-num">Q24 — Fill in the Blank</div>
+      <div class="ci-q-text" onclick="ttsRead(&quot;The ing form of sit is sitting.&quot;,0.88)">The -ing form of <i>sit</i> is ___. &#x1F509;</div>
+      <div class="ci-fib-wrap"><input class="ci-fib-input" id="fib24" type="text" placeholder="Type your answer..."><button class="ci-fib-btn" id="fibBtn24" onclick="ciFibCheck('fib24','fibBtn24','ciq24','fibSol24','sitting')">Check</button></div>
+      <div class="ci-fib-solution" id="fibSol24" style="display:none">✅ Answer: <b>sitting</b> &nbsp;|&nbsp; sit → <b>sitting</b></div>
+    </div>
+
+    <!-- FIB 25 -->
+    <div class="ci-q ci-fib" id="ciq25">
+      <div class="ci-q-num">Q25 — Fill in the Blank</div>
+      <div class="ci-q-text" onclick="ttsRead(&quot;Was she working when you arrived?&quot;,0.88)">___ she working when you arrived? &#x1F509;</div>
+      <div class="ci-fib-wrap"><input class="ci-fib-input" id="fib25" type="text" placeholder="Type your answer..."><button class="ci-fib-btn" id="fibBtn25" onclick="ciFibCheck('fib25','fibBtn25','ciq25','fibSol25','was')">Check</button></div>
+      <div class="ci-fib-solution" id="fibSol25" style="display:none">✅ Answer: <b>Was</b> &nbsp;|&nbsp; <b>Was</b> she working when you arrived?</div>
+    </div>
+
+    <div class="ci-final-score" id="ciFinal20" style="display:none">
+      <div class="cif-icon">&#x1F3C6;</div>
+      <div class="cif-title">Lesson Complete!</div>
+      <div class="cif-ar ar">أحسنت! أكملت الدرس</div>
+      <div class="cif-score"><span id="ciFinalScore20"></span> / 25</div>
+      <div class="cif-msg" id="ciFinalMsg20"></div>
+      <div class="cif-ar ar" id="ciFinalAr20"></div>
+      <div class="cif-btns">
+        <button class="cif-btn" onclick="ciReset20()">&#x1F504; Try Again</button>
+        <button class="cif-btn cif-btn-next" onclick="window.location.href='../index.html'">&#x1F3E0; Main Menu</button>
+      </div>
+    </div>
+
+  </div><!-- /ciWrap20 -->
+</div><!-- /tab-checkit -->
+
+</div><!-- /main-content -->
+</div><!-- /layout -->
+
+<script src="../media/global-player.js"></script>
+<script>
+var rqScore20=0,rqAnswered20=0;
+var ciScore20=0,ciAnswered20=0,ciTotal20=25;
+var ciBreaks20={10:'brk10'};
+
+function showTab(id,btn){
+  document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.remove('active');});
+  document.querySelectorAll('.main-tab').forEach(function(b){b.classList.remove('active');});
+  document.getElementById('tab-'+id).classList.add('active');
+  btn.classList.add('active');
+}
+function ttsRead(text,rate){
+  speechSynthesis.cancel();
+  var u=new SpeechSynthesisUtterance(text);
+  u.lang='en-US';u.rate=rate||0.9;
+  speechSynthesis.speak(u);
+}
+function rqPick(btn,qid,correct){
+  var qEl=document.getElementById(qid);
+  if(qEl.dataset.done)return;
+  qEl.dataset.done='1';
+  qEl.querySelectorAll('.read-opt').forEach(function(b){b.classList.add('done');if(b===btn)b.classList.add(correct?'correct':'wrong');});
+  if(correct)rqScore20++;
+  rqAnswered20++;
+  if(rqAnswered20===5){
+    var sc=document.getElementById('rqScore20');sc.style.display='block';
+    document.getElementById('rqScoreNum20').textContent=rqScore20+'/5';
+    var msgs=[['Keep practising!','استمر في التدريب!'],['Good effort!','جهد جيد!'],['Getting there!','أنت تتحسن!'],['Well done!','أداء جيد جداً!'],['Excellent!','ممتاز!'],['Perfect!','نتيجة مثالية!']];
+    var m=msgs[Math.min(rqScore20,5)];
+    document.getElementById('rqScoreMsg20').textContent=m[0];
+    document.getElementById('rqScoreAr20').textContent=m[1];
+    sc.scrollIntoView({behavior:'smooth',block:'center'});
+  }
+}
+function rqReset20(){
+  rqScore20=0;rqAnswered20=0;
+  ['rq1','rq2','rq3','rq4','rq5'].forEach(function(id){
+    var q=document.getElementById(id);if(!q)return;
+    delete q.dataset.done;
+    q.querySelectorAll('.read-opt').forEach(function(b){b.classList.remove('correct','wrong','done');});
+  });
+  document.getElementById('rqScore20').style.display='none';
+  document.getElementById('tab-reading').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function ciUpdateProgress20(){
+  var pct=Math.round(ciAnswered20/ciTotal20*100);
+  document.getElementById('ciProgressFill20').style.width=pct+'%';
+  document.getElementById('ciProgressTxt20').textContent=ciAnswered20+' / '+ciTotal20+' answered';
+  document.getElementById('ciScoreTxt20').textContent='Score: '+ciScore20;
+}
+function ciCheckBreakAndDone20(){
+  for(var n in ciBreaks20){if(ciAnswered20===parseInt(n)){
+    var bEl=document.getElementById(ciBreaks20[n]);
+    if(bEl){bEl.style.display='block';document.getElementById('ciBreakScore20').textContent=ciScore20;}
+  }}
+  if(ciAnswered20===ciTotal20)ciShowScore20();
+}
+function ciPick(btn,qid,correct){
+  var qEl=document.getElementById(qid);if(qEl.dataset.done)return;
+  qEl.dataset.done='1';
+  qEl.querySelectorAll('.ci-btn').forEach(function(b){b.classList.add('done');});
+  btn.classList.add(correct?'ci-correct':'ci-wrong');
+  if(correct)ciScore20++;
+  ciAnswered20++;ciUpdateProgress20();ciCheckBreakAndDone20();
+}
+function ciFibCheck(inputId,btnId,qid,solId,answer){
+  var inp=document.getElementById(inputId),btn=document.getElementById(btnId),qEl=document.getElementById(qid);
+  if(qEl.dataset.done)return;
+  var correct=inp.value.trim().toLowerCase()===answer.toLowerCase();
+  qEl.dataset.done='1';inp.disabled=true;btn.disabled=true;
+  inp.style.borderColor=correct?'var(--green)':'var(--red)';
+  inp.style.color=correct?'var(--green)':'var(--red)';
+  var sol=document.getElementById(solId);if(sol)sol.style.display='block';
+  if(correct)ciScore20++;
+  ciAnswered20++;ciUpdateProgress20();ciCheckBreakAndDone20();
+}
+function ciShowScore20(){
+  var el=document.getElementById('ciFinal20');el.style.display='block';
+  document.getElementById('ciFinalScore20').textContent=ciScore20;
+  var pct=Math.round(ciScore20/ciTotal20*100);
+  var msgs=[['Keep studying!','واصل الدراسة!'],['Good start!','بداية جيدة!'],['Well done!','عمل جيد!'],['Great job!','أداء رائع!'],['Excellent!','ممتاز!'],['Perfect!','نتيجة مثالية!']];
+  var idx=Math.floor(pct/20);
+  var m=msgs[Math.min(idx,5)];
+  document.getElementById('ciFinalMsg20').textContent=m[0];
+  document.getElementById('ciFinalAr20').textContent=m[1];
+  localStorage.setItem('up_l20',Math.round(ciScore20/ciTotal20*100));
+  el.scrollIntoView({behavior:'smooth',block:'center'});
+}
+function ciReset20(){
+  ciScore20=0;ciAnswered20=0;
+  document.getElementById('ciFinal20').style.display='none';
+  document.getElementById('brk10').style.display='none';
+  for(var i=1;i<=25;i++){
+    var q=document.getElementById('ciq'+i);if(!q)continue;
+    delete q.dataset.done;
+    q.querySelectorAll('.ci-btn').forEach(function(b){b.classList.remove('ci-correct','ci-wrong','done');});
+    var inp=q.querySelector('.ci-fib-input');
+    if(inp){inp.value='';inp.disabled=false;inp.style.borderColor='';inp.style.color='';}
+    var fbtn=q.querySelector('.ci-fib-btn');if(fbtn)fbtn.disabled=false;
+    var sol=q.querySelector('.ci-fib-solution');if(sol)sol.style.display='none';
+  }
+  ciUpdateProgress20();
+  document.getElementById('tab-checkit').scrollIntoView({behavior:'smooth',block:'start'});
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+(function(){
+  var map={1: "up_l1", 2: "up_l2", 3: "up_l3", 4: "up_l4", 5: "up_l5", 6: "up1", 7: "up2", 8: "up3", 9: "up4", 10: "up6", 11: "up5", 12: "up_l12", 13: "up7", 14: "up8", 15: "up9", 16: "up10", 17: "up11", 19: "up_l19", 20: "up_l20", 21: "up_l21", 22: "up_l22", 23: "up_l23", 24: "up_l24", 25: "up_l25", 26: "up_l26", 27: "up_l27", 28: "up_l28", 29: "up_l29", 30: "up_l30", 31: "up_l31", 32: "up_l32", 33: "up_l33", 34: "up_l34", 35: "up_l35", 36: "up_l36", 37: "up_l37", 38: "up_l38", 39: "up_l39", 40: "up_l40", 41: "up_l41", 42: "up_l42", 43: "up_l43", 44: "up_l44", 45: "up_l45", 46: "up_l46"};
+  for(var lid in map){
+    var f=document.getElementById('sp'+lid);
+    if(f){var v=parseInt(localStorage.getItem(map[lid])||'0',10);f.style.width=v+'%';}
+  }
+  setTimeout(function(){
+    var a=document.querySelector('.su-item.su-active');
+    if(a){var u=a.closest('.sidebar-units');if(u)u.scrollTop=Math.max(0,a.offsetTop-a.offsetHeight);}
+  },80);
+})();
+</script>
+<script>
+function toggleSidebar(){
+  var sb=document.querySelector('.sidebar');
+  var bd=document.getElementById('sbBackdrop');
+  if(!sb||!bd)return;
+  sb.classList.toggle('sb-open');
+  bd.classList.toggle('sb-open');
+  document.body.style.overflow=sb.classList.contains('sb-open')?'hidden':'';
+}
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.su-item').forEach(function(a){
+    a.addEventListener('click',function(){
+      var sb=document.querySelector('.sidebar');
+      if(sb&&sb.classList.contains('sb-open'))toggleSidebar();
+    });
+  });
+});
+</script>
+
+<script>
+(function(){
+  // Disable right-click
+  document.addEventListener('contextmenu', function(e){ e.preventDefault(); });
+
+  // Disable keyboard shortcuts
+  document.addEventListener('keydown', function(e){
+    // F12
+    if(e.key==='F12'){e.preventDefault();return false;}
+    // Ctrl+U (view source), Ctrl+S (save), Ctrl+A (select all), Ctrl+P (print)
+    if(e.ctrlKey && ['u','U','s','S','a','A','p','P'].indexOf(e.key)!==-1){
+      e.preventDefault();return false;
+    }
+    // Ctrl+Shift+I (DevTools), Ctrl+Shift+J, Ctrl+Shift+C
+    if(e.ctrlKey && e.shiftKey && ['i','I','j','J','c','C','k','K'].indexOf(e.key)!==-1){
+      e.preventDefault();return false;
+    }
+  });
+
+  // Disable text selection via CSS
+  document.documentElement.style.webkitUserSelect='none';
+  document.documentElement.style.userSelect='none';
+
+  // Allow selection inside inputs/textareas only
+  document.addEventListener('mousedown', function(e){
+    var t=e.target.tagName;
+    if(t==='INPUT'||t==='TEXTAREA'){
+      e.target.style.userSelect='text';
+      e.target.style.webkitUserSelect='text';
+    }
+  });
+
+  // Block drag
+  document.addEventListener('dragstart', function(e){ e.preventDefault(); });
+})();
+</script>
+<button class="float-menu-btn" onclick="toggleSidebar()" aria-label="القائمة">
+  <span></span><span></span><span></span>
+</button>
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=FREE"></script>
+<script src="../media/rv.js"></script>
+</body>
+</html>

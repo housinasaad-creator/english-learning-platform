@@ -1,0 +1,1959 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 2: Present Simple | MOHAMMED ELHUSEYIN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#1a3a6e;--primary-dark:#0f2548;--accent:#f4a624;--al:rgba(244,166,36,0.12);--bg:#0d1b2a;--card:#162030;--card2:#1e2d40;--border:#2d4560;--text:#e8edf5;--muted:#8899b0;--green:#22c55e;--red:#ef4444;--blue:#4a9eff;--purple:#a855f7}
+body{font-family:'Poppins','Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.ar{font-family:'Cairo','Segoe UI',Arial,sans-serif}
+.topnav{background:var(--primary-dark);border-bottom:2px solid var(--accent);padding:10px 24px;display:flex;align-items:center;justify-content:space-between}
+.hero{background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 60%,#0a1e35 100%);padding:55px 24px 48px;text-align:center;border-bottom:3px solid var(--accent);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;border-radius:50%;background:rgba(168,85,247,0.06)}
+.hero::after{content:'';position:absolute;bottom:-60px;left:-60px;width:300px;height:300px;border-radius:50%;background:rgba(74,158,255,0.05)}
+.unit-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(168,85,247,0.15);border:1px solid rgba(168,85,247,0.4);color:var(--purple);font-weight:800;padding:6px 18px;border-radius:20px;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
+.hero-title{font-size:clamp(30px,6vw,52px);font-weight:900;color:white;line-height:1.15;margin-bottom:8px}
+.hero-ar{font-size:18px;color:var(--muted);margin-bottom:12px;direction:rtl}
+.hero-sub{color:var(--muted);max-width:600px;margin:0 auto 22px;font-size:14px}
+.hero-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.tag{display:inline-flex;align-items:center;gap:6px;padding:6px 15px;border-radius:16px;font-size:12px;font-weight:700}
+.tag-grammar{background:rgba(168,85,247,0.15);color:var(--purple);border:1px solid rgba(168,85,247,0.3)}
+.tag-other{background:rgba(244,166,36,0.1);color:var(--accent);border:1px solid rgba(244,166,36,0.25)}
+.tag-btn{cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif}
+.tag-btn:hover{transform:translateY(-2px);opacity:.85}
+.main-tabs{display:flex;gap:4px;padding:14px 24px;background:var(--primary-dark);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.main-tab{padding:8px 18px;border-radius:8px;border:1px solid transparent;background:none;color:var(--muted);font-weight:700;cursor:pointer;font-size:13px;font-family:'Poppins',sans-serif;transition:all .2s}
+.main-tab.active{background:var(--accent);color:#0d1b2a;border-color:var(--accent)}
+.main-tab:hover:not(.active){background:rgba(244,166,36,.1);color:var(--accent);border-color:rgba(244,166,36,.3)}
+.tab-panel{display:none;padding:20px 24px}
+.tab-panel.active{display:block}
+.split{display:grid;grid-template-columns:1fr 390px;gap:16px;align-items:start}
+@media(max-width:900px){.split{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;margin-bottom:16px}
+.card-title{font-size:16px;font-weight:800;color:white;margin-bottom:5px;display:flex;align-items:center;gap:8px}
+.card-ar{font-size:13px;color:var(--muted);margin-bottom:14px;direction:rtl;font-family:'Cairo',sans-serif}
+.card-note{background:var(--al);border:1px solid rgba(244,166,36,.3);border-radius:10px;padding:10px 14px;font-size:12.5px;color:var(--accent);margin:10px 0;direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.sub-tabs{display:flex;gap:4px;margin:14px 0 18px;flex-wrap:wrap}
+.sub-tab{padding:6px 14px;border-radius:8px;border:1px solid var(--border);background:none;color:var(--muted);font-weight:700;cursor:pointer;font-size:12px;font-family:'Poppins',sans-serif;transition:all .2s}
+.sub-tab.active{background:rgba(168,85,247,.15);border-color:var(--purple);color:var(--purple)}
+.sub-tab:hover:not(.active){border-color:var(--accent);color:var(--accent)}
+.sub-panel{display:none}
+.sub-panel.active{display:block}
+.tts-box{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.tts-btn{background:var(--card2);border:1px solid var(--blue);color:var(--blue);padding:7px 16px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif}
+.tts-btn:hover{background:rgba(74,158,255,.15);transform:translateY(-1px)}
+.tts-stop{border-color:var(--muted);color:var(--muted)}
+.tts-stop:hover{background:rgba(136,153,176,.1)}
+.formula-box{background:rgba(10,30,53,0.8);border:2px solid var(--border);border-radius:14px;padding:18px 22px;margin:14px 0}
+.formula-row{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid rgba(45,69,96,0.4);flex-wrap:wrap}
+.formula-row:last-child{border-bottom:none}
+.formula-subj{font-size:14px;font-weight:800;color:var(--blue);min-width:180px}
+.formula-subj.he{color:var(--accent)}
+.formula-plus{font-size:16px;color:var(--muted)}
+.formula-verb{font-size:16px;font-weight:900;color:var(--green);background:rgba(34,197,94,0.1);padding:4px 12px;border-radius:8px}
+.formula-verb.he{color:var(--accent);background:rgba(244,166,36,0.1)}
+.formula-verb.neg{color:var(--red);background:rgba(239,68,68,0.1)}
+.formula-verb.do{color:var(--blue);background:rgba(74,158,255,0.1)}
+.s-end{color:var(--red);font-size:20px;font-weight:900}
+.formula-note{font-size:11px;color:var(--muted);font-style:italic;margin-left:auto}
+.ex-section-title{font-size:12px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin:16px 0 8px}
+.ex-list{margin-top:4px}
+.ex-item{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid rgba(45,69,96,0.3)}
+.ex-item:last-child{border-bottom:none}
+.sp{background:none;border:none;font-size:16px;cursor:pointer;color:var(--blue);flex-shrink:0;padding:2px 0;transition:transform .2s;line-height:1}
+.sp:hover{transform:scale(1.2)}
+.sp-group{display:inline-flex;align-items:center;gap:3px;flex-shrink:0}
+.sp-pp,.sp-st{background:var(--card2);border:1px solid var(--border);color:var(--muted);font-size:12px;padding:3px 7px;border-radius:6px;cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif;line-height:1;min-width:26px;text-align:center}
+.sp-pp:hover{background:rgba(74,158,255,.15);border-color:var(--blue);color:var(--blue)}
+.sp-st:hover{background:rgba(239,68,68,.1);border-color:var(--red);color:var(--red)}
+.ex-en{font-size:13.5px;color:var(--text);font-weight:600;line-height:1.4}
+.ex-en b{color:var(--accent)}
+.ex-ar{font-size:12px;color:var(--muted);margin-top:2px;direction:rtl;font-family:'Cairo',sans-serif}
+.ex-note{font-size:11px;color:var(--green);margin-top:2px;font-style:italic}
+.imp-box{background:rgba(239,68,68,.07);border:1px solid rgba(239,68,68,.3);border-radius:12px;padding:14px 16px;margin:14px 0}
+.imp-title{font-size:11px;font-weight:800;color:var(--red);margin-bottom:10px;text-transform:uppercase;letter-spacing:1px}
+.imp-row{display:flex;align-items:center;gap:12px;margin:6px 0;font-size:13px;flex-wrap:wrap}
+.imp-wrong{color:var(--red);text-decoration:line-through;opacity:.75}
+.imp-right{color:var(--green);font-weight:700}
+.imp-why{font-size:11px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;margin-top:2px}
+.sa-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13px}
+.sa-table th{background:rgba(26,58,110,0.5);color:var(--accent);padding:8px 12px;font-weight:800;text-align:left;border:1px solid var(--border)}
+.sa-table td{padding:8px 12px;border:1px solid rgba(45,69,96,0.4);vertical-align:middle}
+.sa-table tr:nth-child(even) td{background:rgba(30,45,64,0.3)}
+.sa-yes{color:var(--green);font-weight:800}
+.sa-no{color:var(--red);font-weight:800}
+.wh-grid{display:flex;flex-direction:column;gap:7px;margin:12px 0}
+.wh-row{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px;font-size:13px}
+.wh-q{color:var(--text);margin-bottom:3px}
+.wh-q b{color:var(--blue)}
+.wh-a{color:var(--muted);font-style:italic}
+.freq-scale{margin:16px 0}
+.freq-row{display:flex;align-items:center;gap:10px;margin:8px 0}
+.freq-label{font-size:13px;font-weight:700;color:var(--text);min-width:90px;text-align:right}
+.freq-bar{height:22px;border-radius:6px;display:flex;align-items:center;padding:0 8px;font-size:11px;font-weight:700;color:white;min-width:10px}
+.freq-pct{font-size:11px;color:var(--muted);min-width:38px}
+.freq-ar{font-size:11.5px;color:var(--muted);font-family:'Cairo',sans-serif}
+.time-expr-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}
+.te-item{background:var(--card2);border:1px solid var(--border);border-radius:9px;padding:9px 12px;font-size:12.5px}
+.te-en{font-weight:700;color:var(--accent)}
+.te-ar{color:var(--muted);font-size:11px;direction:rtl;font-family:'Cairo',sans-serif;margin-top:2px}
+.spell-table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13px}
+.spell-table th{background:rgba(26,58,110,0.5);color:var(--accent);padding:9px 12px;font-weight:800;text-align:left;border-bottom:2px solid var(--border)}
+.spell-table td{padding:9px 12px;border-bottom:1px solid rgba(45,69,96,0.35);vertical-align:top}
+.spell-table tr:nth-child(even) td{background:rgba(30,45,64,0.35)}
+.spell-table tr:last-child td{border-bottom:none}
+.spell-rule{font-weight:700;color:var(--blue);font-size:12px}
+.spell-base{color:var(--text)}
+.spell-third{font-weight:800;color:var(--accent)}
+.spell-s{color:var(--red);font-size:15px;font-weight:900}
+.spell-eg{color:var(--muted);font-size:11px;margin-top:2px}
+.when-list{display:flex;flex-direction:column;gap:10px;margin-top:12px}
+.when-item{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:14px 16px;display:flex;gap:13px;align-items:flex-start}
+.when-icon{font-size:24px;flex-shrink:0;margin-top:2px}
+.when-title{font-size:13px;font-weight:800;color:var(--accent);margin-bottom:3px}
+.when-ex{font-size:13px;color:var(--text);line-height:1.55}
+.when-ex i{color:var(--green);font-style:normal;font-weight:700}
+.when-ar{font-size:12px;color:var(--muted);margin-top:4px;direction:rtl;font-family:'Cairo',sans-serif}
+.mistake-item{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.m-wrong{font-size:13px;color:var(--red);margin-bottom:3px}
+.m-wrong::before{content:'❌ ';font-size:11px}
+.m-right{font-size:13px;color:var(--green);font-weight:700;margin-bottom:3px}
+.m-right::before{content:'✅ ';font-size:11px}
+.m-why{font-size:11.5px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;border-top:1px solid rgba(45,69,96,0.4);padding-top:5px;margin-top:5px}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:7px;margin-top:12px}
+.vocab-item{background:var(--card2);border:1px solid var(--border);border-radius:9px;padding:8px 11px;display:flex;align-items:center;gap:7px;cursor:pointer;transition:border-color .2s}
+.vocab-item:hover{border-color:var(--accent)}
+.vocab-sp{font-size:14px;color:var(--blue);flex-shrink:0}
+.vocab-en{font-size:12px;font-weight:700;color:var(--text)}
+.vocab-ar{font-size:11px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif}
+.q-item{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:10px}
+.q-num{font-size:10px;font-weight:700;color:var(--muted);margin-bottom:8px;text-transform:uppercase;letter-spacing:1px}
+.q-prompt{font-size:12.5px;color:var(--muted);margin-bottom:8px;font-style:italic}
+.q-opts{display:flex;flex-direction:column;gap:7px}
+.q-btn{background:var(--bg);border:1px solid var(--border);color:var(--text);padding:10px 13px;border-radius:9px;font-size:13px;cursor:pointer;text-align:left;font-family:'Poppins',sans-serif;transition:all .2s;display:flex;align-items:center;gap:8px}
+.q-btn:hover:not(.done){background:rgba(244,166,36,.06);border-color:rgba(244,166,36,.4);transform:translateY(-1px)}
+.q-btn.correct{background:rgba(34,197,94,.12);border-color:var(--green);color:var(--green)}
+.q-btn.wrong{background:rgba(239,68,68,.12);border-color:var(--red);color:var(--red)}
+.q-btn.done{cursor:default;transform:none!important}
+.q-lbl{font-size:11px;font-weight:800;opacity:.6;flex-shrink:0}
+.brk-card{display:none;background:linear-gradient(135deg,#12285a,#0f2042);border:2px solid var(--accent);border-radius:18px;padding:22px;margin:14px 0;text-align:center;animation:fadeIn .5s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.brk-emoji{font-size:38px;margin-bottom:8px}
+.brk-title{font-size:15px;font-weight:900;color:var(--accent);margin-bottom:8px}
+.brk-text{font-size:13px;color:var(--text);line-height:1.65;max-width:310px;margin:0 auto}
+.brk-text b{color:var(--accent)}
+.brk-ar{font-size:12px;color:var(--muted);margin-top:8px;direction:rtl;font-family:'Cairo',sans-serif}
+.score-box{background:var(--al);border:2px solid var(--accent);border-radius:14px;padding:22px;text-align:center;margin-top:16px;display:none}
+.score-num{font-size:44px;font-weight:900;color:var(--accent)}
+.score-emoji{font-size:34px;margin-bottom:6px}
+.score-txt{font-size:13px;color:var(--muted);margin-top:5px;direction:rtl;font-family:'Cairo',sans-serif}
+.reset-btn{background:var(--accent);border:none;color:#0d1b2a;padding:9px 22px;border-radius:9px;font-weight:800;cursor:pointer;font-family:'Poppins',sans-serif;margin-top:12px;font-size:13px;transition:all .2s}
+.reset-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(244,166,36,.3)}
+.dlg-card{background:var(--card);border:1px solid var(--border);border-radius:16px;margin-bottom:16px;overflow:hidden}
+.dlg-header{background:var(--primary);padding:13px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.dlg-meta{flex:1}
+.dlg-num{font-size:10px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:2px}
+.dlg-title{font-weight:800;font-size:14px;color:white}
+.dlg-ctx{font-size:11px;color:rgba(255,255,255,.5);font-style:italic;margin-top:2px}
+.dlg-tts{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:white;padding:6px 14px;border-radius:8px;font-size:11px;font-weight:700;cursor:pointer;font-family:'Poppins',sans-serif;transition:all .2s;white-space:nowrap}
+.dlg-tts:hover{background:rgba(255,255,255,.2)}
+.dlg-body{padding:20px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:640px){.dlg-body{grid-template-columns:1fr}}
+.dlg-col-head{font-size:10px;font-weight:700;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+.bubble{padding:9px 13px;border-radius:12px;font-size:13px;line-height:1.55;margin-bottom:7px}
+.bubble-a{background:rgba(26,58,110,0.5);border:1px solid rgba(74,158,255,0.2)}
+.bubble-b{background:var(--card2);border:1px solid var(--border)}
+.bubble-name{font-size:9px;font-weight:800;color:var(--muted);margin-bottom:4px;letter-spacing:.5px;text-transform:uppercase}
+.bubble-name.b{color:var(--accent)}
+.bubble-ar{direction:rtl;font-family:'Cairo',sans-serif;font-size:13px;color:var(--text)}
+.read-tts-bar{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;align-items:center}
+.read-label{font-size:12px;font-weight:700;color:var(--muted)}
+.read-pass{background:var(--card2);border:1px solid var(--border);border-radius:14px;padding:22px;font-size:14px;line-height:1.9;margin-bottom:24px}
+.read-pass p{margin-bottom:12px}
+.read-pass p:last-child{margin-bottom:0}
+.read-pass b{color:var(--accent);font-weight:700}
+.comp-section-title{font-size:14px;font-weight:800;color:var(--accent);margin-bottom:14px;text-transform:uppercase;letter-spacing:1px}
+.read-q{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:12px}
+.read-q-text{font-weight:700;font-size:14px;margin-bottom:12px;color:var(--text);line-height:1.4}
+.read-opts{display:flex;flex-direction:column;gap:7px}
+.read-opt{background:var(--card2);border:1px solid var(--border);color:var(--text);padding:9px 14px;border-radius:8px;font-size:13px;cursor:pointer;text-align:left;font-family:'Poppins',sans-serif;transition:all .2s;display:flex;align-items:center;gap:8px}
+.read-opt:hover:not(.done){background:rgba(244,166,36,.06);border-color:rgba(244,166,36,.35);transform:translateY(-1px)}
+.read-opt.correct{background:rgba(34,197,94,.12);border-color:var(--green);color:var(--green)}
+.read-opt.wrong{background:rgba(239,68,68,.12);border-color:var(--red);color:var(--red)}
+.read-opt.done{cursor:default;transform:none!important}
+footer{padding:20px 24px;text-align:center;color:var(--muted);font-size:12px;border-top:1px solid var(--border);margin-top:10px}
+
+/* CHECK IT */
+.ci-wrap{max-width:100%;padding:12px 16px}
+.ci-q{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px 14px;margin-bottom:7px;transition:border-color .2s;border-left:3px solid rgba(168,85,247,.4)}
+.ci-q.ci-fib-q{border-left-color:rgba(74,158,255,.5)}
+.ci-q.answered{opacity:.9}
+.ci-q-head{display:flex;align-items:center;gap:6px;margin-bottom:9px;flex-wrap:nowrap}
+.ci-q-num{width:22px;height:22px;border-radius:50%;background:rgba(168,85,247,.18);border:1.5px solid rgba(168,85,247,.4);color:var(--purple);font-size:10px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ci-fib-q .ci-q-num{background:rgba(74,158,255,.15);border-color:rgba(74,158,255,.4);color:var(--blue)}
+.ci-q-tag{background:rgba(74,158,255,.08);border:1px solid rgba(74,158,255,.18);color:var(--blue);font-size:9px;font-weight:800;padding:2px 8px;border-radius:8px;text-transform:uppercase;letter-spacing:.4px;white-space:nowrap}
+.ci-type-badge{font-size:9px;font-weight:800;padding:2px 8px;border-radius:8px;text-transform:uppercase;letter-spacing:.4px;margin-left:auto;flex-shrink:0}
+.ci-type-mcq{background:rgba(168,85,247,.12);border:1px solid rgba(168,85,247,.25);color:var(--purple)}
+.ci-type-fib{background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.25);color:var(--blue)}
+.ci-q-prompt{font-size:12px;color:var(--muted);font-style:italic;margin-bottom:8px;padding:5px 10px;background:rgba(255,255,255,.03);border-left:2px solid var(--border);border-radius:0 6px 6px 0}
+.ci-opts{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.ci-btn{background:var(--card2);border:1.5px solid var(--border);color:var(--text);padding:9px 12px;border-radius:9px;font-size:12.5px;cursor:pointer;text-align:left;font-family:'Poppins',sans-serif;transition:all .2s;display:flex;align-items:center;gap:9px;line-height:1.35;width:100%}
+.ci-btn:hover:not(.done){background:rgba(244,166,36,.07);border-color:rgba(244,166,36,.45);transform:translateY(-2px)}
+.ci-btn.correct{background:rgba(34,197,94,.1);border-color:var(--green);color:var(--green)}
+.ci-btn.wrong{background:rgba(239,68,68,.1);border-color:var(--red);color:var(--red)}
+.ci-btn.done{cursor:default;transform:none!important}
+.ci-lbl{font-size:11px;font-weight:900;background:rgba(255,255,255,.09);border-radius:5px;padding:2px 7px;flex-shrink:0;min-width:22px;text-align:center}
+.ci-btn.correct .ci-lbl{background:rgba(34,197,94,.2);color:var(--green)}
+.ci-btn.wrong .ci-lbl{background:rgba(239,68,68,.2);color:var(--red)}
+.ci-fib-sent{font-size:13.5px;color:var(--text);font-weight:600;line-height:1.7;margin-bottom:9px}
+.ci-fib-sent b{color:var(--accent)}
+.ci-fib-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:4px}
+.ci-fib-input{background:var(--card2);border:2px solid var(--border);color:var(--text);padding:7px 13px;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;outline:none;min-width:160px;max-width:240px;transition:border-color .2s,background .2s}
+.ci-fib-input:focus{border-color:var(--accent);background:rgba(244,166,36,.04)}
+.ci-fib-input:disabled{cursor:default}
+.ci-fib-check{background:var(--accent);border:none;color:#0d1b2a;padding:7px 18px;border-radius:8px;font-weight:800;cursor:pointer;font-size:12px;font-family:'Poppins',sans-serif;transition:all .2s;flex-shrink:0}
+.ci-fib-check:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 4px 12px rgba(244,166,36,.3)}
+.ci-fib-check:disabled{opacity:.35;cursor:default;transform:none!important}
+.ci-hint{font-size:10.5px;color:var(--muted);font-style:italic;margin-top:3px}
+.ci-sol{display:none;margin-top:9px;border-radius:9px;overflow:hidden;animation:fadeIn .3s ease}
+.ci-sol.sol-correct{border:1px solid rgba(34,197,94,.25);background:rgba(34,197,94,.05)}
+.ci-sol.sol-wrong{border:1px solid rgba(239,68,68,.2);background:rgba(239,68,68,.04)}
+.ci-sol-head{padding:7px 12px;font-size:11.5px;font-weight:800;border-bottom:1px solid rgba(255,255,255,.05)}
+.ci-sol.sol-correct .ci-sol-head{color:var(--green)}
+.ci-sol.sol-wrong .ci-sol-head{color:var(--red)}
+.ci-sol-body{padding:8px 12px;display:flex;flex-direction:column;gap:4px}
+.ci-sol-ans{font-size:12.5px;font-weight:700;color:var(--accent)}
+.ci-sol-exp{font-size:11.5px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.ci-brk{display:none;background:linear-gradient(135deg,#12285a,#1a1242);border:2px solid var(--purple);border-radius:16px;padding:20px;margin:10px 0;animation:fadeIn .5s ease}
+.ci-brk-emoji{font-size:36px;margin-bottom:8px;text-align:center}
+.ci-brk-title{font-size:15px;font-weight:900;color:var(--purple);margin-bottom:12px;text-align:center}
+.ci-brk-cols{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:560px;margin:0 auto}
+.ci-brk-col{background:rgba(0,0,0,.2);border-radius:10px;padding:12px}
+.ci-brk-col-title{font-size:11px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+.ci-brk-text{font-size:12px;color:var(--text);line-height:1.7}
+.ci-brk-ar{margin-top:12px;font-family:'Cairo',sans-serif;font-size:12px;color:var(--muted);direction:rtl;text-align:center;padding-top:10px;border-top:1px solid rgba(255,255,255,.07)}
+.ci-progress-bar{background:rgba(255,255,255,.07);border-radius:20px;height:7px;overflow:hidden;margin-bottom:5px}
+.ci-progress-fill{background:linear-gradient(90deg,var(--purple),var(--blue));height:100%;border-radius:20px;transition:width .4s ease;width:0%}
+.ci-progress-txt{font-size:11px;color:var(--muted);font-weight:700;display:flex;justify-content:space-between}
+.ci-score{display:none;background:linear-gradient(135deg,var(--card),var(--card2));border:2px solid var(--accent);border-radius:16px;padding:28px;text-align:center;margin-top:12px}
+.ci-score-emoji{font-size:44px;margin-bottom:6px}
+.ci-score-num{font-size:52px;font-weight:900;color:var(--accent);line-height:1}
+.ci-score-of{font-size:16px;color:var(--muted);margin-bottom:10px}
+.ci-score-bar-wrap{background:rgba(255,255,255,.07);border-radius:20px;height:8px;overflow:hidden;max-width:260px;margin:8px auto}
+.ci-score-bar-fill{height:100%;background:linear-gradient(90deg,var(--green),var(--blue));border-radius:20px;width:0%;transition:width 1s ease}
+.ci-score-msg{font-size:16px;font-weight:800;color:var(--text);margin-top:10px}
+.ci-score-ar{font-family:'Cairo',sans-serif;font-size:13px;color:var(--muted);direction:rtl;margin-top:4px}
+.ci-reset{margin-top:14px;background:var(--primary);border:2px solid var(--border);color:var(--text);padding:9px 24px;border-radius:10px;font-size:13px;font-weight:700;cursor:pointer;font-family:'Cairo',sans-serif;transition:all .2s}
+.ci-reset:hover{border-color:var(--accent);color:var(--accent)}
+.ci-hero{background:linear-gradient(135deg,#0f2548,#1a1242);border-bottom:2px solid var(--border);padding:18px 20px}
+.ci-hero-top{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.ci-hero-icon{font-size:28px}
+.ci-hero-title{font-size:19px;font-weight:900;color:var(--text)}
+.ci-hero-sub{font-size:12px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;margin-bottom:10px;text-align:right}
+.ci-hero-badges{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.ci-hero-badge{font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px;border:1px solid}
+.ci-hero-badge.mcq{background:rgba(168,85,247,.12);border-color:rgba(168,85,247,.3);color:var(--purple)}
+.ci-hero-badge.fib{background:rgba(74,158,255,.1);border-color:rgba(74,158,255,.3);color:var(--blue)}
+/* ═══ READING TEXT TAB — النص ═══ */
+.rt-wrap{max-width:900px;margin:0 auto}
+.rt-card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:28px 32px;margin-bottom:22px}
+.rt-card-title{font-size:13px;font-weight:700;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
+.rt-text{font-size:16.5px;line-height:2;color:var(--text)}
+.rt-tts-btn{display:inline-flex;align-items:center;gap:8px;margin-top:18px;background:var(--primary);border:1px solid var(--border);color:var(--text);padding:9px 20px;border-radius:30px;cursor:pointer;font-size:14px;font-weight:700;transition:all .2s}
+.rt-tts-btn:hover{background:var(--purple);border-color:var(--purple);transform:translateY(-2px)}
+.rt-legend{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.rt-legend-item{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--muted)}
+.rt-legend-dot{width:12px;height:12px;border-radius:50%}
+.hl-1{background:rgba(168,85,247,.18);color:var(--purple);border-radius:4px;padding:1px 5px;font-weight:800}
+.hl-2{background:rgba(34,197,94,.15);color:var(--green);border-radius:4px;padding:1px 5px;font-weight:800}
+.hl-3{background:rgba(74,158,255,.15);color:var(--blue);border-radius:4px;padding:1px 5px;font-weight:800}
+.hl-4{background:rgba(244,166,36,.15);color:var(--accent);border-radius:4px;padding:1px 5px;font-weight:800}
+.hl-r{background:rgba(239,68,68,.15);color:var(--red);border-radius:4px;padding:1px 5px;font-weight:800}
+.rt-qs-title{font-size:15px;font-weight:800;color:var(--text);margin-bottom:18px}
+.rt-q{background:var(--card2);border:1px solid var(--border);border-radius:14px;padding:18px 22px;margin-bottom:14px}
+.rt-q-text{font-size:14.5px;font-weight:700;color:var(--text);margin-bottom:12px}
+.rt-opts{display:flex;flex-direction:column;gap:8px}
+.rt-opt{background:var(--card);border:1.5px solid var(--border);border-radius:10px;padding:10px 16px;font-size:14px;color:var(--text);cursor:pointer;text-align:right;transition:all .2s;font-family:'Cairo',sans-serif}
+.rt-opt:hover{border-color:var(--purple);background:rgba(168,85,247,.08)}
+.rt-opt.rt-ok{border-color:var(--green);background:rgba(34,197,94,.1);color:var(--green);cursor:default}
+.rt-opt.rt-no{border-color:rgba(239,68,68,.3);background:rgba(239,68,68,.07);color:rgba(239,68,68,.7);cursor:default}
+.rt-explain{display:none;margin-top:12px;padding:12px 16px;background:rgba(74,158,255,.08);border:1px solid rgba(74,158,255,.2);border-radius:10px;font-size:13.5px;color:var(--blue);font-family:'Cairo',sans-serif;line-height:1.7;direction:rtl;text-align:right}
+.rt-explain.show{display:block}
+/* SIDEBAR */
+.layout{display:flex;min-height:100vh}.sidebar{width:30%;max-width:320px;min-width:220px;position:fixed;top:0;left:0;bottom:0;background:var(--primary-dark);border-right:2px solid var(--border);display:flex;flex-direction:column;z-index:200;overflow:hidden}.sidebar-header{padding:18px 20px 14px;border-bottom:2px solid var(--accent);flex-shrink:0}.sidebar-logo{display:flex;align-items:center;gap:10px;margin-bottom:4px}.sidebar-logo-icon{width:34px;height:34px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900;color:#0d1b2a;flex-shrink:0}.sidebar-logo-text{font-family:'Cairo',sans-serif;font-size:15px;font-weight:800;color:white}.sidebar-logo-sub{font-size:10px;color:var(--muted);font-weight:500;margin-top:-1px}.sidebar-label{font-family:'Cairo',sans-serif;font-size:11px;font-weight:700;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-top:12px}.sidebar-units{flex:1;overflow-y:auto;padding:10px 12px;scrollbar-width:thin;scrollbar-color:var(--border) transparent}.sidebar-units::-webkit-scrollbar{width:4px}.sidebar-units::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}.su-item{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;text-decoration:none;margin-bottom:4px;transition:background .2s,transform .2s}.su-item:not(.su-locked):hover{background:rgba(244,166,36,0.12);transform:translateX(3px)}.su-item.su-locked{opacity:.45;cursor:default;pointer-events:none}.su-item.su-active{background:rgba(244,166,36,0.15);border:1px solid rgba(244,166,36,0.3)}.su-num{width:28px;height:28px;border-radius:7px;background:rgba(255,255,255,0.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:var(--accent);flex-shrink:0}.su-item:not(.su-locked) .su-num{background:rgba(244,166,36,0.12);border-color:rgba(244,166,36,0.3)}.su-texts{flex:1;min-width:0}.su-en{font-size:13px;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.su-ar{font-family:'Cairo',sans-serif;font-size:11px;color:var(--muted);direction:rtl;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.su-check{font-size:12px;flex-shrink:0}.su-lock{font-size:11px;color:var(--muted);flex-shrink:0}.main-content{margin-left:min(30%,320px);flex:1;min-width:0}
+
+/* ══ Hamburger (desktop: hidden) ══ */
+.nav-hamburger{display:none;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.3);border-radius:8px;cursor:pointer;flex-direction:column;gap:5px;padding:8px;flex-shrink:0;margin-left:6px}
+.nav-hamburger span{display:block;width:100%;height:2px;background:var(--accent);border-radius:2px}
+/* Backdrop */
+.sb-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:199}
+.sb-backdrop.sb-open{display:block}
+@media(max-width:768px){
+  .sidebar{position:fixed;left:-100%;width:82%;max-width:300px;min-width:unset;transition:left .3s ease;z-index:200}
+  .sidebar.sb-open{left:0}
+  .main-content{margin-left:0}
+  .nav-brand{display:none}
+  .nav-hamburger{display:flex}
+  .topnav{padding:10px 12px;gap:6px}
+  .nav-lesson-name{display:none}
+  .nav-left{gap:5px}
+  .hero{padding:22px 13px 20px}
+  .hero-title{font-size:22px;letter-spacing:-.5px}
+  .hero-ar{font-size:12px}
+  .hero-sub{font-size:12px}
+  .hero-tags{gap:5px;justify-content:center}
+  .tag{font-size:10px;padding:3px 9px}
+  .rule-section{padding:0 12px}
+  .read-wrap{padding:0 12px}
+  .ci-wrap{padding:12px 12px}
+  .ci-hero{padding:18px 12px}
+  .dlg-block{padding:0 12px}
+  .eu-cat-grid{grid-template-columns:1fr}
+  .nu-scale{gap:3px}
+  .nu-word{font-size:10px;padding:3px 7px}
+  .nu-cmp-head,.nu-cmp-row{grid-template-columns:1fr 1fr;font-size:10px}
+  .nu-cmp-head span:last-child,.nu-cmp-row span:last-child{display:none}
+  .reg-ladder{padding:10px 12px}
+  .cmp-table{font-size:11px}
+  .chat-wrap{padding:0 4px}
+  .ci-q{margin-bottom:10px}
+  .ci-opts{gap:5px}
+  .ci-btn{font-size:12px;padding:9px 10px}
+  .vocab-grid{grid-template-columns:1fr 1fr}
+  .rq-opts{gap:5px}
+}
+
+.chat-wrap{padding:18px 24px 26px;display:flex;flex-direction:column;gap:14px;background-image:radial-gradient(circle,rgba(244,166,36,0.22) 1.5px,transparent 1.5px),radial-gradient(circle,rgba(74,158,255,0.22) 1.5px,transparent 1.5px);background-size:28px 28px;background-position:0 0,14px 14px}
+.chat-msg{display:flex;flex-direction:column;max-width:70%}
+.chat-msg.right{align-self:flex-end;align-items:flex-end}
+.chat-msg.left{align-self:flex-start;align-items:flex-start}
+.chat-name-tag{font-size:11px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;margin-bottom:5px;padding:0 4px}
+.chat-msg.right .chat-name-tag{color:var(--accent)}
+.chat-msg.left .chat-name-tag{color:var(--blue)}
+.chat-bubble{padding:14px 17px 10px;border-radius:20px;width:100%}
+.chat-msg.right .chat-bubble{background:rgba(55,36,6,0.75);border:1px solid rgba(244,166,36,0.4);border-bottom-right-radius:4px;box-shadow:0 6px 28px rgba(0,0,0,0.65),0 0 18px rgba(244,166,36,0.22)}
+.chat-msg.left .chat-bubble{background:rgba(12,32,72,0.8);border:1px solid rgba(74,158,255,0.35);border-bottom-left-radius:4px;box-shadow:0 6px 28px rgba(0,0,0,0.65),0 0 18px rgba(74,158,255,0.20)}
+.chat-en{font-size:15px;color:var(--text);line-height:1.65;font-weight:500}
+.chat-en b{color:var(--accent)}
+.chat-msg.left .chat-en b{color:var(--blue)}
+.chat-ar{font-size:14px;color:rgba(232,237,245,0.8);direction:rtl;font-family:'Cairo',sans-serif;line-height:1.75;border-top:1px solid rgba(255,255,255,0.09);padding-top:9px;margin-top:9px}
+.chat-bubble-foot{display:flex;justify-content:flex-end;margin-top:9px;padding-top:7px;border-top:1px solid rgba(255,255,255,0.07)}
+.chat-sp-btn{font-size:14px;cursor:pointer;padding:5px 13px;border-radius:20px;transition:all .2s;line-height:1;font-weight:700;letter-spacing:.3px}
+.chat-msg.right .chat-sp-btn{background:rgba(244,166,36,0.18);border:1px solid rgba(244,166,36,0.45);color:var(--accent)}
+.chat-msg.left .chat-sp-btn{background:rgba(74,158,255,0.15);border:1px solid rgba(74,158,255,0.4);color:var(--blue)}
+.chat-sp-btn:hover{transform:scale(1.08);filter:brightness(1.25)}
+.su-prog{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:6px;overflow:hidden}
+.su-prog-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:2px;width:0%;transition:width .6s ease}
+
+.su-level-hd{padding:8px 12px 5px;margin-top:8px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(255,255,255,.05)}
+.su-level-code{font-size:11px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;padding:2px 8px;border-radius:5px;display:inline-block}
+.su-level-name{font-family:'Cairo',sans-serif;font-size:12px;font-weight:700;color:#f4c430;direction:rtl;margin:0;line-height:1}
+.lvl-a1{background:rgba(52,211,153,.15);color:#34d399;border:1px solid rgba(52,211,153,.35)}
+.lvl-a2{background:rgba(74,158,255,.15);color:#4a9eff;border:1px solid rgba(74,158,255,.35)}
+.lvl-b1{background:rgba(245,158,11,.15);color:#f59e0b;border:1px solid rgba(245,158,11,.35)}
+.lvl-b2{background:rgba(244,166,36,.15);color:var(--accent);border:1px solid rgba(244,166,36,.35)}
+.lvl-b2p{background:rgba(251,146,60,.15);color:#fb923c;border:1px solid rgba(251,146,60,.35)}
+.lvl-c1{background:rgba(168,85,247,.15);color:#a855f7;border:1px solid rgba(168,85,247,.35)}
+.su-coming{opacity:.28;cursor:default;pointer-events:none}
+.su-prog{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:6px;overflow:hidden}
+.su-prog-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:2px;width:0%;transition:width .6s ease}
+
+.nav-home-btn{display:inline-flex;align-items:center;gap:6px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.4);color:var(--accent);font-size:12px;font-weight:800;padding:5px 13px;border-radius:8px;text-decoration:none;transition:all .2s;white-space:nowrap;flex-shrink:0}
+.nav-home-btn:hover{background:rgba(244,166,36,.25);transform:translateY(-2px)}
+.nav-lesson-badge{background:var(--accent);color:#0a1628;font-size:12px;font-weight:900;padding:5px 13px;border-radius:7px;white-space:nowrap;letter-spacing:.3px;flex-shrink:0}
+.nav-lesson-name{font-size:13px;color:rgba(232,237,245,.7);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-sep{color:rgba(136,153,176,.5);font-size:13px;flex-shrink:0}
+.nav-left{display:flex;align-items:center;gap:8px;flex:1;min-width:0}
+.nav-right{display:flex;align-items:center;flex-shrink:0}
+</style>
+
+<style>
+/* Watermark on print */
+@media print {
+  body::before {
+    content: 'Mohammed Elhuseyin — English Learning Platform — محمية الحقوق';
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-35deg);
+    font-size: 48px;
+    font-weight: 900;
+    color: rgba(244,166,36,0.18);
+    z-index: 9999;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+}
+</style>
+
+<style>
+.float-menu-btn{display:none;position:fixed;bottom:22px;left:18px;z-index:9998;width:48px;height:48px;background:var(--primary-dark,#0f2548);border:2px solid rgba(244,166,36,.5);border-radius:14px;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:12px;box-shadow:0 4px 20px rgba(0,0,0,.4);transition:transform .15s,box-shadow .15s}
+.float-menu-btn:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,.5)}
+.float-menu-btn span{display:block;width:22px;height:2px;background:#f4a624;border-radius:2px;transition:all .25s}
+@media(max-width:768px){.float-menu-btn{display:flex}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-logo">
+      <div class="sidebar-logo-icon">A</div>
+      <div><div class="sidebar-logo-text ar">MOHAMMED ELHUSEYIN</div><div class="sidebar-logo-sub">English Learning Platform</div></div>
+    </div>
+    <div class="sidebar-label ar">الوحدات الدراسية</div>
+  </div>
+  <div class="sidebar-units">
+  <div class="su-level-hd"><span class="su-level-code lvl-a1">A1</span><span class="su-level-name">مستوى المبتدئ تماماً</span></div>
+  <a href="lesson1.html" class="su-item"><div class="su-num">1</div><div class="su-texts"><div class="su-en">Alphabet & Numbers</div><div class="su-ar">الأحرف والأرقام</div><div class="su-prog"><div class="su-prog-fill" id="sp1"></div></div></div></a>
+  <a href="lesson2.html" class="su-item"><div class="su-num">2</div><div class="su-texts"><div class="su-en">Classroom Language & Greetings</div><div class="su-ar">لغة الصف والتحيات</div><div class="su-prog"><div class="su-prog-fill" id="sp2"></div></div></div></a>
+  <a href="lesson3.html" class="su-item"><div class="su-num">3</div><div class="su-texts"><div class="su-en">Nationalities & Countries</div><div class="su-ar">الجنسيات والدول</div><div class="su-prog"><div class="su-prog-fill" id="sp3"></div></div></div></a>
+  <a href="lesson4.html" class="su-item"><div class="su-num">4</div><div class="su-texts"><div class="su-en">Singular & Plural Nouns</div><div class="su-ar">الأسماء المفردة والجمع</div><div class="su-prog"><div class="su-prog-fill" id="sp4"></div></div></div></a>
+  <a href="lesson5.html" class="su-item"><div class="su-num">5</div><div class="su-texts"><div class="su-en">Days & Telling the Time</div><div class="su-ar">الأيام وإخبار الوقت</div><div class="su-prog"><div class="su-prog-fill" id="sp5"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-a2">A2</span><span class="su-level-name">المستوى الابتدائي</span></div>
+  <a href="unit1.html" class="su-item"><div class="su-num">6</div><div class="su-texts"><div class="su-en">Verb to <i>be</i></div><div class="su-ar">فعل التكوين</div><div class="su-prog"><div class="su-prog-fill" id="sp6"></div></div></div></a>
+  <a href="unit2.html" class="su-item su-active"><div class="su-num">7</div><div class="su-texts"><div class="su-en">Present Simple</div><div class="su-ar">المضارع البسيط</div><div class="su-prog"><div class="su-prog-fill" id="sp7"></div></div></div></a>
+  <a href="unit3.html" class="su-item"><div class="su-num">8</div><div class="su-texts"><div class="su-en">Present Continuous</div><div class="su-ar">المضارع المستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp8"></div></div></div></a>
+  <a href="unit4.html" class="su-item"><div class="su-num">9</div><div class="su-texts"><div class="su-en">Past Simple: was / were</div><div class="su-ar">الماضي البسيط: كان</div><div class="su-prog"><div class="su-prog-fill" id="sp9"></div></div></div></a>
+  <a href="unit6.html" class="su-item"><div class="su-num">10</div><div class="su-texts"><div class="su-en">Past Simple: Regular & Irreg.</div><div class="su-ar">الماضي البسيط للأفعال</div><div class="su-prog"><div class="su-prog-fill" id="sp10"></div></div></div></a>
+  <a href="unit5.html" class="su-item"><div class="su-num">11</div><div class="su-texts"><div class="su-en">Can / Can't</div><div class="su-ar">القدرة والعجز</div><div class="su-prog"><div class="su-prog-fill" id="sp11"></div></div></div></a>
+  <a href="lesson12.html" class="su-item"><div class="su-num">12</div><div class="su-texts"><div class="su-en">Possessive Pronouns</div><div class="su-ar">ضمائر الملكية</div><div class="su-prog"><div class="su-prog-fill" id="sp12"></div></div></div></a>
+  <a href="unit7.html" class="su-item"><div class="su-num">13</div><div class="su-texts"><div class="su-en">There is / There are</div><div class="su-ar">يوجد / توجد</div><div class="su-prog"><div class="su-prog-fill" id="sp13"></div></div></div></a>
+  <a href="unit8.html" class="su-item"><div class="su-num">14</div><div class="su-texts"><div class="su-en">Adjectives</div><div class="su-ar">الصفات</div><div class="su-prog"><div class="su-prog-fill" id="sp14"></div></div></div></a>
+  <a href="unit9.html" class="su-item"><div class="su-num">15</div><div class="su-texts"><div class="su-en">Imperatives</div><div class="su-ar">صيغة الأمر والنهي</div><div class="su-prog"><div class="su-prog-fill" id="sp15"></div></div></div></a>
+  <a href="unit10.html" class="su-item"><div class="su-num">16</div><div class="su-texts"><div class="su-en">Object Pronouns</div><div class="su-ar">ضمائر المفعول به</div><div class="su-prog"><div class="su-prog-fill" id="sp16"></div></div></div></a>
+  <a href="unit11.html" class="su-item"><div class="su-num">17</div><div class="su-texts"><div class="su-en">Prepositions of Time & Place</div><div class="su-ar">حروف جر الوقت والمكان</div><div class="su-prog"><div class="su-prog-fill" id="sp17"></div></div></div></a>
+  <a href="unit12.html" class="su-item"><div class="su-num">18</div><div class="su-texts"><div class="su-en">Future Plans: going to</div><div class="su-ar">خطط المستقبل</div><div class="su-prog"><div class="su-prog-fill" id="sp18"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b1">B1</span><span class="su-level-name">تحت المتوسط</span></div>
+  <a href="lesson19.html" class="su-item"><div class="su-num">19</div><div class="su-texts"><div class="su-en">Present Perfect Introduction</div><div class="su-ar">مقدمة المضارع التام</div><div class="su-prog"><div class="su-prog-fill" id="sp19"></div></div></div></a>
+  <a href="lesson20.html" class="su-item"><div class="su-num">20</div><div class="su-texts"><div class="su-en">Past Continuous</div><div class="su-ar">الماضي المستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp20"></div></div></div></a>
+  <a href="lesson21.html" class="su-item"><div class="su-num">21</div><div class="su-texts"><div class="su-en">will vs. going to</div><div class="su-ar">المستقبل: إرادة أم تخطيط؟</div><div class="su-prog"><div class="su-prog-fill" id="sp21"></div></div></div></a>
+  <a href="lesson22.html" class="su-item"><div class="su-num">22</div><div class="su-texts"><div class="su-en">like / love / hate + -ing</div><div class="su-ar">التعبير عن التفضيلات</div><div class="su-prog"><div class="su-prog-fill" id="sp22"></div></div></div></a>
+  <a href="lesson23.html" class="su-item"><div class="su-num">23</div><div class="su-texts"><div class="su-en">Comparatives & Superlatives</div><div class="su-ar">المقارنة والتفضيل</div><div class="su-prog"><div class="su-prog-fill" id="sp23"></div></div></div></a>
+  <a href="lesson24.html" class="su-item"><div class="su-num">24</div><div class="su-texts"><div class="su-en">must / have to / should</div><div class="su-ar">أفعال الإلزام والنصيحة</div><div class="su-prog"><div class="su-prog-fill" id="sp24"></div></div></div></a>
+  <a href="lesson25.html" class="su-item"><div class="su-num">25</div><div class="su-texts"><div class="su-en">Infinitives & Gerunds</div><div class="su-ar">المصدر وصيغة الـ ing</div><div class="su-prog"><div class="su-prog-fill" id="sp25"></div></div></div></a>
+  <a href="lesson26.html" class="su-item"><div class="su-num">26</div><div class="su-texts"><div class="su-en">Articles: a/an / the</div><div class="su-ar">أدوات التعريف والتنكير</div><div class="su-prog"><div class="su-prog-fill" id="sp26"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b2">B2</span><span class="su-level-name">المستوى المتوسط</span></div>
+  <a href="lesson27.html" class="su-item"><div class="su-num">27</div><div class="su-texts"><div class="su-en">Present Perfect vs. Past Simple</div><div class="su-ar">المقارنة بين الماضي والتام</div><div class="su-prog"><div class="su-prog-fill" id="sp27"></div></div></div></a>
+  <a href="lesson28.html" class="su-item"><div class="su-num">28</div><div class="su-texts"><div class="su-en">Passive Voice</div><div class="su-ar">المبني للمجهول</div><div class="su-prog"><div class="su-prog-fill" id="sp28"></div></div></div></a>
+  <a href="lesson29.html" class="su-item"><div class="su-num">29</div><div class="su-texts"><div class="su-en">Zero / First / Second Cond.</div><div class="su-ar">الجمل الشرطية 0-1-2</div><div class="su-prog"><div class="su-prog-fill" id="sp29"></div></div></div></a>
+  <a href="lesson30.html" class="su-item"><div class="su-num">30</div><div class="su-texts"><div class="su-en">Reported Speech</div><div class="su-ar">الكلام غير المباشر</div><div class="su-prog"><div class="su-prog-fill" id="sp30"></div></div></div></a>
+  <a href="lesson31.html" class="su-item"><div class="su-num">31</div><div class="su-texts"><div class="su-en">Relative Clauses</div><div class="su-ar">جمل الوصل: who / which</div><div class="su-prog"><div class="su-prog-fill" id="sp31"></div></div></div></a>
+  <a href="lesson32.html" class="su-item"><div class="su-num">32</div><div class="su-texts"><div class="su-en">Quantifiers</div><div class="su-ar">محددات الكمية</div><div class="su-prog"><div class="su-prog-fill" id="sp32"></div></div></div></a>
+  <a href="lesson33.html" class="su-item"><div class="su-num">33</div><div class="su-texts"><div class="su-en">Phrasal Verbs Introduction</div><div class="su-ar">مقدمة الأفعال المركبة</div><div class="su-prog"><div class="su-prog-fill" id="sp33"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b2p">B2+</span><span class="su-level-name">فوق المتوسط</span></div>
+  <a href="lesson34.html" class="su-item"><div class="su-num">34</div><div class="su-texts"><div class="su-en">Narrative Tenses & Past Perfect</div><div class="su-ar">أزمنة السرد والماضي التام</div><div class="su-prog"><div class="su-prog-fill" id="sp34"></div></div></div></a>
+  <a href="lesson35.html" class="su-item"><div class="su-num">35</div><div class="su-texts"><div class="su-en">Future Perfect & Continuous</div><div class="su-ar">المستقبل التام والمستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp35"></div></div></div></a>
+  <a href="lesson36.html" class="su-item"><div class="su-num">36</div><div class="su-texts"><div class="su-en">Third Conditional & Regrets</div><div class="su-ar">الشرط الثالث والندم</div><div class="su-prog"><div class="su-prog-fill" id="sp36"></div></div></div></a>
+  <a href="lesson37.html" class="su-item"><div class="su-num">37</div><div class="su-texts"><div class="su-en">Causative: have/get done</div><div class="su-ar">الأفعال السببية</div><div class="su-prog"><div class="su-prog-fill" id="sp37"></div></div></div></a>
+  <a href="lesson38.html" class="su-item"><div class="su-num">38</div><div class="su-texts"><div class="su-en">Advanced Passive</div><div class="su-ar">المبني للمجهول المتقدم</div><div class="su-prog"><div class="su-prog-fill" id="sp38"></div></div></div></a>
+  <a href="lesson39.html" class="su-item"><div class="su-num">39</div><div class="su-texts"><div class="su-en">Speculation: must/might/can't</div><div class="su-ar">التخمين والاستنتاج</div><div class="su-prog"><div class="su-prog-fill" id="sp39"></div></div></div></a>
+  <a href="lesson40.html" class="su-item"><div class="su-num">40</div><div class="su-texts"><div class="su-en">Idioms & Collocations</div><div class="su-ar">المصطلحات والتعبيرات</div><div class="su-prog"><div class="su-prog-fill" id="sp40"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-c1">C1</span><span class="su-level-name">المستوى المتقدم الأكاديمي</span></div>
+  <a href="lesson41.html" class="su-item"><div class="su-num">41</div><div class="su-texts"><div class="su-en">Inversion & Emphatic Structures</div><div class="su-ar">التقديم والتأخير للتأكيد</div><div class="su-prog"><div class="su-prog-fill" id="sp41"></div></div></div></a>
+  <a href="lesson42.html" class="su-item"><div class="su-num">42</div><div class="su-texts"><div class="su-en">Mixed Conditionals</div><div class="su-ar">الجمل الشرطية المختلطة</div><div class="su-prog"><div class="su-prog-fill" id="sp42"></div></div></div></a>
+  <a href="lesson43.html" class="su-item"><div class="su-num">43</div><div class="su-texts"><div class="su-en">Advanced Gerunds & Infinitives</div><div class="su-ar">المصادر المتقدمة</div><div class="su-prog"><div class="su-prog-fill" id="sp43"></div></div></div></a>
+  <a href="lesson44.html" class="su-item"><div class="su-num">44</div><div class="su-texts"><div class="su-en">Cleft Sentences</div><div class="su-ar">الجمل المشقوقة</div><div class="su-prog"><div class="su-prog-fill" id="sp44"></div></div></div></a>
+  <a href="lesson45.html" class="su-item"><div class="su-num">45</div><div class="su-texts"><div class="su-en">Discourse Markers</div><div class="su-ar">أدوات الربط الأكاديمية</div><div class="su-prog"><div class="su-prog-fill" id="sp45"></div></div></div></a>
+  <a href="lesson46.html" class="su-item"><div class="su-num">46</div><div class="su-texts"><div class="su-en">Nuances & Euphemisms</div><div class="su-ar">الفروقات الدقيقة والتلطيف</div><div class="su-prog"><div class="su-prog-fill" id="sp46"></div></div></div></a>
+</div>
+</aside>
+<div class="main-content">
+
+<nav class="topnav">
+  <div class="nav-left">
+    <a href="../index.html" class="nav-home-btn">&#x1F3E0; الرئيسية</a>
+    <span class="nav-sep">&#x203A;</span>
+    <span class="nav-lesson-badge">Lesson 7</span>
+    <span class="nav-sep">&#x203A;</span>
+    <span class="nav-lesson-name">Present Simple</span>
+  </div>
+  <div class="nav-right"><span class="nav-brand">MOHAMMED ELHUSEYIN</span></div>
+</nav>
+
+<div class="hero">
+  <div class="unit-badge">Unit 2</div>
+  <h1 class="hero-title">Present Simple</h1>
+  <div class="hero-ar ar">المضارع البسيط — أهم زمن في اللغة الإنجليزية</div>
+  <p class="hero-sub">Habits · Daily routines · General facts · Permanent situations — the building block of English communication</p>
+  <div class="hero-tags">
+    <button class="tag tag-grammar tag-btn" onclick="jumpTab('grammar')">📖 Grammar</button>
+    <button class="tag tag-other tag-btn" onclick="jumpTab('everyday')">🗣 Everyday English</button>
+    <button class="tag tag-other tag-btn" onclick="jumpTab('reading')">📚 Reading</button>
+    <button class="tag tag-other tag-btn" onclick="jumpTab('checkit')">✏️ Check It</button>
+  </div>
+</div>
+
+<div class="main-tabs">
+  <button class="main-tab active" onclick="showTab('grammar',this)">📖 Grammar</button>
+  <button class="main-tab" onclick="showTab('everyday',this)">🗣 Everyday English</button>
+  <button class="main-tab" onclick="showTab('reading',this)">📚 Reading</button>
+  <button class="main-tab" onclick="showTab('nass',this)">📝 النص</button>
+  <button class="main-tab" onclick="showTab('checkit',this)">✏️ Check It</button>
+</div>
+
+<!-- ===== GRAMMAR TAB ===== -->
+<div id="tab-grammar" class="tab-panel active">
+<div style="max-width:960px;margin:0 auto">
+<div>
+
+<!-- GRAMMAR CARD -->
+<div class="card">
+  <h2 class="card-title">📖 Present Simple — الشرح الكامل</h2>
+  <p class="card-ar">المضارع البسيط — الإيجابي · النفي · السؤال · أفعال التكرار</p>
+  <div class="sub-tabs">
+    <button class="sub-tab active" onclick="showSub('pos',this)">✅ Positive</button>
+    <button class="sub-tab" onclick="showSub('neg',this)">❌ Negative</button>
+    <button class="sub-tab" onclick="showSub('qst',this)">❓ Questions</button>
+    <button class="sub-tab" onclick="showSub('frq',this)">📅 Frequency</button>
+  </div>
+
+  <!-- POSITIVE -->
+  <div id="sub-pos" class="sub-panel active">
+    <div class="tts-box">
+      <button class="tts-btn" onclick="ttsGrammar('pos')">🔊 اسمع القاعدة</button>
+      <button class="tts-btn tts-stop" onclick="ttsStop()">⏹ Stop</button>
+    </div>
+    <div class="formula-box">
+      <div class="formula-row">
+        <span class="formula-subj">I / You / We / They</span>
+        <span class="formula-plus">+</span>
+        <span class="formula-verb">work</span>
+        <span class="formula-note">base form — شكل الفعل الأساسي</span>
+      </div>
+      <div class="formula-row">
+        <span class="formula-subj he">He / She / It</span>
+        <span class="formula-plus">+</span>
+        <span class="formula-verb he">work<span class="s-end">s</span></span>
+        <span class="formula-note">add -s — نضيف -s للفعل</span>
+      </div>
+    </div>
+    <div class="card-note">✍️ القاعدة الذهبية: مع ضمائر الغائب (He / She / It) نضيف -s للفعل دائماً. مع بقية الضمائر (I / You / We / They) نستخدم الفعل كما هو بدون تغيير.</div>
+    <div class="ex-section-title">Examples — أمثلة (اضغط 🔊 لتسمع النطق)</div>
+    <div class="ex-list">
+      <div class="ex-item"><button class="sp" onclick="ttsRead('I work in a hospital.')">🔊</button><div><div class="ex-en">I <b>work</b> in a hospital.</div><div class="ex-ar">أنا أعمل في مستشفى.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('You speak English very well.')">🔊</button><div><div class="ex-en">You <b>speak</b> English very well.</div><div class="ex-ar">أنت تتحدث الإنجليزية بشكل جيد جداً.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('We live near the city centre.')">🔊</button><div><div class="ex-en">We <b>live</b> near the city centre.</div><div class="ex-ar">نحن نسكن بالقرب من وسط المدينة.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('They study at the university.')">🔊</button><div><div class="ex-en">They <b>study</b> at the university.</div><div class="ex-ar">هم يدرسون في الجامعة.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('He works at a bank.')">🔊</button><div><div class="ex-en">He <b>work<u>s</u></b> at a bank.</div><div class="ex-ar">هو يعمل في بنك.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('She teaches maths at school.')">🔊</button><div><div class="ex-en">She <b>teach<u>es</u></b> maths at school.</div><div class="ex-ar">هي تدرّس الرياضيات في المدرسة.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('It costs about twenty dollars.')">🔊</button><div><div class="ex-en">It <b>cost<u>s</u></b> about twenty dollars.</div><div class="ex-ar">إنه يكلف حوالي عشرين دولاراً.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('My father drives to work every day.')">🔊</button><div><div class="ex-en">My father <b>drive<u>s</u></b> to work every day.</div><div class="ex-ar">والدي يقود سيارته للعمل كل يوم.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('The train leaves at eight oclock.')">🔊</button><div><div class="ex-en">The train <b>leave<u>s</u></b> at 8 o'clock.</div><div class="ex-ar">يغادر القطار في الساعة الثامنة.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('My sister loves reading books.')">🔊</button><div><div class="ex-en">My sister <b>love<u>s</u></b> reading books.</div><div class="ex-ar">أختي تحب القراءة.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('The sun rises in the east.')">🔊</button><div><div class="ex-en">The sun <b>rise<u>s</u></b> in the east.</div><div class="ex-ar">الشمس تشرق من الشرق. (حقيقة علمية)</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('Water boils at one hundred degrees Celsius.')">🔊</button><div><div class="ex-en">Water <b>boil<u>s</u></b> at 100°C.</div><div class="ex-ar">الماء يغلي عند 100 درجة مئوية. (حقيقة علمية)</div></div></div>
+    </div>
+  </div>
+
+  <!-- NEGATIVE -->
+  <div id="sub-neg" class="sub-panel">
+    <div class="tts-box">
+      <button class="tts-btn" onclick="ttsGrammar('neg')">🔊 اسمع القاعدة</button>
+      <button class="tts-btn tts-stop" onclick="ttsStop()">⏹ Stop</button>
+    </div>
+    <div class="formula-box">
+      <div class="formula-row">
+        <span class="formula-subj">I / You / We / They</span>
+        <span class="formula-plus">+</span>
+        <span class="formula-verb neg">don't</span>
+        <span class="formula-plus">+</span>
+        <span class="formula-verb">work</span>
+      </div>
+      <div class="formula-row">
+        <span class="formula-subj he">He / She / It</span>
+        <span class="formula-plus">+</span>
+        <span class="formula-verb neg">doesn't</span>
+        <span class="formula-plus">+</span>
+        <span class="formula-verb">work</span>
+      </div>
+    </div>
+    <div class="imp-box">
+      <div class="imp-title">⚠️ مهم جداً — بعد don't / doesn't نستخدم شكل الفعل الأساسي دائماً</div>
+      <div class="imp-row"><span class="imp-wrong">He doesn't work<b>s</b>.</span><span>→</span><span class="imp-right">He doesn't work.</span></div>
+      <div class="imp-row"><span class="imp-wrong">She don't work.</span><span>→</span><span class="imp-right">She doesn't work.</span></div>
+    </div>
+    <div class="ex-section-title">Examples — أمثلة</div>
+    <div class="ex-list">
+      <div class="ex-item"><button class="sp" onclick="ttsRead('I dont work on Sundays.')">🔊</button><div><div class="ex-en">I <b>don't</b> work on Sundays.</div><div class="ex-ar">أنا لا أعمل يوم الأحد.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('You dont speak Arabic.')">🔊</button><div><div class="ex-en">You <b>don't</b> speak Arabic.</div><div class="ex-ar">أنت لا تتحدث العربية.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('We dont have a car.')">🔊</button><div><div class="ex-en">We <b>don't</b> have a car.</div><div class="ex-ar">نحن لا نملك سيارة.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('They dont live in London.')">🔊</button><div><div class="ex-en">They <b>don't</b> live in London.</div><div class="ex-ar">هم لا يعيشون في لندن.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('He doesnt like coffee.')">🔊</button><div><div class="ex-en">He <b>doesn't</b> like coffee.</div><div class="ex-ar">هو لا يحب القهوة.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('She doesnt drive to work.')">🔊</button><div><div class="ex-en">She <b>doesn't</b> drive to work.</div><div class="ex-ar">هي لا تقود سيارتها للعمل.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('It doesnt cost much.')">🔊</button><div><div class="ex-en">It <b>doesn't</b> cost much.</div><div class="ex-ar">إنه لا يكلف كثيراً.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('My brother doesnt eat meat.')">🔊</button><div><div class="ex-en">My brother <b>doesn't</b> eat meat.</div><div class="ex-ar">أخي لا يأكل اللحم.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('The shop doesnt open on Mondays.')">🔊</button><div><div class="ex-en">The shop <b>doesn't</b> open on Mondays.</div><div class="ex-ar">المتجر لا يفتح يوم الاثنين.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('She doesnt understand the question.')">🔊</button><div><div class="ex-en">She <b>doesn't</b> understand the question.</div><div class="ex-ar">هي لا تفهم السؤال.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('I dont usually watch TV in the morning.')">🔊</button><div><div class="ex-en">I <b>don't</b> usually watch TV in the morning.</div><div class="ex-ar">أنا عادةً لا أشاهد التلفاز في الصباح.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('He doesnt have a sister.')">🔊</button><div><div class="ex-en">He <b>doesn't</b> have a sister.</div><div class="ex-ar">هو ليس لديه أخت.</div></div></div>
+    </div>
+  </div>
+
+  <!-- QUESTIONS -->
+  <div id="sub-qst" class="sub-panel">
+    <div class="tts-box">
+      <button class="tts-btn" onclick="ttsGrammar('qst')">🔊 اسمع القاعدة</button>
+      <button class="tts-btn tts-stop" onclick="ttsStop()">⏹ Stop</button>
+    </div>
+    <div class="formula-box">
+      <div class="formula-row">
+        <span class="formula-verb do">Do</span>
+        <span class="formula-plus">+</span>
+        <span class="formula-subj">I / You / We / They</span>
+        <span class="formula-plus">+</span>
+        <span class="formula-verb">work</span>
+        <span class="formula-note">?</span>
+      </div>
+      <div class="formula-row">
+        <span class="formula-verb do" style="color:var(--accent)">Does</span>
+        <span class="formula-plus">+</span>
+        <span class="formula-subj he">He / She / It</span>
+        <span class="formula-plus">+</span>
+        <span class="formula-verb">work</span>
+        <span class="formula-note">?</span>
+      </div>
+    </div>
+    <div class="card-note">💡 في الأسئلة: نضع Do أو Does في بداية الجملة، والفعل يبقى في شكله الأساسي دائماً — حتى مع He / She / It.</div>
+    <div class="ex-section-title">Short Answers — الإجابات المختصرة</div>
+    <table class="sa-table">
+      <tr><th>Question</th><th>Yes ✅</th><th>No ❌</th></tr>
+      <tr><td>Do you work here?</td><td class="sa-yes">Yes, I do.</td><td class="sa-no">No, I don't.</td></tr>
+      <tr><td>Does he work here?</td><td class="sa-yes">Yes, he does.</td><td class="sa-no">No, he doesn't.</td></tr>
+      <tr><td>Does she speak English?</td><td class="sa-yes">Yes, she does.</td><td class="sa-no">No, she doesn't.</td></tr>
+      <tr><td>Do they live here?</td><td class="sa-yes">Yes, they do.</td><td class="sa-no">No, they don't.</td></tr>
+    </table>
+    <div class="imp-box">
+      <div class="imp-title">⚠️ لا تستخدم الفعل الكامل في الإجابة القصيرة</div>
+      <div class="imp-row"><span class="imp-wrong">Yes, I do work.</span><span>→</span><span class="imp-right">Yes, I do.</span></div>
+      <div class="imp-row"><span class="imp-wrong">Yes, she does speak.</span><span>→</span><span class="imp-right">Yes, she does.</span></div>
+    </div>
+    <div class="ex-section-title">WH Questions — أسئلة الاستفهام</div>
+    <div class="wh-grid">
+      <div class="wh-row"><div class="wh-q"><b>Where</b> do you work?</div><div class="wh-a">I work at a school. — أعمل في مدرسة.</div></div>
+      <div class="wh-row"><div class="wh-q"><b>What</b> does she do?</div><div class="wh-a">She's a doctor. — هي طبيبة.</div></div>
+      <div class="wh-row"><div class="wh-q"><b>When</b> does the class start?</div><div class="wh-a">It starts at 9. — تبدأ في الساعة التاسعة.</div></div>
+      <div class="wh-row"><div class="wh-q"><b>Why</b> does he study English?</div><div class="wh-a">Because he wants a better job. — لأنه يريد عملاً أفضل.</div></div>
+      <div class="wh-row"><div class="wh-q"><b>How often</b> do you exercise?</div><div class="wh-a">Three times a week. — ثلاث مرات في الأسبوع.</div></div>
+      <div class="wh-row"><div class="wh-q"><b>What time</b> does the train leave?</div><div class="wh-a">It leaves at 8 am. — يغادر الساعة 8 صباحاً.</div></div>
+      <div class="wh-row"><div class="wh-q"><b>How much</b> does it cost?</div><div class="wh-a">About three pounds. — حوالي ثلاثة جنيهات.</div></div>
+      <div class="wh-row"><div class="wh-q"><b>Who</b> do you work with?</div><div class="wh-a">I work with Tom and Sara. — أعمل مع توم وسارة.</div></div>
+    </div>
+    <div class="ex-section-title">More Examples</div>
+    <div class="ex-list">
+      <div class="ex-item"><button class="sp" onclick="ttsRead('Do you live here? Yes, I do.')">🔊</button><div><div class="ex-en"><b>Do</b> you live here? — Yes, I do.</div><div class="ex-ar">هل تسكن هنا؟ — نعم.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('Does she speak French? No, she doesnt.')">🔊</button><div><div class="ex-en"><b>Does</b> she speak French? — No, she doesn't.</div><div class="ex-ar">هل تتحدث الفرنسية؟ — لا.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('Do they work on Saturdays?')">🔊</button><div><div class="ex-en"><b>Do</b> they work on Saturdays?</div><div class="ex-ar">هل يعملون يوم السبت؟</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('Does he have a car?')">🔊</button><div><div class="ex-en"><b>Does</b> he have a car?</div><div class="ex-ar">هل لديه سيارة؟</div></div></div>
+    </div>
+  </div>
+
+  <!-- FREQUENCY -->
+  <div id="sub-frq" class="sub-panel">
+    <div class="tts-box">
+      <button class="tts-btn" onclick="ttsGrammar('frq')">🔊 اسمع القاعدة</button>
+      <button class="tts-btn tts-stop" onclick="ttsStop()">⏹ Stop</button>
+    </div>
+    <div class="card-note">📊 أفعال التكرار (Frequency Adverbs) — تُخبرنا كم مرة يحدث الشيء. توضع قبل الفعل الرئيسي، وبعد فعل "to be".</div>
+    <div class="freq-scale">
+      <div class="freq-row"><span class="freq-label">always</span><div class="freq-bar" style="width:200px;background:#22c55e">100%</div><span class="freq-ar">دائماً</span></div>
+      <div class="freq-row"><span class="freq-label">usually</span><div class="freq-bar" style="width:160px;background:#4a9eff">80%</div><span class="freq-ar">عادةً</span></div>
+      <div class="freq-row"><span class="freq-label">often</span><div class="freq-bar" style="width:120px;background:#a855f7">60%</div><span class="freq-ar">غالباً</span></div>
+      <div class="freq-row"><span class="freq-label">sometimes</span><div class="freq-bar" style="width:80px;background:#f4a624">40%</div><span class="freq-ar">أحياناً</span></div>
+      <div class="freq-row"><span class="freq-label">rarely</span><div class="freq-bar" style="width:40px;background:#ef9544">20%</div><span class="freq-ar">نادراً</span></div>
+      <div class="freq-row"><span class="freq-label">never</span><div class="freq-bar" style="width:10px;background:#ef4444"></div><span class="freq-pct">0%</span><span class="freq-ar">أبداً</span></div>
+    </div>
+    <div class="imp-box" style="background:rgba(74,158,255,.07);border-color:rgba(74,158,255,.3)">
+      <div class="imp-title" style="color:var(--blue)">📌 مكان أفعال التكرار في الجملة</div>
+      <div class="imp-row"><span style="color:var(--green);font-weight:700">I always eat breakfast.</span><span class="imp-why" style="border:none;padding:0">✅ قبل الفعل الرئيسي</span></div>
+      <div class="imp-row"><span style="color:var(--green);font-weight:700">I am always tired.</span><span class="imp-why" style="border:none;padding:0">✅ بعد فعل to be</span></div>
+      <div class="imp-row"><span class="imp-wrong">Always I eat breakfast.</span><span>→</span><span class="imp-right">I always eat breakfast.</span></div>
+    </div>
+    <div class="ex-section-title">Time Expressions — تعبيرات الزمن</div>
+    <div class="time-expr-grid">
+      <div class="te-item"><div class="te-en">every day</div><div class="te-ar">كل يوم</div></div>
+      <div class="te-item"><div class="te-en">once a week</div><div class="te-ar">مرة في الأسبوع</div></div>
+      <div class="te-item"><div class="te-en">twice a month</div><div class="te-ar">مرتين في الشهر</div></div>
+      <div class="te-item"><div class="te-en">three times a year</div><div class="te-ar">ثلاث مرات في السنة</div></div>
+      <div class="te-item"><div class="te-en">on Mondays</div><div class="te-ar">أيام الاثنين</div></div>
+      <div class="te-item"><div class="te-en">at weekends</div><div class="te-ar">في عطلة الأسبوع</div></div>
+      <div class="te-item"><div class="te-en">in the morning</div><div class="te-ar">في الصباح</div></div>
+      <div class="te-item"><div class="te-en">every other day</div><div class="te-ar">كل يومين</div></div>
+    </div>
+    <div class="ex-section-title">Examples — أمثلة</div>
+    <div class="ex-list">
+      <div class="ex-item"><button class="sp" onclick="ttsRead('I always brush my teeth before bed.')">🔊</button><div><div class="ex-en">I <b>always</b> brush my teeth before bed.</div><div class="ex-ar">أنا دائماً أنظف أسناني قبل النوم.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('She usually has lunch at work.')">🔊</button><div><div class="ex-en">She <b>usually</b> has lunch at work.</div><div class="ex-ar">هي عادةً تتناول الغداء في العمل.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('We often go to the cinema on Fridays.')">🔊</button><div><div class="ex-en">We <b>often</b> go to the cinema on Fridays.</div><div class="ex-ar">نحن غالباً نذهب للسينما يوم الجمعة.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('He sometimes works from home.')">🔊</button><div><div class="ex-en">He <b>sometimes</b> works from home.</div><div class="ex-ar">هو أحياناً يعمل من المنزل.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('They rarely eat fast food.')">🔊</button><div><div class="ex-en">They <b>rarely</b> eat fast food.</div><div class="ex-ar">هم نادراً ما يأكلون الوجبات السريعة.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('I never drink alcohol.')">🔊</button><div><div class="ex-en">I <b>never</b> drink alcohol.</div><div class="ex-ar">أنا لا أشرب الكحول أبداً.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('She is always on time for meetings.')">🔊</button><div><div class="ex-en">She <b>is always</b> on time for meetings.</div><div class="ex-ar">هي دائماً في الوقت المحدد للاجتماعات. (after "is")</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('He visits his parents once a month.')">🔊</button><div><div class="ex-en">He visits his parents <b>once a month</b>.</div><div class="ex-ar">هو يزور والديه مرة في الشهر.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('I go to the gym three times a week.')">🔊</button><div><div class="ex-en">I go to the gym <b>three times a week</b>.</div><div class="ex-ar">أذهب للصالة ثلاث مرات في الأسبوع.</div></div></div>
+      <div class="ex-item"><button class="sp" onclick="ttsRead('They never miss a day at work.')">🔊</button><div><div class="ex-en">They <b>never</b> miss a day at work.</div><div class="ex-ar">هم لا يتغيبون عن العمل أبداً.</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- SPELLING RULES CARD -->
+<div class="card">
+  <h2 class="card-title">📝 Spelling Rules — قواعد كتابة -s</h2>
+  <p class="card-ar">كيف تكتب الفعل مع He / She / It؟ — 4 قواعد مهمة</p>
+  <table class="spell-table">
+    <tr><th>القاعدة</th><th>Base Form</th><th>He / She / It</th><th>مثال في جملة</th></tr>
+    <tr>
+      <td><span class="spell-rule">معظم الأفعال</span><div style="font-size:11px;color:var(--muted)">نضيف -s</div></td>
+      <td class="spell-base">work<br>play<br>eat<br>read</td>
+      <td class="spell-third">work<span class="spell-s">s</span><br>play<span class="spell-s">s</span><br>eat<span class="spell-s">s</span><br>read<span class="spell-s">s</span></td>
+      <td class="spell-eg">She <b>works</b> every day.<br>He <b>plays</b> football.<br>She <b>eats</b> at noon.<br>He <b>reads</b> a lot.</td>
+    </tr>
+    <tr>
+      <td><span class="spell-rule">-s, -sh, -ch, -x, -o, -z</span><div style="font-size:11px;color:var(--muted)">نضيف -es</div></td>
+      <td class="spell-base">watch<br>go<br>wash<br>finish</td>
+      <td class="spell-third">watch<span class="spell-s">es</span><br>go<span class="spell-s">es</span><br>wash<span class="spell-s">es</span><br>finish<span class="spell-s">es</span></td>
+      <td class="spell-eg">He <b>watches</b> TV.<br>She <b>goes</b> to school.<br>He <b>washes</b> his car.<br>She <b>finishes</b> at 5.</td>
+    </tr>
+    <tr>
+      <td><span class="spell-rule">consonant + y</span><div style="font-size:11px;color:var(--muted)">نحذف y ونضيف -ies</div></td>
+      <td class="spell-base">study<br>carry<br>fly<br>try</td>
+      <td class="spell-third">stud<span class="spell-s">ies</span><br>carr<span class="spell-s">ies</span><br>fl<span class="spell-s">ies</span><br>tr<span class="spell-s">ies</span></td>
+      <td class="spell-eg">She <b>studies</b> every day.<br>He <b>carries</b> a bag.<br>The bird <b>flies</b>.<br>She <b>tries</b> hard.</td>
+    </tr>
+    <tr>
+      <td><span class="spell-rule">استثناء</span><div style="font-size:11px;color:var(--red)">have → has</div></td>
+      <td class="spell-base">have</td>
+      <td class="spell-third" style="color:var(--red)">has</td>
+      <td class="spell-eg">He <b>has</b> a dog.<br>She <b>has</b> a new phone.</td>
+    </tr>
+  </table>
+</div>
+
+<!-- WHEN TO USE CARD -->
+<div class="card">
+  <h2 class="card-title">💡 When Do We Use Present Simple?</h2>
+  <p class="card-ar">5 حالات رئيسية نستخدم فيها المضارع البسيط</p>
+  <div class="when-list">
+    <div class="when-item">
+      <div class="when-icon">🕐</div>
+      <div>
+        <div class="when-title">1. Daily Routines &amp; Habits — العادات اليومية</div>
+        <div class="when-ex">Things you do regularly:<br><i>I wake up at 7 every day.</i><br><i>She drinks coffee every morning.</i><br><i>They go to the gym on Mondays.</i></div>
+        <div class="when-ar">أشياء تفعلها بشكل منتظم ومتكرر</div>
+      </div>
+    </div>
+    <div class="when-item">
+      <div class="when-icon">📚</div>
+      <div>
+        <div class="when-title">2. General Facts &amp; Truths — الحقائق العامة</div>
+        <div class="when-ex">Things that are always true:<br><i>The sun rises in the east.</i><br><i>Water boils at 100°C.</i><br><i>Dogs don't fly.</i></div>
+        <div class="when-ar">حقائق علمية أو عامة صحيحة دائماً</div>
+      </div>
+    </div>
+    <div class="when-item">
+      <div class="when-icon">🏠</div>
+      <div>
+        <div class="when-title">3. Permanent Situations — المواقف الدائمة</div>
+        <div class="when-ex">Long-term situations that don't change:<br><i>She lives in Paris.</i><br><i>He works for a big company.</i><br><i>They study at Oxford University.</i></div>
+        <div class="when-ar">أوضاع دائمة أو طويلة الأمد لا تتغير</div>
+      </div>
+    </div>
+    <div class="when-item">
+      <div class="when-icon">❤️</div>
+      <div>
+        <div class="when-title">4. Feelings, Opinions &amp; States — المشاعر والآراء</div>
+        <div class="when-ex">Stative verbs — not usually continuous:<br><i>I love chocolate.</i><br><i>She knows the answer.</i><br><i>He wants a new job.</i><br><i>We believe in you.</i></div>
+        <div class="when-ar">أفعال الحالة: love / know / want / need / think / believe / prefer / understand</div>
+      </div>
+    </div>
+    <div class="when-item">
+      <div class="when-icon">📅</div>
+      <div>
+        <div class="when-title">5. Timetables &amp; Schedules — الجداول الثابتة</div>
+        <div class="when-ex">Fixed future arrangements by schedule:<br><i>The train leaves at 8 am.</i><br><i>The film starts at 9 pm.</i><br><i>School finishes at 3 o'clock.</i></div>
+        <div class="when-ar">جداول زمنية محددة مسبقاً — مثل مواعيد القطارات والأفلام</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COMMON MISTAKES CARD -->
+<div class="card">
+  <h2 class="card-title">⚠️ Common Mistakes — أخطاء شائعة</h2>
+  <p class="card-ar">أكثر 10 أخطاء شيوعاً في المضارع البسيط — تعلّمها لتتجنبها</p>
+  <div class="mistake-item"><div class="m-wrong">He don't like it.</div><div class="m-right">He doesn't like it.</div><div class="m-why">مع He/She/It نستخدم doesn't وليس don't</div></div>
+  <div class="mistake-item"><div class="m-wrong">She doesn't works here.</div><div class="m-right">She doesn't work here.</div><div class="m-why">بعد doesn't نستخدم الفعل الأساسي بدون -s</div></div>
+  <div class="mistake-item"><div class="m-wrong">Do she speak English?</div><div class="m-right">Does she speak English?</div><div class="m-why">مع She نستخدم Does في السؤال</div></div>
+  <div class="mistake-item"><div class="m-wrong">I am work in a school.</div><div class="m-right">I work in a school.</div><div class="m-why">المضارع البسيط لا يحتاج فعل am/is/are</div></div>
+  <div class="mistake-item"><div class="m-wrong">He gos to work by bus.</div><div class="m-right">He goes to work by bus.</div><div class="m-why">go + es = goes (وليس "gos")</div></div>
+  <div class="mistake-item"><div class="m-wrong">She studys English every day.</div><div class="m-right">She studies English every day.</div><div class="m-why">consonant + y → نحذف y ونضيف -ies</div></div>
+  <div class="mistake-item"><div class="m-wrong">Always I eat breakfast.</div><div class="m-right">I always eat breakfast.</div><div class="m-why">أفعال التكرار تأتي قبل الفعل الرئيسي وليس في بداية الجملة</div></div>
+  <div class="mistake-item"><div class="m-wrong">Yes, I do work here.</div><div class="m-right">Yes, I do.</div><div class="m-why">الإجابة القصيرة لا تحتاج الفعل — نقتصر على do/does</div></div>
+  <div class="mistake-item"><div class="m-wrong">I don't never eat meat.</div><div class="m-right">I never eat meat.</div><div class="m-why">لا نستخدم سلبيتين في نفس الجملة (double negative)</div></div>
+  <div class="mistake-item"><div class="m-wrong">My sister have a car.</div><div class="m-right">My sister has a car.</div><div class="m-why">have → has مع He/She/It (استثناء مهم)</div></div>
+</div>
+
+<!-- VOCABULARY CARD -->
+<div class="card">
+  <h2 class="card-title">📚 Vocabulary — Daily Activities</h2>
+  <p class="card-ar">مفردات الأنشطة اليومية — اضغط على الكلمة لتسمع نطقها</p>
+  <div class="vocab-grid">
+    <div class="vocab-item" onclick="ttsRead('wake up')"><span class="vocab-sp">🔊</span><div><div class="vocab-en">wake up</div><div class="vocab-ar">يستيقظ</div></div></div>
+    <div class="vocab-item" onclick="ttsRead('have breakfast')"><span class="vocab-sp">🔊</span><div><div class="vocab-en">have breakfast</div><div class="vocab-ar">يتناول الفطور</div></div></div>
+    <div class="vocab-item" onclick="ttsRead('go to work')"><span class="vocab-sp">🔊</span><div><div class="vocab-en">go to work</div><div class="vocab-ar">يذهب للعمل</div></div></div>
+    <div class="vocab-item" onclick="ttsRead('start work')"><span class="vocab-sp">🔊</span><div><div class="vocab-en">start work</div><div class="vocab-ar">يبدأ العمل</div></div></div>
+    <div class="vocab-item" onclick="ttsRead('have lunch')"><span class="vocab-sp">🔊</span><div><div class="vocab-en">have lunch</div><div class="vocab-ar">يتناول الغداء</div></div></div>
+    <div class="vocab-item" onclick="ttsRead('finish work')"><span class="vocab-sp">🔊</span><div><div class="vocab-en">finish work</div><div class="vocab-ar">ينهي العمل</div></div></div>
+    <div class="vocab-item" onclick="ttsRead('cook dinner')"><span class="vocab-sp">🔊</span><div><div class="vocab-en">cook dinner</div><div class="vocab-ar">يطبخ العشاء</div></div></div>
+    <div class="vocab-item" onclick="ttsRead('watch television')"><span class="vocab-sp">🔊</span><div><div class="vocab-en">watch TV</div><div class="vocab-ar">يشاهد التلفاز</div></div></div>
+    <div class="vocab-item" onclick="ttsRead('go to bed')"><span class="vocab-sp">🔊</span><div><div class="vocab-en">go to bed</div><div class="vocab-ar">يذهب للنوم</div></div></div>
+    <div class="vocab-item" onclick="ttsRead('exercise')"><span class="vocab-sp">🔊</span><div><div class="vocab-en">exercise</div><div class="vocab-ar">يمارس الرياضة</div></div></div>
+    <div class="vocab-item" onclick="ttsRead('read a book')"><span class="vocab-sp">🔊</span><div><div class="vocab-en">read</div><div class="vocab-ar">يقرأ</div></div></div>
+    <div class="vocab-item" onclick="ttsRead('drive a car')"><span class="vocab-sp">🔊</span><div><div class="vocab-en">drive</div><div class="vocab-ar">يقود سيارة</div></div></div>
+    <div class="vocab-item" onclick="ttsRead('take the bus')"><span class="vocab-sp">🔊</span><div><div class="vocab-en">take the bus</div><div class="vocab-ar">يأخذ الباص</div></div></div>
+    <div class="vocab-item" onclick="ttsRead('meet friends')"><span class="vocab-sp">🔊</span><div><div class="vocab-en">meet friends</div><div class="vocab-ar">يقابل الأصدقاء</div></div></div>
+    <div class="vocab-item" onclick="ttsRead('listen to music')"><span class="vocab-sp">🔊</span><div><div class="vocab-en">listen to music</div><div class="vocab-ar">يستمع للموسيقى</div></div></div>
+    <div class="vocab-item" onclick="ttsRead('go shopping')"><span class="vocab-sp">🔊</span><div><div class="vocab-en">go shopping</div><div class="vocab-ar">يتسوق</div></div></div>
+    <div class="vocab-item" onclick="ttsRead('play sports')"><span class="vocab-sp">🔊</span><div><div class="vocab-en">play sports</div><div class="vocab-ar">يلعب رياضة</div></div></div>
+    <div class="vocab-item" onclick="ttsRead('get up')"><span class="vocab-sp">🔊</span><div><div class="vocab-en">get up</div><div class="vocab-ar">ينهض من السرير</div></div></div>
+    <div class="vocab-item" onclick="ttsRead('have a shower')"><span class="vocab-sp">🔊</span><div><div class="vocab-en">have a shower</div><div class="vocab-ar">يستحم</div></div></div>
+    <div class="vocab-item" onclick="ttsRead('relax')"><span class="vocab-sp">🔊</span><div><div class="vocab-en">relax</div><div class="vocab-ar">يسترخي</div></div></div>
+  </div>
+</div>
+
+</div><!-- end left column -->
+
+</div>
+</div><!-- end grammar tab -->
+
+<!-- ===== TEXT TAB — النص ===== -->
+<div id="tab-nass" class="tab-panel">
+<div class="rt-wrap">
+
+  <div class="rt-card">
+    <div class="rt-card-title">📖 Read the passage — اقرأ النص</div>
+    <div class="rt-text">
+      Sarah <span class="hl-2">works</span> in a hospital. Every morning she <span class="hl-2">wakes</span> up early and <span class="hl-2">drinks</span> coffee. She <span class="hl-r">doesn't</span> eat breakfast at home — she <span class="hl-2">buys</span> a sandwich at the café. Her brother Tom <span class="hl-r">doesn't</span> work in a hospital. He <span class="hl-2">teaches</span> English at school. Their mother <span class="hl-r">doesn't</span> work — she <span class="hl-2">stays</span> at home and <span class="hl-2">takes care</span> of the family.
+    </div>
+    <div class="rt-legend">
+      <div class="rt-legend-item"><div class="rt-legend-dot" style="background:var(--green)"></div> فعل + s (مفرد غائب)</div>
+      <div class="rt-legend-item"><div class="rt-legend-dot" style="background:var(--red)"></div> doesn't (نفي مفرد)</div>
+    </div>
+    <button class="rt-tts-btn" onclick="ttsRead('Sarah works in a hospital. Every morning she wakes up early and drinks coffee. She does not eat breakfast at home. She buys a sandwich at the cafe. Her brother Tom does not work in a hospital. He teaches English at school. Their mother does not work. She stays at home and takes care of the family.')">🔊 استمع للنص</button>
+  </div>
+
+  <div class="rt-card">
+    <div class="rt-qs-title">❓ لماذا استخدمنا هذا الشكل؟ — Why this form?</div>
+
+    <div class="rt-q" id="rq2-1">
+      <div class="rt-q-text">في "Sarah <span class="hl-2">works</span> in a hospital" — لماذا works وليس work؟</div>
+      <div class="rt-opts">
+        <button class="rt-opt" onclick="rtPick(this,'rq2-1',false)">لأن الجملة ماضية</button>
+        <button class="rt-opt" data-ok onclick="rtPick(this,'rq2-1',true)">لأن الفاعل مفرد غائب (she) نضيف s للفعل ✓</button>
+        <button class="rt-opt" onclick="rtPick(this,'rq2-1',false)">لأن hospital كلمة طويلة</button>
+      </div>
+      <div class="rt-explain">في Present Simple مع he/she/it نضيف s أو es للفعل: work → works, teach → teaches.</div>
+    </div>
+
+    <div class="rt-q" id="rq2-2">
+      <div class="rt-q-text">في "She <span class="hl-r">doesn't</span> eat breakfast" — لماذا doesn't وليس don't؟</div>
+      <div class="rt-opts">
+        <button class="rt-opt" data-ok onclick="rtPick(this,'rq2-2',true)">لأن الفاعل she (مفرد غائب) ✓</button>
+        <button class="rt-opt" onclick="rtPick(this,'rq2-2',false)">لأن eat فعل أكل</button>
+        <button class="rt-opt" onclick="rtPick(this,'rq2-2',false)">doesn't وdon't نفس الشيء</button>
+      </div>
+      <div class="rt-explain">doesn't = does not تُستخدم مع he/she/it فقط. don't = do not تُستخدم مع I/you/we/they.</div>
+    </div>
+
+    <div class="rt-q" id="rq2-3">
+      <div class="rt-q-text">في "He <span class="hl-2">teaches</span> English" — لماذا teaches وليس teachs؟</div>
+      <div class="rt-opts">
+        <button class="rt-opt" onclick="rtPick(this,'rq2-3',false)">لأنه معلم</button>
+        <button class="rt-opt" onclick="rtPick(this,'rq2-3',false)">لأن الفعل ماضٍ</button>
+        <button class="rt-opt" data-ok onclick="rtPick(this,'rq2-3',true)">الأفعال المنتهية بـ ch/sh/x/s/o تأخذ es ✓</button>
+      </div>
+      <div class="rt-explain">teach → teaches, watch → watches, go → goes. نضيف es لتسهيل النطق.</div>
+    </div>
+
+    <div class="rt-q" id="rq2-4">
+      <div class="rt-q-text">لماذا نقول "Their mother doesn't <span class="hl-2">work</span>" بدون s؟</div>
+      <div class="rt-opts">
+        <button class="rt-opt" data-ok onclick="rtPick(this,'rq2-4',true)">لأن doesn't يحمل علامة المفرد بنفسه ✓</button>
+        <button class="rt-opt" onclick="rtPick(this,'rq2-4',false)">لأن mother كلمة أنثى</button>
+        <button class="rt-opt" onclick="rtPick(this,'rq2-4',false)">لأن الجملة سؤال</button>
+      </div>
+      <div class="rt-explain">في النفي والأسئلة، does/doesn't يأخذ علامة المفرد، والفعل الأساسي يبقى بدون تغيير.</div>
+    </div>
+
+    <div class="rt-q" id="rq2-5">
+      <div class="rt-q-text">لماذا نستخدم Present Simple في هذا النص؟</div>
+      <div class="rt-opts">
+        <button class="rt-opt" onclick="rtPick(this,'rq2-5',false)">لأن الأحداث في المستقبل</button>
+        <button class="rt-opt" onclick="rtPick(this,'rq2-5',false)">لأن الأحداث حدثت بالأمس</button>
+        <button class="rt-opt" data-ok onclick="rtPick(this,'rq2-5',true)">لأن الأحداث عادات يومية منتظمة ✓</button>
+      </div>
+      <div class="rt-explain">Present Simple نستخدمه للعادات والروتين اليومي والحقائق الثابتة. مثل: every day, always, usually.</div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- ===== CHECK IT TAB ===== -->
+<div id="tab-checkit" class="tab-panel" style="padding:0">
+  <div class="ci-hero">
+    <div class="ci-hero-top"><span class="ci-hero-icon">✏️</span><span class="ci-hero-title">اختبر نفسك — Check It!</span></div>
+    <p class="ci-hero-sub">25 سؤال متنوع — Present Simple · do/does · don't/doesn't · Spelling · أملأ الفراغ</p>
+    <div class="ci-hero-badges"><span class="ci-hero-badge mcq">🔘 20 اختيار من متعدد</span><span class="ci-hero-badge fib">✍️ 5 أملأ الفراغ</span></div>
+    <div class="ci-progress-bar"><div class="ci-progress-fill" id="ciProgressFill"></div></div>
+    <div class="ci-progress-txt"><span id="ciProgressTxt">0 / 25 answered</span><span id="ciScoreLive">Score: 0</span></div>
+  </div>
+  <div class="ci-wrap">
+
+    <!-- Q1 MCQ -->
+    <div class="ci-q" id="ciq1">
+      <div class="ci-q-head"><span class="ci-q-num">1</span><span class="ci-q-tag">He/She/It + s</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,1)"><span class="ci-lbl">A</span>She work every day.</button>
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,1)"><span class="ci-lbl">B</span>She works every day.</button>
+      </div>
+      <div class="ci-sol" id="sol1"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ She <b>works</b> every day.</div><div class="ci-sol-exp">he/she/it → نضيف s للفعل: work → works · she work = خطأ</div></div></div>
+    </div>
+
+    <!-- Q2 MCQ -->
+    <div class="ci-q" id="ciq2">
+      <div class="ci-q-head"><span class="ci-q-num">2</span><span class="ci-q-tag">doesn't / don't</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,2)"><span class="ci-lbl">A</span>He don't like coffee.</button>
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,2)"><span class="ci-lbl">B</span>He doesn't like coffee.</button>
+      </div>
+      <div class="ci-sol" id="sol2"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ He <b>doesn't</b> like coffee.</div><div class="ci-sol-exp">he/she/it → doesn't · I/you/we/they → don't</div></div></div>
+    </div>
+
+    <!-- Q3 FIB -->
+    <div class="ci-q ci-fib-q" id="ciq3">
+      <div class="ci-q-head"><span class="ci-q-num">3</span><span class="ci-q-tag">Spelling — y→ies</span><span class="ci-type-badge ci-type-fib">أملأ الفراغ</span></div>
+      <div class="ci-fib-sent">She ___ English every day. <b>(study)</b></div>
+      <div class="ci-fib-row">
+        <input class="ci-fib-input" id="fib3" placeholder="اكتب الفعل..." autocomplete="off" spellcheck="false">
+        <button class="ci-fib-check" onclick="ciFibCheck(3,['studies'])">تحقق ✓</button>
+      </div>
+      <div class="ci-hint">💡 تلميح: she + study → ينتهي بـ y → حوّلها ies</div>
+      <div class="ci-sol" id="sol3"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ She <b>studies</b> English every day.</div><div class="ci-sol-exp">study ينتهي بـ y بعد حرف ساكن → نحذف y ونضيف ies: stud<b>ies</b></div></div></div>
+    </div>
+
+    <!-- Q4 MCQ -->
+    <div class="ci-q" id="ciq4">
+      <div class="ci-q-head"><span class="ci-q-num">4</span><span class="ci-q-tag">do / does — Question</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,4)"><span class="ci-lbl">A</span>Does she speak French?</button>
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,4)"><span class="ci-lbl">B</span>Do she speak French?</button>
+      </div>
+      <div class="ci-sol" id="sol4"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ <b>Does</b> she speak French?</div><div class="ci-sol-exp">السؤال مع she = Does + she + فعل مصدري (بدون s) · Do she = خطأ</div></div></div>
+    </div>
+
+    <!-- Q5 MCQ -->
+    <div class="ci-q" id="ciq5">
+      <div class="ci-q-head"><span class="ci-q-num">5</span><span class="ci-q-tag">don't / doesn't</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,5)"><span class="ci-lbl">A</span>They doesn't play football.</button>
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,5)"><span class="ci-lbl">B</span>They don't play football.</button>
+      </div>
+      <div class="ci-sol" id="sol5"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ They <b>don't</b> play football.</div><div class="ci-sol-exp">they → don't · doesn't مع he/she/it فقط</div></div></div>
+    </div>
+
+    <!-- Q6 MCQ -->
+    <div class="ci-q" id="ciq6">
+      <div class="ci-q-head"><span class="ci-q-num">6</span><span class="ci-q-tag">Short Answer</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-q-prompt">— Do you like music?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,6)"><span class="ci-lbl">A</span>Yes, I do.</button>
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,6)"><span class="ci-lbl">B</span>Yes, I am.</button>
+      </div>
+      <div class="ci-sol" id="sol6"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ Yes, I <b>do</b>.</div><div class="ci-sol-exp">السؤال بـ do → الجواب بـ do. "Yes, I am" = جواب لسؤال am/is/are فقط</div></div></div>
+    </div>
+
+    <div class="ci-brk" id="cibrk1">
+      <div class="ci-brk-emoji">💡</div>
+      <div class="ci-brk-title">do/does — don't/doesn't — القاعدة الذهبية</div>
+      <div class="ci-brk-cols">
+        <div class="ci-brk-col"><div class="ci-brk-col-title">المثبت</div><div class="ci-brk-text">I/You/We/They → <b>play</b><br>He/She/It → <b>play<u>s</u></b><br><br>❌ She play · He go<br>✅ She play<b>s</b> · He go<b>es</b></div></div>
+        <div class="ci-brk-col"><div class="ci-brk-col-title">السؤال والنفي</div><div class="ci-brk-text">I/You/We/They → <b>do</b> / <b>don't</b><br>He/She/It → <b>does</b> / <b>doesn't</b><br><br>بعد does/doesn't الفعل يرجع مصدري:<br>He <b>doesn't</b> work<b>s</b> ❌<br>He <b>doesn't</b> work ✅</div></div>
+      </div>
+      <div class="ci-brk-ar">doesn't + الفعل المصدري (بدون s) — هذا الخطأ الأكثر شيوعاً!</div>
+    </div>
+
+    <!-- Q7 FIB -->
+    <div class="ci-q ci-fib-q" id="ciq7">
+      <div class="ci-q-head"><span class="ci-q-num">7</span><span class="ci-q-tag">Spelling — go→goes</span><span class="ci-type-badge ci-type-fib">أملأ الفراغ</span></div>
+      <div class="ci-fib-sent">He ___ to work by bus. <b>(go)</b></div>
+      <div class="ci-fib-row">
+        <input class="ci-fib-input" id="fib7" placeholder="اكتب الفعل..." autocomplete="off" spellcheck="false">
+        <button class="ci-fib-check" onclick="ciFibCheck(7,['goes'])">تحقق ✓</button>
+      </div>
+      <div class="ci-hint">💡 تلميح: he + go → ينتهي بـ o → أضف es</div>
+      <div class="ci-sol" id="sol7"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ He <b>goes</b> to work by bus.</div><div class="ci-sol-exp">go ينتهي بـ o → go<b>es</b> (مثل: do→does, go→goes)</div></div></div>
+    </div>
+
+    <!-- Q8 MCQ -->
+    <div class="ci-q" id="ciq8">
+      <div class="ci-q-head"><span class="ci-q-num">8</span><span class="ci-q-tag">doesn't + bare verb</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,8)"><span class="ci-lbl">A</span>He doesn't works on Sunday.</button>
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,8)"><span class="ci-lbl">B</span>He doesn't work on Sunday.</button>
+      </div>
+      <div class="ci-sol" id="sol8"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ He <b>doesn't work</b> on Sunday.</div><div class="ci-sol-exp">بعد doesn't الفعل يرجع للمصدر (بدون s): doesn't work وليس doesn't works</div></div></div>
+    </div>
+
+    <!-- Q9 MCQ -->
+    <div class="ci-q" id="ciq9">
+      <div class="ci-q-head"><span class="ci-q-num">9</span><span class="ci-q-tag">Adverb position</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,9)"><span class="ci-lbl">A</span>I always am busy on Mondays.</button>
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,9)"><span class="ci-lbl">B</span>I am always busy on Mondays.</button>
+      </div>
+      <div class="ci-sol" id="sol9"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ I am <b>always</b> busy.</div><div class="ci-sol-exp">مع am/is/are: الظرف يجي بعد الفعل · مع باقي الأفعال: الظرف قبل الفعل</div></div></div>
+    </div>
+
+    <!-- Q10 MCQ -->
+    <div class="ci-q" id="ciq10">
+      <div class="ci-q-head"><span class="ci-q-num">10</span><span class="ci-q-tag">Spelling — y→ies</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,10)"><span class="ci-lbl">A</span>She studies English.</button>
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,10)"><span class="ci-lbl">B</span>She studys English.</button>
+      </div>
+      <div class="ci-sol" id="sol10"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ She <b>studies</b> English.</div><div class="ci-sol-exp">study: y بعد حرف ساكن (d) → احذف y وأضف ies: stud<b>ies</b></div></div></div>
+    </div>
+
+    <!-- Q11 MCQ -->
+    <div class="ci-q" id="ciq11">
+      <div class="ci-q-head"><span class="ci-q-num">11</span><span class="ci-q-tag">WH Question</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,11)"><span class="ci-lbl">A</span>What time do you get up?</button>
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,11)"><span class="ci-lbl">B</span>What time you get up?</button>
+      </div>
+      <div class="ci-sol" id="sol11"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ What time <b>do</b> you get up?</div><div class="ci-sol-exp">السؤال يحتاج do/does: WH + do/does + الفاعل + الفعل؟</div></div></div>
+    </div>
+
+    <!-- Q12 MCQ -->
+    <div class="ci-q" id="ciq12">
+      <div class="ci-q-head"><span class="ci-q-num">12</span><span class="ci-q-tag">He/She/It + es</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,12)"><span class="ci-lbl">A</span>He go to school by bus.</button>
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,12)"><span class="ci-lbl">B</span>He goes to school by bus.</button>
+      </div>
+      <div class="ci-sol" id="sol12"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ He <b>goes</b> to school by bus.</div><div class="ci-sol-exp">he → go + es = goes · أفعال تنتهي بـ o/ch/sh/x/z تأخذ es</div></div></div>
+    </div>
+
+    <div class="ci-brk" id="cibrk2">
+      <div class="ci-brk-emoji">✏️</div>
+      <div class="ci-brk-title">Spelling — قواعد إضافة s/es/ies</div>
+      <div class="ci-brk-cols">
+        <div class="ci-brk-col"><div class="ci-brk-col-title">القاعدة</div><div class="ci-brk-text">معظم الأفعال → أضف <b>s</b><br>play → play<b>s</b><br><br>ينتهي بـ o/ch/sh/x/z → أضف <b>es</b><br>go → go<b>es</b> · watch → watch<b>es</b><br><br>ينتهي بـ y بعد ساكن → <b>ies</b><br>study → stud<b>ies</b><br><br>have → <b>has</b> (شاذ!)</div></div>
+        <div class="ci-brk-col"><div class="ci-brk-col-title">أمثلة</div><div class="ci-brk-text">work → work<b>s</b> ✅<br>go → go<b>es</b> ✅<br>study → stud<b>ies</b> ✅<br>watch → watch<b>es</b> ✅<br>have → <b>has</b> ✅<br><br>❌ gos · studys · watchs</div></div>
+      </div>
+      <div class="ci-brk-ar">احفظ الحالات الخاصة: go→goes، study→studies، have→has</div>
+    </div>
+
+    <!-- Q13 FIB -->
+    <div class="ci-q ci-fib-q" id="ciq13">
+      <div class="ci-q-head"><span class="ci-q-num">13</span><span class="ci-q-tag">Spelling — ch→ches</span><span class="ci-type-badge ci-type-fib">أملأ الفراغ</span></div>
+      <div class="ci-fib-sent">He ___ TV every night. <b>(watch)</b></div>
+      <div class="ci-fib-row">
+        <input class="ci-fib-input" id="fib13" placeholder="اكتب الفعل..." autocomplete="off" spellcheck="false">
+        <button class="ci-fib-check" onclick="ciFibCheck(13,['watches'])">تحقق ✓</button>
+      </div>
+      <div class="ci-hint">💡 تلميح: watch ينتهي بـ ch → أضف es</div>
+      <div class="ci-sol" id="sol13"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ He <b>watches</b> TV every night.</div><div class="ci-sol-exp">watch ينتهي بـ ch → watch<b>es</b> · watchs = خطأ</div></div></div>
+    </div>
+
+    <!-- Q14 MCQ -->
+    <div class="ci-q" id="ciq14">
+      <div class="ci-q-head"><span class="ci-q-num">14</span><span class="ci-q-tag">Never — double negative</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,14)"><span class="ci-lbl">A</span>I never eat fast food.</button>
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,14)"><span class="ci-lbl">B</span>I don't never eat fast food.</button>
+      </div>
+      <div class="ci-sol" id="sol14"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ I <b>never</b> eat fast food.</div><div class="ci-sol-exp">never بحد ذاتها نفي — لا نجمعها مع don't: "don't never" = نفيان = خطأ</div></div></div>
+    </div>
+
+    <!-- Q15 MCQ -->
+    <div class="ci-q" id="ciq15">
+      <div class="ci-q-head"><span class="ci-q-num">15</span><span class="ci-q-tag">do / does</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,15)"><span class="ci-lbl">A</span>Do they live here?</button>
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,15)"><span class="ci-lbl">B</span>Does they live here?</button>
+      </div>
+      <div class="ci-sol" id="sol15"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ <b>Do</b> they live here?</div><div class="ci-sol-exp">they → do · does مع he/she/it فقط · Does they = خطأ</div></div></div>
+    </div>
+
+    <!-- Q16 MCQ -->
+    <div class="ci-q" id="ciq16">
+      <div class="ci-q-head"><span class="ci-q-num">16</span><span class="ci-q-tag">Spelling — ch→ches</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,16)"><span class="ci-lbl">A</span>He watchs TV every night.</button>
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,16)"><span class="ci-lbl">B</span>He watches TV every night.</button>
+      </div>
+      <div class="ci-sol" id="sol16"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ He <b>watches</b> TV every night.</div><div class="ci-sol-exp">watch → watch<b>es</b> لأنه ينتهي بـ ch · watchs = خطأ إملائي</div></div></div>
+    </div>
+
+    <!-- Q17 MCQ -->
+    <div class="ci-q" id="ciq17">
+      <div class="ci-q-head"><span class="ci-q-num">17</span><span class="ci-q-tag">Adverb + usually</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,17)"><span class="ci-lbl">A</span>She usual drink coffee.</button>
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,17)"><span class="ci-lbl">B</span>She usually drinks coffee.</button>
+      </div>
+      <div class="ci-sol" id="sol17"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ She <b>usually drinks</b> coffee.</div><div class="ci-sol-exp">usual = صفة · usually = ظرف تكرار. she → drinks (مع s)</div></div></div>
+    </div>
+
+    <!-- Q18 MCQ -->
+    <div class="ci-q" id="ciq18">
+      <div class="ci-q-head"><span class="ci-q-num">18</span><span class="ci-q-tag">have → has</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,18)"><span class="ci-lbl">A</span>My sister have a car.</button>
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,18)"><span class="ci-lbl">B</span>My sister has a car.</button>
+      </div>
+      <div class="ci-sol" id="sol18"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ My sister <b>has</b> a car.</div><div class="ci-sol-exp">have شاذ: he/she/it → has (وليس haves!) · I/you/we/they → have</div></div></div>
+    </div>
+
+    <div class="ci-brk" id="cibrk3">
+      <div class="ci-brk-emoji">🎯</div>
+      <div class="ci-brk-title">Frequency Adverbs — ظروف التكرار</div>
+      <div class="ci-brk-cols">
+        <div class="ci-brk-col"><div class="ci-brk-col-title">موقعها في الجملة</div><div class="ci-brk-text">قبل الفعل الرئيسي:<br>I <b>always</b> eat breakfast. ✅<br>She <b>never</b> drinks tea. ✅<br><br>بعد am/is/are:<br>I <b>am always</b> tired. ✅<br>He <b>is usually</b> late. ✅</div></div>
+        <div class="ci-brk-col"><div class="ci-brk-col-title">الترتيب</div><div class="ci-brk-text">100% always<br>90% usually<br>70% often<br>50% sometimes<br>10% rarely<br>0% never<br><br>❌ لا تستخدم never مع don't</div></div>
+      </div>
+      <div class="ci-brk-ar">آخر 7 أسئلة — ركّز على الإجابات القصيرة والإملاء!</div>
+    </div>
+
+    <!-- Q19 FIB -->
+    <div class="ci-q ci-fib-q" id="ciq19">
+      <div class="ci-q-head"><span class="ci-q-num">19</span><span class="ci-q-tag">does + bare verb</span><span class="ci-type-badge ci-type-fib">أملأ الفراغ</span></div>
+      <div class="ci-fib-sent">Does she ___ Arabic? <b>(speak)</b></div>
+      <div class="ci-fib-row">
+        <input class="ci-fib-input" id="fib19" placeholder="اكتب الفعل..." autocomplete="off" spellcheck="false">
+        <button class="ci-fib-check" onclick="ciFibCheck(19,['speak'])">تحقق ✓</button>
+      </div>
+      <div class="ci-hint">💡 تلميح: بعد does الفعل يرجع للمصدر (بدون s)</div>
+      <div class="ci-sol" id="sol19"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ Does she <b>speak</b> Arabic?</div><div class="ci-sol-exp">does + فعل مصدري (بدون s): Does she speak? وليس Does she speaks?</div></div></div>
+    </div>
+
+    <!-- Q20 MCQ -->
+    <div class="ci-q" id="ciq20">
+      <div class="ci-q-head"><span class="ci-q-num">20</span><span class="ci-q-tag">Short Answer</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-q-prompt">— Does she speak English?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,20)"><span class="ci-lbl">A</span>Yes, she does.</button>
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,20)"><span class="ci-lbl">B</span>Yes, she do.</button>
+      </div>
+      <div class="ci-sol" id="sol20"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ Yes, she <b>does</b>.</div><div class="ci-sol-exp">السؤال بـ does → الجواب بـ does: Yes, she does. / No, she doesn't.</div></div></div>
+    </div>
+
+    <!-- Q21 MCQ -->
+    <div class="ci-q" id="ciq21">
+      <div class="ci-q-head"><span class="ci-q-num">21</span><span class="ci-q-tag">Spelling — go→goes</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,21)"><span class="ci-lbl">A</span>He gos to bed at 10.</button>
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,21)"><span class="ci-lbl">B</span>He goes to bed at 10.</button>
+      </div>
+      <div class="ci-sol" id="sol21"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ He <b>goes</b> to bed at 10.</div><div class="ci-sol-exp">go → go<b>es</b> · "gos" غير موجودة في الإنجليزية</div></div></div>
+    </div>
+
+    <!-- Q22 MCQ -->
+    <div class="ci-q" id="ciq22">
+      <div class="ci-q-head"><span class="ci-q-num">22</span><span class="ci-q-tag">Never</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,22)"><span class="ci-lbl">A</span>They never work on Sundays.</button>
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,22)"><span class="ci-lbl">B</span>They never works on Sundays.</button>
+      </div>
+      <div class="ci-sol" id="sol22"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ They <b>never work</b> on Sundays.</div><div class="ci-sol-exp">they → work (بدون s) · never لا تغير صيغة الفعل</div></div></div>
+    </div>
+
+    <!-- Q23 FIB -->
+    <div class="ci-q ci-fib-q" id="ciq23">
+      <div class="ci-q-head"><span class="ci-q-num">23</span><span class="ci-q-tag">do / does — Question</span><span class="ci-type-badge ci-type-fib">أملأ الفراغ</span></div>
+      <div class="ci-fib-sent">___ you like tea? No, I don't.</div>
+      <div class="ci-fib-row">
+        <input class="ci-fib-input" id="fib23" placeholder="كلمة واحدة..." autocomplete="off" spellcheck="false">
+        <button class="ci-fib-check" onclick="ciFibCheck(23,['do','Do'])">تحقق ✓</button>
+      </div>
+      <div class="ci-hint">💡 تلميح: السؤال مع you = Do أو Does؟</div>
+      <div class="ci-sol" id="sol23"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ <b>Do</b> you like tea?</div><div class="ci-sol-exp">you → Do · Does مع he/she/it فقط · الجواب: No, I don't. ← يؤكد أن السؤال بـ do</div></div></div>
+    </div>
+
+    <!-- Q24 MCQ -->
+    <div class="ci-q" id="ciq24">
+      <div class="ci-q-head"><span class="ci-q-num">24</span><span class="ci-q-tag">Short Answer</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-q-prompt">— Do you like tea?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,24)"><span class="ci-lbl">A</span>No, I don't.</button>
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,24)"><span class="ci-lbl">B</span>No, I don't like.</button>
+      </div>
+      <div class="ci-sol" id="sol24"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ No, I <b>don't</b>.</div><div class="ci-sol-exp">الإجابة القصيرة = No + I/you/they + don't. لا نكرر الفعل بعدها</div></div></div>
+    </div>
+
+    <!-- Q25 MCQ -->
+    <div class="ci-q" id="ciq25">
+      <div class="ci-q-head"><span class="ci-q-num">25</span><span class="ci-q-tag">WH Question</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,25)"><span class="ci-lbl">A</span>What does she do?</button>
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,25)"><span class="ci-lbl">B</span>What she does?</button>
+      </div>
+      <div class="ci-sol" id="sol25"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ What <b>does</b> she <b>do</b>?</div><div class="ci-sol-exp">ترتيب WH: What + does + she + do? · الفعل الرئيسي يرجع مصدري بعد does</div></div></div>
+    </div>
+
+    <div class="ci-score" id="ciScore">
+      <div class="ci-score-emoji" id="ciScoreEmoji">🎉</div>
+      <div class="ci-score-num" id="ciScoreNum">0</div>
+      <div class="ci-score-of">/ 25</div>
+      <div class="ci-score-bar-wrap"><div class="ci-score-bar-fill" id="ciScoreBar"></div></div>
+      <div class="ci-score-msg" id="ciScoreMsg">Well done!</div>
+      <div class="ci-score-ar" id="ciScoreAr">أنهيت الاختبار!</div>
+      <button class="ci-reset" onclick="ciReset()">🔄 حاول مرة أخرى</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== EVERYDAY ENGLISH TAB ===== -->
+<div id="tab-everyday" class="tab-panel">
+
+  <div class="dlg-card">
+    <div class="dlg-header">
+      <div class="dlg-meta">
+        <div class="dlg-num">Dialogue 1</div>
+        <div class="dlg-title">Morning Routines — روتين الصباح</div>
+        <div class="dlg-ctx">Two friends, Adam and Sarah, talking about their mornings</div>
+      </div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Adam</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Sarah, what time do you usually <b>get up</b>?</div>
+          <div class="chat-ar">سارة، في أي وقت تستيقظين عادةً؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Sarah, what time do you usually get up?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Sarah</div>
+        <div class="chat-bubble">
+          <div class="chat-en">I <b>get up</b> at 6:30. I <b>have</b> a really early start.</div>
+          <div class="chat-ar">أستيقظ في الساعة 6:30. لديّ بداية مبكرة جداً.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="I get up at 6:30. I have a really early start." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Adam</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Wow, that's early! Do you <b>eat</b> breakfast?</div>
+          <div class="chat-ar">واو! هذا مبكر جداً! هل تأكلين الفطور؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Wow, that's early! Do you eat breakfast?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Sarah</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Yes, always! I never <b>skip</b> breakfast. I usually <b>have</b> eggs and coffee. What about you?</div>
+          <div class="chat-ar">نعم، دائماً! لا أتخطى الفطور أبداً. عادةً آكل بيضاً وقهوة. وأنت؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Yes, always! I never skip breakfast. I usually have eggs and coffee. What about you?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Adam</div>
+        <div class="chat-bubble">
+          <div class="chat-en">I <b>don't eat</b> breakfast. I just <b>drink</b> coffee in the car.</div>
+          <div class="chat-ar">أنا لا آكل فطوراً. فقط أشرب قهوة في السيارة.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="I don't eat breakfast. I just drink coffee in the car." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Sarah</div>
+        <div class="chat-bubble">
+          <div class="chat-en">That's not good! Your body <b>needs</b> food in the morning. No wonder you always <b>feel</b> tired!</div>
+          <div class="chat-ar">هذا ليس جيداً! جسمك يحتاج طعاماً في الصباح. لا غرابة أنك دائماً تشعر بالتعب!</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="That's not good! Your body needs food in the morning. No wonder you always feel tired!" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dlg-card">
+    <div class="dlg-header">
+      <div class="dlg-meta">
+        <div class="dlg-num">Dialogue 2</div>
+        <div class="dlg-title">What Do You Do? — ماذا تعمل؟</div>
+        <div class="dlg-ctx">David and Fatima meet at a party for the first time</div>
+      </div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-name-tag">David</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Hi! I'm David. What do you <b>do</b>, Fatima?</div>
+          <div class="chat-ar">مرحباً! أنا ديفيد. ماذا تعملين يا فاطمة؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Hi! I'm David. What do you do, Fatima?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Fatima</div>
+        <div class="chat-bubble">
+          <div class="chat-en">I'm a nurse. I <b>work</b> at City Hospital. And you?</div>
+          <div class="chat-ar">أنا ممرضة. أعمل في مستشفى المدينة. وأنت؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="I'm a nurse. I work at City Hospital. And you?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">David</div>
+        <div class="chat-bubble">
+          <div class="chat-en">I <b>work</b> in IT. I <b>design</b> websites for companies. Do you <b>like</b> your job?</div>
+          <div class="chat-ar">أعمل في تقنية المعلومات. أصمم مواقع إلكترونية للشركات. هل تحبين عملك؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="I work in IT. I design websites for companies. Do you like your job?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Fatima</div>
+        <div class="chat-bubble">
+          <div class="chat-en">I love it! It's busy but I <b>enjoy</b> helping people. Do you <b>work</b> from home?</div>
+          <div class="chat-ar">أحبه كثيراً! إنه مشغول لكنني أستمتع بمساعدة الناس. هل تعمل من المنزل؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="I love it! It's busy but I enjoy helping people. Do you work from home?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">David</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Sometimes. I usually <b>work</b> in the office but I <b>work</b> from home on Fridays.</div>
+          <div class="chat-ar">أحياناً. عادةً أعمل في المكتب لكنني أعمل من المنزل أيام الجمعة.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Sometimes. I usually work in the office but I work from home on Fridays." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Fatima</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Nice! My husband <b>works</b> from home too. He <b>loves</b> it — he <b>doesn't</b> miss commuting at all!</div>
+          <div class="chat-ar">رائع! زوجي يعمل من المنزل أيضاً. يحبه كثيراً — لا يشتاق للتنقل أبداً!</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Nice! My husband works from home too. He loves it — he doesn't miss commuting at all!" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dlg-card">
+    <div class="dlg-header">
+      <div class="dlg-meta">
+        <div class="dlg-num">Dialogue 3</div>
+        <div class="dlg-title">Hobbies and Sports — الهوايات والرياضة</div>
+        <div class="dlg-ctx">Mark and James talking about their free time</div>
+      </div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Mark</div>
+        <div class="chat-bubble">
+          <div class="chat-en">What do you <b>do</b> in your free time?</div>
+          <div class="chat-ar">ماذا تفعل في وقت الفراغ؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="What do you do in your free time?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">James</div>
+        <div class="chat-bubble">
+          <div class="chat-en">I <b>play</b> tennis. I <b>go</b> to the club every Saturday.</div>
+          <div class="chat-ar">ألعب التنس. أذهب إلى النادي كل يوم سبت.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="I play tennis. I go to the club every Saturday." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Mark</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Does your wife <b>play</b> tennis too?</div>
+          <div class="chat-ar">هل تلعب زوجتك التنس أيضاً؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Does your wife play tennis too?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">James</div>
+        <div class="chat-bubble">
+          <div class="chat-en">No, she <b>doesn't</b>. She <b>prefers</b> swimming. She <b>swims</b> twice a week.</div>
+          <div class="chat-ar">لا، لا تلعب. تفضل السباحة. تسبح مرتين في الأسبوع.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="No, she doesn't. She prefers swimming. She swims twice a week." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Mark</div>
+        <div class="chat-bubble">
+          <div class="chat-en">I <b>don't play</b> any sports. I just <b>watch</b> football on TV!</div>
+          <div class="chat-ar">أنا لا ألعب أي رياضة. فقط أشاهد كرة القدم على التلفاز!</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="I don't play any sports. I just watch football on TV!" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">James</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Ha! You should try tennis. It <b>isn't</b> difficult. Does the club <b>offer</b> lessons?</div>
+          <div class="chat-ar">ها! يجب أن تجرب التنس. ليس صعباً. هل يقدم النادي دروساً؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Ha! You should try tennis. It isn't difficult. Does the club offer lessons?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Mark</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Yes, they <b>have</b> lessons every Monday evening. <b>Come</b> with me next week!</div>
+          <div class="chat-ar">نعم، لديهم دروس كل مساء اثنين. تعال معي الأسبوع القادم!</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Yes, they have lessons every Monday evening. Come with me next week!" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dlg-card">
+    <div class="dlg-header">
+      <div class="dlg-meta">
+        <div class="dlg-num">Dialogue 4</div>
+        <div class="dlg-title">At the Doctor's — عند الطبيب</div>
+        <div class="dlg-ctx">Dr. Harris asks a patient about his daily habits</div>
+      </div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Dr. Harris</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Good morning. What do you usually <b>eat</b> for breakfast?</div>
+          <div class="chat-ar">صباح الخير. ماذا تأكل عادةً على الفطور؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Good morning. What do you usually eat for breakfast?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Patient</div>
+        <div class="chat-bubble">
+          <div class="chat-en">I <b>don't eat</b> breakfast. I just <b>drink</b> coffee.</div>
+          <div class="chat-ar">لا آكل فطوراً. فقط أشرب قهوة.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="I don't eat breakfast. I just drink coffee." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Dr. Harris</div>
+        <div class="chat-bubble">
+          <div class="chat-en">And do you <b>exercise</b>?</div>
+          <div class="chat-ar">وهل تمارس الرياضة؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="And do you exercise?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Patient</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Not really. I <b>walk</b> to work but I <b>don't go</b> to the gym.</div>
+          <div class="chat-ar">ليس كثيراً. أمشي للعمل لكنني لا أذهب للصالة.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Not really. I walk to work but I don't go to the gym." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Dr. Harris</div>
+        <div class="chat-bubble">
+          <div class="chat-en">How many hours do you <b>sleep</b>?</div>
+          <div class="chat-ar">كم ساعة تنام؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="How many hours do you sleep?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Patient</div>
+        <div class="chat-bubble">
+          <div class="chat-en">I usually <b>sleep</b> five or six hours. I <b>go</b> to bed very late.</div>
+          <div class="chat-ar">عادةً أنام خمس أو ست ساعات. أذهب للنوم متأخراً جداً.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="I usually sleep five or six hours. I go to bed very late." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Dr. Harris</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Your body <b>needs</b> better food, more sleep, and regular exercise. The tiredness <b>comes</b> from these habits.</div>
+          <div class="chat-ar">جسمك يحتاج طعاماً أفضل ونوماً أكثر ورياضة منتظمة. التعب يأتي من هذه العادات.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Your body needs better food, more sleep, and regular exercise. The tiredness comes from these habits." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dlg-card">
+    <div class="dlg-header">
+      <div class="dlg-meta">
+        <div class="dlg-num">Dialogue 5</div>
+        <div class="dlg-title">Weekend Plans — خطط عطلة الأسبوع</div>
+        <div class="dlg-ctx">Tom and Ali are colleagues talking on Friday afternoon</div>
+      </div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Tom</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Thank goodness it's Friday! What do you usually <b>do</b> at weekends?</div>
+          <div class="chat-ar">الحمد لله أنه جمعة! ماذا تفعل عادةً في عطلة الأسبوع؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Thank goodness it's Friday! What do you usually do at weekends?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Ali</div>
+        <div class="chat-bubble">
+          <div class="chat-en">On Saturdays I <b>go</b> to the market with my wife. She <b>loves</b> cooking so she always <b>buys</b> fresh vegetables.</div>
+          <div class="chat-ar">أذهب يوم السبت للسوق مع زوجتي. تحب الطبخ لذلك دائماً تشتري خضاراً طازجة.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="On Saturdays I go to the market with my wife. She loves cooking so she always buys fresh vegetables." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Tom</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Nice! Does she <b>cook</b> every day?</div>
+          <div class="chat-ar">رائع! هل تطبخ كل يوم؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Nice! Does she cook every day?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Ali</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Almost! She <b>doesn't cook</b> on Sundays — we usually <b>eat</b> out. What about you?</div>
+          <div class="chat-ar">تقريباً! لا تطبخ يوم الأحد — عادةً نأكل في مطعم. وأنت؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Almost! She doesn't cook on Sundays — we usually eat out. What about you?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Tom</div>
+        <div class="chat-bubble">
+          <div class="chat-en">I <b>spend</b> Sundays with my kids. My son <b>plays</b> football and my daughter <b>does</b> gymnastics.</div>
+          <div class="chat-ar">أقضي يوم الأحد مع أطفالي. ابني يلعب كرة القدم وابنتي تمارس الجمباز.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="I spend Sundays with my kids. My son plays football and my daughter does gymnastics." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Ali</div>
+        <div class="chat-bubble">
+          <div class="chat-en">How old are they? My kids <b>don't do</b> any sports yet — they just <b>play</b> video games!</div>
+          <div class="chat-ar">كم عمرهم؟ أطفالي لا يمارسون أي رياضة بعد — فقط يلعبون الألعاب الإلكترونية!</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="How old are they? My kids don't do any sports yet — they just play video games!" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end everyday tab -->
+
+<!-- ===== READING TAB ===== -->
+<div id="tab-reading" class="tab-panel">
+  <div class="read-tts-bar">
+    <span class="read-label">📚 Alex's Daily Routine — روتين أليكس اليومي</span>
+    <button class="tts-btn" onclick="ttsPassage()">🔊 Listen to the text</button>
+    <button class="tts-btn tts-stop" onclick="ttsStop()">⏹ Stop</button>
+  </div>
+
+  <div class="read-pass">
+    <p>Alex <b>is</b> a software engineer at a tech company in London. He <b>works</b> from Monday to Friday, nine to six. Every morning, he <b>gets</b> up at seven o'clock. He <b>doesn't eat</b> a big breakfast — he usually <b>has</b> a bowl of cereal and a cup of coffee. He <b>leaves</b> the house at eight and <b>takes</b> the tube to work. The journey <b>takes</b> about 35 minutes.</p>
+    <p>Alex <b>doesn't drive</b> to work because parking in London <b>is</b> very expensive. At lunchtime, he sometimes <b>eats</b> at a restaurant near his office, but he usually <b>brings</b> food from home — it's cheaper and healthier.</p>
+    <p>After work, Alex <b>goes</b> to the gym three times a week. He <b>loves</b> running — he <b>runs</b> 5 km every session. On the other days, he <b>walks</b> in the park near his flat and <b>listens</b> to podcasts.</p>
+    <p>At home, Alex <b>cooks</b> dinner for himself and his girlfriend, Emma. Emma <b>doesn't like</b> cooking, so Alex <b>does</b> it every day. He usually <b>makes</b> pasta or salad — simple but healthy. They <b>eat</b> dinner at about 8 and then <b>watch</b> a TV series or <b>read</b>.</p>
+    <p>Alex and Emma <b>rarely go</b> to the cinema on weekdays, but they <b>often go</b> on Saturday evenings. On Sundays, Alex <b>plays</b> football with his friends in the local park for two hours. He <b>loves</b> his life in London, but sometimes <b>misses</b> his family in Scotland. He <b>visits</b> them once or twice a year.</p>
+  </div>
+
+  <div class="comp-section-title">📝 Comprehension Questions — أسئلة الفهم</div>
+
+  <div class="read-q">
+    <div class="read-q-text">1. What does Alex do for a living?</div>
+    <div class="read-opts">
+      <button class="read-opt" onclick="pickComp(this)">A. He's a doctor.</button>
+      <button class="read-opt" data-correct="1" onclick="pickComp(this)">B. He's a software engineer.</button>
+      <button class="read-opt" onclick="pickComp(this)">C. He's a teacher.</button>
+    </div>
+  </div>
+
+  <div class="read-q">
+    <div class="read-q-text">2. How does Alex get to work?</div>
+    <div class="read-opts">
+      <button class="read-opt" onclick="pickComp(this)">A. He drives.</button>
+      <button class="read-opt" onclick="pickComp(this)">B. He walks.</button>
+      <button class="read-opt" data-correct="1" onclick="pickComp(this)">C. He takes the tube.</button>
+    </div>
+  </div>
+
+  <div class="read-q">
+    <div class="read-q-text">3. How often does Alex go to the gym?</div>
+    <div class="read-opts">
+      <button class="read-opt" onclick="pickComp(this)">A. Every day.</button>
+      <button class="read-opt" data-correct="1" onclick="pickComp(this)">B. Three times a week.</button>
+      <button class="read-opt" onclick="pickComp(this)">C. Once a week.</button>
+    </div>
+  </div>
+
+  <div class="read-q">
+    <div class="read-q-text">4. Why doesn't Alex drive to work?</div>
+    <div class="read-opts">
+      <button class="read-opt" onclick="pickComp(this)">A. He doesn't have a car.</button>
+      <button class="read-opt" data-correct="1" onclick="pickComp(this)">B. Parking is very expensive in London.</button>
+      <button class="read-opt" onclick="pickComp(this)">C. He prefers walking.</button>
+    </div>
+  </div>
+
+  <div class="read-q">
+    <div class="read-q-text">5. What do Alex and Emma often do on Saturday evenings?</div>
+    <div class="read-opts">
+      <button class="read-opt" onclick="pickComp(this)">A. They play football.</button>
+      <button class="read-opt" onclick="pickComp(this)">B. They cook together.</button>
+      <button class="read-opt" data-correct="1" onclick="pickComp(this)">C. They go to the cinema.</button>
+    </div>
+  </div>
+
+</div><!-- end reading tab -->
+
+<footer>
+  <p>MOHAMMED ELHUSEYIN — English Learning Series &nbsp;·&nbsp; Unit 2: Present Simple</p>
+</footer>
+
+<script>
+// Tab switching
+function showTab(id,btn){
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.main-tab').forEach(b=>b.classList.remove('active'));
+  document.getElementById('tab-'+id).classList.add('active');
+  btn.classList.add('active');
+}
+function showSub(id,btn){
+  const card=btn.closest('.card');
+  card.querySelectorAll('.sub-panel').forEach(p=>p.classList.remove('active'));
+  card.querySelectorAll('.sub-tab').forEach(b=>b.classList.remove('active'));
+  document.getElementById('sub-'+id).classList.add('active');
+  btn.classList.add('active');
+}
+function jumpTab(id){
+  const btn=document.querySelector(`.main-tab[onclick*="'${id}'"]`);
+  if(btn){showTab(id,btn);document.querySelector('.main-tabs').scrollIntoView({behavior:'smooth',block:'nearest'});}
+}
+
+// TTS
+function ttsRead(text,rate=0.85){
+  if(!window.speechSynthesis)return;
+  window.speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(text);
+  u.lang='en-GB';u.rate=rate;
+  window.speechSynthesis.speak(u);
+}
+function ttsStop(){if(window.speechSynthesis)window.speechSynthesis.cancel();}
+function ttsGrammar(type){
+  const t={
+    pos:"Present Simple — positive. I work. You work. We work. They work. He works. She works. It works. Remember: for he, she, and it, always add s to the verb.",
+    neg:"Present Simple — negative. I don't work. You don't work. He doesn't work. She doesn't work. Use DON'T for I, you, we, they. Use DOESN'T for he, she, it. After don't or doesn't, always use the base form — never add s.",
+    qst:"Present Simple — questions. Do you work here? Does he work here? Does she speak English? Use DO for I, you, we, they. Use DOES for he, she, it. After do or does, use the base form of the verb. Short answers: Yes I do. No I don't. Yes she does. No she doesn't.",
+    frq:"Frequency adverbs. Always — one hundred percent. Usually — eighty percent. Often — sixty percent. Sometimes — forty percent. Rarely — twenty percent. Never — zero percent. These words go before the main verb, but after the verb to be. For example: I always eat breakfast. I am always tired."
+  };
+  ttsRead(t[type]);
+}
+function ttsDlg(id){
+  const t={
+    d1:"Sarah, what time do you usually get up? I get up at six thirty. I have a really early start. Wow, that's early! Do you eat breakfast? Yes, always! I never skip breakfast. I usually have eggs and coffee. What about you? I don't eat breakfast. I just drink coffee in the car. That's not good! Your body needs food in the morning. No wonder you always feel tired!",
+    d2:"Hi! I'm David. What do you do, Fatima? I'm a nurse. I work at City Hospital. And you? I work in I T. I design websites for companies. Do you like your job? I love it! It's busy but I enjoy helping people. Do you work from home? Sometimes. I usually work in the office but I work from home on Fridays. Nice! My husband works from home too. He loves it — he doesn't miss commuting at all!",
+    d3:"What do you do in your free time? I play tennis. I go to the club every Saturday. Does your wife play tennis too? No, she doesn't. She prefers swimming. She swims twice a week. I don't play any sports. I just watch football on TV! Ha! You should try tennis. It isn't difficult. Does the club offer lessons? Yes, they have lessons every Monday evening. Come with me next week!",
+    d4:"Good morning. What do you usually eat for breakfast? I don't eat breakfast. I just drink coffee. And do you exercise? Not really. I walk to work but I don't go to the gym. How many hours do you sleep? I usually sleep five or six hours. I go to bed very late. Your body needs better food, more sleep, and regular exercise. The tiredness comes from these habits.",
+    d5:"Thank goodness it's Friday! What do you usually do at weekends? On Saturdays I go to the market with my wife. She loves cooking so she always buys fresh vegetables. Nice! Does she cook every day? Almost! She doesn't cook on Sundays — we usually eat out. What about you? I spend Sundays with my kids. My son plays football and my daughter does gymnastics. How old are they? My kids don't do any sports yet — they just play video games!"
+  };
+  ttsRead(t[id]);
+}
+const passageText="Alex is a software engineer at a tech company in London. He works from Monday to Friday. Every morning, he gets up at seven o'clock. He doesn't eat a big breakfast. He usually has a bowl of cereal and a cup of coffee. He leaves the house at eight and takes the tube to work. The journey takes about 35 minutes. Alex doesn't drive to work because parking in London is very expensive. At lunchtime, he sometimes eats at a restaurant near his office, but he usually brings food from home. After work, Alex goes to the gym three times a week. He loves running. He runs five kilometres every session. On the other days, he walks in the park near his flat and listens to podcasts. At home, Alex cooks dinner for himself and his girlfriend Emma. Emma doesn't like cooking, so Alex does it every day. He usually makes pasta or salad. They eat dinner at about eight and then watch a TV series or read. Alex and Emma rarely go to the cinema on weekdays, but they often go on Saturday evenings. On Sundays, Alex plays football with his friends in the local park for two hours. He loves his life in London, but sometimes misses his family in Scotland. He visits them once or twice a year.";
+function ttsPassage(){ttsRead(passageText,0.8);}
+
+// Check It Quiz
+const breaks={5:'brk1',10:'brk2',15:'brk3'};
+let score=0,answered=0;
+const total=20;
+// ══ CHECK IT ══
+const ci2Breaks={6:'cibrk1',12:'cibrk2',18:'cibrk3'};
+let ci2Score=0,ci2Answered=0;
+const ci2Total=25;
+function ciShowSol(num,ok){
+  const sol=document.getElementById('sol'+num);
+  if(!sol)return;
+  sol.classList.add(ok?'sol-correct':'sol-wrong');
+  const head=sol.querySelector('.ci-sol-head');
+  if(head)head.textContent=ok?'✅ إجابة صحيحة':'❌ إجابة خاطئة — الحل الصحيح:';
+  sol.style.display='block';
+  setTimeout(()=>sol.scrollIntoView({behavior:'smooth',block:'nearest'}),150);
+}
+function ci2UpdateProgress(num){
+  document.getElementById('ciProgressFill').style.width=(ci2Answered/ci2Total*100)+'%';
+  localStorage.setItem('up2',Math.round(ci2Answered/ci2Total*100));
+  document.getElementById('ciProgressTxt').textContent=ci2Answered+' / '+ci2Total+' answered';
+  document.getElementById('ciScoreLive').textContent='Score: '+ci2Score;
+  if(ci2Breaks[num]){const b=document.getElementById(ci2Breaks[num]);b.style.display='block';setTimeout(()=>b.scrollIntoView({behavior:'smooth',block:'nearest'}),100);}
+  if(ci2Answered===ci2Total){
+    const pct=Math.round(ci2Score/ci2Total*100);
+    const s=document.getElementById('ciScore');s.style.display='block';
+    document.getElementById('ciScoreNum').textContent=ci2Score;
+    document.getElementById('ciScoreEmoji').textContent=ci2Score>=23?'🌟':ci2Score>=20?'🎉':ci2Score>=15?'👍':'💪';
+    document.getElementById('ciScoreMsg').textContent=ci2Score>=23?'Excellent!':ci2Score>=20?'Very good!':ci2Score>=15?'Good — keep practising!':'Review and try again!';
+    document.getElementById('ciScoreAr').textContent=ci2Score>=23?'ممتاز! أنت مستعد للوحدة القادمة!':ci2Score>=20?'جيد جداً! راجع الأخطاء.':ci2Score>=15?'جيد! راجع قواعد do/does وحاول مرة أخرى.':'راجع شرح Present Simple بعناية وكرّر الاختبار!';
+    setTimeout(()=>{document.getElementById('ciScoreBar').style.width=pct+'%';},200);
+    setTimeout(()=>s.scrollIntoView({behavior:'smooth',block:'nearest'}),300);
+  }
+}
+function ciPick(btn,num){
+  const q=btn.closest('.ci-q');
+  if(q.classList.contains('answered'))return;
+  const ok=btn.dataset.correct==='1';
+  q.classList.add('answered');
+  q.querySelectorAll('.ci-btn').forEach(b=>b.classList.add('done'));
+  btn.classList.add(ok?'correct':'wrong');
+  if(!ok)q.querySelectorAll('.ci-btn[data-correct="1"]').forEach(b=>b.classList.add('correct'));
+  if(ok)ci2Score++;
+  ci2Answered++;
+  playSound(ok?'correct':'wrong');
+  ciShowSol(num,ok);
+  ci2UpdateProgress(num);
+}
+function ciFibCheck(num,answers){
+  const q=document.getElementById('ciq'+num);
+  if(q.classList.contains('answered'))return;
+  const inp=document.getElementById('fib'+num);
+  const val=inp.value.trim().toLowerCase();
+  if(!val)return;
+  const ok=answers.map(a=>a.toLowerCase()).includes(val);
+  q.classList.add('answered');
+  inp.disabled=true;
+  inp.style.borderColor=ok?'var(--green)':'var(--red)';
+  inp.style.background=ok?'rgba(34,197,94,0.08)':'rgba(239,68,68,0.08)';
+  const checkBtn=q.querySelector('.ci-fib-check');
+  if(checkBtn){checkBtn.disabled=true;checkBtn.textContent=ok?'✓ صح':'✗ خطأ';}
+  if(ok)ci2Score++;
+  ci2Answered++;
+  playSound(ok?'correct':'wrong');
+  ciShowSol(num,ok);
+  ci2UpdateProgress(num);
+}
+function ciReset(){
+  document.querySelectorAll('.ci-btn').forEach(b=>b.classList.remove('correct','wrong','done'));
+  document.querySelectorAll('.ci-q').forEach(q=>q.classList.remove('answered'));
+  document.querySelectorAll('.ci-brk').forEach(b=>b.style.display='none');
+  document.querySelectorAll('.ci-sol').forEach(s=>{s.style.display='none';s.className='ci-sol';});
+  document.querySelectorAll('.ci-fib-input').forEach(inp=>{inp.value='';inp.disabled=false;inp.style.borderColor='';inp.style.background='';});
+  document.querySelectorAll('.ci-fib-check').forEach(btn=>{btn.disabled=false;btn.textContent='تحقق ✓';});
+  document.getElementById('ciScore').style.display='none';
+  document.getElementById('ciProgressFill').style.width='0%';
+  document.getElementById('ciProgressTxt').textContent='0 / 25 answered';
+  document.getElementById('ciScoreLive').textContent='Score: 0';
+  document.getElementById('ciScoreBar').style.width='0%';
+  ci2Score=0;ci2Answered=0;
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+// Legacy pick
+function pick(btn,num){
+  const qi=btn.closest('.q-item');
+  if(!qi||qi.querySelector('.done'))return;
+  const ok=btn.dataset.correct==='1';
+  qi.querySelectorAll('.q-btn').forEach(b=>b.classList.add('done'));
+  btn.classList.add(ok?'correct':'wrong');
+  if(!ok)qi.querySelectorAll('.q-btn[data-correct="1"]').forEach(b=>b.classList.add('correct'));
+  playSound(ok?'correct':'wrong');
+}
+function resetQuiz(){}
+
+// Comprehension
+function pickComp(btn){
+  const q=btn.closest('.read-q');
+  if(btn.classList.contains('done'))return;
+  const ok=btn.dataset.correct==='1';
+  q.querySelectorAll('.read-opt').forEach(b=>b.classList.add('done'));
+  btn.classList.add(ok?'correct':'wrong');
+  if(!ok)q.querySelectorAll('.read-opt[data-correct="1"]').forEach(b=>b.classList.add('correct'));
+  playSound(ok?'correct':'wrong');
+}
+
+// Per-button play/pause/stop controls
+let spActiveGroup=null;
+function spPlay(btn,text){
+  if(spActiveGroup){const pp=spActiveGroup.querySelector('.sp-pp');if(pp)pp.textContent='⏸';}
+  spActiveGroup=btn.closest('.sp-group');
+  window.speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(text);
+  u.lang='en-GB';u.rate=0.85;
+  u.onend=u.onerror=()=>{if(spActiveGroup){const pp=spActiveGroup.querySelector('.sp-pp');if(pp)pp.textContent='⏸';}spActiveGroup=null;};
+  window.speechSynthesis.speak(u);
+}
+function spPause(btn){
+  const s=window.speechSynthesis;
+  if(s.paused){s.resume();btn.textContent='⏸';}
+  else if(s.speaking){s.pause();btn.textContent='▶';}
+}
+function spStopBtn(){
+  window.speechSynthesis.cancel();
+  if(spActiveGroup){const pp=spActiveGroup.querySelector('.sp-pp');if(pp)pp.textContent='⏸';spActiveGroup=null;}
+}
+// Auto-wrap every .sp button with pause + stop controls on load
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('button.sp').forEach(btn=>{
+    const m=btn.getAttribute('onclick').match(/ttsRead\('(.+?)'\)/);
+    if(!m)return;
+    btn.setAttribute('onclick',`spPlay(this,'${m[1]}')`);
+    const g=document.createElement('div');
+    g.className='sp-group';
+    btn.parentNode.insertBefore(g,btn);
+    g.appendChild(btn);
+    const pp=document.createElement('button');
+    pp.className='sp-pp';pp.textContent='⏸';
+    pp.addEventListener('click',()=>spPause(pp));
+    g.appendChild(pp);
+    const st=document.createElement('button');
+    st.className='sp-st';st.textContent='⏹';
+    st.addEventListener('click',()=>spStopBtn());
+    g.appendChild(st);
+  });
+});
+
+function rtPick(btn, qId, ok){
+  const q = document.getElementById(qId);
+  if(q.dataset.done) return;
+  q.dataset.done = '1';
+  q.querySelectorAll('.rt-opt').forEach(o => {
+    o.classList.add(o.hasAttribute('data-ok') ? 'rt-ok' : 'rt-no');
+    o.onclick = null;
+  });
+  const ex = q.querySelector('.rt-explain');
+  if(ex) ex.classList.add('show');
+  if(typeof playSound === 'function') playSound(ok ? 'correct' : 'wrong');
+}
+// Sound effects
+function playSound(type){
+  try{
+    const ctx=new(window.AudioContext||window.webkitAudioContext)();
+    const o=ctx.createOscillator(),g=ctx.createGain();
+    o.connect(g);g.connect(ctx.destination);
+    if(type==='correct'){o.frequency.setValueAtTime(523,ctx.currentTime);o.frequency.setValueAtTime(659,ctx.currentTime+0.1);o.frequency.setValueAtTime(784,ctx.currentTime+0.2);}
+    else{o.frequency.setValueAtTime(380,ctx.currentTime);o.frequency.setValueAtTime(280,ctx.currentTime+0.15);}
+    g.gain.setValueAtTime(0.25,ctx.currentTime);
+    g.gain.exponentialRampToValueAtTime(0.001,ctx.currentTime+(type==='correct'?0.5:0.4));
+    o.start(ctx.currentTime);o.stop(ctx.currentTime+(type==='correct'?0.5:0.4));
+  }catch(e){}
+}
+</script>
+</div><!-- /main-content -->
+</div><!-- /layout -->
+<script src="../media/global-player.js"></script>
+<script>
+(function(){
+  for(var i=1;i<=12;i++){
+    var f=document.getElementById('sp'+i);
+    if(f){var v=parseInt(localStorage.getItem('up'+i)||'0',10);f.style.width=v+'%';}
+  }
+})();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+(function(){
+  var map={1: "up_l1", 2: "up_l2", 3: "up_l3", 4: "up_l4", 5: "up_l5", 6: "up1", 7: "up2", 8: "up3", 9: "up4", 10: "up6", 11: "up5", 12: "up_l12", 13: "up7", 14: "up8", 15: "up9", 16: "up10", 17: "up11", 19: "up_l19", 20: "up_l20", 21: "up_l21", 22: "up_l22", 23: "up_l23", 24: "up_l24", 25: "up_l25", 26: "up_l26", 27: "up_l27", 28: "up_l28", 29: "up_l29", 30: "up_l30", 31: "up_l31", 32: "up_l32", 33: "up_l33", 34: "up_l34", 35: "up_l35", 36: "up_l36", 37: "up_l37", 38: "up_l38", 39: "up_l39", 40: "up_l40", 41: "up_l41", 42: "up_l42", 43: "up_l43", 44: "up_l44", 45: "up_l45", 46: "up_l46"};
+  for(var lid in map){
+    var f=document.getElementById('sp'+lid);
+    if(f){var v=parseInt(localStorage.getItem(map[lid])||'0',10);f.style.width=v+'%';}
+  }
+  setTimeout(function(){
+    var a=document.querySelector('.su-item.su-active');
+    if(a){var u=a.closest('.sidebar-units');if(u)u.scrollTop=Math.max(0,a.offsetTop-a.offsetHeight);}
+  },80);
+})();
+</script>
+<script>
+function toggleSidebar(){
+  var sb=document.querySelector('.sidebar');
+  var bd=document.getElementById('sbBackdrop');
+  if(!sb||!bd)return;
+  sb.classList.toggle('sb-open');
+  bd.classList.toggle('sb-open');
+  document.body.style.overflow=sb.classList.contains('sb-open')?'hidden':'';
+}
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.su-item').forEach(function(a){
+    a.addEventListener('click',function(){
+      var sb=document.querySelector('.sidebar');
+      if(sb&&sb.classList.contains('sb-open'))toggleSidebar();
+    });
+  });
+});
+</script>
+
+<script>
+(function(){
+  // Disable right-click
+  document.addEventListener('contextmenu', function(e){ e.preventDefault(); });
+
+  // Disable keyboard shortcuts
+  document.addEventListener('keydown', function(e){
+    // F12
+    if(e.key==='F12'){e.preventDefault();return false;}
+    // Ctrl+U (view source), Ctrl+S (save), Ctrl+A (select all), Ctrl+P (print)
+    if(e.ctrlKey && ['u','U','s','S','a','A','p','P'].indexOf(e.key)!==-1){
+      e.preventDefault();return false;
+    }
+    // Ctrl+Shift+I (DevTools), Ctrl+Shift+J, Ctrl+Shift+C
+    if(e.ctrlKey && e.shiftKey && ['i','I','j','J','c','C','k','K'].indexOf(e.key)!==-1){
+      e.preventDefault();return false;
+    }
+  });
+
+  // Disable text selection via CSS
+  document.documentElement.style.webkitUserSelect='none';
+  document.documentElement.style.userSelect='none';
+
+  // Allow selection inside inputs/textareas only
+  document.addEventListener('mousedown', function(e){
+    var t=e.target.tagName;
+    if(t==='INPUT'||t==='TEXTAREA'){
+      e.target.style.userSelect='text';
+      e.target.style.webkitUserSelect='text';
+    }
+  });
+
+  // Block drag
+  document.addEventListener('dragstart', function(e){ e.preventDefault(); });
+})();
+</script>
+<button class="float-menu-btn" onclick="toggleSidebar()" aria-label="القائمة">
+  <span></span><span></span><span></span>
+</button>
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=FREE"></script>
+<script src="../media/rv.js"></script>
+</body>
+</html>

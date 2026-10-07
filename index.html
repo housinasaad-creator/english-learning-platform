@@ -1,0 +1,720 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MOHAMMED ELHUSEYIN | English Learning Platform</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --primary:#1a3a6e;--primary-dark:#0f2548;
+  --accent:#f4a624;--bg:#0d1b2a;--card:#162030;
+  --card2:#1e2d40;--border:#2d4560;--text:#e8edf5;--muted:#8899b0;
+}
+body{font-family:'Poppins','Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+.ar{font-family:'Cairo','Segoe UI',Arial,sans-serif}
+
+/* LAYOUT */
+.layout{display:flex;min-height:100vh}
+.sidebar{width:30%;max-width:320px;min-width:220px;position:fixed;top:0;left:0;bottom:0;background:var(--primary-dark);border-right:2px solid var(--border);display:flex;flex-direction:column;z-index:100;overflow:hidden}
+.sidebar-header{padding:18px 20px 14px;border-bottom:2px solid var(--accent);flex-shrink:0}
+.sidebar-logo{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+.sidebar-logo-icon{width:34px;height:34px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900;color:#0d1b2a;flex-shrink:0}
+.sidebar-logo-text{font-family:'Cairo',sans-serif;font-size:15px;font-weight:800;color:white}
+.sidebar-logo-sub{font-size:10px;color:var(--muted);font-weight:500;margin-top:-1px}
+.sidebar-label{font-family:'Cairo',sans-serif;font-size:11px;font-weight:700;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-top:12px}
+.sidebar-units{flex:1;overflow-y:auto;padding:10px 12px;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+.sidebar-units::-webkit-scrollbar{width:4px}
+.sidebar-units::-webkit-scrollbar-track{background:transparent}
+.sidebar-units::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+.su-item{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;text-decoration:none;margin-bottom:4px;transition:background .2s,transform .2s;position:relative}
+.su-item:not(.su-locked):hover{background:rgba(244,166,36,0.12);transform:translateX(3px)}
+.su-item.su-locked{opacity:.45;cursor:default;pointer-events:none}
+.su-item.su-active{background:rgba(244,166,36,0.15);border:1px solid rgba(244,166,36,0.3)}
+.su-num{width:28px;height:28px;border-radius:7px;background:rgba(255,255,255,0.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:var(--accent);flex-shrink:0}
+.su-item:not(.su-locked) .su-num{background:rgba(244,166,36,0.12);border-color:rgba(244,166,36,0.3)}
+.su-texts{flex:1;min-width:0}
+.su-en{font-size:13px;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.su-ar{font-family:'Cairo',sans-serif;font-size:11px;color:var(--muted);direction:rtl;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.su-check{font-size:12px;flex-shrink:0}
+.su-lock{font-size:11px;color:var(--muted);flex-shrink:0}
+.main-content{margin-left:min(30%,320px);flex:1;min-width:0}
+
+/* TOP NAV */
+.topnav{background:var(--primary-dark);border-bottom:2px solid var(--accent);padding:10px 28px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:10px}
+.nav-logo-icon{width:36px;height:36px;background:var(--accent);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:900;color:#0d1b2a}
+.nav-logo-text{font-family:'Cairo',sans-serif;font-size:17px;font-weight:800;color:white}
+.nav-logo-sub{font-size:11px;color:var(--muted);font-weight:500;margin-top:-2px}
+
+/* ══ Hamburger button (desktop: hidden) ══ */
+.nav-hamburger{display:none;align-items:center;justify-content:center;width:38px;height:38px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.3);border-radius:9px;cursor:pointer;flex-direction:column;gap:5px;padding:8px;flex-shrink:0}
+.nav-hamburger span{display:block;width:100%;height:2px;background:var(--accent);border-radius:2px;transition:all .25s}
+/* Backdrop */
+.sb-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:199}
+.sb-backdrop.sb-open{display:block}
+
+@media(max-width:768px){
+  /* Sidebar: hidden off-screen, slides in as overlay */
+  .sidebar{
+    position:fixed;left:-100%;width:82%;max-width:300px;min-width:unset;
+    transition:left .3s ease;z-index:200;
+  }
+  .sidebar.sb-open{left:0}
+  /* Main: full width */
+  .main-content{margin-left:0}
+  /* Nav */
+  .nav-brand{display:none}
+  .nav-hamburger{display:flex}
+  .topnav{padding:10px 14px}
+  .nav-logo-text{font-size:14px}
+  /* Hero */
+  .hero{padding:32px 14px 28px}
+  .hero-title{font-size:38px;letter-spacing:-1px}
+  .hero-subtitle{font-size:13px}
+  .hero-stats{gap:12px;flex-wrap:wrap;justify-content:center}
+  .stat-num{font-size:22px}
+  /* Teacher card: stack vertically */
+  .teacher-card{flex-direction:column;align-items:flex-start;padding:18px 16px;gap:14px}
+  .teacher-avatar{width:56px;height:56px;font-size:24px}
+  .teacher-name{font-size:16px}
+  /* Sections */
+  .section{padding:0 12px;margin:20px auto}
+  /* Grids → single column */
+  .learn-grid{grid-template-columns:1fr}
+  .features-grid{grid-template-columns:1fr}
+  .units-grid{grid-template-columns:1fr}
+  .motiv-item{padding:9px 11px}
+  .hero-meta{gap:6px}
+  /* Footer */
+  .footer{padding:18px 14px}
+}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 60%,#0a1e35 100%);padding:55px 24px 48px;text-align:center;border-bottom:3px solid var(--accent);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;border-radius:50%;background:rgba(244,166,36,0.05)}
+.hero::after{content:'';position:absolute;bottom:-100px;left:-60px;width:320px;height:320px;border-radius:50%;background:rgba(255,255,255,0.02)}
+.hero-eyebrow{font-size:12px;font-weight:700;color:var(--accent);letter-spacing:4px;text-transform:uppercase;margin-bottom:10px;position:relative}
+.hero-title{font-size:58px;font-weight:900;color:white;letter-spacing:-2px;line-height:1;position:relative}
+.hero-title span{color:var(--accent)}
+.hero-subtitle{font-family:'Cairo',sans-serif;font-size:18px;color:rgba(255,255,255,0.65);margin-top:10px;direction:rtl;font-weight:500;position:relative}
+.hero-meta{display:flex;gap:10px;justify-content:center;margin-top:18px;flex-wrap:wrap;position:relative}
+.hero-pill{padding:6px 18px;border-radius:20px;font-size:12px;font-weight:700}
+.pill-gold{background:var(--accent);color:#0d1b2a}
+.pill-dark{background:rgba(255,255,255,0.1);color:white;border:1px solid rgba(255,255,255,0.15)}
+.hero-stats{display:flex;gap:28px;justify-content:center;margin-top:26px;position:relative}
+.stat{text-align:center}
+.stat-num{font-size:28px;font-weight:900;color:var(--accent)}
+.stat-lbl{font-family:'Cairo',sans-serif;font-size:12px;color:var(--muted);margin-top:-2px}
+
+/* SECTION */
+.section{max-width:1060px;margin:36px auto;padding:0 24px}
+.section-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;padding-bottom:12px;border-bottom:1px solid var(--border)}
+.section-title{font-size:17px;font-weight:800;color:var(--text)}
+.section-sub{font-family:'Cairo',sans-serif;font-size:13px;color:var(--muted);direction:rtl}
+
+/* UNITS GRID */
+.units-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.unit-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;text-decoration:none;display:block;transition:transform .25s,border-color .25s,box-shadow .25s;position:relative;overflow:hidden}
+.unit-card:not(.locked):hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 12px 32px rgba(244,166,36,0.14)}
+.unit-card.locked{opacity:.48;cursor:default}
+.unit-card::before{content:'';position:absolute;top:0;right:0;width:80px;height:80px;border-radius:0 16px 0 80px;background:rgba(244,166,36,0.05)}
+.unit-num{font-size:11px;font-weight:700;color:var(--accent);letter-spacing:2px;text-transform:uppercase}
+.unit-title-en{font-size:21px;font-weight:800;color:white;margin:5px 0 3px}
+.unit-title-ar{font-family:'Cairo',sans-serif;font-size:13px;color:var(--muted);direction:rtl}
+.unit-topics{margin-top:12px;display:flex;flex-wrap:wrap;gap:5px}
+.unit-topic{padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600;background:rgba(255,255,255,0.06);color:var(--muted);border:1px solid var(--border)}
+.unit-movie-tag{display:inline-flex;align-items:center;gap:5px;margin-top:12px;background:rgba(244,166,36,0.1);border:1px solid rgba(244,166,36,0.25);padding:4px 12px;border-radius:20px;font-size:11px;color:var(--accent);font-weight:700}
+.unit-soon{position:absolute;top:14px;right:14px;background:var(--card2);color:var(--muted);font-size:10px;font-weight:700;padding:3px 9px;border-radius:8px;border:1px solid var(--border)}
+.unit-progress{margin-top:14px;background:var(--bg);border-radius:4px;height:4px;overflow:hidden}
+.unit-progress-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:4px;transition:width .6s ease}
+
+/* FEATURES */
+.features-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-top:0}
+.feat{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px;display:flex;gap:13px;align-items:flex-start}
+.feat-icon{font-size:22px;flex-shrink:0;margin-top:2px}
+.feat-title{font-size:14px;font-weight:700;color:white;margin-bottom:3px}
+.feat-desc{font-family:'Cairo',sans-serif;font-size:12px;color:var(--muted);direction:rtl;line-height:1.7}
+
+/* TEACHER CARD */
+.teacher-card{background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 100%);border:1px solid rgba(244,166,36,0.3);border-radius:18px;padding:28px;display:flex;gap:22px;align-items:center;margin-bottom:14px}
+.teacher-avatar{width:72px;height:72px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:900;color:#0d1b2a;flex-shrink:0;border:3px solid rgba(244,166,36,0.4)}
+.teacher-info{}
+.teacher-name{font-size:20px;font-weight:900;color:white}
+.teacher-name span{color:var(--accent)}
+.teacher-role{font-family:'Cairo',sans-serif;font-size:13px;color:var(--muted);direction:rtl;margin-top:3px}
+.teacher-bio{font-family:'Cairo',sans-serif;font-size:13px;color:rgba(255,255,255,0.75);direction:rtl;margin-top:8px;line-height:1.8}
+.motiv-wrap{margin-top:16px;display:flex;flex-direction:column;gap:8px}
+.motiv-item{display:flex;align-items:flex-start;gap:10px;background:rgba(244,166,36,0.07);border:1px solid rgba(244,166,36,0.2);border-radius:10px;padding:10px 14px;direction:rtl}
+.motiv-icon{font-size:18px;flex-shrink:0;margin-top:1px}
+.motiv-text{font-family:'Cairo',sans-serif;font-size:13px;color:rgba(255,255,255,0.88);line-height:1.7}
+.motiv-text b{color:var(--accent)}
+/* WhatsApp Buttons */
+.wa-btns{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+.wa-btn{display:inline-flex;align-items:center;gap:9px;padding:11px 20px;border-radius:12px;font-family:'Cairo',sans-serif;font-size:13px;font-weight:800;text-decoration:none;transition:transform .15s,box-shadow .15s;cursor:pointer;border:none}
+.wa-btn:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.wa-btn-contact{background:#25D366;color:#fff}
+.wa-btn-share{background:rgba(37,211,102,.12);color:#25D366;border:2px solid rgba(37,211,102,.4)}
+.wa-btn svg{width:20px;height:20px;flex-shrink:0}
+@media(max-width:768px){.wa-btns{flex-direction:column}.wa-btn{justify-content:center}}
+
+/* LEARN GRID */
+.learn-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.learn-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px 20px;display:flex;gap:14px;align-items:flex-start;transition:border-color .2s,transform .2s}
+.learn-card:hover{border-color:rgba(244,166,36,0.35);transform:translateY(-2px)}
+.learn-num{width:32px;height:32px;border-radius:8px;background:rgba(244,166,36,0.12);border:1px solid rgba(244,166,36,0.3);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;color:var(--accent);flex-shrink:0}
+.learn-text-en{font-size:14px;font-weight:700;color:white}
+.learn-text-ar{font-family:'Cairo',sans-serif;font-size:12px;color:var(--muted);direction:rtl;margin-top:2px}
+
+/* TIPS */
+.tips-list{display:flex;flex-direction:column;gap:10px}
+.tip-item{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px 18px;display:flex;gap:14px;align-items:flex-start}
+.tip-icon{font-size:20px;flex-shrink:0;margin-top:1px}
+.tip-title{font-size:13px;font-weight:700;color:white;margin-bottom:3px}
+.tip-body{font-family:'Cairo',sans-serif;font-size:12px;color:var(--muted);direction:rtl;line-height:1.8}
+
+/* FOOTER */
+.footer{border-top:1px solid var(--border);padding:22px 28px;text-align:center;margin-top:40px}
+.footer-brand{font-family:'Cairo',sans-serif;font-size:16px;font-weight:800;color:var(--accent)}
+.footer-note{font-family:'Cairo',sans-serif;font-size:12px;color:var(--muted);margin-top:5px;direction:rtl}
+.su-prog{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:6px;overflow:hidden}
+.su-prog-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:2px;width:0%;transition:width .6s ease}
+
+.su-level-hd{padding:8px 12px 5px;margin-top:8px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(255,255,255,.05)}
+.su-level-code{font-size:11px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;padding:2px 8px;border-radius:5px;display:inline-block}
+.su-level-name{font-family:'Cairo',sans-serif;font-size:12px;font-weight:700;color:#f4c430;direction:rtl;margin:0;line-height:1}
+.lvl-a1{background:rgba(52,211,153,.15);color:#34d399;border:1px solid rgba(52,211,153,.35)}
+.lvl-a2{background:rgba(74,158,255,.15);color:#4a9eff;border:1px solid rgba(74,158,255,.35)}
+.lvl-b1{background:rgba(245,158,11,.15);color:#f59e0b;border:1px solid rgba(245,158,11,.35)}
+.lvl-b2{background:rgba(244,166,36,.15);color:var(--accent);border:1px solid rgba(244,166,36,.35)}
+.lvl-b2p{background:rgba(251,146,60,.15);color:#fb923c;border:1px solid rgba(251,146,60,.35)}
+.lvl-c1{background:rgba(168,85,247,.15);color:#a855f7;border:1px solid rgba(168,85,247,.35)}
+.su-coming{opacity:.28;cursor:default;pointer-events:none}
+.su-prog{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:6px;overflow:hidden}
+.su-prog-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:2px;width:0%;transition:width .6s ease}
+
+.nav-home-btn{display:inline-flex;align-items:center;gap:6px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.4);color:var(--accent);font-size:12px;font-weight:800;padding:5px 13px;border-radius:8px;text-decoration:none;transition:all .2s;white-space:nowrap;flex-shrink:0}
+.nav-home-btn:hover{background:rgba(244,166,36,.25);transform:translateY(-2px)}
+.nav-lesson-badge{background:var(--accent);color:#0a1628;font-size:12px;font-weight:900;padding:5px 13px;border-radius:7px;white-space:nowrap;letter-spacing:.3px;flex-shrink:0}
+.nav-lesson-name{font-size:13px;color:rgba(232,237,245,.7);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-sep{color:rgba(136,153,176,.5);font-size:13px;flex-shrink:0}
+.nav-left{display:flex;align-items:center;gap:8px;flex:1;min-width:0}
+.nav-right{display:flex;align-items:center;flex-shrink:0}
+</style>
+
+<style>
+/* Watermark on print */
+@media print {
+  body::before {
+    content: 'Mohammed Elhuseyin — English Learning Platform — محمية الحقوق';
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-35deg);
+    font-size: 48px;
+    font-weight: 900;
+    color: rgba(244,166,36,0.18);
+    z-index: 9999;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+}
+</style>
+
+<style>
+.float-menu-btn{display:none;position:fixed;bottom:22px;left:18px;z-index:9998;width:48px;height:48px;background:var(--primary-dark,#0f2548);border:2px solid rgba(244,166,36,.5);border-radius:14px;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:12px;box-shadow:0 4px 20px rgba(0,0,0,.4);transition:transform .15s,box-shadow .15s}
+.float-menu-btn:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,.5)}
+.float-menu-btn span{display:block;width:22px;height:2px;background:#f4a624;border-radius:2px;transition:all .25s}
+@media(max-width:768px){.float-menu-btn{display:flex}}
+</style>
+</head>
+<body>
+<div class="layout">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-logo">
+      <div class="sidebar-logo-icon">A</div>
+      <div>
+        <div class="sidebar-logo-text ar">MOHAMMED ELHUSEYIN</div>
+        <div class="sidebar-logo-sub">English Learning Platform</div>
+      </div>
+    </div>
+    <div class="sidebar-label ar">الوحدات الدراسية</div>
+  </div>
+  <div class="sidebar-units">
+  <div class="su-level-hd"><span class="su-level-code lvl-a1">A1</span><span class="su-level-name">مستوى المبتدئ تماماً</span></div>
+  <a href="lessons/lesson1.html" class="su-item"><div class="su-num">1</div><div class="su-texts"><div class="su-en">Alphabet & Numbers</div><div class="su-ar">الأحرف والأرقام</div><div class="su-prog"><div class="su-prog-fill" id="sp1"></div></div></div></a>
+  <a href="lessons/lesson2.html" class="su-item"><div class="su-num">2</div><div class="su-texts"><div class="su-en">Classroom Language & Greetings</div><div class="su-ar">لغة الصف والتحيات</div><div class="su-prog"><div class="su-prog-fill" id="sp2"></div></div></div></a>
+  <a href="lessons/lesson3.html" class="su-item"><div class="su-num">3</div><div class="su-texts"><div class="su-en">Nationalities & Countries</div><div class="su-ar">الجنسيات والدول</div><div class="su-prog"><div class="su-prog-fill" id="sp3"></div></div></div></a>
+  <a href="lessons/lesson4.html" class="su-item"><div class="su-num">4</div><div class="su-texts"><div class="su-en">Singular & Plural Nouns</div><div class="su-ar">الأسماء المفردة والجمع</div><div class="su-prog"><div class="su-prog-fill" id="sp4"></div></div></div></a>
+  <a href="lessons/lesson5.html" class="su-item"><div class="su-num">5</div><div class="su-texts"><div class="su-en">Days & Telling the Time</div><div class="su-ar">الأيام وإخبار الوقت</div><div class="su-prog"><div class="su-prog-fill" id="sp5"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-a2">A2</span><span class="su-level-name">المستوى الابتدائي</span></div>
+  <a href="lessons/unit1.html" class="su-item"><div class="su-num">6</div><div class="su-texts"><div class="su-en">Verb to <i>be</i></div><div class="su-ar">فعل التكوين</div><div class="su-prog"><div class="su-prog-fill" id="sp6"></div></div></div></a>
+  <a href="lessons/unit2.html" class="su-item"><div class="su-num">7</div><div class="su-texts"><div class="su-en">Present Simple</div><div class="su-ar">المضارع البسيط</div><div class="su-prog"><div class="su-prog-fill" id="sp7"></div></div></div></a>
+  <a href="lessons/unit3.html" class="su-item"><div class="su-num">8</div><div class="su-texts"><div class="su-en">Present Continuous</div><div class="su-ar">المضارع المستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp8"></div></div></div></a>
+  <a href="lessons/unit4.html" class="su-item"><div class="su-num">9</div><div class="su-texts"><div class="su-en">Past Simple: was / were</div><div class="su-ar">الماضي البسيط: كان</div><div class="su-prog"><div class="su-prog-fill" id="sp9"></div></div></div></a>
+  <a href="lessons/unit6.html" class="su-item"><div class="su-num">10</div><div class="su-texts"><div class="su-en">Past Simple: Regular & Irreg.</div><div class="su-ar">الماضي البسيط للأفعال</div><div class="su-prog"><div class="su-prog-fill" id="sp10"></div></div></div></a>
+  <a href="lessons/unit5.html" class="su-item"><div class="su-num">11</div><div class="su-texts"><div class="su-en">Can / Can't</div><div class="su-ar">القدرة والعجز</div><div class="su-prog"><div class="su-prog-fill" id="sp11"></div></div></div></a>
+  <a href="lessons/lesson12.html" class="su-item"><div class="su-num">12</div><div class="su-texts"><div class="su-en">Possessive Pronouns</div><div class="su-ar">ضمائر الملكية</div><div class="su-prog"><div class="su-prog-fill" id="sp12"></div></div></div></a>
+  <a href="lessons/unit7.html" class="su-item"><div class="su-num">13</div><div class="su-texts"><div class="su-en">There is / There are</div><div class="su-ar">يوجد / توجد</div><div class="su-prog"><div class="su-prog-fill" id="sp13"></div></div></div></a>
+  <a href="lessons/unit8.html" class="su-item"><div class="su-num">14</div><div class="su-texts"><div class="su-en">Adjectives</div><div class="su-ar">الصفات</div><div class="su-prog"><div class="su-prog-fill" id="sp14"></div></div></div></a>
+  <a href="lessons/unit9.html" class="su-item"><div class="su-num">15</div><div class="su-texts"><div class="su-en">Imperatives</div><div class="su-ar">صيغة الأمر والنهي</div><div class="su-prog"><div class="su-prog-fill" id="sp15"></div></div></div></a>
+  <a href="lessons/unit10.html" class="su-item"><div class="su-num">16</div><div class="su-texts"><div class="su-en">Object Pronouns</div><div class="su-ar">ضمائر المفعول به</div><div class="su-prog"><div class="su-prog-fill" id="sp16"></div></div></div></a>
+  <a href="lessons/unit11.html" class="su-item"><div class="su-num">17</div><div class="su-texts"><div class="su-en">Prepositions of Time & Place</div><div class="su-ar">حروف جر الوقت والمكان</div><div class="su-prog"><div class="su-prog-fill" id="sp17"></div></div></div></a>
+  <a href="lessons/unit12.html" class="su-item"><div class="su-num">18</div><div class="su-texts"><div class="su-en">Future Plans: going to</div><div class="su-ar">خطط المستقبل</div><div class="su-prog"><div class="su-prog-fill" id="sp18"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b1">B1</span><span class="su-level-name">تحت المتوسط</span></div>
+  <a href="lessons/lesson19.html" class="su-item"><div class="su-num">19</div><div class="su-texts"><div class="su-en">Present Perfect Introduction</div><div class="su-ar">مقدمة المضارع التام</div><div class="su-prog"><div class="su-prog-fill" id="sp19"></div></div></div></a>
+  <a href="lessons/lesson20.html" class="su-item"><div class="su-num">20</div><div class="su-texts"><div class="su-en">Past Continuous</div><div class="su-ar">الماضي المستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp20"></div></div></div></a>
+  <a href="lessons/lesson21.html" class="su-item"><div class="su-num">21</div><div class="su-texts"><div class="su-en">will vs. going to</div><div class="su-ar">المستقبل: إرادة أم تخطيط؟</div><div class="su-prog"><div class="su-prog-fill" id="sp21"></div></div></div></a>
+  <a href="lessons/lesson22.html" class="su-item"><div class="su-num">22</div><div class="su-texts"><div class="su-en">like / love / hate + -ing</div><div class="su-ar">التعبير عن التفضيلات</div><div class="su-prog"><div class="su-prog-fill" id="sp22"></div></div></div></a>
+  <a href="lessons/lesson23.html" class="su-item"><div class="su-num">23</div><div class="su-texts"><div class="su-en">Comparatives & Superlatives</div><div class="su-ar">المقارنة والتفضيل</div><div class="su-prog"><div class="su-prog-fill" id="sp23"></div></div></div></a>
+  <a href="lessons/lesson24.html" class="su-item"><div class="su-num">24</div><div class="su-texts"><div class="su-en">must / have to / should</div><div class="su-ar">أفعال الإلزام والنصيحة</div><div class="su-prog"><div class="su-prog-fill" id="sp24"></div></div></div></a>
+  <a href="lessons/lesson25.html" class="su-item"><div class="su-num">25</div><div class="su-texts"><div class="su-en">Infinitives & Gerunds</div><div class="su-ar">المصدر وصيغة الـ ing</div><div class="su-prog"><div class="su-prog-fill" id="sp25"></div></div></div></a>
+  <a href="lessons/lesson26.html" class="su-item"><div class="su-num">26</div><div class="su-texts"><div class="su-en">Articles: a/an / the</div><div class="su-ar">أدوات التعريف والتنكير</div><div class="su-prog"><div class="su-prog-fill" id="sp26"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b2">B2</span><span class="su-level-name">المستوى المتوسط</span></div>
+  <a href="lessons/lesson27.html" class="su-item"><div class="su-num">27</div><div class="su-texts"><div class="su-en">Present Perfect vs. Past Simple</div><div class="su-ar">المقارنة بين الماضي والتام</div><div class="su-prog"><div class="su-prog-fill" id="sp27"></div></div></div></a>
+  <a href="lessons/lesson28.html" class="su-item"><div class="su-num">28</div><div class="su-texts"><div class="su-en">Passive Voice</div><div class="su-ar">المبني للمجهول</div><div class="su-prog"><div class="su-prog-fill" id="sp28"></div></div></div></a>
+  <a href="lessons/lesson29.html" class="su-item"><div class="su-num">29</div><div class="su-texts"><div class="su-en">Zero / First / Second Cond.</div><div class="su-ar">الجمل الشرطية 0-1-2</div><div class="su-prog"><div class="su-prog-fill" id="sp29"></div></div></div></a>
+  <a href="lessons/lesson30.html" class="su-item"><div class="su-num">30</div><div class="su-texts"><div class="su-en">Reported Speech</div><div class="su-ar">الكلام غير المباشر</div><div class="su-prog"><div class="su-prog-fill" id="sp30"></div></div></div></a>
+  <a href="lessons/lesson31.html" class="su-item"><div class="su-num">31</div><div class="su-texts"><div class="su-en">Relative Clauses</div><div class="su-ar">جمل الوصل: who / which</div><div class="su-prog"><div class="su-prog-fill" id="sp31"></div></div></div></a>
+  <a href="lessons/lesson32.html" class="su-item"><div class="su-num">32</div><div class="su-texts"><div class="su-en">Quantifiers</div><div class="su-ar">محددات الكمية</div><div class="su-prog"><div class="su-prog-fill" id="sp32"></div></div></div></a>
+  <a href="lessons/lesson33.html" class="su-item"><div class="su-num">33</div><div class="su-texts"><div class="su-en">Phrasal Verbs Introduction</div><div class="su-ar">مقدمة الأفعال المركبة</div><div class="su-prog"><div class="su-prog-fill" id="sp33"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b2p">B2+</span><span class="su-level-name">فوق المتوسط</span></div>
+  <a href="lessons/lesson34.html" class="su-item"><div class="su-num">34</div><div class="su-texts"><div class="su-en">Narrative Tenses & Past Perfect</div><div class="su-ar">أزمنة السرد والماضي التام</div><div class="su-prog"><div class="su-prog-fill" id="sp34"></div></div></div></a>
+  <a href="lessons/lesson35.html" class="su-item"><div class="su-num">35</div><div class="su-texts"><div class="su-en">Future Perfect & Continuous</div><div class="su-ar">المستقبل التام والمستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp35"></div></div></div></a>
+  <a href="lessons/lesson36.html" class="su-item"><div class="su-num">36</div><div class="su-texts"><div class="su-en">Third Conditional & Regrets</div><div class="su-ar">الشرط الثالث والندم</div><div class="su-prog"><div class="su-prog-fill" id="sp36"></div></div></div></a>
+  <a href="lessons/lesson37.html" class="su-item"><div class="su-num">37</div><div class="su-texts"><div class="su-en">Causative: have/get done</div><div class="su-ar">الأفعال السببية</div><div class="su-prog"><div class="su-prog-fill" id="sp37"></div></div></div></a>
+  <a href="lessons/lesson38.html" class="su-item"><div class="su-num">38</div><div class="su-texts"><div class="su-en">Advanced Passive</div><div class="su-ar">المبني للمجهول المتقدم</div><div class="su-prog"><div class="su-prog-fill" id="sp38"></div></div></div></a>
+  <a href="lessons/lesson39.html" class="su-item"><div class="su-num">39</div><div class="su-texts"><div class="su-en">Speculation: must/might/can't</div><div class="su-ar">التخمين والاستنتاج</div><div class="su-prog"><div class="su-prog-fill" id="sp39"></div></div></div></a>
+  <a href="lessons/lesson40.html" class="su-item"><div class="su-num">40</div><div class="su-texts"><div class="su-en">Idioms & Collocations</div><div class="su-ar">المصطلحات والتعبيرات</div><div class="su-prog"><div class="su-prog-fill" id="sp40"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-c1">C1</span><span class="su-level-name">المستوى المتقدم الأكاديمي</span></div>
+  <a href="lessons/lesson41.html" class="su-item"><div class="su-num">41</div><div class="su-texts"><div class="su-en">Inversion & Emphatic Structures</div><div class="su-ar">التقديم والتأخير للتأكيد</div><div class="su-prog"><div class="su-prog-fill" id="sp41"></div></div></div></a>
+  <a href="lessons/lesson42.html" class="su-item"><div class="su-num">42</div><div class="su-texts"><div class="su-en">Mixed Conditionals</div><div class="su-ar">الجمل الشرطية المختلطة</div><div class="su-prog"><div class="su-prog-fill" id="sp42"></div></div></div></a>
+  <a href="lessons/lesson43.html" class="su-item"><div class="su-num">43</div><div class="su-texts"><div class="su-en">Advanced Gerunds & Infinitives</div><div class="su-ar">المصادر المتقدمة</div><div class="su-prog"><div class="su-prog-fill" id="sp43"></div></div></div></a>
+  <a href="lessons/lesson44.html" class="su-item"><div class="su-num">44</div><div class="su-texts"><div class="su-en">Cleft Sentences</div><div class="su-ar">الجمل المشقوقة</div><div class="su-prog"><div class="su-prog-fill" id="sp44"></div></div></div></a>
+  <a href="lessons/lesson45.html" class="su-item"><div class="su-num">45</div><div class="su-texts"><div class="su-en">Discourse Markers</div><div class="su-ar">أدوات الربط الأكاديمية</div><div class="su-prog"><div class="su-prog-fill" id="sp45"></div></div></div></a>
+  <a href="lessons/lesson46.html" class="su-item"><div class="su-num">46</div><div class="su-texts"><div class="su-en">Nuances & Euphemisms</div><div class="su-ar">الفروقات الدقيقة والتلطيف</div><div class="su-prog"><div class="su-prog-fill" id="sp46"></div></div></div></a>
+</div>
+</aside>
+
+<!-- MAIN -->
+<div class="main-content">
+
+<!-- NAV -->
+<nav class="topnav">
+  <div class="nav-logo">
+    <div class="nav-logo-icon">م</div>
+    <div>
+      <div class="nav-logo-text ar">MOHAMMED ELHUSEYIN</div>
+      <div class="nav-logo-sub">English Learning Series</div>
+    </div>
+  </div>
+  <div class="nav-brand">MOHAMMED ELHUSEYIN</div>
+  <button class="nav-hamburger" onclick="toggleSidebar()" aria-label="القائمة">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="sb-backdrop" id="sbBackdrop" onclick="toggleSidebar()"></div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">Interactive English Book</div>
+  <div class="hero-title">English <span>Platform</span></div>
+  <div class="hero-subtitle ar">كتاب تعليم اللغة الإنجليزية التفاعلي — من A1 حتى C1</div>
+  <div class="hero-meta">
+    <span class="hero-pill pill-gold">A1 → C1</span>
+    <span class="hero-pill pill-dark">🎧 صوت أصلي</span>
+    <span class="hero-pill pill-dark">✏️ تمارين تفاعلية</span>
+    <span class="hero-pill pill-dark">📖 قواعد بالعربي</span>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num">46</div><div class="stat-lbl ar">درس</div></div>
+    <div class="stat"><div class="stat-num">+1000</div><div class="stat-lbl ar">تمرين</div></div>
+    <div class="stat"><div class="stat-num">+500</div><div class="stat-lbl ar">تسجيل صوتي</div></div>
+    <div class="stat"><div class="stat-num">مجاني</div><div class="stat-lbl ar">بالكامل</div></div>
+  </div>
+</div>
+
+<!-- TEACHER -->
+<div class="section">
+  <div class="teacher-card">
+    <div class="teacher-avatar">م</div>
+    <div class="teacher-info">
+      <div class="teacher-name">MOHAMMED ELHUSEYIN · <span>محمد الحسين</span></div>
+      <div class="teacher-role ar">مبرمج ومصمم الكتاب التفاعلي</div>
+      <div class="teacher-bio ar">تم إنشاء هذا الكتاب من قبل المبرمج محمد الحسين، وتم تدقيق محتواه من قبل أساتذة أكاديميين متخصصين. الكتاب مجاني بالكامل — أُعدّ بعناية لمساعدتك على إتقان الإنجليزية خطوة بخطوة.</div>
+      <div class="motiv-wrap">
+        <div class="motiv-item">
+          <span class="motiv-icon">🤲</span>
+          <span class="motiv-text">إن استفدت من هذا الموقع، <b>فلا تنسَ أن تذكرني بدعوة صالحة</b> — دعوة أخيك بظهر الغيب لا تُردّ.</span>
+        </div>
+        <div class="motiv-item">
+          <span class="motiv-icon">💛</span>
+          <span class="motiv-text">هذا الموقع <b>صدقة جارية</b> — أُنشئ لوجه الله تعالى، مجاني بالكامل، ولا يُطلب منك شيء سوى الدعاء.</span>
+        </div>
+        <div class="motiv-item">
+          <span class="motiv-icon">📤</span>
+          <span class="motiv-text"><b>شاركه مع من يريد تعلم الإنجليزية</b> — نشره بنفسه صدقة، وكل من يستفيد منه لك أجر مثله.</span>
+        </div>
+        <div class="motiv-item">
+          <span class="motiv-icon">🌱</span>
+          <span class="motiv-text">العلم النافع لا ينقطع أجره — <b>تعلّم، وعلّم غيرك</b>، وكن سبباً في نشر المعرفة.</span>
+        </div>
+      </div>
+
+      <!-- WhatsApp Buttons -->
+      <div class="wa-btns">
+        <a class="wa-btn wa-btn-contact"
+           href="https://wa.me/905537410520?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%B4%D9%81%D8%AA%20%D9%85%D9%88%D9%82%D8%B9%20English%20Learning%20Platform%20%F0%9F%93%9A"
+           target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          تواصل مع المطور
+        </a>
+        <a class="wa-btn wa-btn-share"
+           href="https://wa.me/?text=%F0%9F%93%9A%20*English%20Learning%20Platform*%20%E2%80%94%20%D9%83%D8%AA%D8%A7%D8%A8%20%D8%AA%D8%B9%D9%84%D9%8A%D9%85%20%D8%A7%D9%84%D8%A5%D9%86%D8%AC%D9%84%D9%8A%D8%B2%D9%8A%D8%A9%20%D8%A7%D9%84%D8%AA%D9%81%D8%A7%D8%B9%D9%84%D9%8A%20%D0%BC%D0%B4%D0%B6%D0%B0%D0%BD%D9%8A%20%D8%A8%D8%A7%D9%84%D9%83%D8%A7%D9%85%D9%84%20%E2%80%94%20%D9%85%D9%86%20A1%20%D8%AD%D8%AA%D9%89%20C1%0Ahttps%3A%2F%2Fhousinasaad-creator.github.io%2Fenglish-learning-platform%2F"
+           target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          شارك الموقع مع أصدقائك
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- UNITS GRID -->
+<div class="section" style="display:none">
+  <div class="section-hd">
+    <div class="section-title">📚 الوحدات الدراسية</div>
+    <div class="section-sub ar">اضغط على الوحدة لتبدأ الدرس</div>
+  </div>
+  <div class="units-grid">
+
+    <a href="lessons/unit1.html" class="unit-card">
+      <div class="unit-num">Unit 1</div>
+      <div class="unit-title-en">Verb to <i>be</i></div>
+      <div class="unit-title-ar">فعل التكوين — am / is / are</div>
+      <div class="unit-topics">
+        <span class="unit-topic">am · is · are</span>
+        <span class="unit-topic">Negatives</span>
+        <span class="unit-topic">Questions</span>
+        <span class="unit-topic">Short answers</span>
+      </div>
+      <div class="unit-progress"><div class="unit-progress-fill" style="width:100%"></div></div>
+    </a>
+
+    <a href="lessons/unit2.html" class="unit-card">
+      <div class="unit-num">Unit 2</div>
+      <div class="unit-title-en">Present Simple</div>
+      <div class="unit-title-ar">المضارع البسيط — العادات والحقائق</div>
+      <div class="unit-topics">
+        <span class="unit-topic">do / does</span>
+        <span class="unit-topic">don't / doesn't</span>
+        <span class="unit-topic">Routines</span>
+        <span class="unit-topic">+s / +es</span>
+      </div>
+      <div class="unit-progress"><div class="unit-progress-fill" style="width:100%"></div></div>
+    </a>
+
+    <a href="lessons/unit3.html" class="unit-card">
+      <div class="unit-num">Unit 3</div>
+      <div class="unit-title-en">Present Continuous</div>
+      <div class="unit-title-ar">المضارع المستمر — ما يحدث الآن</div>
+      <div class="unit-topics">
+        <span class="unit-topic">am/is/are + -ing</span>
+        <span class="unit-topic">isn't / aren't</span>
+        <span class="unit-topic">Spelling</span>
+        <span class="unit-topic">vs Present Simple</span>
+      </div>
+      <div class="unit-progress"><div class="unit-progress-fill" style="width:100%"></div></div>
+    </a>
+
+    <a href="lessons/unit4.html" class="unit-card">
+      <div class="unit-num">Unit 4</div>
+      <div class="unit-title-en">Past Simple</div>
+      <div class="unit-title-ar">الماضي البسيط — was / were</div>
+      <div class="unit-topics">
+        <span class="unit-topic">was / were</span>
+        <span class="unit-topic">wasn't / weren't</span>
+        <span class="unit-topic">Questions</span>
+        <span class="unit-topic">Time expressions</span>
+      </div>
+      <div class="unit-progress"><div class="unit-progress-fill" style="width:100%"></div></div>
+    </a>
+
+    <a href="lessons/unit5.html" class="unit-card">
+      <div class="unit-num">Unit 5</div>
+      <div class="unit-title-en">can / can't / could</div>
+      <div class="unit-title-ar">القدرة والطلب المؤدب</div>
+      <div class="unit-topics">
+        <span class="unit-topic">can / can't</span>
+        <span class="unit-topic">could / couldn't</span>
+        <span class="unit-topic">Polite Requests</span>
+        <span class="unit-topic">Abilities</span>
+      </div>
+      <div class="unit-progress"><div class="unit-progress-fill" style="width:100%"></div></div>
+    </a>
+
+    <a href="lessons/unit6.html" class="unit-card" style="border-color:rgba(244,166,36,0.35)">
+      <div class="unit-soon" style="background:rgba(244,166,36,0.15);color:var(--accent);border-color:rgba(244,166,36,0.3)">🆕 جديد</div>
+      <div class="unit-num">Unit 6</div>
+      <div class="unit-title-en">Past Simple — Verbs</div>
+      <div class="unit-title-ar">الماضي البسيط — الأفعال</div>
+      <div class="unit-topics">
+        <span class="unit-topic">-ed Spelling</span>
+        <span class="unit-topic">didn't</span>
+        <span class="unit-topic">did / didn't?</span>
+        <span class="unit-topic">Irregular Verbs</span>
+      </div>
+      <div class="unit-progress"><div class="unit-progress-fill" style="width:15%"></div></div>
+    </a>
+
+    <a href="lessons/unit7.html" class="unit-card" style="border-color:rgba(244,166,36,0.35)">
+      <div class="unit-soon" style="background:rgba(244,166,36,0.15);color:var(--accent);border-color:rgba(244,166,36,0.3)">🆕 جديد</div>
+      <div class="unit-num">Unit 7</div>
+      <div class="unit-title-en">There is / There are</div>
+      <div class="unit-title-ar">يوجد / توجد</div>
+      <div class="unit-topics"><span class="unit-topic">there is</span><span class="unit-topic">there are</span><span class="unit-topic">some / any</span></div>
+      <div class="unit-progress"><div class="unit-progress-fill" style="width:10%"></div></div>
+    </a>
+
+    <a href="lessons/unit8.html" class="unit-card" style="border-color:rgba(244,166,36,0.35)">
+      <div class="unit-soon" style="background:rgba(244,166,36,0.15);color:var(--accent);border-color:rgba(244,166,36,0.3)">🆕 جديد</div>
+      <div class="unit-num">Unit 8</div>
+      <div class="unit-title-en">Adjectives</div>
+      <div class="unit-title-ar">الصفات</div>
+      <div class="unit-topics"><span class="unit-topic">Descriptive</span><span class="unit-topic">Comparative</span><span class="unit-topic">Superlative</span></div>
+      <div class="unit-progress"><div class="unit-progress-fill" style="width:10%"></div></div>
+    </a>
+
+    <a href="lessons/unit9.html" class="unit-card" style="border-color:rgba(244,166,36,0.35)">
+      <div class="unit-soon" style="background:rgba(244,166,36,0.15);color:var(--accent);border-color:rgba(244,166,36,0.3)">🆕 جديد</div>
+      <div class="unit-num">Unit 9</div>
+      <div class="unit-title-en">Imperatives</div>
+      <div class="unit-title-ar">صيغة الأمر والنهي</div>
+      <div class="unit-topics"><span class="unit-topic">Do this!</span><span class="unit-topic">Don't do that!</span></div>
+      <div class="unit-progress"><div class="unit-progress-fill" style="width:10%"></div></div>
+    </a>
+
+    <a href="lessons/unit10.html" class="unit-card">
+      <div class="unit-soon">🆕 جديد</div>
+      <div class="unit-num">Unit 10</div>
+      <div class="unit-title-en">Object Pronouns</div>
+      <div class="unit-title-ar">ضمائر المفعول به</div>
+      <div class="unit-topics"><span class="unit-topic">me / you / him</span><span class="unit-topic">her / us / them</span></div>
+      <div class="unit-progress"><div class="unit-progress-fill" style="width:10%"></div></div>
+    </a>
+
+    <a href="lessons/unit11.html" class="unit-card">
+      <div class="unit-soon">🆕 جديد</div>
+      <div class="unit-num">Unit 11</div>
+      <div class="unit-title-en">Prepositions</div>
+      <div class="unit-title-ar">حروف الجر</div>
+      <div class="unit-topics"><span class="unit-topic">in / on / at</span><span class="unit-topic">Time & Place</span></div>
+      <div class="unit-progress"><div class="unit-progress-fill" style="width:10%"></div></div>
+    </a>
+
+    <a href="lessons/unit12.html" class="unit-card">
+      <div class="unit-soon">🆕 جديد</div>
+      <div class="unit-num">Unit 12</div>
+      <div class="unit-title-en">Future Plans</div>
+      <div class="unit-title-ar">خطط المستقبل</div>
+      <div class="unit-topics"><span class="unit-topic">going to</span><span class="unit-topic">will</span><span class="unit-topic">Future time</span></div>
+    </a>
+
+  </div>
+</div>
+
+<!-- WHAT YOU'LL LEARN -->
+<div class="section">
+  <div class="section-hd">
+    <div class="section-title">🎯 شو رح تتعلم بهالكتاب؟</div>
+    <div class="section-sub ar">46 درس يأخذونك من الصفر حتى مستوى C1 المتقدم</div>
+  </div>
+  <div class="learn-grid">
+    <div class="learn-card"><div class="learn-num">1</div><div><div class="learn-text-en">Basic Grammar Rules</div><div class="learn-text-ar">قواعد الإنجليزية الأساسية شرح واضح بالعربي</div></div></div>
+    <div class="learn-card"><div class="learn-num">2</div><div><div class="learn-text-en">Everyday Conversations</div><div class="learn-text-ar">جمل وحوارات تستخدمها في حياتك اليومية</div></div></div>
+    <div class="learn-card"><div class="learn-num">3</div><div><div class="learn-text-en">Reading & Listening</div><div class="learn-text-ar">مهارة القراءة والاستماع بنصوص حقيقية</div></div></div>
+    <div class="learn-card"><div class="learn-num">4</div><div><div class="learn-text-en">Verb Tenses</div><div class="learn-text-ar">أزمنة الأفعال — ماضي وحاضر ومستقبل</div></div></div>
+    <div class="learn-card"><div class="learn-num">5</div><div><div class="learn-text-en">Vocabulary Building</div><div class="learn-text-ar">مفردات جديدة في كل وحدة مع أمثلة تطبيقية</div></div></div>
+    <div class="learn-card"><div class="learn-num">6</div><div><div class="learn-text-en">Interactive Exercises</div><div class="learn-text-ar">تمارين تفاعلية مع تصحيح فوري لتقييم مستواك</div></div></div>
+  </div>
+</div>
+
+<!-- TIPS -->
+<div class="section">
+  <div class="section-hd">
+    <div class="section-title">💡 نصائح لتتعلم الإنجليزية بشكل أسرع</div>
+    <div class="section-sub ar">من خبرة المبرمج محمد الحسين</div>
+  </div>
+  <div class="tips-list">
+    <div class="tip-item"><div class="tip-icon">🗓️</div><div><div class="tip-title">الانتظام أهم من الكمية</div><div class="tip-body ar">30 دقيقة كل يوم أفضل بكثير من 4 ساعات مرة بالأسبوع. الدماغ يحتاج تكرار منتظم حتى تثبت المعلومة.</div></div></div>
+    <div class="tip-item"><div class="tip-icon">🔊</div><div><div class="tip-title">اسمع أكثر مما تقرأ</div><div class="tip-body ar">الاستماع للتسجيلات الصوتية في كل وحدة ضروري. لا تكتفي بقراءة القاعدة — اسمع كيف تُنطق الجمل بشكل صحيح.</div></div></div>
+    <div class="tip-item"><div class="tip-icon">✍️</div><div><div class="tip-title">اكتب الجمل بإيدك</div><div class="tip-body ar">بعد كل تمرين، حاول تكتب 2-3 جمل من عندك بنفس القاعدة اللي تعلمتها. الكتابة تثبّت المعلومة أسرع.</div></div></div>
+    <div class="tip-item"><div class="tip-icon">🔁</div><div><div class="tip-title">راجع الوحدة السابقة قبل ما تبدأ الجديدة</div><div class="tip-body ar">خصص أول 5 دقائق من كل جلسة لمراجعة سريعة للوحدة اللي قبلها. هيك ما تنسى وبتبني معرفتك تدريجياً.</div></div></div>
+    <div class="tip-item"><div class="tip-icon">😌</div><div><div class="tip-title">لا تخاف من الغلط</div><div class="tip-body ar">الغلط جزء طبيعي من التعلم. المهم تفهم ليش غلطت وتحاول مرة ثانية. ما في لغة اتعلمت بدون أخطاء.</div></div></div>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<div class="section">
+  <div class="section-hd">
+    <div class="section-title">⭐ مميزات الكتاب</div>
+  </div>
+  <div class="features-grid">
+    <div class="feat"><div class="feat-icon">🎧</div><div><div class="feat-title">صوت أصلي</div><div class="feat-desc">تسجيلات بريطانية أصلية لكل القواعد والحوارات</div></div></div>
+    <div class="feat"><div class="feat-icon">🔊</div><div><div class="feat-title">نطق تفاعلي</div><div class="feat-desc">اضغط على أي جملة لتسمع نطقها الصحيح بالإنجليزية</div></div></div>
+    <div class="feat"><div class="feat-icon">✏️</div><div><div class="feat-title">تمارين فورية</div><div class="feat-desc">أسئلة تفاعلية مع ظهور الإجابة فوراً وعرض نتيجتك</div></div></div>
+    <div class="feat"><div class="feat-icon">🌐</div><div><div class="feat-title">موقع إلكتروني</div><div class="feat-desc">متاح من أي جهاز — هاتف أو حاسوب — في أي وقت</div></div></div>
+    <div class="feat"><div class="feat-icon">🌙</div><div><div class="feat-title">وضع داكن</div><div class="feat-desc">تصميم مريح للعين للدراسة في أي وقت من اليوم</div></div></div>
+    <div class="feat"><div class="feat-icon">🇸🇦</div><div><div class="feat-title">شرح بالعربي</div><div class="feat-desc">كل قاعدة مشروحة بالعربية بشكل واضح ومبسط</div></div></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-brand">MOHAMMED ELHUSEYIN · محمد الحسين</div>
+  <div class="footer-note ar">جميع الحقوق محفوظة — للاستخدام التعليمي الخاص</div>
+</div>
+
+<script>
+const p=localStorage.getItem('unit1_progress');
+if(p)document.getElementById('prog1').style.width=p+'%';
+
+function toggleSidebar(){
+  var sb=document.querySelector('.sidebar');
+  var bd=document.getElementById('sbBackdrop');
+  sb.classList.toggle('sb-open');
+  bd.classList.toggle('sb-open');
+  document.body.style.overflow=sb.classList.contains('sb-open')?'hidden':'';
+}
+// Close sidebar when a lesson link is clicked on mobile
+document.querySelectorAll('.su-item').forEach(function(a){
+  a.addEventListener('click',function(){
+    var sb=document.querySelector('.sidebar');
+    if(sb.classList.contains('sb-open'))toggleSidebar();
+  });
+});
+</script>
+
+</div><!-- /main-content -->
+</div><!-- /layout -->
+<script src="media/global-player.js"></script>
+<script>
+(function(){
+  for(var i=1;i<=12;i++){
+    var f=document.getElementById('sp'+i);
+    if(f){var v=parseInt(localStorage.getItem('up'+i)||'0',10);f.style.width=v+'%';}
+  }
+})();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+(function(){
+  var map={1: "up_l1", 2: "up_l2", 3: "up_l3", 4: "up_l4", 5: "up_l5", 6: "up1", 7: "up2", 8: "up3", 9: "up4", 10: "up6", 11: "up5", 12: "up_l12", 13: "up7", 14: "up8", 15: "up9", 16: "up10", 17: "up11", 19: "up_l19", 20: "up_l20", 21: "up_l21", 22: "up_l22", 23: "up_l23", 24: "up_l24", 25: "up_l25", 26: "up_l26", 27: "up_l27", 28: "up_l28", 29: "up_l29", 30: "up_l30", 31: "up_l31", 32: "up_l32", 33: "up_l33", 34: "up_l34", 35: "up_l35", 36: "up_l36", 37: "up_l37", 38: "up_l38", 39: "up_l39", 40: "up_l40", 41: "up_l41", 42: "up_l42", 43: "up_l43", 44: "up_l44", 45: "up_l45", 46: "up_l46"};
+  for(var lid in map){
+    var f=document.getElementById('sp'+lid);
+    if(f){var v=parseInt(localStorage.getItem(map[lid])||'0',10);f.style.width=v+'%';}
+  }
+  setTimeout(function(){
+    var a=document.querySelector('.su-item.su-active');
+    if(a){var u=a.closest('.sidebar-units');if(u)u.scrollTop=Math.max(0,a.offsetTop-a.offsetHeight);}
+  },80);
+})();
+</script>
+
+<script>
+(function(){
+  // Disable right-click
+  document.addEventListener('contextmenu', function(e){ e.preventDefault(); });
+
+  // Disable keyboard shortcuts
+  document.addEventListener('keydown', function(e){
+    // F12
+    if(e.key==='F12'){e.preventDefault();return false;}
+    // Ctrl+U (view source), Ctrl+S (save), Ctrl+A (select all), Ctrl+P (print)
+    if(e.ctrlKey && ['u','U','s','S','a','A','p','P'].indexOf(e.key)!==-1){
+      e.preventDefault();return false;
+    }
+    // Ctrl+Shift+I (DevTools), Ctrl+Shift+J, Ctrl+Shift+C
+    if(e.ctrlKey && e.shiftKey && ['i','I','j','J','c','C','k','K'].indexOf(e.key)!==-1){
+      e.preventDefault();return false;
+    }
+  });
+
+  // Disable text selection via CSS
+  document.documentElement.style.webkitUserSelect='none';
+  document.documentElement.style.userSelect='none';
+
+  // Allow selection inside inputs/textareas only
+  document.addEventListener('mousedown', function(e){
+    var t=e.target.tagName;
+    if(t==='INPUT'||t==='TEXTAREA'){
+      e.target.style.userSelect='text';
+      e.target.style.webkitUserSelect='text';
+    }
+  });
+
+  // Block drag
+  document.addEventListener('dragstart', function(e){ e.preventDefault(); });
+})();
+</script>
+<!-- Floating WhatsApp Button -->
+<a class="wa-float" href="https://wa.me/905537410520?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%B4%D9%81%D8%AA%20%D9%85%D9%88%D9%82%D8%B9%20English%20Learning%20Platform%20%F0%9F%93%9A" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span class="wa-float-label">تواصل معنا</span>
+</a>
+<style>
+.wa-float{position:fixed;bottom:24px;right:24px;z-index:9999;display:flex;align-items:center;gap:9px;background:#25D366;color:white;padding:13px 18px;border-radius:50px;text-decoration:none;font-family:'Cairo',sans-serif;font-size:13px;font-weight:800;box-shadow:0 6px 24px rgba(37,211,102,.45);transition:transform .2s,box-shadow .2s;animation:wa-pulse 2.5s infinite}
+.wa-float:hover{transform:translateY(-4px) scale(1.04);box-shadow:0 12px 32px rgba(37,211,102,.55)}
+@keyframes wa-pulse{0%,100%{box-shadow:0 6px 24px rgba(37,211,102,.45)}50%{box-shadow:0 6px 32px rgba(37,211,102,.75)}}
+@media(max-width:768px){.wa-float{display:none}}
+</style>
+<button class="float-menu-btn" onclick="toggleSidebar()" aria-label="القائمة">
+  <span></span><span></span><span></span>
+</button>
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=FREE"></script>
+<script src="media/rv.js"></script>
+</body>
+</html>

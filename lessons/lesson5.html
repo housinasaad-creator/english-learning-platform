@@ -1,0 +1,1655 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 5: Days &amp; Telling the Time | MOHAMMED ELHUSEYIN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#1a3a6e;--primary-dark:#0f2548;--accent:#f4a624;--al:rgba(244,166,36,0.12);--bg:#0d1b2a;--card:#162030;--card2:#1e2d40;--border:#2d4560;--text:#e8edf5;--muted:#8899b0;--green:#22c55e;--red:#ef4444;--blue:#4a9eff;--purple:#a855f7}
+body{font-family:'Poppins','Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.ar{font-family:'Cairo','Segoe UI',Arial,sans-serif}
+.topnav{background:var(--primary-dark);border-bottom:2px solid var(--accent);padding:10px 24px;display:flex;align-items:center;justify-content:space-between}
+.hero{background:linear-gradient(135deg,#1a3a6e 0%,#0f2548 55%,#0d1f3c 100%);padding:55px 24px 48px;text-align:center;border-bottom:3px solid var(--accent);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;border-radius:50%;background:rgba(244,166,36,0.06)}
+.hero::after{content:'';position:absolute;bottom:-60px;left:-60px;width:300px;height:300px;border-radius:50%;background:rgba(74,158,255,0.05)}
+.unit-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(244,166,36,0.15);border:1px solid rgba(244,166,36,0.4);color:var(--accent);font-weight:800;padding:6px 18px;border-radius:20px;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
+.hero-title{font-size:clamp(28px,6vw,52px);font-weight:900;color:white;line-height:1.15;margin-bottom:8px}
+.hero-title i{color:var(--accent);font-style:italic}
+.hero-ar{font-size:18px;color:var(--muted);margin-bottom:12px;direction:rtl}
+.hero-sub{color:var(--muted);max-width:620px;margin:0 auto 22px;font-size:14px}
+.hero-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.tag{display:inline-flex;align-items:center;gap:6px;padding:6px 15px;border-radius:16px;font-size:12px;font-weight:700}
+.tag-grammar{background:rgba(244,166,36,0.15);color:var(--accent);border:1px solid rgba(244,166,36,0.3)}
+.tag-other{background:rgba(74,158,255,0.1);color:var(--blue);border:1px solid rgba(74,158,255,0.25)}
+.tag-btn{cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif}
+.tag-btn:hover{transform:translateY(-2px);opacity:.85}
+.main-tabs{display:flex;gap:4px;padding:14px 24px;background:var(--primary-dark);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;flex-wrap:wrap}
+.main-tab{padding:8px 18px;border-radius:8px;border:1px solid transparent;background:none;color:var(--muted);font-weight:700;cursor:pointer;font-size:13px;font-family:'Poppins',sans-serif;transition:all .2s}
+.main-tab.active{background:var(--accent);color:#0d1b2a;border-color:var(--accent)}
+.main-tab:hover:not(.active){background:rgba(244,166,36,.1);color:var(--accent);border-color:rgba(244,166,36,.3)}
+.tab-panel{display:none;padding:20px 24px}
+.tab-panel.active{display:block}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;margin-bottom:16px}
+.card-title{font-size:16px;font-weight:800;color:white;margin-bottom:5px;display:flex;align-items:center;gap:8px}
+.card-ar{font-size:13px;color:var(--muted);margin-bottom:14px;direction:rtl;font-family:'Cairo',sans-serif}
+.card-note{background:var(--al);border:1px solid rgba(244,166,36,.3);border-radius:10px;padding:10px 14px;font-size:12.5px;color:var(--accent);margin:10px 0;direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.sub-tabs{display:flex;gap:4px;margin:14px 0 18px;flex-wrap:wrap}
+.sub-tab{padding:6px 14px;border-radius:8px;border:1px solid var(--border);background:none;color:var(--muted);font-weight:700;cursor:pointer;font-size:12px;font-family:'Poppins',sans-serif;transition:all .2s}
+.sub-tab.active{background:rgba(244,166,36,.15);border-color:var(--accent);color:var(--accent)}
+.sub-tab:hover:not(.active){border-color:var(--accent);color:var(--accent)}
+.sub-panel{display:none}
+.sub-panel.active{display:block}
+.tts-box{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.tts-btn{background:var(--card2);border:1px solid var(--blue);color:var(--blue);padding:7px 16px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif}
+.tts-btn:hover{background:rgba(74,158,255,.15);transform:translateY(-1px)}
+.tts-stop{border-color:var(--muted);color:var(--muted)}
+.tts-stop:hover{background:rgba(136,153,176,.1)}
+.formula-box{background:rgba(10,30,53,0.8);border:2px solid var(--border);border-radius:14px;padding:18px 22px;margin:14px 0}
+.formula-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid rgba(45,69,96,0.4);flex-wrap:wrap}
+.formula-row:last-child{border-bottom:none}
+.formula-subj{font-size:14px;font-weight:800;color:var(--blue);min-width:160px}
+.formula-be{font-size:15px;font-weight:900;color:var(--accent);background:rgba(244,166,36,.12);padding:4px 12px;border-radius:8px}
+.formula-be.neg{color:var(--red);background:rgba(239,68,68,.1)}
+.formula-be.q{color:var(--green);background:rgba(34,197,94,.1)}
+.formula-note{font-size:11px;color:var(--muted);font-style:italic;margin-left:auto}
+.formula-plus{font-size:16px;color:var(--muted)}
+.ex-section-title{font-size:12px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin:16px 0 8px}
+.ex-list{margin-top:4px}
+.ex-item{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid rgba(45,69,96,0.3)}
+.ex-item:last-child{border-bottom:none}
+.sp{background:none;border:none;font-size:16px;cursor:pointer;color:var(--blue);flex-shrink:0;padding:2px 0;transition:transform .2s;line-height:1}
+.sp:hover{transform:scale(1.2)}
+.sp-group{display:inline-flex;align-items:center;gap:3px;flex-shrink:0}
+.sp-pp,.sp-st{background:var(--card2);border:1px solid var(--border);color:var(--muted);font-size:12px;padding:3px 7px;border-radius:6px;cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif;line-height:1;min-width:26px;text-align:center}
+.sp-pp:hover{background:rgba(74,158,255,.15);border-color:var(--blue);color:var(--blue)}
+.sp-st:hover{background:rgba(239,68,68,.1);border-color:var(--red);color:var(--red)}
+.ex-en{font-size:13.5px;color:var(--text);font-weight:600;line-height:1.4}
+.ex-en b{color:var(--accent)}
+.ex-ar{font-size:12px;color:var(--muted);margin-top:2px;direction:rtl;font-family:'Cairo',sans-serif}
+.sa-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13px}
+.sa-table th{background:rgba(26,58,110,0.5);color:var(--accent);padding:8px 12px;font-weight:800;text-align:left;border:1px solid var(--border)}
+.sa-table td{padding:8px 12px;border:1px solid rgba(45,69,96,0.4);vertical-align:middle}
+.sa-table tr:nth-child(even) td{background:rgba(30,45,64,0.3)}
+.sa-yes{color:var(--green);font-weight:800}
+.sa-no{color:var(--red);font-weight:800}
+.wh-grid{display:flex;flex-direction:column;gap:7px;margin:12px 0}
+.wh-row{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px;font-size:13px}
+.wh-q{color:var(--text);margin-bottom:3px}
+.wh-q b{color:var(--blue)}
+.wh-a{color:var(--muted);font-style:italic}
+.time-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;margin:12px 0}
+.time-item{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px}
+.time-en{font-size:13px;font-weight:700;color:var(--accent)}
+.time-ar{font-size:11px;color:var(--muted);margin-top:3px;direction:rtl;font-family:'Cairo',sans-serif}
+.time-eg{font-size:11px;color:var(--text);margin-top:4px;font-style:italic}
+.mistake-item{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.m-wrong{font-size:13px;color:var(--red);margin-bottom:3px}
+.m-wrong::before{content:'❌ '}
+.m-right{font-size:13px;color:var(--green);font-weight:700;margin-bottom:3px}
+.m-right::before{content:'✅ '}
+.m-why{font-size:11.5px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;border-top:1px solid rgba(45,69,96,.4);padding-top:5px;margin-top:5px}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:8px;margin-top:12px}
+.vocab-item{background:var(--card2);border:1px solid var(--border);border-radius:9px;padding:9px 12px;cursor:pointer;transition:border-color .2s}
+.vocab-item:hover{border-color:var(--accent)}
+.vocab-en{font-size:14px;font-weight:800;color:var(--text)}
+.vocab-past{font-size:11.5px;color:var(--accent);margin-top:2px;font-weight:700}
+.vocab-ar{font-size:11px;color:var(--muted);margin-top:3px;font-family:'Cairo',sans-serif;direction:rtl}
+.vs-wrap{overflow-x:auto;margin:18px 0;padding:4px 0}
+.vs-caption{font-size:11px;color:var(--muted);text-align:center;margin-top:8px;font-style:italic}
+.dlg-card{background:var(--card);border:1px solid var(--border);border-radius:16px;margin-bottom:16px;overflow:hidden}
+.dlg-header{background:linear-gradient(to right,var(--primary),#1a1a4e);padding:13px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.dlg-meta{flex:1}
+.dlg-num{font-size:10px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:2px}
+.dlg-title{font-weight:800;font-size:14px;color:white}
+.dlg-ctx{font-size:11px;color:rgba(255,255,255,.5);font-style:italic;margin-top:2px}
+.dlg-tts{background:rgba(244,166,36,.15);border:1px solid rgba(244,166,36,.4);color:var(--accent);padding:6px 14px;border-radius:8px;font-size:11px;font-weight:700;cursor:pointer;font-family:'Poppins',sans-serif;transition:all .2s;white-space:nowrap}
+.dlg-tts:hover{background:rgba(244,166,36,.3)}
+.dlg-body{padding:20px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:640px){.dlg-body{grid-template-columns:1fr}}
+.dlg-col-head{font-size:10px;font-weight:700;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+.bubble{padding:9px 13px;border-radius:12px;font-size:13px;line-height:1.55;margin-bottom:7px}
+.bubble-a{background:rgba(26,58,110,0.5);border:1px solid rgba(74,158,255,0.2)}
+.bubble-b{background:var(--card2);border:1px solid var(--border)}
+.bubble-name{font-size:9px;font-weight:800;color:var(--muted);margin-bottom:4px;letter-spacing:.5px;text-transform:uppercase}
+.bubble-name.b{color:var(--accent)}
+.bubble-ar{direction:rtl;font-family:'Cairo',sans-serif;font-size:13px;color:var(--text)}
+.layout{display:flex;min-height:100vh}
+.sidebar{width:30%;max-width:320px;min-width:220px;position:fixed;top:0;left:0;bottom:0;background:var(--primary-dark);border-right:2px solid var(--border);display:flex;flex-direction:column;z-index:200;overflow:hidden}
+.sidebar-header{padding:18px 20px 14px;border-bottom:2px solid var(--accent);flex-shrink:0}
+.sidebar-logo{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+.sidebar-logo-icon{width:34px;height:34px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900;color:#0d1b2a;flex-shrink:0}
+.sidebar-logo-text{font-family:'Cairo',sans-serif;font-size:15px;font-weight:800;color:white}
+.sidebar-logo-sub{font-size:10px;color:var(--muted);font-weight:500;margin-top:-1px}
+.sidebar-label{font-family:'Cairo',sans-serif;font-size:11px;font-weight:700;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-top:12px}
+.sidebar-units{flex:1;overflow-y:auto;padding:10px 12px;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+.sidebar-units::-webkit-scrollbar{width:4px}
+.sidebar-units::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+.su-item{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;text-decoration:none;margin-bottom:4px;transition:background .2s,transform .2s}
+.su-item:not(.su-locked):hover{background:rgba(244,166,36,0.12);transform:translateX(3px)}
+.su-item.su-locked{opacity:.45;cursor:default;pointer-events:none}
+.su-item.su-active{background:rgba(244,166,36,0.15);border:1px solid rgba(244,166,36,0.3)}
+.su-num{width:28px;height:28px;border-radius:7px;background:rgba(255,255,255,0.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:var(--accent);flex-shrink:0}
+.su-item:not(.su-locked) .su-num{background:rgba(244,166,36,0.12);border-color:rgba(244,166,36,0.3)}
+.su-texts{flex:1;min-width:0}
+.su-en{font-size:13px;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.su-ar{font-family:'Cairo',sans-serif;font-size:11px;color:var(--muted);direction:rtl;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.su-check{font-size:12px;flex-shrink:0}
+.su-lock{font-size:11px;color:var(--muted);flex-shrink:0}
+.main-content{margin-left:min(30%,320px);flex:1;min-width:0}
+footer{padding:20px 24px;text-align:center;color:var(--muted);font-size:12px;border-top:1px solid var(--border);margin-top:10px}
+
+/* ══ Hamburger (desktop: hidden) ══ */
+.nav-hamburger{display:none;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.3);border-radius:8px;cursor:pointer;flex-direction:column;gap:5px;padding:8px;flex-shrink:0;margin-left:6px}
+.nav-hamburger span{display:block;width:100%;height:2px;background:var(--accent);border-radius:2px}
+/* Backdrop */
+.sb-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:199}
+.sb-backdrop.sb-open{display:block}
+@media(max-width:768px){
+  .sidebar{position:fixed;left:-100%;width:82%;max-width:300px;min-width:unset;transition:left .3s ease;z-index:200}
+  .sidebar.sb-open{left:0}
+  .main-content{margin-left:0}
+  .nav-brand{display:none}
+  .nav-hamburger{display:flex}
+  .topnav{padding:10px 12px;gap:6px}
+  .nav-lesson-name{display:none}
+  .nav-left{gap:5px}
+  .hero{padding:22px 13px 20px}
+  .hero-title{font-size:22px;letter-spacing:-.5px}
+  .hero-ar{font-size:12px}
+  .hero-sub{font-size:12px}
+  .hero-tags{gap:5px;justify-content:center}
+  .tag{font-size:10px;padding:3px 9px}
+  .rule-section{padding:0 12px}
+  .read-wrap{padding:0 12px}
+  .ci-wrap{padding:12px 12px}
+  .ci-hero{padding:18px 12px}
+  .dlg-block{padding:0 12px}
+  .eu-cat-grid{grid-template-columns:1fr}
+  .nu-scale{gap:3px}
+  .nu-word{font-size:10px;padding:3px 7px}
+  .nu-cmp-head,.nu-cmp-row{grid-template-columns:1fr 1fr;font-size:10px}
+  .nu-cmp-head span:last-child,.nu-cmp-row span:last-child{display:none}
+  .reg-ladder{padding:10px 12px}
+  .cmp-table{font-size:11px}
+  .chat-wrap{padding:0 4px}
+  .ci-q{margin-bottom:10px}
+  .ci-opts{gap:5px}
+  .ci-btn{font-size:12px;padding:9px 10px}
+  .vocab-grid{grid-template-columns:1fr 1fr}
+  .rq-opts{gap:5px}
+}
+
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+/* some/any pill styles */
+.pill-wrap{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.pill{padding:5px 14px;border-radius:20px;font-size:12.5px;font-weight:800}
+.pill-green{background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.35);color:var(--green)}
+.pill-blue{background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.3);color:var(--blue)}
+.pill-red{background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3);color:var(--red)}
+/* Reading */
+.read-tts-bar{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;align-items:center}
+.read-label{font-size:12px;font-weight:700;color:var(--muted)}
+.read-pass{background:var(--card2);border:1px solid var(--border);border-radius:14px;padding:22px;font-size:14px;line-height:1.9;margin-bottom:24px}
+.read-pass p{margin-bottom:12px}
+.read-pass p:last-child{margin-bottom:0}
+.read-pass b{color:var(--accent);font-weight:700}
+.comp-section-title{font-size:14px;font-weight:800;color:var(--accent);margin-bottom:14px;text-transform:uppercase;letter-spacing:1px}
+.read-q{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:12px}
+.read-q-text{font-weight:700;font-size:14px;margin-bottom:12px;color:var(--text);line-height:1.4}
+.read-opts{display:flex;flex-direction:column;gap:7px}
+.read-opt{background:var(--card2);border:1px solid var(--border);color:var(--text);padding:9px 14px;border-radius:8px;font-size:13px;cursor:pointer;text-align:left;font-family:'Poppins',sans-serif;transition:all .2s;display:flex;align-items:center;gap:8px}
+.read-opt:hover:not(.done){background:rgba(244,166,36,.06);border-color:rgba(244,166,36,.35);transform:translateY(-1px)}
+.read-opt.correct{background:rgba(34,197,94,.12);border-color:var(--green);color:var(--green)}
+.read-opt.wrong{background:rgba(239,68,68,.12);border-color:var(--red);color:var(--red)}
+.read-opt.done{cursor:default;transform:none!important}
+.read-ctx{background:linear-gradient(135deg,rgba(26,58,110,.55),rgba(15,37,72,.55));border:1px solid rgba(244,166,36,.22);border-radius:14px;padding:16px 22px;margin-bottom:20px;display:flex;flex-wrap:wrap;gap:20px;align-items:center}
+.read-ctx-fact{display:flex;flex-direction:column;gap:2px}
+.read-ctx-label{font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+.read-ctx-val{font-size:13.5px;font-weight:800;color:var(--text)}
+.read-ctx-sep{width:1px;background:var(--border);align-self:stretch}
+.read-vocab-wrap{margin:18px 0}
+.read-vocab-title{font-size:11px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.read-vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:7px}
+.read-vocab-item{background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:8px 12px}
+.read-vocab-en{font-size:13px;font-weight:700;color:var(--accent)}
+.read-vocab-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-top:2px}
+/* Check It */
+.ci-hero{background:linear-gradient(135deg,#12285a 0%,#1a1242 60%,#0d1b2a 100%);padding:36px 24px 30px;text-align:center;border-bottom:2px solid var(--accent)}
+.ci-hero-icon{font-size:38px;margin-bottom:10px}
+.ci-hero-title{font-size:clamp(22px,5vw,36px);font-weight:900;color:white;margin-bottom:6px}
+.ci-hero-sub{color:var(--muted);font-size:13px;max-width:460px;margin:0 auto}
+.ci-hero-types{display:flex;gap:10px;justify-content:center;margin-top:14px;flex-wrap:wrap}
+.ci-progress-wrap{background:var(--primary-dark);padding:10px 24px;border-bottom:1px solid var(--border);position:sticky;top:52px;z-index:99}
+.ci-progress-inner{max-width:760px;margin:0 auto}
+.ci-progress-bar{background:rgba(255,255,255,.07);border-radius:20px;height:7px;overflow:hidden;margin-bottom:5px}
+.ci-progress-fill{background:linear-gradient(90deg,var(--accent),var(--blue));height:100%;border-radius:20px;transition:width .4s ease;width:0%}
+.ci-progress-txt{font-size:11px;color:var(--muted);font-weight:700;display:flex;justify-content:space-between}
+.ci-wrap{max-width:100%;padding:12px 16px}
+.ci-q{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px 14px;margin-bottom:7px;transition:border-color .2s;border-left:3px solid rgba(244,166,36,.4)}
+.ci-q.ci-fib-q{border-left-color:rgba(74,158,255,.5)}
+.ci-q-head{display:flex;align-items:center;gap:6px;margin-bottom:9px;flex-wrap:nowrap}
+.ci-q-num{width:22px;height:22px;border-radius:50%;background:rgba(244,166,36,.18);border:1.5px solid rgba(244,166,36,.4);color:var(--accent);font-size:10px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ci-fib-q .ci-q-num{background:rgba(74,158,255,.15);border-color:rgba(74,158,255,.4);color:var(--blue)}
+.ci-q-tag{background:rgba(244,166,36,.08);border:1px solid rgba(244,166,36,.18);color:var(--accent);font-size:9px;font-weight:800;padding:2px 8px;border-radius:8px;text-transform:uppercase;letter-spacing:.4px;white-space:nowrap}
+.ci-type-badge{font-size:9px;font-weight:800;padding:2px 8px;border-radius:8px;text-transform:uppercase;letter-spacing:.4px;margin-left:auto;flex-shrink:0}
+.ci-type-mcq{background:rgba(244,166,36,.12);border:1px solid rgba(244,166,36,.25);color:var(--accent)}
+.ci-type-fib{background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.25);color:var(--blue)}
+.ci-q-prompt{font-size:12px;color:var(--muted);font-style:italic;margin-bottom:8px;padding:5px 10px;background:rgba(255,255,255,.03);border-left:2px solid var(--border);border-radius:0 6px 6px 0}
+.ci-opts{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.ci-btn{background:var(--card2);border:1.5px solid var(--border);color:var(--text);padding:9px 12px;border-radius:9px;font-size:12.5px;cursor:pointer;text-align:left;font-family:'Poppins',sans-serif;transition:all .2s;display:flex;align-items:center;gap:9px;line-height:1.35;width:100%}
+.ci-btn:hover:not(.done){background:rgba(244,166,36,.07);border-color:rgba(244,166,36,.45);transform:translateY(-2px)}
+.ci-btn.ci-correct{background:rgba(34,197,94,.1);border-color:var(--green);color:var(--green)}
+.ci-btn.ci-wrong{background:rgba(239,68,68,.1);border-color:var(--red);color:var(--red)}
+.ci-lbl{font-size:11px;font-weight:900;background:rgba(255,255,255,.09);border-radius:5px;padding:2px 7px;flex-shrink:0;min-width:22px;text-align:center}
+.ci-btn.ci-correct .ci-lbl{background:rgba(34,197,94,.2);color:var(--green)}
+.ci-btn.ci-wrong .ci-lbl{background:rgba(239,68,68,.2);color:var(--red)}
+.ci-fib-sent{font-size:13.5px;color:var(--text);font-weight:600;line-height:1.7;margin-bottom:9px}
+.ci-fib-sent b{color:var(--accent)}
+.ci-fib-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:4px}
+.ci-fib-input{background:var(--card2);border:2px solid var(--border);color:var(--text);padding:7px 13px;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;outline:none;min-width:160px;max-width:260px;transition:border-color .2s}
+.ci-fib-input:focus{border-color:var(--accent);background:rgba(244,166,36,.04)}
+.ci-fib-check{background:var(--accent);border:none;color:#0d1b2a;padding:7px 18px;border-radius:8px;font-weight:800;cursor:pointer;font-size:12px;font-family:'Poppins',sans-serif;transition:all .2s;flex-shrink:0}
+.ci-fib-check:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 4px 12px rgba(244,166,36,.3)}
+.ci-fib-check:disabled{opacity:.35;cursor:default;transform:none!important}
+.ci-hint{font-size:10.5px;color:var(--muted);font-style:italic;margin-top:3px}
+.ci-sol{display:none;margin-top:9px;border-radius:9px;overflow:hidden;animation:fadeIn .3s ease}
+.ci-sol-head{padding:7px 12px;font-size:11.5px;font-weight:800;border-bottom:1px solid rgba(255,255,255,.05)}
+.ci-sol-body{padding:8px 12px;display:flex;flex-direction:column;gap:4px}
+.ci-sol-ans{font-size:12.5px;font-weight:700;color:var(--accent)}
+.ci-sol-exp{font-size:11.5px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.ci-brk{display:none;background:linear-gradient(135deg,#12285a,#1a1242);border:2px solid var(--accent);border-radius:20px;padding:28px 24px;margin:16px 0;text-align:center;animation:fadeIn .5s ease;position:relative;overflow:hidden}
+.ci-brk::before{content:'';position:absolute;top:-50px;right:-50px;width:200px;height:200px;border-radius:50%;background:rgba(244,166,36,.07);pointer-events:none}
+.ci-brk-emoji{font-size:44px;margin-bottom:10px}
+.ci-brk-title{font-size:17px;font-weight:900;color:var(--accent);margin-bottom:16px}
+.ci-brk-cols{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:580px;margin:0 auto;text-align:left}
+@media(max-width:580px){.ci-brk-cols{grid-template-columns:1fr}}
+.ci-brk-col{background:rgba(255,255,255,.04);border:1px solid rgba(244,166,36,.2);border-radius:12px;padding:14px 16px}
+.ci-brk-col-title{font-size:10px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid rgba(244,166,36,.2)}
+.ci-brk-text{font-size:13px;color:var(--text);line-height:1.75}
+.ci-brk-text b{color:var(--accent)}
+.ci-brk-ar{font-size:12px;color:var(--muted);margin-top:14px;direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.ci-score{display:none;background:linear-gradient(135deg,#0f2548,#1a1242);border:2px solid var(--accent);border-radius:24px;padding:44px 32px;text-align:center;margin-top:24px;position:relative;overflow:hidden;animation:fadeIn .6s ease}
+.ci-score::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,rgba(244,166,36,.07) 0%,transparent 65%);pointer-events:none}
+.ci-score-emoji{font-size:60px;margin-bottom:14px}
+.ci-score-num{font-size:68px;font-weight:900;color:var(--accent);line-height:1;margin-bottom:4px}
+.ci-score-of{font-size:18px;color:var(--muted);margin-bottom:18px}
+.ci-score-bar-wrap{background:rgba(255,255,255,.06);border-radius:20px;height:10px;max-width:320px;margin:0 auto 24px;overflow:hidden}
+.ci-score-bar-fill{height:100%;border-radius:20px;background:linear-gradient(90deg,var(--accent),var(--green));transition:width 1.2s ease;width:0%}
+.ci-score-msg{font-size:18px;font-weight:900;color:white;margin-bottom:6px}
+.ci-score-ar{font-size:14px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;margin-bottom:24px;line-height:1.6}
+.ci-reset{background:var(--accent);border:none;color:#0d1b2a;padding:13px 32px;border-radius:12px;font-weight:900;cursor:pointer;font-family:'Poppins',sans-serif;font-size:14px;transition:all .25s;letter-spacing:.5px}
+.ci-reset:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(244,166,36,.35)}
+.chat-wrap{padding:18px 24px 26px;display:flex;flex-direction:column;gap:14px;background-image:radial-gradient(circle,rgba(244,166,36,0.22) 1.5px,transparent 1.5px),radial-gradient(circle,rgba(74,158,255,0.22) 1.5px,transparent 1.5px);background-size:28px 28px;background-position:0 0,14px 14px}
+.chat-msg{display:flex;flex-direction:column;max-width:70%}
+.chat-msg.right{align-self:flex-end;align-items:flex-end}
+.chat-msg.left{align-self:flex-start;align-items:flex-start}
+.chat-name-tag{font-size:11px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;margin-bottom:5px;padding:0 4px}
+.chat-msg.right .chat-name-tag{color:var(--accent)}
+.chat-msg.left .chat-name-tag{color:var(--blue)}
+.chat-bubble{padding:14px 17px 10px;border-radius:20px;width:100%}
+.chat-msg.right .chat-bubble{background:rgba(55,36,6,0.75);border:1px solid rgba(244,166,36,0.4);border-bottom-right-radius:4px;box-shadow:0 6px 28px rgba(0,0,0,0.65),0 0 18px rgba(244,166,36,0.22)}
+.chat-msg.left .chat-bubble{background:rgba(12,32,72,0.8);border:1px solid rgba(74,158,255,0.35);border-bottom-left-radius:4px;box-shadow:0 6px 28px rgba(0,0,0,0.65),0 0 18px rgba(74,158,255,0.20)}
+.chat-en{font-size:15px;color:var(--text);line-height:1.65;font-weight:500}
+.chat-en b{color:var(--accent)}
+.chat-msg.left .chat-en b{color:var(--blue)}
+.chat-ar{font-size:14px;color:rgba(232,237,245,0.8);direction:rtl;font-family:'Cairo',sans-serif;line-height:1.75;border-top:1px solid rgba(255,255,255,0.09);padding-top:9px;margin-top:9px}
+.chat-bubble-foot{display:flex;justify-content:flex-end;margin-top:9px;padding-top:7px;border-top:1px solid rgba(255,255,255,0.07)}
+.chat-sp-btn{font-size:14px;cursor:pointer;padding:5px 13px;border-radius:20px;transition:all .2s;line-height:1;font-weight:700;letter-spacing:.3px}
+.chat-msg.right .chat-sp-btn{background:rgba(244,166,36,0.18);border:1px solid rgba(244,166,36,0.45);color:var(--accent)}
+.chat-msg.left .chat-sp-btn{background:rgba(74,158,255,0.15);border:1px solid rgba(74,158,255,0.4);color:var(--blue)}
+.chat-sp-btn:hover{transform:scale(1.08);filter:brightness(1.25)}
+.su-prog{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:6px;overflow:hidden}
+.su-prog-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:2px;width:0%;transition:width .6s ease}
+
+.su-level-hd{padding:8px 12px 5px;margin-top:8px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(255,255,255,.05)}
+.su-level-code{font-size:11px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;padding:2px 8px;border-radius:5px;display:inline-block}
+.su-level-name{font-family:'Cairo',sans-serif;font-size:12px;font-weight:700;color:#f4c430;direction:rtl;margin:0;line-height:1}
+.lvl-a1{background:rgba(52,211,153,.15);color:#34d399;border:1px solid rgba(52,211,153,.35)}
+.lvl-a2{background:rgba(74,158,255,.15);color:#4a9eff;border:1px solid rgba(74,158,255,.35)}
+.lvl-b1{background:rgba(245,158,11,.15);color:#f59e0b;border:1px solid rgba(245,158,11,.35)}
+.lvl-b2{background:rgba(244,166,36,.15);color:var(--accent);border:1px solid rgba(244,166,36,.35)}
+.lvl-b2p{background:rgba(251,146,60,.15);color:#fb923c;border:1px solid rgba(251,146,60,.35)}
+.lvl-c1{background:rgba(168,85,247,.15);color:#a855f7;border:1px solid rgba(168,85,247,.35)}
+.su-coming{opacity:.28;cursor:default;pointer-events:none}
+.su-prog{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:6px;overflow:hidden}
+.su-prog-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:2px;width:0%;transition:width .6s ease}
+
+/* Lesson 1 specific styles */
+.alpha-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(68px,1fr));gap:8px;margin:18px 0}
+.alpha-card{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:12px 8px;text-align:center;cursor:pointer;transition:all .22s;position:relative}
+.alpha-card:hover{transform:translateY(-3px);border-color:var(--accent);background:rgba(244,166,36,.08)}
+.alpha-card.vowel{border-color:rgba(244,166,36,.5);background:rgba(244,166,36,.07)}
+.alpha-card.vowel:hover{background:rgba(244,166,36,.15)}
+.alpha-up{font-size:22px;font-weight:900;color:var(--text);line-height:1}
+.alpha-lo{font-size:14px;color:var(--muted);margin:2px 0}
+.alpha-ar{font-size:10px;color:var(--accent);font-family:'Cairo',sans-serif;margin-top:4px}
+.alpha-card.vowel .alpha-up{color:var(--accent)}
+.vowel-badge{display:inline-block;background:rgba(244,166,36,.15);border:1px solid rgba(244,166,36,.4);color:var(--accent);font-size:10px;font-weight:800;padding:2px 8px;border-radius:10px;margin-right:4px}
+.cons-badge{display:inline-block;background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.3);color:var(--blue);font-size:10px;font-weight:800;padding:2px 8px;border-radius:10px;margin-right:4px}
+.num-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:9px;margin:14px 0}
+.num-card{background:var(--card2);border:1px solid var(--border);border-radius:11px;padding:12px 14px;cursor:pointer;transition:all .2s}
+.num-card:hover{transform:translateY(-2px);border-color:var(--blue)}
+.num-digit{font-size:22px;font-weight:900;color:var(--blue);line-height:1}
+.num-word{font-size:13px;font-weight:700;color:var(--text);margin-top:3px}
+.num-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-top:3px}
+.num-grid-sm{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:8px;margin:14px 0}
+.num-sm{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:9px 12px;cursor:pointer;transition:all .2s}
+.num-sm:hover{border-color:var(--blue);transform:translateY(-2px)}
+.num-sm .num-digit{font-size:17px}
+.num-sm .num-word{font-size:12px}
+.ord-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin:14px 0}
+.ord-card{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px;cursor:pointer;transition:all .2s}
+.ord-card:hover{border-color:var(--purple);transform:translateY(-2px)}
+.ord-num{font-size:18px;font-weight:900;color:var(--purple);line-height:1}
+.ord-word{font-size:12.5px;font-weight:700;color:var(--text);margin-top:3px}
+.ord-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-top:3px}
+.rule-box{background:linear-gradient(135deg,rgba(168,85,247,.12),rgba(74,158,255,.08));border:1px solid rgba(168,85,247,.3);border-radius:14px;padding:16px 20px;margin:14px 0}
+.rule-title{font-size:12px;font-weight:800;color:#a855f7;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.rule-body{font-size:13px;color:var(--text);line-height:1.75}
+.rule-body b{color:#a855f7}
+.rule-body .eg{color:var(--accent);font-style:italic}
+
+
+/* Lesson 5 specific */
+.day-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;margin:12px 0}
+.day-card{background:var(--card2);border:1px solid var(--border);border-radius:11px;padding:12px 16px;display:flex;align-items:center;gap:12px;cursor:pointer;transition:all .2s}
+.day-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.day-num{width:28px;height:28px;border-radius:8px;background:rgba(244,166,36,.15);border:1px solid rgba(244,166,36,.3);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;color:var(--accent);flex-shrink:0}
+.day-en{font-size:14px;font-weight:800;color:var(--text)}
+.day-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl}
+.day-weekend{border-color:rgba(34,197,94,.25)}
+.day-weekend .day-num{background:rgba(34,197,94,.1);border-color:rgba(34,197,94,.3);color:var(--green)}
+.month-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:8px;margin:12px 0}
+.month-card{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px;cursor:pointer;transition:all .2s}
+.month-card:hover{border-color:var(--blue);transform:translateY(-2px)}
+.month-num{font-size:10px;color:var(--muted);font-weight:700;margin-bottom:2px}
+.month-en{font-size:13px;font-weight:800;color:var(--blue)}
+.month-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-top:2px}
+.clock-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin:12px 0}
+.clock-card{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:14px 18px;cursor:pointer;transition:all .2s}
+.clock-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.clock-time{font-size:22px;font-weight:900;color:var(--accent);font-family:monospace;margin-bottom:4px}
+.clock-say{font-size:13px;font-weight:700;color:var(--text);margin-bottom:2px}
+.clock-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl}
+.ord-grid{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.ord-chip{background:var(--card2);border:1px solid var(--border);border-radius:9px;padding:7px 14px;cursor:pointer;transition:all .2s;text-align:center}
+.ord-chip:hover{border-color:var(--blue)}
+.ord-en{font-size:13px;font-weight:800;color:var(--blue)}
+.ord-ar{font-size:10px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-top:2px}
+.expr-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;margin:10px 0}
+.expr-card{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px;cursor:pointer;transition:all .2s}
+.expr-card:hover{border-color:var(--accent)}
+.expr-en{font-size:13px;font-weight:700;color:var(--text)}
+.expr-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-top:3px}
+.rule-section{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px 22px;margin-bottom:14px}
+.rule-title{font-size:15px;font-weight:800;color:var(--accent);margin-bottom:4px;display:flex;align-items:center;gap:8px}
+.rule-ar{font-size:12px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-bottom:14px}
+.rule-box{background:rgba(74,158,255,.07);border:1px solid rgba(74,158,255,.3);border-radius:10px;padding:12px 16px;margin:10px 0;font-size:13px;color:var(--text);line-height:1.7}
+.rule-box b{color:var(--blue)}
+
+
+.nav-home-btn{display:inline-flex;align-items:center;gap:6px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.4);color:var(--accent);font-size:12px;font-weight:800;padding:5px 13px;border-radius:8px;text-decoration:none;transition:all .2s;white-space:nowrap;flex-shrink:0}
+.nav-home-btn:hover{background:rgba(244,166,36,.25);transform:translateY(-2px)}
+.nav-lesson-badge{background:var(--accent);color:#0a1628;font-size:12px;font-weight:900;padding:5px 13px;border-radius:7px;white-space:nowrap;letter-spacing:.3px;flex-shrink:0}
+.nav-lesson-name{font-size:13px;color:rgba(232,237,245,.7);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-sep{color:rgba(136,153,176,.5);font-size:13px;flex-shrink:0}
+.nav-left{display:flex;align-items:center;gap:8px;flex:1;min-width:0}
+.nav-right{display:flex;align-items:center;flex-shrink:0}
+</style>
+
+<style>
+/* Watermark on print */
+@media print {
+  body::before {
+    content: 'Mohammed Elhuseyin — English Learning Platform — محمية الحقوق';
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-35deg);
+    font-size: 48px;
+    font-weight: 900;
+    color: rgba(244,166,36,0.18);
+    z-index: 9999;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+}
+</style>
+
+<style>
+.float-menu-btn{display:none;position:fixed;bottom:22px;left:18px;z-index:9998;width:48px;height:48px;background:var(--primary-dark,#0f2548);border:2px solid rgba(244,166,36,.5);border-radius:14px;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:12px;box-shadow:0 4px 20px rgba(0,0,0,.4);transition:transform .15s,box-shadow .15s}
+.float-menu-btn:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,.5)}
+.float-menu-btn span{display:block;width:22px;height:2px;background:#f4a624;border-radius:2px;transition:all .25s}
+@media(max-width:768px){.float-menu-btn{display:flex}}
+</style>
+</head>
+<body>
+
+<div class="layout">
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-logo">
+      <div class="sidebar-logo-icon">A</div>
+      <div>
+        <div class="sidebar-logo-text">English Course</div>
+        <div class="sidebar-logo-sub">MOHAMMED ELHUSEYIN</div>
+      </div>
+    </div>
+    <div class="sidebar-label">All Lessons</div>
+  </div>
+  <div class="sidebar-units">
+  <div class="su-level-hd"><span class="su-level-code lvl-a1">A1</span><span class="su-level-name">مستوى المبتدئ تماماً</span></div>
+  <a href="lesson1.html" class="su-item"><div class="su-num">1</div><div class="su-texts"><div class="su-en">Alphabet & Numbers</div><div class="su-ar">الأحرف والأرقام</div><div class="su-prog"><div class="su-prog-fill" id="sp1"></div></div></div></a>
+  <a href="lesson2.html" class="su-item"><div class="su-num">2</div><div class="su-texts"><div class="su-en">Classroom Language & Greetings</div><div class="su-ar">لغة الصف والتحيات</div><div class="su-prog"><div class="su-prog-fill" id="sp2"></div></div></div></a>
+  <a href="lesson3.html" class="su-item"><div class="su-num">3</div><div class="su-texts"><div class="su-en">Nationalities & Countries</div><div class="su-ar">الجنسيات والدول</div><div class="su-prog"><div class="su-prog-fill" id="sp3"></div></div></div></a>
+  <a href="lesson4.html" class="su-item"><div class="su-num">4</div><div class="su-texts"><div class="su-en">Singular & Plural Nouns</div><div class="su-ar">الأسماء المفردة والجمع</div><div class="su-prog"><div class="su-prog-fill" id="sp4"></div></div></div></a>
+  <a href="lesson5.html" class="su-item su-active"><div class="su-num">5</div><div class="su-texts"><div class="su-en">Days & Telling the Time</div><div class="su-ar">الأيام وإخبار الوقت</div><div class="su-prog"><div class="su-prog-fill" id="sp5"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-a2">A2</span><span class="su-level-name">المستوى الابتدائي</span></div>
+  <a href="unit1.html" class="su-item"><div class="su-num">6</div><div class="su-texts"><div class="su-en">Verb to <i>be</i></div><div class="su-ar">فعل التكوين</div><div class="su-prog"><div class="su-prog-fill" id="sp6"></div></div></div></a>
+  <a href="unit2.html" class="su-item"><div class="su-num">7</div><div class="su-texts"><div class="su-en">Present Simple</div><div class="su-ar">المضارع البسيط</div><div class="su-prog"><div class="su-prog-fill" id="sp7"></div></div></div></a>
+  <a href="unit3.html" class="su-item"><div class="su-num">8</div><div class="su-texts"><div class="su-en">Present Continuous</div><div class="su-ar">المضارع المستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp8"></div></div></div></a>
+  <a href="unit4.html" class="su-item"><div class="su-num">9</div><div class="su-texts"><div class="su-en">Past Simple: was / were</div><div class="su-ar">الماضي البسيط: كان</div><div class="su-prog"><div class="su-prog-fill" id="sp9"></div></div></div></a>
+  <a href="unit6.html" class="su-item"><div class="su-num">10</div><div class="su-texts"><div class="su-en">Past Simple: Regular & Irreg.</div><div class="su-ar">الماضي البسيط للأفعال</div><div class="su-prog"><div class="su-prog-fill" id="sp10"></div></div></div></a>
+  <a href="unit5.html" class="su-item"><div class="su-num">11</div><div class="su-texts"><div class="su-en">Can / Can't</div><div class="su-ar">القدرة والعجز</div><div class="su-prog"><div class="su-prog-fill" id="sp11"></div></div></div></a>
+  <a href="lesson12.html" class="su-item"><div class="su-num">12</div><div class="su-texts"><div class="su-en">Possessive Pronouns</div><div class="su-ar">ضمائر الملكية</div><div class="su-prog"><div class="su-prog-fill" id="sp12"></div></div></div></a>
+  <a href="unit7.html" class="su-item"><div class="su-num">13</div><div class="su-texts"><div class="su-en">There is / There are</div><div class="su-ar">يوجد / توجد</div><div class="su-prog"><div class="su-prog-fill" id="sp13"></div></div></div></a>
+  <a href="unit8.html" class="su-item"><div class="su-num">14</div><div class="su-texts"><div class="su-en">Adjectives</div><div class="su-ar">الصفات</div><div class="su-prog"><div class="su-prog-fill" id="sp14"></div></div></div></a>
+  <a href="unit9.html" class="su-item"><div class="su-num">15</div><div class="su-texts"><div class="su-en">Imperatives</div><div class="su-ar">صيغة الأمر والنهي</div><div class="su-prog"><div class="su-prog-fill" id="sp15"></div></div></div></a>
+  <a href="unit10.html" class="su-item"><div class="su-num">16</div><div class="su-texts"><div class="su-en">Object Pronouns</div><div class="su-ar">ضمائر المفعول به</div><div class="su-prog"><div class="su-prog-fill" id="sp16"></div></div></div></a>
+  <a href="unit11.html" class="su-item"><div class="su-num">17</div><div class="su-texts"><div class="su-en">Prepositions of Time & Place</div><div class="su-ar">حروف جر الوقت والمكان</div><div class="su-prog"><div class="su-prog-fill" id="sp17"></div></div></div></a>
+  <a href="unit12.html" class="su-item"><div class="su-num">18</div><div class="su-texts"><div class="su-en">Future Plans: going to</div><div class="su-ar">خطط المستقبل</div><div class="su-prog"><div class="su-prog-fill" id="sp18"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b1">B1</span><span class="su-level-name">تحت المتوسط</span></div>
+  <a href="lesson19.html" class="su-item"><div class="su-num">19</div><div class="su-texts"><div class="su-en">Present Perfect Introduction</div><div class="su-ar">مقدمة المضارع التام</div><div class="su-prog"><div class="su-prog-fill" id="sp19"></div></div></div></a>
+  <a href="lesson20.html" class="su-item"><div class="su-num">20</div><div class="su-texts"><div class="su-en">Past Continuous</div><div class="su-ar">الماضي المستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp20"></div></div></div></a>
+  <a href="lesson21.html" class="su-item"><div class="su-num">21</div><div class="su-texts"><div class="su-en">will vs. going to</div><div class="su-ar">المستقبل: إرادة أم تخطيط؟</div><div class="su-prog"><div class="su-prog-fill" id="sp21"></div></div></div></a>
+  <a href="lesson22.html" class="su-item"><div class="su-num">22</div><div class="su-texts"><div class="su-en">like / love / hate + -ing</div><div class="su-ar">التعبير عن التفضيلات</div><div class="su-prog"><div class="su-prog-fill" id="sp22"></div></div></div></a>
+  <a href="lesson23.html" class="su-item"><div class="su-num">23</div><div class="su-texts"><div class="su-en">Comparatives & Superlatives</div><div class="su-ar">المقارنة والتفضيل</div><div class="su-prog"><div class="su-prog-fill" id="sp23"></div></div></div></a>
+  <a href="lesson24.html" class="su-item"><div class="su-num">24</div><div class="su-texts"><div class="su-en">must / have to / should</div><div class="su-ar">أفعال الإلزام والنصيحة</div><div class="su-prog"><div class="su-prog-fill" id="sp24"></div></div></div></a>
+  <a href="lesson25.html" class="su-item"><div class="su-num">25</div><div class="su-texts"><div class="su-en">Infinitives & Gerunds</div><div class="su-ar">المصدر وصيغة الـ ing</div><div class="su-prog"><div class="su-prog-fill" id="sp25"></div></div></div></a>
+  <a href="lesson26.html" class="su-item"><div class="su-num">26</div><div class="su-texts"><div class="su-en">Articles: a/an / the</div><div class="su-ar">أدوات التعريف والتنكير</div><div class="su-prog"><div class="su-prog-fill" id="sp26"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b2">B2</span><span class="su-level-name">المستوى المتوسط</span></div>
+  <a href="lesson27.html" class="su-item"><div class="su-num">27</div><div class="su-texts"><div class="su-en">Present Perfect vs. Past Simple</div><div class="su-ar">المقارنة بين الماضي والتام</div><div class="su-prog"><div class="su-prog-fill" id="sp27"></div></div></div></a>
+  <a href="lesson28.html" class="su-item"><div class="su-num">28</div><div class="su-texts"><div class="su-en">Passive Voice</div><div class="su-ar">المبني للمجهول</div><div class="su-prog"><div class="su-prog-fill" id="sp28"></div></div></div></a>
+  <a href="lesson29.html" class="su-item"><div class="su-num">29</div><div class="su-texts"><div class="su-en">Zero / First / Second Cond.</div><div class="su-ar">الجمل الشرطية 0-1-2</div><div class="su-prog"><div class="su-prog-fill" id="sp29"></div></div></div></a>
+  <a href="lesson30.html" class="su-item"><div class="su-num">30</div><div class="su-texts"><div class="su-en">Reported Speech</div><div class="su-ar">الكلام غير المباشر</div><div class="su-prog"><div class="su-prog-fill" id="sp30"></div></div></div></a>
+  <a href="lesson31.html" class="su-item"><div class="su-num">31</div><div class="su-texts"><div class="su-en">Relative Clauses</div><div class="su-ar">جمل الوصل: who / which</div><div class="su-prog"><div class="su-prog-fill" id="sp31"></div></div></div></a>
+  <a href="lesson32.html" class="su-item"><div class="su-num">32</div><div class="su-texts"><div class="su-en">Quantifiers</div><div class="su-ar">محددات الكمية</div><div class="su-prog"><div class="su-prog-fill" id="sp32"></div></div></div></a>
+  <a href="lesson33.html" class="su-item"><div class="su-num">33</div><div class="su-texts"><div class="su-en">Phrasal Verbs Introduction</div><div class="su-ar">مقدمة الأفعال المركبة</div><div class="su-prog"><div class="su-prog-fill" id="sp33"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b2p">B2+</span><span class="su-level-name">فوق المتوسط</span></div>
+  <a href="lesson34.html" class="su-item"><div class="su-num">34</div><div class="su-texts"><div class="su-en">Narrative Tenses & Past Perfect</div><div class="su-ar">أزمنة السرد والماضي التام</div><div class="su-prog"><div class="su-prog-fill" id="sp34"></div></div></div></a>
+  <a href="lesson35.html" class="su-item"><div class="su-num">35</div><div class="su-texts"><div class="su-en">Future Perfect & Continuous</div><div class="su-ar">المستقبل التام والمستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp35"></div></div></div></a>
+  <a href="lesson36.html" class="su-item"><div class="su-num">36</div><div class="su-texts"><div class="su-en">Third Conditional & Regrets</div><div class="su-ar">الشرط الثالث والندم</div><div class="su-prog"><div class="su-prog-fill" id="sp36"></div></div></div></a>
+  <a href="lesson37.html" class="su-item"><div class="su-num">37</div><div class="su-texts"><div class="su-en">Causative: have/get done</div><div class="su-ar">الأفعال السببية</div><div class="su-prog"><div class="su-prog-fill" id="sp37"></div></div></div></a>
+  <a href="lesson38.html" class="su-item"><div class="su-num">38</div><div class="su-texts"><div class="su-en">Advanced Passive</div><div class="su-ar">المبني للمجهول المتقدم</div><div class="su-prog"><div class="su-prog-fill" id="sp38"></div></div></div></a>
+  <a href="lesson39.html" class="su-item"><div class="su-num">39</div><div class="su-texts"><div class="su-en">Speculation: must/might/can't</div><div class="su-ar">التخمين والاستنتاج</div><div class="su-prog"><div class="su-prog-fill" id="sp39"></div></div></div></a>
+  <a href="lesson40.html" class="su-item"><div class="su-num">40</div><div class="su-texts"><div class="su-en">Idioms & Collocations</div><div class="su-ar">المصطلحات والتعبيرات</div><div class="su-prog"><div class="su-prog-fill" id="sp40"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-c1">C1</span><span class="su-level-name">المستوى المتقدم الأكاديمي</span></div>
+  <a href="lesson41.html" class="su-item"><div class="su-num">41</div><div class="su-texts"><div class="su-en">Inversion & Emphatic Structures</div><div class="su-ar">التقديم والتأخير للتأكيد</div><div class="su-prog"><div class="su-prog-fill" id="sp41"></div></div></div></a>
+  <a href="lesson42.html" class="su-item"><div class="su-num">42</div><div class="su-texts"><div class="su-en">Mixed Conditionals</div><div class="su-ar">الجمل الشرطية المختلطة</div><div class="su-prog"><div class="su-prog-fill" id="sp42"></div></div></div></a>
+  <a href="lesson43.html" class="su-item"><div class="su-num">43</div><div class="su-texts"><div class="su-en">Advanced Gerunds & Infinitives</div><div class="su-ar">المصادر المتقدمة</div><div class="su-prog"><div class="su-prog-fill" id="sp43"></div></div></div></a>
+  <a href="lesson44.html" class="su-item"><div class="su-num">44</div><div class="su-texts"><div class="su-en">Cleft Sentences</div><div class="su-ar">الجمل المشقوقة</div><div class="su-prog"><div class="su-prog-fill" id="sp44"></div></div></div></a>
+  <a href="lesson45.html" class="su-item"><div class="su-num">45</div><div class="su-texts"><div class="su-en">Discourse Markers</div><div class="su-ar">أدوات الربط الأكاديمية</div><div class="su-prog"><div class="su-prog-fill" id="sp45"></div></div></div></a>
+  <a href="lesson46.html" class="su-item"><div class="su-num">46</div><div class="su-texts"><div class="su-en">Nuances & Euphemisms</div><div class="su-ar">الفروقات الدقيقة والتلطيف</div><div class="su-prog"><div class="su-prog-fill" id="sp46"></div></div></div></a>
+</div>
+</aside>
+
+<div class="main-content">
+
+<nav class="topnav">
+  <div class="nav-left">
+    <a href="../index.html" class="nav-home-btn">&#x1F3E0; الرئيسية</a>
+    <span class="nav-sep">&#x203A;</span>
+    <span class="nav-lesson-badge">Lesson 5</span>
+    <span class="nav-sep">&#x203A;</span>
+    <span class="nav-lesson-name">Days &amp; Telling the Time</span>
+  </div>
+  <div class="nav-right"><span class="nav-brand">MOHAMMED ELHUSEYIN</span></div>
+</nav>
+
+<div class="hero">
+  <div class="unit-badge">&#x1F4DA; Lesson 5 &nbsp;&middot;&nbsp; A1 Beginner</div>
+  <h1 class="hero-title">Days &amp; <i>Telling the Time</i></h1>
+  <div class="hero-ar ar">الأيام وإخبار الوقت</div>
+  <p class="hero-sub">Learn the days of the week, months of the year, and how to say and ask about the time in English.</p>
+  <div class="hero-tags">
+    <span class="tag tag-grammar">&#x1F4D6; Grammar</span>
+    <span class="tag tag-other">&#x1F4AC; Everyday English</span>
+    <span class="tag tag-other">&#x1F4D8; Reading</span>
+    <span class="tag tag-other">&#x2705; Check It!</span>
+  </div>
+</div>
+
+<div class="main-tabs">
+  <button class="main-tab active" onclick="showTab('grammar',this)">&#x1F4D6; Grammar</button>
+  <button class="main-tab" onclick="showTab('everyday',this)">&#x1F4AC; Everyday English</button>
+  <button class="main-tab" onclick="showTab('reading',this)">&#x1F4D8; Reading</button>
+  <button class="main-tab" onclick="showTab('checkit',this)">&#x2705; Check It!</button>
+</div>
+
+<!-- GRAMMAR TAB -->
+<div id="tab-grammar" class="tab-panel active">
+
+  <!-- DAYS -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F4C5; Days of the Week — أيام الأسبوع</div>
+    <div class="rule-ar">الأسبوع يبدأ بالأحد في الإنجليزية — اضغط على أي يوم للاستماع</div>
+    <div class="day-grid">
+      <div class="day-card" onclick="ttsRead('Sunday',0.88)"><div class="day-num">1</div><div><div class="day-en">Sunday</div><div class="day-ar">الأحد</div></div></div>
+      <div class="day-card" onclick="ttsRead('Monday',0.88)"><div class="day-num">2</div><div><div class="day-en">Monday</div><div class="day-ar">الاثنين</div></div></div>
+      <div class="day-card" onclick="ttsRead('Tuesday',0.88)"><div class="day-num">3</div><div><div class="day-en">Tuesday</div><div class="day-ar">الثلاثاء</div></div></div>
+      <div class="day-card" onclick="ttsRead('Wednesday',0.88)"><div class="day-num">4</div><div><div class="day-en">Wednesday</div><div class="day-ar">الأربعاء</div></div></div>
+      <div class="day-card" onclick="ttsRead('Thursday',0.88)"><div class="day-num">5</div><div><div class="day-en">Thursday</div><div class="day-ar">الخميس</div></div></div>
+      <div class="day-card day-weekend" onclick="ttsRead('Friday',0.88)"><div class="day-num">6</div><div><div class="day-en">Friday</div><div class="day-ar">الجمعة &#x1F7E2;</div></div></div>
+      <div class="day-card day-weekend" onclick="ttsRead('Saturday',0.88)"><div class="day-num">7</div><div><div class="day-en">Saturday</div><div class="day-ar">السبت &#x1F7E2;</div></div></div>
+    </div>
+    <div class="rule-box"><b>&#x1F4A1; Remember:</b> Days always start with a <b>capital letter</b> in English — Monday, Tuesday... NOT monday, tuesday.<br><span style="font-size:12px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;display:block;margin-top:4px">الأيام دائماً تُكتب بحرف كبير في الإنجليزية.</span></div>
+    <div class="rule-box" style="margin-top:8px">
+      <b>Asking about the day:</b><br>
+      &#x2022; <b>What day is it today?</b> — It's Monday. &nbsp;|&nbsp; ما اليوم؟<br>
+      &#x2022; <b>What day is tomorrow?</b> — It's Tuesday. &nbsp;|&nbsp; ما يوم الغد؟<br>
+      &#x2022; <b>What day was yesterday?</b> — It was Sunday. &nbsp;|&nbsp; ما كان يوم أمس؟
+    </div>
+  </div>
+
+  <!-- MONTHS -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F5D3;&#xFE0F; Months of the Year — أشهر السنة</div>
+    <div class="rule-ar">اضغط على أي شهر للاستماع إلى نطقه</div>
+    <div class="month-grid">
+      <div class="month-card" onclick="ttsRead('January',0.88)"><div class="month-num">01</div><div class="month-en">January</div><div class="month-ar">يناير / كانون الثاني</div></div>
+      <div class="month-card" onclick="ttsRead('February',0.88)"><div class="month-num">02</div><div class="month-en">February</div><div class="month-ar">فبراير / شباط</div></div>
+      <div class="month-card" onclick="ttsRead('March',0.88)"><div class="month-num">03</div><div class="month-en">March</div><div class="month-ar">مارس / آذار</div></div>
+      <div class="month-card" onclick="ttsRead('April',0.88)"><div class="month-num">04</div><div class="month-en">April</div><div class="month-ar">أبريل / نيسان</div></div>
+      <div class="month-card" onclick="ttsRead('May',0.88)"><div class="month-num">05</div><div class="month-en">May</div><div class="month-ar">مايو / أيار</div></div>
+      <div class="month-card" onclick="ttsRead('June',0.88)"><div class="month-num">06</div><div class="month-en">June</div><div class="month-ar">يونيو / حزيران</div></div>
+      <div class="month-card" onclick="ttsRead('July',0.88)"><div class="month-num">07</div><div class="month-en">July</div><div class="month-ar">يوليو / تموز</div></div>
+      <div class="month-card" onclick="ttsRead('August',0.88)"><div class="month-num">08</div><div class="month-en">August</div><div class="month-ar">أغسطس / آب</div></div>
+      <div class="month-card" onclick="ttsRead('September',0.88)"><div class="month-num">09</div><div class="month-en">September</div><div class="month-ar">سبتمبر / أيلول</div></div>
+      <div class="month-card" onclick="ttsRead('October',0.88)"><div class="month-num">10</div><div class="month-en">October</div><div class="month-ar">أكتوبر / تشرين الأول</div></div>
+      <div class="month-card" onclick="ttsRead('November',0.88)"><div class="month-num">11</div><div class="month-en">November</div><div class="month-ar">نوفمبر / تشرين الثاني</div></div>
+      <div class="month-card" onclick="ttsRead('December',0.88)"><div class="month-num">12</div><div class="month-en">December</div><div class="month-ar">ديسمبر / كانون الأول</div></div>
+    </div>
+    <div class="rule-box">
+      <b>Asking about the month / date:</b><br>
+      &#x2022; <b>What month is it?</b> — It's March.<br>
+      &#x2022; <b>What's the date today?</b> — It's the 15th of June.<br>
+      &#x2022; <b>When is your birthday?</b> — It's on the 3rd of September.
+    </div>
+  </div>
+
+  <!-- TELLING THE TIME -->
+  <div class="rule-section">
+    <div class="rule-title">&#x23F0; Telling the Time — إخبار الوقت</div>
+    <div class="rule-ar">كيف نقول الساعة بالإنجليزية — اضغط على كل بطاقة للاستماع</div>
+
+    <div style="margin-bottom:10px;font-size:13px;color:var(--text);line-height:1.7">
+      <b style="color:var(--accent)">Asking the time:</b>
+      &nbsp;<span style="background:var(--card2);padding:3px 10px;border-radius:8px;font-size:12px">What time is it?</span>
+      &nbsp;<span style="background:var(--card2);padding:3px 10px;border-radius:8px;font-size:12px">What's the time?</span>
+      &nbsp;<span style="background:var(--card2);padding:3px 10px;border-radius:8px;font-size:12px">Do you have the time?</span>
+    </div>
+
+    <div class="clock-grid">
+      <div class="clock-card" onclick="ttsRead('It is three o clock',0.88)">
+        <div class="clock-time">3:00</div>
+        <div class="clock-say">It's <b>three o'clock</b></div>
+        <div class="clock-ar">الساعة الثالثة تماماً</div>
+      </div>
+      <div class="clock-card" onclick="ttsRead('It is half past three',0.88)">
+        <div class="clock-time">3:30</div>
+        <div class="clock-say">It's <b>half past three</b></div>
+        <div class="clock-ar">الساعة الثالثة والنصف</div>
+      </div>
+      <div class="clock-card" onclick="ttsRead('It is quarter past three',0.88)">
+        <div class="clock-time">3:15</div>
+        <div class="clock-say">It's <b>quarter past three</b></div>
+        <div class="clock-ar">الساعة الثالثة والربع</div>
+      </div>
+      <div class="clock-card" onclick="ttsRead('It is quarter to four',0.88)">
+        <div class="clock-time">3:45</div>
+        <div class="clock-say">It's <b>quarter to four</b></div>
+        <div class="clock-ar">الساعة الرابعة إلا ربع</div>
+      </div>
+      <div class="clock-card" onclick="ttsRead('It is ten past three',0.88)">
+        <div class="clock-time">3:10</div>
+        <div class="clock-say">It's <b>ten past three</b></div>
+        <div class="clock-ar">الثالثة وعشر دقائق</div>
+      </div>
+      <div class="clock-card" onclick="ttsRead('It is twenty past three',0.88)">
+        <div class="clock-time">3:20</div>
+        <div class="clock-say">It's <b>twenty past three</b></div>
+        <div class="clock-ar">الثالثة وعشرون دقيقة</div>
+      </div>
+      <div class="clock-card" onclick="ttsRead('It is twenty to four',0.88)">
+        <div class="clock-time">3:40</div>
+        <div class="clock-say">It's <b>twenty to four</b></div>
+        <div class="clock-ar">الرابعة إلا عشرين دقيقة</div>
+      </div>
+      <div class="clock-card" onclick="ttsRead('It is five to four',0.88)">
+        <div class="clock-time">3:55</div>
+        <div class="clock-say">It's <b>five to four</b></div>
+        <div class="clock-ar">الرابعة إلا خمس دقائق</div>
+      </div>
+    </div>
+
+    <div class="rule-box" style="border-color:rgba(244,166,36,.4);background:rgba(244,166,36,.05)">
+      <b style="color:var(--accent)">&#x1F4CC; Key Rule:</b><br>
+      &#x2022; Minutes <b>1–30</b>: use <b>past</b> → "ten <b>past</b> two" (2:10)<br>
+      &#x2022; Minutes <b>31–59</b>: use <b>to</b> → "twenty <b>to</b> three" (2:40)<br>
+      &#x2022; Exactly on the hour: use <b>o'clock</b> → "five o'clock" (5:00)<br>
+      <span style="font-size:12px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;display:block;margin-top:6px">من 1 إلى 30 دقيقة نستخدم past، ومن 31 إلى 59 نستخدم to (نحسب الدقائق للساعة القادمة)</span>
+    </div>
+
+    <div class="rule-box" style="margin-top:8px">
+      <b>am / pm:</b><br>
+      &#x2022; <b>am</b> (ante meridiem) = صباحاً — midnight to noon (12:00 am → 11:59 am)<br>
+      &#x2022; <b>pm</b> (post meridiem) = مساءً — noon to midnight (12:00 pm → 11:59 pm)<br>
+      &#x2022; "The meeting is at <b>9 am</b>." &nbsp;|&nbsp; "Dinner is at <b>7 pm</b>."
+    </div>
+  </div>
+
+  <!-- ORDINALS FOR DATES -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F522; Ordinal Numbers for Dates — الأعداد الترتيبية</div>
+    <div class="rule-ar">نستخدم الأعداد الترتيبية لقول التاريخ: the 1st, the 2nd...</div>
+    <div class="ord-grid">
+      <div class="ord-chip" onclick="ttsRead('first',0.88)"><div class="ord-en">1<sup>st</sup> — first</div><div class="ord-ar">الأول</div></div>
+      <div class="ord-chip" onclick="ttsRead('second',0.88)"><div class="ord-en">2<sup>nd</sup> — second</div><div class="ord-ar">الثاني</div></div>
+      <div class="ord-chip" onclick="ttsRead('third',0.88)"><div class="ord-en">3<sup>rd</sup> — third</div><div class="ord-ar">الثالث</div></div>
+      <div class="ord-chip" onclick="ttsRead('fourth',0.88)"><div class="ord-en">4<sup>th</sup> — fourth</div><div class="ord-ar">الرابع</div></div>
+      <div class="ord-chip" onclick="ttsRead('fifth',0.88)"><div class="ord-en">5<sup>th</sup> — fifth</div><div class="ord-ar">الخامس</div></div>
+      <div class="ord-chip" onclick="ttsRead('sixth',0.88)"><div class="ord-en">6<sup>th</sup> — sixth</div><div class="ord-ar">السادس</div></div>
+      <div class="ord-chip" onclick="ttsRead('seventh',0.88)"><div class="ord-en">7<sup>th</sup> — seventh</div><div class="ord-ar">السابع</div></div>
+      <div class="ord-chip" onclick="ttsRead('eighth',0.88)"><div class="ord-en">8<sup>th</sup> — eighth</div><div class="ord-ar">الثامن</div></div>
+      <div class="ord-chip" onclick="ttsRead('ninth',0.88)"><div class="ord-en">9<sup>th</sup> — ninth</div><div class="ord-ar">التاسع</div></div>
+      <div class="ord-chip" onclick="ttsRead('tenth',0.88)"><div class="ord-en">10<sup>th</sup> — tenth</div><div class="ord-ar">العاشر</div></div>
+      <div class="ord-chip" onclick="ttsRead('eleventh',0.88)"><div class="ord-en">11<sup>th</sup> — eleventh</div><div class="ord-ar">الحادي عشر</div></div>
+      <div class="ord-chip" onclick="ttsRead('twelfth',0.88)"><div class="ord-en">12<sup>th</sup> — twelfth</div><div class="ord-ar">الثاني عشر</div></div>
+      <div class="ord-chip" onclick="ttsRead('twentieth',0.88)"><div class="ord-en">20<sup>th</sup> — twentieth</div><div class="ord-ar">العشرون</div></div>
+      <div class="ord-chip" onclick="ttsRead('twenty first',0.88)"><div class="ord-en">21<sup>st</sup> — twenty-first</div><div class="ord-ar">الحادي والعشرون</div></div>
+      <div class="ord-chip" onclick="ttsRead('thirtieth',0.88)"><div class="ord-en">30<sup>th</sup> — thirtieth</div><div class="ord-ar">الثلاثون</div></div>
+      <div class="ord-chip" onclick="ttsRead('thirty first',0.88)"><div class="ord-en">31<sup>st</sup> — thirty-first</div><div class="ord-ar">الحادي والثلاثون</div></div>
+    </div>
+    <div class="rule-box">
+      <b>How to say a date:</b><br>
+      &#x2022; Write: <b>15 June</b> &nbsp;|&nbsp; Say: <b>"the fifteenth of June"</b><br>
+      &#x2022; Write: <b>1 January</b> &nbsp;|&nbsp; Say: <b>"the first of January"</b><br>
+      &#x2022; Write: <b>21 March</b> &nbsp;|&nbsp; Say: <b>"the twenty-first of March"</b>
+    </div>
+  </div>
+
+  <!-- TIME EXPRESSIONS -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F310; Time Expressions — تعبيرات الوقت</div>
+    <div class="rule-ar">كلمات مهمة نستخدمها مع الأيام والوقت</div>
+    <div class="expr-grid">
+      <div class="expr-card" onclick="ttsRead('today',0.88)"><div class="expr-en">today</div><div class="expr-ar">اليوم</div></div>
+      <div class="expr-card" onclick="ttsRead('yesterday',0.88)"><div class="expr-en">yesterday</div><div class="expr-ar">أمس</div></div>
+      <div class="expr-card" onclick="ttsRead('tomorrow',0.88)"><div class="expr-en">tomorrow</div><div class="expr-ar">غداً</div></div>
+      <div class="expr-card" onclick="ttsRead('in the morning',0.88)"><div class="expr-en">in the morning</div><div class="expr-ar">في الصباح</div></div>
+      <div class="expr-card" onclick="ttsRead('in the afternoon',0.88)"><div class="expr-en">in the afternoon</div><div class="expr-ar">في الظهيرة / بعد الظهر</div></div>
+      <div class="expr-card" onclick="ttsRead('in the evening',0.88)"><div class="expr-en">in the evening</div><div class="expr-ar">في المساء</div></div>
+      <div class="expr-card" onclick="ttsRead('at night',0.88)"><div class="expr-en">at night</div><div class="expr-ar">في الليل</div></div>
+      <div class="expr-card" onclick="ttsRead('at noon',0.88)"><div class="expr-en">at noon</div><div class="expr-ar">عند الظهر</div></div>
+      <div class="expr-card" onclick="ttsRead('at midnight',0.88)"><div class="expr-en">at midnight</div><div class="expr-ar">في منتصف الليل</div></div>
+      <div class="expr-card" onclick="ttsRead('this week',0.88)"><div class="expr-en">this week</div><div class="expr-ar">هذا الأسبوع</div></div>
+      <div class="expr-card" onclick="ttsRead('next week',0.88)"><div class="expr-en">next week</div><div class="expr-ar">الأسبوع القادم</div></div>
+      <div class="expr-card" onclick="ttsRead('last week',0.88)"><div class="expr-en">last week</div><div class="expr-ar">الأسبوع الماضي</div></div>
+      <div class="expr-card" onclick="ttsRead('on Monday',0.88)"><div class="expr-en">on Monday</div><div class="expr-ar">يوم الاثنين (on + day)</div></div>
+      <div class="expr-card" onclick="ttsRead('in January',0.88)"><div class="expr-en">in January</div><div class="expr-ar">في يناير (in + month)</div></div>
+      <div class="expr-card" onclick="ttsRead('at three o clock',0.88)"><div class="expr-en">at 3 o'clock</div><div class="expr-ar">الساعة الثالثة (at + time)</div></div>
+      <div class="expr-card" onclick="ttsRead('on the fifth of June',0.88)"><div class="expr-en">on the 5th of June</div><div class="expr-ar">في الخامس من يونيو</div></div>
+    </div>
+    <div class="rule-box" style="border-color:rgba(34,197,94,.3);background:rgba(34,197,94,.05)">
+      <b style="color:var(--green)">&#x1F4CC; Preposition Rule:</b><br>
+      &#x2022; <b>at</b> + time → at 5 o'clock, at noon, at midnight<br>
+      &#x2022; <b>on</b> + day / date → on Monday, on the 3rd of June<br>
+      &#x2022; <b>in</b> + month / year / season → in July, in 2025, in summer
+    </div>
+  </div>
+
+</div><!-- /tab-grammar -->
+
+<!-- EVERYDAY ENGLISH TAB -->
+<div id="tab-everyday" class="tab-panel">
+
+  <div class="dlg-card">
+    <div class="dlg-header">
+      <div class="dlg-meta">
+        <div class="dlg-num">Dialogue 01</div>
+        <div class="dlg-title">What Time Is It? &#x23F0;</div>
+        <div class="dlg-ctx">Two friends meet in the street</div>
+      </div>
+      <button class="dlg-tts" onclick="ttsRead('Excuse me, do you have the time? Yes, it is quarter past ten. Oh no, I am late! My class starts at ten thirty. You can still make it. Run! The school is five minutes away. Thank you so much. Good luck. See you tomorrow. Goodbye.',0.88)">&#x25B6; Listen</button>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Rania</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Excuse me, do you have the time?</div>
+          <div class="chat-ar">عفواً، هل معك الوقت؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('Excuse me, do you have the time.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Hassan</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Yes! It's <b>quarter past ten</b>.</div>
+          <div class="chat-ar">نعم! الساعة العاشرة والربع.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('Yes. It is quarter past ten.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Rania</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Oh no, I'm late! My class starts <b>at half past ten</b>.</div>
+          <div class="chat-ar">آه لا، تأخرت! صفي يبدأ الساعة العاشرة والنصف.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('Oh no, I am late. My class starts at half past ten.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Hassan</div>
+        <div class="chat-bubble">
+          <div class="chat-en">You can still make it! The school is <b>five minutes</b> away.</div>
+          <div class="chat-ar">لا زلت تستطيعين! المدرسة على بعد خمس دقائق.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('You can still make it. The school is five minutes away.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Rania</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Thank you! See you <b>tomorrow</b>!</div>
+          <div class="chat-ar">شكراً! أراك غداً!</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('Thank you. See you tomorrow.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dlg-card">
+    <div class="dlg-header">
+      <div class="dlg-meta">
+        <div class="dlg-num">Dialogue 02</div>
+        <div class="dlg-title">Weekend Plans &#x1F31F;</div>
+        <div class="dlg-ctx">Two classmates talk about plans</div>
+      </div>
+      <button class="dlg-tts" onclick="ttsRead('What day is it today? It is Thursday. So tomorrow is Friday. Yes, the weekend! Do you have any plans? On Friday morning I go to the market. What about Saturday? On Saturday afternoon I visit my family. That sounds nice. What time do you usually wake up on Fridays? I wake up at eight thirty in the morning.',0.88)">&#x25B6; Listen</button>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Sami</div>
+        <div class="chat-bubble">
+          <div class="chat-en">What day is it <b>today</b>?</div>
+          <div class="chat-ar">ما اليوم اليوم؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('What day is it today.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Dina</div>
+        <div class="chat-bubble">
+          <div class="chat-en">It's <b>Thursday</b>! So <b>tomorrow</b> is Friday — the weekend!</div>
+          <div class="chat-ar">اليوم الخميس! إذن غداً الجمعة — عطلة نهاية الأسبوع!</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('It is Thursday. So tomorrow is Friday, the weekend.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Sami</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Do you have any plans?</div>
+          <div class="chat-ar">هل لديك أي خطط؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('Do you have any plans.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Dina</div>
+        <div class="chat-bubble">
+          <div class="chat-en"><b>On Friday morning</b> I go to the market. <b>On Saturday afternoon</b> I visit my family.</div>
+          <div class="chat-ar">صباح الجمعة أذهب للسوق. بعد ظهر السبت أزور عائلتي.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('On Friday morning I go to the market. On Saturday afternoon I visit my family.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Sami</div>
+        <div class="chat-bubble">
+          <div class="chat-en">What time do you wake up <b>on Fridays</b>?</div>
+          <div class="chat-ar">في أي وقت تستيقظين أيام الجمعة؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('What time do you wake up on Fridays.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Dina</div>
+        <div class="chat-bubble">
+          <div class="chat-en">I wake up <b>at half past eight in the morning</b>.</div>
+          <div class="chat-ar">أستيقظ الساعة الثامنة والنصف صباحاً.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('I wake up at half past eight in the morning.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dlg-card">
+    <div class="dlg-header">
+      <div class="dlg-meta">
+        <div class="dlg-num">Dialogue 03</div>
+        <div class="dlg-title">My Daily Routine &#x1F31E;</div>
+        <div class="dlg-ctx">A student describes their day</div>
+      </div>
+      <button class="dlg-tts" onclick="ttsRead('Tell me about your daily routine. I wake up at six o clock in the morning. Then I have breakfast at six thirty. School starts at eight o clock. We have lunch at one pm. School finishes at three fifteen. In the evening I do my homework. I go to bed at ten o clock at night. That is a busy day.',0.88)">&#x25B6; Listen</button>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Teacher</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Tell me about your <b>daily routine</b>, Karim.</div>
+          <div class="chat-ar">أخبرني عن روتينك اليومي يا كريم.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('Tell me about your daily routine.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Karim</div>
+        <div class="chat-bubble">
+          <div class="chat-en">I wake up <b>at six o'clock</b>. Breakfast is <b>at half past six</b>.</div>
+          <div class="chat-ar">أستيقظ الساعة السادسة. الفطور الساعة السادسة والنصف.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('I wake up at six o clock. Breakfast is at half past six.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Karim</div>
+        <div class="chat-bubble">
+          <div class="chat-en">School starts <b>at eight am</b>. Lunch is <b>at one pm</b>. School finishes <b>at quarter past three</b>.</div>
+          <div class="chat-ar">المدرسة تبدأ الثامنة صباحاً. الغداء الواحدة مساءً. تنتهي الثالثة والربع.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('School starts at eight am. Lunch is at one pm. School finishes at quarter past three.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Karim</div>
+        <div class="chat-bubble">
+          <div class="chat-en"><b>In the evening</b> I do homework. I go to bed <b>at ten o'clock at night</b>.</div>
+          <div class="chat-ar">في المساء أنجز الواجبات. أنام الساعة العاشرة ليلاً.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('In the evening I do homework. I go to bed at ten o clock at night.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Teacher</div>
+        <div class="chat-bubble">
+          <div class="chat-en">That's a very <b>busy day</b>! Well done!</div>
+          <div class="chat-ar">يوم مزدحم جداً! أحسنت!</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('That is a very busy day. Well done.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dlg-card">
+    <div class="dlg-header">
+      <div class="dlg-meta">
+        <div class="dlg-num">Dialogue 04</div>
+        <div class="dlg-title">Making an Appointment &#x1F4CB;</div>
+        <div class="dlg-ctx">Booking a doctor's appointment</div>
+      </div>
+      <button class="dlg-tts" onclick="ttsRead('Good morning. Can I make an appointment? Of course. What day would you like? Is Wednesday available? Yes. What time? Is ten o clock in the morning okay? I am sorry, ten o clock is taken. What about eleven fifteen? Yes, eleven fifteen on Wednesday is perfect. Your name please? My name is Sara Ahmed. See you on Wednesday the twelfth of March.',0.88)">&#x25B6; Listen</button>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Sara</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Good morning! Can I make an appointment?</div>
+          <div class="chat-ar">صباح الخير! هل يمكنني حجز موعد؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('Good morning. Can I make an appointment.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Receptionist</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Of course! What <b>day</b> would you like?</div>
+          <div class="chat-ar">بالطبع! أي يوم تفضلين؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('Of course. What day would you like.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Sara</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Is <b>Wednesday</b> available?</div>
+          <div class="chat-ar">هل الأربعاء متاح؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('Is Wednesday available.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Receptionist</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Yes! What <b>time</b>?</div>
+          <div class="chat-ar">نعم! أي وقت؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('Yes. What time.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Sara</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Is <b>ten o'clock in the morning</b> okay?</div>
+          <div class="chat-ar">هل الساعة العاشرة صباحاً مناسبة؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('Is ten o clock in the morning okay.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Receptionist</div>
+        <div class="chat-bubble">
+          <div class="chat-en">I'm sorry, 10 am is taken. What about <b>quarter past eleven</b>?</div>
+          <div class="chat-ar">آسفة، العاشرة محجوزة. ماذا عن الحادية عشرة والربع؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('I am sorry, ten am is taken. What about quarter past eleven.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Sara</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Perfect! See you on <b>Wednesday, the 12th of March</b>.</div>
+          <div class="chat-ar">ممتاز! أراكم يوم الأربعاء الثاني عشر من مارس.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('Perfect. See you on Wednesday the twelfth of March.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dlg-card">
+    <div class="dlg-header">
+      <div class="dlg-meta">
+        <div class="dlg-num">Dialogue 05</div>
+        <div class="dlg-title">Seasons &amp; Months &#x1F341;</div>
+        <div class="dlg-ctx">Friends talk about favourite seasons</div>
+      </div>
+      <button class="dlg-tts" onclick="ttsRead('What is your favourite month? I love July. It is hot and sunny. I prefer December. Really? Why? Because my birthday is on the twenty fifth of December. What season is that? It is winter in my country. What about you? My favourite season is spring. It starts in March. The weather is perfect in April and May.',0.88)">&#x25B6; Listen</button>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Lena</div>
+        <div class="chat-bubble">
+          <div class="chat-en">What's your favourite <b>month</b>?</div>
+          <div class="chat-ar">ما هو شهرك المفضل؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('What is your favourite month.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Jake</div>
+        <div class="chat-bubble">
+          <div class="chat-en">I love <b>July</b> — hot and sunny! I prefer <b>December</b> though.</div>
+          <div class="chat-ar">أحب يوليو — حار ومشمس! لكنني أفضل ديسمبر.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('I love July, hot and sunny. I prefer December though.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Lena</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Really? Why?</div>
+          <div class="chat-ar">حقاً؟ لماذا؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('Really? Why.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Jake</div>
+        <div class="chat-bubble">
+          <div class="chat-en">My birthday is on the <b>25th of December</b>! It's <b>winter</b> here.</div>
+          <div class="chat-ar">عيد ميلادي في الخامس والعشرين من ديسمبر! إنه الشتاء هنا.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('My birthday is on the twenty fifth of December. It is winter here.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Lena</div>
+        <div class="chat-bubble">
+          <div class="chat-en">My favourite is <b>spring</b>! It starts <b>in March</b>. <b>April</b> and <b>May</b> are perfect.</div>
+          <div class="chat-ar">المفضل لديّ هو الربيع! يبدأ في مارس. أبريل ومايو رائعان.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('My favourite is spring. It starts in March. April and May are perfect.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /tab-everyday -->
+
+<!-- READING TAB -->
+<div id="tab-reading" class="tab-panel">
+
+  <div class="read-ctx">
+    <div class="read-ctx-fact"><div class="read-ctx-label">Level</div><div class="read-ctx-val">A1 — Beginner</div></div>
+    <div class="read-ctx-sep"></div>
+    <div class="read-ctx-fact"><div class="read-ctx-label">Words</div><div class="read-ctx-val">~160</div></div>
+    <div class="read-ctx-sep"></div>
+    <div class="read-ctx-fact"><div class="read-ctx-label">Topic</div><div class="read-ctx-val">Days &amp; Time</div></div>
+    <div class="read-ctx-sep"></div>
+    <div class="read-ctx-fact"><div class="read-ctx-label">Questions</div><div class="read-ctx-val">5 MCQ</div></div>
+  </div>
+
+  <div class="read-tts-bar">
+    <span class="read-label">&#x1F50A; استمع للنص:</span>
+    <button class="tts-btn" onclick="ttsRead(document.getElementById('readPassText5').innerText,0.82)">&#x25B6; تشغيل النص كاملاً</button>
+    <button class="tts-btn tts-stop" onclick="speechSynthesis.cancel()">&#x23F9; إيقاف</button>
+  </div>
+
+  <div class="read-pass" id="readPassText5">
+    <p><b>A Busy Week for Nadia</b></p>
+
+    <p>Nadia is a student. She has a very busy week. Every day she wakes up <b>at seven o'clock in the morning</b>. She has breakfast at half past seven and leaves home <b>at eight o'clock</b>.</p>
+
+    <p><b>On Monday</b>, she has English class from nine am to eleven am. <b>On Tuesday</b> she goes to the library at two in the afternoon. She studies there until five o'clock.</p>
+
+    <p><b>On Wednesday</b>, Nadia has a doctor's appointment <b>at quarter past ten</b>. After the appointment, she meets her friend Sara for lunch <b>at noon</b>.</p>
+
+    <p><b>On Thursday evening</b>, she does her homework from seven pm to nine pm. She goes to bed <b>at half past ten at night</b>.</p>
+
+    <p><b>On Friday</b> and <b>Saturday</b>, Nadia rests. She loves weekends. <b>In the morning</b> she reads books. <b>In the afternoon</b> she visits her family. Her grandmother's birthday is on the <b>15th of March</b> — this Friday!</p>
+
+    <p>Nadia says, "Time is important. I always check the time so I am never late!"</p>
+  </div>
+
+  <div class="read-vocab-wrap">
+    <div class="read-vocab-title">&#x1F511; Key Vocabulary — مفردات النص</div>
+    <div class="read-vocab-grid">
+      <div class="read-vocab-item"><div class="read-vocab-en" onclick="ttsRead('busy',0.85)" style="cursor:pointer">busy</div><div class="read-vocab-ar">مشغول / مزدحم</div></div>
+      <div class="read-vocab-item"><div class="read-vocab-en" onclick="ttsRead('appointment',0.85)" style="cursor:pointer">appointment</div><div class="read-vocab-ar">موعد</div></div>
+      <div class="read-vocab-item"><div class="read-vocab-en" onclick="ttsRead('library',0.85)" style="cursor:pointer">library</div><div class="read-vocab-ar">مكتبة</div></div>
+      <div class="read-vocab-item"><div class="read-vocab-en" onclick="ttsRead('rests',0.85)" style="cursor:pointer">rests</div><div class="read-vocab-ar">يستريح</div></div>
+      <div class="read-vocab-item"><div class="read-vocab-en" onclick="ttsRead('weekends',0.85)" style="cursor:pointer">weekends</div><div class="read-vocab-ar">عطلات نهاية الأسبوع</div></div>
+      <div class="read-vocab-item"><div class="read-vocab-en" onclick="ttsRead('noon',0.85)" style="cursor:pointer">noon</div><div class="read-vocab-ar">الظهر / منتصف النهار</div></div>
+      <div class="read-vocab-item"><div class="read-vocab-en" onclick="ttsRead('until',0.85)" style="cursor:pointer">until</div><div class="read-vocab-ar">حتى</div></div>
+      <div class="read-vocab-item"><div class="read-vocab-en" onclick="ttsRead('check',0.85)" style="cursor:pointer">check</div><div class="read-vocab-ar">يتحقق / يراجع</div></div>
+    </div>
+  </div>
+
+  <div class="comp-section-title">&#x2753; Comprehension Questions</div>
+
+  <div class="read-q" id="rq1">
+    <div class="read-q-text">1. What time does Nadia wake up every day?</div>
+    <div class="read-opts">
+      <button class="read-opt" onclick="rqPick(this,'rq1',false)"><span>A</span> At half past six</button>
+      <button class="read-opt" onclick="rqPick(this,'rq1',true)"><span>B</span> At seven o'clock</button>
+      <button class="read-opt" onclick="rqPick(this,'rq1',false)"><span>C</span> At eight o'clock</button>
+      <button class="read-opt" onclick="rqPick(this,'rq1',false)"><span>D</span> At quarter past seven</button>
+    </div>
+  </div>
+
+  <div class="read-q" id="rq2">
+    <div class="read-q-text">2. When is Nadia's doctor appointment?</div>
+    <div class="read-opts">
+      <button class="read-opt" onclick="rqPick(this,'rq2',false)"><span>A</span> On Tuesday at 2 pm</button>
+      <button class="read-opt" onclick="rqPick(this,'rq2',false)"><span>B</span> On Monday at 9 am</button>
+      <button class="read-opt" onclick="rqPick(this,'rq2',true)"><span>C</span> On Wednesday at quarter past ten</button>
+      <button class="read-opt" onclick="rqPick(this,'rq2',false)"><span>D</span> On Thursday at 7 pm</button>
+    </div>
+  </div>
+
+  <div class="read-q" id="rq3">
+    <div class="read-q-text">3. What does Nadia do on Friday and Saturday?</div>
+    <div class="read-opts">
+      <button class="read-opt" onclick="rqPick(this,'rq3',false)"><span>A</span> She goes to school</button>
+      <button class="read-opt" onclick="rqPick(this,'rq3',true)"><span>B</span> She rests and reads books</button>
+      <button class="read-opt" onclick="rqPick(this,'rq3',false)"><span>C</span> She studies at the library</button>
+      <button class="read-opt" onclick="rqPick(this,'rq3',false)"><span>D</span> She does homework</button>
+    </div>
+  </div>
+
+  <div class="read-q" id="rq4">
+    <div class="read-q-text">4. When is Nadia's grandmother's birthday?</div>
+    <div class="read-opts">
+      <button class="read-opt" onclick="rqPick(this,'rq4',false)"><span>A</span> On the 25th of December</button>
+      <button class="read-opt" onclick="rqPick(this,'rq4',false)"><span>B</span> On the 12th of March</button>
+      <button class="read-opt" onclick="rqPick(this,'rq4',true)"><span>C</span> On the 15th of March</button>
+      <button class="read-opt" onclick="rqPick(this,'rq4',false)"><span>D</span> On the 5th of March</button>
+    </div>
+  </div>
+
+  <div class="read-q" id="rq5">
+    <div class="read-q-text">5. What time does Nadia go to bed on Thursday?</div>
+    <div class="read-opts">
+      <button class="read-opt" onclick="rqPick(this,'rq5',false)"><span>A</span> At nine o'clock</button>
+      <button class="read-opt" onclick="rqPick(this,'rq5',true)"><span>B</span> At half past ten</button>
+      <button class="read-opt" onclick="rqPick(this,'rq5',false)"><span>C</span> At ten o'clock</button>
+      <button class="read-opt" onclick="rqPick(this,'rq5',false)"><span>D</span> At quarter to eleven</button>
+    </div>
+  </div>
+
+  <div id="rqScore5" style="display:none;background:linear-gradient(135deg,#12285a,#1a1242);border:2px solid var(--accent);border-radius:20px;padding:32px 24px;text-align:center;margin-top:20px;animation:fadeIn .5s ease">
+    <div style="font-size:52px;margin-bottom:10px">&#x1F3C6;</div>
+    <div id="rqScoreNum5" style="font-size:56px;font-weight:900;color:var(--accent);line-height:1">0/5</div>
+    <div id="rqScoreMsg5" style="font-size:16px;font-weight:700;color:white;margin:10px 0 6px"></div>
+    <div id="rqScoreAr5" style="font-size:13px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-bottom:20px"></div>
+    <button onclick="rqReset5()" style="background:var(--accent);border:none;color:#0d1b2a;padding:12px 28px;border-radius:12px;font-weight:900;cursor:pointer;font-family:'Poppins',sans-serif;font-size:14px;transition:all .25s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">&#x1F504; Try Again</button>
+  </div>
+
+</div><!-- /tab-reading -->
+
+<!-- CHECK IT TAB -->
+<div id="tab-checkit" class="tab-panel">
+
+  <div class="ci-hero">
+    <div class="ci-hero-icon">&#x2705;</div>
+    <h2 class="ci-hero-title">Check It!</h2>
+    <p class="ci-hero-sub">25 questions on Days &amp; Time — 20 MCQ + 5 Fill-in-the-Blank</p>
+    <div class="ci-hero-types">
+      <span class="tag tag-grammar">20 Multiple Choice</span>
+      <span class="tag tag-other">5 Fill in the Blank</span>
+    </div>
+  </div>
+
+  <div class="ci-progress-wrap">
+    <div class="ci-progress-inner">
+      <div class="ci-progress-bar"><div class="ci-progress-fill" id="ciProgressFill5"></div></div>
+      <div class="ci-progress-txt">
+        <span id="ciProgressTxt5">0 / 25 answered</span>
+        <span id="ciScoreTxt5">Score: 0</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="ci-wrap" id="ciWrap5">
+
+    <div class="ci-q" id="ciq1"><div class="ci-q-head"><div class="ci-q-num">1</div><div class="ci-q-tag">Days</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">Which day comes after Wednesday?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq1',false)"><span class="ci-lbl">A</span>Tuesday</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq1',false)"><span class="ci-lbl">B</span>Monday</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq1',true)"><span class="ci-lbl">C</span>Thursday</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq1',false)"><span class="ci-lbl">D</span>Friday</button>
+      </div>
+    </div>
+
+    <div class="ci-q" id="ciq2"><div class="ci-q-head"><div class="ci-q-num">2</div><div class="ci-q-tag">Time</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">How do you say 3:30?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq2',false)"><span class="ci-lbl">A</span>Quarter past three</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq2',true)"><span class="ci-lbl">B</span>Half past three</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq2',false)"><span class="ci-lbl">C</span>Quarter to three</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq2',false)"><span class="ci-lbl">D</span>Three o'clock</button>
+      </div>
+    </div>
+
+    <div class="ci-q" id="ciq3"><div class="ci-q-head"><div class="ci-q-num">3</div><div class="ci-q-tag">Months</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">Which month comes after July?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq3',false)"><span class="ci-lbl">A</span>June</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq3',true)"><span class="ci-lbl">B</span>August</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq3',false)"><span class="ci-lbl">C</span>September</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq3',false)"><span class="ci-lbl">D</span>October</button>
+      </div>
+    </div>
+
+    <div class="ci-q" id="ciq4"><div class="ci-q-head"><div class="ci-q-num">4</div><div class="ci-q-tag">Time</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">How do you say 4:45?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq4',false)"><span class="ci-lbl">A</span>Quarter past five</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq4',false)"><span class="ci-lbl">B</span>Half past four</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq4',true)"><span class="ci-lbl">C</span>Quarter to five</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq4',false)"><span class="ci-lbl">D</span>Quarter past four</button>
+      </div>
+    </div>
+
+    <div class="ci-q" id="ciq5"><div class="ci-q-head"><div class="ci-q-num">5</div><div class="ci-q-tag">Prepositions</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">We use ___ with days of the week.</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq5',false)"><span class="ci-lbl">A</span>at</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq5',false)"><span class="ci-lbl">B</span>in</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq5',true)"><span class="ci-lbl">C</span>on</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq5',false)"><span class="ci-lbl">D</span>by</button>
+      </div>
+    </div>
+
+    <div class="ci-q" id="ciq6"><div class="ci-q-head"><div class="ci-q-num">6</div><div class="ci-q-tag">Days</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">What is the first day of the week in English?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq6',false)"><span class="ci-lbl">A</span>Monday</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq6',false)"><span class="ci-lbl">B</span>Saturday</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq6',true)"><span class="ci-lbl">C</span>Sunday</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq6',false)"><span class="ci-lbl">D</span>Friday</button>
+      </div>
+    </div>
+
+    <div class="ci-q" id="ciq7"><div class="ci-q-head"><div class="ci-q-num">7</div><div class="ci-q-tag">Time</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">How do you say 7:15?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq7',true)"><span class="ci-lbl">A</span>Quarter past seven</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq7',false)"><span class="ci-lbl">B</span>Quarter to seven</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq7',false)"><span class="ci-lbl">C</span>Half past seven</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq7',false)"><span class="ci-lbl">D</span>Seven o'clock</button>
+      </div>
+    </div>
+
+    <div class="ci-q" id="ciq8"><div class="ci-q-head"><div class="ci-q-num">8</div><div class="ci-q-tag">Prepositions</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">We use ___ with months.</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq8',false)"><span class="ci-lbl">A</span>at</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq8',true)"><span class="ci-lbl">B</span>in</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq8',false)"><span class="ci-lbl">C</span>on</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq8',false)"><span class="ci-lbl">D</span>from</button>
+      </div>
+    </div>
+
+    <div class="ci-q" id="ciq9"><div class="ci-q-head"><div class="ci-q-num">9</div><div class="ci-q-tag">Ordinals</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">How do you say the date "3 March"?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq9',false)"><span class="ci-lbl">A</span>The three of March</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq9',true)"><span class="ci-lbl">B</span>The third of March</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq9',false)"><span class="ci-lbl">C</span>The three March</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq9',false)"><span class="ci-lbl">D</span>March the three</button>
+      </div>
+    </div>
+
+    <div class="ci-q" id="ciq10"><div class="ci-q-head"><div class="ci-q-num">10</div><div class="ci-q-tag">am/pm</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">Which is correct for 8 in the morning?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq10',true)"><span class="ci-lbl">A</span>8 am</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq10',false)"><span class="ci-lbl">B</span>8 pm</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq10',false)"><span class="ci-lbl">C</span>8 midnight</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq10',false)"><span class="ci-lbl">D</span>8 noon</button>
+      </div>
+    </div>
+
+    <div class="ci-brk" id="brk10">
+      <div class="ci-brk-emoji">&#x23F0;</div>
+      <div class="ci-brk-title">Halfway — 10/25 done!</div>
+      <div class="ci-brk-cols">
+        <div class="ci-brk-col">
+          <div class="ci-brk-col-title">&#x26A0;&#xFE0F; Prepositions</div>
+          <div class="ci-brk-text"><b>at</b> + time: at 3 o'clock<br><b>on</b> + day/date: on Monday<br><b>in</b> + month/year: in June</div>
+        </div>
+        <div class="ci-brk-col">
+          <div class="ci-brk-col-title">&#x23F0; Time Formula</div>
+          <div class="ci-brk-text">1–30 min → <b>past</b><br>31–59 min → <b>to</b> (next hour)<br>:15 = quarter past<br>:45 = quarter to</div>
+        </div>
+      </div>
+      <div class="ci-brk-ar">منتصف الطريق! راجع حروف الجر وطريقة قراءة الساعة.</div>
+    </div>
+
+    <div class="ci-q" id="ciq11"><div class="ci-q-head"><div class="ci-q-num">11</div><div class="ci-q-tag">Time</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">How do you say 2:40?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq11',false)"><span class="ci-lbl">A</span>Forty past two</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq11',true)"><span class="ci-lbl">B</span>Twenty to three</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq11',false)"><span class="ci-lbl">C</span>Twenty past two</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq11',false)"><span class="ci-lbl">D</span>Half past two</button>
+      </div>
+    </div>
+
+    <div class="ci-q" id="ciq12"><div class="ci-q-head"><div class="ci-q-num">12</div><div class="ci-q-tag">Months</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">Which is the 9th month?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq12',false)"><span class="ci-lbl">A</span>August</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq12',true)"><span class="ci-lbl">B</span>September</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq12',false)"><span class="ci-lbl">C</span>October</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq12',false)"><span class="ci-lbl">D</span>November</button>
+      </div>
+    </div>
+
+    <div class="ci-q" id="ciq13"><div class="ci-q-head"><div class="ci-q-num">13</div><div class="ci-q-tag">Expressions</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">The day after today is ___.</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq13',false)"><span class="ci-lbl">A</span>yesterday</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq13',false)"><span class="ci-lbl">B</span>today</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq13',true)"><span class="ci-lbl">C</span>tomorrow</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq13',false)"><span class="ci-lbl">D</span>last week</button>
+      </div>
+    </div>
+
+    <div class="ci-q" id="ciq14"><div class="ci-q-head"><div class="ci-q-num">14</div><div class="ci-q-tag">Prepositions</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">We use ___ with clock times.</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq14',true)"><span class="ci-lbl">A</span>at</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq14',false)"><span class="ci-lbl">B</span>in</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq14',false)"><span class="ci-lbl">C</span>on</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq14',false)"><span class="ci-lbl">D</span>by</button>
+      </div>
+    </div>
+
+    <div class="ci-q" id="ciq15"><div class="ci-q-head"><div class="ci-q-num">15</div><div class="ci-q-tag">Days</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">Which sentence is correct?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq15',false)"><span class="ci-lbl">A</span>I go to school in Monday.</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq15',true)"><span class="ci-lbl">B</span>I go to school on Monday.</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq15',false)"><span class="ci-lbl">C</span>I go to school at Monday.</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq15',false)"><span class="ci-lbl">D</span>I go to school by Monday.</button>
+      </div>
+    </div>
+
+    <div class="ci-q" id="ciq16"><div class="ci-q-head"><div class="ci-q-num">16</div><div class="ci-q-tag">Ordinals</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">What is the ordinal of "21"?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq16',false)"><span class="ci-lbl">A</span>twenty-oneth</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq16',false)"><span class="ci-lbl">B</span>twenty-onest</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq16',true)"><span class="ci-lbl">C</span>twenty-first</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq16',false)"><span class="ci-lbl">D</span>twenty-oned</button>
+      </div>
+    </div>
+
+    <div class="ci-q" id="ciq17"><div class="ci-q-head"><div class="ci-q-num">17</div><div class="ci-q-tag">Time</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">It's 5:50. How do you say it?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq17',false)"><span class="ci-lbl">A</span>Fifty past five</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq17',true)"><span class="ci-lbl">B</span>Ten to six</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq17',false)"><span class="ci-lbl">C</span>Ten past five</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq17',false)"><span class="ci-lbl">D</span>Half past five</button>
+      </div>
+    </div>
+
+    <div class="ci-q" id="ciq18"><div class="ci-q-head"><div class="ci-q-num">18</div><div class="ci-q-tag">Months</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">How many months are in a year?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq18',false)"><span class="ci-lbl">A</span>10</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq18',false)"><span class="ci-lbl">B</span>11</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq18',true)"><span class="ci-lbl">C</span>12</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq18',false)"><span class="ci-lbl">D</span>13</button>
+      </div>
+    </div>
+
+    <div class="ci-q" id="ciq19"><div class="ci-q-head"><div class="ci-q-num">19</div><div class="ci-q-tag">am/pm</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">Dinner is at 7 in the evening. We say:</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq19',false)"><span class="ci-lbl">A</span>7 am</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq19',true)"><span class="ci-lbl">B</span>7 pm</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq19',false)"><span class="ci-lbl">C</span>7 noon</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq19',false)"><span class="ci-lbl">D</span>7 midnight</button>
+      </div>
+    </div>
+
+    <div class="ci-q" id="ciq20"><div class="ci-q-head"><div class="ci-q-num">20</div><div class="ci-q-tag">Mixed</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">Which is correct?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq20',false)"><span class="ci-lbl">A</span>My birthday is in Monday.</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq20',false)"><span class="ci-lbl">B</span>School starts at Monday.</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq20',true)"><span class="ci-lbl">C</span>The meeting is on the 5th of June.</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq20',false)"><span class="ci-lbl">D</span>She wakes up on seven o'clock.</button>
+      </div>
+    </div>
+
+    <!-- FIB 21 -->
+    <div class="ci-q ci-fib-q" id="ciq21">
+      <div class="ci-q-head"><div class="ci-q-num">21</div><div class="ci-q-tag">Fill in</div><span class="ci-type-badge ci-type-fib">FIB</span></div>
+      <div class="ci-fib-sent">The day before Friday is ___.</div>
+      <div class="ci-fib-row">
+        <input class="ci-fib-input" id="fib21" placeholder="type here..." oninput="this.nextElementSibling.disabled=!this.value.trim()">
+        <button class="ci-fib-check" id="fibBtn21" disabled onclick="ciFibCheck('fib21','fibBtn21','ciq21','sol21','thursday')">Check</button>
+      </div>
+      <div class="ci-hint">&#x1F4A1; days: Mon, Tue, Wed, Thu, Fri...</div>
+      <div class="ci-sol" id="sol21"><div class="ci-sol-head" style="background:rgba(34,197,94,.1);color:var(--green)">&#x2705; Answer</div><div class="ci-sol-body"><div class="ci-sol-ans">Thursday</div><div class="ci-sol-exp">الأيام: الاثنين، الثلاثاء، الأربعاء، الخميس، الجمعة — اليوم قبل الجمعة هو الخميس</div></div></div>
+    </div>
+
+    <!-- FIB 22 -->
+    <div class="ci-q ci-fib-q" id="ciq22">
+      <div class="ci-q-head"><div class="ci-q-num">22</div><div class="ci-q-tag">Fill in</div><span class="ci-type-badge ci-type-fib">FIB</span></div>
+      <div class="ci-fib-sent">It's 6:00. We say: It's six ___.</div>
+      <div class="ci-fib-row">
+        <input class="ci-fib-input" id="fib22" placeholder="type here..." oninput="this.nextElementSibling.disabled=!this.value.trim()">
+        <button class="ci-fib-check" id="fibBtn22" disabled onclick="ciFibCheck('fib22','fibBtn22','ciq22','sol22','o'clock')">Check</button>
+      </div>
+      <div class="ci-hint">&#x1F4A1; used when the time is exactly on the hour</div>
+      <div class="ci-sol" id="sol22"><div class="ci-sol-head" style="background:rgba(34,197,94,.1);color:var(--green)">&#x2705; Answer</div><div class="ci-sol-body"><div class="ci-sol-ans">o'clock</div><div class="ci-sol-exp">عندما تكون الساعة تماماً نستخدم o'clock — It's six o'clock</div></div></div>
+    </div>
+
+    <!-- FIB 23 -->
+    <div class="ci-q ci-fib-q" id="ciq23">
+      <div class="ci-q-head"><div class="ci-q-num">23</div><div class="ci-q-tag">Fill in</div><span class="ci-type-badge ci-type-fib">FIB</span></div>
+      <div class="ci-fib-sent">The 6th month of the year is ___.</div>
+      <div class="ci-fib-row">
+        <input class="ci-fib-input" id="fib23" placeholder="type here..." oninput="this.nextElementSibling.disabled=!this.value.trim()">
+        <button class="ci-fib-check" id="fibBtn23" disabled onclick="ciFibCheck('fib23','fibBtn23','ciq23','sol23','june')">Check</button>
+      </div>
+      <div class="ci-hint">&#x1F4A1; Jan=1, Feb=2, Mar=3, Apr=4, May=5, ___=6</div>
+      <div class="ci-sol" id="sol23"><div class="ci-sol-head" style="background:rgba(34,197,94,.1);color:var(--green)">&#x2705; Answer</div><div class="ci-sol-body"><div class="ci-sol-ans">June</div><div class="ci-sol-exp">الشهر السادس هو يونيو / حزيران</div></div></div>
+    </div>
+
+    <!-- FIB 24 -->
+    <div class="ci-q ci-fib-q" id="ciq24">
+      <div class="ci-q-head"><div class="ci-q-num">24</div><div class="ci-q-tag">Fill in</div><span class="ci-type-badge ci-type-fib">FIB</span></div>
+      <div class="ci-fib-sent">My class starts ___ 9 o'clock. (preposition)</div>
+      <div class="ci-fib-row">
+        <input class="ci-fib-input" id="fib24" placeholder="type here..." oninput="this.nextElementSibling.disabled=!this.value.trim()">
+        <button class="ci-fib-check" id="fibBtn24" disabled onclick="ciFibCheck('fib24','fibBtn24','ciq24','sol24','at')">Check</button>
+      </div>
+      <div class="ci-hint">&#x1F4A1; ___ + clock time</div>
+      <div class="ci-sol" id="sol24"><div class="ci-sol-head" style="background:rgba(34,197,94,.1);color:var(--green)">&#x2705; Answer</div><div class="ci-sol-body"><div class="ci-sol-ans">at</div><div class="ci-sol-exp">مع الوقت / الساعة نستخدم at — at 9 o'clock</div></div></div>
+    </div>
+
+    <!-- FIB 25 -->
+    <div class="ci-q ci-fib-q" id="ciq25">
+      <div class="ci-q-head"><div class="ci-q-num">25</div><div class="ci-q-tag">Fill in</div><span class="ci-type-badge ci-type-fib">FIB</span></div>
+      <div class="ci-fib-sent">It's 8:45. It's ___ to nine.</div>
+      <div class="ci-fib-row">
+        <input class="ci-fib-input" id="fib25" placeholder="type here..." oninput="this.nextElementSibling.disabled=!this.value.trim()">
+        <button class="ci-fib-check" id="fibBtn25" disabled onclick="ciFibCheck('fib25','fibBtn25','ciq25','sol25','quarter')">Check</button>
+      </div>
+      <div class="ci-hint">&#x1F4A1; 45 minutes = ___ to the next hour</div>
+      <div class="ci-sol" id="sol25"><div class="ci-sol-head" style="background:rgba(34,197,94,.1);color:var(--green)">&#x2705; Answer</div><div class="ci-sol-body"><div class="ci-sol-ans">quarter</div><div class="ci-sol-exp">8:45 = quarter to nine — الساعة التاسعة إلا ربع</div></div></div>
+    </div>
+
+    <div class="ci-score" id="ciScore5">
+      <div class="ci-score-emoji" id="ciScoreEmoji5">&#x1F3C6;</div>
+      <div class="ci-score-num" id="ciScoreNum5">0</div>
+      <div class="ci-score-of">out of 25</div>
+      <div class="ci-score-bar-wrap"><div class="ci-score-bar-fill" id="ciScoreBar5"></div></div>
+      <div class="ci-score-msg" id="ciScoreMsg5"></div>
+      <div class="ci-score-ar" id="ciScoreAr5"></div>
+      <button class="ci-reset" onclick="ciReset5()">&#x1F504; Try Again</button>
+    </div>
+
+  </div>
+</div><!-- /tab-checkit -->
+
+  <footer><p>Lesson 5 &middot; Days &amp; Telling the Time &middot; A1 Level &middot; &copy; MOHAMMED ELHUSEYIN</p></footer>
+</div><!-- /main-content -->
+</div><!-- /layout -->
+
+<script src="../media/global-player.js"></script>
+<script>
+var rqScore5=0,rqAnswered5=0;
+var ciScore5=0,ciAnswered5=0,ciTotal5=25;
+var ciBreaks5={10:'brk10'};
+
+function showTab(id,btn){
+  document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.remove('active');});
+  document.querySelectorAll('.main-tab').forEach(function(b){b.classList.remove('active');});
+  document.getElementById('tab-'+id).classList.add('active');
+  btn.classList.add('active');
+}
+function ttsRead(text,rate){
+  speechSynthesis.cancel();
+  var u=new SpeechSynthesisUtterance(text);
+  u.lang='en-US';u.rate=rate||0.9;
+  speechSynthesis.speak(u);
+}
+function rqPick(btn,qid,correct){
+  var qEl=document.getElementById(qid);
+  if(qEl.dataset.done)return;
+  qEl.dataset.done='1';
+  qEl.querySelectorAll('.read-opt').forEach(function(b){b.classList.add('done');if(b===btn)b.classList.add(correct?'correct':'wrong');});
+  if(correct)rqScore5++;
+  rqAnswered5++;
+  if(rqAnswered5===5){
+    var sc=document.getElementById('rqScore5');sc.style.display='block';
+    document.getElementById('rqScoreNum5').textContent=rqScore5+'/5';
+    var msgs=[['Keep practising!','استمر في التدريب!'],['Good effort!','جهد جيد!'],['Getting there!','أنت تتحسن!'],['Well done!','أداء جيد جداً!'],['Excellent!','ممتاز!'],['Perfect!','نتيجة مثالية!']];
+    var m=msgs[Math.min(rqScore5,5)];
+    document.getElementById('rqScoreMsg5').textContent=m[0];
+    document.getElementById('rqScoreAr5').textContent=m[1];
+    sc.scrollIntoView({behavior:'smooth',block:'center'});
+  }
+}
+function rqReset5(){
+  rqScore5=0;rqAnswered5=0;
+  ['rq1','rq2','rq3','rq4','rq5'].forEach(function(id){
+    var q=document.getElementById(id);if(!q)return;
+    delete q.dataset.done;
+    q.querySelectorAll('.read-opt').forEach(function(b){b.classList.remove('correct','wrong','done');});
+  });
+  document.getElementById('rqScore5').style.display='none';
+  document.getElementById('tab-reading').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function ciUpdateProgress5(){
+  var pct=Math.round(ciAnswered5/ciTotal5*100);
+  document.getElementById('ciProgressFill5').style.width=pct+'%';
+  document.getElementById('ciProgressTxt5').textContent=ciAnswered5+' / '+ciTotal5+' answered';
+  document.getElementById('ciScoreTxt5').textContent='Score: '+ciScore5;
+}
+function ciCheckBreakAndDone5(){
+  for(var n in ciBreaks5){if(ciAnswered5===parseInt(n)){var bEl=document.getElementById(ciBreaks5[n]);if(bEl)bEl.style.display='block';}}
+  if(ciAnswered5===ciTotal5)ciShowScore5();
+}
+function ciPick(btn,qid,correct){
+  var qEl=document.getElementById(qid);if(qEl.dataset.done)return;
+  qEl.dataset.done='1';
+  qEl.querySelectorAll('.ci-btn').forEach(function(b){b.classList.add('done');});
+  btn.classList.add(correct?'ci-correct':'ci-wrong');
+  if(correct)ciScore5++;
+  ciAnswered5++;ciUpdateProgress5();ciCheckBreakAndDone5();
+}
+function ciFibCheck(inputId,btnId,qid,solId,answer){
+  var inp=document.getElementById(inputId),btn=document.getElementById(btnId),qEl=document.getElementById(qid);
+  if(qEl.dataset.done)return;
+  var correct=inp.value.trim().toLowerCase()===answer.toLowerCase();
+  qEl.dataset.done='1';inp.disabled=true;btn.disabled=true;
+  inp.style.borderColor=correct?'var(--green)':'var(--red)';
+  inp.style.color=correct?'var(--green)':'var(--red)';
+  var sol=document.getElementById(solId);if(sol)sol.style.display='block';
+  if(correct)ciScore5++;
+  ciAnswered5++;ciUpdateProgress5();ciCheckBreakAndDone5();
+}
+function ciShowScore5(){
+  var sc=document.getElementById('ciScore5');sc.style.display='block';
+  var pct=Math.round(ciScore5/ciTotal5*100);
+  document.getElementById('ciScoreNum5').textContent=ciScore5;
+  document.getElementById('ciScoreBar5').style.width=pct+'%';
+  var msgs=[['Keep going!','&#x1F4AA;','لا تستسلم، راجع الدروس!'],['Getting better!','&#x1F60A;','أنت تتحسن!'],['Good job!','&#x1F44D;','جيد! قليل من المراجعة يكفي.'],['Well done!','&#x1F31F;','أداء رائع!'],['Excellent!','&#x1F3C6;','ممتاز! أتقنت الوقت والأيام!']];
+  var idx=Math.min(Math.floor(pct/25),4);var m=msgs[idx];
+  document.getElementById('ciScoreEmoji5').innerHTML=m[1];
+  document.getElementById('ciScoreMsg5').textContent=m[0];
+  document.getElementById('ciScoreAr5').innerHTML=m[2];
+  sc.scrollIntoView({behavior:'smooth',block:'center'});
+  localStorage.setItem('up_l5',pct);
+  var f=document.getElementById('sp5');if(f)f.style.width=pct+'%';
+}
+function ciReset5(){
+  ciScore5=0;ciAnswered5=0;ciUpdateProgress5();
+  for(var i=1;i<=20;i++){
+    var q=document.getElementById('ciq'+i);if(!q)continue;
+    delete q.dataset.done;
+    q.querySelectorAll('.ci-btn').forEach(function(b){b.classList.remove('ci-correct','ci-wrong','done');});
+  }
+  [21,22,23,24,25].forEach(function(i){
+    var q=document.getElementById('ciq'+i);if(!q)return;
+    delete q.dataset.done;
+    var inp=document.getElementById('fib'+i);var btn=document.getElementById('fibBtn'+i);
+    if(inp){inp.value='';inp.disabled=false;inp.style.borderColor='';inp.style.color='';}
+    if(btn)btn.disabled=true;
+  });
+  ['sol21','sol22','sol23','sol24','sol25'].forEach(function(s){var el=document.getElementById(s);if(el)el.style.display='none';});
+  for(var bk in ciBreaks5){var bEl=document.getElementById(ciBreaks5[bk]);if(bEl)bEl.style.display='none';}
+  document.getElementById('ciScore5').style.display='none';
+  document.getElementById('tab-checkit').scrollIntoView({behavior:'smooth',block:'start'});
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+(function(){
+  var map={1: "up_l1", 2: "up_l2", 3: "up_l3", 4: "up_l4", 5: "up_l5", 6: "up1", 7: "up2", 8: "up3", 9: "up4", 10: "up6", 11: "up5", 12: "up_l12", 13: "up7", 14: "up8", 15: "up9", 16: "up10", 17: "up11", 19: "up_l19", 20: "up_l20", 21: "up_l21", 22: "up_l22", 23: "up_l23", 24: "up_l24", 25: "up_l25", 26: "up_l26", 27: "up_l27", 28: "up_l28", 29: "up_l29", 30: "up_l30", 31: "up_l31", 32: "up_l32", 33: "up_l33", 34: "up_l34", 35: "up_l35", 36: "up_l36", 37: "up_l37", 38: "up_l38", 39: "up_l39", 40: "up_l40", 41: "up_l41", 42: "up_l42", 43: "up_l43", 44: "up_l44", 45: "up_l45", 46: "up_l46"};
+  for(var lid in map){
+    var f=document.getElementById('sp'+lid);
+    if(f){var v=parseInt(localStorage.getItem(map[lid])||'0',10);f.style.width=v+'%';}
+  }
+  setTimeout(function(){
+    var a=document.querySelector('.su-item.su-active');
+    if(a){var u=a.closest('.sidebar-units');if(u)u.scrollTop=Math.max(0,a.offsetTop-a.offsetHeight);}
+  },80);
+})();
+</script>
+<script>
+function toggleSidebar(){
+  var sb=document.querySelector('.sidebar');
+  var bd=document.getElementById('sbBackdrop');
+  if(!sb||!bd)return;
+  sb.classList.toggle('sb-open');
+  bd.classList.toggle('sb-open');
+  document.body.style.overflow=sb.classList.contains('sb-open')?'hidden':'';
+}
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.su-item').forEach(function(a){
+    a.addEventListener('click',function(){
+      var sb=document.querySelector('.sidebar');
+      if(sb&&sb.classList.contains('sb-open'))toggleSidebar();
+    });
+  });
+});
+</script>
+
+<script>
+(function(){
+  // Disable right-click
+  document.addEventListener('contextmenu', function(e){ e.preventDefault(); });
+
+  // Disable keyboard shortcuts
+  document.addEventListener('keydown', function(e){
+    // F12
+    if(e.key==='F12'){e.preventDefault();return false;}
+    // Ctrl+U (view source), Ctrl+S (save), Ctrl+A (select all), Ctrl+P (print)
+    if(e.ctrlKey && ['u','U','s','S','a','A','p','P'].indexOf(e.key)!==-1){
+      e.preventDefault();return false;
+    }
+    // Ctrl+Shift+I (DevTools), Ctrl+Shift+J, Ctrl+Shift+C
+    if(e.ctrlKey && e.shiftKey && ['i','I','j','J','c','C','k','K'].indexOf(e.key)!==-1){
+      e.preventDefault();return false;
+    }
+  });
+
+  // Disable text selection via CSS
+  document.documentElement.style.webkitUserSelect='none';
+  document.documentElement.style.userSelect='none';
+
+  // Allow selection inside inputs/textareas only
+  document.addEventListener('mousedown', function(e){
+    var t=e.target.tagName;
+    if(t==='INPUT'||t==='TEXTAREA'){
+      e.target.style.userSelect='text';
+      e.target.style.webkitUserSelect='text';
+    }
+  });
+
+  // Block drag
+  document.addEventListener('dragstart', function(e){ e.preventDefault(); });
+})();
+</script>
+<button class="float-menu-btn" onclick="toggleSidebar()" aria-label="القائمة">
+  <span></span><span></span><span></span>
+</button>
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=FREE"></script>
+<script src="../media/rv.js"></script>
+</body>
+</html>

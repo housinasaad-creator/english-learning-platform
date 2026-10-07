@@ -1,0 +1,1486 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lesson 42 — Mixed Conditionals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#1a3a6e;--primary-dark:#0f2548;--accent:#f4a624;--al:rgba(244,166,36,0.12);--bg:#0d1b2a;--card:#162030;--card2:#1e2d40;--border:#2d4560;--text:#e8edf5;--muted:#8899b0;--green:#22c55e;--red:#ef4444;--blue:#4a9eff;--purple:#a855f7}
+body{font-family:'Poppins','Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.ar{font-family:'Cairo','Segoe UI',Arial,sans-serif}
+.topnav{background:var(--primary-dark);border-bottom:2px solid var(--accent);padding:10px 24px;display:flex;align-items:center;justify-content:space-between}
+.hero{background:linear-gradient(135deg,#1a3a6e 0%,#0f2548 55%,#0d1f3c 100%);padding:55px 24px 48px;text-align:center;border-bottom:3px solid var(--accent);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;border-radius:50%;background:rgba(244,166,36,0.06)}
+.hero::after{content:'';position:absolute;bottom:-60px;left:-60px;width:300px;height:300px;border-radius:50%;background:rgba(74,158,255,0.05)}
+.unit-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(244,166,36,0.15);border:1px solid rgba(244,166,36,0.4);color:var(--accent);font-weight:800;padding:6px 18px;border-radius:20px;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
+.hero-title{font-size:clamp(28px,6vw,52px);font-weight:900;color:white;line-height:1.15;margin-bottom:8px}
+.hero-title i{color:var(--accent);font-style:italic}
+.hero-ar{font-size:18px;color:var(--muted);margin-bottom:12px;direction:rtl}
+.hero-sub{color:var(--muted);max-width:620px;margin:0 auto 22px;font-size:14px}
+.hero-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.tag{display:inline-flex;align-items:center;gap:6px;padding:6px 15px;border-radius:16px;font-size:12px;font-weight:700}
+.tag-grammar{background:rgba(244,166,36,0.15);color:var(--accent);border:1px solid rgba(244,166,36,0.3)}
+.tag-other{background:rgba(74,158,255,0.1);color:var(--blue);border:1px solid rgba(74,158,255,0.25)}
+.tag-btn{cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif}
+.tag-btn:hover{transform:translateY(-2px);opacity:.85}
+.main-tabs{display:flex;gap:4px;padding:14px 24px;background:var(--primary-dark);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;flex-wrap:wrap}
+.main-tab{padding:8px 18px;border-radius:8px;border:1px solid transparent;background:none;color:var(--muted);font-weight:700;cursor:pointer;font-size:13px;font-family:'Poppins',sans-serif;transition:all .2s}
+.main-tab.active{background:var(--accent);color:#0d1b2a;border-color:var(--accent)}
+.main-tab:hover:not(.active){background:rgba(244,166,36,.1);color:var(--accent);border-color:rgba(244,166,36,.3)}
+.tab-panel{display:none;padding:20px 24px}
+.tab-panel.active{display:block}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;margin-bottom:16px}
+.card-title{font-size:16px;font-weight:800;color:white;margin-bottom:5px;display:flex;align-items:center;gap:8px}
+.card-ar{font-size:13px;color:var(--muted);margin-bottom:14px;direction:rtl;font-family:'Cairo',sans-serif}
+.card-note{background:var(--al);border:1px solid rgba(244,166,36,.3);border-radius:10px;padding:10px 14px;font-size:12.5px;color:var(--accent);margin:10px 0;direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.sub-tabs{display:flex;gap:4px;margin:14px 0 18px;flex-wrap:wrap}
+.sub-tab{padding:6px 14px;border-radius:8px;border:1px solid var(--border);background:none;color:var(--muted);font-weight:700;cursor:pointer;font-size:12px;font-family:'Poppins',sans-serif;transition:all .2s}
+.sub-tab.active{background:rgba(244,166,36,.15);border-color:var(--accent);color:var(--accent)}
+.sub-tab:hover:not(.active){border-color:var(--accent);color:var(--accent)}
+.sub-panel{display:none}
+.sub-panel.active{display:block}
+.tts-box{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.tts-btn{background:var(--card2);border:1px solid var(--blue);color:var(--blue);padding:7px 16px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif}
+.tts-btn:hover{background:rgba(74,158,255,.15);transform:translateY(-1px)}
+.tts-stop{border-color:var(--muted);color:var(--muted)}
+.tts-stop:hover{background:rgba(136,153,176,.1)}
+.formula-box{background:rgba(10,30,53,0.8);border:2px solid var(--border);border-radius:14px;padding:18px 22px;margin:14px 0}
+.formula-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid rgba(45,69,96,0.4);flex-wrap:wrap}
+.formula-row:last-child{border-bottom:none}
+.formula-subj{font-size:14px;font-weight:800;color:var(--blue);min-width:160px}
+.formula-be{font-size:15px;font-weight:900;color:var(--accent);background:rgba(244,166,36,.12);padding:4px 12px;border-radius:8px}
+.formula-be.neg{color:var(--red);background:rgba(239,68,68,.1)}
+.formula-be.q{color:var(--green);background:rgba(34,197,94,.1)}
+.formula-note{font-size:11px;color:var(--muted);font-style:italic;margin-left:auto}
+.formula-plus{font-size:16px;color:var(--muted)}
+.ex-section-title{font-size:12px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin:16px 0 8px}
+.ex-list{margin-top:4px}
+.ex-item{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid rgba(45,69,96,0.3)}
+.ex-item:last-child{border-bottom:none}
+.sp{background:none;border:none;font-size:16px;cursor:pointer;color:var(--blue);flex-shrink:0;padding:2px 0;transition:transform .2s;line-height:1}
+.sp:hover{transform:scale(1.2)}
+.sp-group{display:inline-flex;align-items:center;gap:3px;flex-shrink:0}
+.sp-pp,.sp-st{background:var(--card2);border:1px solid var(--border);color:var(--muted);font-size:12px;padding:3px 7px;border-radius:6px;cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif;line-height:1;min-width:26px;text-align:center}
+.sp-pp:hover{background:rgba(74,158,255,.15);border-color:var(--blue);color:var(--blue)}
+.sp-st:hover{background:rgba(239,68,68,.1);border-color:var(--red);color:var(--red)}
+.ex-en{font-size:13.5px;color:var(--text);font-weight:600;line-height:1.4}
+.ex-en b{color:var(--accent)}
+.ex-ar{font-size:12px;color:var(--muted);margin-top:2px;direction:rtl;font-family:'Cairo',sans-serif}
+.sa-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13px}
+.sa-table th{background:rgba(26,58,110,0.5);color:var(--accent);padding:8px 12px;font-weight:800;text-align:left;border:1px solid var(--border)}
+.sa-table td{padding:8px 12px;border:1px solid rgba(45,69,96,0.4);vertical-align:middle}
+.sa-table tr:nth-child(even) td{background:rgba(30,45,64,0.3)}
+.sa-yes{color:var(--green);font-weight:800}
+.sa-no{color:var(--red);font-weight:800}
+.wh-grid{display:flex;flex-direction:column;gap:7px;margin:12px 0}
+.wh-row{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px;font-size:13px}
+.wh-q{color:var(--text);margin-bottom:3px}
+.wh-q b{color:var(--blue)}
+.wh-a{color:var(--muted);font-style:italic}
+.time-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;margin:12px 0}
+.time-item{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px}
+.time-en{font-size:13px;font-weight:700;color:var(--accent)}
+.time-ar{font-size:11px;color:var(--muted);margin-top:3px;direction:rtl;font-family:'Cairo',sans-serif}
+.time-eg{font-size:11px;color:var(--text);margin-top:4px;font-style:italic}
+.mistake-item{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.m-wrong{font-size:13px;color:var(--red);margin-bottom:3px}
+.m-wrong::before{content:'❌ '}
+.m-right{font-size:13px;color:var(--green);font-weight:700;margin-bottom:3px}
+.m-right::before{content:'✅ '}
+.m-why{font-size:11.5px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;border-top:1px solid rgba(45,69,96,.4);padding-top:5px;margin-top:5px}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:8px;margin-top:12px}
+.vocab-item{background:var(--card2);border:1px solid var(--border);border-radius:9px;padding:9px 12px;cursor:pointer;transition:border-color .2s}
+.vocab-item:hover{border-color:var(--accent)}
+.vocab-en{font-size:14px;font-weight:800;color:var(--text)}
+.vocab-past{font-size:11.5px;color:var(--accent);margin-top:2px;font-weight:700}
+.vocab-ar{font-size:11px;color:var(--muted);margin-top:3px;font-family:'Cairo',sans-serif;direction:rtl}
+.vs-wrap{overflow-x:auto;margin:18px 0;padding:4px 0}
+.vs-caption{font-size:11px;color:var(--muted);text-align:center;margin-top:8px;font-style:italic}
+.dlg-card{background:var(--card);border:1px solid var(--border);border-radius:16px;margin-bottom:16px;overflow:hidden}
+.dlg-header{background:linear-gradient(to right,var(--primary),#1a1a4e);padding:13px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.dlg-meta{flex:1}
+.dlg-num{font-size:10px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:2px}
+.dlg-title{font-weight:800;font-size:14px;color:white}
+.dlg-ctx{font-size:11px;color:rgba(255,255,255,.5);font-style:italic;margin-top:2px}
+.dlg-tts{background:rgba(244,166,36,.15);border:1px solid rgba(244,166,36,.4);color:var(--accent);padding:6px 14px;border-radius:8px;font-size:11px;font-weight:700;cursor:pointer;font-family:'Poppins',sans-serif;transition:all .2s;white-space:nowrap}
+.dlg-tts:hover{background:rgba(244,166,36,.3)}
+.dlg-body{padding:20px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:640px){.dlg-body{grid-template-columns:1fr}}
+.dlg-col-head{font-size:10px;font-weight:700;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+.bubble{padding:9px 13px;border-radius:12px;font-size:13px;line-height:1.55;margin-bottom:7px}
+.bubble-a{background:rgba(26,58,110,0.5);border:1px solid rgba(74,158,255,0.2)}
+.bubble-b{background:var(--card2);border:1px solid var(--border)}
+.bubble-name{font-size:9px;font-weight:800;color:var(--muted);margin-bottom:4px;letter-spacing:.5px;text-transform:uppercase}
+.bubble-name.b{color:var(--accent)}
+.bubble-ar{direction:rtl;font-family:'Cairo',sans-serif;font-size:13px;color:var(--text)}
+.layout{display:flex;min-height:100vh}
+.sidebar{width:30%;max-width:320px;min-width:220px;position:fixed;top:0;left:0;bottom:0;background:var(--primary-dark);border-right:2px solid var(--border);display:flex;flex-direction:column;z-index:200;overflow:hidden}
+.sidebar-header{padding:18px 20px 14px;border-bottom:2px solid var(--accent);flex-shrink:0}
+.sidebar-logo{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+.sidebar-logo-icon{width:34px;height:34px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900;color:#0d1b2a;flex-shrink:0}
+.sidebar-logo-text{font-family:'Cairo',sans-serif;font-size:15px;font-weight:800;color:white}
+.sidebar-logo-sub{font-size:10px;color:var(--muted);font-weight:500;margin-top:-1px}
+.sidebar-label{font-family:'Cairo',sans-serif;font-size:11px;font-weight:700;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-top:12px}
+.sidebar-units{flex:1;overflow-y:auto;padding:10px 12px;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+.sidebar-units::-webkit-scrollbar{width:4px}
+.sidebar-units::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+.su-item{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;text-decoration:none;margin-bottom:4px;transition:background .2s,transform .2s}
+.su-item:not(.su-locked):hover{background:rgba(244,166,36,0.12);transform:translateX(3px)}
+.su-item.su-locked{opacity:.45;cursor:default;pointer-events:none}
+.su-item.su-active{background:rgba(244,166,36,0.15);border:1px solid rgba(244,166,36,0.3)}
+.su-num{width:28px;height:28px;border-radius:7px;background:rgba(255,255,255,0.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:var(--accent);flex-shrink:0}
+.su-item:not(.su-locked) .su-num{background:rgba(244,166,36,0.12);border-color:rgba(244,166,36,0.3)}
+.su-texts{flex:1;min-width:0}
+.su-en{font-size:13px;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.su-ar{font-family:'Cairo',sans-serif;font-size:11px;color:var(--muted);direction:rtl;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.su-check{font-size:12px;flex-shrink:0}
+.su-lock{font-size:11px;color:var(--muted);flex-shrink:0}
+.main-content{margin-left:min(30%,320px);flex:1;min-width:0}
+footer{padding:20px 24px;text-align:center;color:var(--muted);font-size:12px;border-top:1px solid var(--border);margin-top:10px}
+
+/* ══ Hamburger (desktop: hidden) ══ */
+.nav-hamburger{display:none;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.3);border-radius:8px;cursor:pointer;flex-direction:column;gap:5px;padding:8px;flex-shrink:0;margin-left:6px}
+.nav-hamburger span{display:block;width:100%;height:2px;background:var(--accent);border-radius:2px}
+/* Backdrop */
+.sb-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:199}
+.sb-backdrop.sb-open{display:block}
+@media(max-width:768px){
+  .sidebar{position:fixed;left:-100%;width:82%;max-width:300px;min-width:unset;transition:left .3s ease;z-index:200}
+  .sidebar.sb-open{left:0}
+  .main-content{margin-left:0}
+  .nav-brand{display:none}
+  .nav-hamburger{display:flex}
+  .topnav{padding:10px 12px;gap:6px}
+  .nav-lesson-name{display:none}
+  .nav-left{gap:5px}
+  .hero{padding:22px 13px 20px}
+  .hero-title{font-size:22px;letter-spacing:-.5px}
+  .hero-ar{font-size:12px}
+  .hero-sub{font-size:12px}
+  .hero-tags{gap:5px;justify-content:center}
+  .tag{font-size:10px;padding:3px 9px}
+  .rule-section{padding:0 12px}
+  .read-wrap{padding:0 12px}
+  .ci-wrap{padding:12px 12px}
+  .ci-hero{padding:18px 12px}
+  .dlg-block{padding:0 12px}
+  .eu-cat-grid{grid-template-columns:1fr}
+  .nu-scale{gap:3px}
+  .nu-word{font-size:10px;padding:3px 7px}
+  .nu-cmp-head,.nu-cmp-row{grid-template-columns:1fr 1fr;font-size:10px}
+  .nu-cmp-head span:last-child,.nu-cmp-row span:last-child{display:none}
+  .reg-ladder{padding:10px 12px}
+  .cmp-table{font-size:11px}
+  .chat-wrap{padding:0 4px}
+  .ci-q{margin-bottom:10px}
+  .ci-opts{gap:5px}
+  .ci-btn{font-size:12px;padding:9px 10px}
+  .vocab-grid{grid-template-columns:1fr 1fr}
+  .rq-opts{gap:5px}
+}
+
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+/* some/any pill styles */
+.pill-wrap{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.pill{padding:5px 14px;border-radius:20px;font-size:12.5px;font-weight:800}
+.pill-green{background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.35);color:var(--green)}
+.pill-blue{background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.3);color:var(--blue)}
+.pill-red{background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3);color:var(--red)}
+/* Reading */
+.read-tts-bar{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;align-items:center}
+.read-label{font-size:12px;font-weight:700;color:var(--muted)}
+.read-pass{background:var(--card2);border:1px solid var(--border);border-radius:14px;padding:22px;font-size:14px;line-height:1.9;margin-bottom:24px}
+.read-pass p{margin-bottom:12px}
+.read-pass p:last-child{margin-bottom:0}
+.read-pass b{color:var(--accent);font-weight:700}
+.comp-section-title{font-size:14px;font-weight:800;color:var(--accent);margin-bottom:14px;text-transform:uppercase;letter-spacing:1px}
+.read-q{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:12px}
+.read-q-text{font-weight:700;font-size:14px;margin-bottom:12px;color:var(--text);line-height:1.4}
+.read-opts{display:flex;flex-direction:column;gap:7px}
+.read-opt{background:var(--card2);border:1px solid var(--border);color:var(--text);padding:9px 14px;border-radius:8px;font-size:13px;cursor:pointer;text-align:left;font-family:'Poppins',sans-serif;transition:all .2s;display:flex;align-items:center;gap:8px}
+.read-opt:hover:not(.done){background:rgba(244,166,36,.06);border-color:rgba(244,166,36,.35);transform:translateY(-1px)}
+.read-opt.correct{background:rgba(34,197,94,.12);border-color:var(--green);color:var(--green)}
+.read-opt.wrong{background:rgba(239,68,68,.12);border-color:var(--red);color:var(--red)}
+.read-opt.done{cursor:default;transform:none!important}
+.read-ctx{background:linear-gradient(135deg,rgba(26,58,110,.55),rgba(15,37,72,.55));border:1px solid rgba(244,166,36,.22);border-radius:14px;padding:16px 22px;margin-bottom:20px;display:flex;flex-wrap:wrap;gap:20px;align-items:center}
+.read-ctx-fact{display:flex;flex-direction:column;gap:2px}
+.read-ctx-label{font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+.read-ctx-val{font-size:13.5px;font-weight:800;color:var(--text)}
+.read-ctx-sep{width:1px;background:var(--border);align-self:stretch}
+.read-vocab-wrap{margin:18px 0}
+.read-vocab-title{font-size:11px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.read-vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:7px}
+.read-vocab-item{background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:8px 12px}
+.read-vocab-en{font-size:13px;font-weight:700;color:var(--accent)}
+.read-vocab-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-top:2px}
+/* Check It */
+.ci-hero{background:linear-gradient(135deg,#12285a 0%,#1a1242 60%,#0d1b2a 100%);padding:36px 24px 30px;text-align:center;border-bottom:2px solid var(--accent)}
+.ci-hero-icon{font-size:38px;margin-bottom:10px}
+.ci-hero-title{font-size:clamp(22px,5vw,36px);font-weight:900;color:white;margin-bottom:6px}
+.ci-hero-sub{color:var(--muted);font-size:13px;max-width:460px;margin:0 auto}
+.ci-hero-types{display:flex;gap:10px;justify-content:center;margin-top:14px;flex-wrap:wrap}
+.ci-progress-wrap{background:var(--primary-dark);padding:10px 24px;border-bottom:1px solid var(--border);position:sticky;top:52px;z-index:99}
+.ci-progress-inner{max-width:760px;margin:0 auto}
+.ci-progress-bar{background:rgba(255,255,255,.07);border-radius:20px;height:7px;overflow:hidden;margin-bottom:5px}
+.ci-progress-fill{background:linear-gradient(90deg,var(--accent),var(--blue));height:100%;border-radius:20px;transition:width .4s ease;width:0%}
+.ci-progress-txt{font-size:11px;color:var(--muted);font-weight:700;display:flex;justify-content:space-between}
+.ci-wrap{max-width:100%;padding:12px 16px}
+.ci-q{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px 14px;margin-bottom:7px;transition:border-color .2s;border-left:3px solid rgba(244,166,36,.4)}
+.ci-q.ci-fib-q{border-left-color:rgba(74,158,255,.5)}
+.ci-q-head{display:flex;align-items:center;gap:6px;margin-bottom:9px;flex-wrap:nowrap}
+.ci-q-num{width:22px;height:22px;border-radius:50%;background:rgba(244,166,36,.18);border:1.5px solid rgba(244,166,36,.4);color:var(--accent);font-size:10px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ci-fib-q .ci-q-num{background:rgba(74,158,255,.15);border-color:rgba(74,158,255,.4);color:var(--blue)}
+.ci-q-tag{background:rgba(244,166,36,.08);border:1px solid rgba(244,166,36,.18);color:var(--accent);font-size:9px;font-weight:800;padding:2px 8px;border-radius:8px;text-transform:uppercase;letter-spacing:.4px;white-space:nowrap}
+.ci-type-badge{font-size:9px;font-weight:800;padding:2px 8px;border-radius:8px;text-transform:uppercase;letter-spacing:.4px;margin-left:auto;flex-shrink:0}
+.ci-type-mcq{background:rgba(244,166,36,.12);border:1px solid rgba(244,166,36,.25);color:var(--accent)}
+.ci-type-fib{background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.25);color:var(--blue)}
+.ci-q-prompt{font-size:12px;color:var(--muted);font-style:italic;margin-bottom:8px;padding:5px 10px;background:rgba(255,255,255,.03);border-left:2px solid var(--border);border-radius:0 6px 6px 0}
+.ci-opts{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.ci-btn{background:var(--card2);border:1.5px solid var(--border);color:var(--text);padding:9px 12px;border-radius:9px;font-size:12.5px;cursor:pointer;text-align:left;font-family:'Poppins',sans-serif;transition:all .2s;display:flex;align-items:center;gap:9px;line-height:1.35;width:100%}
+.ci-btn:hover:not(.done){background:rgba(244,166,36,.07);border-color:rgba(244,166,36,.45);transform:translateY(-2px)}
+.ci-btn.ci-correct{background:rgba(34,197,94,.1);border-color:var(--green);color:var(--green)}
+.ci-btn.ci-wrong{background:rgba(239,68,68,.1);border-color:var(--red);color:var(--red)}
+.ci-lbl{font-size:11px;font-weight:900;background:rgba(255,255,255,.09);border-radius:5px;padding:2px 7px;flex-shrink:0;min-width:22px;text-align:center}
+.ci-btn.ci-correct .ci-lbl{background:rgba(34,197,94,.2);color:var(--green)}
+.ci-btn.ci-wrong .ci-lbl{background:rgba(239,68,68,.2);color:var(--red)}
+.ci-fib-sent{font-size:13.5px;color:var(--text);font-weight:600;line-height:1.7;margin-bottom:9px}
+.ci-fib-sent b{color:var(--accent)}
+.ci-fib-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:4px}
+.ci-fib-input{background:var(--card2);border:2px solid var(--border);color:var(--text);padding:7px 13px;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;outline:none;min-width:160px;max-width:260px;transition:border-color .2s}
+.ci-fib-input:focus{border-color:var(--accent);background:rgba(244,166,36,.04)}
+.ci-fib-check{background:var(--accent);border:none;color:#0d1b2a;padding:7px 18px;border-radius:8px;font-weight:800;cursor:pointer;font-size:12px;font-family:'Poppins',sans-serif;transition:all .2s;flex-shrink:0}
+.ci-fib-check:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 4px 12px rgba(244,166,36,.3)}
+.ci-fib-check:disabled{opacity:.35;cursor:default;transform:none!important}
+.ci-hint{font-size:10.5px;color:var(--muted);font-style:italic;margin-top:3px}
+.ci-sol{display:none;margin-top:9px;border-radius:9px;overflow:hidden;animation:fadeIn .3s ease}
+.ci-sol-head{padding:7px 12px;font-size:11.5px;font-weight:800;border-bottom:1px solid rgba(255,255,255,.05)}
+.ci-sol-body{padding:8px 12px;display:flex;flex-direction:column;gap:4px}
+.ci-sol-ans{font-size:12.5px;font-weight:700;color:var(--accent)}
+.ci-sol-exp{font-size:11.5px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.ci-brk{display:none;background:linear-gradient(135deg,#12285a,#1a1242);border:2px solid var(--accent);border-radius:20px;padding:28px 24px;margin:16px 0;text-align:center;animation:fadeIn .5s ease;position:relative;overflow:hidden}
+.ci-brk::before{content:'';position:absolute;top:-50px;right:-50px;width:200px;height:200px;border-radius:50%;background:rgba(244,166,36,.07);pointer-events:none}
+.ci-brk-emoji{font-size:44px;margin-bottom:10px}
+.ci-brk-title{font-size:17px;font-weight:900;color:var(--accent);margin-bottom:16px}
+.ci-brk-cols{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:580px;margin:0 auto;text-align:left}
+@media(max-width:580px){.ci-brk-cols{grid-template-columns:1fr}}
+.ci-brk-col{background:rgba(255,255,255,.04);border:1px solid rgba(244,166,36,.2);border-radius:12px;padding:14px 16px}
+.ci-brk-col-title{font-size:10px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid rgba(244,166,36,.2)}
+.ci-brk-text{font-size:13px;color:var(--text);line-height:1.75}
+.ci-brk-text b{color:var(--accent)}
+.ci-brk-ar{font-size:12px;color:var(--muted);margin-top:14px;direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.ci-score{display:none;background:linear-gradient(135deg,#0f2548,#1a1242);border:2px solid var(--accent);border-radius:24px;padding:44px 32px;text-align:center;margin-top:24px;position:relative;overflow:hidden;animation:fadeIn .6s ease}
+.ci-score::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,rgba(244,166,36,.07) 0%,transparent 65%);pointer-events:none}
+.ci-score-emoji{font-size:60px;margin-bottom:14px}
+.ci-score-num{font-size:68px;font-weight:900;color:var(--accent);line-height:1;margin-bottom:4px}
+.ci-score-of{font-size:18px;color:var(--muted);margin-bottom:18px}
+.ci-score-bar-wrap{background:rgba(255,255,255,.06);border-radius:20px;height:10px;max-width:320px;margin:0 auto 24px;overflow:hidden}
+.ci-score-bar-fill{height:100%;border-radius:20px;background:linear-gradient(90deg,var(--accent),var(--green));transition:width 1.2s ease;width:0%}
+.ci-score-msg{font-size:18px;font-weight:900;color:white;margin-bottom:6px}
+.ci-score-ar{font-size:14px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;margin-bottom:24px;line-height:1.6}
+.ci-reset{background:var(--accent);border:none;color:#0d1b2a;padding:13px 32px;border-radius:12px;font-weight:900;cursor:pointer;font-family:'Poppins',sans-serif;font-size:14px;transition:all .25s;letter-spacing:.5px}
+.ci-reset:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(244,166,36,.35)}
+.chat-wrap{padding:18px 24px 26px;display:flex;flex-direction:column;gap:14px;background-image:radial-gradient(circle,rgba(244,166,36,0.22) 1.5px,transparent 1.5px),radial-gradient(circle,rgba(74,158,255,0.22) 1.5px,transparent 1.5px);background-size:28px 28px;background-position:0 0,14px 14px}
+.chat-msg{display:flex;flex-direction:column;max-width:70%}
+.chat-msg.right{align-self:flex-end;align-items:flex-end}
+.chat-msg.left{align-self:flex-start;align-items:flex-start}
+.chat-name-tag{font-size:11px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;margin-bottom:5px;padding:0 4px}
+.chat-msg.right .chat-name-tag{color:var(--accent)}
+.chat-msg.left .chat-name-tag{color:var(--blue)}
+.chat-bubble{padding:14px 17px 10px;border-radius:20px;width:100%}
+.chat-msg.right .chat-bubble{background:rgba(55,36,6,0.75);border:1px solid rgba(244,166,36,0.4);border-bottom-right-radius:4px;box-shadow:0 6px 28px rgba(0,0,0,0.65),0 0 18px rgba(244,166,36,0.22)}
+.chat-msg.left .chat-bubble{background:rgba(12,32,72,0.8);border:1px solid rgba(74,158,255,0.35);border-bottom-left-radius:4px;box-shadow:0 6px 28px rgba(0,0,0,0.65),0 0 18px rgba(74,158,255,0.20)}
+.chat-en{font-size:15px;color:var(--text);line-height:1.65;font-weight:500}
+.chat-en b{color:var(--accent)}
+.chat-msg.left .chat-en b{color:var(--blue)}
+.chat-ar{font-size:14px;color:rgba(232,237,245,0.8);direction:rtl;font-family:'Cairo',sans-serif;line-height:1.75;border-top:1px solid rgba(255,255,255,0.09);padding-top:9px;margin-top:9px}
+.chat-bubble-foot{display:flex;justify-content:flex-end;margin-top:9px;padding-top:7px;border-top:1px solid rgba(255,255,255,0.07)}
+.chat-sp-btn{font-size:14px;cursor:pointer;padding:5px 13px;border-radius:20px;transition:all .2s;line-height:1;font-weight:700;letter-spacing:.3px}
+.chat-msg.right .chat-sp-btn{background:rgba(244,166,36,0.18);border:1px solid rgba(244,166,36,0.45);color:var(--accent)}
+.chat-msg.left .chat-sp-btn{background:rgba(74,158,255,0.15);border:1px solid rgba(74,158,255,0.4);color:var(--blue)}
+.chat-sp-btn:hover{transform:scale(1.08);filter:brightness(1.25)}
+.su-prog{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:6px;overflow:hidden}
+.su-prog-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:2px;width:0%;transition:width .6s ease}
+
+.su-level-hd{padding:8px 12px 5px;margin-top:8px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(255,255,255,.05)}
+.su-level-code{font-size:11px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;padding:2px 8px;border-radius:5px;display:inline-block}
+.su-level-name{font-family:'Cairo',sans-serif;font-size:12px;font-weight:700;color:#f4c430;direction:rtl;margin:0;line-height:1}
+.lvl-a1{background:rgba(52,211,153,.15);color:#34d399;border:1px solid rgba(52,211,153,.35)}
+.lvl-a2{background:rgba(74,158,255,.15);color:#4a9eff;border:1px solid rgba(74,158,255,.35)}
+.lvl-b1{background:rgba(245,158,11,.15);color:#f59e0b;border:1px solid rgba(245,158,11,.35)}
+.lvl-b2{background:rgba(244,166,36,.15);color:var(--accent);border:1px solid rgba(244,166,36,.35)}
+.lvl-b2p{background:rgba(251,146,60,.15);color:#fb923c;border:1px solid rgba(251,146,60,.35)}
+.lvl-c1{background:rgba(168,85,247,.15);color:#a855f7;border:1px solid rgba(168,85,247,.35)}
+.su-coming{opacity:.28;cursor:default;pointer-events:none}
+.su-prog{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:6px;overflow:hidden}
+.su-prog-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:2px;width:0%;transition:width .6s ease}
+
+/* Lesson 1 specific styles */
+.alpha-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(68px,1fr));gap:8px;margin:18px 0}
+.alpha-card{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:12px 8px;text-align:center;cursor:pointer;transition:all .22s;position:relative}
+.alpha-card:hover{transform:translateY(-3px);border-color:var(--accent);background:rgba(244,166,36,.08)}
+.alpha-card.vowel{border-color:rgba(244,166,36,.5);background:rgba(244,166,36,.07)}
+.alpha-card.vowel:hover{background:rgba(244,166,36,.15)}
+.alpha-up{font-size:22px;font-weight:900;color:var(--text);line-height:1}
+.alpha-lo{font-size:14px;color:var(--muted);margin:2px 0}
+.alpha-ar{font-size:10px;color:var(--accent);font-family:'Cairo',sans-serif;margin-top:4px}
+.alpha-card.vowel .alpha-up{color:var(--accent)}
+.vowel-badge{display:inline-block;background:rgba(244,166,36,.15);border:1px solid rgba(244,166,36,.4);color:var(--accent);font-size:10px;font-weight:800;padding:2px 8px;border-radius:10px;margin-right:4px}
+.cons-badge{display:inline-block;background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.3);color:var(--blue);font-size:10px;font-weight:800;padding:2px 8px;border-radius:10px;margin-right:4px}
+.num-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:9px;margin:14px 0}
+.num-card{background:var(--card2);border:1px solid var(--border);border-radius:11px;padding:12px 14px;cursor:pointer;transition:all .2s}
+.num-card:hover{transform:translateY(-2px);border-color:var(--blue)}
+.num-digit{font-size:22px;font-weight:900;color:var(--blue);line-height:1}
+.num-word{font-size:13px;font-weight:700;color:var(--text);margin-top:3px}
+.num-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-top:3px}
+.num-grid-sm{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:8px;margin:14px 0}
+.num-sm{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:9px 12px;cursor:pointer;transition:all .2s}
+.num-sm:hover{border-color:var(--blue);transform:translateY(-2px)}
+.num-sm .num-digit{font-size:17px}
+.num-sm .num-word{font-size:12px}
+.ord-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin:14px 0}
+.ord-card{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px;cursor:pointer;transition:all .2s}
+.ord-card:hover{border-color:var(--purple);transform:translateY(-2px)}
+.ord-num{font-size:18px;font-weight:900;color:var(--purple);line-height:1}
+.ord-word{font-size:12.5px;font-weight:700;color:var(--text);margin-top:3px}
+.ord-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-top:3px}
+.rule-box{background:linear-gradient(135deg,rgba(168,85,247,.12),rgba(74,158,255,.08));border:1px solid rgba(168,85,247,.3);border-radius:14px;padding:16px 20px;margin:14px 0}
+.rule-title{font-size:12px;font-weight:800;color:#a855f7;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.rule-body{font-size:13px;color:var(--text);line-height:1.75}
+.rule-body b{color:#a855f7}
+.rule-body .eg{color:var(--accent);font-style:italic}
+
+
+
+.nav-home-btn{display:inline-flex;align-items:center;gap:6px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.4);color:var(--accent);font-size:12px;font-weight:800;padding:5px 13px;border-radius:8px;text-decoration:none;transition:all .2s;white-space:nowrap;flex-shrink:0}
+.nav-home-btn:hover{background:rgba(244,166,36,.25);transform:translateY(-2px)}
+.nav-lesson-badge{background:var(--accent);color:#0a1628;font-size:12px;font-weight:900;padding:5px 13px;border-radius:7px;white-space:nowrap;letter-spacing:.3px;flex-shrink:0}
+.nav-lesson-name{font-size:13px;color:rgba(232,237,245,.7);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-sep{color:rgba(136,153,176,.5);font-size:13px;flex-shrink:0}
+.nav-left{display:flex;align-items:center;gap:8px;flex:1;min-width:0}
+.nav-right{display:flex;align-items:center;flex-shrink:0}
+
+/* ── Reading bold highlight ── */
+.read-body b{color:var(--accent)}
+.read-body p b{color:var(--accent)}
+
+/* ── FIB label fix ── */
+.ci-fib-lbl{font-size:11px;font-weight:800;color:var(--accent);letter-spacing:1px;text-transform:uppercase;margin:4px 0 8px 0;opacity:.85}
+
+/* ══ Lesson 42 — Mixed Conditionals ══ */
+
+/* Two-type cards */
+.mix-type-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:12px 0}
+@media(max-width:600px){.mix-type-grid{grid-template-columns:1fr}}
+.mix-card{border-radius:14px;padding:16px 16px 14px;cursor:pointer;transition:transform .15s}
+.mix-card:hover{transform:translateY(-3px)}
+.mix-p2pr{background:rgba(74,158,255,.07);border:2px solid rgba(74,158,255,.3)}
+.mix-pr2p{background:rgba(168,85,247,.07);border:2px solid rgba(168,85,247,.3)}
+.mix-type-tag{font-size:9px;font-weight:900;letter-spacing:.7px;text-transform:uppercase;margin-bottom:4px}
+.mix-p2pr .mix-type-tag{color:var(--blue)}
+.mix-pr2p .mix-type-tag{color:#a855f7}
+.mix-type-name{font-size:13px;font-weight:900;margin-bottom:6px}
+.mix-p2pr .mix-type-name{color:var(--blue)}
+.mix-pr2p .mix-type-name{color:#a855f7}
+.mix-type-time{font-size:11px;font-weight:700;margin-bottom:8px;padding:4px 8px;border-radius:7px;display:inline-block}
+.mix-p2pr .mix-type-time{background:rgba(74,158,255,.12);color:var(--blue)}
+.mix-pr2p .mix-type-time{background:rgba(168,85,247,.12);color:#a855f7}
+.mix-type-formula{font-size:11px;font-family:monospace;background:rgba(0,0,0,.2);border-radius:7px;padding:6px 10px;margin:6px 0;line-height:1.7}
+.mix-p2pr .mix-type-formula b{color:var(--blue)}
+.mix-pr2p .mix-type-formula b{color:#a855f7}
+.mix-type-ex{font-size:11px;color:var(--muted);font-style:italic;line-height:1.65;margin-top:6px}
+.mix-type-ex b{font-style:normal}
+.mix-p2pr .mix-type-ex b{color:var(--blue)}
+.mix-pr2p .mix-type-ex b{color:#a855f7}
+
+/* Formula display */
+.mix-formula-wrap{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+@media(max-width:500px){.mix-formula-wrap{grid-template-columns:1fr}}
+.mix-formula-box{border-radius:11px;padding:11px 13px}
+.mfb-blue{background:rgba(74,158,255,.07);border:1.5px solid rgba(74,158,255,.25)}
+.mfb-purp{background:rgba(168,85,247,.07);border:1.5px solid rgba(168,85,247,.25)}
+.mf-label{font-size:9px;font-weight:900;letter-spacing:.5px;text-transform:uppercase;margin-bottom:5px}
+.mfb-blue .mf-label{color:var(--blue)}
+.mfb-purp .mf-label{color:#a855f7}
+.mf-row{display:flex;align-items:center;gap:6px;font-size:11px;font-family:monospace;line-height:1.8}
+.mf-clause{padding:3px 8px;border-radius:5px;font-weight:700;font-size:10px}
+.mfb-blue .mf-clause.cl-if{background:rgba(239,68,68,.15);color:var(--red)}
+.mfb-blue .mf-clause.cl-main{background:rgba(74,158,255,.15);color:var(--blue)}
+.mfb-purp .mf-clause.cl-if{background:rgba(239,68,68,.15);color:var(--red)}
+.mfb-purp .mf-clause.cl-main{background:rgba(168,85,247,.15);color:#a855f7}
+.mf-plus{color:var(--accent);font-weight:900}
+
+/* Example comparison box */
+.mix-example-set{background:var(--card2);border-radius:12px;padding:12px 14px;margin:8px 0}
+.mix-ex-row{padding:7px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+.mix-ex-row:last-child{border-bottom:none}
+.mix-ex-type{font-size:9px;font-weight:900;letter-spacing:.5px;text-transform:uppercase;margin-bottom:3px}
+.mix-ex-type.et-blue{color:var(--blue)}
+.mix-ex-type.et-purp{color:#a855f7}
+.mix-ex-type.et-acc{color:var(--accent)}
+.mix-ex-sent{font-size:12px;line-height:1.6;color:var(--text)}
+.mix-ex-sent b{font-size:11.5px}
+.et-blue+.mix-ex-sent b{color:var(--blue)}
+.et-purp+.mix-ex-sent b{color:#a855f7}
+.et-acc+.mix-ex-sent b{color:var(--accent)}
+.mix-ex-ar{font-family:'Cairo',sans-serif;font-size:10.5px;color:var(--muted);direction:rtl;margin-top:2px}
+
+/* Comparison table: 2nd / 3rd / Mixed */
+.cmp-table{width:100%;border-collapse:collapse;margin:10px 0;font-size:11.5px}
+.cmp-table th{padding:8px 10px;text-align:left;font-size:10px;font-weight:900;letter-spacing:.4px;text-transform:uppercase;background:rgba(255,255,255,.04)}
+.cmp-table th.th-2nd{color:var(--accent)}
+.cmp-table th.th-3rd{color:var(--green)}
+.cmp-table th.th-m1{color:var(--blue)}
+.cmp-table th.th-m2{color:#a855f7}
+.cmp-table td{padding:7px 10px;border-top:1px solid var(--border);vertical-align:top;line-height:1.65;font-size:11px}
+.cmp-table td:first-child{color:var(--muted);font-weight:700;font-size:10px;text-transform:uppercase;width:18%;background:rgba(255,255,255,.02)}
+.cmp-table .td-2nd{color:rgba(244,166,36,.9)}
+.cmp-table .td-3rd{color:rgba(34,197,94,.9)}
+.cmp-table .td-m1{color:rgba(74,158,255,.9)}
+.cmp-table .td-m2{color:rgba(168,85,247,.9)}
+.cmp-table tr:hover td{background:rgba(255,255,255,.03)}
+
+/* Otherwise / but box */
+.otherwise-wrap{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+@media(max-width:500px){.otherwise-wrap{grid-template-columns:1fr}}
+.otherwise-card{border-radius:11px;padding:11px 13px;transition:transform .15s;cursor:pointer}
+.otherwise-card:hover{transform:translateY(-3px)}
+.ow-blue{background:rgba(74,158,255,.07);border:1.5px solid rgba(74,158,255,.25)}
+.ow-purp{background:rgba(168,85,247,.07);border:1.5px solid rgba(168,85,247,.25)}
+.ow-head{font-size:11px;font-weight:900;margin-bottom:6px}
+.ow-blue .ow-head{color:var(--blue)}
+.ow-purp .ow-head{color:#a855f7}
+.ow-ex{font-size:11px;color:var(--muted);font-style:italic;line-height:1.7}
+.ow-ex b{font-style:normal}
+.ow-blue .ow-ex b{color:var(--blue)}
+.ow-purp .ow-ex b{color:#a855f7}
+
+/* warn + tip */
+.warn-row{display:flex;gap:10px;align-items:flex-start;background:var(--card2);border-radius:10px;padding:10px 14px;margin:6px 0}
+.warn-icon{font-size:16px;flex-shrink:0;margin-top:2px}
+.warn-wrong{font-size:12px;color:var(--red);text-decoration:line-through}
+.warn-right{font-size:12px;color:var(--green);font-weight:700}
+.warn-ar{font-family:'Cairo',sans-serif;font-size:10px;color:var(--muted);direction:rtl;margin-top:2px}
+.tip-row{display:flex;align-items:flex-start;gap:10px;background:var(--card2);border-radius:10px;padding:10px 14px;margin:6px 0;cursor:pointer;transition:background .2s}
+.tip-row:hover{background:rgba(74,158,255,.08)}
+.tip-badge{background:rgba(74,158,255,.15);border:1px solid rgba(74,158,255,.4);color:var(--blue);font-size:11px;font-weight:900;padding:3px 9px;border-radius:7px;white-space:nowrap;flex-shrink:0}
+.tip-en{font-size:13px;color:var(--text);flex:1}
+.tip-ar{font-family:'Cairo',sans-serif;font-size:11px;color:var(--muted);direction:rtl;display:block;margin-top:2px}
+
+.su-level-hd{padding:8px 12px 5px;margin-top:8px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(255,255,255,.05)}
+.su-level-code{font-size:11px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;padding:2px 8px;border-radius:5px;display:inline-block}
+.su-level-name{font-family:'Cairo',sans-serif;font-size:12px;font-weight:700;color:#f4c430;direction:rtl;margin:0;line-height:1}
+.lvl-a1{background:rgba(52,211,153,.15);color:#34d399;border:1px solid rgba(52,211,153,.35)}
+.lvl-a2{background:rgba(74,158,255,.15);color:#4a9eff;border:1px solid rgba(74,158,255,.35)}
+.lvl-b1{background:rgba(245,158,11,.15);color:#f59e0b;border:1px solid rgba(245,158,11,.35)}
+.lvl-b2{background:rgba(244,166,36,.15);color:var(--accent);border:1px solid rgba(244,166,36,.35)}
+.lvl-b2p{background:rgba(251,146,60,.15);color:#fb923c;border:1px solid rgba(251,146,60,.35)}
+.lvl-c1{background:rgba(168,85,247,.15);color:#a855f7;border:1px solid rgba(168,85,247,.35)}
+.su-coming{opacity:.28;cursor:default;pointer-events:none}
+.su-prog{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:6px;overflow:hidden}
+.su-prog-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:2px;width:0%;transition:width .6s ease}
+
+.nav-home-btn{display:inline-flex;align-items:center;gap:6px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.4);color:var(--accent);font-size:12px;font-weight:800;padding:5px 13px;border-radius:8px;text-decoration:none;transition:all .2s;white-space:nowrap;flex-shrink:0}
+.nav-home-btn:hover{background:rgba(244,166,36,.25);transform:translateY(-2px)}
+.nav-lesson-badge{background:var(--accent);color:#0a1628;font-size:12px;font-weight:900;padding:5px 13px;border-radius:7px;white-space:nowrap;letter-spacing:.3px;flex-shrink:0}
+.nav-lesson-name{font-size:13px;color:rgba(232,237,245,.7);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-sep{color:rgba(136,153,176,.5);font-size:13px;flex-shrink:0}
+.nav-left{display:flex;align-items:center;gap:8px;flex:1;min-width:0}
+.nav-right{display:flex;align-items:center;flex-shrink:0}
+</style>
+
+<style>
+/* Watermark on print */
+@media print {
+  body::before {
+    content: 'Mohammed Elhuseyin — English Learning Platform — محمية الحقوق';
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-35deg);
+    font-size: 48px;
+    font-weight: 900;
+    color: rgba(244,166,36,0.18);
+    z-index: 9999;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+}
+</style>
+
+<style>
+.float-menu-btn{display:none;position:fixed;bottom:22px;left:18px;z-index:9998;width:48px;height:48px;background:var(--primary-dark,#0f2548);border:2px solid rgba(244,166,36,.5);border-radius:14px;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:12px;box-shadow:0 4px 20px rgba(0,0,0,.4);transition:transform .15s,box-shadow .15s}
+.float-menu-btn:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,.5)}
+.float-menu-btn span{display:block;width:22px;height:2px;background:#f4a624;border-radius:2px;transition:all .25s}
+@media(max-width:768px){.float-menu-btn{display:flex}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-logo">
+      <div class="sidebar-logo-icon">A</div>
+      <div>
+        <div class="sidebar-logo-text">English Course</div>
+        <div class="sidebar-logo-sub">MOHAMMED ELHUSEYIN</div>
+      </div>
+    </div>
+    <div class="sidebar-label ar">الوحدات الدراسية</div>
+  </div>
+  <div class="sidebar-units">
+  <div class="su-level-hd"><span class="su-level-code lvl-a1">A1</span><span class="su-level-name">مستوى المبتدئ تماماً</span></div>
+  <a href="lesson1.html" class="su-item"><div class="su-num">1</div><div class="su-texts"><div class="su-en">Alphabet & Numbers</div><div class="su-ar">الأحرف والأرقام</div><div class="su-prog"><div class="su-prog-fill" id="sp1"></div></div></div></a>
+  <a href="lesson2.html" class="su-item"><div class="su-num">2</div><div class="su-texts"><div class="su-en">Classroom Language & Greetings</div><div class="su-ar">لغة الصف والتحيات</div><div class="su-prog"><div class="su-prog-fill" id="sp2"></div></div></div></a>
+  <a href="lesson3.html" class="su-item"><div class="su-num">3</div><div class="su-texts"><div class="su-en">Nationalities & Countries</div><div class="su-ar">الجنسيات والدول</div><div class="su-prog"><div class="su-prog-fill" id="sp3"></div></div></div></a>
+  <a href="lesson4.html" class="su-item"><div class="su-num">4</div><div class="su-texts"><div class="su-en">Singular & Plural Nouns</div><div class="su-ar">الأسماء المفردة والجمع</div><div class="su-prog"><div class="su-prog-fill" id="sp4"></div></div></div></a>
+  <a href="lesson5.html" class="su-item"><div class="su-num">5</div><div class="su-texts"><div class="su-en">Days & Telling the Time</div><div class="su-ar">الأيام وإخبار الوقت</div><div class="su-prog"><div class="su-prog-fill" id="sp5"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-a2">A2</span><span class="su-level-name">المستوى الابتدائي</span></div>
+  <a href="unit1.html" class="su-item"><div class="su-num">6</div><div class="su-texts"><div class="su-en">Verb to <i>be</i></div><div class="su-ar">فعل التكوين</div><div class="su-prog"><div class="su-prog-fill" id="sp6"></div></div></div></a>
+  <a href="unit2.html" class="su-item"><div class="su-num">7</div><div class="su-texts"><div class="su-en">Present Simple</div><div class="su-ar">المضارع البسيط</div><div class="su-prog"><div class="su-prog-fill" id="sp7"></div></div></div></a>
+  <a href="unit3.html" class="su-item"><div class="su-num">8</div><div class="su-texts"><div class="su-en">Present Continuous</div><div class="su-ar">المضارع المستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp8"></div></div></div></a>
+  <a href="unit4.html" class="su-item"><div class="su-num">9</div><div class="su-texts"><div class="su-en">Past Simple: was / were</div><div class="su-ar">الماضي البسيط: كان</div><div class="su-prog"><div class="su-prog-fill" id="sp9"></div></div></div></a>
+  <a href="unit6.html" class="su-item"><div class="su-num">10</div><div class="su-texts"><div class="su-en">Past Simple: Regular & Irreg.</div><div class="su-ar">الماضي البسيط للأفعال</div><div class="su-prog"><div class="su-prog-fill" id="sp10"></div></div></div></a>
+  <a href="unit5.html" class="su-item"><div class="su-num">11</div><div class="su-texts"><div class="su-en">Can / Can't</div><div class="su-ar">القدرة والعجز</div><div class="su-prog"><div class="su-prog-fill" id="sp11"></div></div></div></a>
+  <a href="lesson12.html" class="su-item"><div class="su-num">12</div><div class="su-texts"><div class="su-en">Possessive Pronouns</div><div class="su-ar">ضمائر الملكية</div><div class="su-prog"><div class="su-prog-fill" id="sp12"></div></div></div></a>
+  <a href="unit7.html" class="su-item"><div class="su-num">13</div><div class="su-texts"><div class="su-en">There is / There are</div><div class="su-ar">يوجد / توجد</div><div class="su-prog"><div class="su-prog-fill" id="sp13"></div></div></div></a>
+  <a href="unit8.html" class="su-item"><div class="su-num">14</div><div class="su-texts"><div class="su-en">Adjectives</div><div class="su-ar">الصفات</div><div class="su-prog"><div class="su-prog-fill" id="sp14"></div></div></div></a>
+  <a href="unit9.html" class="su-item"><div class="su-num">15</div><div class="su-texts"><div class="su-en">Imperatives</div><div class="su-ar">صيغة الأمر والنهي</div><div class="su-prog"><div class="su-prog-fill" id="sp15"></div></div></div></a>
+  <a href="unit10.html" class="su-item"><div class="su-num">16</div><div class="su-texts"><div class="su-en">Object Pronouns</div><div class="su-ar">ضمائر المفعول به</div><div class="su-prog"><div class="su-prog-fill" id="sp16"></div></div></div></a>
+  <a href="unit11.html" class="su-item"><div class="su-num">17</div><div class="su-texts"><div class="su-en">Prepositions of Time & Place</div><div class="su-ar">حروف جر الوقت والمكان</div><div class="su-prog"><div class="su-prog-fill" id="sp17"></div></div></div></a>
+  <a href="unit12.html" class="su-item"><div class="su-num">18</div><div class="su-texts"><div class="su-en">Future Plans: going to</div><div class="su-ar">خطط المستقبل</div><div class="su-prog"><div class="su-prog-fill" id="sp18"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b1">B1</span><span class="su-level-name">تحت المتوسط</span></div>
+  <a href="lesson19.html" class="su-item"><div class="su-num">19</div><div class="su-texts"><div class="su-en">Present Perfect Introduction</div><div class="su-ar">مقدمة المضارع التام</div><div class="su-prog"><div class="su-prog-fill" id="sp19"></div></div></div></a>
+  <a href="lesson20.html" class="su-item"><div class="su-num">20</div><div class="su-texts"><div class="su-en">Past Continuous</div><div class="su-ar">الماضي المستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp20"></div></div></div></a>
+  <a href="lesson21.html" class="su-item"><div class="su-num">21</div><div class="su-texts"><div class="su-en">will vs. going to</div><div class="su-ar">المستقبل: إرادة أم تخطيط؟</div><div class="su-prog"><div class="su-prog-fill" id="sp21"></div></div></div></a>
+  <a href="lesson22.html" class="su-item"><div class="su-num">22</div><div class="su-texts"><div class="su-en">like / love / hate + -ing</div><div class="su-ar">التعبير عن التفضيلات</div><div class="su-prog"><div class="su-prog-fill" id="sp22"></div></div></div></a>
+  <a href="lesson23.html" class="su-item"><div class="su-num">23</div><div class="su-texts"><div class="su-en">Comparatives & Superlatives</div><div class="su-ar">المقارنة والتفضيل</div><div class="su-prog"><div class="su-prog-fill" id="sp23"></div></div></div></a>
+  <a href="lesson24.html" class="su-item"><div class="su-num">24</div><div class="su-texts"><div class="su-en">must / have to / should</div><div class="su-ar">أفعال الإلزام والنصيحة</div><div class="su-prog"><div class="su-prog-fill" id="sp24"></div></div></div></a>
+  <a href="lesson25.html" class="su-item"><div class="su-num">25</div><div class="su-texts"><div class="su-en">Infinitives & Gerunds</div><div class="su-ar">المصدر وصيغة الـ ing</div><div class="su-prog"><div class="su-prog-fill" id="sp25"></div></div></div></a>
+  <a href="lesson26.html" class="su-item"><div class="su-num">26</div><div class="su-texts"><div class="su-en">Articles: a/an / the</div><div class="su-ar">أدوات التعريف والتنكير</div><div class="su-prog"><div class="su-prog-fill" id="sp26"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b2">B2</span><span class="su-level-name">المستوى المتوسط</span></div>
+  <a href="lesson27.html" class="su-item"><div class="su-num">27</div><div class="su-texts"><div class="su-en">Present Perfect vs. Past Simple</div><div class="su-ar">المقارنة بين الماضي والتام</div><div class="su-prog"><div class="su-prog-fill" id="sp27"></div></div></div></a>
+  <a href="lesson28.html" class="su-item"><div class="su-num">28</div><div class="su-texts"><div class="su-en">Passive Voice</div><div class="su-ar">المبني للمجهول</div><div class="su-prog"><div class="su-prog-fill" id="sp28"></div></div></div></a>
+  <a href="lesson29.html" class="su-item"><div class="su-num">29</div><div class="su-texts"><div class="su-en">Zero / First / Second Cond.</div><div class="su-ar">الجمل الشرطية 0-1-2</div><div class="su-prog"><div class="su-prog-fill" id="sp29"></div></div></div></a>
+  <a href="lesson30.html" class="su-item"><div class="su-num">30</div><div class="su-texts"><div class="su-en">Reported Speech</div><div class="su-ar">الكلام غير المباشر</div><div class="su-prog"><div class="su-prog-fill" id="sp30"></div></div></div></a>
+  <a href="lesson31.html" class="su-item"><div class="su-num">31</div><div class="su-texts"><div class="su-en">Relative Clauses</div><div class="su-ar">جمل الوصل: who / which</div><div class="su-prog"><div class="su-prog-fill" id="sp31"></div></div></div></a>
+  <a href="lesson32.html" class="su-item"><div class="su-num">32</div><div class="su-texts"><div class="su-en">Quantifiers</div><div class="su-ar">محددات الكمية</div><div class="su-prog"><div class="su-prog-fill" id="sp32"></div></div></div></a>
+  <a href="lesson33.html" class="su-item"><div class="su-num">33</div><div class="su-texts"><div class="su-en">Phrasal Verbs Introduction</div><div class="su-ar">مقدمة الأفعال المركبة</div><div class="su-prog"><div class="su-prog-fill" id="sp33"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b2p">B2+</span><span class="su-level-name">فوق المتوسط</span></div>
+  <a href="lesson34.html" class="su-item"><div class="su-num">34</div><div class="su-texts"><div class="su-en">Narrative Tenses & Past Perfect</div><div class="su-ar">أزمنة السرد والماضي التام</div><div class="su-prog"><div class="su-prog-fill" id="sp34"></div></div></div></a>
+  <a href="lesson35.html" class="su-item"><div class="su-num">35</div><div class="su-texts"><div class="su-en">Future Perfect & Continuous</div><div class="su-ar">المستقبل التام والمستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp35"></div></div></div></a>
+  <a href="lesson36.html" class="su-item"><div class="su-num">36</div><div class="su-texts"><div class="su-en">Third Conditional & Regrets</div><div class="su-ar">الشرط الثالث والندم</div><div class="su-prog"><div class="su-prog-fill" id="sp36"></div></div></div></a>
+  <a href="lesson37.html" class="su-item"><div class="su-num">37</div><div class="su-texts"><div class="su-en">Causative: have/get done</div><div class="su-ar">الأفعال السببية</div><div class="su-prog"><div class="su-prog-fill" id="sp37"></div></div></div></a>
+  <a href="lesson38.html" class="su-item"><div class="su-num">38</div><div class="su-texts"><div class="su-en">Advanced Passive</div><div class="su-ar">المبني للمجهول المتقدم</div><div class="su-prog"><div class="su-prog-fill" id="sp38"></div></div></div></a>
+  <a href="lesson39.html" class="su-item"><div class="su-num">39</div><div class="su-texts"><div class="su-en">Speculation: must/might/can't</div><div class="su-ar">التخمين والاستنتاج</div><div class="su-prog"><div class="su-prog-fill" id="sp39"></div></div></div></a>
+  <a href="lesson40.html" class="su-item"><div class="su-num">40</div><div class="su-texts"><div class="su-en">Idioms & Collocations</div><div class="su-ar">المصطلحات والتعبيرات</div><div class="su-prog"><div class="su-prog-fill" id="sp40"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-c1">C1</span><span class="su-level-name">المستوى المتقدم الأكاديمي</span></div>
+  <a href="lesson41.html" class="su-item"><div class="su-num">41</div><div class="su-texts"><div class="su-en">Inversion & Emphatic Structures</div><div class="su-ar">التقديم والتأخير للتأكيد</div><div class="su-prog"><div class="su-prog-fill" id="sp41"></div></div></div></a>
+  <a href="lesson42.html" class="su-item su-active"><div class="su-num">42</div><div class="su-texts"><div class="su-en">Mixed Conditionals</div><div class="su-ar">الجمل الشرطية المختلطة</div><div class="su-prog"><div class="su-prog-fill" id="sp42"></div></div></div></a>
+  <a href="lesson43.html" class="su-item"><div class="su-num">43</div><div class="su-texts"><div class="su-en">Advanced Gerunds & Infinitives</div><div class="su-ar">المصادر المتقدمة</div><div class="su-prog"><div class="su-prog-fill" id="sp43"></div></div></div></a>
+  <a href="lesson44.html" class="su-item"><div class="su-num">44</div><div class="su-texts"><div class="su-en">Cleft Sentences</div><div class="su-ar">الجمل المشقوقة</div><div class="su-prog"><div class="su-prog-fill" id="sp44"></div></div></div></a>
+  <a href="lesson45.html" class="su-item"><div class="su-num">45</div><div class="su-texts"><div class="su-en">Discourse Markers</div><div class="su-ar">أدوات الربط الأكاديمية</div><div class="su-prog"><div class="su-prog-fill" id="sp45"></div></div></div></a>
+  <a href="lesson46.html" class="su-item"><div class="su-num">46</div><div class="su-texts"><div class="su-en">Nuances & Euphemisms</div><div class="su-ar">الفروقات الدقيقة والتلطيف</div><div class="su-prog"><div class="su-prog-fill" id="sp46"></div></div></div></a>
+</div>
+</aside>
+
+<div class="main-content">
+
+<nav class="topnav">
+  <div class="nav-left">
+    <a href="../index.html" class="nav-home-btn">&#x1F3E0; الرئيسية</a>
+    <span class="nav-sep">&#x203A;</span>
+    <span class="nav-lesson-badge">Lesson 42</span>
+    <span class="nav-sep">&#x203A;</span>
+    <span class="nav-lesson-name">Mixed Conditionals</span>
+  </div>
+  <div class="nav-right"><span class="nav-brand">MOHAMMED ELHUSEYIN</span></div>
+</nav>
+
+<div class="hero">
+  <div class="unit-badge">&#x1F4DA; Lesson 42 &nbsp;&middot;&nbsp; C1 Advanced</div>
+  <h1 class="hero-title">Mixed Conditionals</h1>
+  <div class="hero-ar ar">الجمل الشرطية المختلطة</div>
+  <p class="hero-sub">Mixed conditionals blend <em>two different time frames</em> in one sentence — expressing how a past event still affects the present, or how a present reality would have changed the past. Master the two core types and the subtle meaning difference between them.</p>
+  <div class="hero-tags">
+    <span class="tag tag-grammar">&#x1F4D6; Grammar</span>
+    <span class="tag tag-other">&#x1F4AC; Everyday English</span>
+    <span class="tag tag-other">&#x1F4D8; Reading</span>
+    <span class="tag tag-green">&#x2705; Check It!</span>
+  </div>
+</div>
+
+<div class="main-tabs">
+  <button class="main-tab active" onclick="showTab('grammar',this)">&#x1F4D6; Grammar</button>
+  <button class="main-tab" onclick="showTab('everyday',this)">&#x1F4AC; Everyday English</button>
+  <button class="main-tab" onclick="showTab('reading',this)">&#x1F4D8; Reading</button>
+  <button class="main-tab" onclick="showTab('checkit',this)">&#x2705; Check It!</button>
+</div>
+
+<!-- ════════════════════ GRAMMAR TAB ════════════════════ -->
+<div id="tab-grammar" class="tab-panel active">
+
+  <!-- Quick review -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F504; Quick Review — Conditionals You Already Know</div>
+    <div class="rule-ar">مراجعة سريعة — الشرطيات التي تعرفها</div>
+    <div class="rule-box">
+      Mixed conditionals are built from the <b>2nd</b> and <b>3rd</b> conditional — so let's review them first:<br><br>
+      &#x2022; <b>2nd Conditional</b> (unreal present): If + <u>past simple</u>, would + <u>base verb</u> → imagined present/future<br>
+      &nbsp;&nbsp; "If I <u>were</u> rich, I <u>would travel</u> the world." <em>(but I'm not rich now)</em><br><br>
+      &#x2022; <b>3rd Conditional</b> (unreal past): If + <u>past perfect</u>, would have + <u>past participle</u> → imagined past<br>
+      &nbsp;&nbsp; "If I <u>had studied</u> harder, I <u>would have passed</u>." <em>(but I didn't study)</em><br><br>
+      <b>Mixed Conditionals</b> = one clause from 2nd + one clause from 3rd, but <b>different time frames</b>.
+    </div>
+  </div>
+
+  <!-- Two types overview -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F500; Two Types of Mixed Conditionals</div>
+    <div class="rule-ar">نوعان من الجمل الشرطية المختلطة</div>
+    <div class="mix-type-grid">
+      <div class="mix-card mix-p2pr" onclick="ttsRead(&quot;Mixed conditional type 1: past condition, present result. If I had studied medicine, I would be a doctor now.&quot;,0.88)">
+        <div class="mix-type-tag">&#x1F535; Type 1</div>
+        <div class="mix-type-name">Past → Present</div>
+        <div class="mix-type-time">Past condition &#x2192; Present result</div>
+        <div class="mix-type-formula">
+          If + <b>had + past participle</b>,<br>
+          subject + <b>would + base verb</b> (now/today/still)
+        </div>
+        <div class="mix-type-ex">
+          "If I <b>had studied</b> medicine,<br>I <b>would be</b> a doctor <b>now</b>." &#x1F509;<br>
+          <em>(Past decision → present state)</em>
+        </div>
+      </div>
+      <div class="mix-card mix-pr2p" onclick="ttsRead(&quot;Mixed conditional type 2: present condition, past result. If she were more patient, she would have succeeded.&quot;,0.88)">
+        <div class="mix-type-tag">&#x1F7E3; Type 2</div>
+        <div class="mix-type-name">Present → Past</div>
+        <div class="mix-type-time">Present condition &#x2192; Past result</div>
+        <div class="mix-type-formula">
+          If + <b>past simple / were</b>,<br>
+          subject + <b>would have + past participle</b>
+        </div>
+        <div class="mix-type-ex">
+          "If she <b>were</b> more patient,<br>she <b>would have succeeded</b>." &#x1F509;<br>
+          <em>(Present trait → past consequence)</em>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Type 1 in depth -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F535; Type 1 — Past Condition, Present Result</div>
+    <div class="rule-ar">شرط في الماضي → نتيجة في الحاضر</div>
+    <div class="rule-box">
+      Use Type 1 when a <b>past decision or event</b> is still affecting the <b>present situation</b>.<br>
+      Key clue words in the main clause: <b>now / today / currently / still / at the moment</b>
+    </div>
+    <div class="mix-formula-wrap">
+      <div class="mix-formula-box mfb-blue">
+        <div class="mf-label">IF CLAUSE (past)</div>
+        <div class="mf-row">
+          <span class="mf-clause cl-if">If</span>
+          + subject +
+          <span class="mf-clause cl-if">had + PP</span>
+        </div>
+      </div>
+      <div class="mix-formula-box mfb-blue">
+        <div class="mf-label">MAIN CLAUSE (present)</div>
+        <div class="mf-row">
+          subject +
+          <span class="mf-clause cl-main">would + base verb</span>
+          <span style="font-size:10px;color:var(--muted)">(now/still/today)</span>
+        </div>
+      </div>
+    </div>
+    <div class="mix-example-set">
+      <div class="mix-ex-row">
+        <div class="mix-ex-type et-blue">Example 1 &#x1F509;</div>
+        <div class="mix-ex-sent" onclick="ttsRead(&quot;If I had taken that job offer in Dubai, I would be living there now.&quot;,0.88)">"If I <b>had taken</b> that job offer in Dubai, I <b>would be living</b> there now."</div>
+        <div class="mix-ex-ar">لو كنت قبلت عرض العمل ذاك في دبي، لكنت أعيش هناك الآن.</div>
+      </div>
+      <div class="mix-ex-row">
+        <div class="mix-ex-type et-blue">Example 2 &#x1F509;</div>
+        <div class="mix-ex-sent" onclick="ttsRead(&quot;If she had finished her degree, she would be earning a much higher salary today.&quot;,0.88)">"If she <b>had finished</b> her degree, she <b>would be earning</b> a much higher salary today."</div>
+        <div class="mix-ex-ar">لو كانت أكملت درجتها العلمية، لكانت تكسب راتباً أعلى بكثير اليوم.</div>
+      </div>
+      <div class="mix-ex-row">
+        <div class="mix-ex-type et-blue">Example 3 &#x1F509;</div>
+        <div class="mix-ex-sent" onclick="ttsRead(&quot;If they had invested in renewable energy ten years ago, they would be industry leaders now.&quot;,0.88)">"If they <b>had invested</b> in renewable energy ten years ago, they <b>would be</b> industry leaders now."</div>
+        <div class="mix-ex-ar">لو كانوا استثمروا في الطاقة المتجددة منذ عشر سنوات، لكانوا قادة في المجال الآن.</div>
+      </div>
+      <div class="mix-ex-row">
+        <div class="mix-ex-type et-blue">Example 4 &#x1F509;</div>
+        <div class="mix-ex-sent" onclick="ttsRead(&quot;If he had not dropped out of university, he would have a stable career by now.&quot;,0.88)">"If he <b>had not dropped out</b> of university, he <b>would have</b> a stable career by now."</div>
+        <div class="mix-ex-ar">لو لم يترك الجامعة، لكان لديه مسيرة مهنية مستقرة الآن.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Type 2 in depth -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F7E3; Type 2 — Present Condition, Past Result</div>
+    <div class="rule-ar">شرط في الحاضر (طبيعة أو حقيقة) → نتيجة في الماضي</div>
+    <div class="rule-box">
+      Use Type 2 when a <b>permanent trait, current state, or character</b> would have changed a <b>past outcome</b>.<br>
+      The if-clause describes how the person <b>is right now</b> (not how they were).
+    </div>
+    <div class="mix-formula-wrap">
+      <div class="mix-formula-box mfb-purp">
+        <div class="mf-label">IF CLAUSE (present state)</div>
+        <div class="mf-row">
+          <span class="mf-clause cl-if">If</span>
+          + subject +
+          <span class="mf-clause cl-if">were / past simple</span>
+        </div>
+      </div>
+      <div class="mix-formula-box mfb-purp">
+        <div class="mf-label">MAIN CLAUSE (past)</div>
+        <div class="mf-row">
+          subject +
+          <span class="mf-clause cl-main">would have + PP</span>
+        </div>
+      </div>
+    </div>
+    <div class="mix-example-set">
+      <div class="mix-ex-row">
+        <div class="mix-ex-type et-purp">Example 1 &#x1F509;</div>
+        <div class="mix-ex-sent" onclick="ttsRead(&quot;If she were more organised, she would have submitted the report on time.&quot;,0.88)">"If she <b>were</b> more organised, she <b>would have submitted</b> the report on time."</div>
+        <div class="mix-ex-ar">لو كانت أكثر تنظيماً (بطبعها)، لكانت قدّمت التقرير في وقته.</div>
+      </div>
+      <div class="mix-ex-row">
+        <div class="mix-ex-type et-purp">Example 2 &#x1F509;</div>
+        <div class="mix-ex-sent" onclick="ttsRead(&quot;If he were braver, he would have spoken up at the meeting yesterday.&quot;,0.88)">"If he <b>were</b> braver, he <b>would have spoken up</b> at the meeting yesterday."</div>
+        <div class="mix-ex-ar">لو كان أكثر شجاعة (بطبعه)، لكان تكلّم في الاجتماع بالأمس.</div>
+      </div>
+      <div class="mix-ex-row">
+        <div class="mix-ex-type et-purp">Example 3 &#x1F509;</div>
+        <div class="mix-ex-sent" onclick="ttsRead(&quot;If I were a native speaker, I would have understood everything at the conference.&quot;,0.88)">"If I <b>were</b> a native speaker, I <b>would have understood</b> everything at the conference."</div>
+        <div class="mix-ex-ar">لو كنت ناطقاً أصلياً باللغة، لكنت فهمت كل شيء في المؤتمر.</div>
+      </div>
+      <div class="mix-ex-row">
+        <div class="mix-ex-type et-purp">Example 4 &#x1F509;</div>
+        <div class="mix-ex-sent" onclick="ttsRead(&quot;If they were more experienced, they would have handled the crisis better last month.&quot;,0.88)">"If they <b>were</b> more experienced, they <b>would have handled</b> the crisis better last month."</div>
+        <div class="mix-ex-ar">لو كانوا أكثر خبرة (بطبيعتهم)، لكانوا تعاملوا مع الأزمة بشكل أفضل الشهر الماضي.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Full comparison table -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F4CA; Full Comparison Table</div>
+    <div class="rule-ar">جدول مقارنة شامل بين الأنواع الأربعة</div>
+    <table class="cmp-table">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th class="th-2nd">2nd Cond.</th>
+          <th class="th-3rd">3rd Cond.</th>
+          <th class="th-m1">Mixed Type 1</th>
+          <th class="th-m2">Mixed Type 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>If clause</td>
+          <td class="td-2nd">past simple<br><em>were / worked</em></td>
+          <td class="td-3rd">past perfect<br><em>had worked</em></td>
+          <td class="td-m1">past perfect<br><em>had studied</em></td>
+          <td class="td-m2">past simple<br><em>were / had</em></td>
+        </tr>
+        <tr>
+          <td>Main clause</td>
+          <td class="td-2nd">would + base<br><em>would live</em></td>
+          <td class="td-3rd">would have + PP<br><em>would have passed</em></td>
+          <td class="td-m1">would + base<br><em>would be (now)</em></td>
+          <td class="td-m2">would have + PP<br><em>would have won</em></td>
+        </tr>
+        <tr>
+          <td>Time</td>
+          <td class="td-2nd">Unreal present / future</td>
+          <td class="td-3rd">Unreal past only</td>
+          <td class="td-m1"><b>Past</b> → <b>Present</b></td>
+          <td class="td-m2"><b>Present</b> → <b>Past</b></td>
+        </tr>
+        <tr>
+          <td>Example</td>
+          <td class="td-2nd" onclick="ttsRead(&quot;If I were rich, I would travel.&quot;,0.88)">"If I were rich, I would travel." &#x1F509;</td>
+          <td class="td-3rd" onclick="ttsRead(&quot;If I had studied, I would have passed.&quot;,0.88)">"If I had studied, I would have passed." &#x1F509;</td>
+          <td class="td-m1" onclick="ttsRead(&quot;If I had studied medicine, I would be a doctor now.&quot;,0.88)">"If I had studied medicine, I would be a doctor now." &#x1F509;</td>
+          <td class="td-m2" onclick="ttsRead(&quot;If I were braver, I would have asked for a promotion.&quot;,0.88)">"If I were braver, I would have asked for a promotion." &#x1F509;</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Otherwise / but for -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F517; Expressing the Same Idea with "Otherwise" &amp; "But for"</div>
+    <div class="rule-ar">نفس المعنى بطرق مختلفة</div>
+    <div class="otherwise-wrap">
+      <div class="otherwise-card ow-blue" onclick="ttsRead(&quot;Otherwise and but for expressing mixed conditional meaning. I did not take the job, otherwise I would be living there now. But for that decision, I would be a manager by now.&quot;,0.88)">
+        <div class="ow-head">&#x1F535; Past → Present (Type 1)</div>
+        <div class="ow-ex">
+          "I didn't take the job. <b>Otherwise</b>, I <b>would be</b> living there now." &#x1F509;<br><br>
+          "<b>But for</b> that decision, I <b>would be</b> a manager by now."
+        </div>
+      </div>
+      <div class="otherwise-card ow-purp" onclick="ttsRead(&quot;Otherwise and but for expressing type 2 mixed conditional meaning. She is disorganised, otherwise she would have submitted it on time. But for his lack of confidence, he would have asked for a promotion.&quot;,0.88)">
+        <div class="ow-head">&#x1F7E3; Present → Past (Type 2)</div>
+        <div class="ow-ex">
+          "She's disorganised. <b>Otherwise</b>, she <b>would have submitted</b> it on time." &#x1F509;<br><br>
+          "<b>But for</b> his lack of confidence, he <b>would have asked</b> for a promotion."
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Common mistakes -->
+  <div class="rule-section">
+    <div class="rule-title">&#x26A0; Common Mistakes — أخطاء شائعة</div>
+    <div class="warn-row">
+      <span class="warn-icon">&#x274C;</span>
+      <div>
+        <div><span class="warn-wrong">If I had known, I would told you.</span>&nbsp;&#x2192;&nbsp;<span class="warn-right">If I had known, I would have told you.</span></div>
+        <div class="warn-ar">النتيجة في الماضي: would + have + past participle — لا تحذف "have"</div>
+      </div>
+    </div>
+    <div class="warn-row">
+      <span class="warn-icon">&#x274C;</span>
+      <div>
+        <div><span class="warn-wrong">If I would have studied, I would be a doctor.</span>&nbsp;&#x2192;&nbsp;<span class="warn-right">If I had studied, I would be a doctor.</span></div>
+        <div class="warn-ar">لا تستخدم "would have" في جملة الشرط (if-clause) أبداً</div>
+      </div>
+    </div>
+    <div class="warn-row">
+      <span class="warn-icon">&#x274C;</span>
+      <div>
+        <div><span class="warn-wrong">If she was braver, she would have spoken up.</span>&nbsp;&#x2192;&nbsp;<span class="warn-right">If she were braver, she would have spoken up.</span></div>
+        <div class="warn-ar">في الجمل الشرطية الفرضية: استخدم "were" وليس "was" مع كل الضمائر (في الكتابة الرسمية)</div>
+      </div>
+    </div>
+    <div class="warn-row">
+      <span class="warn-icon">&#x274C;</span>
+      <div>
+        <div><span class="warn-wrong">If I had saved money, I would have been traveling now.</span>&nbsp;&#x2192;&nbsp;<span class="warn-right">If I had saved money, I would be travelling now.</span></div>
+        <div class="warn-ar">النتيجة الحاضرة في النوع 1: would + be (وليس would have been)</div>
+      </div>
+    </div>
+    <div class="warn-row">
+      <span class="warn-icon">&#x274C;</span>
+      <div>
+        <div><span class="warn-wrong">If I were more patient, I would handle it better yesterday.</span>&nbsp;&#x2192;&nbsp;<span class="warn-right">If I were more patient, I would have handled it better yesterday.</span></div>
+        <div class="warn-ar">النتيجة الماضية في النوع 2: تحتاج "would have + PP"</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tips -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F4A1; Quick Tips</div>
+    <div class="tip-row" onclick="ttsRead(&quot;Tip: The key to mixed conditionals is spotting the time mismatch — one time frame for the if clause, another for the result.&quot;,0.88)">
+      <span class="tip-badge">Key Idea</span>
+      <div><span class="tip-en">Spot the <b>time mismatch</b> — if the condition and the result are in <b>different time frames</b>, it's a mixed conditional &#x1F509;</span><span class="tip-ar">المفتاح هو اختلاف الزمن: الشرط في وقت، والنتيجة في وقت آخر</span></div>
+    </div>
+    <div class="tip-row" onclick="ttsRead(&quot;Tip: Now, today, still, currently — these signal a present result and tell you to use type 1 mixed conditional.&quot;,0.88)">
+      <span class="tip-badge">Clue words</span>
+      <div><span class="tip-en">Words like <b>now / today / still / currently</b> in the main clause → use <b>Type 1</b> (past → present) &#x1F509;</span><span class="tip-ar">كلمات مثل now وstill وtoday تدل على النوع الأول (ماضٍ ← حاضر)</span></div>
+    </div>
+    <div class="tip-row" onclick="ttsRead(&quot;Tip: Never use would in the if clause. Neither in standard conditionals nor in mixed ones.&quot;,0.88)">
+      <span class="tip-badge">No would</span>
+      <div><span class="tip-en">Never put <b>would</b> in the <b>if-clause</b> — not in any conditional type &#x1F509;</span><span class="tip-ar">لا تضع "would" أبداً في جملة الشرط (if-clause) في أي نوع</span></div>
+    </div>
+    <div class="tip-row" onclick="ttsRead(&quot;Tip: Were is preferred over was in formal and written English for all persons in unreal conditionals. If I were, if she were, if he were.&quot;,0.88)">
+      <span class="tip-badge">were not was</span>
+      <div><span class="tip-en">In formal English, use <b>were</b> for all persons: "If I <b>were</b>…" / "If she <b>were</b>…" &#x1F509;</span><span class="tip-ar">في الكتابة الرسمية استخدم "were" مع كل الضمائر — وليس "was"</span></div>
+    </div>
+  </div>
+
+</div><!-- /tab-grammar -->
+
+<!-- ════════════════════ EVERYDAY ENGLISH TAB ════════════════════ -->
+<div id="tab-everyday" class="tab-panel">
+
+  <!-- Dialogue 1 -->
+  <div class="dlg-block">
+    <div class="dlg-header">
+      <div>
+        <div class="dlg-title">&#x1F4BC; Career Regrets</div>
+        <div class="dlg-sub ar">الندم المهني</div>
+      </div>
+      <div class="dlg-tags"><span class="tag tag-grammar">If I had… I would be (Type 1)</span></div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;You seem unhappy with your current job. Would you have chosen a different path if you could?&quot;,0.88)">You seem unhappy with your current job. Would you have chosen a different path if you could? <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">تبدو غير سعيد في عملك الحالي. هل كنت لتختار مساراً مختلفاً لو أمكنك؟</div>
+          <div class="chat-bubble-foot">Salma</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Honestly, if I had studied engineering instead of business, I would probably be working on something I actually enjoy right now.&quot;,0.88)">Honestly, <b>if I had studied</b> engineering instead of business, I <b>would probably be working</b> on something I actually enjoy right now. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">بصراحة، لو كنت درست الهندسة بدلاً من الأعمال، لكنت أعمل على شيء أستمتع به فعلاً الآن.</div>
+          <div class="chat-bubble-foot">Tarek</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;And if you had taken that startup offer three years ago, you would be your own boss by now.&quot;,0.88)">And <b>if you had taken</b> that startup offer three years ago, you <b>would be</b> your own boss by now. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">وإذا كنت قبلت عرض الشركة الناشئة قبل ثلاث سنوات، لكنت مديراً لنفسك الآن.</div>
+          <div class="chat-bubble-foot">Salma</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Exactly. If I had been less cautious back then, my whole situation would be different today.&quot;,0.88)">Exactly. <b>If I had been</b> less cautious back then, my whole situation <b>would be</b> different today. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">بالضبط. لو كنت أقل تحفظاً في ذلك الوقت، لكان وضعي بأكمله مختلفاً اليوم.</div>
+          <div class="chat-bubble-foot">Tarek</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dialogue 2 -->
+  <div class="dlg-block">
+    <div class="dlg-header">
+      <div>
+        <div class="dlg-title">&#x1F3C3; Health &amp; Lifestyle</div>
+        <div class="dlg-sub ar">الصحة وأسلوب الحياة</div>
+      </div>
+      <div class="dlg-tags"><span class="tag tag-grammar">If she were… she would have (Type 2)</span></div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Did Nadia run the marathon last weekend? I saw the results online.&quot;,0.88)">Did Nadia run the marathon last weekend? I saw the results online. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">هل ركضت نادية في الماراثون عطلة نهاية الأسبوع الماضية؟ رأيت النتائج على الإنترنت.</div>
+          <div class="chat-bubble-foot">Lara</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;No, she dropped out at kilometre 30. If she were fitter, she would have completed it easily.&quot;,0.88)">No, she dropped out at kilometre 30. <b>If she were</b> fitter, she <b>would have completed</b> it easily. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">لا، انسحبت عند الكيلومتر 30. لو كانت أكثر لياقة (بطبيعتها)، لكانت أكملته بسهولة.</div>
+          <div class="chat-bubble-foot">Omar</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;She trains so inconsistently. If she were more disciplined, she would have prepared properly.&quot;,0.88)">She trains so inconsistently. <b>If she were</b> more disciplined, she <b>would have prepared</b> properly. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">تتدرب بشكل غير منتظم جداً. لو كانت أكثر انضباطاً، لكانت استعدت بشكل صحيح.</div>
+          <div class="chat-bubble-foot">Lara</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;True. But if she had not registered at all, she would never be pushing herself this hard now.&quot;,0.88)">True. But <b>if she had not registered</b> at all, she <b>would never be pushing</b> herself this hard now. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">صحيح. لكن لو لم تسجّل أصلاً، لما كانت تدفع نفسها بهذه الشدة الآن.</div>
+          <div class="chat-bubble-foot">Omar</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dialogue 3 -->
+  <div class="dlg-block">
+    <div class="dlg-header">
+      <div>
+        <div class="dlg-title">&#x1F393; University Choices</div>
+        <div class="dlg-sub ar">خيارات الجامعة</div>
+      </div>
+      <div class="dlg-tags"><span class="tag tag-grammar">If I had… I would be / If I were… I would have</span></div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Do you ever wonder what your life would look like if you had gone abroad for university?&quot;,0.88)">Do you ever wonder what your life would look like if you had gone abroad for university? <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">هل تتساءل أحياناً كيف سيكون حياتك لو كنت سافرت للخارج للدراسة الجامعية؟</div>
+          <div class="chat-bubble-foot">Rana</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;All the time. If I had studied in Canada, I would be speaking French fluently by now as well.&quot;,0.88)">All the time. <b>If I had studied</b> in Canada, I <b>would be speaking</b> French fluently by now as well. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">طوال الوقت. لو كنت درست في كندا، لكنت أتحدث الفرنسية بطلاقة الآن أيضاً.</div>
+          <div class="chat-bubble-foot">Kamal</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;And if you were more adventurous, you would have applied to that scholarship instead of giving up on it.&quot;,0.88)">And <b>if you were</b> more adventurous, you <b>would have applied</b> to that scholarship instead of giving up on it. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">وإذا كنت أكثر مغامرة (بطبعك)، لكنت قدّمت على تلك المنحة بدلاً من الاستسلام.</div>
+          <div class="chat-bubble-foot">Rana</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;You are right. If I had been braver at 18, things would be completely different now.&quot;,0.88)">You are right. <b>If I had been</b> braver at 18, things <b>would be</b> completely different now. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">أنتِ محقة. لو كنت أكثر شجاعة وأنا في الـ18، لكانت الأمور مختلفة كلياً الآن.</div>
+          <div class="chat-bubble-foot">Kamal</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dialogue 4 -->
+  <div class="dlg-block">
+    <div class="dlg-header">
+      <div>
+        <div class="dlg-title">&#x1F4B0; Investment &amp; Business</div>
+        <div class="dlg-sub ar">الاستثمار والأعمال</div>
+      </div>
+      <div class="dlg-tags"><span class="tag tag-grammar">If I had invested… I would be (Type 1)</span></div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;I remember you were thinking about investing in that tech company back in 2019.&quot;,0.88)">I remember you were thinking about investing in that tech company back in 2019. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">أذكر أنك كنت تفكر في الاستثمار في تلك الشركة التقنية عام 2019.</div>
+          <div class="chat-bubble-foot">Hadi</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Don't remind me. If I had invested then, I would be financially free right now.&quot;,0.88)">Don't remind me. <b>If I had invested</b> then, I <b>would be</b> financially free right now. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">لا تذكّرني. لو كنت استثمرت في ذلك الوقت، لكنت حراً مالياً الآن.</div>
+          <div class="chat-bubble-foot">Sami</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;If you were less risk-averse, you would have made that decision without hesitation.&quot;,0.88)">If you were less risk-averse, you would have made that decision without hesitation. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">لو كنت أقل تحفظاً من المخاطر، لكنت اتخذت ذلك القرار دون تردد.</div>
+          <div class="chat-bubble-foot">Hadi</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;True. If I had trusted my instincts, I would not be working for someone else today.&quot;,0.88)">True. <b>If I had trusted</b> my instincts, I <b>would not be working</b> for someone else today. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">صحيح. لو كنت وثقت بحدسي، لما كنت أعمل لحساب شخص آخر اليوم.</div>
+          <div class="chat-bubble-foot">Sami</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dialogue 5 -->
+  <div class="dlg-block">
+    <div class="dlg-header">
+      <div>
+        <div class="dlg-title">&#x1F91D; Team Performance</div>
+        <div class="dlg-sub ar">أداء الفريق</div>
+      </div>
+      <div class="dlg-tags"><span class="tag tag-grammar">If the team were… would have (Type 2)</span></div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;The project failed to launch on schedule. What went wrong?&quot;,0.88)">The project failed to launch on schedule. What went wrong? <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">فشل المشروع في الإطلاق في موعده. ما الذي جرى؟</div>
+          <div class="chat-bubble-foot">Director</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;If the team were more experienced with this type of software, they would have caught the bugs earlier.&quot;,0.88)">If the team <b>were</b> more experienced with this type of software, they <b>would have caught</b> the bugs earlier. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">لو كان الفريق أكثر خبرة بهذا النوع من البرمجيات، لاكتشفوا الأخطاء مبكراً.</div>
+          <div class="chat-bubble-foot">Manager</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;And if we had allocated more testing time in the original plan, we would not be in this situation now.&quot;,0.88)">And <b>if we had allocated</b> more testing time in the original plan, we <b>would not be</b> in this situation now. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">وإذا كنا خصصنا وقتاً أكبر للاختبار في الخطة الأصلية، لما كنا في هذا الوضع الآن.</div>
+          <div class="chat-bubble-foot">Director</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;If the team were better at communication, they would have flagged the issue two weeks ago before it escalated.&quot;,0.88)">If the team <b>were</b> better at communication, they <b>would have flagged</b> the issue two weeks ago before it escalated. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">لو كان الفريق أفضل في التواصل، لكانوا أشاروا للمشكلة قبل أسبوعين قبل أن تتصاعد.</div>
+          <div class="chat-bubble-foot">Manager</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /tab-everyday -->
+
+<!-- ════════════════════ READING TAB ════════════════════ -->
+<div id="tab-reading" class="tab-panel">
+  <div class="read-wrap">
+    <div class="read-header">
+      <div class="read-title">&#x1F4D8; The Road Not Taken</div>
+      <div class="read-sub ar">الطريق الذي لم يُسلَك</div>
+    </div>
+    <div class="read-body">
+      <p onclick="ttsRead(&quot;Every significant choice we make closes a door on an alternative path. The study of these hypothetical outcomes — what might have been — is not merely nostalgic; it reveals much about who we are today.&quot;,0.88)">Every significant choice we make closes a door on an alternative path. The study of these hypothetical outcomes — what might have been — is not merely nostalgic; it reveals much about <b>who we are today</b>. <span class="read-sp">&#x1F509;</span></p>
+      <p onclick="ttsRead(&quot;Consider the case of a young engineer who declined a position at a pioneering technology firm in the 1990s. If he had accepted that offer, he would almost certainly be a multi-millionaire now. Instead, he chose stability and today works as a mid-level consultant.&quot;,0.88)">Consider the case of a young engineer who declined a position at a pioneering technology firm in the 1990s. <b>If he had accepted</b> that offer, he <b>would almost certainly be</b> a multi-millionaire now. Instead, he chose stability and today works as a mid-level consultant. <span class="read-sp">&#x1F509;</span></p>
+      <p onclick="ttsRead(&quot;Yet he does not define the outcome purely as failure. If he were a different kind of person — one driven primarily by ambition — he would have taken the risk without a second thought. But he is cautious by nature, and that caution shaped the decision.&quot;,0.88)">Yet he does not define the outcome purely as failure. <b>If he were</b> a different kind of person — one driven primarily by ambition — he <b>would have taken</b> the risk without a second thought. But he is cautious by nature, and that caution shaped the decision. <span class="read-sp">&#x1F509;</span></p>
+      <p onclick="ttsRead(&quot;Psychologists who study counterfactual thinking note that we tend to imagine upward counterfactuals — better outcomes that could have been. If we had made different choices, our present lives would be richer, more fulfilling, more adventurous.&quot;,0.88)">Psychologists who study <b>counterfactual thinking</b> note that we tend to imagine upward counterfactuals — better outcomes that could have been. <b>If we had made</b> different choices, our present lives <b>would be</b> richer, more fulfilling, more adventurous. <span class="read-sp">&#x1F509;</span></p>
+      <p onclick="ttsRead(&quot;However, this framing ignores a crucial point: if we were fundamentally different people, we would have made those choices naturally. The decisions we actually made reflect our true values at the time.&quot;,0.88)">However, this framing ignores a crucial point: <b>if we were</b> fundamentally different people, we <b>would have made</b> those choices naturally. The decisions we actually made reflect our true values at the time. <span class="read-sp">&#x1F509;</span></p>
+      <p onclick="ttsRead(&quot;Perhaps, then, the more useful question is not what might have been, but what we are still able to choose today.&quot;,0.88)">Perhaps, then, the more useful question is not what might have been, but what we are <b>still able to choose today</b>. <span class="read-sp">&#x1F509;</span></p>
+    </div>
+
+    <div class="vocab-wrap">
+      <div class="vocab-title">&#x1F4DA; Key Vocabulary</div>
+      <div class="vocab-grid">
+        <div class="vocab-card" onclick="ttsRead(&quot;hypothetical&quot;,0.88)"><div class="vocab-en">hypothetical</div><div class="vocab-ar ar">افتراضي / فرضي</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;nostalgic&quot;,0.88)"><div class="vocab-en">nostalgic</div><div class="vocab-ar ar">حنيني / يستدعي الحنين</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;pioneering&quot;,0.88)"><div class="vocab-en">pioneering</div><div class="vocab-ar ar">رائد / طليعي</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;consultant&quot;,0.88)"><div class="vocab-en">consultant</div><div class="vocab-ar ar">مستشار</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;counterfactual&quot;,0.88)"><div class="vocab-en">counterfactual</div><div class="vocab-ar ar">مناقض للواقع / افتراض بديل</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;fulfilling&quot;,0.88)"><div class="vocab-en">fulfilling</div><div class="vocab-ar ar">مُشبِع / مُرضٍ</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;cautious&quot;,0.88)"><div class="vocab-en">cautious</div><div class="vocab-ar ar">حذر / متحفظ</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;framing&quot;,0.88)"><div class="vocab-en">framing</div><div class="vocab-ar ar">صياغة / طريقة تأطير المسألة</div></div>
+      </div>
+    </div>
+
+    <div class="rq-wrap">
+      <div class="rq-title">&#x2753; Comprehension Questions</div>
+      <div class="rq-item" id="rq1">
+        <div class="rq-q" onclick="ttsRead(&quot;What opportunity did the young engineer decline in the 1990s?&quot;,0.88)">1. What opportunity did the young engineer decline? &#x1F509;</div>
+        <div class="rq-opts">
+          <button class="read-opt" onclick="rqPick(this,'rq1',false)">A university scholarship abroad</button>
+          <button class="read-opt" onclick="rqPick(this,'rq1',true)">A position at a pioneering technology firm</button>
+          <button class="read-opt" onclick="rqPick(this,'rq1',false)">An investment in a startup company</button>
+          <button class="read-opt" onclick="rqPick(this,'rq1',false)">A government consulting contract</button>
+        </div>
+      </div>
+      <div class="rq-item" id="rq2">
+        <div class="rq-q" onclick="ttsRead(&quot;According to the article, why did the engineer not take the risk?&quot;,0.88)">2. Why did the engineer not take the risk? &#x1F509;</div>
+        <div class="rq-opts">
+          <button class="read-opt" onclick="rqPick(this,'rq2',false)">He was not offered enough money</button>
+          <button class="read-opt" onclick="rqPick(this,'rq2',false)">He lacked the technical skills</button>
+          <button class="read-opt" onclick="rqPick(this,'rq2',true)">He is cautious by nature and chose stability</button>
+          <button class="read-opt" onclick="rqPick(this,'rq2',false)">He had family obligations at the time</button>
+        </div>
+      </div>
+      <div class="rq-item" id="rq3">
+        <div class="rq-q" onclick="ttsRead(&quot;What do psychologists call the tendency to imagine better alternative outcomes?&quot;,0.88)">3. What do psychologists call imagining better outcomes? &#x1F509;</div>
+        <div class="rq-opts">
+          <button class="read-opt" onclick="rqPick(this,'rq3',false)">Optimistic forecasting</button>
+          <button class="read-opt" onclick="rqPick(this,'rq3',true)">Counterfactual thinking</button>
+          <button class="read-opt" onclick="rqPick(this,'rq3',false)">Nostalgic projection</button>
+          <button class="read-opt" onclick="rqPick(this,'rq3',false)">Hypothetical reasoning</button>
+        </div>
+      </div>
+      <div class="rq-item" id="rq4">
+        <div class="rq-q" onclick="ttsRead(&quot;What crucial point does the article say this framing ignores?&quot;,0.88)">4. What point does the article say this framing ignores? &#x1F509;</div>
+        <div class="rq-opts">
+          <button class="read-opt" onclick="rqPick(this,'rq4',false)">That past opportunities were often low quality</button>
+          <button class="read-opt" onclick="rqPick(this,'rq4',true)">That if we were different people, we would have naturally made different choices</button>
+          <button class="read-opt" onclick="rqPick(this,'rq4',false)">That imagining alternatives is always harmful</button>
+          <button class="read-opt" onclick="rqPick(this,'rq4',false)">That engineers rarely regret their career decisions</button>
+        </div>
+      </div>
+      <div class="rq-item" id="rq5">
+        <div class="rq-q" onclick="ttsRead(&quot;What does the article suggest is the more useful question to ask?&quot;,0.88)">5. What does the article suggest is the more useful question? &#x1F509;</div>
+        <div class="rq-opts">
+          <button class="read-opt" onclick="rqPick(this,'rq5',false)">How different would our lives be if we had chosen differently?</button>
+          <button class="read-opt" onclick="rqPick(this,'rq5',false)">Why do we keep making the same mistakes?</button>
+          <button class="read-opt" onclick="rqPick(this,'rq5',true)">What are we still able to choose today?</button>
+          <button class="read-opt" onclick="rqPick(this,'rq5',false)">What would make us truly nostalgic?</button>
+        </div>
+      </div>
+      <div class="rq-score" id="rqScore42" style="display:none">
+        <div class="rqs-icon">&#x1F3AF;</div>
+        <div class="rqs-num" id="rqScoreNum42"></div>
+        <div class="rqs-msg" id="rqScoreMsg42"></div>
+        <div class="rqs-ar ar" id="rqScoreAr42"></div>
+        <button class="rqs-btn" onclick="rqReset42()">&#x1F504; Try Again</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /tab-reading -->
+
+<!-- ════════════════════ CHECK IT! TAB ════════════════════ -->
+<div id="tab-checkit" class="tab-panel">
+  <div class="ci-hero">
+    <div class="ci-hero-icon">&#x2705;</div>
+    <h2 class="ci-hero-title">Check It!</h2>
+    <p class="ci-hero-sub">25 questions — Mixed Conditionals — 20 MCQ + 5 Fill-in-the-Blank</p>
+    <div class="ci-hero-types">
+      <span class="tag tag-grammar">20 Multiple Choice</span>
+      <span class="tag tag-other">5 Fill in the Blank</span>
+    </div>
+  </div>
+  <div class="ci-progress-wrap">
+    <div class="ci-progress-inner">
+      <div class="ci-progress-bar"><div class="ci-progress-fill" id="ciProgressFill42"></div></div>
+      <div class="ci-progress-txt">
+        <span id="ciProgressTxt42">0 / 25 answered</span>
+        <span id="ciScoreTxt42">Score: 0</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="ci-wrap" id="ciWrap42">
+
+    <div class="ci-q" id="ciq1"><div class="ci-q-num">Q1</div><div class="ci-q-text" onclick="ttsRead(&quot;If I had taken that scholarship, I would be studying in London now. Which type is this?&quot;,0.88)">If I had taken that scholarship, I <b>would be studying</b> in London now. — Type? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq1',false)">2nd conditional (unreal present)</button><button class="ci-btn" onclick="ciPick(this,'ciq1',false)">3rd conditional (unreal past)</button><button class="ci-btn" onclick="ciPick(this,'ciq1',true)">Mixed Type 1 (past condition → present result)</button><button class="ci-btn" onclick="ciPick(this,'ciq1',false)">Mixed Type 2 (present condition → past result)</button></div></div>
+
+    <div class="ci-q" id="ciq2"><div class="ci-q-num">Q2</div><div class="ci-q-text" onclick="ttsRead(&quot;If she were more organised, she would have finished the project on time. Which type is this?&quot;,0.88)">If she <b>were</b> more organised, she <b>would have finished</b> on time. — Type? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq2',false)">2nd conditional</button><button class="ci-btn" onclick="ciPick(this,'ciq2',false)">3rd conditional</button><button class="ci-btn" onclick="ciPick(this,'ciq2',false)">Mixed Type 1</button><button class="ci-btn" onclick="ciPick(this,'ciq2',true)">Mixed Type 2 (present condition → past result)</button></div></div>
+
+    <div class="ci-q" id="ciq3"><div class="ci-q-num">Q3</div><div class="ci-q-text" onclick="ttsRead(&quot;Which is the correct mixed conditional sentence for: I did not save money, so I am not travelling now?&quot;,0.88)">Best mixed conditional for: "I didn't save → I'm not travelling now." &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq3',false)">If I saved money, I would travel now.</button><button class="ci-btn" onclick="ciPick(this,'ciq3',true)">If I had saved money, I would be travelling now.</button><button class="ci-btn" onclick="ciPick(this,'ciq3',false)">If I had saved money, I would have travelled.</button><button class="ci-btn" onclick="ciPick(this,'ciq3',false)">If I would have saved money, I would travel.</button></div></div>
+
+    <div class="ci-q" id="ciq4"><div class="ci-q-num">Q4</div><div class="ci-q-text" onclick="ttsRead(&quot;Which sentence has a mistake?&quot;,0.88)">Which sentence has a mistake? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq4',false)">If I had studied harder, I would be a doctor now.</button><button class="ci-btn" onclick="ciPick(this,'ciq4',true)">If I would have studied harder, I would be a doctor now.</button><button class="ci-btn" onclick="ciPick(this,'ciq4',false)">If she were braver, she would have spoken up.</button><button class="ci-btn" onclick="ciPick(this,'ciq4',false)">If they had left earlier, they would be there by now.</button></div></div>
+
+    <div class="ci-q" id="ciq5"><div class="ci-q-num">Q5</div><div class="ci-q-text" onclick="ttsRead(&quot;If he were less impulsive, he would have thought before he acted. What does this tell us about him now?&quot;,0.88)">If he were less impulsive, he would have thought before acting. This tells us he is ___. &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq5',false)">not impulsive now</button><button class="ci-btn" onclick="ciPick(this,'ciq5',true)">still impulsive now</button><button class="ci-btn" onclick="ciPick(this,'ciq5',false)">cautious by nature</button><button class="ci-btn" onclick="ciPick(this,'ciq5',false)">very patient now</button></div></div>
+
+    <div class="ci-q" id="ciq6"><div class="ci-q-num">Q6</div><div class="ci-q-text" onclick="ttsRead(&quot;The main clause of Mixed Type 1 uses which verb form?&quot;,0.88)">The main clause of <b>Type 1</b> (past → present) uses: &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq6',false)">would have + past participle</button><button class="ci-btn" onclick="ciPick(this,'ciq6',true)">would + base verb (be / live / work…)</button><button class="ci-btn" onclick="ciPick(this,'ciq6',false)">had + past participle</button><button class="ci-btn" onclick="ciPick(this,'ciq6',false)">past simple</button></div></div>
+
+    <div class="ci-q" id="ciq7"><div class="ci-q-num">Q7</div><div class="ci-q-text" onclick="ttsRead(&quot;The if-clause of Mixed Type 2 uses which verb form?&quot;,0.88)">The if-clause of <b>Type 2</b> (present → past) uses: &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq7',false)">past perfect (had + PP)</button><button class="ci-btn" onclick="ciPick(this,'ciq7',true)">past simple / were</button><button class="ci-btn" onclick="ciPick(this,'ciq7',false)">would + base verb</button><button class="ci-btn" onclick="ciPick(this,'ciq7',false)">present perfect</button></div></div>
+
+    <div class="ci-q" id="ciq8"><div class="ci-q-num">Q8</div><div class="ci-q-text" onclick="ttsRead(&quot;Choose the correct sentence: If I had moved to Paris, blank, living there now.&quot;,0.88)">Choose the correct option: "If I had moved to Paris, ___ living there now." &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq8',false)">I would have been</button><button class="ci-btn" onclick="ciPick(this,'ciq8',true)">I would be</button><button class="ci-btn" onclick="ciPick(this,'ciq8',false)">I had been</button><button class="ci-btn" onclick="ciPick(this,'ciq8',false)">I will be</button></div></div>
+
+    <div class="ci-q" id="ciq9"><div class="ci-q-num">Q9</div><div class="ci-q-text" onclick="ttsRead(&quot;She is naturally shy. She did not ask for a promotion last year. Which mixed conditional expresses this?&quot;,0.88)">She is shy (present trait). She didn't ask for promotion (past). Mixed conditional? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq9',false)">If she had been bolder, she would be promoted.</button><button class="ci-btn" onclick="ciPick(this,'ciq9',true)">If she were bolder, she would have asked for a promotion.</button><button class="ci-btn" onclick="ciPick(this,'ciq9',false)">If she is bolder, she will ask for a promotion.</button><button class="ci-btn" onclick="ciPick(this,'ciq9',false)">If she had been bolder, she would have been promoted.</button></div></div>
+
+    <div class="ci-q" id="ciq10"><div class="ci-q-num">Q10</div><div class="ci-q-text" onclick="ttsRead(&quot;Which word in the main clause signals a Type 1 Mixed Conditional?&quot;,0.88)">Which word in the main clause signals <b>Type 1</b>? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq10',false)">have</button><button class="ci-btn" onclick="ciPick(this,'ciq10',false)">had</button><button class="ci-btn" onclick="ciPick(this,'ciq10',true)">now / today / still</button><button class="ci-btn" onclick="ciPick(this,'ciq10',false)">yesterday / last week</button></div></div>
+
+    <div class="ci-break" id="brk10" style="display:none">
+      <div class="ci-break-icon">&#x2615;</div>
+      <div class="ci-break-title">Halfway! Keep Going!</div>
+      <div class="ci-break-ar ar">منتصف الطريق! استمر</div>
+      <div class="ci-break-score">Score so far: <span id="ciBreakScore42"></span> / 10</div>
+    </div>
+
+    <div class="ci-q" id="ciq11"><div class="ci-q-num">Q11</div><div class="ci-q-text" onclick="ttsRead(&quot;If I had not dropped out, I would be graduating this year. Is this Type 1 or Type 2?&quot;,0.88)">If I had not dropped out, I <b>would be graduating</b> this year. Type? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq11',true)">Type 1 — past condition → present result</button><button class="ci-btn" onclick="ciPick(this,'ciq11',false)">Type 2 — present condition → past result</button><button class="ci-btn" onclick="ciPick(this,'ciq11',false)">3rd conditional only</button><button class="ci-btn" onclick="ciPick(this,'ciq11',false)">2nd conditional only</button></div></div>
+
+    <div class="ci-q" id="ciq12"><div class="ci-q-num">Q12</div><div class="ci-q-text" onclick="ttsRead(&quot;If I were more patient, I would have handled that situation differently. What does this mean?&quot;,0.88)">If I were more patient, I would have handled that differently. Meaning? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq12',false)">I am patient, and I handled it well.</button><button class="ci-btn" onclick="ciPick(this,'ciq12',false)">I was not patient in the past, but I am now.</button><button class="ci-btn" onclick="ciPick(this,'ciq12',true)">I am not patient now, so I did not handle it well in the past.</button><button class="ci-btn" onclick="ciPick(this,'ciq12',false)">I will be patient in future situations.</button></div></div>
+
+    <div class="ci-q" id="ciq13"><div class="ci-q-num">Q13</div><div class="ci-q-text" onclick="ttsRead(&quot;She did not apply for the grant. She is not naturally competitive. Which sentence fits best?&quot;,0.88)">She is not competitive (now) + She didn't apply for the grant (past). Best fit? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq13',false)">If she had been more competitive, she would apply now.</button><button class="ci-btn" onclick="ciPick(this,'ciq13',true)">If she were more competitive, she would have applied for the grant.</button><button class="ci-btn" onclick="ciPick(this,'ciq13',false)">If she is competitive, she will apply for the grant.</button><button class="ci-btn" onclick="ciPick(this,'ciq13',false)">If she had been more competitive, she would have been applying now.</button></div></div>
+
+    <div class="ci-q" id="ciq14"><div class="ci-q-num">Q14</div><div class="ci-q-text" onclick="ttsRead(&quot;I did not attend that conference. As a result, I am not working with that company now.&quot;,0.88)">I didn't attend the conference → I'm not working with them now. Mixed conditional? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq14',false)">If I attended the conference, I would work with them now.</button><button class="ci-btn" onclick="ciPick(this,'ciq14',true)">If I had attended the conference, I would be working with them now.</button><button class="ci-btn" onclick="ciPick(this,'ciq14',false)">If I had attended the conference, I would have worked with them.</button><button class="ci-btn" onclick="ciPick(this,'ciq14',false)">If I attend the conference, I will work with them now.</button></div></div>
+
+    <div class="ci-q" id="ciq15"><div class="ci-q-num">Q15</div><div class="ci-q-text" onclick="ttsRead(&quot;Which sentence is a standard 3rd conditional, not a mixed conditional?&quot;,0.88)">Which is a <b>standard 3rd conditional</b> (NOT mixed)? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq15',false)">If I had studied, I would be a teacher now.</button><button class="ci-btn" onclick="ciPick(this,'ciq15',true)">If I had studied, I would have passed the exam.</button><button class="ci-btn" onclick="ciPick(this,'ciq15',false)">If she were more patient, she would have succeeded.</button><button class="ci-btn" onclick="ciPick(this,'ciq15',false)">If they had invested, they would be rich today.</button></div></div>
+
+    <div class="ci-q" id="ciq16"><div class="ci-q-num">Q16</div><div class="ci-q-text" onclick="ttsRead(&quot;What is the correct formal alternative to was in unreal conditionals?&quot;,0.88)">In formal unreal conditionals, use ___ instead of "was". &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq16',false)">is</button><button class="ci-btn" onclick="ciPick(this,'ciq16',true)">were</button><button class="ci-btn" onclick="ciPick(this,'ciq16',false)">been</button><button class="ci-btn" onclick="ciPick(this,'ciq16',false)">had been</button></div></div>
+
+    <div class="ci-q" id="ciq17"><div class="ci-q-num">Q17</div><div class="ci-q-text" onclick="ttsRead(&quot;He did not invest. Now he is not wealthy. Rewrite as: He is not wealthy now, otherwise ...&quot;,0.88)">"He didn't invest. He's not wealthy now." → "He's not wealthy now; otherwise, ___." &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq17',false)">he would have invested.</button><button class="ci-btn" onclick="ciPick(this,'ciq17',true)">he would be wealthy.</button><button class="ci-btn" onclick="ciPick(this,'ciq17',false)">he would have been wealthy.</button><button class="ci-btn" onclick="ciPick(this,'ciq17',false)">he had been wealthy.</button></div></div>
+
+    <div class="ci-q" id="ciq18"><div class="ci-q-num">Q18</div><div class="ci-q-text" onclick="ttsRead(&quot;Can you put would in the if clause of a mixed conditional?&quot;,0.88)">Can you put "would" in the <b>if-clause</b> of a mixed conditional? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq18',false)">Yes, always.</button><button class="ci-btn" onclick="ciPick(this,'ciq18',false)">Yes, but only in Type 2.</button><button class="ci-btn" onclick="ciPick(this,'ciq18',true)">No — never use "would" in the if-clause.</button><button class="ci-btn" onclick="ciPick(this,'ciq18',false)">Yes, in formal written English.</button></div></div>
+
+    <div class="ci-q" id="ciq19"><div class="ci-q-num">Q19</div><div class="ci-q-text" onclick="ttsRead(&quot;If he had not missed the interview, he would be employed right now. Is this a mixed conditional?&quot;,0.88)">"If he <b>had not missed</b> the interview, he <b>would be employed</b> right now." &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq19',true)">Yes — Type 1 mixed conditional (past → present)</button><button class="ci-btn" onclick="ciPick(this,'ciq19',false)">Yes — Type 2 mixed conditional (present → past)</button><button class="ci-btn" onclick="ciPick(this,'ciq19',false)">No — it is a standard 3rd conditional</button><button class="ci-btn" onclick="ciPick(this,'ciq19',false)">No — it is a standard 2nd conditional</button></div></div>
+
+    <div class="ci-q" id="ciq20"><div class="ci-q-num">Q20</div><div class="ci-q-text" onclick="ttsRead(&quot;In Type 2 mixed conditional, the if clause describes a present or permanent characteristic. True or false?&quot;,0.88)">In Type 2, the if-clause describes a <b>present / permanent characteristic</b>. True or false? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq20',true)">True — it refers to how someone is now.</button><button class="ci-btn" onclick="ciPick(this,'ciq20',false)">False — it refers to a past event only.</button><button class="ci-btn" onclick="ciPick(this,'ciq20',false)">False — it always refers to the future.</button><button class="ci-btn" onclick="ciPick(this,'ciq20',false)">True — but only in written English.</button></div></div>
+
+    <div class="ci-q ci-fib" id="ciq21"><div class="ci-q-num">Q21</div><div class="ci-fib-lbl">&#x270F; Fill in the Blank</div><div class="ci-q-text" onclick="ttsRead(&quot;If I had taken that job, I would be living in London now.&quot;,0.88)">If I had taken that job, I ___ be living in London now. <span class="read-sp">&#x1F509;</span></div><div class="ci-fib-wrap"><input class="ci-fib-input" id="fib21" type="text" placeholder="Type your answer..."><button class="ci-fib-btn" id="fibBtn21" onclick="ciFibCheck('fib21','fibBtn21','ciq21','fibSol21','would')">Check</button></div><div class="ci-fib-solution" id="fibSol21" style="display:none">&#x2705; Answer: <b>would</b> &nbsp;|&nbsp; <b>would</b> — Type 1: past condition → present result: would + base verb</div></div>
+
+    <div class="ci-q ci-fib" id="ciq22"><div class="ci-q-num">Q22</div><div class="ci-fib-lbl">&#x270F; Fill in the Blank</div><div class="ci-q-text" onclick="ttsRead(&quot;If she were more patient, she would have succeeded last year.&quot;,0.88)">If she ___ more patient, she would have succeeded last year. <span class="read-sp">&#x1F509;</span></div><div class="ci-fib-wrap"><input class="ci-fib-input" id="fib22" type="text" placeholder="Type your answer..."><button class="ci-fib-btn" id="fibBtn22" onclick="ciFibCheck('fib22','fibBtn22','ciq22','fibSol22','were')">Check</button></div><div class="ci-fib-solution" id="fibSol22" style="display:none">&#x2705; Answer: <b>were</b> &nbsp;|&nbsp; <b>were</b> — Type 2: present condition (past simple/were) → past result</div></div>
+
+    <div class="ci-q ci-fib" id="ciq23"><div class="ci-q-num">Q23</div><div class="ci-fib-lbl">&#x270F; Fill in the Blank</div><div class="ci-q-text" onclick="ttsRead(&quot;If we had left earlier, we would be there by now.&quot;,0.88)">If we had left earlier, we would ___ there by now. <span class="read-sp">&#x1F509;</span></div><div class="ci-fib-wrap"><input class="ci-fib-input" id="fib23" type="text" placeholder="Type your answer..."><button class="ci-fib-btn" id="fibBtn23" onclick="ciFibCheck('fib23','fibBtn23','ciq23','fibSol23','be')">Check</button></div><div class="ci-fib-solution" id="fibSol23" style="display:none">&#x2705; Answer: <b>be</b> &nbsp;|&nbsp; <b>be</b> — Type 1 main clause: would + base verb (be) for present result</div></div>
+
+    <div class="ci-q ci-fib" id="ciq24"><div class="ci-q-num">Q24</div><div class="ci-fib-lbl">&#x270F; Fill in the Blank</div><div class="ci-q-text" onclick="ttsRead(&quot;If he were more confident, he would have asked for a promotion months ago.&quot;,0.88)">If he were more confident, he would ___ asked for a promotion months ago. <span class="read-sp">&#x1F509;</span></div><div class="ci-fib-wrap"><input class="ci-fib-input" id="fib24" type="text" placeholder="Type your answer..."><button class="ci-fib-btn" id="fibBtn24" onclick="ciFibCheck('fib24','fibBtn24','ciq24','fibSol24','have')">Check</button></div><div class="ci-fib-solution" id="fibSol24" style="display:none">&#x2705; Answer: <b>have</b> &nbsp;|&nbsp; <b>have</b> — Type 2 main clause: would + have + past participle</div></div>
+
+    <div class="ci-q ci-fib" id="ciq25"><div class="ci-q-num">Q25</div><div class="ci-fib-lbl">&#x270F; Fill in the Blank</div><div class="ci-q-text" onclick="ttsRead(&quot;If I had invested in that company, I would be a millionaire now.&quot;,0.88)">If I ___ invested in that company, I would be a millionaire now. <span class="read-sp">&#x1F509;</span></div><div class="ci-fib-wrap"><input class="ci-fib-input" id="fib25" type="text" placeholder="Type your answer..."><button class="ci-fib-btn" id="fibBtn25" onclick="ciFibCheck('fib25','fibBtn25','ciq25','fibSol25','had')">Check</button></div><div class="ci-fib-solution" id="fibSol25" style="display:none">&#x2705; Answer: <b>had</b> &nbsp;|&nbsp; <b>had</b> — Type 1 if-clause: If + had + past participle (past perfect)</div></div>
+
+    <div class="ci-final-score" id="ciFinal42" style="display:none">
+      <div class="cif-icon">&#x1F3C6;</div>
+      <div class="cif-title">Lesson Complete!</div>
+      <div class="cif-ar ar">أحسنت! أتقنت الشرطيات المختلطة</div>
+      <div class="cif-score"><span id="ciFinalScore42"></span> / 25</div>
+      <div class="cif-msg" id="ciFinalMsg42"></div>
+      <div class="cif-ar ar" id="ciFinalAr42"></div>
+      <div class="cif-btns">
+        <button class="cif-btn" onclick="ciReset42()">&#x1F504; Try Again</button>
+        <button class="cif-btn cif-btn-next" onclick="window.location.href='../index.html'">&#x1F3E0; Main Menu</button>
+      </div>
+    </div>
+
+  </div><!-- /ciWrap42 -->
+</div><!-- /tab-checkit -->
+
+</div><!-- /main-content -->
+</div><!-- /layout -->
+
+<script src="../media/global-player.js"></script>
+<script>
+var rqScore42=0,rqAnswered42=0;
+var ciScore42=0,ciAnswered42=0,ciTotal42=25;
+
+function showTab(id,btn){
+  document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.remove('active');});
+  document.querySelectorAll('.main-tab').forEach(function(b){b.classList.remove('active');});
+  document.getElementById('tab-'+id).classList.add('active');
+  btn.classList.add('active');
+}
+function ttsRead(text,rate){
+  speechSynthesis.cancel();
+  var u=new SpeechSynthesisUtterance(text);
+  u.lang='en-US';u.rate=rate||0.9;
+  speechSynthesis.speak(u);
+}
+function rqPick(btn,qid,correct){
+  var qEl=document.getElementById(qid);
+  if(qEl.dataset.done)return;
+  qEl.dataset.done='1';
+  qEl.querySelectorAll('.read-opt').forEach(function(b){b.classList.add('done');if(b===btn)b.classList.add(correct?'correct':'wrong');});
+  if(correct)rqScore42++;
+  rqAnswered42++;
+  if(rqAnswered42===5){
+    var sc=document.getElementById('rqScore42');sc.style.display='block';
+    document.getElementById('rqScoreNum42').textContent=rqScore42+'/5';
+    var msgs=[['Keep practising!','استمر في التدريب!'],['Good effort!','جهد جيد!'],['Getting there!','أنت تتحسن!'],['Well done!','أداء جيد جداً!'],['Great job!','عمل رائع!'],['Perfect!','نتيجة مثالية!']];
+    var m=msgs[Math.min(rqScore42,5)];
+    document.getElementById('rqScoreMsg42').textContent=m[0];
+    document.getElementById('rqScoreAr42').textContent=m[1];
+    sc.scrollIntoView({behavior:'smooth',block:'center'});
+  }
+}
+function rqReset42(){
+  rqScore42=0;rqAnswered42=0;
+  ['rq1','rq2','rq3','rq4','rq5'].forEach(function(id){
+    var q=document.getElementById(id);if(!q)return;
+    delete q.dataset.done;
+    q.querySelectorAll('.read-opt').forEach(function(b){b.classList.remove('correct','wrong','done');});
+  });
+  document.getElementById('rqScore42').style.display='none';
+  document.getElementById('tab-reading').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function ciUpdateProgress42(){
+  var pct=Math.round(ciAnswered42/ciTotal42*100);
+  document.getElementById('ciProgressFill42').style.width=pct+'%';
+  document.getElementById('ciProgressTxt42').textContent=ciAnswered42+' / '+ciTotal42+' answered';
+  document.getElementById('ciScoreTxt42').textContent='Score: '+ciScore42;
+}
+function ciCheckBreakAndDone42(){
+  if(ciAnswered42===10){
+    var bEl=document.getElementById('brk10');
+    if(bEl){bEl.style.display='block';document.getElementById('ciBreakScore42').textContent=ciScore42;}
+  }
+  if(ciAnswered42===ciTotal42)ciShowScore42();
+}
+function ciPick(btn,qid,correct){
+  var qEl=document.getElementById(qid);if(qEl.dataset.done)return;
+  qEl.dataset.done='1';
+  qEl.querySelectorAll('.ci-btn').forEach(function(b){b.classList.add('done');});
+  btn.classList.add(correct?'ci-correct':'ci-wrong');
+  if(correct)ciScore42++;
+  ciAnswered42++;ciUpdateProgress42();ciCheckBreakAndDone42();
+}
+function ciFibCheck(inputId,btnId,qid,solId,answer){
+  var inp=document.getElementById(inputId),btn=document.getElementById(btnId),qEl=document.getElementById(qid);
+  if(qEl.dataset.done)return;
+  var correct=inp.value.trim().toLowerCase()===answer.toLowerCase();
+  qEl.dataset.done='1';inp.disabled=true;btn.disabled=true;
+  inp.style.borderColor=correct?'var(--green)':'var(--red)';
+  inp.style.color=correct?'var(--green)':'var(--red)';
+  var sol=document.getElementById(solId);if(sol)sol.style.display='block';
+  if(correct)ciScore42++;
+  ciAnswered42++;ciUpdateProgress42();ciCheckBreakAndDone42();
+}
+function ciShowScore42(){
+  var el=document.getElementById('ciFinal42');el.style.display='block';
+  document.getElementById('ciFinalScore42').textContent=ciScore42;
+  var pct=Math.round(ciScore42/ciTotal42*100);
+  var msgs=[['Keep studying!','واصل الدراسة!'],['Good start!','بداية جيدة!'],['Well done!','عمل جيد!'],['Great job!','أداء رائع!'],['Excellent!','ممتاز!'],['Perfect!','نتيجة مثالية!']];
+  var idx=Math.floor(pct/20);
+  var m=msgs[Math.min(idx,5)];
+  document.getElementById('ciFinalMsg42').textContent=m[0];
+  document.getElementById('ciFinalAr42').textContent=m[1];
+  localStorage.setItem('up_l42',Math.round(ciScore42/ciTotal42*100));
+  el.scrollIntoView({behavior:'smooth',block:'center'});
+}
+function ciReset42(){
+  ciScore42=0;ciAnswered42=0;
+  document.getElementById('ciFinal42').style.display='none';
+  document.getElementById('brk10').style.display='none';
+  for(var i=1;i<=25;i++){
+    var q=document.getElementById('ciq'+i);if(!q)continue;
+    delete q.dataset.done;
+    q.querySelectorAll('.ci-btn').forEach(function(b){b.classList.remove('ci-correct','ci-wrong','done');});
+    var inp=q.querySelector('.ci-fib-input');
+    if(inp){inp.value='';inp.disabled=false;inp.style.borderColor='';inp.style.color='';}
+    var fbtn=q.querySelector('.ci-fib-btn');if(fbtn)fbtn.disabled=false;
+    var sol=q.querySelector('.ci-fib-solution');if(sol)sol.style.display='none';
+  }
+  ciUpdateProgress42();
+  document.getElementById('tab-checkit').scrollIntoView({behavior:'smooth',block:'start'});
+}
+</script>
+
+
+
+
+
+
+<script>
+(function(){
+  var map={1: "up_l1", 2: "up_l2", 3: "up_l3", 4: "up_l4", 5: "up_l5", 6: "up1", 7: "up2", 8: "up3", 9: "up4", 10: "up6", 11: "up5", 12: "up_l12", 13: "up7", 14: "up8", 15: "up9", 16: "up10", 17: "up11", 19: "up_l19", 20: "up_l20", 21: "up_l21", 22: "up_l22", 23: "up_l23", 24: "up_l24", 25: "up_l25", 26: "up_l26", 27: "up_l27", 28: "up_l28", 29: "up_l29", 30: "up_l30", 31: "up_l31", 32: "up_l32", 33: "up_l33", 34: "up_l34", 35: "up_l35", 36: "up_l36", 37: "up_l37", 38: "up_l38", 39: "up_l39", 40: "up_l40", 41: "up_l41", 42: "up_l42", 43: "up_l43", 44: "up_l44", 45: "up_l45", 46: "up_l46"};
+  for(var lid in map){
+    var f=document.getElementById('sp'+lid);
+    if(f){var v=parseInt(localStorage.getItem(map[lid])||'0',10);f.style.width=v+'%';}
+  }
+  setTimeout(function(){
+    var a=document.querySelector('.su-item.su-active');
+    if(a){var u=a.closest('.sidebar-units');if(u)u.scrollTop=Math.max(0,a.offsetTop-a.offsetHeight);}
+  },80);
+})();
+</script>
+<script>
+function toggleSidebar(){
+  var sb=document.querySelector('.sidebar');
+  var bd=document.getElementById('sbBackdrop');
+  if(!sb||!bd)return;
+  sb.classList.toggle('sb-open');
+  bd.classList.toggle('sb-open');
+  document.body.style.overflow=sb.classList.contains('sb-open')?'hidden':'';
+}
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.su-item').forEach(function(a){
+    a.addEventListener('click',function(){
+      var sb=document.querySelector('.sidebar');
+      if(sb&&sb.classList.contains('sb-open'))toggleSidebar();
+    });
+  });
+});
+</script>
+
+<script>
+(function(){
+  // Disable right-click
+  document.addEventListener('contextmenu', function(e){ e.preventDefault(); });
+
+  // Disable keyboard shortcuts
+  document.addEventListener('keydown', function(e){
+    // F12
+    if(e.key==='F12'){e.preventDefault();return false;}
+    // Ctrl+U (view source), Ctrl+S (save), Ctrl+A (select all), Ctrl+P (print)
+    if(e.ctrlKey && ['u','U','s','S','a','A','p','P'].indexOf(e.key)!==-1){
+      e.preventDefault();return false;
+    }
+    // Ctrl+Shift+I (DevTools), Ctrl+Shift+J, Ctrl+Shift+C
+    if(e.ctrlKey && e.shiftKey && ['i','I','j','J','c','C','k','K'].indexOf(e.key)!==-1){
+      e.preventDefault();return false;
+    }
+  });
+
+  // Disable text selection via CSS
+  document.documentElement.style.webkitUserSelect='none';
+  document.documentElement.style.userSelect='none';
+
+  // Allow selection inside inputs/textareas only
+  document.addEventListener('mousedown', function(e){
+    var t=e.target.tagName;
+    if(t==='INPUT'||t==='TEXTAREA'){
+      e.target.style.userSelect='text';
+      e.target.style.webkitUserSelect='text';
+    }
+  });
+
+  // Block drag
+  document.addEventListener('dragstart', function(e){ e.preventDefault(); });
+})();
+</script>
+<button class="float-menu-btn" onclick="toggleSidebar()" aria-label="القائمة">
+  <span></span><span></span><span></span>
+</button>
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=FREE"></script>
+<script src="../media/rv.js"></script>
+</body>
+</html>

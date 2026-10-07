@@ -1,0 +1,1506 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lesson 34 — Narrative Tenses &amp; Past Perfect</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#1a3a6e;--primary-dark:#0f2548;--accent:#f4a624;--al:rgba(244,166,36,0.12);--bg:#0d1b2a;--card:#162030;--card2:#1e2d40;--border:#2d4560;--text:#e8edf5;--muted:#8899b0;--green:#22c55e;--red:#ef4444;--blue:#4a9eff;--purple:#a855f7}
+body{font-family:'Poppins','Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.ar{font-family:'Cairo','Segoe UI',Arial,sans-serif}
+.topnav{background:var(--primary-dark);border-bottom:2px solid var(--accent);padding:10px 24px;display:flex;align-items:center;justify-content:space-between}
+.hero{background:linear-gradient(135deg,#1a3a6e 0%,#0f2548 55%,#0d1f3c 100%);padding:55px 24px 48px;text-align:center;border-bottom:3px solid var(--accent);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;border-radius:50%;background:rgba(244,166,36,0.06)}
+.hero::after{content:'';position:absolute;bottom:-60px;left:-60px;width:300px;height:300px;border-radius:50%;background:rgba(74,158,255,0.05)}
+.unit-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(244,166,36,0.15);border:1px solid rgba(244,166,36,0.4);color:var(--accent);font-weight:800;padding:6px 18px;border-radius:20px;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
+.hero-title{font-size:clamp(28px,6vw,52px);font-weight:900;color:white;line-height:1.15;margin-bottom:8px}
+.hero-title i{color:var(--accent);font-style:italic}
+.hero-ar{font-size:18px;color:var(--muted);margin-bottom:12px;direction:rtl}
+.hero-sub{color:var(--muted);max-width:620px;margin:0 auto 22px;font-size:14px}
+.hero-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.tag{display:inline-flex;align-items:center;gap:6px;padding:6px 15px;border-radius:16px;font-size:12px;font-weight:700}
+.tag-grammar{background:rgba(244,166,36,0.15);color:var(--accent);border:1px solid rgba(244,166,36,0.3)}
+.tag-other{background:rgba(74,158,255,0.1);color:var(--blue);border:1px solid rgba(74,158,255,0.25)}
+.tag-btn{cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif}
+.tag-btn:hover{transform:translateY(-2px);opacity:.85}
+.main-tabs{display:flex;gap:4px;padding:14px 24px;background:var(--primary-dark);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;flex-wrap:wrap}
+.main-tab{padding:8px 18px;border-radius:8px;border:1px solid transparent;background:none;color:var(--muted);font-weight:700;cursor:pointer;font-size:13px;font-family:'Poppins',sans-serif;transition:all .2s}
+.main-tab.active{background:var(--accent);color:#0d1b2a;border-color:var(--accent)}
+.main-tab:hover:not(.active){background:rgba(244,166,36,.1);color:var(--accent);border-color:rgba(244,166,36,.3)}
+.tab-panel{display:none;padding:20px 24px}
+.tab-panel.active{display:block}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;margin-bottom:16px}
+.card-title{font-size:16px;font-weight:800;color:white;margin-bottom:5px;display:flex;align-items:center;gap:8px}
+.card-ar{font-size:13px;color:var(--muted);margin-bottom:14px;direction:rtl;font-family:'Cairo',sans-serif}
+.card-note{background:var(--al);border:1px solid rgba(244,166,36,.3);border-radius:10px;padding:10px 14px;font-size:12.5px;color:var(--accent);margin:10px 0;direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.sub-tabs{display:flex;gap:4px;margin:14px 0 18px;flex-wrap:wrap}
+.sub-tab{padding:6px 14px;border-radius:8px;border:1px solid var(--border);background:none;color:var(--muted);font-weight:700;cursor:pointer;font-size:12px;font-family:'Poppins',sans-serif;transition:all .2s}
+.sub-tab.active{background:rgba(244,166,36,.15);border-color:var(--accent);color:var(--accent)}
+.sub-tab:hover:not(.active){border-color:var(--accent);color:var(--accent)}
+.sub-panel{display:none}
+.sub-panel.active{display:block}
+.tts-box{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.tts-btn{background:var(--card2);border:1px solid var(--blue);color:var(--blue);padding:7px 16px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif}
+.tts-btn:hover{background:rgba(74,158,255,.15);transform:translateY(-1px)}
+.tts-stop{border-color:var(--muted);color:var(--muted)}
+.tts-stop:hover{background:rgba(136,153,176,.1)}
+.formula-box{background:rgba(10,30,53,0.8);border:2px solid var(--border);border-radius:14px;padding:18px 22px;margin:14px 0}
+.formula-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid rgba(45,69,96,0.4);flex-wrap:wrap}
+.formula-row:last-child{border-bottom:none}
+.formula-subj{font-size:14px;font-weight:800;color:var(--blue);min-width:160px}
+.formula-be{font-size:15px;font-weight:900;color:var(--accent);background:rgba(244,166,36,.12);padding:4px 12px;border-radius:8px}
+.formula-be.neg{color:var(--red);background:rgba(239,68,68,.1)}
+.formula-be.q{color:var(--green);background:rgba(34,197,94,.1)}
+.formula-note{font-size:11px;color:var(--muted);font-style:italic;margin-left:auto}
+.formula-plus{font-size:16px;color:var(--muted)}
+.ex-section-title{font-size:12px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin:16px 0 8px}
+.ex-list{margin-top:4px}
+.ex-item{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid rgba(45,69,96,0.3)}
+.ex-item:last-child{border-bottom:none}
+.sp{background:none;border:none;font-size:16px;cursor:pointer;color:var(--blue);flex-shrink:0;padding:2px 0;transition:transform .2s;line-height:1}
+.sp:hover{transform:scale(1.2)}
+.sp-group{display:inline-flex;align-items:center;gap:3px;flex-shrink:0}
+.sp-pp,.sp-st{background:var(--card2);border:1px solid var(--border);color:var(--muted);font-size:12px;padding:3px 7px;border-radius:6px;cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif;line-height:1;min-width:26px;text-align:center}
+.sp-pp:hover{background:rgba(74,158,255,.15);border-color:var(--blue);color:var(--blue)}
+.sp-st:hover{background:rgba(239,68,68,.1);border-color:var(--red);color:var(--red)}
+.ex-en{font-size:13.5px;color:var(--text);font-weight:600;line-height:1.4}
+.ex-en b{color:var(--accent)}
+.ex-ar{font-size:12px;color:var(--muted);margin-top:2px;direction:rtl;font-family:'Cairo',sans-serif}
+.sa-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13px}
+.sa-table th{background:rgba(26,58,110,0.5);color:var(--accent);padding:8px 12px;font-weight:800;text-align:left;border:1px solid var(--border)}
+.sa-table td{padding:8px 12px;border:1px solid rgba(45,69,96,0.4);vertical-align:middle}
+.sa-table tr:nth-child(even) td{background:rgba(30,45,64,0.3)}
+.sa-yes{color:var(--green);font-weight:800}
+.sa-no{color:var(--red);font-weight:800}
+.wh-grid{display:flex;flex-direction:column;gap:7px;margin:12px 0}
+.wh-row{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px;font-size:13px}
+.wh-q{color:var(--text);margin-bottom:3px}
+.wh-q b{color:var(--blue)}
+.wh-a{color:var(--muted);font-style:italic}
+.time-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;margin:12px 0}
+.time-item{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px}
+.time-en{font-size:13px;font-weight:700;color:var(--accent)}
+.time-ar{font-size:11px;color:var(--muted);margin-top:3px;direction:rtl;font-family:'Cairo',sans-serif}
+.time-eg{font-size:11px;color:var(--text);margin-top:4px;font-style:italic}
+.mistake-item{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.m-wrong{font-size:13px;color:var(--red);margin-bottom:3px}
+.m-wrong::before{content:'❌ '}
+.m-right{font-size:13px;color:var(--green);font-weight:700;margin-bottom:3px}
+.m-right::before{content:'✅ '}
+.m-why{font-size:11.5px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;border-top:1px solid rgba(45,69,96,.4);padding-top:5px;margin-top:5px}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:8px;margin-top:12px}
+.vocab-item{background:var(--card2);border:1px solid var(--border);border-radius:9px;padding:9px 12px;cursor:pointer;transition:border-color .2s}
+.vocab-item:hover{border-color:var(--accent)}
+.vocab-en{font-size:14px;font-weight:800;color:var(--text)}
+.vocab-past{font-size:11.5px;color:var(--accent);margin-top:2px;font-weight:700}
+.vocab-ar{font-size:11px;color:var(--muted);margin-top:3px;font-family:'Cairo',sans-serif;direction:rtl}
+.vs-wrap{overflow-x:auto;margin:18px 0;padding:4px 0}
+.vs-caption{font-size:11px;color:var(--muted);text-align:center;margin-top:8px;font-style:italic}
+.dlg-card{background:var(--card);border:1px solid var(--border);border-radius:16px;margin-bottom:16px;overflow:hidden}
+.dlg-header{background:linear-gradient(to right,var(--primary),#1a1a4e);padding:13px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.dlg-meta{flex:1}
+.dlg-num{font-size:10px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:2px}
+.dlg-title{font-weight:800;font-size:14px;color:white}
+.dlg-ctx{font-size:11px;color:rgba(255,255,255,.5);font-style:italic;margin-top:2px}
+.dlg-tts{background:rgba(244,166,36,.15);border:1px solid rgba(244,166,36,.4);color:var(--accent);padding:6px 14px;border-radius:8px;font-size:11px;font-weight:700;cursor:pointer;font-family:'Poppins',sans-serif;transition:all .2s;white-space:nowrap}
+.dlg-tts:hover{background:rgba(244,166,36,.3)}
+.dlg-body{padding:20px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:640px){.dlg-body{grid-template-columns:1fr}}
+.dlg-col-head{font-size:10px;font-weight:700;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+.bubble{padding:9px 13px;border-radius:12px;font-size:13px;line-height:1.55;margin-bottom:7px}
+.bubble-a{background:rgba(26,58,110,0.5);border:1px solid rgba(74,158,255,0.2)}
+.bubble-b{background:var(--card2);border:1px solid var(--border)}
+.bubble-name{font-size:9px;font-weight:800;color:var(--muted);margin-bottom:4px;letter-spacing:.5px;text-transform:uppercase}
+.bubble-name.b{color:var(--accent)}
+.bubble-ar{direction:rtl;font-family:'Cairo',sans-serif;font-size:13px;color:var(--text)}
+.layout{display:flex;min-height:100vh}
+.sidebar{width:30%;max-width:320px;min-width:220px;position:fixed;top:0;left:0;bottom:0;background:var(--primary-dark);border-right:2px solid var(--border);display:flex;flex-direction:column;z-index:200;overflow:hidden}
+.sidebar-header{padding:18px 20px 14px;border-bottom:2px solid var(--accent);flex-shrink:0}
+.sidebar-logo{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+.sidebar-logo-icon{width:34px;height:34px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900;color:#0d1b2a;flex-shrink:0}
+.sidebar-logo-text{font-family:'Cairo',sans-serif;font-size:15px;font-weight:800;color:white}
+.sidebar-logo-sub{font-size:10px;color:var(--muted);font-weight:500;margin-top:-1px}
+.sidebar-label{font-family:'Cairo',sans-serif;font-size:11px;font-weight:700;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-top:12px}
+.sidebar-units{flex:1;overflow-y:auto;padding:10px 12px;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+.sidebar-units::-webkit-scrollbar{width:4px}
+.sidebar-units::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+.su-item{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;text-decoration:none;margin-bottom:4px;transition:background .2s,transform .2s}
+.su-item:not(.su-locked):hover{background:rgba(244,166,36,0.12);transform:translateX(3px)}
+.su-item.su-locked{opacity:.45;cursor:default;pointer-events:none}
+.su-item.su-active{background:rgba(244,166,36,0.15);border:1px solid rgba(244,166,36,0.3)}
+.su-num{width:28px;height:28px;border-radius:7px;background:rgba(255,255,255,0.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:var(--accent);flex-shrink:0}
+.su-item:not(.su-locked) .su-num{background:rgba(244,166,36,0.12);border-color:rgba(244,166,36,0.3)}
+.su-texts{flex:1;min-width:0}
+.su-en{font-size:13px;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.su-ar{font-family:'Cairo',sans-serif;font-size:11px;color:var(--muted);direction:rtl;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.su-check{font-size:12px;flex-shrink:0}
+.su-lock{font-size:11px;color:var(--muted);flex-shrink:0}
+.main-content{margin-left:min(30%,320px);flex:1;min-width:0}
+footer{padding:20px 24px;text-align:center;color:var(--muted);font-size:12px;border-top:1px solid var(--border);margin-top:10px}
+
+/* ══ Hamburger (desktop: hidden) ══ */
+.nav-hamburger{display:none;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.3);border-radius:8px;cursor:pointer;flex-direction:column;gap:5px;padding:8px;flex-shrink:0;margin-left:6px}
+.nav-hamburger span{display:block;width:100%;height:2px;background:var(--accent);border-radius:2px}
+/* Backdrop */
+.sb-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:199}
+.sb-backdrop.sb-open{display:block}
+@media(max-width:768px){
+  .sidebar{position:fixed;left:-100%;width:82%;max-width:300px;min-width:unset;transition:left .3s ease;z-index:200}
+  .sidebar.sb-open{left:0}
+  .main-content{margin-left:0}
+  .nav-brand{display:none}
+  .nav-hamburger{display:flex}
+  .topnav{padding:10px 12px;gap:6px}
+  .nav-lesson-name{display:none}
+  .nav-left{gap:5px}
+  .hero{padding:22px 13px 20px}
+  .hero-title{font-size:22px;letter-spacing:-.5px}
+  .hero-ar{font-size:12px}
+  .hero-sub{font-size:12px}
+  .hero-tags{gap:5px;justify-content:center}
+  .tag{font-size:10px;padding:3px 9px}
+  .rule-section{padding:0 12px}
+  .read-wrap{padding:0 12px}
+  .ci-wrap{padding:12px 12px}
+  .ci-hero{padding:18px 12px}
+  .dlg-block{padding:0 12px}
+  .eu-cat-grid{grid-template-columns:1fr}
+  .nu-scale{gap:3px}
+  .nu-word{font-size:10px;padding:3px 7px}
+  .nu-cmp-head,.nu-cmp-row{grid-template-columns:1fr 1fr;font-size:10px}
+  .nu-cmp-head span:last-child,.nu-cmp-row span:last-child{display:none}
+  .reg-ladder{padding:10px 12px}
+  .cmp-table{font-size:11px}
+  .chat-wrap{padding:0 4px}
+  .ci-q{margin-bottom:10px}
+  .ci-opts{gap:5px}
+  .ci-btn{font-size:12px;padding:9px 10px}
+  .vocab-grid{grid-template-columns:1fr 1fr}
+  .rq-opts{gap:5px}
+}
+
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+/* some/any pill styles */
+.pill-wrap{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.pill{padding:5px 14px;border-radius:20px;font-size:12.5px;font-weight:800}
+.pill-green{background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.35);color:var(--green)}
+.pill-blue{background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.3);color:var(--blue)}
+.pill-red{background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3);color:var(--red)}
+/* Reading */
+.read-tts-bar{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;align-items:center}
+.read-label{font-size:12px;font-weight:700;color:var(--muted)}
+.read-pass{background:var(--card2);border:1px solid var(--border);border-radius:14px;padding:22px;font-size:14px;line-height:1.9;margin-bottom:24px}
+.read-pass p{margin-bottom:12px}
+.read-pass p:last-child{margin-bottom:0}
+.read-pass b{color:var(--accent);font-weight:700}
+.comp-section-title{font-size:14px;font-weight:800;color:var(--accent);margin-bottom:14px;text-transform:uppercase;letter-spacing:1px}
+.read-q{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:12px}
+.read-q-text{font-weight:700;font-size:14px;margin-bottom:12px;color:var(--text);line-height:1.4}
+.read-opts{display:flex;flex-direction:column;gap:7px}
+.read-opt{background:var(--card2);border:1px solid var(--border);color:var(--text);padding:9px 14px;border-radius:8px;font-size:13px;cursor:pointer;text-align:left;font-family:'Poppins',sans-serif;transition:all .2s;display:flex;align-items:center;gap:8px}
+.read-opt:hover:not(.done){background:rgba(244,166,36,.06);border-color:rgba(244,166,36,.35);transform:translateY(-1px)}
+.read-opt.correct{background:rgba(34,197,94,.12);border-color:var(--green);color:var(--green)}
+.read-opt.wrong{background:rgba(239,68,68,.12);border-color:var(--red);color:var(--red)}
+.read-opt.done{cursor:default;transform:none!important}
+.read-ctx{background:linear-gradient(135deg,rgba(26,58,110,.55),rgba(15,37,72,.55));border:1px solid rgba(244,166,36,.22);border-radius:14px;padding:16px 22px;margin-bottom:20px;display:flex;flex-wrap:wrap;gap:20px;align-items:center}
+.read-ctx-fact{display:flex;flex-direction:column;gap:2px}
+.read-ctx-label{font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+.read-ctx-val{font-size:13.5px;font-weight:800;color:var(--text)}
+.read-ctx-sep{width:1px;background:var(--border);align-self:stretch}
+.read-vocab-wrap{margin:18px 0}
+.read-vocab-title{font-size:11px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.read-vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:7px}
+.read-vocab-item{background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:8px 12px}
+.read-vocab-en{font-size:13px;font-weight:700;color:var(--accent)}
+.read-vocab-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-top:2px}
+/* Check It */
+.ci-hero{background:linear-gradient(135deg,#12285a 0%,#1a1242 60%,#0d1b2a 100%);padding:36px 24px 30px;text-align:center;border-bottom:2px solid var(--accent)}
+.ci-hero-icon{font-size:38px;margin-bottom:10px}
+.ci-hero-title{font-size:clamp(22px,5vw,36px);font-weight:900;color:white;margin-bottom:6px}
+.ci-hero-sub{color:var(--muted);font-size:13px;max-width:460px;margin:0 auto}
+.ci-hero-types{display:flex;gap:10px;justify-content:center;margin-top:14px;flex-wrap:wrap}
+.ci-progress-wrap{background:var(--primary-dark);padding:10px 24px;border-bottom:1px solid var(--border);position:sticky;top:52px;z-index:99}
+.ci-progress-inner{max-width:760px;margin:0 auto}
+.ci-progress-bar{background:rgba(255,255,255,.07);border-radius:20px;height:7px;overflow:hidden;margin-bottom:5px}
+.ci-progress-fill{background:linear-gradient(90deg,var(--accent),var(--blue));height:100%;border-radius:20px;transition:width .4s ease;width:0%}
+.ci-progress-txt{font-size:11px;color:var(--muted);font-weight:700;display:flex;justify-content:space-between}
+.ci-wrap{max-width:100%;padding:12px 16px}
+.ci-q{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px 14px;margin-bottom:7px;transition:border-color .2s;border-left:3px solid rgba(244,166,36,.4)}
+.ci-q.ci-fib-q{border-left-color:rgba(74,158,255,.5)}
+.ci-q-head{display:flex;align-items:center;gap:6px;margin-bottom:9px;flex-wrap:nowrap}
+.ci-q-num{width:22px;height:22px;border-radius:50%;background:rgba(244,166,36,.18);border:1.5px solid rgba(244,166,36,.4);color:var(--accent);font-size:10px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ci-fib-q .ci-q-num{background:rgba(74,158,255,.15);border-color:rgba(74,158,255,.4);color:var(--blue)}
+.ci-q-tag{background:rgba(244,166,36,.08);border:1px solid rgba(244,166,36,.18);color:var(--accent);font-size:9px;font-weight:800;padding:2px 8px;border-radius:8px;text-transform:uppercase;letter-spacing:.4px;white-space:nowrap}
+.ci-type-badge{font-size:9px;font-weight:800;padding:2px 8px;border-radius:8px;text-transform:uppercase;letter-spacing:.4px;margin-left:auto;flex-shrink:0}
+.ci-type-mcq{background:rgba(244,166,36,.12);border:1px solid rgba(244,166,36,.25);color:var(--accent)}
+.ci-type-fib{background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.25);color:var(--blue)}
+.ci-q-prompt{font-size:12px;color:var(--muted);font-style:italic;margin-bottom:8px;padding:5px 10px;background:rgba(255,255,255,.03);border-left:2px solid var(--border);border-radius:0 6px 6px 0}
+.ci-opts{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.ci-btn{background:var(--card2);border:1.5px solid var(--border);color:var(--text);padding:9px 12px;border-radius:9px;font-size:12.5px;cursor:pointer;text-align:left;font-family:'Poppins',sans-serif;transition:all .2s;display:flex;align-items:center;gap:9px;line-height:1.35;width:100%}
+.ci-btn:hover:not(.done){background:rgba(244,166,36,.07);border-color:rgba(244,166,36,.45);transform:translateY(-2px)}
+.ci-btn.ci-correct{background:rgba(34,197,94,.1);border-color:var(--green);color:var(--green)}
+.ci-btn.ci-wrong{background:rgba(239,68,68,.1);border-color:var(--red);color:var(--red)}
+.ci-lbl{font-size:11px;font-weight:900;background:rgba(255,255,255,.09);border-radius:5px;padding:2px 7px;flex-shrink:0;min-width:22px;text-align:center}
+.ci-btn.ci-correct .ci-lbl{background:rgba(34,197,94,.2);color:var(--green)}
+.ci-btn.ci-wrong .ci-lbl{background:rgba(239,68,68,.2);color:var(--red)}
+.ci-fib-sent{font-size:13.5px;color:var(--text);font-weight:600;line-height:1.7;margin-bottom:9px}
+.ci-fib-sent b{color:var(--accent)}
+.ci-fib-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:4px}
+.ci-fib-input{background:var(--card2);border:2px solid var(--border);color:var(--text);padding:7px 13px;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;outline:none;min-width:160px;max-width:260px;transition:border-color .2s}
+.ci-fib-input:focus{border-color:var(--accent);background:rgba(244,166,36,.04)}
+.ci-fib-check{background:var(--accent);border:none;color:#0d1b2a;padding:7px 18px;border-radius:8px;font-weight:800;cursor:pointer;font-size:12px;font-family:'Poppins',sans-serif;transition:all .2s;flex-shrink:0}
+.ci-fib-check:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 4px 12px rgba(244,166,36,.3)}
+.ci-fib-check:disabled{opacity:.35;cursor:default;transform:none!important}
+.ci-hint{font-size:10.5px;color:var(--muted);font-style:italic;margin-top:3px}
+.ci-sol{display:none;margin-top:9px;border-radius:9px;overflow:hidden;animation:fadeIn .3s ease}
+.ci-sol-head{padding:7px 12px;font-size:11.5px;font-weight:800;border-bottom:1px solid rgba(255,255,255,.05)}
+.ci-sol-body{padding:8px 12px;display:flex;flex-direction:column;gap:4px}
+.ci-sol-ans{font-size:12.5px;font-weight:700;color:var(--accent)}
+.ci-sol-exp{font-size:11.5px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.ci-brk{display:none;background:linear-gradient(135deg,#12285a,#1a1242);border:2px solid var(--accent);border-radius:20px;padding:28px 24px;margin:16px 0;text-align:center;animation:fadeIn .5s ease;position:relative;overflow:hidden}
+.ci-brk::before{content:'';position:absolute;top:-50px;right:-50px;width:200px;height:200px;border-radius:50%;background:rgba(244,166,36,.07);pointer-events:none}
+.ci-brk-emoji{font-size:44px;margin-bottom:10px}
+.ci-brk-title{font-size:17px;font-weight:900;color:var(--accent);margin-bottom:16px}
+.ci-brk-cols{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:580px;margin:0 auto;text-align:left}
+@media(max-width:580px){.ci-brk-cols{grid-template-columns:1fr}}
+.ci-brk-col{background:rgba(255,255,255,.04);border:1px solid rgba(244,166,36,.2);border-radius:12px;padding:14px 16px}
+.ci-brk-col-title{font-size:10px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid rgba(244,166,36,.2)}
+.ci-brk-text{font-size:13px;color:var(--text);line-height:1.75}
+.ci-brk-text b{color:var(--accent)}
+.ci-brk-ar{font-size:12px;color:var(--muted);margin-top:14px;direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.ci-score{display:none;background:linear-gradient(135deg,#0f2548,#1a1242);border:2px solid var(--accent);border-radius:24px;padding:44px 32px;text-align:center;margin-top:24px;position:relative;overflow:hidden;animation:fadeIn .6s ease}
+.ci-score::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,rgba(244,166,36,.07) 0%,transparent 65%);pointer-events:none}
+.ci-score-emoji{font-size:60px;margin-bottom:14px}
+.ci-score-num{font-size:68px;font-weight:900;color:var(--accent);line-height:1;margin-bottom:4px}
+.ci-score-of{font-size:18px;color:var(--muted);margin-bottom:18px}
+.ci-score-bar-wrap{background:rgba(255,255,255,.06);border-radius:20px;height:10px;max-width:320px;margin:0 auto 24px;overflow:hidden}
+.ci-score-bar-fill{height:100%;border-radius:20px;background:linear-gradient(90deg,var(--accent),var(--green));transition:width 1.2s ease;width:0%}
+.ci-score-msg{font-size:18px;font-weight:900;color:white;margin-bottom:6px}
+.ci-score-ar{font-size:14px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;margin-bottom:24px;line-height:1.6}
+.ci-reset{background:var(--accent);border:none;color:#0d1b2a;padding:13px 32px;border-radius:12px;font-weight:900;cursor:pointer;font-family:'Poppins',sans-serif;font-size:14px;transition:all .25s;letter-spacing:.5px}
+.ci-reset:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(244,166,36,.35)}
+.chat-wrap{padding:18px 24px 26px;display:flex;flex-direction:column;gap:14px;background-image:radial-gradient(circle,rgba(244,166,36,0.22) 1.5px,transparent 1.5px),radial-gradient(circle,rgba(74,158,255,0.22) 1.5px,transparent 1.5px);background-size:28px 28px;background-position:0 0,14px 14px}
+.chat-msg{display:flex;flex-direction:column;max-width:70%}
+.chat-msg.right{align-self:flex-end;align-items:flex-end}
+.chat-msg.left{align-self:flex-start;align-items:flex-start}
+.chat-name-tag{font-size:11px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;margin-bottom:5px;padding:0 4px}
+.chat-msg.right .chat-name-tag{color:var(--accent)}
+.chat-msg.left .chat-name-tag{color:var(--blue)}
+.chat-bubble{padding:14px 17px 10px;border-radius:20px;width:100%}
+.chat-msg.right .chat-bubble{background:rgba(55,36,6,0.75);border:1px solid rgba(244,166,36,0.4);border-bottom-right-radius:4px;box-shadow:0 6px 28px rgba(0,0,0,0.65),0 0 18px rgba(244,166,36,0.22)}
+.chat-msg.left .chat-bubble{background:rgba(12,32,72,0.8);border:1px solid rgba(74,158,255,0.35);border-bottom-left-radius:4px;box-shadow:0 6px 28px rgba(0,0,0,0.65),0 0 18px rgba(74,158,255,0.20)}
+.chat-en{font-size:15px;color:var(--text);line-height:1.65;font-weight:500}
+.chat-en b{color:var(--accent)}
+.chat-msg.left .chat-en b{color:var(--blue)}
+.chat-ar{font-size:14px;color:rgba(232,237,245,0.8);direction:rtl;font-family:'Cairo',sans-serif;line-height:1.75;border-top:1px solid rgba(255,255,255,0.09);padding-top:9px;margin-top:9px}
+.chat-bubble-foot{display:flex;justify-content:flex-end;margin-top:9px;padding-top:7px;border-top:1px solid rgba(255,255,255,0.07)}
+.chat-sp-btn{font-size:14px;cursor:pointer;padding:5px 13px;border-radius:20px;transition:all .2s;line-height:1;font-weight:700;letter-spacing:.3px}
+.chat-msg.right .chat-sp-btn{background:rgba(244,166,36,0.18);border:1px solid rgba(244,166,36,0.45);color:var(--accent)}
+.chat-msg.left .chat-sp-btn{background:rgba(74,158,255,0.15);border:1px solid rgba(74,158,255,0.4);color:var(--blue)}
+.chat-sp-btn:hover{transform:scale(1.08);filter:brightness(1.25)}
+.su-prog{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:6px;overflow:hidden}
+.su-prog-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:2px;width:0%;transition:width .6s ease}
+
+.su-level-hd{padding:8px 12px 5px;margin-top:8px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(255,255,255,.05)}
+.su-level-code{font-size:11px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;padding:2px 8px;border-radius:5px;display:inline-block}
+.su-level-name{font-family:'Cairo',sans-serif;font-size:12px;font-weight:700;color:#f4c430;direction:rtl;margin:0;line-height:1}
+.lvl-a1{background:rgba(52,211,153,.15);color:#34d399;border:1px solid rgba(52,211,153,.35)}
+.lvl-a2{background:rgba(74,158,255,.15);color:#4a9eff;border:1px solid rgba(74,158,255,.35)}
+.lvl-b1{background:rgba(245,158,11,.15);color:#f59e0b;border:1px solid rgba(245,158,11,.35)}
+.lvl-b2{background:rgba(244,166,36,.15);color:var(--accent);border:1px solid rgba(244,166,36,.35)}
+.lvl-b2p{background:rgba(251,146,60,.15);color:#fb923c;border:1px solid rgba(251,146,60,.35)}
+.lvl-c1{background:rgba(168,85,247,.15);color:#a855f7;border:1px solid rgba(168,85,247,.35)}
+.su-coming{opacity:.28;cursor:default;pointer-events:none}
+.su-prog{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:6px;overflow:hidden}
+.su-prog-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:2px;width:0%;transition:width .6s ease}
+
+/* Lesson 1 specific styles */
+.alpha-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(68px,1fr));gap:8px;margin:18px 0}
+.alpha-card{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:12px 8px;text-align:center;cursor:pointer;transition:all .22s;position:relative}
+.alpha-card:hover{transform:translateY(-3px);border-color:var(--accent);background:rgba(244,166,36,.08)}
+.alpha-card.vowel{border-color:rgba(244,166,36,.5);background:rgba(244,166,36,.07)}
+.alpha-card.vowel:hover{background:rgba(244,166,36,.15)}
+.alpha-up{font-size:22px;font-weight:900;color:var(--text);line-height:1}
+.alpha-lo{font-size:14px;color:var(--muted);margin:2px 0}
+.alpha-ar{font-size:10px;color:var(--accent);font-family:'Cairo',sans-serif;margin-top:4px}
+.alpha-card.vowel .alpha-up{color:var(--accent)}
+.vowel-badge{display:inline-block;background:rgba(244,166,36,.15);border:1px solid rgba(244,166,36,.4);color:var(--accent);font-size:10px;font-weight:800;padding:2px 8px;border-radius:10px;margin-right:4px}
+.cons-badge{display:inline-block;background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.3);color:var(--blue);font-size:10px;font-weight:800;padding:2px 8px;border-radius:10px;margin-right:4px}
+.num-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:9px;margin:14px 0}
+.num-card{background:var(--card2);border:1px solid var(--border);border-radius:11px;padding:12px 14px;cursor:pointer;transition:all .2s}
+.num-card:hover{transform:translateY(-2px);border-color:var(--blue)}
+.num-digit{font-size:22px;font-weight:900;color:var(--blue);line-height:1}
+.num-word{font-size:13px;font-weight:700;color:var(--text);margin-top:3px}
+.num-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-top:3px}
+.num-grid-sm{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:8px;margin:14px 0}
+.num-sm{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:9px 12px;cursor:pointer;transition:all .2s}
+.num-sm:hover{border-color:var(--blue);transform:translateY(-2px)}
+.num-sm .num-digit{font-size:17px}
+.num-sm .num-word{font-size:12px}
+.ord-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin:14px 0}
+.ord-card{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px;cursor:pointer;transition:all .2s}
+.ord-card:hover{border-color:var(--purple);transform:translateY(-2px)}
+.ord-num{font-size:18px;font-weight:900;color:var(--purple);line-height:1}
+.ord-word{font-size:12.5px;font-weight:700;color:var(--text);margin-top:3px}
+.ord-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-top:3px}
+.rule-box{background:linear-gradient(135deg,rgba(168,85,247,.12),rgba(74,158,255,.08));border:1px solid rgba(168,85,247,.3);border-radius:14px;padding:16px 20px;margin:14px 0}
+.rule-title{font-size:12px;font-weight:800;color:#a855f7;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.rule-body{font-size:13px;color:var(--text);line-height:1.75}
+.rule-body b{color:#a855f7}
+.rule-body .eg{color:var(--accent);font-style:italic}
+
+
+
+.nav-home-btn{display:inline-flex;align-items:center;gap:6px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.4);color:var(--accent);font-size:12px;font-weight:800;padding:5px 13px;border-radius:8px;text-decoration:none;transition:all .2s;white-space:nowrap;flex-shrink:0}
+.nav-home-btn:hover{background:rgba(244,166,36,.25);transform:translateY(-2px)}
+.nav-lesson-badge{background:var(--accent);color:#0a1628;font-size:12px;font-weight:900;padding:5px 13px;border-radius:7px;white-space:nowrap;letter-spacing:.3px;flex-shrink:0}
+.nav-lesson-name{font-size:13px;color:rgba(232,237,245,.7);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-sep{color:rgba(136,153,176,.5);font-size:13px;flex-shrink:0}
+.nav-left{display:flex;align-items:center;gap:8px;flex:1;min-width:0}
+.nav-right{display:flex;align-items:center;flex-shrink:0}
+
+/* ── Reading bold highlight ── */
+.read-body b{color:var(--accent)}
+.read-body p b{color:var(--accent)}
+
+/* ── FIB label fix ── */
+.ci-fib-lbl{font-size:11px;font-weight:800;color:var(--accent);letter-spacing:1px;text-transform:uppercase;margin:4px 0 8px 0;opacity:.85}
+
+/* ══ Lesson 34 — Narrative Tenses & Past Perfect ══ */
+
+/* Three-tense overview cards */
+.nt-trio{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin:14px 0}
+@media(max-width:640px){.nt-trio{grid-template-columns:1fr}}
+.nt-card{border-radius:13px;padding:13px 14px;cursor:pointer;transition:transform .15s}
+.nt-card:hover{transform:translateY(-3px)}
+.nt-card.nt-pp{background:rgba(168,85,247,.08);border:2px solid rgba(168,85,247,.4)}
+.nt-card.nt-pc{background:rgba(74,158,255,.08);border:2px solid rgba(74,158,255,.4)}
+.nt-card.nt-ps{background:rgba(34,197,94,.08);border:2px solid rgba(34,197,94,.4)}
+.nt-role{font-size:10px;font-weight:900;letter-spacing:.6px;text-transform:uppercase;margin-bottom:4px}
+.nt-pp .nt-role{color:#a855f7}
+.nt-pc .nt-role{color:var(--blue)}
+.nt-ps .nt-role{color:var(--green)}
+.nt-name{font-size:14px;font-weight:900;margin-bottom:3px}
+.nt-pp .nt-name{color:#a855f7}
+.nt-pc .nt-name{color:var(--blue)}
+.nt-ps .nt-name{color:var(--green)}
+.nt-name-ar{font-family:'Cairo',sans-serif;font-size:11px;direction:rtl;margin-bottom:6px;opacity:.75}
+.nt-form{font-size:11px;font-weight:800;padding:3px 8px;border-radius:6px;display:inline-block;margin-bottom:6px}
+.nt-pp .nt-form{background:rgba(168,85,247,.15);color:#a855f7}
+.nt-pc .nt-form{background:rgba(74,158,255,.15);color:var(--blue)}
+.nt-ps .nt-form{background:rgba(34,197,94,.15);color:var(--green)}
+.nt-use{font-size:11px;color:var(--text);margin-bottom:5px;line-height:1.5}
+.nt-ex{font-size:11px;color:var(--muted);font-style:italic;line-height:1.5}
+
+/* Visual timeline */
+.timeline-wrap{margin:14px 0;background:var(--card2);border-radius:13px;padding:14px 16px}
+.timeline-title{font-size:11px;font-weight:900;color:var(--accent);letter-spacing:.5px;text-transform:uppercase;margin-bottom:12px}
+.timeline-line{position:relative;height:4px;background:rgba(255,255,255,.1);border-radius:2px;margin:24px 0 56px}
+.timeline-line::before{content:'PAST';position:absolute;left:0;top:-18px;font-size:9px;font-weight:900;color:var(--muted);letter-spacing:.5px}
+.timeline-line::after{content:'NOW';position:absolute;right:0;top:-18px;font-size:9px;font-weight:900;color:var(--muted);letter-spacing:.5px}
+.tl-dot{position:absolute;top:50%;transform:translate(-50%,-50%);width:13px;height:13px;border-radius:50%;border:2px solid var(--bg)}
+.tl-dot.pp-dot{left:18%;background:#a855f7}
+.tl-dot.pc-dot{left:48%;background:var(--blue)}
+.tl-dot.ps-dot{left:68%;background:var(--green)}
+.tl-label{position:absolute;top:18px;font-size:9px;font-weight:900;text-align:center;transform:translateX(-50%);white-space:nowrap}
+.tl-dot.pp-dot + .tl-label{color:#a855f7;left:18%}
+.tl-dot.pc-dot + .tl-label{color:var(--blue);left:48%}
+.tl-dot.ps-dot + .tl-label{color:var(--green);left:68%}
+.timeline-story{font-size:12px;color:var(--text);line-height:1.8;margin-top:10px}
+.timeline-story .pp{color:#a855f7;font-weight:700}
+.timeline-story .pc{color:var(--blue);font-weight:700}
+.timeline-story .ps{color:var(--green);font-weight:700}
+.tl-legend{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+.tl-leg{display:flex;align-items:center;gap:5px;font-size:10px;font-weight:700}
+.tl-leg-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
+.tl-leg-dot.d-pp{background:#a855f7}
+.tl-leg-dot.d-pc{background:var(--blue)}
+.tl-leg-dot.d-ps{background:var(--green)}
+.tl-leg.l-pp{color:#a855f7}
+.tl-leg.l-pc{color:var(--blue)}
+.tl-leg.l-ps{color:var(--green)}
+
+/* Past Perfect formation */
+.pp-form-box{background:rgba(168,85,247,.07);border:2px solid rgba(168,85,247,.35);border-radius:13px;padding:14px 16px;margin:14px 0}
+.pp-form-title{font-size:12px;font-weight:900;color:#a855f7;letter-spacing:.5px;text-transform:uppercase;margin-bottom:10px}
+.pp-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:520px){.pp-form-grid{grid-template-columns:1fr}}
+.pp-form-cell{background:rgba(168,85,247,.06);border-radius:9px;padding:10px 12px}
+.pp-cell-label{font-size:10px;font-weight:900;color:#a855f7;letter-spacing:.4px;text-transform:uppercase;margin-bottom:5px}
+.pp-cell-formula{font-size:12px;font-weight:800;color:var(--text);margin-bottom:4px}
+.pp-cell-ex{font-size:11px;color:var(--muted);font-style:italic}
+
+/* Comparison table: PS vs PP */
+.cmp-table{width:100%;border-collapse:collapse;margin:12px 0;font-size:12px}
+.cmp-table th{padding:10px 12px;text-align:left;font-size:11px;font-weight:900;letter-spacing:.5px;text-transform:uppercase}
+.cmp-table th.th-sit{color:var(--muted);background:rgba(255,255,255,.04);width:22%}
+.cmp-table th.th-ps{color:var(--green);background:rgba(34,197,94,.06)}
+.cmp-table th.th-pp{color:#a855f7;background:rgba(168,85,247,.06)}
+.cmp-table td{padding:9px 12px;border-top:1px solid var(--border);vertical-align:top;line-height:1.6;font-size:11px}
+.cmp-table td:first-child{font-size:10px;color:var(--muted);background:rgba(255,255,255,.02);font-weight:700}
+.cmp-table .td-ps{color:rgba(34,197,94,.9)}
+.cmp-table .td-pp{color:rgba(168,85,247,.9)}
+.cmp-table tr:hover td{background:rgba(255,255,255,.03)}
+
+/* Past Continuous spotlight */
+.pc-box{background:rgba(74,158,255,.07);border:2px solid rgba(74,158,255,.3);border-radius:12px;padding:14px 16px;margin:12px 0}
+.pc-box-title{font-size:12px;font-weight:900;color:var(--blue);letter-spacing:.5px;text-transform:uppercase;margin-bottom:8px}
+.pc-use-row{display:flex;gap:9px;align-items:flex-start;margin:6px 0}
+.pc-use-icon{font-size:14px;flex-shrink:0;margin-top:1px}
+.pc-use-text{font-size:12px;color:var(--text);line-height:1.5}
+.pc-use-ex{font-size:11px;color:var(--muted);font-style:italic;margin-top:2px}
+
+/* Connector cards */
+.conn-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:12px 0}
+.conn-card{background:var(--card2);border:1.5px solid var(--border);border-radius:10px;padding:9px 12px;cursor:pointer;transition:transform .15s,border-color .2s}
+.conn-card:hover{transform:translateY(-2px);border-color:var(--accent)}
+.conn-cat{font-size:9px;font-weight:900;letter-spacing:.4px;text-transform:uppercase;margin-bottom:3px}
+.conn-words{font-size:13px;font-weight:800;color:var(--accent);margin-bottom:3px}
+.conn-ar{font-family:'Cairo',sans-serif;font-size:10px;color:var(--muted);direction:rtl}
+
+/* when vs while */
+.ww-box{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin:12px 0}
+@media(max-width:520px){.ww-box{grid-template-columns:1fr}}
+.ww-card{border-radius:11px;padding:12px 14px;cursor:pointer;transition:transform .15s}
+.ww-card:hover{transform:translateY(-2px)}
+.ww-card.ww-when{background:rgba(34,197,94,.07);border:2px solid rgba(34,197,94,.3)}
+.ww-card.ww-while{background:rgba(74,158,255,.07);border:2px solid rgba(74,158,255,.3)}
+.ww-word{font-size:18px;font-weight:900;margin-bottom:4px}
+.ww-when .ww-word{color:var(--green)}
+.ww-while .ww-word{color:var(--blue)}
+.ww-rule{font-size:11px;color:var(--text);margin-bottom:5px;line-height:1.5}
+.ww-ex{font-size:11px;color:var(--muted);font-style:italic}
+
+/* Common mistakes */
+.warn-row{display:flex;gap:10px;align-items:flex-start;background:var(--card2);border-radius:10px;padding:10px 14px;margin:6px 0}
+.warn-icon{font-size:16px;flex-shrink:0;margin-top:2px}
+.warn-wrong{font-size:12px;color:var(--red);text-decoration:line-through}
+.warn-right{font-size:12px;color:var(--green);font-weight:700}
+.warn-ar{font-family:'Cairo',sans-serif;font-size:10px;color:var(--muted);direction:rtl;margin-top:2px}
+
+/* Tips */
+.tip-row{display:flex;align-items:flex-start;gap:10px;background:var(--card2);border-radius:10px;padding:10px 14px;margin:6px 0;cursor:pointer;transition:background .2s}
+.tip-row:hover{background:rgba(74,158,255,.08)}
+.tip-badge{background:rgba(74,158,255,.15);border:1px solid rgba(74,158,255,.4);color:var(--blue);font-size:11px;font-weight:900;padding:3px 9px;border-radius:7px;white-space:nowrap;flex-shrink:0}
+.tip-en{font-size:13px;color:var(--text);flex:1}
+.tip-ar{font-family:'Cairo',sans-serif;font-size:11px;color:var(--muted);direction:rtl;display:block;margin-top:2px}
+
+.su-level-hd{padding:8px 12px 5px;margin-top:8px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(255,255,255,.05)}
+.su-level-code{font-size:11px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;padding:2px 8px;border-radius:5px;display:inline-block}
+.su-level-name{font-family:'Cairo',sans-serif;font-size:12px;font-weight:700;color:#f4c430;direction:rtl;margin:0;line-height:1}
+.lvl-a1{background:rgba(52,211,153,.15);color:#34d399;border:1px solid rgba(52,211,153,.35)}
+.lvl-a2{background:rgba(74,158,255,.15);color:#4a9eff;border:1px solid rgba(74,158,255,.35)}
+.lvl-b1{background:rgba(245,158,11,.15);color:#f59e0b;border:1px solid rgba(245,158,11,.35)}
+.lvl-b2{background:rgba(244,166,36,.15);color:var(--accent);border:1px solid rgba(244,166,36,.35)}
+.lvl-b2p{background:rgba(251,146,60,.15);color:#fb923c;border:1px solid rgba(251,146,60,.35)}
+.lvl-c1{background:rgba(168,85,247,.15);color:#a855f7;border:1px solid rgba(168,85,247,.35)}
+.su-coming{opacity:.28;cursor:default;pointer-events:none}
+.su-prog{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:6px;overflow:hidden}
+.su-prog-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:2px;width:0%;transition:width .6s ease}
+
+.nav-home-btn{display:inline-flex;align-items:center;gap:6px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.4);color:var(--accent);font-size:12px;font-weight:800;padding:5px 13px;border-radius:8px;text-decoration:none;transition:all .2s;white-space:nowrap;flex-shrink:0}
+.nav-home-btn:hover{background:rgba(244,166,36,.25);transform:translateY(-2px)}
+.nav-lesson-badge{background:var(--accent);color:#0a1628;font-size:12px;font-weight:900;padding:5px 13px;border-radius:7px;white-space:nowrap;letter-spacing:.3px;flex-shrink:0}
+.nav-lesson-name{font-size:13px;color:rgba(232,237,245,.7);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-sep{color:rgba(136,153,176,.5);font-size:13px;flex-shrink:0}
+.nav-left{display:flex;align-items:center;gap:8px;flex:1;min-width:0}
+.nav-right{display:flex;align-items:center;flex-shrink:0}
+</style>
+
+<style>
+/* Watermark on print */
+@media print {
+  body::before {
+    content: 'Mohammed Elhuseyin — English Learning Platform — محمية الحقوق';
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-35deg);
+    font-size: 48px;
+    font-weight: 900;
+    color: rgba(244,166,36,0.18);
+    z-index: 9999;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+}
+</style>
+
+<style>
+.float-menu-btn{display:none;position:fixed;bottom:22px;left:18px;z-index:9998;width:48px;height:48px;background:var(--primary-dark,#0f2548);border:2px solid rgba(244,166,36,.5);border-radius:14px;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:12px;box-shadow:0 4px 20px rgba(0,0,0,.4);transition:transform .15s,box-shadow .15s}
+.float-menu-btn:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,.5)}
+.float-menu-btn span{display:block;width:22px;height:2px;background:#f4a624;border-radius:2px;transition:all .25s}
+@media(max-width:768px){.float-menu-btn{display:flex}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-logo">
+      <div class="sidebar-logo-icon">A</div>
+      <div>
+        <div class="sidebar-logo-text">English Course</div>
+        <div class="sidebar-logo-sub">MOHAMMED ELHUSEYIN</div>
+      </div>
+    </div>
+    <div class="sidebar-label ar">الوحدات الدراسية</div>
+  </div>
+  <div class="sidebar-units">
+  <div class="su-level-hd"><span class="su-level-code lvl-a1">A1</span><span class="su-level-name">مستوى المبتدئ تماماً</span></div>
+  <a href="lesson1.html" class="su-item"><div class="su-num">1</div><div class="su-texts"><div class="su-en">Alphabet & Numbers</div><div class="su-ar">الأحرف والأرقام</div><div class="su-prog"><div class="su-prog-fill" id="sp1"></div></div></div></a>
+  <a href="lesson2.html" class="su-item"><div class="su-num">2</div><div class="su-texts"><div class="su-en">Classroom Language & Greetings</div><div class="su-ar">لغة الصف والتحيات</div><div class="su-prog"><div class="su-prog-fill" id="sp2"></div></div></div></a>
+  <a href="lesson3.html" class="su-item"><div class="su-num">3</div><div class="su-texts"><div class="su-en">Nationalities & Countries</div><div class="su-ar">الجنسيات والدول</div><div class="su-prog"><div class="su-prog-fill" id="sp3"></div></div></div></a>
+  <a href="lesson4.html" class="su-item"><div class="su-num">4</div><div class="su-texts"><div class="su-en">Singular & Plural Nouns</div><div class="su-ar">الأسماء المفردة والجمع</div><div class="su-prog"><div class="su-prog-fill" id="sp4"></div></div></div></a>
+  <a href="lesson5.html" class="su-item"><div class="su-num">5</div><div class="su-texts"><div class="su-en">Days & Telling the Time</div><div class="su-ar">الأيام وإخبار الوقت</div><div class="su-prog"><div class="su-prog-fill" id="sp5"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-a2">A2</span><span class="su-level-name">المستوى الابتدائي</span></div>
+  <a href="unit1.html" class="su-item"><div class="su-num">6</div><div class="su-texts"><div class="su-en">Verb to <i>be</i></div><div class="su-ar">فعل التكوين</div><div class="su-prog"><div class="su-prog-fill" id="sp6"></div></div></div></a>
+  <a href="unit2.html" class="su-item"><div class="su-num">7</div><div class="su-texts"><div class="su-en">Present Simple</div><div class="su-ar">المضارع البسيط</div><div class="su-prog"><div class="su-prog-fill" id="sp7"></div></div></div></a>
+  <a href="unit3.html" class="su-item"><div class="su-num">8</div><div class="su-texts"><div class="su-en">Present Continuous</div><div class="su-ar">المضارع المستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp8"></div></div></div></a>
+  <a href="unit4.html" class="su-item"><div class="su-num">9</div><div class="su-texts"><div class="su-en">Past Simple: was / were</div><div class="su-ar">الماضي البسيط: كان</div><div class="su-prog"><div class="su-prog-fill" id="sp9"></div></div></div></a>
+  <a href="unit6.html" class="su-item"><div class="su-num">10</div><div class="su-texts"><div class="su-en">Past Simple: Regular & Irreg.</div><div class="su-ar">الماضي البسيط للأفعال</div><div class="su-prog"><div class="su-prog-fill" id="sp10"></div></div></div></a>
+  <a href="unit5.html" class="su-item"><div class="su-num">11</div><div class="su-texts"><div class="su-en">Can / Can't</div><div class="su-ar">القدرة والعجز</div><div class="su-prog"><div class="su-prog-fill" id="sp11"></div></div></div></a>
+  <a href="lesson12.html" class="su-item"><div class="su-num">12</div><div class="su-texts"><div class="su-en">Possessive Pronouns</div><div class="su-ar">ضمائر الملكية</div><div class="su-prog"><div class="su-prog-fill" id="sp12"></div></div></div></a>
+  <a href="unit7.html" class="su-item"><div class="su-num">13</div><div class="su-texts"><div class="su-en">There is / There are</div><div class="su-ar">يوجد / توجد</div><div class="su-prog"><div class="su-prog-fill" id="sp13"></div></div></div></a>
+  <a href="unit8.html" class="su-item"><div class="su-num">14</div><div class="su-texts"><div class="su-en">Adjectives</div><div class="su-ar">الصفات</div><div class="su-prog"><div class="su-prog-fill" id="sp14"></div></div></div></a>
+  <a href="unit9.html" class="su-item"><div class="su-num">15</div><div class="su-texts"><div class="su-en">Imperatives</div><div class="su-ar">صيغة الأمر والنهي</div><div class="su-prog"><div class="su-prog-fill" id="sp15"></div></div></div></a>
+  <a href="unit10.html" class="su-item"><div class="su-num">16</div><div class="su-texts"><div class="su-en">Object Pronouns</div><div class="su-ar">ضمائر المفعول به</div><div class="su-prog"><div class="su-prog-fill" id="sp16"></div></div></div></a>
+  <a href="unit11.html" class="su-item"><div class="su-num">17</div><div class="su-texts"><div class="su-en">Prepositions of Time & Place</div><div class="su-ar">حروف جر الوقت والمكان</div><div class="su-prog"><div class="su-prog-fill" id="sp17"></div></div></div></a>
+  <a href="unit12.html" class="su-item"><div class="su-num">18</div><div class="su-texts"><div class="su-en">Future Plans: going to</div><div class="su-ar">خطط المستقبل</div><div class="su-prog"><div class="su-prog-fill" id="sp18"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b1">B1</span><span class="su-level-name">تحت المتوسط</span></div>
+  <a href="lesson19.html" class="su-item"><div class="su-num">19</div><div class="su-texts"><div class="su-en">Present Perfect Introduction</div><div class="su-ar">مقدمة المضارع التام</div><div class="su-prog"><div class="su-prog-fill" id="sp19"></div></div></div></a>
+  <a href="lesson20.html" class="su-item"><div class="su-num">20</div><div class="su-texts"><div class="su-en">Past Continuous</div><div class="su-ar">الماضي المستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp20"></div></div></div></a>
+  <a href="lesson21.html" class="su-item"><div class="su-num">21</div><div class="su-texts"><div class="su-en">will vs. going to</div><div class="su-ar">المستقبل: إرادة أم تخطيط؟</div><div class="su-prog"><div class="su-prog-fill" id="sp21"></div></div></div></a>
+  <a href="lesson22.html" class="su-item"><div class="su-num">22</div><div class="su-texts"><div class="su-en">like / love / hate + -ing</div><div class="su-ar">التعبير عن التفضيلات</div><div class="su-prog"><div class="su-prog-fill" id="sp22"></div></div></div></a>
+  <a href="lesson23.html" class="su-item"><div class="su-num">23</div><div class="su-texts"><div class="su-en">Comparatives & Superlatives</div><div class="su-ar">المقارنة والتفضيل</div><div class="su-prog"><div class="su-prog-fill" id="sp23"></div></div></div></a>
+  <a href="lesson24.html" class="su-item"><div class="su-num">24</div><div class="su-texts"><div class="su-en">must / have to / should</div><div class="su-ar">أفعال الإلزام والنصيحة</div><div class="su-prog"><div class="su-prog-fill" id="sp24"></div></div></div></a>
+  <a href="lesson25.html" class="su-item"><div class="su-num">25</div><div class="su-texts"><div class="su-en">Infinitives & Gerunds</div><div class="su-ar">المصدر وصيغة الـ ing</div><div class="su-prog"><div class="su-prog-fill" id="sp25"></div></div></div></a>
+  <a href="lesson26.html" class="su-item"><div class="su-num">26</div><div class="su-texts"><div class="su-en">Articles: a/an / the</div><div class="su-ar">أدوات التعريف والتنكير</div><div class="su-prog"><div class="su-prog-fill" id="sp26"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b2">B2</span><span class="su-level-name">المستوى المتوسط</span></div>
+  <a href="lesson27.html" class="su-item"><div class="su-num">27</div><div class="su-texts"><div class="su-en">Present Perfect vs. Past Simple</div><div class="su-ar">المقارنة بين الماضي والتام</div><div class="su-prog"><div class="su-prog-fill" id="sp27"></div></div></div></a>
+  <a href="lesson28.html" class="su-item"><div class="su-num">28</div><div class="su-texts"><div class="su-en">Passive Voice</div><div class="su-ar">المبني للمجهول</div><div class="su-prog"><div class="su-prog-fill" id="sp28"></div></div></div></a>
+  <a href="lesson29.html" class="su-item"><div class="su-num">29</div><div class="su-texts"><div class="su-en">Zero / First / Second Cond.</div><div class="su-ar">الجمل الشرطية 0-1-2</div><div class="su-prog"><div class="su-prog-fill" id="sp29"></div></div></div></a>
+  <a href="lesson30.html" class="su-item"><div class="su-num">30</div><div class="su-texts"><div class="su-en">Reported Speech</div><div class="su-ar">الكلام غير المباشر</div><div class="su-prog"><div class="su-prog-fill" id="sp30"></div></div></div></a>
+  <a href="lesson31.html" class="su-item"><div class="su-num">31</div><div class="su-texts"><div class="su-en">Relative Clauses</div><div class="su-ar">جمل الوصل: who / which</div><div class="su-prog"><div class="su-prog-fill" id="sp31"></div></div></div></a>
+  <a href="lesson32.html" class="su-item"><div class="su-num">32</div><div class="su-texts"><div class="su-en">Quantifiers</div><div class="su-ar">محددات الكمية</div><div class="su-prog"><div class="su-prog-fill" id="sp32"></div></div></div></a>
+  <a href="lesson33.html" class="su-item"><div class="su-num">33</div><div class="su-texts"><div class="su-en">Phrasal Verbs Introduction</div><div class="su-ar">مقدمة الأفعال المركبة</div><div class="su-prog"><div class="su-prog-fill" id="sp33"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b2p">B2+</span><span class="su-level-name">فوق المتوسط</span></div>
+  <a href="lesson34.html" class="su-item su-active"><div class="su-num">34</div><div class="su-texts"><div class="su-en">Narrative Tenses & Past Perfect</div><div class="su-ar">أزمنة السرد والماضي التام</div><div class="su-prog"><div class="su-prog-fill" id="sp34"></div></div></div></a>
+  <a href="lesson35.html" class="su-item"><div class="su-num">35</div><div class="su-texts"><div class="su-en">Future Perfect & Continuous</div><div class="su-ar">المستقبل التام والمستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp35"></div></div></div></a>
+  <a href="lesson36.html" class="su-item"><div class="su-num">36</div><div class="su-texts"><div class="su-en">Third Conditional & Regrets</div><div class="su-ar">الشرط الثالث والندم</div><div class="su-prog"><div class="su-prog-fill" id="sp36"></div></div></div></a>
+  <a href="lesson37.html" class="su-item"><div class="su-num">37</div><div class="su-texts"><div class="su-en">Causative: have/get done</div><div class="su-ar">الأفعال السببية</div><div class="su-prog"><div class="su-prog-fill" id="sp37"></div></div></div></a>
+  <a href="lesson38.html" class="su-item"><div class="su-num">38</div><div class="su-texts"><div class="su-en">Advanced Passive</div><div class="su-ar">المبني للمجهول المتقدم</div><div class="su-prog"><div class="su-prog-fill" id="sp38"></div></div></div></a>
+  <a href="lesson39.html" class="su-item"><div class="su-num">39</div><div class="su-texts"><div class="su-en">Speculation: must/might/can't</div><div class="su-ar">التخمين والاستنتاج</div><div class="su-prog"><div class="su-prog-fill" id="sp39"></div></div></div></a>
+  <a href="lesson40.html" class="su-item"><div class="su-num">40</div><div class="su-texts"><div class="su-en">Idioms & Collocations</div><div class="su-ar">المصطلحات والتعبيرات</div><div class="su-prog"><div class="su-prog-fill" id="sp40"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-c1">C1</span><span class="su-level-name">المستوى المتقدم الأكاديمي</span></div>
+  <a href="lesson41.html" class="su-item"><div class="su-num">41</div><div class="su-texts"><div class="su-en">Inversion & Emphatic Structures</div><div class="su-ar">التقديم والتأخير للتأكيد</div><div class="su-prog"><div class="su-prog-fill" id="sp41"></div></div></div></a>
+  <a href="lesson42.html" class="su-item"><div class="su-num">42</div><div class="su-texts"><div class="su-en">Mixed Conditionals</div><div class="su-ar">الجمل الشرطية المختلطة</div><div class="su-prog"><div class="su-prog-fill" id="sp42"></div></div></div></a>
+  <a href="lesson43.html" class="su-item"><div class="su-num">43</div><div class="su-texts"><div class="su-en">Advanced Gerunds & Infinitives</div><div class="su-ar">المصادر المتقدمة</div><div class="su-prog"><div class="su-prog-fill" id="sp43"></div></div></div></a>
+  <a href="lesson44.html" class="su-item"><div class="su-num">44</div><div class="su-texts"><div class="su-en">Cleft Sentences</div><div class="su-ar">الجمل المشقوقة</div><div class="su-prog"><div class="su-prog-fill" id="sp44"></div></div></div></a>
+  <a href="lesson45.html" class="su-item"><div class="su-num">45</div><div class="su-texts"><div class="su-en">Discourse Markers</div><div class="su-ar">أدوات الربط الأكاديمية</div><div class="su-prog"><div class="su-prog-fill" id="sp45"></div></div></div></a>
+  <a href="lesson46.html" class="su-item"><div class="su-num">46</div><div class="su-texts"><div class="su-en">Nuances & Euphemisms</div><div class="su-ar">الفروقات الدقيقة والتلطيف</div><div class="su-prog"><div class="su-prog-fill" id="sp46"></div></div></div></a>
+</div>
+</aside>
+
+<div class="main-content">
+
+<nav class="topnav">
+  <div class="nav-left">
+    <a href="../index.html" class="nav-home-btn">&#x1F3E0; الرئيسية</a>
+    <span class="nav-sep">&#x203A;</span>
+    <span class="nav-lesson-badge">Lesson 34</span>
+    <span class="nav-sep">&#x203A;</span>
+    <span class="nav-lesson-name">Narrative Tenses &amp; Past Perfect</span>
+  </div>
+  <div class="nav-right"><span class="nav-brand">MOHAMMED ELHUSEYIN</span></div>
+</nav>
+
+<div class="hero">
+  <div class="unit-badge">&#x1F4DA; Lesson 34 &nbsp;&middot;&nbsp; B2+ Upper-Intermediate</div>
+  <h1 class="hero-title">Narrative Tenses</h1>
+  <div class="hero-ar ar">أزمنة السرد والماضي التام</div>
+  <p class="hero-sub">Master storytelling in English using three past tenses together: <b>Past Simple</b> for main events, <b>Past Continuous</b> for background actions, and <b>Past Perfect</b> for actions that happened <em>before</em> the story began — plus the key connectors that link them all.</p>
+  <div class="hero-tags">
+    <span class="tag tag-grammar">&#x1F4D6; Grammar</span>
+    <span class="tag tag-other">&#x1F4AC; Everyday English</span>
+    <span class="tag tag-other">&#x1F4D8; Reading</span>
+    <span class="tag tag-green">&#x2705; Check It!</span>
+  </div>
+</div>
+
+<div class="main-tabs">
+  <button class="main-tab active" onclick="showTab('grammar',this)">&#x1F4D6; Grammar</button>
+  <button class="main-tab" onclick="showTab('everyday',this)">&#x1F4AC; Everyday English</button>
+  <button class="main-tab" onclick="showTab('reading',this)">&#x1F4D8; Reading</button>
+  <button class="main-tab" onclick="showTab('checkit',this)">&#x2705; Check It!</button>
+</div>
+
+<!-- ════════════════════ GRAMMAR TAB ════════════════════ -->
+<div id="tab-grammar" class="tab-panel active">
+
+  <!-- Three tenses overview -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F4CC; The Three Narrative Tenses — أزمنة السرد الثلاثة</div>
+    <div class="rule-ar">عند رواية قصة في الماضي، نستخدم ثلاثة أزمنة معاً — لكل واحد دور مختلف</div>
+    <div class="nt-trio">
+      <div class="nt-card nt-pp" onclick="ttsRead(&quot;Past Perfect. had plus past participle. Used for actions that happened before the main story. She had already left when I arrived.&quot;,0.88)">
+        <div class="nt-role">&#x23EA; Earlier action</div>
+        <div class="nt-name">Past Perfect</div>
+        <div class="nt-name-ar ar">الماضي التام — ما حدث قبل</div>
+        <div class="nt-form">had + past participle</div>
+        <div class="nt-use">Actions that happened <b>before</b> the main story events</div>
+        <div class="nt-ex">"She <b>had already left</b> when I arrived." &#x1F509;</div>
+      </div>
+      <div class="nt-card nt-pc" onclick="ttsRead(&quot;Past Continuous. was or were plus verb ing. Used for background actions or interrupted actions. It was raining when we left.&quot;,0.88)">
+        <div class="nt-role">&#x1F3A8; Background</div>
+        <div class="nt-name">Past Continuous</div>
+        <div class="nt-name-ar ar">الماضي المستمر — الخلفية والسياق</div>
+        <div class="nt-form">was / were + verb-ing</div>
+        <div class="nt-use">Background scenes, atmosphere, or interrupted actions</div>
+        <div class="nt-ex">"It <b>was raining</b> when we left." &#x1F509;</div>
+      </div>
+      <div class="nt-card nt-ps" onclick="ttsRead(&quot;Past Simple. verb ed or irregular past. Used for the main events of the story in sequence. She arrived, opened the door and sat down.&quot;,0.88)">
+        <div class="nt-role">&#x25B6; Main events</div>
+        <div class="nt-name">Past Simple</div>
+        <div class="nt-name-ar ar">الماضي البسيط — أحداث القصة الرئيسية</div>
+        <div class="nt-form">verb-ed / irregular</div>
+        <div class="nt-use">The main <b>sequence of events</b> — what happened, step by step</div>
+        <div class="nt-ex">"She <b>arrived</b>, <b>opened</b> the door and <b>sat</b> down." &#x1F509;</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Timeline visual -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F4C5; Timeline — خط الزمن</div>
+    <div class="rule-ar">تخيّل خطاً زمنياً: الماضي التام يأتي أولاً — ثم الأحداث الرئيسية — والمستمر يستمر في الخلفية</div>
+    <div class="timeline-wrap">
+      <div class="timeline-title">Story Timeline</div>
+      <div class="timeline-line">
+        <div class="tl-dot pp-dot"></div><div class="tl-label">Past Perfect<br>had eaten</div>
+        <div class="tl-dot pc-dot"></div><div class="tl-label">Past Continuous<br>was raining</div>
+        <div class="tl-dot ps-dot"></div><div class="tl-label">Past Simple<br>arrived</div>
+      </div>
+      <div class="timeline-story" onclick="ttsRead(&quot;When I arrived at the station, it was raining heavily. My friend had already bought the tickets, so we went straight to the platform.&quot;,0.88)">
+        "When I <span class="ps">arrived</span> at the station, it <span class="pc">was raining</span> heavily. My friend <span class="pp">had already bought</span> the tickets, so we <span class="ps">went</span> straight to the platform." &#x1F509;
+      </div>
+      <div class="tl-legend">
+        <div class="tl-leg l-pp"><div class="tl-leg-dot d-pp"></div>Past Perfect = before the story</div>
+        <div class="tl-leg l-pc"><div class="tl-leg-dot d-pc"></div>Past Continuous = background</div>
+        <div class="tl-leg l-ps"><div class="tl-leg-dot d-ps"></div>Past Simple = main events</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Past Perfect Formation -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F7E3; Past Perfect — التكوين والاستخدام</div>
+    <div class="rule-ar">الماضي التام = had + التصريف الثالث (Past Participle) — لجميع الضمائر</div>
+    <div class="pp-form-box">
+      <div class="pp-form-title">Formation — التكوين</div>
+      <div class="pp-form-grid">
+        <div class="pp-form-cell">
+          <div class="pp-cell-label">&#x2795; Affirmative</div>
+          <div class="pp-cell-formula">Subject + <b>had</b> + Past Participle</div>
+          <div class="pp-cell-ex" onclick="ttsRead(&quot;She had finished her work before dinner.&quot;,0.88)">She <b>had finished</b> her work before dinner. &#x1F509;</div>
+        </div>
+        <div class="pp-form-cell">
+          <div class="pp-cell-label">&#x274C; Negative</div>
+          <div class="pp-cell-formula">Subject + <b>hadn't</b> + Past Participle</div>
+          <div class="pp-cell-ex" onclick="ttsRead(&quot;He hadn't eaten anything all day.&quot;,0.88)">He <b>hadn't eaten</b> anything all day. &#x1F509;</div>
+        </div>
+        <div class="pp-form-cell">
+          <div class="pp-cell-label">&#x2753; Question</div>
+          <div class="pp-cell-formula"><b>Had</b> + Subject + Past Participle?</div>
+          <div class="pp-cell-ex" onclick="ttsRead(&quot;Had you met her before the party?&quot;,0.88)">Had you <b>met</b> her before the party? &#x1F509;</div>
+        </div>
+        <div class="pp-form-cell">
+          <div class="pp-cell-label">&#x1F4CD; Short forms</div>
+          <div class="pp-cell-formula">I'd / she'd / they'd + PP</div>
+          <div class="pp-cell-ex" onclick="ttsRead(&quot;I'd already seen that film twice.&quot;,0.88)">I'd already <b>seen</b> that film twice. &#x1F509;</div>
+        </div>
+      </div>
+    </div>
+    <div class="rule-box">
+      <b>Key uses of Past Perfect:</b><br>
+      &#x2022; Action completed <b>before</b> another past action: "When she arrived, he <b>had left</b>."<br>
+      &#x2022; To give <b>background reason</b>: "He was tired because he <b>hadn't slept</b>."<br>
+      &#x2022; With <b>by the time</b>: "By the time we got there, the film <b>had started</b>."<br>
+      &#x2022; With <b>already / just / never / yet</b>: "I <b>had never seen</b> anything like it."
+    </div>
+  </div>
+
+  <!-- PS vs PP comparison -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F504; Past Simple vs Past Perfect — متى أستخدم أيّهما؟</div>
+    <div class="rule-ar">السؤال الجوهري: هل الحدثان في نفس التسلسل؟ أم أحدهما سبق الآخر بوضوح؟</div>
+    <table class="cmp-table">
+      <thead>
+        <tr>
+          <th class="th-sit">Situation</th>
+          <th class="th-ps">&#x1F7E2; Past Simple</th>
+          <th class="th-pp">&#x1F7E3; Past Perfect</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Sequence of events</td>
+          <td class="td-ps"><span onclick="ttsRead(&quot;She ate dinner. Then she watched TV. Two events in sequence.&quot;,0.88)">She <b>ate</b> dinner. Then she <b>watched</b> TV. &#x1F509;</span></td>
+          <td class="td-pp"><span onclick="ttsRead(&quot;She had eaten dinner before she watched TV. The eating happened earlier.&quot;,0.88)">She <b>had eaten</b> dinner before she <b>watched</b> TV. &#x1F509;</span></td>
+        </tr>
+        <tr>
+          <td>Arrival + earlier action</td>
+          <td class="td-ps"><span onclick="ttsRead(&quot;I arrived and then she left. They happened in order.&quot;,0.88)">I <b>arrived</b> and then she <b>left</b>. &#x1F509;</span></td>
+          <td class="td-pp"><span onclick="ttsRead(&quot;When I arrived, she had already left. She left before I arrived.&quot;,0.88)">When I <b>arrived</b>, she <b>had already left</b>. &#x1F509;</span></td>
+        </tr>
+        <tr>
+          <td>Reason / cause</td>
+          <td class="td-ps"><span onclick="ttsRead(&quot;He was tired. He did not sleep. Simple facts.&quot;,0.88)">He <b>was</b> tired. He didn't <b>sleep</b>. &#x1F509;</span></td>
+          <td class="td-pp"><span onclick="ttsRead(&quot;He was tired because he hadn't slept. The not sleeping caused the tiredness.&quot;,0.88)">He <b>was</b> tired because he <b>hadn't slept</b>. &#x1F509;</span></td>
+        </tr>
+        <tr>
+          <td>By the time</td>
+          <td class="td-ps"><span onclick="ttsRead(&quot;We got there. The film started. Just two facts.&quot;,0.88)">We <b>got</b> there. The film <b>started</b>. &#x1F509;</span></td>
+          <td class="td-pp"><span onclick="ttsRead(&quot;By the time we got there, the film had already started.&quot;,0.88)">By the time we <b>got</b> there, the film <b>had started</b>. &#x1F509;</span></td>
+        </tr>
+        <tr>
+          <td>First experience</td>
+          <td class="td-ps"><span onclick="ttsRead(&quot;She visited Paris last year.&quot;,0.88)">She <b>visited</b> Paris last year. &#x1F509;</span></td>
+          <td class="td-pp"><span onclick="ttsRead(&quot;She had never visited Paris before that trip.&quot;,0.88)">She <b>had never visited</b> Paris before that trip. &#x1F509;</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Past Continuous in narrative -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F535; Past Continuous in Narratives — الماضي المستمر في السرد</div>
+    <div class="rule-ar">يرسم الماضي المستمر "صورة الخلفية" للقصة — ما كان يحدث عندما بدأت الأحداث الرئيسية</div>
+    <div class="pc-box">
+      <div class="pc-box-title">Three roles in storytelling</div>
+      <div class="pc-use-row">
+        <span class="pc-use-icon">&#x1F3A8;</span>
+        <div>
+          <div class="pc-use-text"><b>Background / setting the scene</b> — ما كان يحدث في الخلفية</div>
+          <div class="pc-use-ex" onclick="ttsRead(&quot;The sun was shining and birds were singing when we set off on our journey.&quot;,0.88)">"The sun <b>was shining</b> and birds <b>were singing</b> when we set off." &#x1F509;</div>
+        </div>
+      </div>
+      <div class="pc-use-row">
+        <span class="pc-use-icon">&#x26A1;</span>
+        <div>
+          <div class="pc-use-text"><b>Interrupted action</b> — فعل مستمر قُطع بحدث مفاجئ</div>
+          <div class="pc-use-ex" onclick="ttsRead(&quot;I was walking to the shop when I suddenly heard a loud noise.&quot;,0.88)">"I <b>was walking</b> to the shop when I suddenly <b>heard</b> a loud noise." &#x1F509;</div>
+        </div>
+      </div>
+      <div class="pc-use-row">
+        <span class="pc-use-icon">&#x1F501;</span>
+        <div>
+          <div class="pc-use-text"><b>Simultaneous actions</b> — فعلان يحدثان في نفس الوقت</div>
+          <div class="pc-use-ex" onclick="ttsRead(&quot;She was cooking while he was setting the table.&quot;,0.88)">"She <b>was cooking</b> while he <b>was setting</b> the table." &#x1F509;</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- when vs while -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F4A1; when vs while — الفرق المهم</div>
+    <div class="rule-ar">خطأ شائع جداً — when وwhile يؤديان أدواراً مختلفة في الجمل السردية</div>
+    <div class="ww-box">
+      <div class="ww-card ww-when" onclick="ttsRead(&quot;when — used with a short completed action, usually past simple. When I arrived, she was cooking. When he called, I was sleeping.&quot;,0.88)">
+        <div class="ww-word">when</div>
+        <div class="ww-rule">+ short / completed action (<b>Past Simple</b>)<br>= at the moment that</div>
+        <div class="ww-ex">"<b>When</b> I <b>arrived</b>, she was cooking." ✅<br>"<b>When</b> he <b>called</b>, I was sleeping." ✅ &#x1F509;</div>
+      </div>
+      <div class="ww-card ww-while" onclick="ttsRead(&quot;while — used with a longer ongoing action, usually past continuous. While I was sleeping, he called. While she was reading, the phone rang.&quot;,0.88)">
+        <div class="ww-word">while</div>
+        <div class="ww-rule">+ longer / ongoing action (<b>Past Continuous</b>)<br>= during the time that</div>
+        <div class="ww-ex">"<b>While</b> I <b>was sleeping</b>, he called." ✅<br>"<b>While</b> she <b>was reading</b>, the phone rang." ✅ &#x1F509;</div>
+      </div>
+    </div>
+    <div class="rule-box">
+      &#x26A0; "When I was cooking, the phone rang." ✅ &nbsp; (when can also introduce a continuous action)<br>
+      &#x274C; "While I arrived, she was cooking." ❌ &nbsp; (while cannot introduce a completed/sudden action)
+    </div>
+  </div>
+
+  <!-- Narrative connectors -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F517; Narrative Connectors — أدوات الربط السردي</div>
+    <div class="rule-ar">هذه الكلمات تربط أحداث القصة وتُوضّح التسلسل الزمني</div>
+    <div class="conn-grid">
+      <div class="conn-card" onclick="ttsRead(&quot;Sequence connectors: first, then, after that, next, finally.&quot;,0.88)">
+        <div class="conn-cat" style="color:var(--green)">&#x1F7E2; Sequence</div>
+        <div class="conn-words">first · then · after that · next · finally</div>
+        <div class="conn-ar ar">التسلسل: أولاً، ثم، بعد ذلك، أخيراً &#x1F509;</div>
+      </div>
+      <div class="conn-card" onclick="ttsRead(&quot;Time connectors: when, while, as, as soon as, just as.&quot;,0.88)">
+        <div class="conn-cat" style="color:var(--blue)">&#x1F535; Time</div>
+        <div class="conn-words">when · while · as · as soon as · just as</div>
+        <div class="conn-ar ar">وقت الحدث: عندما، بينما، حالما &#x1F509;</div>
+      </div>
+      <div class="conn-card" onclick="ttsRead(&quot;Before and after connectors: before, after, by the time, until, once.&quot;,0.88)">
+        <div class="conn-cat" style="color:#a855f7">&#x1F7E3; Before/After</div>
+        <div class="conn-words">before · after · by the time · until · once</div>
+        <div class="conn-ar ar">قبل/بعد: قبل أن، بعد أن، بحلول الوقت &#x1F509;</div>
+      </div>
+      <div class="conn-card" onclick="ttsRead(&quot;Contrast connectors: however, but, although, even though, despite.&quot;,0.88)">
+        <div class="conn-cat" style="color:var(--accent)">&#x1F7E1; Contrast</div>
+        <div class="conn-words">however · but · although · even though</div>
+        <div class="conn-ar ar">التناقض: لكن، بالرغم من، رغم أن &#x1F509;</div>
+      </div>
+      <div class="conn-card" onclick="ttsRead(&quot;Result connectors: so, therefore, as a result, consequently.&quot;,0.88)">
+        <div class="conn-cat" style="color:#fb923c">&#x1F7E0; Result</div>
+        <div class="conn-words">so · therefore · as a result · consequently</div>
+        <div class="conn-ar ar">النتيجة: لذلك، ونتيجةً لذلك &#x1F509;</div>
+      </div>
+      <div class="conn-card" onclick="ttsRead(&quot;Suddenly connectors: suddenly, all of a sudden, out of nowhere, unexpectedly.&quot;,0.88)">
+        <div class="conn-cat" style="color:var(--red)">&#x1F534; Sudden</div>
+        <div class="conn-words">suddenly · all of a sudden · out of nowhere</div>
+        <div class="conn-ar ar">المفاجأة: فجأة، على حين غرة &#x1F509;</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Common mistakes -->
+  <div class="rule-section">
+    <div class="rule-title">&#x26A0; Common Mistakes — أخطاء شائعة</div>
+    <div class="warn-row">
+      <span class="warn-icon">&#x274C;</span>
+      <div><div><span class="warn-wrong">When I arrived, she left already.</span>&nbsp;&#x2192;&nbsp;<span class="warn-right">When I arrived, she had already left.</span></div><div class="warn-ar">الحدث الذي جاء قبل وصولي → يجب استخدام الماضي التام</div></div>
+    </div>
+    <div class="warn-row">
+      <span class="warn-icon">&#x274C;</span>
+      <div><div><span class="warn-wrong">While I arrived, she was cooking.</span>&nbsp;&#x2192;&nbsp;<span class="warn-right">When I arrived, she was cooking.</span></div><div class="warn-ar">arrive فعل لحظي — يأتي مع when وليس while</div></div>
+    </div>
+    <div class="warn-row">
+      <span class="warn-icon">&#x274C;</span>
+      <div><div><span class="warn-wrong">He was eating and then he left.</span>&nbsp;&#x2192;&nbsp;<span class="warn-right">He ate and then he left.</span></div><div class="warn-ar">الأحداث المتسلسلة المنتهية تستخدم الماضي البسيط وليس المستمر</div></div>
+    </div>
+    <div class="warn-row">
+      <span class="warn-icon">&#x274C;</span>
+      <div><div><span class="warn-wrong">I had seen him yesterday.</span>&nbsp;&#x2192;&nbsp;<span class="warn-right">I saw him yesterday.</span></div><div class="warn-ar">مع ظروف زمن محددة (yesterday/last week) → الماضي البسيط وليس التام</div></div>
+    </div>
+    <div class="warn-row">
+      <span class="warn-icon">&#x274C;</span>
+      <div><div><span class="warn-wrong">By the time I got there, the film started.</span>&nbsp;&#x2192;&nbsp;<span class="warn-right">By the time I got there, the film had started.</span></div><div class="warn-ar">"by the time" يستلزم الماضي التام للحدث الأول</div></div>
+    </div>
+  </div>
+
+  <!-- Tips -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F4A1; Quick Tips</div>
+    <div class="tip-row" onclick="ttsRead(&quot;Tip: When you use two past events together, ask which one happened first. The earlier one uses the past perfect.&quot;,0.88)">
+      <span class="tip-badge">Order test</span>
+      <div><span class="tip-en">With two past events, always ask: <b>which one happened first?</b> → that one gets <b>past perfect</b>. &#x1F509;</span><span class="tip-ar">عند ذكر حدثين ماضيين — الأقدم يأخذ الماضي التام</span></div>
+    </div>
+    <div class="tip-row" onclick="ttsRead(&quot;Tip: after and before sometimes make the past perfect optional. After she had eaten, she left. Or: After she ate, she left. Both correct.&quot;,0.88)">
+      <span class="tip-badge">after / before</span>
+      <div><span class="tip-en">With <b>after</b> and <b>before</b>, past perfect is <b>optional</b> — the connector already shows the order. &#x1F509;</span><span class="tip-ar">مع after وbefore، الماضي التام اختياري لأن الترتيب واضح من الكلمة نفسها</span></div>
+    </div>
+    <div class="tip-row" onclick="ttsRead(&quot;Tip: Already, just, never, and yet are strong signals for the past perfect. I had already seen it. She had just arrived. He had never been there.&quot;,0.88)">
+      <span class="tip-badge">already/just/never</span>
+      <div><span class="tip-en"><b>already, just, never, yet</b> → strong signals for past perfect in narrative. &#x1F509;</span><span class="tip-ar">هذه الكلمات تشير بقوة إلى وجوب استخدام الماضي التام</span></div>
+    </div>
+    <div class="tip-row" onclick="ttsRead(&quot;Tip: suddenly always introduces a past simple event, because it is a sudden completed action. I was walking when suddenly a car appeared.&quot;,0.88)">
+      <span class="tip-badge">suddenly</span>
+      <div><span class="tip-en"><b>suddenly</b> always introduces a <b>Past Simple</b> event — it's a sudden, completed action. &#x1F509;</span><span class="tip-ar">suddenly تُقدّم دائماً فعلاً ماضياً بسيطاً — لأنها لحظية مفاجئة</span></div>
+    </div>
+  </div>
+
+</div><!-- /tab-grammar -->
+
+<!-- ════════════════════ EVERYDAY ENGLISH TAB ════════════════════ -->
+<div id="tab-everyday" class="tab-panel">
+
+  <!-- Dialogue 1 -->
+  <div class="dlg-block">
+    <div class="dlg-header">
+      <div>
+        <div class="dlg-title">&#x2708; Travel Disaster</div>
+        <div class="dlg-sub ar">كارثة في السفر</div>
+      </div>
+      <div class="dlg-tags"><span class="tag tag-grammar">past perfect + past simple</span></div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;You look exhausted! How was the trip?&quot;,0.88)">You look exhausted! How was the trip? <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">تبدو منهكاً! كيف كانت الرحلة؟</div>
+          <div class="chat-bubble-foot">Nada</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;A disaster. By the time we got to the airport, our flight had already taken off.&quot;,0.88)">A disaster. By the time we <b>got</b> to the airport, our flight <b>had already taken off</b>. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">كارثة. بحلول الوقت الذي وصلنا فيه للمطار، كانت رحلتنا قد أقلعت بالفعل.</div>
+          <div class="chat-bubble-foot">Walid</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Oh no! What happened? Had you missed the check-in time?&quot;,0.88)">Oh no! What happened? Had you missed the check-in time? <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">يا إلهي! ماذا حدث؟ هل كنتم قد فاتكم وقت تسجيل الدخول؟</div>
+          <div class="chat-bubble-foot">Nada</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Yes. The traffic was terrible. We were sitting in a jam for two hours and by then it was too late.&quot;,0.88)">Yes. The traffic <b>was terrible</b>. We <b>were sitting</b> in a jam for two hours and by then it was too late. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">نعم. كانت حركة المرور رهيبة. كنا جالسين في الازدحام ساعتين وبحلول ذلك الوقت كان قد فات الأوان.</div>
+          <div class="chat-bubble-foot">Walid</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dialogue 2 -->
+  <div class="dlg-block">
+    <div class="dlg-header">
+      <div>
+        <div class="dlg-title">&#x1F575; Something Strange</div>
+        <div class="dlg-sub ar">شيء غريب</div>
+      </div>
+      <div class="dlg-tags"><span class="tag tag-grammar">past continuous + past simple</span></div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;I need to tell you what happened last night. I was watching TV when I suddenly heard a strange noise outside.&quot;,0.88)">I need to tell you what happened last night. I <b>was watching</b> TV when I suddenly <b>heard</b> a strange noise outside. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">أحتاج أن أخبرك بما حدث الليلة الماضية. كنت أشاهد التلفاز عندما سمعت فجأة صوتاً غريباً بالخارج.</div>
+          <div class="chat-bubble-foot">Sami</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;What did you do?&quot;,0.88)">What did you do? <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">ماذا فعلت؟</div>
+          <div class="chat-bubble-foot">Huda</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;I went to the window and looked out. It was raining heavily and a cat was sitting on the fence meowing loudly.&quot;,0.88)">I <b>went</b> to the window and <b>looked</b> out. It <b>was raining</b> heavily and a cat <b>was sitting</b> on the fence meowing loudly. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">ذهبت إلى النافذة ونظرت. كانت المطر تهطل بشدة وقطة كانت جالسة على السياج تموء بصوت عالٍ.</div>
+          <div class="chat-bubble-foot">Sami</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;That is all? I thought it was something serious!&quot;,0.88)">That's all? I thought it was something serious! <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">هذا كل شيء؟ ظننت أنه شيء خطير!</div>
+          <div class="chat-bubble-foot">Huda</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dialogue 3 -->
+  <div class="dlg-block">
+    <div class="dlg-header">
+      <div>
+        <div class="dlg-title">&#x1F382; The Surprise Party</div>
+        <div class="dlg-sub ar">حفلة المفاجأة</div>
+      </div>
+      <div class="dlg-tags"><span class="tag tag-grammar">all three tenses together</span></div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Tell me about the surprise party. How did Reem react?&quot;,0.88)">Tell me about the surprise party. How did Reem react? <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">حدثني عن حفلة المفاجأة. كيف كان رد فعل ريم؟</div>
+          <div class="chat-bubble-foot">Tariq</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;It was perfect. Everyone was hiding when she walked in. She had no idea because we had kept it secret for weeks.&quot;,0.88)">It was perfect! Everyone <b>was hiding</b> when she <b>walked</b> in. She <b>had</b> no idea because we <b>had kept</b> it secret for weeks. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">كانت مثالية! كان الجميع يختبئ عندما دخلت. لم تكن تعلم شيئاً لأننا كنا نحتفظ بالسر لأسابيع.</div>
+          <div class="chat-bubble-foot">Layla</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Did she cry?&quot;,0.88)">Did she cry? <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">هل بكت؟</div>
+          <div class="chat-bubble-foot">Tariq</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Yes! When she saw everyone, she burst into tears. She said it was the best surprise she had ever had.&quot;,0.88)">Yes! When she <b>saw</b> everyone, she <b>burst</b> into tears. She said it was the best surprise she <b>had ever had</b>. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">نعم! عندما رأت الجميع انفجرت بالبكاء. قالت إنها أفضل مفاجأة حصلت عليها في حياتها.</div>
+          <div class="chat-bubble-foot">Layla</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dialogue 4 -->
+  <div class="dlg-block">
+    <div class="dlg-header">
+      <div>
+        <div class="dlg-title">&#x1F3E0; Coming Home</div>
+        <div class="dlg-sub ar">العودة إلى البيت</div>
+      </div>
+      <div class="dlg-tags"><span class="tag tag-grammar">past perfect + narrative connectors</span></div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;When I finally got home after the long trip, I realized I had left my keys at the hotel.&quot;,0.88)">When I finally <b>got</b> home after the long trip, I <b>realized</b> I <b>had left</b> my keys at the hotel. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">عندما وصلت أخيراً إلى المنزل بعد الرحلة الطويلة، أدركت أنني تركت مفاتيحي في الفندق.</div>
+          <div class="chat-bubble-foot">Marwan</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Oh no! So what did you do?&quot;,0.88)">Oh no! So what did you do? <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">يا إلهي! فماذا فعلت؟</div>
+          <div class="chat-bubble-foot">Sara</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;I called my sister. Luckily she was still awake and had a spare key. She came over and let me in.&quot;,0.88)">I <b>called</b> my sister. Luckily she <b>was still awake</b> and <b>had</b> a spare key. She <b>came</b> over and <b>let</b> me in. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">اتصلت بأختي. لحسن الحظ كانت لا تزال مستيقظة وكان معها مفتاح احتياطي. أتت وفتحت لي الباب.</div>
+          <div class="chat-bubble-foot">Marwan</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;You were lucky! By the time I got home last week, everyone had gone to bed and I had to sleep on the sofa.&quot;,0.88)">You were lucky! By the time I <b>got</b> home last week, everyone <b>had gone</b> to bed and I had to sleep on the sofa! <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">كنت محظوظاً! بحلول الوقت الذي وصلت فيه للمنزل الأسبوع الماضي، كان الجميع قد ذهب للنوم واضطررت للنوم على الأريكة!</div>
+          <div class="chat-bubble-foot">Sara</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dialogue 5 -->
+  <div class="dlg-block">
+    <div class="dlg-header">
+      <div>
+        <div class="dlg-title">&#x1F4FA; Film Review</div>
+        <div class="dlg-sub ar">مراجعة فيلم</div>
+      </div>
+      <div class="dlg-tags"><span class="tag tag-grammar">narrative tenses in a review</span></div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Did you watch that thriller I recommended?&quot;,0.88)">Did you watch that thriller I recommended? <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">هل شاهدت فيلم الإثارة الذي أوصيتك به؟</div>
+          <div class="chat-bubble-foot">Firas</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Yes! The main character was investigating a mystery and then suddenly discovered that his partner had been hiding the truth all along.&quot;,0.88)">Yes! The main character <b>was investigating</b> a mystery and then suddenly <b>discovered</b> that his partner <b>had been hiding</b> the truth all along. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">نعم! كانت الشخصية الرئيسية تحقق في لغز ثم اكتشفت فجأة أن شريكه كان يخفي الحقيقة طوال الوقت.</div>
+          <div class="chat-bubble-foot">Rima</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Exactly! And by the time he figured it out, it was almost too late to stop the plan.&quot;,0.88)">Exactly! And by the time he <b>figured</b> it out, it <b>was</b> almost too late to stop the plan. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">بالضبط! وبحلول الوقت الذي أدرك فيه الأمر، كان الوقت قد فات تقريباً لإيقاف المخطط.</div>
+          <div class="chat-bubble-foot">Firas</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;I had never guessed the ending. It was brilliant. The best film I had seen in years.&quot;,0.88)">I <b>had never guessed</b> the ending. It was brilliant. The best film I <b>had seen</b> in years. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">لم أكن قد خمّنت النهاية أبداً. كان رائعاً. أفضل فيلم شاهدته منذ سنوات.</div>
+          <div class="chat-bubble-foot">Rima</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /tab-everyday -->
+
+<!-- ════════════════════ READING TAB ════════════════════ -->
+<div id="tab-reading" class="tab-panel">
+  <div class="read-wrap">
+    <div class="read-header">
+      <div class="read-title">&#x1F4D8; The Missing Painting</div>
+      <div class="read-sub ar">اللوحة المفقودة</div>
+    </div>
+    <div class="read-body">
+      <p onclick="ttsRead(&quot;Detective Karim arrived at the gallery early on Monday morning. The staff were standing outside looking worried.&quot;,0.88)">Detective Karim <b>arrived</b> at the gallery early on Monday morning. The staff <b>were standing</b> outside looking worried. <span class="read-sp">&#x1F509;</span></p>
+      <p onclick="ttsRead(&quot;Someone had stolen the most valuable painting in the collection during the night. The glass case was broken and the alarm was still flashing.&quot;,0.88)">Someone <b>had stolen</b> the most valuable painting in the collection during the night. The glass case <b>was broken</b> and the alarm <b>was still flashing</b>. <span class="read-sp">&#x1F509;</span></p>
+      <p onclick="ttsRead(&quot;Karim examined the room carefully. He noticed that the thief had entered through a small window at the back. The window had been left unlocked.&quot;,0.88)">Karim <b>examined</b> the room carefully. He <b>noticed</b> that the thief <b>had entered</b> through a small window at the back. The window <b>had been left</b> unlocked. <span class="read-sp">&#x1F509;</span></p>
+      <p onclick="ttsRead(&quot;While Karim was looking at the CCTV footage, his assistant found a glove near the window. Someone had dropped it while climbing through.&quot;,0.88)">While Karim <b>was looking</b> at the CCTV footage, his assistant <b>found</b> a glove near the window. Someone <b>had dropped</b> it while climbing through. <span class="read-sp">&#x1F509;</span></p>
+      <p onclick="ttsRead(&quot;By the time Karim had reviewed all the evidence, he was certain he knew who the thief was. He had seen that face before — it was someone who had worked at the gallery two years earlier.&quot;,0.88)">By the time Karim <b>had reviewed</b> all the evidence, he <b>was certain</b> he knew who the thief was. He <b>had seen</b> that face before — it was someone who <b>had worked</b> at the gallery two years earlier. <span class="read-sp">&#x1F509;</span></p>
+      <p onclick="ttsRead(&quot;He called the police immediately and within an hour, they had found the painting. It was hidden in a warehouse just outside the city.&quot;,0.88)">He <b>called</b> the police immediately and within an hour, they <b>had found</b> the painting. It <b>was hidden</b> in a warehouse just outside the city. <span class="read-sp">&#x1F509;</span></p>
+    </div>
+
+    <div class="vocab-wrap">
+      <div class="vocab-title">&#x1F4DA; Key Vocabulary</div>
+      <div class="vocab-grid">
+        <div class="vocab-card" onclick="ttsRead(&quot;gallery&quot;,0.88)"><div class="vocab-en">gallery</div><div class="vocab-ar ar">معرض فني / غاليري</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;valuable&quot;,0.88)"><div class="vocab-en">valuable</div><div class="vocab-ar ar">ثمين / قيّم</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;evidence&quot;,0.88)"><div class="vocab-en">evidence</div><div class="vocab-ar ar">دليل / أدلة</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;CCTV footage&quot;,0.88)"><div class="vocab-en">CCTV footage</div><div class="vocab-ar ar">تسجيلات كاميرات المراقبة</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;glove&quot;,0.88)"><div class="vocab-en">glove</div><div class="vocab-ar ar">قفاز</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;warehouse&quot;,0.88)"><div class="vocab-en">warehouse</div><div class="vocab-ar ar">مستودع / مخزن</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;certain&quot;,0.88)"><div class="vocab-en">certain</div><div class="vocab-ar ar">متأكد / واثق</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;examine&quot;,0.88)"><div class="vocab-en">examine</div><div class="vocab-ar ar">يفحص / يدرس</div></div>
+      </div>
+    </div>
+
+    <div class="rq-wrap">
+      <div class="rq-title">&#x2753; Comprehension Questions</div>
+      <div class="rq-item" id="rq1">
+        <div class="rq-q" onclick="ttsRead(&quot;When did the theft happen?&quot;,0.88)">1. When did the theft happen? &#x1F509;</div>
+        <div class="rq-opts">
+          <button class="read-opt" onclick="rqPick(this,'rq1',false)">Early Monday morning</button>
+          <button class="read-opt" onclick="rqPick(this,'rq1',true)">During the night before Monday</button>
+          <button class="read-opt" onclick="rqPick(this,'rq1',false)">While Karim was in the gallery</button>
+          <button class="read-opt" onclick="rqPick(this,'rq1',false)">Two years before the story</button>
+        </div>
+      </div>
+      <div class="rq-item" id="rq2">
+        <div class="rq-q" onclick="ttsRead(&quot;How did the thief enter?&quot;,0.88)">2. How did the thief enter the gallery? &#x1F509;</div>
+        <div class="rq-opts">
+          <button class="read-opt" onclick="rqPick(this,'rq2',false)">Through the front door</button>
+          <button class="read-opt" onclick="rqPick(this,'rq2',false)">By breaking the glass case</button>
+          <button class="read-opt" onclick="rqPick(this,'rq2',true)">Through an unlocked window at the back</button>
+          <button class="read-opt" onclick="rqPick(this,'rq2',false)">Using a stolen key</button>
+        </div>
+      </div>
+      <div class="rq-item" id="rq3">
+        <div class="rq-q" onclick="ttsRead(&quot;What clue did the assistant find?&quot;,0.88)">3. What clue did Karim's assistant find? &#x1F509;</div>
+        <div class="rq-opts">
+          <button class="read-opt" onclick="rqPick(this,'rq3',false)">A broken alarm</button>
+          <button class="read-opt" onclick="rqPick(this,'rq3',true)">A glove near the window</button>
+          <button class="read-opt" onclick="rqPick(this,'rq3',false)">A CCTV camera</button>
+          <button class="read-opt" onclick="rqPick(this,'rq3',false)">A key inside the gallery</button>
+        </div>
+      </div>
+      <div class="rq-item" id="rq4">
+        <div class="rq-q" onclick="ttsRead(&quot;The thief had worked at the gallery. When had he worked there?&quot;,0.88)">4. When had the thief worked at the gallery? &#x1F509;</div>
+        <div class="rq-opts">
+          <button class="read-opt" onclick="rqPick(this,'rq4',false)">The previous week</button>
+          <button class="read-opt" onclick="rqPick(this,'rq4',false)">Five years earlier</button>
+          <button class="read-opt" onclick="rqPick(this,'rq4',true)">Two years earlier</button>
+          <button class="read-opt" onclick="rqPick(this,'rq4',false)">The year before</button>
+        </div>
+      </div>
+      <div class="rq-item" id="rq5">
+        <div class="rq-q" onclick="ttsRead(&quot;Where was the painting found?&quot;,0.88)">5. Where was the painting found? &#x1F509;</div>
+        <div class="rq-opts">
+          <button class="read-opt" onclick="rqPick(this,'rq5',false)">In the thief's house</button>
+          <button class="read-opt" onclick="rqPick(this,'rq5',false)">At the back of the gallery</button>
+          <button class="read-opt" onclick="rqPick(this,'rq5',true)">In a warehouse outside the city</button>
+          <button class="read-opt" onclick="rqPick(this,'rq5',false)">In a police evidence room</button>
+        </div>
+      </div>
+      <div class="rq-score" id="rqScore34" style="display:none">
+        <div class="rqs-icon">&#x1F3AF;</div>
+        <div class="rqs-num" id="rqScoreNum34"></div>
+        <div class="rqs-msg" id="rqScoreMsg34"></div>
+        <div class="rqs-ar ar" id="rqScoreAr34"></div>
+        <button class="rqs-btn" onclick="rqReset34()">&#x1F504; Try Again</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /tab-reading -->
+
+<!-- ════════════════════ CHECK IT! TAB ════════════════════ -->
+<div id="tab-checkit" class="tab-panel">
+  <div class="ci-hero">
+    <div class="ci-hero-icon">&#x2705;</div>
+    <h2 class="ci-hero-title">Check It!</h2>
+    <p class="ci-hero-sub">25 questions — Narrative Tenses &amp; Past Perfect — 20 MCQ + 5 Fill-in-the-Blank</p>
+    <div class="ci-hero-types">
+      <span class="tag tag-grammar">20 Multiple Choice</span>
+      <span class="tag tag-other">5 Fill in the Blank</span>
+    </div>
+  </div>
+  <div class="ci-progress-wrap">
+    <div class="ci-progress-inner">
+      <div class="ci-progress-bar"><div class="ci-progress-fill" id="ciProgressFill34"></div></div>
+      <div class="ci-progress-txt">
+        <span id="ciProgressTxt34">0 / 25 answered</span>
+        <span id="ciScoreTxt34">Score: 0</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="ci-wrap" id="ciWrap34">
+
+    <div class="ci-q" id="ciq1"><div class="ci-q-num">Q1</div><div class="ci-q-text" onclick="ttsRead(&quot;What is the form of the past perfect?&quot;,0.88)">What is the form of the <b>Past Perfect</b>? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq1',false)">was / were + verb-ing</button><button class="ci-btn" onclick="ciPick(this,'ciq1',true)">had + past participle</button><button class="ci-btn" onclick="ciPick(this,'ciq1',false)">have / has + past participle</button><button class="ci-btn" onclick="ciPick(this,'ciq1',false)">verb-ed</button></div></div>
+
+    <div class="ci-q" id="ciq2"><div class="ci-q-num">Q2</div><div class="ci-q-text" onclick="ttsRead(&quot;When I arrived, she had already left. Which action happened first?&quot;,0.88)">"When I arrived, she <b>had already left</b>." — which happened first? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq2',false)">I arrived</button><button class="ci-btn" onclick="ciPick(this,'ciq2',true)">She left</button><button class="ci-btn" onclick="ciPick(this,'ciq2',false)">Both at the same time</button><button class="ci-btn" onclick="ciPick(this,'ciq2',false)">Neither — it is future</button></div></div>
+
+    <div class="ci-q" id="ciq3"><div class="ci-q-num">Q3</div><div class="ci-q-text" onclick="ttsRead(&quot;I was walking to the shop when I saw the accident. What tense is was walking?&quot;,0.88)">"I <b>was walking</b> to the shop when I saw the accident." — "was walking" is ___ &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq3',false)">Past Simple</button><button class="ci-btn" onclick="ciPick(this,'ciq3',true)">Past Continuous</button><button class="ci-btn" onclick="ciPick(this,'ciq3',false)">Past Perfect</button><button class="ci-btn" onclick="ciPick(this,'ciq3',false)">Present Continuous</button></div></div>
+
+    <div class="ci-q" id="ciq4"><div class="ci-q-num">Q4</div><div class="ci-q-text" onclick="ttsRead(&quot;Choose the correct sentence. By the time we got there, the film started. Or: By the time we got there, the film had started.&quot;,0.88)">Choose the correct sentence: &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq4',false)">By the time we got there, the film started.</button><button class="ci-btn" onclick="ciPick(this,'ciq4',true)">By the time we got there, the film had started.</button><button class="ci-btn" onclick="ciPick(this,'ciq4',false)">By the time we got there, the film was starting.</button><button class="ci-btn" onclick="ciPick(this,'ciq4',false)">By the time we got there, the film has started.</button></div></div>
+
+    <div class="ci-q" id="ciq5"><div class="ci-q-num">Q5</div><div class="ci-q-text" onclick="ttsRead(&quot;What does the past continuous describe in a narrative?&quot;,0.88)">In a narrative, the Past Continuous mainly describes ___ &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq5',false)">the main sequence of events</button><button class="ci-btn" onclick="ciPick(this,'ciq5',false)">actions that happened before the story</button><button class="ci-btn" onclick="ciPick(this,'ciq5',true)">background scenes and interrupted actions</button><button class="ci-btn" onclick="ciPick(this,'ciq5',false)">future plans</button></div></div>
+
+    <div class="ci-q" id="ciq6"><div class="ci-q-num">Q6</div><div class="ci-q-text" onclick="ttsRead(&quot;While I was sleeping, he called. Or: When I was sleeping, he called. Which is more natural?&quot;,0.88)">Which is more natural? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq6',true)">While I was sleeping, he called.</button><button class="ci-btn" onclick="ciPick(this,'ciq6',false)">While he called, I was sleeping.</button><button class="ci-btn" onclick="ciPick(this,'ciq6',false)">While I slept, he was calling.</button><button class="ci-btn" onclick="ciPick(this,'ciq6',false)">While he had called, I was sleeping.</button></div></div>
+
+    <div class="ci-q" id="ciq7"><div class="ci-q-num">Q7</div><div class="ci-q-text" onclick="ttsRead(&quot;He was tired because he hadn't slept. Which tense is hadn't slept?&quot;,0.88)">"He was tired because he <b>hadn't slept</b>." — "hadn't slept" is ___ &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq7',false)">Past Continuous negative</button><button class="ci-btn" onclick="ciPick(this,'ciq7',false)">Present Perfect negative</button><button class="ci-btn" onclick="ciPick(this,'ciq7',true)">Past Perfect negative</button><button class="ci-btn" onclick="ciPick(this,'ciq7',false)">Past Simple negative</button></div></div>
+
+    <div class="ci-q" id="ciq8"><div class="ci-q-num">Q8</div><div class="ci-q-text" onclick="ttsRead(&quot;Which word introduces a sudden event in a narrative? Suddenly or while?&quot;,0.88)">Which word typically introduces a <b>sudden event</b> in a story? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq8',false)">while</button><button class="ci-btn" onclick="ciPick(this,'ciq8',false)">by the time</button><button class="ci-btn" onclick="ciPick(this,'ciq8',true)">suddenly</button><button class="ci-btn" onclick="ciPick(this,'ciq8',false)">although</button></div></div>
+
+    <div class="ci-q" id="ciq9"><div class="ci-q-num">Q9</div><div class="ci-q-text" onclick="ttsRead(&quot;I had seen him yesterday. Is this correct?&quot;,0.88)">"I <b>had seen</b> him yesterday." — is this correct? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq9',false)">Yes, past perfect is always needed.</button><button class="ci-btn" onclick="ciPick(this,'ciq9',true)">No — "I saw him yesterday." (specific time = past simple)</button><button class="ci-btn" onclick="ciPick(this,'ciq9',false)">Yes, because yesterday is past.</button><button class="ci-btn" onclick="ciPick(this,'ciq9',false)">No — use present perfect.</button></div></div>
+
+    <div class="ci-q" id="ciq10"><div class="ci-q-num">Q10</div><div class="ci-q-text" onclick="ttsRead(&quot;She cooked dinner. Then she watched a film. Can we combine these with past perfect?&quot;,0.88)">"She cooked dinner. Then she watched a film." — combined with past perfect: &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq10',false)">She had watched a film before she cooked.</button><button class="ci-btn" onclick="ciPick(this,'ciq10',true)">She watched a film after she had cooked dinner.</button><button class="ci-btn" onclick="ciPick(this,'ciq10',false)">She was cooking when she watched a film.</button><button class="ci-btn" onclick="ciPick(this,'ciq10',false)">She has cooked dinner and watched a film.</button></div></div>
+
+    <div class="ci-break" id="brk10" style="display:none">
+      <div class="ci-break-icon">&#x2615;</div>
+      <div class="ci-break-title">Halfway! Keep Going!</div>
+      <div class="ci-break-ar ar">منتصف الطريق! استمر</div>
+      <div class="ci-break-score">Score so far: <span id="ciBreakScore34"></span> / 10</div>
+    </div>
+
+    <div class="ci-q" id="ciq11"><div class="ci-q-num">Q11</div><div class="ci-q-text" onclick="ttsRead(&quot;Which is the correct past perfect question form?&quot;,0.88)">Which is the correct Past Perfect question? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq11',false)">Did you had met her before?</button><button class="ci-btn" onclick="ciPick(this,'ciq11',true)">Had you met her before?</button><button class="ci-btn" onclick="ciPick(this,'ciq11',false)">Have you met her before?</button><button class="ci-btn" onclick="ciPick(this,'ciq11',false)">Were you met her before?</button></div></div>
+
+    <div class="ci-q" id="ciq12"><div class="ci-q-num">Q12</div><div class="ci-q-text" onclick="ttsRead(&quot;The sun was shining when we left. What role does was shining play?&quot;,0.88)">"The sun <b>was shining</b> when we left." — "was shining" provides ___ &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq12',false)">The main event of the story</button><button class="ci-btn" onclick="ciPick(this,'ciq12',true)">Background / atmosphere</button><button class="ci-btn" onclick="ciPick(this,'ciq12',false)">An action before another past action</button><button class="ci-btn" onclick="ciPick(this,'ciq12',false)">A future plan</button></div></div>
+
+    <div class="ci-q" id="ciq13"><div class="ci-q-num">Q13</div><div class="ci-q-text" onclick="ttsRead(&quot;Which connector signals that an action finished before another past action?&quot;,0.88)">Which connector signals an action finished <b>before</b> another? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq13',false)">suddenly</button><button class="ci-btn" onclick="ciPick(this,'ciq13',false)">while</button><button class="ci-btn" onclick="ciPick(this,'ciq13',true)">by the time</button><button class="ci-btn" onclick="ciPick(this,'ciq13',false)">even though</button></div></div>
+
+    <div class="ci-q" id="ciq14"><div class="ci-q-num">Q14</div><div class="ci-q-text" onclick="ttsRead(&quot;She had never visited Paris before that trip. What does this mean?&quot;,0.88)">"She <b>had never visited</b> Paris before that trip." — this means ___ &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq14',false)">She visited Paris once</button><button class="ci-btn" onclick="ciPick(this,'ciq14',true)">It was her first trip to Paris</button><button class="ci-btn" onclick="ciPick(this,'ciq14',false)">She is planning to visit Paris</button><button class="ci-btn" onclick="ciPick(this,'ciq14',false)">She didn't like Paris</button></div></div>
+
+    <div class="ci-q" id="ciq15"><div class="ci-q-num">Q15</div><div class="ci-q-text" onclick="ttsRead(&quot;While she was cooking, he was setting the table. What does this show?&quot;,0.88)">"While she <b>was cooking</b>, he <b>was setting</b> the table." — this shows ___ &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq15',false)">She cooked first, then he set the table</button><button class="ci-btn" onclick="ciPick(this,'ciq15',true)">Two actions happening at the same time</button><button class="ci-btn" onclick="ciPick(this,'ciq15',false)">One action interrupted the other</button><button class="ci-btn" onclick="ciPick(this,'ciq15',false)">An action before the main story</button></div></div>
+
+    <div class="ci-q" id="ciq16"><div class="ci-q-num">Q16</div><div class="ci-q-text" onclick="ttsRead(&quot;Which word can NOT be used with past continuous to introduce a sudden action?&quot;,0.88)">Which word CANNOT introduce a sudden / completed action? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq16',false)">when</button><button class="ci-btn" onclick="ciPick(this,'ciq16',true)">while</button><button class="ci-btn" onclick="ciPick(this,'ciq16',false)">suddenly</button><button class="ci-btn" onclick="ciPick(this,'ciq16',false)">then</button></div></div>
+
+    <div class="ci-q" id="ciq17"><div class="ci-q-num">Q17</div><div class="ci-q-text" onclick="ttsRead(&quot;He was eating and then he left. Is this correct?&quot;,0.88)">"He <b>was eating</b> and then he <b>left</b>." — is this correct? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq17',false)">Yes, perfectly natural.</button><button class="ci-btn" onclick="ciPick(this,'ciq17',true)">No — "He ate and then he left." (sequence → past simple)</button><button class="ci-btn" onclick="ciPick(this,'ciq17',false)">No — use past perfect for both.</button><button class="ci-btn" onclick="ciPick(this,'ciq17',false)">Yes, but only in formal writing.</button></div></div>
+
+    <div class="ci-q" id="ciq18"><div class="ci-q-num">Q18</div><div class="ci-q-text" onclick="ttsRead(&quot;Already, just, never, and yet are signals for which tense in narrative?&quot;,0.88)"><b>already, just, never, yet</b> — in narrative, these are signals for ___ &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq18',false)">Past Simple</button><button class="ci-btn" onclick="ciPick(this,'ciq18',false)">Past Continuous</button><button class="ci-btn" onclick="ciPick(this,'ciq18',true)">Past Perfect</button><button class="ci-btn" onclick="ciPick(this,'ciq18',false)">Present Perfect</button></div></div>
+
+    <div class="ci-q" id="ciq19"><div class="ci-q-num">Q19</div><div class="ci-q-text" onclick="ttsRead(&quot;Which sentence uses all three narrative tenses correctly?&quot;,0.88)">Which sentence uses all three narrative tenses correctly? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq19',false)">When I arrive, she was cooking and had left.</button><button class="ci-btn" onclick="ciPick(this,'ciq19',false)">When I arrived, she has cooked and was leaving.</button><button class="ci-btn" onclick="ciPick(this,'ciq19',true)">When I arrived, she was cooking the meal she had prepared earlier.</button><button class="ci-btn" onclick="ciPick(this,'ciq19',false)">When I was arriving, she cooked and had left.</button></div></div>
+
+    <div class="ci-q" id="ciq20"><div class="ci-q-num">Q20</div><div class="ci-q-text" onclick="ttsRead(&quot;Is past perfect optional after after and before?&quot;,0.88)">With <b>after</b> and <b>before</b>, the Past Perfect is ___ &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq20',false)">always required</button><button class="ci-btn" onclick="ciPick(this,'ciq20',true)">optional — the connector already shows the order</button><button class="ci-btn" onclick="ciPick(this,'ciq20',false)">never used</button><button class="ci-btn" onclick="ciPick(this,'ciq20',false)">only used in questions</button></div></div>
+
+    <div class="ci-q ci-fib" id="ciq21"><div class="ci-q-num">Q21</div><div class="ci-fib-lbl">&#x270F; Fill in the Blank</div><div class="ci-q-text" onclick="ttsRead(&quot;By the time we arrived at the station, the train had already left.&quot;,0.88)">By the time we arrived, the train ___ already left. (past perfect) <span class="read-sp">&#x1F509;</span></div><div class="ci-fib-wrap"><input class="ci-fib-input" id="fib21" type="text" placeholder="Type your answer..."><button class="ci-fib-btn" id="fibBtn21" onclick="ciFibCheck('fib21','fibBtn21','ciq21','fibSol21','had')">Check</button></div><div class="ci-fib-solution" id="fibSol21" style="display:none">&#x2705; Answer: <b>had</b> &nbsp;|&nbsp; <b>had</b> — past perfect = had + past participle</div></div>
+
+    <div class="ci-q ci-fib" id="ciq22"><div class="ci-q-num">Q22</div><div class="ci-fib-lbl">&#x270F; Fill in the Blank</div><div class="ci-q-text" onclick="ttsRead(&quot;I was reading when suddenly the lights went out.&quot;,0.88)">I ___ reading when suddenly the lights went out. (background action) <span class="read-sp">&#x1F509;</span></div><div class="ci-fib-wrap"><input class="ci-fib-input" id="fib22" type="text" placeholder="Type your answer..."><button class="ci-fib-btn" id="fibBtn22" onclick="ciFibCheck('fib22','fibBtn22','ciq22','fibSol22','was')">Check</button></div><div class="ci-fib-solution" id="fibSol22" style="display:none">&#x2705; Answer: <b>was</b> &nbsp;|&nbsp; <b>was</b> — past continuous: was + verb-ing for background</div></div>
+
+    <div class="ci-q ci-fib" id="ciq23"><div class="ci-q-num">Q23</div><div class="ci-fib-lbl">&#x270F; Fill in the Blank</div><div class="ci-q-text" onclick="ttsRead(&quot;She told me she had never seen anything like it before.&quot;,0.88)">She told me she ___ never seen anything like it. (past perfect negative) <span class="read-sp">&#x1F509;</span></div><div class="ci-fib-wrap"><input class="ci-fib-input" id="fib23" type="text" placeholder="Type your answer..."><button class="ci-fib-btn" id="fibBtn23" onclick="ciFibCheck('fib23','fibBtn23','ciq23','fibSol23','had')">Check</button></div><div class="ci-fib-solution" id="fibSol23" style="display:none">&#x2705; Answer: <b>had</b> &nbsp;|&nbsp; <b>had</b> — had + never + past participle</div></div>
+
+    <div class="ci-q ci-fib" id="ciq24"><div class="ci-q-num">Q24</div><div class="ci-fib-lbl">&#x270F; Fill in the Blank</div><div class="ci-q-text" onclick="ttsRead(&quot;While they were talking, the phone suddenly rang.&quot;,0.88)">___ they were talking, the phone suddenly rang. (simultaneous — duration) <span class="read-sp">&#x1F509;</span></div><div class="ci-fib-wrap"><input class="ci-fib-input" id="fib24" type="text" placeholder="Type your answer..."><button class="ci-fib-btn" id="fibBtn24" onclick="ciFibCheck('fib24','fibBtn24','ciq24','fibSol24','While')">Check</button></div><div class="ci-fib-solution" id="fibSol24" style="display:none">&#x2705; Answer: <b>While</b> &nbsp;|&nbsp; <b>While</b> — while + past continuous for ongoing background action</div></div>
+
+    <div class="ci-q ci-fib" id="ciq25"><div class="ci-q-num">Q25</div><div class="ci-fib-lbl">&#x270F; Fill in the Blank</div><div class="ci-q-text" onclick="ttsRead(&quot;He was exhausted because he had worked all night.&quot;,0.88)">He was exhausted because he ___ worked all night. (earlier reason) <span class="read-sp">&#x1F509;</span></div><div class="ci-fib-wrap"><input class="ci-fib-input" id="fib25" type="text" placeholder="Type your answer..."><button class="ci-fib-btn" id="fibBtn25" onclick="ciFibCheck('fib25','fibBtn25','ciq25','fibSol25','had')">Check</button></div><div class="ci-fib-solution" id="fibSol25" style="display:none">&#x2705; Answer: <b>had</b> &nbsp;|&nbsp; <b>had</b> — past perfect gives the reason that came before the exhaustion</div></div>
+
+    <div class="ci-final-score" id="ciFinal34" style="display:none">
+      <div class="cif-icon">&#x1F3C6;</div>
+      <div class="cif-title">Lesson Complete!</div>
+      <div class="cif-ar ar">أحسنت! أكملت الدرس</div>
+      <div class="cif-score"><span id="ciFinalScore34"></span> / 25</div>
+      <div class="cif-msg" id="ciFinalMsg34"></div>
+      <div class="cif-ar ar" id="ciFinalAr34"></div>
+      <div class="cif-btns">
+        <button class="cif-btn" onclick="ciReset34()">&#x1F504; Try Again</button>
+        <button class="cif-btn cif-btn-next" onclick="window.location.href='../index.html'">&#x1F3E0; Main Menu</button>
+      </div>
+    </div>
+
+  </div><!-- /ciWrap34 -->
+</div><!-- /tab-checkit -->
+
+</div><!-- /main-content -->
+</div><!-- /layout -->
+
+<script src="../media/global-player.js"></script>
+<script>
+var rqScore34=0,rqAnswered34=0;
+var ciScore34=0,ciAnswered34=0,ciTotal34=25;
+
+function showTab(id,btn){
+  document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.remove('active');});
+  document.querySelectorAll('.main-tab').forEach(function(b){b.classList.remove('active');});
+  document.getElementById('tab-'+id).classList.add('active');
+  btn.classList.add('active');
+}
+function ttsRead(text,rate){
+  speechSynthesis.cancel();
+  var u=new SpeechSynthesisUtterance(text);
+  u.lang='en-US';u.rate=rate||0.9;
+  speechSynthesis.speak(u);
+}
+function rqPick(btn,qid,correct){
+  var qEl=document.getElementById(qid);
+  if(qEl.dataset.done)return;
+  qEl.dataset.done='1';
+  qEl.querySelectorAll('.read-opt').forEach(function(b){b.classList.add('done');if(b===btn)b.classList.add(correct?'correct':'wrong');});
+  if(correct)rqScore34++;
+  rqAnswered34++;
+  if(rqAnswered34===5){
+    var sc=document.getElementById('rqScore34');sc.style.display='block';
+    document.getElementById('rqScoreNum34').textContent=rqScore34+'/5';
+    var msgs=[['Keep practising!','استمر في التدريب!'],['Good effort!','جهد جيد!'],['Getting there!','أنت تتحسن!'],['Well done!','أداء جيد جداً!'],['Great job!','عمل رائع!'],['Perfect!','نتيجة مثالية!']];
+    var m=msgs[Math.min(rqScore34,5)];
+    document.getElementById('rqScoreMsg34').textContent=m[0];
+    document.getElementById('rqScoreAr34').textContent=m[1];
+    sc.scrollIntoView({behavior:'smooth',block:'center'});
+  }
+}
+function rqReset34(){
+  rqScore34=0;rqAnswered34=0;
+  ['rq1','rq2','rq3','rq4','rq5'].forEach(function(id){
+    var q=document.getElementById(id);if(!q)return;
+    delete q.dataset.done;
+    q.querySelectorAll('.read-opt').forEach(function(b){b.classList.remove('correct','wrong','done');});
+  });
+  document.getElementById('rqScore34').style.display='none';
+  document.getElementById('tab-reading').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function ciUpdateProgress34(){
+  var pct=Math.round(ciAnswered34/ciTotal34*100);
+  document.getElementById('ciProgressFill34').style.width=pct+'%';
+  document.getElementById('ciProgressTxt34').textContent=ciAnswered34+' / '+ciTotal34+' answered';
+  document.getElementById('ciScoreTxt34').textContent='Score: '+ciScore34;
+}
+function ciCheckBreakAndDone34(){
+  if(ciAnswered34===10){
+    var bEl=document.getElementById('brk10');
+    if(bEl){bEl.style.display='block';document.getElementById('ciBreakScore34').textContent=ciScore34;}
+  }
+  if(ciAnswered34===ciTotal34)ciShowScore34();
+}
+function ciPick(btn,qid,correct){
+  var qEl=document.getElementById(qid);if(qEl.dataset.done)return;
+  qEl.dataset.done='1';
+  qEl.querySelectorAll('.ci-btn').forEach(function(b){b.classList.add('done');});
+  btn.classList.add(correct?'ci-correct':'ci-wrong');
+  if(correct)ciScore34++;
+  ciAnswered34++;ciUpdateProgress34();ciCheckBreakAndDone34();
+}
+function ciFibCheck(inputId,btnId,qid,solId,answer){
+  var inp=document.getElementById(inputId),btn=document.getElementById(btnId),qEl=document.getElementById(qid);
+  if(qEl.dataset.done)return;
+  var correct=inp.value.trim().toLowerCase()===answer.toLowerCase();
+  qEl.dataset.done='1';inp.disabled=true;btn.disabled=true;
+  inp.style.borderColor=correct?'var(--green)':'var(--red)';
+  inp.style.color=correct?'var(--green)':'var(--red)';
+  var sol=document.getElementById(solId);if(sol)sol.style.display='block';
+  if(correct)ciScore34++;
+  ciAnswered34++;ciUpdateProgress34();ciCheckBreakAndDone34();
+}
+function ciShowScore34(){
+  var el=document.getElementById('ciFinal34');el.style.display='block';
+  document.getElementById('ciFinalScore34').textContent=ciScore34;
+  var pct=Math.round(ciScore34/ciTotal34*100);
+  var msgs=[['Keep studying!','واصل الدراسة!'],['Good start!','بداية جيدة!'],['Well done!','عمل جيد!'],['Great job!','أداء رائع!'],['Excellent!','ممتاز!'],['Perfect!','نتيجة مثالية!']];
+  var idx=Math.floor(pct/20);
+  var m=msgs[Math.min(idx,5)];
+  document.getElementById('ciFinalMsg34').textContent=m[0];
+  document.getElementById('ciFinalAr34').textContent=m[1];
+  localStorage.setItem('up_l34',Math.round(ciScore34/ciTotal34*100));
+  el.scrollIntoView({behavior:'smooth',block:'center'});
+}
+function ciReset34(){
+  ciScore34=0;ciAnswered34=0;
+  document.getElementById('ciFinal34').style.display='none';
+  document.getElementById('brk10').style.display='none';
+  for(var i=1;i<=25;i++){
+    var q=document.getElementById('ciq'+i);if(!q)continue;
+    delete q.dataset.done;
+    q.querySelectorAll('.ci-btn').forEach(function(b){b.classList.remove('ci-correct','ci-wrong','done');});
+    var inp=q.querySelector('.ci-fib-input');
+    if(inp){inp.value='';inp.disabled=false;inp.style.borderColor='';inp.style.color='';}
+    var fbtn=q.querySelector('.ci-fib-btn');if(fbtn)fbtn.disabled=false;
+    var sol=q.querySelector('.ci-fib-solution');if(sol)sol.style.display='none';
+  }
+  ciUpdateProgress34();
+  document.getElementById('tab-checkit').scrollIntoView({behavior:'smooth',block:'start'});
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+(function(){
+  var map={1: "up_l1", 2: "up_l2", 3: "up_l3", 4: "up_l4", 5: "up_l5", 6: "up1", 7: "up2", 8: "up3", 9: "up4", 10: "up6", 11: "up5", 12: "up_l12", 13: "up7", 14: "up8", 15: "up9", 16: "up10", 17: "up11", 19: "up_l19", 20: "up_l20", 21: "up_l21", 22: "up_l22", 23: "up_l23", 24: "up_l24", 25: "up_l25", 26: "up_l26", 27: "up_l27", 28: "up_l28", 29: "up_l29", 30: "up_l30", 31: "up_l31", 32: "up_l32", 33: "up_l33", 34: "up_l34", 35: "up_l35", 36: "up_l36", 37: "up_l37", 38: "up_l38", 39: "up_l39", 40: "up_l40", 41: "up_l41", 42: "up_l42", 43: "up_l43", 44: "up_l44", 45: "up_l45", 46: "up_l46"};
+  for(var lid in map){
+    var f=document.getElementById('sp'+lid);
+    if(f){var v=parseInt(localStorage.getItem(map[lid])||'0',10);f.style.width=v+'%';}
+  }
+  setTimeout(function(){
+    var a=document.querySelector('.su-item.su-active');
+    if(a){var u=a.closest('.sidebar-units');if(u)u.scrollTop=Math.max(0,a.offsetTop-a.offsetHeight);}
+  },80);
+})();
+</script>
+<script>
+function toggleSidebar(){
+  var sb=document.querySelector('.sidebar');
+  var bd=document.getElementById('sbBackdrop');
+  if(!sb||!bd)return;
+  sb.classList.toggle('sb-open');
+  bd.classList.toggle('sb-open');
+  document.body.style.overflow=sb.classList.contains('sb-open')?'hidden':'';
+}
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.su-item').forEach(function(a){
+    a.addEventListener('click',function(){
+      var sb=document.querySelector('.sidebar');
+      if(sb&&sb.classList.contains('sb-open'))toggleSidebar();
+    });
+  });
+});
+</script>
+
+<script>
+(function(){
+  // Disable right-click
+  document.addEventListener('contextmenu', function(e){ e.preventDefault(); });
+
+  // Disable keyboard shortcuts
+  document.addEventListener('keydown', function(e){
+    // F12
+    if(e.key==='F12'){e.preventDefault();return false;}
+    // Ctrl+U (view source), Ctrl+S (save), Ctrl+A (select all), Ctrl+P (print)
+    if(e.ctrlKey && ['u','U','s','S','a','A','p','P'].indexOf(e.key)!==-1){
+      e.preventDefault();return false;
+    }
+    // Ctrl+Shift+I (DevTools), Ctrl+Shift+J, Ctrl+Shift+C
+    if(e.ctrlKey && e.shiftKey && ['i','I','j','J','c','C','k','K'].indexOf(e.key)!==-1){
+      e.preventDefault();return false;
+    }
+  });
+
+  // Disable text selection via CSS
+  document.documentElement.style.webkitUserSelect='none';
+  document.documentElement.style.userSelect='none';
+
+  // Allow selection inside inputs/textareas only
+  document.addEventListener('mousedown', function(e){
+    var t=e.target.tagName;
+    if(t==='INPUT'||t==='TEXTAREA'){
+      e.target.style.userSelect='text';
+      e.target.style.webkitUserSelect='text';
+    }
+  });
+
+  // Block drag
+  document.addEventListener('dragstart', function(e){ e.preventDefault(); });
+})();
+</script>
+<button class="float-menu-btn" onclick="toggleSidebar()" aria-label="القائمة">
+  <span></span><span></span><span></span>
+</button>
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=FREE"></script>
+<script src="../media/rv.js"></script>
+</body>
+</html>

@@ -1,0 +1,1500 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lesson 40 — Idioms &amp; Collocations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#1a3a6e;--primary-dark:#0f2548;--accent:#f4a624;--al:rgba(244,166,36,0.12);--bg:#0d1b2a;--card:#162030;--card2:#1e2d40;--border:#2d4560;--text:#e8edf5;--muted:#8899b0;--green:#22c55e;--red:#ef4444;--blue:#4a9eff;--purple:#a855f7}
+body{font-family:'Poppins','Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.ar{font-family:'Cairo','Segoe UI',Arial,sans-serif}
+.topnav{background:var(--primary-dark);border-bottom:2px solid var(--accent);padding:10px 24px;display:flex;align-items:center;justify-content:space-between}
+.hero{background:linear-gradient(135deg,#1a3a6e 0%,#0f2548 55%,#0d1f3c 100%);padding:55px 24px 48px;text-align:center;border-bottom:3px solid var(--accent);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;border-radius:50%;background:rgba(244,166,36,0.06)}
+.hero::after{content:'';position:absolute;bottom:-60px;left:-60px;width:300px;height:300px;border-radius:50%;background:rgba(74,158,255,0.05)}
+.unit-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(244,166,36,0.15);border:1px solid rgba(244,166,36,0.4);color:var(--accent);font-weight:800;padding:6px 18px;border-radius:20px;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
+.hero-title{font-size:clamp(28px,6vw,52px);font-weight:900;color:white;line-height:1.15;margin-bottom:8px}
+.hero-title i{color:var(--accent);font-style:italic}
+.hero-ar{font-size:18px;color:var(--muted);margin-bottom:12px;direction:rtl}
+.hero-sub{color:var(--muted);max-width:620px;margin:0 auto 22px;font-size:14px}
+.hero-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.tag{display:inline-flex;align-items:center;gap:6px;padding:6px 15px;border-radius:16px;font-size:12px;font-weight:700}
+.tag-grammar{background:rgba(244,166,36,0.15);color:var(--accent);border:1px solid rgba(244,166,36,0.3)}
+.tag-other{background:rgba(74,158,255,0.1);color:var(--blue);border:1px solid rgba(74,158,255,0.25)}
+.tag-btn{cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif}
+.tag-btn:hover{transform:translateY(-2px);opacity:.85}
+.main-tabs{display:flex;gap:4px;padding:14px 24px;background:var(--primary-dark);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;flex-wrap:wrap}
+.main-tab{padding:8px 18px;border-radius:8px;border:1px solid transparent;background:none;color:var(--muted);font-weight:700;cursor:pointer;font-size:13px;font-family:'Poppins',sans-serif;transition:all .2s}
+.main-tab.active{background:var(--accent);color:#0d1b2a;border-color:var(--accent)}
+.main-tab:hover:not(.active){background:rgba(244,166,36,.1);color:var(--accent);border-color:rgba(244,166,36,.3)}
+.tab-panel{display:none;padding:20px 24px}
+.tab-panel.active{display:block}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;margin-bottom:16px}
+.card-title{font-size:16px;font-weight:800;color:white;margin-bottom:5px;display:flex;align-items:center;gap:8px}
+.card-ar{font-size:13px;color:var(--muted);margin-bottom:14px;direction:rtl;font-family:'Cairo',sans-serif}
+.card-note{background:var(--al);border:1px solid rgba(244,166,36,.3);border-radius:10px;padding:10px 14px;font-size:12.5px;color:var(--accent);margin:10px 0;direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.sub-tabs{display:flex;gap:4px;margin:14px 0 18px;flex-wrap:wrap}
+.sub-tab{padding:6px 14px;border-radius:8px;border:1px solid var(--border);background:none;color:var(--muted);font-weight:700;cursor:pointer;font-size:12px;font-family:'Poppins',sans-serif;transition:all .2s}
+.sub-tab.active{background:rgba(244,166,36,.15);border-color:var(--accent);color:var(--accent)}
+.sub-tab:hover:not(.active){border-color:var(--accent);color:var(--accent)}
+.sub-panel{display:none}
+.sub-panel.active{display:block}
+.tts-box{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.tts-btn{background:var(--card2);border:1px solid var(--blue);color:var(--blue);padding:7px 16px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif}
+.tts-btn:hover{background:rgba(74,158,255,.15);transform:translateY(-1px)}
+.tts-stop{border-color:var(--muted);color:var(--muted)}
+.tts-stop:hover{background:rgba(136,153,176,.1)}
+.formula-box{background:rgba(10,30,53,0.8);border:2px solid var(--border);border-radius:14px;padding:18px 22px;margin:14px 0}
+.formula-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid rgba(45,69,96,0.4);flex-wrap:wrap}
+.formula-row:last-child{border-bottom:none}
+.formula-subj{font-size:14px;font-weight:800;color:var(--blue);min-width:160px}
+.formula-be{font-size:15px;font-weight:900;color:var(--accent);background:rgba(244,166,36,.12);padding:4px 12px;border-radius:8px}
+.formula-be.neg{color:var(--red);background:rgba(239,68,68,.1)}
+.formula-be.q{color:var(--green);background:rgba(34,197,94,.1)}
+.formula-note{font-size:11px;color:var(--muted);font-style:italic;margin-left:auto}
+.formula-plus{font-size:16px;color:var(--muted)}
+.ex-section-title{font-size:12px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin:16px 0 8px}
+.ex-list{margin-top:4px}
+.ex-item{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid rgba(45,69,96,0.3)}
+.ex-item:last-child{border-bottom:none}
+.sp{background:none;border:none;font-size:16px;cursor:pointer;color:var(--blue);flex-shrink:0;padding:2px 0;transition:transform .2s;line-height:1}
+.sp:hover{transform:scale(1.2)}
+.sp-group{display:inline-flex;align-items:center;gap:3px;flex-shrink:0}
+.sp-pp,.sp-st{background:var(--card2);border:1px solid var(--border);color:var(--muted);font-size:12px;padding:3px 7px;border-radius:6px;cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif;line-height:1;min-width:26px;text-align:center}
+.sp-pp:hover{background:rgba(74,158,255,.15);border-color:var(--blue);color:var(--blue)}
+.sp-st:hover{background:rgba(239,68,68,.1);border-color:var(--red);color:var(--red)}
+.ex-en{font-size:13.5px;color:var(--text);font-weight:600;line-height:1.4}
+.ex-en b{color:var(--accent)}
+.ex-ar{font-size:12px;color:var(--muted);margin-top:2px;direction:rtl;font-family:'Cairo',sans-serif}
+.sa-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13px}
+.sa-table th{background:rgba(26,58,110,0.5);color:var(--accent);padding:8px 12px;font-weight:800;text-align:left;border:1px solid var(--border)}
+.sa-table td{padding:8px 12px;border:1px solid rgba(45,69,96,0.4);vertical-align:middle}
+.sa-table tr:nth-child(even) td{background:rgba(30,45,64,0.3)}
+.sa-yes{color:var(--green);font-weight:800}
+.sa-no{color:var(--red);font-weight:800}
+.wh-grid{display:flex;flex-direction:column;gap:7px;margin:12px 0}
+.wh-row{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px;font-size:13px}
+.wh-q{color:var(--text);margin-bottom:3px}
+.wh-q b{color:var(--blue)}
+.wh-a{color:var(--muted);font-style:italic}
+.time-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;margin:12px 0}
+.time-item{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px}
+.time-en{font-size:13px;font-weight:700;color:var(--accent)}
+.time-ar{font-size:11px;color:var(--muted);margin-top:3px;direction:rtl;font-family:'Cairo',sans-serif}
+.time-eg{font-size:11px;color:var(--text);margin-top:4px;font-style:italic}
+.mistake-item{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.m-wrong{font-size:13px;color:var(--red);margin-bottom:3px}
+.m-wrong::before{content:'❌ '}
+.m-right{font-size:13px;color:var(--green);font-weight:700;margin-bottom:3px}
+.m-right::before{content:'✅ '}
+.m-why{font-size:11.5px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;border-top:1px solid rgba(45,69,96,.4);padding-top:5px;margin-top:5px}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:8px;margin-top:12px}
+.vocab-item{background:var(--card2);border:1px solid var(--border);border-radius:9px;padding:9px 12px;cursor:pointer;transition:border-color .2s}
+.vocab-item:hover{border-color:var(--accent)}
+.vocab-en{font-size:14px;font-weight:800;color:var(--text)}
+.vocab-past{font-size:11.5px;color:var(--accent);margin-top:2px;font-weight:700}
+.vocab-ar{font-size:11px;color:var(--muted);margin-top:3px;font-family:'Cairo',sans-serif;direction:rtl}
+.vs-wrap{overflow-x:auto;margin:18px 0;padding:4px 0}
+.vs-caption{font-size:11px;color:var(--muted);text-align:center;margin-top:8px;font-style:italic}
+.dlg-card{background:var(--card);border:1px solid var(--border);border-radius:16px;margin-bottom:16px;overflow:hidden}
+.dlg-header{background:linear-gradient(to right,var(--primary),#1a1a4e);padding:13px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.dlg-meta{flex:1}
+.dlg-num{font-size:10px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:2px}
+.dlg-title{font-weight:800;font-size:14px;color:white}
+.dlg-ctx{font-size:11px;color:rgba(255,255,255,.5);font-style:italic;margin-top:2px}
+.dlg-tts{background:rgba(244,166,36,.15);border:1px solid rgba(244,166,36,.4);color:var(--accent);padding:6px 14px;border-radius:8px;font-size:11px;font-weight:700;cursor:pointer;font-family:'Poppins',sans-serif;transition:all .2s;white-space:nowrap}
+.dlg-tts:hover{background:rgba(244,166,36,.3)}
+.dlg-body{padding:20px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:640px){.dlg-body{grid-template-columns:1fr}}
+.dlg-col-head{font-size:10px;font-weight:700;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+.bubble{padding:9px 13px;border-radius:12px;font-size:13px;line-height:1.55;margin-bottom:7px}
+.bubble-a{background:rgba(26,58,110,0.5);border:1px solid rgba(74,158,255,0.2)}
+.bubble-b{background:var(--card2);border:1px solid var(--border)}
+.bubble-name{font-size:9px;font-weight:800;color:var(--muted);margin-bottom:4px;letter-spacing:.5px;text-transform:uppercase}
+.bubble-name.b{color:var(--accent)}
+.bubble-ar{direction:rtl;font-family:'Cairo',sans-serif;font-size:13px;color:var(--text)}
+.layout{display:flex;min-height:100vh}
+.sidebar{width:30%;max-width:320px;min-width:220px;position:fixed;top:0;left:0;bottom:0;background:var(--primary-dark);border-right:2px solid var(--border);display:flex;flex-direction:column;z-index:200;overflow:hidden}
+.sidebar-header{padding:18px 20px 14px;border-bottom:2px solid var(--accent);flex-shrink:0}
+.sidebar-logo{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+.sidebar-logo-icon{width:34px;height:34px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900;color:#0d1b2a;flex-shrink:0}
+.sidebar-logo-text{font-family:'Cairo',sans-serif;font-size:15px;font-weight:800;color:white}
+.sidebar-logo-sub{font-size:10px;color:var(--muted);font-weight:500;margin-top:-1px}
+.sidebar-label{font-family:'Cairo',sans-serif;font-size:11px;font-weight:700;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-top:12px}
+.sidebar-units{flex:1;overflow-y:auto;padding:10px 12px;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+.sidebar-units::-webkit-scrollbar{width:4px}
+.sidebar-units::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+.su-item{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;text-decoration:none;margin-bottom:4px;transition:background .2s,transform .2s}
+.su-item:not(.su-locked):hover{background:rgba(244,166,36,0.12);transform:translateX(3px)}
+.su-item.su-locked{opacity:.45;cursor:default;pointer-events:none}
+.su-item.su-active{background:rgba(244,166,36,0.15);border:1px solid rgba(244,166,36,0.3)}
+.su-num{width:28px;height:28px;border-radius:7px;background:rgba(255,255,255,0.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:var(--accent);flex-shrink:0}
+.su-item:not(.su-locked) .su-num{background:rgba(244,166,36,0.12);border-color:rgba(244,166,36,0.3)}
+.su-texts{flex:1;min-width:0}
+.su-en{font-size:13px;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.su-ar{font-family:'Cairo',sans-serif;font-size:11px;color:var(--muted);direction:rtl;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.su-check{font-size:12px;flex-shrink:0}
+.su-lock{font-size:11px;color:var(--muted);flex-shrink:0}
+.main-content{margin-left:min(30%,320px);flex:1;min-width:0}
+footer{padding:20px 24px;text-align:center;color:var(--muted);font-size:12px;border-top:1px solid var(--border);margin-top:10px}
+
+/* ══ Hamburger (desktop: hidden) ══ */
+.nav-hamburger{display:none;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.3);border-radius:8px;cursor:pointer;flex-direction:column;gap:5px;padding:8px;flex-shrink:0;margin-left:6px}
+.nav-hamburger span{display:block;width:100%;height:2px;background:var(--accent);border-radius:2px}
+/* Backdrop */
+.sb-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:199}
+.sb-backdrop.sb-open{display:block}
+@media(max-width:768px){
+  .sidebar{position:fixed;left:-100%;width:82%;max-width:300px;min-width:unset;transition:left .3s ease;z-index:200}
+  .sidebar.sb-open{left:0}
+  .main-content{margin-left:0}
+  .nav-brand{display:none}
+  .nav-hamburger{display:flex}
+  .topnav{padding:10px 12px;gap:6px}
+  .nav-lesson-name{display:none}
+  .nav-left{gap:5px}
+  .hero{padding:22px 13px 20px}
+  .hero-title{font-size:22px;letter-spacing:-.5px}
+  .hero-ar{font-size:12px}
+  .hero-sub{font-size:12px}
+  .hero-tags{gap:5px;justify-content:center}
+  .tag{font-size:10px;padding:3px 9px}
+  .rule-section{padding:0 12px}
+  .read-wrap{padding:0 12px}
+  .ci-wrap{padding:12px 12px}
+  .ci-hero{padding:18px 12px}
+  .dlg-block{padding:0 12px}
+  .eu-cat-grid{grid-template-columns:1fr}
+  .nu-scale{gap:3px}
+  .nu-word{font-size:10px;padding:3px 7px}
+  .nu-cmp-head,.nu-cmp-row{grid-template-columns:1fr 1fr;font-size:10px}
+  .nu-cmp-head span:last-child,.nu-cmp-row span:last-child{display:none}
+  .reg-ladder{padding:10px 12px}
+  .cmp-table{font-size:11px}
+  .chat-wrap{padding:0 4px}
+  .ci-q{margin-bottom:10px}
+  .ci-opts{gap:5px}
+  .ci-btn{font-size:12px;padding:9px 10px}
+  .vocab-grid{grid-template-columns:1fr 1fr}
+  .rq-opts{gap:5px}
+}
+
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+/* some/any pill styles */
+.pill-wrap{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.pill{padding:5px 14px;border-radius:20px;font-size:12.5px;font-weight:800}
+.pill-green{background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.35);color:var(--green)}
+.pill-blue{background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.3);color:var(--blue)}
+.pill-red{background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3);color:var(--red)}
+/* Reading */
+.read-tts-bar{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;align-items:center}
+.read-label{font-size:12px;font-weight:700;color:var(--muted)}
+.read-pass{background:var(--card2);border:1px solid var(--border);border-radius:14px;padding:22px;font-size:14px;line-height:1.9;margin-bottom:24px}
+.read-pass p{margin-bottom:12px}
+.read-pass p:last-child{margin-bottom:0}
+.read-pass b{color:var(--accent);font-weight:700}
+.comp-section-title{font-size:14px;font-weight:800;color:var(--accent);margin-bottom:14px;text-transform:uppercase;letter-spacing:1px}
+.read-q{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:12px}
+.read-q-text{font-weight:700;font-size:14px;margin-bottom:12px;color:var(--text);line-height:1.4}
+.read-opts{display:flex;flex-direction:column;gap:7px}
+.read-opt{background:var(--card2);border:1px solid var(--border);color:var(--text);padding:9px 14px;border-radius:8px;font-size:13px;cursor:pointer;text-align:left;font-family:'Poppins',sans-serif;transition:all .2s;display:flex;align-items:center;gap:8px}
+.read-opt:hover:not(.done){background:rgba(244,166,36,.06);border-color:rgba(244,166,36,.35);transform:translateY(-1px)}
+.read-opt.correct{background:rgba(34,197,94,.12);border-color:var(--green);color:var(--green)}
+.read-opt.wrong{background:rgba(239,68,68,.12);border-color:var(--red);color:var(--red)}
+.read-opt.done{cursor:default;transform:none!important}
+.read-ctx{background:linear-gradient(135deg,rgba(26,58,110,.55),rgba(15,37,72,.55));border:1px solid rgba(244,166,36,.22);border-radius:14px;padding:16px 22px;margin-bottom:20px;display:flex;flex-wrap:wrap;gap:20px;align-items:center}
+.read-ctx-fact{display:flex;flex-direction:column;gap:2px}
+.read-ctx-label{font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+.read-ctx-val{font-size:13.5px;font-weight:800;color:var(--text)}
+.read-ctx-sep{width:1px;background:var(--border);align-self:stretch}
+.read-vocab-wrap{margin:18px 0}
+.read-vocab-title{font-size:11px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.read-vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:7px}
+.read-vocab-item{background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:8px 12px}
+.read-vocab-en{font-size:13px;font-weight:700;color:var(--accent)}
+.read-vocab-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-top:2px}
+/* Check It */
+.ci-hero{background:linear-gradient(135deg,#12285a 0%,#1a1242 60%,#0d1b2a 100%);padding:36px 24px 30px;text-align:center;border-bottom:2px solid var(--accent)}
+.ci-hero-icon{font-size:38px;margin-bottom:10px}
+.ci-hero-title{font-size:clamp(22px,5vw,36px);font-weight:900;color:white;margin-bottom:6px}
+.ci-hero-sub{color:var(--muted);font-size:13px;max-width:460px;margin:0 auto}
+.ci-hero-types{display:flex;gap:10px;justify-content:center;margin-top:14px;flex-wrap:wrap}
+.ci-progress-wrap{background:var(--primary-dark);padding:10px 24px;border-bottom:1px solid var(--border);position:sticky;top:52px;z-index:99}
+.ci-progress-inner{max-width:760px;margin:0 auto}
+.ci-progress-bar{background:rgba(255,255,255,.07);border-radius:20px;height:7px;overflow:hidden;margin-bottom:5px}
+.ci-progress-fill{background:linear-gradient(90deg,var(--accent),var(--blue));height:100%;border-radius:20px;transition:width .4s ease;width:0%}
+.ci-progress-txt{font-size:11px;color:var(--muted);font-weight:700;display:flex;justify-content:space-between}
+.ci-wrap{max-width:100%;padding:12px 16px}
+.ci-q{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px 14px;margin-bottom:7px;transition:border-color .2s;border-left:3px solid rgba(244,166,36,.4)}
+.ci-q.ci-fib-q{border-left-color:rgba(74,158,255,.5)}
+.ci-q-head{display:flex;align-items:center;gap:6px;margin-bottom:9px;flex-wrap:nowrap}
+.ci-q-num{width:22px;height:22px;border-radius:50%;background:rgba(244,166,36,.18);border:1.5px solid rgba(244,166,36,.4);color:var(--accent);font-size:10px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ci-fib-q .ci-q-num{background:rgba(74,158,255,.15);border-color:rgba(74,158,255,.4);color:var(--blue)}
+.ci-q-tag{background:rgba(244,166,36,.08);border:1px solid rgba(244,166,36,.18);color:var(--accent);font-size:9px;font-weight:800;padding:2px 8px;border-radius:8px;text-transform:uppercase;letter-spacing:.4px;white-space:nowrap}
+.ci-type-badge{font-size:9px;font-weight:800;padding:2px 8px;border-radius:8px;text-transform:uppercase;letter-spacing:.4px;margin-left:auto;flex-shrink:0}
+.ci-type-mcq{background:rgba(244,166,36,.12);border:1px solid rgba(244,166,36,.25);color:var(--accent)}
+.ci-type-fib{background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.25);color:var(--blue)}
+.ci-q-prompt{font-size:12px;color:var(--muted);font-style:italic;margin-bottom:8px;padding:5px 10px;background:rgba(255,255,255,.03);border-left:2px solid var(--border);border-radius:0 6px 6px 0}
+.ci-opts{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.ci-btn{background:var(--card2);border:1.5px solid var(--border);color:var(--text);padding:9px 12px;border-radius:9px;font-size:12.5px;cursor:pointer;text-align:left;font-family:'Poppins',sans-serif;transition:all .2s;display:flex;align-items:center;gap:9px;line-height:1.35;width:100%}
+.ci-btn:hover:not(.done){background:rgba(244,166,36,.07);border-color:rgba(244,166,36,.45);transform:translateY(-2px)}
+.ci-btn.ci-correct{background:rgba(34,197,94,.1);border-color:var(--green);color:var(--green)}
+.ci-btn.ci-wrong{background:rgba(239,68,68,.1);border-color:var(--red);color:var(--red)}
+.ci-lbl{font-size:11px;font-weight:900;background:rgba(255,255,255,.09);border-radius:5px;padding:2px 7px;flex-shrink:0;min-width:22px;text-align:center}
+.ci-btn.ci-correct .ci-lbl{background:rgba(34,197,94,.2);color:var(--green)}
+.ci-btn.ci-wrong .ci-lbl{background:rgba(239,68,68,.2);color:var(--red)}
+.ci-fib-sent{font-size:13.5px;color:var(--text);font-weight:600;line-height:1.7;margin-bottom:9px}
+.ci-fib-sent b{color:var(--accent)}
+.ci-fib-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:4px}
+.ci-fib-input{background:var(--card2);border:2px solid var(--border);color:var(--text);padding:7px 13px;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;outline:none;min-width:160px;max-width:260px;transition:border-color .2s}
+.ci-fib-input:focus{border-color:var(--accent);background:rgba(244,166,36,.04)}
+.ci-fib-check{background:var(--accent);border:none;color:#0d1b2a;padding:7px 18px;border-radius:8px;font-weight:800;cursor:pointer;font-size:12px;font-family:'Poppins',sans-serif;transition:all .2s;flex-shrink:0}
+.ci-fib-check:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 4px 12px rgba(244,166,36,.3)}
+.ci-fib-check:disabled{opacity:.35;cursor:default;transform:none!important}
+.ci-hint{font-size:10.5px;color:var(--muted);font-style:italic;margin-top:3px}
+.ci-sol{display:none;margin-top:9px;border-radius:9px;overflow:hidden;animation:fadeIn .3s ease}
+.ci-sol-head{padding:7px 12px;font-size:11.5px;font-weight:800;border-bottom:1px solid rgba(255,255,255,.05)}
+.ci-sol-body{padding:8px 12px;display:flex;flex-direction:column;gap:4px}
+.ci-sol-ans{font-size:12.5px;font-weight:700;color:var(--accent)}
+.ci-sol-exp{font-size:11.5px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.ci-brk{display:none;background:linear-gradient(135deg,#12285a,#1a1242);border:2px solid var(--accent);border-radius:20px;padding:28px 24px;margin:16px 0;text-align:center;animation:fadeIn .5s ease;position:relative;overflow:hidden}
+.ci-brk::before{content:'';position:absolute;top:-50px;right:-50px;width:200px;height:200px;border-radius:50%;background:rgba(244,166,36,.07);pointer-events:none}
+.ci-brk-emoji{font-size:44px;margin-bottom:10px}
+.ci-brk-title{font-size:17px;font-weight:900;color:var(--accent);margin-bottom:16px}
+.ci-brk-cols{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:580px;margin:0 auto;text-align:left}
+@media(max-width:580px){.ci-brk-cols{grid-template-columns:1fr}}
+.ci-brk-col{background:rgba(255,255,255,.04);border:1px solid rgba(244,166,36,.2);border-radius:12px;padding:14px 16px}
+.ci-brk-col-title{font-size:10px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid rgba(244,166,36,.2)}
+.ci-brk-text{font-size:13px;color:var(--text);line-height:1.75}
+.ci-brk-text b{color:var(--accent)}
+.ci-brk-ar{font-size:12px;color:var(--muted);margin-top:14px;direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.ci-score{display:none;background:linear-gradient(135deg,#0f2548,#1a1242);border:2px solid var(--accent);border-radius:24px;padding:44px 32px;text-align:center;margin-top:24px;position:relative;overflow:hidden;animation:fadeIn .6s ease}
+.ci-score::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,rgba(244,166,36,.07) 0%,transparent 65%);pointer-events:none}
+.ci-score-emoji{font-size:60px;margin-bottom:14px}
+.ci-score-num{font-size:68px;font-weight:900;color:var(--accent);line-height:1;margin-bottom:4px}
+.ci-score-of{font-size:18px;color:var(--muted);margin-bottom:18px}
+.ci-score-bar-wrap{background:rgba(255,255,255,.06);border-radius:20px;height:10px;max-width:320px;margin:0 auto 24px;overflow:hidden}
+.ci-score-bar-fill{height:100%;border-radius:20px;background:linear-gradient(90deg,var(--accent),var(--green));transition:width 1.2s ease;width:0%}
+.ci-score-msg{font-size:18px;font-weight:900;color:white;margin-bottom:6px}
+.ci-score-ar{font-size:14px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;margin-bottom:24px;line-height:1.6}
+.ci-reset{background:var(--accent);border:none;color:#0d1b2a;padding:13px 32px;border-radius:12px;font-weight:900;cursor:pointer;font-family:'Poppins',sans-serif;font-size:14px;transition:all .25s;letter-spacing:.5px}
+.ci-reset:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(244,166,36,.35)}
+.chat-wrap{padding:18px 24px 26px;display:flex;flex-direction:column;gap:14px;background-image:radial-gradient(circle,rgba(244,166,36,0.22) 1.5px,transparent 1.5px),radial-gradient(circle,rgba(74,158,255,0.22) 1.5px,transparent 1.5px);background-size:28px 28px;background-position:0 0,14px 14px}
+.chat-msg{display:flex;flex-direction:column;max-width:70%}
+.chat-msg.right{align-self:flex-end;align-items:flex-end}
+.chat-msg.left{align-self:flex-start;align-items:flex-start}
+.chat-name-tag{font-size:11px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;margin-bottom:5px;padding:0 4px}
+.chat-msg.right .chat-name-tag{color:var(--accent)}
+.chat-msg.left .chat-name-tag{color:var(--blue)}
+.chat-bubble{padding:14px 17px 10px;border-radius:20px;width:100%}
+.chat-msg.right .chat-bubble{background:rgba(55,36,6,0.75);border:1px solid rgba(244,166,36,0.4);border-bottom-right-radius:4px;box-shadow:0 6px 28px rgba(0,0,0,0.65),0 0 18px rgba(244,166,36,0.22)}
+.chat-msg.left .chat-bubble{background:rgba(12,32,72,0.8);border:1px solid rgba(74,158,255,0.35);border-bottom-left-radius:4px;box-shadow:0 6px 28px rgba(0,0,0,0.65),0 0 18px rgba(74,158,255,0.20)}
+.chat-en{font-size:15px;color:var(--text);line-height:1.65;font-weight:500}
+.chat-en b{color:var(--accent)}
+.chat-msg.left .chat-en b{color:var(--blue)}
+.chat-ar{font-size:14px;color:rgba(232,237,245,0.8);direction:rtl;font-family:'Cairo',sans-serif;line-height:1.75;border-top:1px solid rgba(255,255,255,0.09);padding-top:9px;margin-top:9px}
+.chat-bubble-foot{display:flex;justify-content:flex-end;margin-top:9px;padding-top:7px;border-top:1px solid rgba(255,255,255,0.07)}
+.chat-sp-btn{font-size:14px;cursor:pointer;padding:5px 13px;border-radius:20px;transition:all .2s;line-height:1;font-weight:700;letter-spacing:.3px}
+.chat-msg.right .chat-sp-btn{background:rgba(244,166,36,0.18);border:1px solid rgba(244,166,36,0.45);color:var(--accent)}
+.chat-msg.left .chat-sp-btn{background:rgba(74,158,255,0.15);border:1px solid rgba(74,158,255,0.4);color:var(--blue)}
+.chat-sp-btn:hover{transform:scale(1.08);filter:brightness(1.25)}
+.su-prog{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:6px;overflow:hidden}
+.su-prog-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:2px;width:0%;transition:width .6s ease}
+
+.su-level-hd{padding:8px 12px 5px;margin-top:8px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(255,255,255,.05)}
+.su-level-code{font-size:11px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;padding:2px 8px;border-radius:5px;display:inline-block}
+.su-level-name{font-family:'Cairo',sans-serif;font-size:12px;font-weight:700;color:#f4c430;direction:rtl;margin:0;line-height:1}
+.lvl-a1{background:rgba(52,211,153,.15);color:#34d399;border:1px solid rgba(52,211,153,.35)}
+.lvl-a2{background:rgba(74,158,255,.15);color:#4a9eff;border:1px solid rgba(74,158,255,.35)}
+.lvl-b1{background:rgba(245,158,11,.15);color:#f59e0b;border:1px solid rgba(245,158,11,.35)}
+.lvl-b2{background:rgba(244,166,36,.15);color:var(--accent);border:1px solid rgba(244,166,36,.35)}
+.lvl-b2p{background:rgba(251,146,60,.15);color:#fb923c;border:1px solid rgba(251,146,60,.35)}
+.lvl-c1{background:rgba(168,85,247,.15);color:#a855f7;border:1px solid rgba(168,85,247,.35)}
+.su-coming{opacity:.28;cursor:default;pointer-events:none}
+.su-prog{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:6px;overflow:hidden}
+.su-prog-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:2px;width:0%;transition:width .6s ease}
+
+/* Lesson 1 specific styles */
+.alpha-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(68px,1fr));gap:8px;margin:18px 0}
+.alpha-card{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:12px 8px;text-align:center;cursor:pointer;transition:all .22s;position:relative}
+.alpha-card:hover{transform:translateY(-3px);border-color:var(--accent);background:rgba(244,166,36,.08)}
+.alpha-card.vowel{border-color:rgba(244,166,36,.5);background:rgba(244,166,36,.07)}
+.alpha-card.vowel:hover{background:rgba(244,166,36,.15)}
+.alpha-up{font-size:22px;font-weight:900;color:var(--text);line-height:1}
+.alpha-lo{font-size:14px;color:var(--muted);margin:2px 0}
+.alpha-ar{font-size:10px;color:var(--accent);font-family:'Cairo',sans-serif;margin-top:4px}
+.alpha-card.vowel .alpha-up{color:var(--accent)}
+.vowel-badge{display:inline-block;background:rgba(244,166,36,.15);border:1px solid rgba(244,166,36,.4);color:var(--accent);font-size:10px;font-weight:800;padding:2px 8px;border-radius:10px;margin-right:4px}
+.cons-badge{display:inline-block;background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.3);color:var(--blue);font-size:10px;font-weight:800;padding:2px 8px;border-radius:10px;margin-right:4px}
+.num-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:9px;margin:14px 0}
+.num-card{background:var(--card2);border:1px solid var(--border);border-radius:11px;padding:12px 14px;cursor:pointer;transition:all .2s}
+.num-card:hover{transform:translateY(-2px);border-color:var(--blue)}
+.num-digit{font-size:22px;font-weight:900;color:var(--blue);line-height:1}
+.num-word{font-size:13px;font-weight:700;color:var(--text);margin-top:3px}
+.num-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-top:3px}
+.num-grid-sm{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:8px;margin:14px 0}
+.num-sm{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:9px 12px;cursor:pointer;transition:all .2s}
+.num-sm:hover{border-color:var(--blue);transform:translateY(-2px)}
+.num-sm .num-digit{font-size:17px}
+.num-sm .num-word{font-size:12px}
+.ord-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin:14px 0}
+.ord-card{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px;cursor:pointer;transition:all .2s}
+.ord-card:hover{border-color:var(--purple);transform:translateY(-2px)}
+.ord-num{font-size:18px;font-weight:900;color:var(--purple);line-height:1}
+.ord-word{font-size:12.5px;font-weight:700;color:var(--text);margin-top:3px}
+.ord-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-top:3px}
+.rule-box{background:linear-gradient(135deg,rgba(168,85,247,.12),rgba(74,158,255,.08));border:1px solid rgba(168,85,247,.3);border-radius:14px;padding:16px 20px;margin:14px 0}
+.rule-title{font-size:12px;font-weight:800;color:#a855f7;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.rule-body{font-size:13px;color:var(--text);line-height:1.75}
+.rule-body b{color:#a855f7}
+.rule-body .eg{color:var(--accent);font-style:italic}
+
+
+
+.nav-home-btn{display:inline-flex;align-items:center;gap:6px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.4);color:var(--accent);font-size:12px;font-weight:800;padding:5px 13px;border-radius:8px;text-decoration:none;transition:all .2s;white-space:nowrap;flex-shrink:0}
+.nav-home-btn:hover{background:rgba(244,166,36,.25);transform:translateY(-2px)}
+.nav-lesson-badge{background:var(--accent);color:#0a1628;font-size:12px;font-weight:900;padding:5px 13px;border-radius:7px;white-space:nowrap;letter-spacing:.3px;flex-shrink:0}
+.nav-lesson-name{font-size:13px;color:rgba(232,237,245,.7);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-sep{color:rgba(136,153,176,.5);font-size:13px;flex-shrink:0}
+.nav-left{display:flex;align-items:center;gap:8px;flex:1;min-width:0}
+.nav-right{display:flex;align-items:center;flex-shrink:0}
+
+/* ── Reading bold highlight ── */
+.read-body b{color:var(--accent)}
+.read-body p b{color:var(--accent)}
+
+/* ── FIB label fix ── */
+.ci-fib-lbl{font-size:11px;font-weight:800;color:var(--accent);letter-spacing:1px;text-transform:uppercase;margin:4px 0 8px 0;opacity:.85}
+
+/* ══ Lesson 40 — Idioms & Collocations ══ */
+
+/* Section intro badge */
+.topic-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(244,166,36,.1);border:1.5px solid rgba(244,166,36,.35);color:var(--accent);font-size:11px;font-weight:900;letter-spacing:.5px;text-transform:uppercase;padding:5px 14px;border-radius:8px;margin-bottom:10px}
+
+/* Idiom category header */
+.icat-hd{display:flex;align-items:center;gap:8px;margin:14px 0 8px}
+.icat-pill{font-size:10px;font-weight:900;letter-spacing:.6px;text-transform:uppercase;padding:3px 11px;border-radius:6px}
+.icat-body{color:#a855f7;background:rgba(168,85,247,.12);border:1px solid rgba(168,85,247,.3)}
+.icat-time{color:var(--blue);background:rgba(74,158,255,.12);border:1px solid rgba(74,158,255,.3)}
+.icat-effort{color:#fb923c;background:rgba(251,146,60,.12);border:1px solid rgba(251,146,60,.3)}
+.icat-lbl{font-size:13px;font-weight:800;color:var(--text)}
+
+/* Idiom cards grid */
+.idiom-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:8px 0 14px}
+@media(max-width:600px){.idiom-grid{grid-template-columns:1fr}}
+.idiom-card{border-radius:12px;padding:12px 14px;cursor:pointer;transition:transform .15s}
+.idiom-card:hover{transform:translateY(-3px)}
+.ic-body{background:rgba(168,85,247,.07);border:2px solid rgba(168,85,247,.28)}
+.ic-time{background:rgba(74,158,255,.07);border:2px solid rgba(74,158,255,.28)}
+.ic-effort{background:rgba(251,146,60,.07);border:2px solid rgba(251,146,60,.28)}
+.ic-phrase{font-size:13px;font-weight:900;margin-bottom:3px}
+.ic-body .ic-phrase{color:#a855f7}
+.ic-time .ic-phrase{color:var(--blue)}
+.ic-effort .ic-phrase{color:#fb923c}
+.ic-meaning{font-size:11px;font-weight:700;color:var(--accent);margin-bottom:4px}
+.ic-ar{font-family:'Cairo',sans-serif;font-size:11px;color:var(--muted);direction:rtl;margin-bottom:5px}
+.ic-ex{font-size:11px;color:var(--muted);font-style:italic;line-height:1.6}
+
+/* Collocation verb cards */
+.coll-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+@media(max-width:600px){.coll-grid{grid-template-columns:1fr}}
+.coll-card{border-radius:12px;padding:13px 14px;transition:transform .15s;cursor:pointer}
+.coll-card:hover{transform:translateY(-3px)}
+.cv-make{background:rgba(34,197,94,.07);border:2px solid rgba(34,197,94,.3)}
+.cv-do{background:rgba(74,158,255,.07);border:2px solid rgba(74,158,255,.3)}
+.cv-take{background:rgba(244,166,36,.07);border:2px solid rgba(244,166,36,.3)}
+.cv-have{background:rgba(168,85,247,.07);border:2px solid rgba(168,85,247,.3)}
+.cv-get{background:rgba(251,146,60,.07);border:2px solid rgba(251,146,60,.3)}
+.cv-commit{background:rgba(239,68,68,.07);border:2px solid rgba(239,68,68,.3)}
+.coll-verb{font-size:18px;font-weight:900;margin-bottom:6px}
+.cv-make .coll-verb{color:var(--green)}
+.cv-do .coll-verb{color:var(--blue)}
+.cv-take .coll-verb{color:var(--accent)}
+.cv-have .coll-verb{color:#a855f7}
+.cv-get .coll-verb{color:#fb923c}
+.cv-commit .coll-verb{color:var(--red)}
+.coll-tags{display:flex;flex-wrap:wrap;gap:5px}
+.coll-tag{font-size:10px;font-weight:700;padding:2px 8px;border-radius:5px}
+.cv-make .coll-tag{background:rgba(34,197,94,.12);color:var(--green)}
+.cv-do .coll-tag{background:rgba(74,158,255,.12);color:var(--blue)}
+.cv-take .coll-tag{background:rgba(244,166,36,.12);color:var(--accent)}
+.cv-have .coll-tag{background:rgba(168,85,247,.12);color:#a855f7}
+.cv-get .coll-tag{background:rgba(251,146,60,.12);color:#fb923c}
+.cv-commit .coll-tag{background:rgba(239,68,68,.12);color:var(--red)}
+
+/* Adjective+noun collocations table */
+.adj-table{width:100%;border-collapse:collapse;margin:10px 0;font-size:12px}
+.adj-table th{padding:8px 12px;text-align:left;font-size:11px;font-weight:900;letter-spacing:.4px;text-transform:uppercase;background:rgba(255,255,255,.04);color:var(--muted)}
+.adj-table td{padding:7px 12px;border-top:1px solid var(--border);line-height:1.6;font-size:11px}
+.adj-table td:first-child{color:var(--accent);font-weight:800;width:22%}
+.adj-table .td-colls{color:rgba(232,237,245,.85)}
+.adj-table tr:hover td{background:rgba(255,255,255,.03)}
+
+/* warn + tip */
+.warn-row{display:flex;gap:10px;align-items:flex-start;background:var(--card2);border-radius:10px;padding:10px 14px;margin:6px 0}
+.warn-icon{font-size:16px;flex-shrink:0;margin-top:2px}
+.warn-wrong{font-size:12px;color:var(--red);text-decoration:line-through}
+.warn-right{font-size:12px;color:var(--green);font-weight:700}
+.warn-ar{font-family:'Cairo',sans-serif;font-size:10px;color:var(--muted);direction:rtl;margin-top:2px}
+.tip-row{display:flex;align-items:flex-start;gap:10px;background:var(--card2);border-radius:10px;padding:10px 14px;margin:6px 0;cursor:pointer;transition:background .2s}
+.tip-row:hover{background:rgba(74,158,255,.08)}
+.tip-badge{background:rgba(74,158,255,.15);border:1px solid rgba(74,158,255,.4);color:var(--blue);font-size:11px;font-weight:900;padding:3px 9px;border-radius:7px;white-space:nowrap;flex-shrink:0}
+.tip-en{font-size:13px;color:var(--text);flex:1}
+.tip-ar{font-family:'Cairo',sans-serif;font-size:11px;color:var(--muted);direction:rtl;display:block;margin-top:2px}
+
+.su-level-hd{padding:8px 12px 5px;margin-top:8px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(255,255,255,.05)}
+.su-level-code{font-size:11px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;padding:2px 8px;border-radius:5px;display:inline-block}
+.su-level-name{font-family:'Cairo',sans-serif;font-size:12px;font-weight:700;color:#f4c430;direction:rtl;margin:0;line-height:1}
+.lvl-a1{background:rgba(52,211,153,.15);color:#34d399;border:1px solid rgba(52,211,153,.35)}
+.lvl-a2{background:rgba(74,158,255,.15);color:#4a9eff;border:1px solid rgba(74,158,255,.35)}
+.lvl-b1{background:rgba(245,158,11,.15);color:#f59e0b;border:1px solid rgba(245,158,11,.35)}
+.lvl-b2{background:rgba(244,166,36,.15);color:var(--accent);border:1px solid rgba(244,166,36,.35)}
+.lvl-b2p{background:rgba(251,146,60,.15);color:#fb923c;border:1px solid rgba(251,146,60,.35)}
+.lvl-c1{background:rgba(168,85,247,.15);color:#a855f7;border:1px solid rgba(168,85,247,.35)}
+.su-coming{opacity:.28;cursor:default;pointer-events:none}
+.su-prog{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:6px;overflow:hidden}
+.su-prog-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:2px;width:0%;transition:width .6s ease}
+
+.nav-home-btn{display:inline-flex;align-items:center;gap:6px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.4);color:var(--accent);font-size:12px;font-weight:800;padding:5px 13px;border-radius:8px;text-decoration:none;transition:all .2s;white-space:nowrap;flex-shrink:0}
+.nav-home-btn:hover{background:rgba(244,166,36,.25);transform:translateY(-2px)}
+.nav-lesson-badge{background:var(--accent);color:#0a1628;font-size:12px;font-weight:900;padding:5px 13px;border-radius:7px;white-space:nowrap;letter-spacing:.3px;flex-shrink:0}
+.nav-lesson-name{font-size:13px;color:rgba(232,237,245,.7);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-sep{color:rgba(136,153,176,.5);font-size:13px;flex-shrink:0}
+.nav-left{display:flex;align-items:center;gap:8px;flex:1;min-width:0}
+.nav-right{display:flex;align-items:center;flex-shrink:0}
+</style>
+
+<style>
+/* Watermark on print */
+@media print {
+  body::before {
+    content: 'Mohammed Elhuseyin — English Learning Platform — محمية الحقوق';
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-35deg);
+    font-size: 48px;
+    font-weight: 900;
+    color: rgba(244,166,36,0.18);
+    z-index: 9999;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+}
+</style>
+
+<style>
+.float-menu-btn{display:none;position:fixed;bottom:22px;left:18px;z-index:9998;width:48px;height:48px;background:var(--primary-dark,#0f2548);border:2px solid rgba(244,166,36,.5);border-radius:14px;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:12px;box-shadow:0 4px 20px rgba(0,0,0,.4);transition:transform .15s,box-shadow .15s}
+.float-menu-btn:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,.5)}
+.float-menu-btn span{display:block;width:22px;height:2px;background:#f4a624;border-radius:2px;transition:all .25s}
+@media(max-width:768px){.float-menu-btn{display:flex}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-logo">
+      <div class="sidebar-logo-icon">A</div>
+      <div>
+        <div class="sidebar-logo-text">English Course</div>
+        <div class="sidebar-logo-sub">MOHAMMED ELHUSEYIN</div>
+      </div>
+    </div>
+    <div class="sidebar-label ar">الوحدات الدراسية</div>
+  </div>
+  <div class="sidebar-units">
+  <div class="su-level-hd"><span class="su-level-code lvl-a1">A1</span><span class="su-level-name">مستوى المبتدئ تماماً</span></div>
+  <a href="lesson1.html" class="su-item"><div class="su-num">1</div><div class="su-texts"><div class="su-en">Alphabet & Numbers</div><div class="su-ar">الأحرف والأرقام</div><div class="su-prog"><div class="su-prog-fill" id="sp1"></div></div></div></a>
+  <a href="lesson2.html" class="su-item"><div class="su-num">2</div><div class="su-texts"><div class="su-en">Classroom Language & Greetings</div><div class="su-ar">لغة الصف والتحيات</div><div class="su-prog"><div class="su-prog-fill" id="sp2"></div></div></div></a>
+  <a href="lesson3.html" class="su-item"><div class="su-num">3</div><div class="su-texts"><div class="su-en">Nationalities & Countries</div><div class="su-ar">الجنسيات والدول</div><div class="su-prog"><div class="su-prog-fill" id="sp3"></div></div></div></a>
+  <a href="lesson4.html" class="su-item"><div class="su-num">4</div><div class="su-texts"><div class="su-en">Singular & Plural Nouns</div><div class="su-ar">الأسماء المفردة والجمع</div><div class="su-prog"><div class="su-prog-fill" id="sp4"></div></div></div></a>
+  <a href="lesson5.html" class="su-item"><div class="su-num">5</div><div class="su-texts"><div class="su-en">Days & Telling the Time</div><div class="su-ar">الأيام وإخبار الوقت</div><div class="su-prog"><div class="su-prog-fill" id="sp5"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-a2">A2</span><span class="su-level-name">المستوى الابتدائي</span></div>
+  <a href="unit1.html" class="su-item"><div class="su-num">6</div><div class="su-texts"><div class="su-en">Verb to <i>be</i></div><div class="su-ar">فعل التكوين</div><div class="su-prog"><div class="su-prog-fill" id="sp6"></div></div></div></a>
+  <a href="unit2.html" class="su-item"><div class="su-num">7</div><div class="su-texts"><div class="su-en">Present Simple</div><div class="su-ar">المضارع البسيط</div><div class="su-prog"><div class="su-prog-fill" id="sp7"></div></div></div></a>
+  <a href="unit3.html" class="su-item"><div class="su-num">8</div><div class="su-texts"><div class="su-en">Present Continuous</div><div class="su-ar">المضارع المستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp8"></div></div></div></a>
+  <a href="unit4.html" class="su-item"><div class="su-num">9</div><div class="su-texts"><div class="su-en">Past Simple: was / were</div><div class="su-ar">الماضي البسيط: كان</div><div class="su-prog"><div class="su-prog-fill" id="sp9"></div></div></div></a>
+  <a href="unit6.html" class="su-item"><div class="su-num">10</div><div class="su-texts"><div class="su-en">Past Simple: Regular & Irreg.</div><div class="su-ar">الماضي البسيط للأفعال</div><div class="su-prog"><div class="su-prog-fill" id="sp10"></div></div></div></a>
+  <a href="unit5.html" class="su-item"><div class="su-num">11</div><div class="su-texts"><div class="su-en">Can / Can't</div><div class="su-ar">القدرة والعجز</div><div class="su-prog"><div class="su-prog-fill" id="sp11"></div></div></div></a>
+  <a href="lesson12.html" class="su-item"><div class="su-num">12</div><div class="su-texts"><div class="su-en">Possessive Pronouns</div><div class="su-ar">ضمائر الملكية</div><div class="su-prog"><div class="su-prog-fill" id="sp12"></div></div></div></a>
+  <a href="unit7.html" class="su-item"><div class="su-num">13</div><div class="su-texts"><div class="su-en">There is / There are</div><div class="su-ar">يوجد / توجد</div><div class="su-prog"><div class="su-prog-fill" id="sp13"></div></div></div></a>
+  <a href="unit8.html" class="su-item"><div class="su-num">14</div><div class="su-texts"><div class="su-en">Adjectives</div><div class="su-ar">الصفات</div><div class="su-prog"><div class="su-prog-fill" id="sp14"></div></div></div></a>
+  <a href="unit9.html" class="su-item"><div class="su-num">15</div><div class="su-texts"><div class="su-en">Imperatives</div><div class="su-ar">صيغة الأمر والنهي</div><div class="su-prog"><div class="su-prog-fill" id="sp15"></div></div></div></a>
+  <a href="unit10.html" class="su-item"><div class="su-num">16</div><div class="su-texts"><div class="su-en">Object Pronouns</div><div class="su-ar">ضمائر المفعول به</div><div class="su-prog"><div class="su-prog-fill" id="sp16"></div></div></div></a>
+  <a href="unit11.html" class="su-item"><div class="su-num">17</div><div class="su-texts"><div class="su-en">Prepositions of Time & Place</div><div class="su-ar">حروف جر الوقت والمكان</div><div class="su-prog"><div class="su-prog-fill" id="sp17"></div></div></div></a>
+  <a href="unit12.html" class="su-item"><div class="su-num">18</div><div class="su-texts"><div class="su-en">Future Plans: going to</div><div class="su-ar">خطط المستقبل</div><div class="su-prog"><div class="su-prog-fill" id="sp18"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b1">B1</span><span class="su-level-name">تحت المتوسط</span></div>
+  <a href="lesson19.html" class="su-item"><div class="su-num">19</div><div class="su-texts"><div class="su-en">Present Perfect Introduction</div><div class="su-ar">مقدمة المضارع التام</div><div class="su-prog"><div class="su-prog-fill" id="sp19"></div></div></div></a>
+  <a href="lesson20.html" class="su-item"><div class="su-num">20</div><div class="su-texts"><div class="su-en">Past Continuous</div><div class="su-ar">الماضي المستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp20"></div></div></div></a>
+  <a href="lesson21.html" class="su-item"><div class="su-num">21</div><div class="su-texts"><div class="su-en">will vs. going to</div><div class="su-ar">المستقبل: إرادة أم تخطيط؟</div><div class="su-prog"><div class="su-prog-fill" id="sp21"></div></div></div></a>
+  <a href="lesson22.html" class="su-item"><div class="su-num">22</div><div class="su-texts"><div class="su-en">like / love / hate + -ing</div><div class="su-ar">التعبير عن التفضيلات</div><div class="su-prog"><div class="su-prog-fill" id="sp22"></div></div></div></a>
+  <a href="lesson23.html" class="su-item"><div class="su-num">23</div><div class="su-texts"><div class="su-en">Comparatives & Superlatives</div><div class="su-ar">المقارنة والتفضيل</div><div class="su-prog"><div class="su-prog-fill" id="sp23"></div></div></div></a>
+  <a href="lesson24.html" class="su-item"><div class="su-num">24</div><div class="su-texts"><div class="su-en">must / have to / should</div><div class="su-ar">أفعال الإلزام والنصيحة</div><div class="su-prog"><div class="su-prog-fill" id="sp24"></div></div></div></a>
+  <a href="lesson25.html" class="su-item"><div class="su-num">25</div><div class="su-texts"><div class="su-en">Infinitives & Gerunds</div><div class="su-ar">المصدر وصيغة الـ ing</div><div class="su-prog"><div class="su-prog-fill" id="sp25"></div></div></div></a>
+  <a href="lesson26.html" class="su-item"><div class="su-num">26</div><div class="su-texts"><div class="su-en">Articles: a/an / the</div><div class="su-ar">أدوات التعريف والتنكير</div><div class="su-prog"><div class="su-prog-fill" id="sp26"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b2">B2</span><span class="su-level-name">المستوى المتوسط</span></div>
+  <a href="lesson27.html" class="su-item"><div class="su-num">27</div><div class="su-texts"><div class="su-en">Present Perfect vs. Past Simple</div><div class="su-ar">المقارنة بين الماضي والتام</div><div class="su-prog"><div class="su-prog-fill" id="sp27"></div></div></div></a>
+  <a href="lesson28.html" class="su-item"><div class="su-num">28</div><div class="su-texts"><div class="su-en">Passive Voice</div><div class="su-ar">المبني للمجهول</div><div class="su-prog"><div class="su-prog-fill" id="sp28"></div></div></div></a>
+  <a href="lesson29.html" class="su-item"><div class="su-num">29</div><div class="su-texts"><div class="su-en">Zero / First / Second Cond.</div><div class="su-ar">الجمل الشرطية 0-1-2</div><div class="su-prog"><div class="su-prog-fill" id="sp29"></div></div></div></a>
+  <a href="lesson30.html" class="su-item"><div class="su-num">30</div><div class="su-texts"><div class="su-en">Reported Speech</div><div class="su-ar">الكلام غير المباشر</div><div class="su-prog"><div class="su-prog-fill" id="sp30"></div></div></div></a>
+  <a href="lesson31.html" class="su-item"><div class="su-num">31</div><div class="su-texts"><div class="su-en">Relative Clauses</div><div class="su-ar">جمل الوصل: who / which</div><div class="su-prog"><div class="su-prog-fill" id="sp31"></div></div></div></a>
+  <a href="lesson32.html" class="su-item"><div class="su-num">32</div><div class="su-texts"><div class="su-en">Quantifiers</div><div class="su-ar">محددات الكمية</div><div class="su-prog"><div class="su-prog-fill" id="sp32"></div></div></div></a>
+  <a href="lesson33.html" class="su-item"><div class="su-num">33</div><div class="su-texts"><div class="su-en">Phrasal Verbs Introduction</div><div class="su-ar">مقدمة الأفعال المركبة</div><div class="su-prog"><div class="su-prog-fill" id="sp33"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b2p">B2+</span><span class="su-level-name">فوق المتوسط</span></div>
+  <a href="lesson34.html" class="su-item"><div class="su-num">34</div><div class="su-texts"><div class="su-en">Narrative Tenses & Past Perfect</div><div class="su-ar">أزمنة السرد والماضي التام</div><div class="su-prog"><div class="su-prog-fill" id="sp34"></div></div></div></a>
+  <a href="lesson35.html" class="su-item"><div class="su-num">35</div><div class="su-texts"><div class="su-en">Future Perfect & Continuous</div><div class="su-ar">المستقبل التام والمستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp35"></div></div></div></a>
+  <a href="lesson36.html" class="su-item"><div class="su-num">36</div><div class="su-texts"><div class="su-en">Third Conditional & Regrets</div><div class="su-ar">الشرط الثالث والندم</div><div class="su-prog"><div class="su-prog-fill" id="sp36"></div></div></div></a>
+  <a href="lesson37.html" class="su-item"><div class="su-num">37</div><div class="su-texts"><div class="su-en">Causative: have/get done</div><div class="su-ar">الأفعال السببية</div><div class="su-prog"><div class="su-prog-fill" id="sp37"></div></div></div></a>
+  <a href="lesson38.html" class="su-item"><div class="su-num">38</div><div class="su-texts"><div class="su-en">Advanced Passive</div><div class="su-ar">المبني للمجهول المتقدم</div><div class="su-prog"><div class="su-prog-fill" id="sp38"></div></div></div></a>
+  <a href="lesson39.html" class="su-item"><div class="su-num">39</div><div class="su-texts"><div class="su-en">Speculation: must/might/can't</div><div class="su-ar">التخمين والاستنتاج</div><div class="su-prog"><div class="su-prog-fill" id="sp39"></div></div></div></a>
+  <a href="lesson40.html" class="su-item su-active"><div class="su-num">40</div><div class="su-texts"><div class="su-en">Idioms & Collocations</div><div class="su-ar">المصطلحات والتعبيرات</div><div class="su-prog"><div class="su-prog-fill" id="sp40"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-c1">C1</span><span class="su-level-name">المستوى المتقدم الأكاديمي</span></div>
+  <a href="lesson41.html" class="su-item"><div class="su-num">41</div><div class="su-texts"><div class="su-en">Inversion & Emphatic Structures</div><div class="su-ar">التقديم والتأخير للتأكيد</div><div class="su-prog"><div class="su-prog-fill" id="sp41"></div></div></div></a>
+  <a href="lesson42.html" class="su-item"><div class="su-num">42</div><div class="su-texts"><div class="su-en">Mixed Conditionals</div><div class="su-ar">الجمل الشرطية المختلطة</div><div class="su-prog"><div class="su-prog-fill" id="sp42"></div></div></div></a>
+  <a href="lesson43.html" class="su-item"><div class="su-num">43</div><div class="su-texts"><div class="su-en">Advanced Gerunds & Infinitives</div><div class="su-ar">المصادر المتقدمة</div><div class="su-prog"><div class="su-prog-fill" id="sp43"></div></div></div></a>
+  <a href="lesson44.html" class="su-item"><div class="su-num">44</div><div class="su-texts"><div class="su-en">Cleft Sentences</div><div class="su-ar">الجمل المشقوقة</div><div class="su-prog"><div class="su-prog-fill" id="sp44"></div></div></div></a>
+  <a href="lesson45.html" class="su-item"><div class="su-num">45</div><div class="su-texts"><div class="su-en">Discourse Markers</div><div class="su-ar">أدوات الربط الأكاديمية</div><div class="su-prog"><div class="su-prog-fill" id="sp45"></div></div></div></a>
+  <a href="lesson46.html" class="su-item"><div class="su-num">46</div><div class="su-texts"><div class="su-en">Nuances & Euphemisms</div><div class="su-ar">الفروقات الدقيقة والتلطيف</div><div class="su-prog"><div class="su-prog-fill" id="sp46"></div></div></div></a>
+</div>
+</aside>
+
+<div class="main-content">
+
+<nav class="topnav">
+  <div class="nav-left">
+    <a href="../index.html" class="nav-home-btn">&#x1F3E0; الرئيسية</a>
+    <span class="nav-sep">&#x203A;</span>
+    <span class="nav-lesson-badge">Lesson 40</span>
+    <span class="nav-sep">&#x203A;</span>
+    <span class="nav-lesson-name">Idioms &amp; Collocations</span>
+  </div>
+  <div class="nav-right"><span class="nav-brand">MOHAMMED ELHUSEYIN</span></div>
+</nav>
+
+<div class="hero">
+  <div class="unit-badge">&#x1F4DA; Lesson 40 &nbsp;&middot;&nbsp; B2+ Upper-Intermediate</div>
+  <h1 class="hero-title">Idioms &amp; Collocations</h1>
+  <div class="hero-ar ar">المصطلحات والتعبيرات</div>
+  <p class="hero-sub">Sound like a native speaker by mastering two key areas: <b>idioms</b> — fixed expressions whose meaning you can't guess from the words — and <b>collocations</b> — word pairs that naturally belong together. Both are essential for fluent, natural English.</p>
+  <div class="hero-tags">
+    <span class="tag tag-grammar">&#x1F4D6; Grammar</span>
+    <span class="tag tag-other">&#x1F4AC; Everyday English</span>
+    <span class="tag tag-other">&#x1F4D8; Reading</span>
+    <span class="tag tag-green">&#x2705; Check It!</span>
+  </div>
+</div>
+
+<div class="main-tabs">
+  <button class="main-tab active" onclick="showTab('grammar',this)">&#x1F4D6; Grammar</button>
+  <button class="main-tab" onclick="showTab('everyday',this)">&#x1F4AC; Everyday English</button>
+  <button class="main-tab" onclick="showTab('reading',this)">&#x1F4D8; Reading</button>
+  <button class="main-tab" onclick="showTab('checkit',this)">&#x2705; Check It!</button>
+</div>
+
+<!-- ════════════════════ GRAMMAR TAB ════════════════════ -->
+<div id="tab-grammar" class="tab-panel active">
+
+  <!-- PART 1: IDIOMS -->
+  <div class="rule-section">
+    <div class="topic-badge">&#x1F4AC; Part 1</div>
+    <div class="rule-title">Idioms — التعبيرات الاصطلاحية</div>
+    <div class="rule-ar">تعبيرات ثابتة لا تُفهم من الكلمات المفردة</div>
+    <div class="rule-box">
+      An <b>idiom</b> is a group of words whose <b>combined meaning is different</b> from the literal meaning of each word.<br><br>
+      &#x2022; "Break a leg!" &#x2260; break your actual leg &nbsp;&#x2192;&nbsp; it means <b>Good luck!</b><br>
+      &#x2022; "It cost an arm and a leg." &#x2260; body parts &nbsp;&#x2192;&nbsp; it was <b>very expensive</b>.<br><br>
+      You must <b>learn idioms as fixed units</b> — you cannot change the words or guess the meaning.
+    </div>
+  </div>
+
+  <!-- Body idioms -->
+  <div class="rule-section">
+    <div class="icat-hd"><span class="icat-pill icat-body">&#x1F9B4; Body</span><span class="icat-lbl">Body Part Idioms — تعبيرات أعضاء الجسم</span></div>
+    <div class="idiom-grid">
+      <div class="idiom-card ic-body" onclick="ttsRead(&quot;Break a leg! Meaning: Good luck! Used before a performance or important event.&quot;,0.88)">
+        <div class="ic-phrase">break a leg &#x1F509;</div>
+        <div class="ic-meaning">= Good luck!</div>
+        <div class="ic-ar">بالتوفيق! (يُقال قبل عرض أو مقابلة)</div>
+        <div class="ic-ex">"Your interview is today? Break a leg!"</div>
+      </div>
+      <div class="idiom-card ic-body" onclick="ttsRead(&quot;It cost an arm and a leg. Meaning: It was very expensive.&quot;,0.88)">
+        <div class="ic-phrase">cost an arm and a leg &#x1F509;</div>
+        <div class="ic-meaning">= very expensive</div>
+        <div class="ic-ar">غالي جداً / بثمن باهظ</div>
+        <div class="ic-ex">"That new laptop cost an arm and a leg."</div>
+      </div>
+      <div class="idiom-card ic-body" onclick="ttsRead(&quot;Pull someone's leg. Meaning: To joke or tease someone.&quot;,0.88)">
+        <div class="ic-phrase">pull someone's leg &#x1F509;</div>
+        <div class="ic-meaning">= to joke / tease</div>
+        <div class="ic-ar">يمزح / يسخر من شخص بشكل ودي</div>
+        <div class="ic-ex">"Are you serious or just pulling my leg?"</div>
+      </div>
+      <div class="idiom-card ic-body" onclick="ttsRead(&quot;Get cold feet. Meaning: To become nervous or scared before doing something.&quot;,0.88)">
+        <div class="ic-phrase">get cold feet &#x1F509;</div>
+        <div class="ic-meaning">= become nervous / lose confidence</div>
+        <div class="ic-ar">يتردد / يخاف في اللحظة الأخيرة</div>
+        <div class="ic-ex">"He got cold feet before the wedding."</div>
+      </div>
+      <div class="idiom-card ic-body" onclick="ttsRead(&quot;Keep an eye on. Meaning: To watch carefully or monitor something.&quot;,0.88)">
+        <div class="ic-phrase">keep an eye on &#x1F509;</div>
+        <div class="ic-meaning">= watch carefully / monitor</div>
+        <div class="ic-ar">يراقب / يبقي عينه على شيء</div>
+        <div class="ic-ex">"Can you keep an eye on my bag?"</div>
+      </div>
+      <div class="idiom-card ic-body" onclick="ttsRead(&quot;Turn a blind eye. Meaning: To deliberately ignore something wrong.&quot;,0.88)">
+        <div class="ic-phrase">turn a blind eye &#x1F509;</div>
+        <div class="ic-meaning">= deliberately ignore</div>
+        <div class="ic-ar">يتجاهل عن قصد / يغض الطرف</div>
+        <div class="ic-ex">"Management turned a blind eye to the problem."</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Time idioms -->
+  <div class="rule-section">
+    <div class="icat-hd"><span class="icat-pill icat-time">&#x23F0; Time</span><span class="icat-lbl">Time &amp; Situation Idioms — تعبيرات الوقت والمواقف</span></div>
+    <div class="idiom-grid">
+      <div class="idiom-card ic-time" onclick="ttsRead(&quot;Once in a blue moon. Meaning: Very rarely.&quot;,0.88)">
+        <div class="ic-phrase">once in a blue moon &#x1F509;</div>
+        <div class="ic-meaning">= very rarely</div>
+        <div class="ic-ar">نادراً جداً / بالكاد</div>
+        <div class="ic-ex">"She calls me once in a blue moon."</div>
+      </div>
+      <div class="idiom-card ic-time" onclick="ttsRead(&quot;In the nick of time. Meaning: Just in time, at the last possible moment.&quot;,0.88)">
+        <div class="ic-phrase">in the nick of time &#x1F509;</div>
+        <div class="ic-meaning">= just in time / at the last moment</div>
+        <div class="ic-ar">في اللحظة المناسبة / قبل فوات الأوان</div>
+        <div class="ic-ex">"The ambulance arrived in the nick of time."</div>
+      </div>
+      <div class="idiom-card ic-time" onclick="ttsRead(&quot;Beat around the bush. Meaning: To avoid saying something directly.&quot;,0.88)">
+        <div class="ic-phrase">beat around the bush &#x1F509;</div>
+        <div class="ic-meaning">= avoid the main point / be indirect</div>
+        <div class="ic-ar">يتحاشى الموضوع / يدور حوله دون أن يصل</div>
+        <div class="ic-ex">"Stop beating around the bush — what do you want?"</div>
+      </div>
+      <div class="idiom-card ic-time" onclick="ttsRead(&quot;Kill two birds with one stone. Meaning: Achieve two things with one action.&quot;,0.88)">
+        <div class="ic-phrase">kill two birds with one stone &#x1F509;</div>
+        <div class="ic-meaning">= achieve two things with one action</div>
+        <div class="ic-ar">يصيب عصفورين بحجر واحد / يجمع فائدتين</div>
+        <div class="ic-ex">"I'll shop on the way to the gym — kill two birds with one stone."</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Effort idioms -->
+  <div class="rule-section">
+    <div class="icat-hd"><span class="icat-pill icat-effort">&#x1F4AA; Effort</span><span class="icat-lbl">Effort &amp; Success Idioms — تعبيرات الجهد والنجاح</span></div>
+    <div class="idiom-grid">
+      <div class="idiom-card ic-effort" onclick="ttsRead(&quot;Hit the nail on the head. Meaning: To say exactly the right thing or identify the problem precisely.&quot;,0.88)">
+        <div class="ic-phrase">hit the nail on the head &#x1F509;</div>
+        <div class="ic-meaning">= say exactly the right thing</div>
+        <div class="ic-ar">يصيب كبد الحقيقة / يتكلم بدقة تامة</div>
+        <div class="ic-ex">"Your analysis hit the nail on the head."</div>
+      </div>
+      <div class="idiom-card ic-effort" onclick="ttsRead(&quot;Bite off more than you can chew. Meaning: To take on more than you can handle.&quot;,0.88)">
+        <div class="ic-phrase">bite off more than you can chew &#x1F509;</div>
+        <div class="ic-meaning">= take on too much / overcommit</div>
+        <div class="ic-ar">يأخذ على عاتقه أكثر مما يستطيع</div>
+        <div class="ic-ex">"She bit off more than she could chew with three projects at once."</div>
+      </div>
+      <div class="idiom-card ic-effort" onclick="ttsRead(&quot;Go the extra mile. Meaning: To make more effort than expected.&quot;,0.88)">
+        <div class="ic-phrase">go the extra mile &#x1F509;</div>
+        <div class="ic-meaning">= do more than expected</div>
+        <div class="ic-ar">يبذل مجهوداً إضافياً / يتجاوز المطلوب</div>
+        <div class="ic-ex">"She always goes the extra mile for her students."</div>
+      </div>
+      <div class="idiom-card ic-effort" onclick="ttsRead(&quot;Bite the bullet. Meaning: To endure a difficult or painful situation bravely.&quot;,0.88)">
+        <div class="ic-phrase">bite the bullet &#x1F509;</div>
+        <div class="ic-meaning">= endure pain / face difficulty bravely</div>
+        <div class="ic-ar">يتحمل الأمر / يواجه الوضع الصعب بشجاعة</div>
+        <div class="ic-ex">"Just bite the bullet and tell him the truth."</div>
+      </div>
+      <div class="idiom-card ic-effort" onclick="ttsRead(&quot;The ball is in your court. Meaning: It is your turn to decide or take action.&quot;,0.88)">
+        <div class="ic-phrase">the ball is in your court &#x1F509;</div>
+        <div class="ic-meaning">= it's your turn / your decision to make</div>
+        <div class="ic-ar">القرار بيدك / دورك أنت الآن</div>
+        <div class="ic-ex">"I've made my offer — the ball is in your court now."</div>
+      </div>
+      <div class="idiom-card ic-effort" onclick="ttsRead(&quot;Burn bridges. Meaning: To permanently damage a relationship or close off future options.&quot;,0.88)">
+        <div class="ic-phrase">burn bridges &#x1F509;</div>
+        <div class="ic-meaning">= permanently damage relationships / close future options</div>
+        <div class="ic-ar">يقطع العلاقات بشكل نهائي / يغلق الأبواب</div>
+        <div class="ic-ex">"Don't burn bridges when you quit — you might need them later."</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PART 2: COLLOCATIONS -->
+  <div class="rule-section">
+    <div class="topic-badge">&#x1F4DD; Part 2</div>
+    <div class="rule-title">Collocations — التلازم اللغوي</div>
+    <div class="rule-ar">كلمتان أو أكثر تُستخدمان معاً بشكل طبيعي في اللغة</div>
+    <div class="rule-box">
+      A <b>collocation</b> is a pair (or group) of words that <b>naturally go together</b> in English. Native speakers use these automatically — learners must <b>memorise them as chunks</b>.<br><br>
+      &#x2022; We say <b>make</b> a mistake — NOT <b>do</b> a mistake<br>
+      &#x2022; We say <b>pass</b> an exam — NOT <b>win</b> an exam<br>
+      &#x2022; We say <b>pay</b> attention — NOT <b>give</b> attention
+    </div>
+  </div>
+
+  <!-- Verb collocation cards -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F4CB; Key Verb Collocations</div>
+    <div class="rule-ar">أفعال رئيسية مع مصاحباتها الطبيعية</div>
+    <div class="coll-grid">
+      <div class="coll-card cv-make" onclick="ttsRead(&quot;make: a decision, a mistake, progress, an effort, a difference, money, a phone call, a plan, an appointment&quot;,0.88)">
+        <div class="coll-verb">make &#x1F509;</div>
+        <div class="coll-tags">
+          <span class="coll-tag">a decision</span>
+          <span class="coll-tag">a mistake</span>
+          <span class="coll-tag">progress</span>
+          <span class="coll-tag">an effort</span>
+          <span class="coll-tag">a difference</span>
+          <span class="coll-tag">money</span>
+          <span class="coll-tag">a plan</span>
+          <span class="coll-tag">an appointment</span>
+          <span class="coll-tag">a phone call</span>
+        </div>
+      </div>
+      <div class="coll-card cv-do" onclick="ttsRead(&quot;do: homework, damage, your best, research, a favour, business, exercise, the dishes, well&quot;,0.88)">
+        <div class="coll-verb">do &#x1F509;</div>
+        <div class="coll-tags">
+          <span class="coll-tag">homework</span>
+          <span class="coll-tag">damage</span>
+          <span class="coll-tag">your best</span>
+          <span class="coll-tag">research</span>
+          <span class="coll-tag">a favour</span>
+          <span class="coll-tag">business</span>
+          <span class="coll-tag">exercise</span>
+          <span class="coll-tag">the dishes</span>
+          <span class="coll-tag">well</span>
+        </div>
+      </div>
+      <div class="coll-card cv-take" onclick="ttsRead(&quot;take: a break, a risk, an opportunity, notes, a photo, part in, a decision, time&quot;,0.88)">
+        <div class="coll-verb">take &#x1F509;</div>
+        <div class="coll-tags">
+          <span class="coll-tag">a break</span>
+          <span class="coll-tag">a risk</span>
+          <span class="coll-tag">an opportunity</span>
+          <span class="coll-tag">notes</span>
+          <span class="coll-tag">a photo</span>
+          <span class="coll-tag">part in</span>
+          <span class="coll-tag">time</span>
+          <span class="coll-tag">responsibility</span>
+        </div>
+      </div>
+      <div class="coll-card cv-have" onclick="ttsRead(&quot;have: a rest, a meeting, an argument, a look, a shower, second thoughts, a conversation, fun&quot;,0.88)">
+        <div class="coll-verb">have &#x1F509;</div>
+        <div class="coll-tags">
+          <span class="coll-tag">a rest</span>
+          <span class="coll-tag">a meeting</span>
+          <span class="coll-tag">an argument</span>
+          <span class="coll-tag">a look</span>
+          <span class="coll-tag">a shower</span>
+          <span class="coll-tag">second thoughts</span>
+          <span class="coll-tag">a conversation</span>
+          <span class="coll-tag">fun</span>
+        </div>
+      </div>
+      <div class="coll-card cv-get" onclick="ttsRead(&quot;get: a job, permission, lost, married, tired, started, in touch, rid of&quot;,0.88)">
+        <div class="coll-verb">get &#x1F509;</div>
+        <div class="coll-tags">
+          <span class="coll-tag">a job</span>
+          <span class="coll-tag">permission</span>
+          <span class="coll-tag">lost</span>
+          <span class="coll-tag">married</span>
+          <span class="coll-tag">tired</span>
+          <span class="coll-tag">started</span>
+          <span class="coll-tag">in touch</span>
+          <span class="coll-tag">rid of</span>
+        </div>
+      </div>
+      <div class="coll-card cv-commit" onclick="ttsRead(&quot;Tricky collocations: commit a crime, pass an exam, miss an opportunity, waste time, pay attention, cause damage&quot;,0.88)">
+        <div class="coll-verb">&#x26A0; Tricky &#x1F509;</div>
+        <div class="coll-tags">
+          <span class="coll-tag">commit a crime</span>
+          <span class="coll-tag">pass an exam</span>
+          <span class="coll-tag">miss an opportunity</span>
+          <span class="coll-tag">waste time</span>
+          <span class="coll-tag">pay attention</span>
+          <span class="coll-tag">cause damage</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Adjective + noun collocations -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F4D0; Adjective + Noun Collocations</div>
+    <div class="rule-ar">صفة + اسم — تلازمات شائعة</div>
+    <table class="adj-table">
+      <thead><tr><th>Adjective</th><th>Common noun partners</th></tr></thead>
+      <tbody>
+        <tr><td class="td-adj">heavy</td><td class="td-colls"><span onclick="ttsRead(&quot;heavy traffic, heavy rain, heavy smoker, heavy workload&quot;,0.88)">heavy <b>traffic</b> &nbsp;/&nbsp; heavy <b>rain</b> &nbsp;/&nbsp; heavy <b>smoker</b> &nbsp;/&nbsp; heavy <b>workload</b> &#x1F509;</span></td></tr>
+        <tr><td class="td-adj">strong</td><td class="td-colls"><span onclick="ttsRead(&quot;strong coffee, strong accent, strong opinion, strong wind&quot;,0.88)">strong <b>coffee</b> &nbsp;/&nbsp; strong <b>accent</b> &nbsp;/&nbsp; strong <b>opinion</b> &nbsp;/&nbsp; strong <b>wind</b> &#x1F509;</span></td></tr>
+        <tr><td class="td-adj">deep</td><td class="td-colls"><span onclick="ttsRead(&quot;deep sleep, deep breath, deep thought, deep trouble&quot;,0.88)">deep <b>sleep</b> &nbsp;/&nbsp; deep <b>breath</b> &nbsp;/&nbsp; deep <b>thought</b> &nbsp;/&nbsp; deep <b>trouble</b> &#x1F509;</span></td></tr>
+        <tr><td class="td-adj">high</td><td class="td-colls"><span onclick="ttsRead(&quot;high price, high speed, high quality, high risk&quot;,0.88)">high <b>price</b> &nbsp;/&nbsp; high <b>speed</b> &nbsp;/&nbsp; high <b>quality</b> &nbsp;/&nbsp; high <b>risk</b> &#x1F509;</span></td></tr>
+        <tr><td class="td-adj">fast / quick</td><td class="td-colls"><span onclick="ttsRead(&quot;fast food, quick decision, fast asleep, quick look&quot;,0.88)">fast <b>food</b> &nbsp;/&nbsp; quick <b>decision</b> &nbsp;/&nbsp; fast <b>asleep</b> &nbsp;/&nbsp; quick <b>look</b> &#x1F509;</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Common mistakes -->
+  <div class="rule-section">
+    <div class="rule-title">&#x26A0; Common Collocation Mistakes — أخطاء شائعة</div>
+    <div class="warn-row">
+      <span class="warn-icon">&#x274C;</span>
+      <div>
+        <div><span class="warn-wrong">I did a mistake.</span>&nbsp;&#x2192;&nbsp;<span class="warn-right">I made a mistake.</span></div>
+        <div class="warn-ar">mistake تلازم مع make — وليس do</div>
+      </div>
+    </div>
+    <div class="warn-row">
+      <span class="warn-icon">&#x274C;</span>
+      <div>
+        <div><span class="warn-wrong">She won the exam.</span>&nbsp;&#x2192;&nbsp;<span class="warn-right">She passed the exam.</span></div>
+        <div class="warn-ar">الامتحان يُجتاز (pass) — ليس يُفوز (win)</div>
+      </div>
+    </div>
+    <div class="warn-row">
+      <span class="warn-icon">&#x274C;</span>
+      <div>
+        <div><span class="warn-wrong">He lost time on that project.</span>&nbsp;&#x2192;&nbsp;<span class="warn-right">He wasted time on that project.</span></div>
+        <div class="warn-ar">الوقت يُهدر (waste) — ليس يُضاع (lose)</div>
+      </div>
+    </div>
+    <div class="warn-row">
+      <span class="warn-icon">&#x274C;</span>
+      <div>
+        <div><span class="warn-wrong">Give attention to the instructions.</span>&nbsp;&#x2192;&nbsp;<span class="warn-right">Pay attention to the instructions.</span></div>
+        <div class="warn-ar">الانتباه يُعطى بـ pay — ليس give</div>
+      </div>
+    </div>
+    <div class="warn-row">
+      <span class="warn-icon">&#x274C;</span>
+      <div>
+        <div><span class="warn-wrong">I did a photo of the view.</span>&nbsp;&#x2192;&nbsp;<span class="warn-right">I took a photo of the view.</span></div>
+        <div class="warn-ar">الصورة تُلتقط (take) — ليس do</div>
+      </div>
+    </div>
+    <div class="warn-row">
+      <span class="warn-icon">&#x274C;</span>
+      <div>
+        <div><span class="warn-wrong">He made a crime.</span>&nbsp;&#x2192;&nbsp;<span class="warn-right">He committed a crime.</span></div>
+        <div class="warn-ar">الجريمة تُرتكب (commit) — ليس make</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tips -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F4A1; Quick Tips</div>
+    <div class="tip-row" onclick="ttsRead(&quot;Tip: Never translate idioms word by word. Learn them as a whole fixed phrase with their meaning.&quot;,0.88)">
+      <span class="tip-badge">Idioms</span>
+      <div><span class="tip-en">Never translate idioms word-by-word — learn the <b>whole phrase + its meaning</b> as one unit &#x1F509;</span><span class="tip-ar">لا تترجم الـ idioms كلمة كلمة — احفظ التعبير كوحدة واحدة مع معناه</span></div>
+    </div>
+    <div class="tip-row" onclick="ttsRead(&quot;Tip: Collocations are about which words go together. When you learn a new noun, also learn the verb that goes with it.&quot;,0.88)">
+      <span class="tip-badge">Collocations</span>
+      <div><span class="tip-en">When you learn a new noun, always note its collocating verb: <b>make</b> a decision, <b>pass</b> an exam, <b>take</b> a break &#x1F509;</span><span class="tip-ar">تعلّم الاسم مع الفعل الذي يصاحبه دائماً</span></div>
+    </div>
+    <div class="tip-row" onclick="ttsRead(&quot;Tip: Make and do are the most confused verbs. Make is for creating or producing. Do is for tasks and activities.&quot;,0.88)">
+      <span class="tip-badge">make vs do</span>
+      <div><span class="tip-en"><b>make</b> = create / produce something &nbsp;|&nbsp; <b>do</b> = perform an activity/task — but always check! &#x1F509;</span><span class="tip-ar">make = تصنع شيئاً | do = تؤدي نشاطاً — لكن راجع دائماً</span></div>
+    </div>
+    <div class="tip-row" onclick="ttsRead(&quot;Tip: Idioms are usually informal. Avoid them in formal writing unless you are sure they are appropriate.&quot;,0.88)">
+      <span class="tip-badge">Register</span>
+      <div><span class="tip-en">Idioms are mostly <b>informal</b> — great in speech and casual writing, but avoid them in formal academic texts &#x1F509;</span><span class="tip-ar">الـ idioms عامية في الغالب — مناسبة للحديث والكتابة غير الرسمية</span></div>
+    </div>
+  </div>
+
+</div><!-- /tab-grammar -->
+
+<!-- ════════════════════ EVERYDAY ENGLISH TAB ════════════════════ -->
+<div id="tab-everyday" class="tab-panel">
+
+  <!-- Dialogue 1 -->
+  <div class="dlg-block">
+    <div class="dlg-header">
+      <div>
+        <div class="dlg-title">&#x1F454; Job Interview Prep</div>
+        <div class="dlg-sub ar">التحضير لمقابلة عمل</div>
+      </div>
+      <div class="dlg-tags"><span class="tag tag-grammar">bite the bullet / go the extra mile / make an effort</span></div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;I have a big interview tomorrow and I'm so nervous. I keep thinking about everything that could go wrong.&quot;,0.88)">I have a big interview tomorrow and I'm so nervous. I keep thinking about everything that could go wrong. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">لديّ مقابلة مهمة غداً وأنا متوتر جداً. أفكر في كل ما قد يسوء.</div>
+          <div class="chat-bubble-foot">Tariq</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Just bite the bullet and go in with confidence. You've prepared well, so make an effort to show that.&quot;,0.88)">Just <b>bite the bullet</b> and go in with confidence. You've prepared well, so <b>make an effort</b> to show that. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">فقط واجه الأمر بشجاعة وادخل بثقة. لقد استعددت جيداً، فاجعل جهدك واضحاً.</div>
+          <div class="chat-bubble-foot">Mona</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;You're right. I need to go the extra mile — maybe prepare some questions to ask them at the end.&quot;,0.88)">You're right. I need to <b>go the extra mile</b> — maybe prepare some questions to ask them at the end. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">أنتِ محقة. أحتاج أن أبذل جهداً إضافياً — ربما أحضّر بعض الأسئلة لأسألها في النهاية.</div>
+          <div class="chat-bubble-foot">Tariq</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Exactly! And don't get cold feet at the last minute. Break a leg tomorrow!&quot;,0.88)">Exactly! And don't <b>get cold feet</b> at the last minute. <b>Break a leg</b> tomorrow! <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">بالضبط! ولا تتردد في اللحظة الأخيرة. بالتوفيق غداً!</div>
+          <div class="chat-bubble-foot">Mona</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dialogue 2 -->
+  <div class="dlg-block">
+    <div class="dlg-header">
+      <div>
+        <div class="dlg-title">&#x1F6CD;&#xFE0F; Shopping Trip</div>
+        <div class="dlg-sub ar">رحلة تسوق</div>
+      </div>
+      <div class="dlg-tags"><span class="tag tag-grammar">cost an arm and a leg / make a decision / take a break</span></div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Look at this jacket — it's perfect! But the price is unbelievable.&quot;,0.88)">Look at this jacket — it's perfect! But the price is unbelievable. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">انظري لهذه الجاكيت — رائعة! لكن السعر لا يُصدَّق.</div>
+          <div class="chat-bubble-foot">Rana</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;I told you — everything in this shop costs an arm and a leg. Let's look somewhere else.&quot;,0.88)">I told you — everything in this shop <b>costs an arm and a leg</b>. Let's look somewhere else. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">قلت لكِ — كل شيء في هذا المحل غالٍ جداً. لنبحث في مكان آخر.</div>
+          <div class="chat-bubble-foot">Dina</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Okay, but I need to make a decision today. My sister's birthday is tomorrow.&quot;,0.88)">Okay, but I need to <b>make a decision</b> today. My sister's birthday is tomorrow. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">حسناً، لكن يجب أن أتخذ قراراً اليوم. عيد ميلاد أختي غداً.</div>
+          <div class="chat-bubble-foot">Rana</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Let's take a break and have coffee first. I always make better decisions after a rest.&quot;,0.88)">Let's <b>take a break</b> and have coffee first. I always make better decisions after a rest. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">لنأخذ استراحة ونشرب قهوة أولاً. دائماً أتخذ قرارات أفضل بعد الراحة.</div>
+          <div class="chat-bubble-foot">Dina</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dialogue 3 -->
+  <div class="dlg-block">
+    <div class="dlg-header">
+      <div>
+        <div class="dlg-title">&#x1F4F1; Old Friends Chatting</div>
+        <div class="dlg-sub ar">محادثة بين صديقين قديمين</div>
+      </div>
+      <div class="dlg-tags"><span class="tag tag-grammar">pull my leg / once in a blue moon / kill two birds</span></div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Is that really you? I see you once in a blue moon these days!&quot;,0.88)">Is that really you? I see you <b>once in a blue moon</b> these days! <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">أهو أنت حقاً؟ أراك نادراً جداً هذه الأيام!</div>
+          <div class="chat-bubble-foot">Lara</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;I know! I came to the city for a work meeting, so I thought I'd kill two birds with one stone and visit you too.&quot;,0.88)">I know! I came to the city for a work meeting, so I thought I'd <b>kill two birds with one stone</b> and visit you too. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">أعلم! جئت إلى المدينة لاجتماع عمل، فقلت أجمع فائدتين وأزورك أيضاً.</div>
+          <div class="chat-bubble-foot">Faris</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Ha! Are you pulling my leg? You haven't visited in two years!&quot;,0.88)">Ha! Are you <b>pulling my leg</b>? You haven't visited in two years! <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">هاه! هل تمزح معي؟ لم تزرني منذ سنتين!</div>
+          <div class="chat-bubble-foot">Lara</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;I'm serious! And I promise I'll make more of an effort from now on to stay in touch.&quot;,0.88)">I'm serious! And I promise I'll make more of an effort from now on to <b>stay in touch</b>. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">أنا جادّ! وأعدك بأنني سأبذل جهداً أكبر من الآن للبقاء على تواصل.</div>
+          <div class="chat-bubble-foot">Faris</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dialogue 4 -->
+  <div class="dlg-block">
+    <div class="dlg-header">
+      <div>
+        <div class="dlg-title">&#x1F4CA; Team Project</div>
+        <div class="dlg-sub ar">مشروع الفريق</div>
+      </div>
+      <div class="dlg-tags"><span class="tag tag-grammar">hit the nail on the head / pay attention / make progress / do your best</span></div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;I think our main problem is that nobody is taking responsibility. That's why we're not making progress.&quot;,0.88)">I think our main problem is that nobody is <b>taking responsibility</b>. That's why we're not <b>making progress</b>. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">أعتقد أن مشكلتنا الرئيسية هي أن لا أحد يتحمل المسؤولية. لهذا لا نتقدم.</div>
+          <div class="chat-bubble-foot">Nour</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;You've hit the nail on the head. We need to assign clear roles and pay attention to the deadlines.&quot;,0.88)">You've <b>hit the nail on the head</b>. We need to assign clear roles and <b>pay attention</b> to the deadlines. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">لقد أصبت كبد الحقيقة. نحتاج لتحديد أدوار واضحة والانتباه للمواعيد النهائية.</div>
+          <div class="chat-bubble-foot">Khalid</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Agreed. Let's do our best this week and have a proper meeting to review the plan.&quot;,0.88)">Agreed. Let's <b>do our best</b> this week and <b>have a proper meeting</b> to review the plan. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">موافق. لنبذل قصارى جهدنا هذا الأسبوع ونعقد اجتماعاً حقيقياً لمراجعة الخطة.</div>
+          <div class="chat-bubble-foot">Nour</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;The ball is in our court now. If we waste any more time, we'll miss the deadline completely.&quot;,0.88)">The <b>ball is in our court</b> now. If we <b>waste</b> any more time, we'll <b>miss</b> the deadline completely. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">القرار بيدنا الآن. إذا أهدرنا المزيد من الوقت، سنفوّت الموعد النهائي تماماً.</div>
+          <div class="chat-bubble-foot">Khalid</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dialogue 5 -->
+  <div class="dlg-block">
+    <div class="dlg-header">
+      <div>
+        <div class="dlg-title">&#x1F3E0; Family Conversation</div>
+        <div class="dlg-sub ar">محادثة عائلية</div>
+      </div>
+      <div class="dlg-tags"><span class="tag tag-grammar">keep an eye on / in the nick of time / burn bridges</span></div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Mum, I'm thinking of quitting my job. My boss and I had a huge argument yesterday.&quot;,0.88)">Mum, I'm thinking of quitting my job. My boss and I <b>had a huge argument</b> yesterday. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">أمّي، أفكر في ترك وظيفتي. أنا وصاحب العمل كان لدينا جدال كبير أمس.</div>
+          <div class="chat-bubble-foot">Salim</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Don't make a hasty decision. You don't want to burn bridges — you might need a reference from him someday.&quot;,0.88)">Don't <b>make a hasty decision</b>. You don't want to <b>burn bridges</b> — you might need a reference from him someday. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">لا تتخذ قراراً متسرعاً. لا تريد أن تقطع العلاقات — قد تحتاج توصية منه يوماً ما.</div>
+          <div class="chat-bubble-foot">Mother</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;I understand. But I need to keep an eye on the situation. If it gets worse, I'll have to take action.&quot;,0.88)">I understand. But I need to <b>keep an eye on</b> the situation. If it gets worse, I'll have to <b>take action</b>. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">أفهم. لكن يجب أن أراقب الوضع. إذا ساء أكثر، سيجب أن أتحرك.</div>
+          <div class="chat-bubble-foot">Salim</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Good. And make sure you get a new job first — in the nick of time is not the best time to start looking.&quot;,0.88)">Good. And make sure you <b>get a new job</b> first — waiting until the nick of time is not the best approach. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">جيد. وتأكد من الحصول على وظيفة جديدة أولاً — الانتظار للحظة الأخيرة ليس أفضل نهج.</div>
+          <div class="chat-bubble-foot">Mother</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /tab-everyday -->
+
+<!-- ════════════════════ READING TAB ════════════════════ -->
+<div id="tab-reading" class="tab-panel">
+  <div class="read-wrap">
+    <div class="read-header">
+      <div class="read-title">&#x1F4D8; Starting Over</div>
+      <div class="read-sub ar">البداية من جديد</div>
+    </div>
+    <div class="read-body">
+      <p onclick="ttsRead(&quot;After fifteen years in the same company, Rania finally made the decision to leave and pursue her dream of opening her own business.&quot;,0.88)">After fifteen years in the same company, Rania finally <b>made the decision</b> to leave and pursue her dream of opening her own business. <span class="read-sp">&#x1F509;</span></p>
+      <p onclick="ttsRead(&quot;Her friends thought she was biting off more than she could chew. "You'll burn bridges with the company," one warned. "They'll never take you back."&quot;,0.88)">Her friends thought she was <b>biting off more than she could chew</b>. "You'll <b>burn bridges</b> with the company," one warned. "They'll never take you back." <span class="read-sp">&#x1F509;</span></p>
+      <p onclick="ttsRead(&quot;But Rania had done her research. She had saved money, made a solid plan, and even taken a business course the previous year. She wasn't going to waste any more time.&quot;,0.88)">But Rania had <b>done her research</b>. She had saved money, <b>made a solid plan</b>, and even taken a business course the previous year. She wasn't going to <b>waste any more time</b>. <span class="read-sp">&#x1F509;</span></p>
+      <p onclick="ttsRead(&quot;The first few months were difficult. The rent for her shop cost an arm and a leg, and making progress felt slow. There were days when she got cold feet and considered going back to her old job.&quot;,0.88)">The first few months were difficult. The rent for her shop <b>cost an arm and a leg</b>, and <b>making progress</b> felt slow. There were days when she <b>got cold feet</b> and considered going back to her old job. <span class="read-sp">&#x1F509;</span></p>
+      <p onclick="ttsRead(&quot;But she kept an eye on her goals and always went the extra mile for her customers — staying late, offering personalised advice, and paying attention to every small detail.&quot;,0.88)">But she <b>kept an eye on</b> her goals and always <b>went the extra mile</b> for her customers — staying late, offering personalised advice, and <b>paying attention</b> to every small detail. <span class="read-sp">&#x1F509;</span></p>
+      <p onclick="ttsRead(&quot;In the nick of time, just before she ran out of savings, a major client discovered her shop and placed a huge order. Rania had hit the nail on the head — her quality and dedication were exactly what the market needed.&quot;,0.88)">In the <b>nick of time</b>, just before she ran out of savings, a major client discovered her shop and placed a huge order. Rania had <b>hit the nail on the head</b> — her quality and dedication were exactly what the market needed. <span class="read-sp">&#x1F509;</span></p>
+    </div>
+
+    <div class="vocab-wrap">
+      <div class="vocab-title">&#x1F4DA; Key Vocabulary</div>
+      <div class="vocab-grid">
+        <div class="vocab-card" onclick="ttsRead(&quot;pursue&quot;,0.88)"><div class="vocab-en">pursue</div><div class="vocab-ar ar">يسعى نحو / يتتبع هدفاً</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;dedication&quot;,0.88)"><div class="vocab-en">dedication</div><div class="vocab-ar ar">تفانٍ / إخلاص</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;solid&quot;,0.88)"><div class="vocab-en">solid (plan)</div><div class="vocab-ar ar">متين / قوي</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;personalised&quot;,0.88)"><div class="vocab-en">personalised</div><div class="vocab-ar ar">مخصص / شخصي</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;savings&quot;,0.88)"><div class="vocab-en">savings</div><div class="vocab-ar ar">المدخرات</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;run out of&quot;,0.88)"><div class="vocab-en">run out of</div><div class="vocab-ar ar">ينفد / ينتهي</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;placed an order&quot;,0.88)"><div class="vocab-en">placed an order</div><div class="vocab-ar ar">قدّم طلبية</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;consider&quot;,0.88)"><div class="vocab-en">consider</div><div class="vocab-ar ar">يفكر في / يأخذ بعين الاعتبار</div></div>
+      </div>
+    </div>
+
+    <div class="rq-wrap">
+      <div class="rq-title">&#x2753; Comprehension Questions</div>
+      <div class="rq-item" id="rq1">
+        <div class="rq-q" onclick="ttsRead(&quot;What did Rania decide to do after fifteen years?&quot;,0.88)">1. What did Rania decide to do? &#x1F509;</div>
+        <div class="rq-opts">
+          <button class="read-opt" onclick="rqPick(this,'rq1',false)">Study business at university</button>
+          <button class="read-opt" onclick="rqPick(this,'rq1',true)">Leave her job and open her own business</button>
+          <button class="read-opt" onclick="rqPick(this,'rq1',false)">Move to a different company</button>
+          <button class="read-opt" onclick="rqPick(this,'rq1',false)">Retire early</button>
+        </div>
+      </div>
+      <div class="rq-item" id="rq2">
+        <div class="rq-q" onclick="ttsRead(&quot;What did Rania's friends worry about?&quot;,0.88)">2. What worried Rania's friends? &#x1F509;</div>
+        <div class="rq-opts">
+          <button class="read-opt" onclick="rqPick(this,'rq2',false)">That she had no savings</button>
+          <button class="read-opt" onclick="rqPick(this,'rq2',true)">That she was taking on too much and would damage her relationship with the company</button>
+          <button class="read-opt" onclick="rqPick(this,'rq2',false)">That the market was already crowded</button>
+          <button class="read-opt" onclick="rqPick(this,'rq2',false)">That she had no experience in business</button>
+        </div>
+      </div>
+      <div class="rq-item" id="rq3">
+        <div class="rq-q" onclick="ttsRead(&quot;What made the first months difficult?&quot;,0.88)">3. What made the first months difficult? &#x1F509;</div>
+        <div class="rq-opts">
+          <button class="read-opt" onclick="rqPick(this,'rq3',false)">She had no customers at all</button>
+          <button class="read-opt" onclick="rqPick(this,'rq3',true)">The rent was very expensive and progress was slow</button>
+          <button class="read-opt" onclick="rqPick(this,'rq3',false)">Her friends refused to help her</button>
+          <button class="read-opt" onclick="rqPick(this,'rq3',false)">She had not done enough research</button>
+        </div>
+      </div>
+      <div class="rq-item" id="rq4">
+        <div class="rq-q" onclick="ttsRead(&quot;How did Rania stand out for her customers?&quot;,0.88)">4. How did Rania stand out for her customers? &#x1F509;</div>
+        <div class="rq-opts">
+          <button class="read-opt" onclick="rqPick(this,'rq4',false)">She offered the lowest prices in the market</button>
+          <button class="read-opt" onclick="rqPick(this,'rq4',true)">She stayed late, gave personalised advice, and paid attention to detail</button>
+          <button class="read-opt" onclick="rqPick(this,'rq4',false)">She advertised heavily on social media</button>
+          <button class="read-opt" onclick="rqPick(this,'rq4',false)">She hired experienced staff</button>
+        </div>
+      </div>
+      <div class="rq-item" id="rq5">
+        <div class="rq-q" onclick="ttsRead(&quot;What happened just before Rania ran out of savings?&quot;,0.88)">5. What happened at the last moment? &#x1F509;</div>
+        <div class="rq-opts">
+          <button class="read-opt" onclick="rqPick(this,'rq5',false)">She went back to her old company</button>
+          <button class="read-opt" onclick="rqPick(this,'rq5',false)">A friend lent her money</button>
+          <button class="read-opt" onclick="rqPick(this,'rq5',true)">A major client discovered her shop and placed a huge order</button>
+          <button class="read-opt" onclick="rqPick(this,'rq5',false)">She received a business grant from the government</button>
+        </div>
+      </div>
+      <div class="rq-score" id="rqScore40" style="display:none">
+        <div class="rqs-icon">&#x1F3AF;</div>
+        <div class="rqs-num" id="rqScoreNum40"></div>
+        <div class="rqs-msg" id="rqScoreMsg40"></div>
+        <div class="rqs-ar ar" id="rqScoreAr40"></div>
+        <button class="rqs-btn" onclick="rqReset40()">&#x1F504; Try Again</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /tab-reading -->
+
+<!-- ════════════════════ CHECK IT! TAB ════════════════════ -->
+<div id="tab-checkit" class="tab-panel">
+  <div class="ci-hero">
+    <div class="ci-hero-icon">&#x2705;</div>
+    <h2 class="ci-hero-title">Check It!</h2>
+    <p class="ci-hero-sub">25 questions — Idioms &amp; Collocations — 20 MCQ + 5 Fill-in-the-Blank</p>
+    <div class="ci-hero-types">
+      <span class="tag tag-grammar">20 Multiple Choice</span>
+      <span class="tag tag-other">5 Fill in the Blank</span>
+    </div>
+  </div>
+  <div class="ci-progress-wrap">
+    <div class="ci-progress-inner">
+      <div class="ci-progress-bar"><div class="ci-progress-fill" id="ciProgressFill40"></div></div>
+      <div class="ci-progress-txt">
+        <span id="ciProgressTxt40">0 / 25 answered</span>
+        <span id="ciScoreTxt40">Score: 0</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="ci-wrap" id="ciWrap40">
+
+    <div class="ci-q" id="ciq1"><div class="ci-q-num">Q1</div><div class="ci-q-text" onclick="ttsRead(&quot;"Break a leg!" — what does this idiom mean?&quot;,0.88)">"Break a leg!" — meaning? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq1',false)">Be careful not to fall</button><button class="ci-btn" onclick="ciPick(this,'ciq1',true)">Good luck!</button><button class="ci-btn" onclick="ciPick(this,'ciq1',false)">You have an injury</button><button class="ci-btn" onclick="ciPick(this,'ciq1',false)">Run as fast as you can</button></div></div>
+
+    <div class="ci-q" id="ciq2"><div class="ci-q-num">Q2</div><div class="ci-q-text" onclick="ttsRead(&quot;"That holiday cost an arm and a leg." What does this mean?&quot;,0.88)">"That holiday <b>cost an arm and a leg</b>." &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq2',false)">It caused an injury</button><button class="ci-btn" onclick="ciPick(this,'ciq2',true)">It was very expensive</button><button class="ci-btn" onclick="ciPick(this,'ciq2',false)">It was exhausting</button><button class="ci-btn" onclick="ciPick(this,'ciq2',false)">It lasted a very long time</button></div></div>
+
+    <div class="ci-q" id="ciq3"><div class="ci-q-num">Q3</div><div class="ci-q-text" onclick="ttsRead(&quot;"Are you pulling my leg?" — what does pull my leg mean?&quot;,0.88)">"Are you <b>pulling my leg</b>?" &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq3',false)">Physically dragging me</button><button class="ci-btn" onclick="ciPick(this,'ciq3',false)">Helping me walk</button><button class="ci-btn" onclick="ciPick(this,'ciq3',true)">Joking / teasing me</button><button class="ci-btn" onclick="ciPick(this,'ciq3',false)">Asking for a favour</button></div></div>
+
+    <div class="ci-q" id="ciq4"><div class="ci-q-num">Q4</div><div class="ci-q-text" onclick="ttsRead(&quot;"She got cold feet before the presentation." What happened?&quot;,0.88)">"She <b>got cold feet</b> before the presentation." &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq4',false)">Her feet became physically cold</button><button class="ci-btn" onclick="ciPick(this,'ciq4',true)">She became nervous and lost confidence</button><button class="ci-btn" onclick="ciPick(this,'ciq4',false)">She was very well prepared</button><button class="ci-btn" onclick="ciPick(this,'ciq4',false)">She forgot her notes</button></div></div>
+
+    <div class="ci-q" id="ciq5"><div class="ci-q-num">Q5</div><div class="ci-q-text" onclick="ttsRead(&quot;"You hit the nail on the head." — meaning?&quot;,0.88)">"You <b>hit the nail on the head</b>." &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq5',false)">You broke something</button><button class="ci-btn" onclick="ciPick(this,'ciq5',true)">You said exactly the right thing</button><button class="ci-btn" onclick="ciPick(this,'ciq5',false)">You made a big mistake</button><button class="ci-btn" onclick="ciPick(this,'ciq5',false)">You were too direct</button></div></div>
+
+    <div class="ci-q" id="ciq6"><div class="ci-q-num">Q6</div><div class="ci-q-text" onclick="ttsRead(&quot;Which verb collocates correctly with mistake? I did a mistake, or I made a mistake?&quot;,0.88)">Which collocation is correct? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq6',false)">I did a mistake.</button><button class="ci-btn" onclick="ciPick(this,'ciq6',true)">I made a mistake.</button><button class="ci-btn" onclick="ciPick(this,'ciq6',false)">I had a mistake.</button><button class="ci-btn" onclick="ciPick(this,'ciq6',false)">I took a mistake.</button></div></div>
+
+    <div class="ci-q" id="ciq7"><div class="ci-q-num">Q7</div><div class="ci-q-text" onclick="ttsRead(&quot;Which is the correct collocation: she won the exam, or she passed the exam?&quot;,0.88)">Correct collocation for exam? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq7',false)">She won the exam.</button><button class="ci-btn" onclick="ciPick(this,'ciq7',true)">She passed the exam.</button><button class="ci-btn" onclick="ciPick(this,'ciq7',false)">She made the exam.</button><button class="ci-btn" onclick="ciPick(this,'ciq7',false)">She did the exam successfully.</button></div></div>
+
+    <div class="ci-q" id="ciq8"><div class="ci-q-num">Q8</div><div class="ci-q-text" onclick="ttsRead(&quot;"Once in a blue moon" — what does this mean?&quot;,0.88)">"Once in a blue moon" — meaning? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq8',false)">Every night</button><button class="ci-btn" onclick="ciPick(this,'ciq8',false)">During a full moon</button><button class="ci-btn" onclick="ciPick(this,'ciq8',true)">Very rarely</button><button class="ci-btn" onclick="ciPick(this,'ciq8',false)">Once a month</button></div></div>
+
+    <div class="ci-q" id="ciq9"><div class="ci-q-num">Q9</div><div class="ci-q-text" onclick="ttsRead(&quot;Which collocation is correct? Pay attention or give attention?&quot;,0.88)">Correct collocation — attention? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq9',false)">Give attention to the rules.</button><button class="ci-btn" onclick="ciPick(this,'ciq9',true)">Pay attention to the rules.</button><button class="ci-btn" onclick="ciPick(this,'ciq9',false)">Make attention to the rules.</button><button class="ci-btn" onclick="ciPick(this,'ciq9',false)">Do attention to the rules.</button></div></div>
+
+    <div class="ci-q" id="ciq10"><div class="ci-q-num">Q10</div><div class="ci-q-text" onclick="ttsRead(&quot;"Stop beating around the bush and tell me what happened."&quot;,0.88)">"Stop <b>beating around the bush</b>." — meaning? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq10',false)">Stop hitting things in the garden</button><button class="ci-btn" onclick="ciPick(this,'ciq10',true)">Stop avoiding the point — speak directly</button><button class="ci-btn" onclick="ciPick(this,'ciq10',false)">Stop arguing</button><button class="ci-btn" onclick="ciPick(this,'ciq10',false)">Stop wasting time outdoors</button></div></div>
+
+    <div class="ci-break" id="brk10" style="display:none">
+      <div class="ci-break-icon">&#x2615;</div>
+      <div class="ci-break-title">Halfway! Keep Going!</div>
+      <div class="ci-break-ar ar">منتصف الطريق! استمر</div>
+      <div class="ci-break-score">Score so far: <span id="ciBreakScore40"></span> / 10</div>
+    </div>
+
+    <div class="ci-q" id="ciq11"><div class="ci-q-num">Q11</div><div class="ci-q-text" onclick="ttsRead(&quot;Which is correct? He lost time, or he wasted time?&quot;,0.88)">Correct collocation — time? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq11',false)">He lost time on that task.</button><button class="ci-btn" onclick="ciPick(this,'ciq11',true)">He wasted time on that task.</button><button class="ci-btn" onclick="ciPick(this,'ciq11',false)">He missed time on that task.</button><button class="ci-btn" onclick="ciPick(this,'ciq11',false)">He spent time wrongly on that task.</button></div></div>
+
+    <div class="ci-q" id="ciq12"><div class="ci-q-num">Q12</div><div class="ci-q-text" onclick="ttsRead(&quot;"The ball is in your court." — what does this idiom mean?&quot;,0.88)">"The ball is in your court." &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq12',false)">You are playing tennis</button><button class="ci-btn" onclick="ciPick(this,'ciq12',true)">It is your turn to decide or act</button><button class="ci-btn" onclick="ciPick(this,'ciq12',false)">You have made a mistake</button><button class="ci-btn" onclick="ciPick(this,'ciq12',false)">You need to practise more</button></div></div>
+
+    <div class="ci-q" id="ciq13"><div class="ci-q-num">Q13</div><div class="ci-q-text" onclick="ttsRead(&quot;Which verb goes with crime? Make a crime, do a crime, or commit a crime?&quot;,0.88)">Which verb collocates with "crime"? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq13',false)">make a crime</button><button class="ci-btn" onclick="ciPick(this,'ciq13',false)">do a crime</button><button class="ci-btn" onclick="ciPick(this,'ciq13',true)">commit a crime</button><button class="ci-btn" onclick="ciPick(this,'ciq13',false)">have a crime</button></div></div>
+
+    <div class="ci-q" id="ciq14"><div class="ci-q-num">Q14</div><div class="ci-q-text" onclick="ttsRead(&quot;"Don't burn bridges when you quit your job." — meaning?&quot;,0.88)">"Don't <b>burn bridges</b>." &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq14',false)">Don't set fire to things</button><button class="ci-btn" onclick="ciPick(this,'ciq14',true)">Don't permanently damage relationships</button><button class="ci-btn" onclick="ciPick(this,'ciq14',false)">Don't cross a bridge</button><button class="ci-btn" onclick="ciPick(this,'ciq14',false)">Don't rush your decisions</button></div></div>
+
+    <div class="ci-q" id="ciq15"><div class="ci-q-num">Q15</div><div class="ci-q-text" onclick="ttsRead(&quot;Which collocation is correct? Take a photo or do a photo?&quot;,0.88)">Correct collocation — photo? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq15',false)">She did a photo of the view.</button><button class="ci-btn" onclick="ciPick(this,'ciq15',true)">She took a photo of the view.</button><button class="ci-btn" onclick="ciPick(this,'ciq15',false)">She made a photo of the view.</button><button class="ci-btn" onclick="ciPick(this,'ciq15',false)">She had a photo of the view.</button></div></div>
+
+    <div class="ci-q" id="ciq16"><div class="ci-q-num">Q16</div><div class="ci-q-text" onclick="ttsRead(&quot;"She bit off more than she could chew." — meaning?&quot;,0.88)">"She bit off more than she could chew." &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq16',false)">She ate too much food</button><button class="ci-btn" onclick="ciPick(this,'ciq16',true)">She took on more than she could handle</button><button class="ci-btn" onclick="ciPick(this,'ciq16',false)">She was very ambitious and succeeded</button><button class="ci-btn" onclick="ciPick(this,'ciq16',false)">She refused to compromise</button></div></div>
+
+    <div class="ci-q" id="ciq17"><div class="ci-q-num">Q17</div><div class="ci-q-text" onclick="ttsRead(&quot;Which collocation goes with the verb do? Homework, a decision, or a mistake?&quot;,0.88)">Which goes with <b>do</b>? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq17',true)">do homework</button><button class="ci-btn" onclick="ciPick(this,'ciq17',false)">do a decision</button><button class="ci-btn" onclick="ciPick(this,'ciq17',false)">do a mistake</button><button class="ci-btn" onclick="ciPick(this,'ciq17',false)">do a plan</button></div></div>
+
+    <div class="ci-q" id="ciq18"><div class="ci-q-num">Q18</div><div class="ci-q-text" onclick="ttsRead(&quot;"The rescue team arrived in the nick of time." — meaning?&quot;,0.88)">"The rescue team arrived <b>in the nick of time</b>." &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq18',false)">Very early, before anyone expected</button><button class="ci-btn" onclick="ciPick(this,'ciq18',true)">Just in time, at the last possible moment</button><button class="ci-btn" onclick="ciPick(this,'ciq18',false)">Too late to help</button><button class="ci-btn" onclick="ciPick(this,'ciq18',false)">Slowly and carefully</button></div></div>
+
+    <div class="ci-q" id="ciq19"><div class="ci-q-num">Q19</div><div class="ci-q-text" onclick="ttsRead(&quot;Which collocation with heavy is correct? Heavy traffic or heavy weather?&quot;,0.88)">Which is a natural collocation with "heavy"? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq19',true)">heavy traffic</button><button class="ci-btn" onclick="ciPick(this,'ciq19',false)">heavy idea</button><button class="ci-btn" onclick="ciPick(this,'ciq19',false)">heavy colour</button><button class="ci-btn" onclick="ciPick(this,'ciq19',false)">heavy opinion</button></div></div>
+
+    <div class="ci-q" id="ciq20"><div class="ci-q-num">Q20</div><div class="ci-q-text" onclick="ttsRead(&quot;"She always goes the extra mile for her team." — meaning?&quot;,0.88)">"She always <b>goes the extra mile</b>." &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq20',false)">She walks a long distance to work</button><button class="ci-btn" onclick="ciPick(this,'ciq20',true)">She does more than expected or required</button><button class="ci-btn" onclick="ciPick(this,'ciq20',false)">She takes long journeys for work</button><button class="ci-btn" onclick="ciPick(this,'ciq20',false)">She often gets lost</button></div></div>
+
+    <div class="ci-q ci-fib" id="ciq21"><div class="ci-q-num">Q21</div><div class="ci-fib-lbl">&#x270F; Fill in the Blank</div><div class="ci-q-text" onclick="ttsRead(&quot;I made a huge mistake and had to apologise to everyone.&quot;,0.88)">I ___ a huge mistake and had to apologise to everyone. <span class="read-sp">&#x1F509;</span></div><div class="ci-fib-wrap"><input class="ci-fib-input" id="fib21" type="text" placeholder="Type your answer..."><button class="ci-fib-btn" id="fibBtn21" onclick="ciFibCheck('fib21','fibBtn21','ciq21','fibSol21','made')">Check</button></div><div class="ci-fib-solution" id="fibSol21" style="display:none">&#x2705; Answer: <b>made</b> &nbsp;|&nbsp; <b>made</b> — collocation: make a mistake (NOT do a mistake)</div></div>
+
+    <div class="ci-q ci-fib" id="ciq22"><div class="ci-q-num">Q22</div><div class="ci-fib-lbl">&#x270F; Fill in the Blank</div><div class="ci-q-text" onclick="ttsRead(&quot;Can you keep an eye on my bag while I get coffee?&quot;,0.88)">Can you keep an ___ on my bag while I get coffee? <span class="read-sp">&#x1F509;</span></div><div class="ci-fib-wrap"><input class="ci-fib-input" id="fib22" type="text" placeholder="Type your answer..."><button class="ci-fib-btn" id="fibBtn22" onclick="ciFibCheck('fib22','fibBtn22','ciq22','fibSol22','eye')">Check</button></div><div class="ci-fib-solution" id="fibSol22" style="display:none">&#x2705; Answer: <b>eye</b> &nbsp;|&nbsp; <b>eye</b> — idiom: keep an eye on = watch carefully</div></div>
+
+    <div class="ci-q ci-fib" id="ciq23"><div class="ci-q-num">Q23</div><div class="ci-fib-lbl">&#x270F; Fill in the Blank</div><div class="ci-q-text" onclick="ttsRead(&quot;He hit the nail on the head with that comment.&quot;,0.88)">He hit the nail on the ___ with that comment. <span class="read-sp">&#x1F509;</span></div><div class="ci-fib-wrap"><input class="ci-fib-input" id="fib23" type="text" placeholder="Type your answer..."><button class="ci-fib-btn" id="fibBtn23" onclick="ciFibCheck('fib23','fibBtn23','ciq23','fibSol23','head')">Check</button></div><div class="ci-fib-solution" id="fibSol23" style="display:none">&#x2705; Answer: <b>head</b> &nbsp;|&nbsp; <b>head</b> — idiom: hit the nail on the head = say exactly the right thing</div></div>
+
+    <div class="ci-q ci-fib" id="ciq24"><div class="ci-q-num">Q24</div><div class="ci-fib-lbl">&#x270F; Fill in the Blank</div><div class="ci-q-text" onclick="ttsRead(&quot;Just bite the bullet and tell him the truth.&quot;,0.88)">Just bite the ___ and tell him the truth. <span class="read-sp">&#x1F509;</span></div><div class="ci-fib-wrap"><input class="ci-fib-input" id="fib24" type="text" placeholder="Type your answer..."><button class="ci-fib-btn" id="fibBtn24" onclick="ciFibCheck('fib24','fibBtn24','ciq24','fibSol24','bullet')">Check</button></div><div class="ci-fib-solution" id="fibSol24" style="display:none">&#x2705; Answer: <b>bullet</b> &nbsp;|&nbsp; <b>bullet</b> — idiom: bite the bullet = face a difficult situation bravely</div></div>
+
+    <div class="ci-q ci-fib" id="ciq25"><div class="ci-q-num">Q25</div><div class="ci-fib-lbl">&#x270F; Fill in the Blank</div><div class="ci-q-text" onclick="ttsRead(&quot;She calls me once in a blue moon.&quot;,0.88)">She calls me once in a ___ moon. <span class="read-sp">&#x1F509;</span></div><div class="ci-fib-wrap"><input class="ci-fib-input" id="fib25" type="text" placeholder="Type your answer..."><button class="ci-fib-btn" id="fibBtn25" onclick="ciFibCheck('fib25','fibBtn25','ciq25','fibSol25','blue')">Check</button></div><div class="ci-fib-solution" id="fibSol25" style="display:none">&#x2705; Answer: <b>blue</b> &nbsp;|&nbsp; <b>blue</b> — idiom: once in a blue moon = very rarely</div></div>
+
+    <div class="ci-final-score" id="ciFinal40" style="display:none">
+      <div class="cif-icon">&#x1F3C6;</div>
+      <div class="cif-title">Lesson Complete!</div>
+      <div class="cif-ar ar">أحسنت! أكملت درس المصطلحات والتعبيرات</div>
+      <div class="cif-score"><span id="ciFinalScore40"></span> / 25</div>
+      <div class="cif-msg" id="ciFinalMsg40"></div>
+      <div class="cif-ar ar" id="ciFinalAr40"></div>
+      <div class="cif-btns">
+        <button class="cif-btn" onclick="ciReset40()">&#x1F504; Try Again</button>
+        <button class="cif-btn cif-btn-next" onclick="window.location.href='../index.html'">&#x1F3E0; Main Menu</button>
+      </div>
+    </div>
+
+  </div><!-- /ciWrap40 -->
+</div><!-- /tab-checkit -->
+
+</div><!-- /main-content -->
+</div><!-- /layout -->
+
+<script src="../media/global-player.js"></script>
+<script>
+var rqScore40=0,rqAnswered40=0;
+var ciScore40=0,ciAnswered40=0,ciTotal40=25;
+
+function showTab(id,btn){
+  document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.remove('active');});
+  document.querySelectorAll('.main-tab').forEach(function(b){b.classList.remove('active');});
+  document.getElementById('tab-'+id).classList.add('active');
+  btn.classList.add('active');
+}
+function ttsRead(text,rate){
+  speechSynthesis.cancel();
+  var u=new SpeechSynthesisUtterance(text);
+  u.lang='en-US';u.rate=rate||0.9;
+  speechSynthesis.speak(u);
+}
+function rqPick(btn,qid,correct){
+  var qEl=document.getElementById(qid);
+  if(qEl.dataset.done)return;
+  qEl.dataset.done='1';
+  qEl.querySelectorAll('.read-opt').forEach(function(b){b.classList.add('done');if(b===btn)b.classList.add(correct?'correct':'wrong');});
+  if(correct)rqScore40++;
+  rqAnswered40++;
+  if(rqAnswered40===5){
+    var sc=document.getElementById('rqScore40');sc.style.display='block';
+    document.getElementById('rqScoreNum40').textContent=rqScore40+'/5';
+    var msgs=[['Keep practising!','استمر في التدريب!'],['Good effort!','جهد جيد!'],['Getting there!','أنت تتحسن!'],['Well done!','أداء جيد جداً!'],['Great job!','عمل رائع!'],['Perfect!','نتيجة مثالية!']];
+    var m=msgs[Math.min(rqScore40,5)];
+    document.getElementById('rqScoreMsg40').textContent=m[0];
+    document.getElementById('rqScoreAr40').textContent=m[1];
+    sc.scrollIntoView({behavior:'smooth',block:'center'});
+  }
+}
+function rqReset40(){
+  rqScore40=0;rqAnswered40=0;
+  ['rq1','rq2','rq3','rq4','rq5'].forEach(function(id){
+    var q=document.getElementById(id);if(!q)return;
+    delete q.dataset.done;
+    q.querySelectorAll('.read-opt').forEach(function(b){b.classList.remove('correct','wrong','done');});
+  });
+  document.getElementById('rqScore40').style.display='none';
+  document.getElementById('tab-reading').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function ciUpdateProgress40(){
+  var pct=Math.round(ciAnswered40/ciTotal40*100);
+  document.getElementById('ciProgressFill40').style.width=pct+'%';
+  document.getElementById('ciProgressTxt40').textContent=ciAnswered40+' / '+ciTotal40+' answered';
+  document.getElementById('ciScoreTxt40').textContent='Score: '+ciScore40;
+}
+function ciCheckBreakAndDone40(){
+  if(ciAnswered40===10){
+    var bEl=document.getElementById('brk10');
+    if(bEl){bEl.style.display='block';document.getElementById('ciBreakScore40').textContent=ciScore40;}
+  }
+  if(ciAnswered40===ciTotal40)ciShowScore40();
+}
+function ciPick(btn,qid,correct){
+  var qEl=document.getElementById(qid);if(qEl.dataset.done)return;
+  qEl.dataset.done='1';
+  qEl.querySelectorAll('.ci-btn').forEach(function(b){b.classList.add('done');});
+  btn.classList.add(correct?'ci-correct':'ci-wrong');
+  if(correct)ciScore40++;
+  ciAnswered40++;ciUpdateProgress40();ciCheckBreakAndDone40();
+}
+function ciFibCheck(inputId,btnId,qid,solId,answer){
+  var inp=document.getElementById(inputId),btn=document.getElementById(btnId),qEl=document.getElementById(qid);
+  if(qEl.dataset.done)return;
+  var correct=inp.value.trim().toLowerCase()===answer.toLowerCase();
+  qEl.dataset.done='1';inp.disabled=true;btn.disabled=true;
+  inp.style.borderColor=correct?'var(--green)':'var(--red)';
+  inp.style.color=correct?'var(--green)':'var(--red)';
+  var sol=document.getElementById(solId);if(sol)sol.style.display='block';
+  if(correct)ciScore40++;
+  ciAnswered40++;ciUpdateProgress40();ciCheckBreakAndDone40();
+}
+function ciShowScore40(){
+  var el=document.getElementById('ciFinal40');el.style.display='block';
+  document.getElementById('ciFinalScore40').textContent=ciScore40;
+  var pct=Math.round(ciScore40/ciTotal40*100);
+  var msgs=[['Keep studying!','واصل الدراسة!'],['Good start!','بداية جيدة!'],['Well done!','عمل جيد!'],['Great job!','أداء رائع!'],['Excellent!','ممتاز!'],['Perfect!','نتيجة مثالية!']];
+  var idx=Math.floor(pct/20);
+  var m=msgs[Math.min(idx,5)];
+  document.getElementById('ciFinalMsg40').textContent=m[0];
+  document.getElementById('ciFinalAr40').textContent=m[1];
+  localStorage.setItem('up_l40',Math.round(ciScore40/ciTotal40*100));
+  el.scrollIntoView({behavior:'smooth',block:'center'});
+}
+function ciReset40(){
+  ciScore40=0;ciAnswered40=0;
+  document.getElementById('ciFinal40').style.display='none';
+  document.getElementById('brk10').style.display='none';
+  for(var i=1;i<=25;i++){
+    var q=document.getElementById('ciq'+i);if(!q)continue;
+    delete q.dataset.done;
+    q.querySelectorAll('.ci-btn').forEach(function(b){b.classList.remove('ci-correct','ci-wrong','done');});
+    var inp=q.querySelector('.ci-fib-input');
+    if(inp){inp.value='';inp.disabled=false;inp.style.borderColor='';inp.style.color='';}
+    var fbtn=q.querySelector('.ci-fib-btn');if(fbtn)fbtn.disabled=false;
+    var sol=q.querySelector('.ci-fib-solution');if(sol)sol.style.display='none';
+  }
+  ciUpdateProgress40();
+  document.getElementById('tab-checkit').scrollIntoView({behavior:'smooth',block:'start'});
+}
+</script>
+
+
+
+
+
+
+
+
+<script>
+(function(){
+  var map={1: "up_l1", 2: "up_l2", 3: "up_l3", 4: "up_l4", 5: "up_l5", 6: "up1", 7: "up2", 8: "up3", 9: "up4", 10: "up6", 11: "up5", 12: "up_l12", 13: "up7", 14: "up8", 15: "up9", 16: "up10", 17: "up11", 19: "up_l19", 20: "up_l20", 21: "up_l21", 22: "up_l22", 23: "up_l23", 24: "up_l24", 25: "up_l25", 26: "up_l26", 27: "up_l27", 28: "up_l28", 29: "up_l29", 30: "up_l30", 31: "up_l31", 32: "up_l32", 33: "up_l33", 34: "up_l34", 35: "up_l35", 36: "up_l36", 37: "up_l37", 38: "up_l38", 39: "up_l39", 40: "up_l40", 41: "up_l41", 42: "up_l42", 43: "up_l43", 44: "up_l44", 45: "up_l45", 46: "up_l46"};
+  for(var lid in map){
+    var f=document.getElementById('sp'+lid);
+    if(f){var v=parseInt(localStorage.getItem(map[lid])||'0',10);f.style.width=v+'%';}
+  }
+  setTimeout(function(){
+    var a=document.querySelector('.su-item.su-active');
+    if(a){var u=a.closest('.sidebar-units');if(u)u.scrollTop=Math.max(0,a.offsetTop-a.offsetHeight);}
+  },80);
+})();
+</script>
+<script>
+function toggleSidebar(){
+  var sb=document.querySelector('.sidebar');
+  var bd=document.getElementById('sbBackdrop');
+  if(!sb||!bd)return;
+  sb.classList.toggle('sb-open');
+  bd.classList.toggle('sb-open');
+  document.body.style.overflow=sb.classList.contains('sb-open')?'hidden':'';
+}
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.su-item').forEach(function(a){
+    a.addEventListener('click',function(){
+      var sb=document.querySelector('.sidebar');
+      if(sb&&sb.classList.contains('sb-open'))toggleSidebar();
+    });
+  });
+});
+</script>
+
+<script>
+(function(){
+  // Disable right-click
+  document.addEventListener('contextmenu', function(e){ e.preventDefault(); });
+
+  // Disable keyboard shortcuts
+  document.addEventListener('keydown', function(e){
+    // F12
+    if(e.key==='F12'){e.preventDefault();return false;}
+    // Ctrl+U (view source), Ctrl+S (save), Ctrl+A (select all), Ctrl+P (print)
+    if(e.ctrlKey && ['u','U','s','S','a','A','p','P'].indexOf(e.key)!==-1){
+      e.preventDefault();return false;
+    }
+    // Ctrl+Shift+I (DevTools), Ctrl+Shift+J, Ctrl+Shift+C
+    if(e.ctrlKey && e.shiftKey && ['i','I','j','J','c','C','k','K'].indexOf(e.key)!==-1){
+      e.preventDefault();return false;
+    }
+  });
+
+  // Disable text selection via CSS
+  document.documentElement.style.webkitUserSelect='none';
+  document.documentElement.style.userSelect='none';
+
+  // Allow selection inside inputs/textareas only
+  document.addEventListener('mousedown', function(e){
+    var t=e.target.tagName;
+    if(t==='INPUT'||t==='TEXTAREA'){
+      e.target.style.userSelect='text';
+      e.target.style.webkitUserSelect='text';
+    }
+  });
+
+  // Block drag
+  document.addEventListener('dragstart', function(e){ e.preventDefault(); });
+})();
+</script>
+<button class="float-menu-btn" onclick="toggleSidebar()" aria-label="القائمة">
+  <span></span><span></span><span></span>
+</button>
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=FREE"></script>
+<script src="../media/rv.js"></script>
+</body>
+</html>

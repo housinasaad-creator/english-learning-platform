@@ -1,0 +1,2145 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 5: can / can't | MOHAMMED ELHUSEYIN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#1a3a6e;--primary-dark:#0f2548;--accent:#f4a624;--al:rgba(244,166,36,0.12);--bg:#0d1b2a;--card:#162030;--card2:#1e2d40;--border:#2d4560;--text:#e8edf5;--muted:#8899b0;--green:#22c55e;--red:#ef4444;--blue:#4a9eff;--purple:#a855f7}
+body{font-family:'Poppins','Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.ar{font-family:'Cairo','Segoe UI',Arial,sans-serif}
+.topnav{background:var(--primary-dark);border-bottom:2px solid var(--accent);padding:10px 24px;display:flex;align-items:center;justify-content:space-between}
+.hero{background:linear-gradient(135deg,#1a3a6e 0%,#0f2548 55%,#0d1f3c 100%);padding:55px 24px 48px;text-align:center;border-bottom:3px solid var(--accent);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;border-radius:50%;background:rgba(244,166,36,0.06)}
+.hero::after{content:'';position:absolute;bottom:-60px;left:-60px;width:300px;height:300px;border-radius:50%;background:rgba(34,197,94,0.05)}
+.unit-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(244,166,36,0.15);border:1px solid rgba(244,166,36,0.4);color:var(--accent);font-weight:800;padding:6px 18px;border-radius:20px;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
+.hero-title{font-size:clamp(28px,6vw,52px);font-weight:900;color:white;line-height:1.15;margin-bottom:8px}
+.hero-title i{color:var(--accent);font-style:italic}
+.hero-ar{font-size:18px;color:var(--muted);margin-bottom:12px;direction:rtl}
+.hero-sub{color:var(--muted);max-width:640px;margin:0 auto 22px;font-size:14px}
+.hero-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.tag{display:inline-flex;align-items:center;gap:6px;padding:6px 15px;border-radius:16px;font-size:12px;font-weight:700}
+.tag-grammar{background:rgba(244,166,36,0.15);color:var(--accent);border:1px solid rgba(244,166,36,0.3)}
+.tag-other{background:rgba(74,158,255,0.1);color:var(--blue);border:1px solid rgba(74,158,255,0.25)}
+.tag-btn{cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif}
+.tag-btn:hover{transform:translateY(-2px);opacity:.85}
+.main-tabs{display:flex;gap:4px;padding:14px 24px;background:var(--primary-dark);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;flex-wrap:wrap}
+.main-tab{padding:8px 18px;border-radius:8px;border:1px solid transparent;background:none;color:var(--muted);font-weight:700;cursor:pointer;font-size:13px;font-family:'Poppins',sans-serif;transition:all .2s}
+.main-tab.active{background:var(--accent);color:#0d1b2a;border-color:var(--accent)}
+.main-tab:hover:not(.active){background:rgba(244,166,36,.1);color:var(--accent);border-color:rgba(244,166,36,.3)}
+.tab-panel{display:none;padding:20px 24px}
+.tab-panel.active{display:block}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;margin-bottom:16px}
+.card-title{font-size:16px;font-weight:800;color:white;margin-bottom:5px;display:flex;align-items:center;gap:8px}
+.card-ar{font-size:13px;color:var(--muted);margin-bottom:14px;direction:rtl;font-family:'Cairo',sans-serif}
+.card-note{background:var(--al);border:1px solid rgba(244,166,36,.3);border-radius:10px;padding:10px 14px;font-size:12.5px;color:var(--accent);margin:10px 0;direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.sub-tabs{display:flex;gap:4px;margin:14px 0 18px;flex-wrap:wrap}
+.sub-tab{padding:6px 14px;border-radius:8px;border:1px solid var(--border);background:none;color:var(--muted);font-weight:700;cursor:pointer;font-size:12px;font-family:'Poppins',sans-serif;transition:all .2s}
+.sub-tab.active{background:rgba(244,166,36,.15);border-color:var(--accent);color:var(--accent)}
+.sub-tab:hover:not(.active){border-color:var(--accent);color:var(--accent)}
+.sub-panel{display:none}
+.sub-panel.active{display:block}
+.tts-box{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.tts-btn{background:var(--card2);border:1px solid var(--blue);color:var(--blue);padding:7px 16px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif}
+.tts-btn:hover{background:rgba(74,158,255,.15);transform:translateY(-1px)}
+.tts-stop{border-color:var(--muted);color:var(--muted)}
+.tts-stop:hover{background:rgba(136,153,176,.1)}
+.formula-box{background:rgba(10,30,53,0.8);border:2px solid var(--border);border-radius:14px;padding:18px 22px;margin:14px 0}
+.formula-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid rgba(45,69,96,0.4);flex-wrap:wrap}
+.formula-row:last-child{border-bottom:none}
+.formula-subj{font-size:14px;font-weight:800;color:var(--blue);min-width:160px}
+.formula-be{font-size:15px;font-weight:900;color:var(--accent);background:rgba(244,166,36,.12);padding:4px 12px;border-radius:8px}
+.formula-be.can{color:var(--green);background:rgba(34,197,94,.12)}
+.formula-be.neg{color:var(--red);background:rgba(239,68,68,.1)}
+.formula-be.could{color:var(--blue);background:rgba(74,158,255,.12)}
+.formula-be.couldnt{color:var(--red);background:rgba(239,68,68,.1)}
+.formula-be.qmark{color:var(--green);background:rgba(34,197,94,.12)}
+.formula-note{font-size:11px;color:var(--muted);font-style:italic;margin-left:auto}
+.formula-plus{font-size:16px;color:var(--muted)}
+.ex-section-title{font-size:12px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin:16px 0 8px}
+.ex-list{margin-top:4px}
+.ex-item{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid rgba(45,69,96,0.3)}
+.ex-item:last-child{border-bottom:none}
+.sp{background:none;border:none;font-size:16px;cursor:pointer;color:var(--blue);flex-shrink:0;padding:2px 0;transition:transform .2s;line-height:1}
+.sp:hover{transform:scale(1.2)}
+.sp-group{display:inline-flex;align-items:center;gap:3px;flex-shrink:0}
+.sp-pp,.sp-st{background:var(--card2);border:1px solid var(--border);color:var(--muted);font-size:12px;padding:3px 7px;border-radius:6px;cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif;line-height:1;min-width:26px;text-align:center}
+.sp-pp:hover{background:rgba(74,158,255,.15);border-color:var(--blue);color:var(--blue)}
+.sp-st:hover{background:rgba(239,68,68,.1);border-color:var(--red);color:var(--red)}
+.ex-en{font-size:13.5px;color:var(--text);font-weight:600;line-height:1.4}
+.ex-en b{color:var(--accent)}
+.ex-ar{font-size:12px;color:var(--muted);margin-top:2px;direction:rtl;font-family:'Cairo',sans-serif}
+.imp-box{background:rgba(239,68,68,.07);border:1px solid rgba(239,68,68,.3);border-radius:12px;padding:14px 16px;margin:14px 0}
+.imp-title{font-size:11px;font-weight:800;color:var(--red);margin-bottom:10px;text-transform:uppercase;letter-spacing:1px}
+.imp-row{display:flex;align-items:center;gap:10px;margin:6px 0;font-size:13px;flex-wrap:wrap}
+.imp-wrong{color:var(--red);text-decoration:line-through;opacity:.75}
+.imp-right{color:var(--green);font-weight:700}
+.sa-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13px}
+.sa-table th{background:rgba(26,58,110,0.5);color:var(--accent);padding:8px 12px;font-weight:800;text-align:left;border:1px solid var(--border)}
+.sa-table td{padding:8px 12px;border:1px solid rgba(45,69,96,0.4);vertical-align:middle}
+.sa-table tr:nth-child(even) td{background:rgba(30,45,64,0.3)}
+.sa-yes{color:var(--green);font-weight:800}
+.sa-no{color:var(--red);font-weight:800}
+.wh-grid{display:flex;flex-direction:column;gap:7px;margin:12px 0}
+.wh-row{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px;font-size:13px}
+.wh-q{color:var(--text);margin-bottom:3px}
+.wh-q b{color:var(--blue)}
+.wh-a{color:var(--muted);font-style:italic}
+.mistake-item{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.m-wrong{font-size:13px;color:var(--red);margin-bottom:3px}
+.m-wrong::before{content:'❌ '}
+.m-right{font-size:13px;color:var(--green);font-weight:700;margin-bottom:3px}
+.m-right::before{content:'✅ '}
+.m-why{font-size:11.5px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;border-top:1px solid rgba(45,69,96,.4);padding-top:5px;margin-top:5px}
+/* ── Vocab / Abilities grid ── */
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:8px;margin-top:12px}
+.vocab-item{background:var(--card2);border:1px solid var(--border);border-radius:9px;padding:9px 12px;cursor:pointer;transition:border-color .2s}
+.vocab-item:hover{border-color:var(--accent)}
+.vocab-en{font-size:14px;font-weight:800;color:var(--text)}
+.vocab-can{font-size:11.5px;color:var(--green);margin-top:2px;font-weight:700}
+.vocab-ar{font-size:11px;color:var(--muted);margin-top:3px;font-family:'Cairo',sans-serif;direction:rtl}
+/* ── Rooms grid ── */
+.room-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin-top:14px}
+.room-card{background:var(--card2);border:1px solid var(--border);border-radius:14px;padding:16px;transition:border-color .2s,transform .2s;position:relative;overflow:hidden}
+.room-card::before{content:'';position:absolute;top:-30px;right:-30px;width:100px;height:100px;border-radius:50%;background:rgba(244,166,36,.04);pointer-events:none}
+.room-card:hover{border-color:var(--accent);transform:translateY(-3px)}
+.room-icon{font-size:32px;margin-bottom:8px;display:block}
+.room-name-en{font-size:15px;font-weight:900;color:white;margin-bottom:2px}
+.room-name-ar{font-size:12px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;margin-bottom:10px}
+.room-can-list{list-style:none;margin-bottom:8px}
+.room-can-list li{font-size:12px;color:var(--green);padding:2px 0;display:flex;align-items:center;gap:5px}
+.room-can-list li::before{content:'✓';font-weight:900;font-size:10px;flex-shrink:0}
+.room-cant-note{font-size:11px;color:var(--red);opacity:.8;font-style:italic;padding-top:6px;border-top:1px solid rgba(45,69,96,.4)}
+.room-cant-note::before{content:'✗ ';font-weight:900}
+/* ── Could / Couldn't ── */
+.cld-timeline{display:flex;align-items:center;gap:0;margin:20px 0;flex-wrap:wrap;gap:4px}
+.cld-box{flex:1;background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:14px 16px;text-align:center;min-width:140px}
+.cld-label{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.cld-label.past{color:var(--blue)}
+.cld-label.present{color:var(--green)}
+.cld-word{font-size:20px;font-weight:900;margin-bottom:4px}
+.cld-word.past{color:var(--blue)}
+.cld-word.present{color:var(--green)}
+.cld-neg{font-size:14px;color:var(--red);font-weight:700}
+.cld-arrow{font-size:24px;color:var(--muted);flex-shrink:0;padding:0 4px}
+/* ── Visual Summary ── */
+.vs-wrap{overflow-x:auto;margin:18px 0;padding:4px 0}
+.vs-caption{font-size:11px;color:var(--muted);text-align:center;margin-top:8px;font-style:italic}
+/* ── Dialogues ── */
+.dlg-card{background:var(--card);border:1px solid var(--border);border-radius:16px;margin-bottom:16px;overflow:hidden}
+.dlg-header{background:linear-gradient(to right,var(--primary),#1a1a4e);padding:13px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.dlg-meta{flex:1}
+.dlg-num{font-size:10px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:2px}
+.dlg-title{font-weight:800;font-size:14px;color:white}
+.dlg-ctx{font-size:11px;color:rgba(255,255,255,.5);font-style:italic;margin-top:2px}
+.dlg-tts{background:rgba(244,166,36,.15);border:1px solid rgba(244,166,36,.4);color:var(--accent);padding:6px 14px;border-radius:8px;font-size:11px;font-weight:700;cursor:pointer;font-family:'Poppins',sans-serif;transition:all .2s;white-space:nowrap}
+.dlg-tts:hover{background:rgba(244,166,36,.3)}
+.dlg-body{padding:20px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:640px){.dlg-body{grid-template-columns:1fr}}
+.dlg-col-head{font-size:10px;font-weight:700;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+.bubble{padding:9px 13px;border-radius:12px;font-size:13px;line-height:1.55;margin-bottom:7px}
+.bubble-a{background:rgba(26,58,110,0.5);border:1px solid rgba(74,158,255,0.2)}
+.bubble-b{background:var(--card2);border:1px solid var(--border)}
+.bubble-name{font-size:9px;font-weight:800;color:var(--muted);margin-bottom:4px;letter-spacing:.5px;text-transform:uppercase}
+.bubble-name.b{color:var(--accent)}
+.bubble-ar{direction:rtl;font-family:'Cairo',sans-serif;font-size:13px;color:var(--text)}
+/* Layout */
+.layout{display:flex}
+.sidebar{width:30%;max-width:320px;min-width:220px;position:fixed;top:0;left:0;bottom:0;background:var(--primary-dark);border-right:2px solid var(--border);display:flex;flex-direction:column;z-index:200;overflow:hidden}
+.sidebar-header{padding:18px 20px 14px;border-bottom:2px solid var(--accent);flex-shrink:0}
+.sidebar-logo{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+.sidebar-logo-icon{width:34px;height:34px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900;color:#0d1b2a;flex-shrink:0}
+.sidebar-logo-text{font-family:'Cairo',sans-serif;font-size:15px;font-weight:800;color:white}
+.sidebar-logo-sub{font-size:10px;color:var(--muted);font-weight:500;margin-top:-1px}
+.sidebar-label{font-family:'Cairo',sans-serif;font-size:11px;font-weight:700;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-top:12px}
+.sidebar-units{flex:1;overflow-y:auto;padding:10px 12px;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+.sidebar-units::-webkit-scrollbar{width:4px}
+.sidebar-units::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+.su-item{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;text-decoration:none;margin-bottom:4px;transition:background .2s,transform .2s}
+.su-item:not(.su-locked):hover{background:rgba(244,166,36,0.12);transform:translateX(3px)}
+.su-item.su-locked{opacity:.45;cursor:default;pointer-events:none}
+.su-item.su-active{background:rgba(244,166,36,0.15);border:1px solid rgba(244,166,36,0.3)}
+.su-num{width:28px;height:28px;border-radius:7px;background:rgba(255,255,255,0.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:var(--accent);flex-shrink:0}
+.su-item:not(.su-locked) .su-num{background:rgba(244,166,36,0.12);border-color:rgba(244,166,36,0.3)}
+.su-texts{flex:1;min-width:0}
+.su-en{font-size:13px;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.su-ar{font-family:'Cairo',sans-serif;font-size:11px;color:var(--muted);direction:rtl;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.su-check{font-size:12px;flex-shrink:0}
+.su-lock{font-size:11px;color:var(--muted);flex-shrink:0}
+.main-content{flex:1;min-width:0;margin-left:min(30%,320px)}
+.topnav,.hero,.main-tabs{margin-left:min(30%,320px)}
+footer{text-align:center;padding:32px 24px;color:var(--muted);font-size:12px;border-top:1px solid var(--border);margin-top:16px}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:700px){.sidebar{width:100%;max-width:100%;position:relative;min-height:unset}.layout{flex-direction:column}.main-content{margin-left:0}.topnav,.hero,.main-tabs{margin-left:0}.sidebar-units{max-height:260px}}
+/* Reading Tab */
+.read-tts-bar{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;align-items:center}
+.read-label{font-size:12px;font-weight:700;color:var(--muted)}
+.read-pass{background:var(--card2);border:1px solid var(--border);border-radius:14px;padding:22px;font-size:14px;line-height:1.9;margin-bottom:24px}
+.read-pass p{margin-bottom:12px}
+.read-pass p:last-child{margin-bottom:0}
+.read-pass b{color:var(--accent);font-weight:700}
+.comp-section-title{font-size:14px;font-weight:800;color:var(--accent);margin-bottom:14px;text-transform:uppercase;letter-spacing:1px}
+.read-q{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:12px}
+.read-q-text{font-weight:700;font-size:14px;margin-bottom:12px;color:var(--text);line-height:1.4}
+.read-opts{display:flex;flex-direction:column;gap:7px}
+.read-opt{background:var(--card2);border:1px solid var(--border);color:var(--text);padding:9px 14px;border-radius:8px;font-size:13px;cursor:pointer;text-align:left;font-family:'Poppins',sans-serif;transition:all .2s}
+.read-opt:hover:not(.done){background:rgba(244,166,36,.06);border-color:rgba(244,166,36,.35);transform:translateY(-1px)}
+.read-opt.correct{background:rgba(34,197,94,.12);border-color:var(--green);color:var(--green)}
+.read-opt.wrong{background:rgba(239,68,68,.12);border-color:var(--red);color:var(--red)}
+.read-opt.done{cursor:default;transform:none!important}
+.read-ctx{background:linear-gradient(135deg,rgba(26,58,110,.55),rgba(15,37,72,.55));border:1px solid rgba(244,166,36,.22);border-radius:14px;padding:16px 22px;margin-bottom:20px;display:flex;flex-wrap:wrap;gap:20px;align-items:center}
+.read-ctx-fact{display:flex;flex-direction:column;gap:2px}
+.read-ctx-label{font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+.read-ctx-val{font-size:13.5px;font-weight:800;color:var(--text)}
+.read-ctx-sep{width:1px;background:var(--border);align-self:stretch}
+.read-vocab-wrap{margin:18px 0}
+.read-vocab-title{font-size:11px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.read-vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:7px}
+.read-vocab-item{background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:8px 12px}
+.read-vocab-en{font-size:13px;font-weight:700;color:var(--accent)}
+.read-vocab-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-top:2px}
+/* Check It Tab */
+.ci-hero{background:linear-gradient(135deg,#12285a 0%,#1a1242 60%,#0d1b2a 100%);padding:36px 24px 30px;text-align:center;border-bottom:2px solid var(--accent)}
+.ci-hero-icon{font-size:38px;margin-bottom:10px}
+.ci-hero-title{font-size:clamp(22px,5vw,36px);font-weight:900;color:white;margin-bottom:6px}
+.ci-hero-sub{color:var(--muted);font-size:13px;max-width:460px;margin:0 auto}
+.ci-hero-types{display:flex;gap:10px;justify-content:center;margin-top:14px;flex-wrap:wrap}
+.ci-progress-wrap{background:var(--primary-dark);padding:10px 24px;border-bottom:1px solid var(--border);position:sticky;top:52px;z-index:99}
+.ci-progress-inner{max-width:760px;margin:0 auto}
+.ci-progress-bar{background:rgba(255,255,255,.07);border-radius:20px;height:7px;overflow:hidden;margin-bottom:5px}
+.ci-progress-fill{background:linear-gradient(90deg,var(--accent),var(--blue));height:100%;border-radius:20px;transition:width .4s ease;width:0%}
+.ci-progress-txt{font-size:11px;color:var(--muted);font-weight:700;display:flex;justify-content:space-between}
+.ci-wrap{max-width:100%;padding:12px 16px}
+.ci-q{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px 14px;margin-bottom:7px;transition:border-color .2s;border-left:3px solid rgba(244,166,36,.4)}
+.ci-q.ci-fib-q{border-left-color:rgba(74,158,255,.5)}
+.ci-q.answered{opacity:.9}
+.ci-q-head{display:flex;align-items:center;gap:6px;margin-bottom:9px;flex-wrap:nowrap}
+.ci-q-num{width:22px;height:22px;border-radius:50%;background:rgba(244,166,36,.18);border:1.5px solid rgba(244,166,36,.4);color:var(--accent);font-size:10px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ci-fib-q .ci-q-num{background:rgba(74,158,255,.15);border-color:rgba(74,158,255,.4);color:var(--blue)}
+.ci-q-tag{background:rgba(244,166,36,.08);border:1px solid rgba(244,166,36,.18);color:var(--accent);font-size:9px;font-weight:800;padding:2px 8px;border-radius:8px;text-transform:uppercase;letter-spacing:.4px;white-space:nowrap}
+.ci-type-badge{font-size:9px;font-weight:800;padding:2px 8px;border-radius:8px;text-transform:uppercase;letter-spacing:.4px;margin-left:auto;flex-shrink:0}
+.ci-type-mcq{background:rgba(244,166,36,.12);border:1px solid rgba(244,166,36,.25);color:var(--accent)}
+.ci-type-fib{background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.25);color:var(--blue)}
+.ci-q-prompt{font-size:12px;color:var(--muted);font-style:italic;margin-bottom:8px;padding:5px 10px;background:rgba(255,255,255,.03);border-left:2px solid var(--border);border-radius:0 6px 6px 0}
+.ci-opts{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.ci-btn{background:var(--card2);border:1.5px solid var(--border);color:var(--text);padding:9px 12px;border-radius:9px;font-size:12.5px;cursor:pointer;text-align:left;font-family:'Poppins',sans-serif;transition:all .2s;display:flex;align-items:center;gap:9px;line-height:1.35;width:100%}
+.ci-btn:hover:not(.done){background:rgba(244,166,36,.07);border-color:rgba(244,166,36,.45);transform:translateY(-2px)}
+.ci-btn.correct{background:rgba(34,197,94,.1);border-color:var(--green);color:var(--green)}
+.ci-btn.wrong{background:rgba(239,68,68,.1);border-color:var(--red);color:var(--red)}
+.ci-btn.done{cursor:default;transform:none!important}
+.ci-lbl{font-size:11px;font-weight:900;background:rgba(255,255,255,.09);border-radius:5px;padding:2px 7px;flex-shrink:0;min-width:22px;text-align:center}
+.ci-btn.correct .ci-lbl{background:rgba(34,197,94,.2);color:var(--green)}
+.ci-btn.wrong .ci-lbl{background:rgba(239,68,68,.2);color:var(--red)}
+.ci-fib-sent{font-size:13.5px;color:var(--text);font-weight:600;line-height:1.7;margin-bottom:9px}
+.ci-fib-sent b{color:var(--accent)}
+.ci-fib-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:4px}
+.ci-fib-input{background:var(--card2);border:2px solid var(--border);color:var(--text);padding:7px 13px;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;outline:none;min-width:160px;max-width:240px;transition:border-color .2s,background .2s}
+.ci-fib-input:focus{border-color:var(--accent);background:rgba(244,166,36,.04)}
+.ci-fib-input:disabled{cursor:default}
+.ci-fib-check{background:var(--accent);border:none;color:#0d1b2a;padding:7px 18px;border-radius:8px;font-weight:800;cursor:pointer;font-size:12px;font-family:'Poppins',sans-serif;transition:all .2s;flex-shrink:0}
+.ci-fib-check:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 4px 12px rgba(244,166,36,.3)}
+.ci-fib-check:disabled{opacity:.35;cursor:default;transform:none!important}
+.ci-hint{font-size:10.5px;color:var(--muted);font-style:italic;margin-top:3px}
+.ci-sol{display:none;margin-top:9px;border-radius:9px;overflow:hidden;animation:fadeIn .3s ease}
+.ci-sol.sol-correct{border:1px solid rgba(34,197,94,.25);background:rgba(34,197,94,.05)}
+.ci-sol.sol-wrong{border:1px solid rgba(239,68,68,.2);background:rgba(239,68,68,.04)}
+.ci-sol-head{padding:7px 12px;font-size:11.5px;font-weight:800;border-bottom:1px solid rgba(255,255,255,.05)}
+.ci-sol-body{padding:8px 12px;display:flex;flex-direction:column;gap:4px}
+.ci-sol-ans{font-size:12.5px;font-weight:700;color:var(--accent)}
+.ci-sol-exp{font-size:11.5px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.ci-brk{display:none;background:linear-gradient(135deg,#12285a,#1a1242);border:2px solid var(--accent);border-radius:20px;padding:28px 24px;margin:16px 0;text-align:center;animation:fadeIn .5s ease;position:relative;overflow:hidden}
+.ci-brk::before{content:'';position:absolute;top:-50px;right:-50px;width:200px;height:200px;border-radius:50%;background:rgba(244,166,36,.07);pointer-events:none}
+.ci-brk-emoji{font-size:44px;margin-bottom:10px}
+.ci-brk-title{font-size:17px;font-weight:900;color:var(--accent);margin-bottom:16px}
+.ci-brk-cols{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:580px;margin:0 auto;text-align:left}
+@media(max-width:580px){.ci-brk-cols{grid-template-columns:1fr}}
+.ci-brk-col{background:rgba(255,255,255,.04);border:1px solid rgba(244,166,36,.2);border-radius:12px;padding:14px 16px}
+.ci-brk-col-title{font-size:10px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid rgba(244,166,36,.2)}
+.ci-brk-text{font-size:13px;color:var(--text);line-height:1.75}
+.ci-brk-text b{color:var(--accent)}
+.ci-brk-ar{font-size:12px;color:var(--muted);margin-top:14px;direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.ci-score{display:none;background:linear-gradient(135deg,#0f2548,#1a1242);border:2px solid var(--accent);border-radius:24px;padding:44px 32px;text-align:center;margin-top:24px;position:relative;overflow:hidden;animation:fadeIn .6s ease}
+.ci-score::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,rgba(244,166,36,.07) 0%,transparent 65%);pointer-events:none}
+.ci-score-emoji{font-size:60px;margin-bottom:14px}
+.ci-score-num{font-size:68px;font-weight:900;color:var(--accent);line-height:1;margin-bottom:4px}
+.ci-score-of{font-size:18px;color:var(--muted);margin-bottom:18px}
+.ci-score-bar-wrap{background:rgba(255,255,255,.06);border-radius:20px;height:10px;max-width:320px;margin:0 auto 24px;overflow:hidden}
+.ci-score-bar-fill{height:100%;border-radius:20px;background:linear-gradient(90deg,var(--accent),var(--green));transition:width 1.2s ease;width:0%}
+.ci-score-msg{font-size:18px;font-weight:900;color:white;margin-bottom:6px}
+.ci-score-ar{font-size:14px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;margin-bottom:24px;line-height:1.6}
+.ci-reset{background:var(--accent);border:none;color:#0d1b2a;padding:13px 32px;border-radius:12px;font-weight:900;cursor:pointer;font-family:'Poppins',sans-serif;font-size:14px;transition:all .25s;letter-spacing:.5px}
+.ci-reset:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(244,166,36,.35)}
+.chat-wrap{padding:18px 24px 26px;display:flex;flex-direction:column;gap:14px;background-image:radial-gradient(circle,rgba(244,166,36,0.22) 1.5px,transparent 1.5px),radial-gradient(circle,rgba(74,158,255,0.22) 1.5px,transparent 1.5px);background-size:28px 28px;background-position:0 0,14px 14px}
+.chat-msg{display:flex;flex-direction:column;max-width:70%}
+.chat-msg.right{align-self:flex-end;align-items:flex-end}
+.chat-msg.left{align-self:flex-start;align-items:flex-start}
+.chat-name-tag{font-size:11px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;margin-bottom:5px;padding:0 4px}
+.chat-msg.right .chat-name-tag{color:var(--accent)}
+.chat-msg.left .chat-name-tag{color:var(--blue)}
+.chat-bubble{padding:14px 17px 10px;border-radius:20px;width:100%}
+.chat-msg.right .chat-bubble{background:rgba(55,36,6,0.75);border:1px solid rgba(244,166,36,0.4);border-bottom-right-radius:4px;box-shadow:0 6px 28px rgba(0,0,0,0.65),0 0 18px rgba(244,166,36,0.22)}
+.chat-msg.left .chat-bubble{background:rgba(12,32,72,0.8);border:1px solid rgba(74,158,255,0.35);border-bottom-left-radius:4px;box-shadow:0 6px 28px rgba(0,0,0,0.65),0 0 18px rgba(74,158,255,0.20)}
+.chat-en{font-size:15px;color:var(--text);line-height:1.65;font-weight:500}
+.chat-en b{color:var(--accent)}
+.chat-msg.left .chat-en b{color:var(--blue)}
+.chat-ar{font-size:14px;color:rgba(232,237,245,0.8);direction:rtl;font-family:'Cairo',sans-serif;line-height:1.75;border-top:1px solid rgba(255,255,255,0.09);padding-top:9px;margin-top:9px}
+.chat-bubble-foot{display:flex;justify-content:flex-end;margin-top:9px;padding-top:7px;border-top:1px solid rgba(255,255,255,0.07)}
+.chat-sp-btn{font-size:14px;cursor:pointer;padding:5px 13px;border-radius:20px;transition:all .2s;line-height:1;font-weight:700;letter-spacing:.3px}
+.chat-msg.right .chat-sp-btn{background:rgba(244,166,36,0.18);border:1px solid rgba(244,166,36,0.45);color:var(--accent)}
+.chat-msg.left .chat-sp-btn{background:rgba(74,158,255,0.15);border:1px solid rgba(74,158,255,0.4);color:var(--blue)}
+.chat-sp-btn:hover{transform:scale(1.08);filter:brightness(1.25)}
+.su-prog{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:6px;overflow:hidden}
+.su-prog-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:2px;width:0%;transition:width .6s ease}
+
+.su-level-hd{padding:8px 12px 5px;margin-top:8px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(255,255,255,.05)}
+.su-level-code{font-size:11px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;padding:2px 8px;border-radius:5px;display:inline-block}
+.su-level-name{font-family:'Cairo',sans-serif;font-size:12px;font-weight:700;color:#f4c430;direction:rtl;margin:0;line-height:1}
+.lvl-a1{background:rgba(52,211,153,.15);color:#34d399;border:1px solid rgba(52,211,153,.35)}
+.lvl-a2{background:rgba(74,158,255,.15);color:#4a9eff;border:1px solid rgba(74,158,255,.35)}
+.lvl-b1{background:rgba(245,158,11,.15);color:#f59e0b;border:1px solid rgba(245,158,11,.35)}
+.lvl-b2{background:rgba(244,166,36,.15);color:var(--accent);border:1px solid rgba(244,166,36,.35)}
+.lvl-b2p{background:rgba(251,146,60,.15);color:#fb923c;border:1px solid rgba(251,146,60,.35)}
+.lvl-c1{background:rgba(168,85,247,.15);color:#a855f7;border:1px solid rgba(168,85,247,.35)}
+.su-coming{opacity:.28;cursor:default;pointer-events:none}
+.su-prog{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:6px;overflow:hidden}
+.su-prog-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:2px;width:0%;transition:width .6s ease}
+
+.nav-home-btn{display:inline-flex;align-items:center;gap:6px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.4);color:var(--accent);font-size:12px;font-weight:800;padding:5px 13px;border-radius:8px;text-decoration:none;transition:all .2s;white-space:nowrap;flex-shrink:0}
+.nav-home-btn:hover{background:rgba(244,166,36,.25);transform:translateY(-2px)}
+.nav-lesson-badge{background:var(--accent);color:#0a1628;font-size:12px;font-weight:900;padding:5px 13px;border-radius:7px;white-space:nowrap;letter-spacing:.3px;flex-shrink:0}
+.nav-lesson-name{font-size:13px;color:rgba(232,237,245,.7);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-sep{color:rgba(136,153,176,.5);font-size:13px;flex-shrink:0}
+.nav-left{display:flex;align-items:center;gap:8px;flex:1;min-width:0}
+.nav-right{display:flex;align-items:center;flex-shrink:0}
+</style>
+
+<style>
+/* Watermark on print */
+@media print {
+  body::before {
+    content: 'Mohammed Elhuseyin — English Learning Platform — محمية الحقوق';
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-35deg);
+    font-size: 48px;
+    font-weight: 900;
+    color: rgba(244,166,36,0.18);
+    z-index: 9999;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+}
+</style>
+
+<style>
+.float-menu-btn{display:none;position:fixed;bottom:22px;left:18px;z-index:9998;width:48px;height:48px;background:var(--primary-dark,#0f2548);border:2px solid rgba(244,166,36,.5);border-radius:14px;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:12px;box-shadow:0 4px 20px rgba(0,0,0,.4);transition:transform .15s,box-shadow .15s}
+.float-menu-btn:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,.5)}
+.float-menu-btn span{display:block;width:22px;height:2px;background:#f4a624;border-radius:2px;transition:all .25s}
+@media(max-width:768px){.float-menu-btn{display:flex}}
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="nav-left">
+    <a href="../index.html" class="nav-home-btn">&#x1F3E0; الرئيسية</a>
+    <span class="nav-sep">&#x203A;</span>
+    <span class="nav-lesson-badge">Lesson 11</span>
+    <span class="nav-sep">&#x203A;</span>
+    <span class="nav-lesson-name">Can / Can't</span>
+  </div>
+  <div class="nav-right"><span class="nav-brand">MOHAMMED ELHUSEYIN</span><button class="nav-hamburger" onclick="toggleSidebar()" aria-label="Menu"><span></span><span></span><span></span></button></div>
+</nav>
+<div class="sb-backdrop" id="sbBackdrop" onclick="toggleSidebar()"></div>
+
+<div class="hero">
+  <div class="unit-badge">Unit 5</div>
+  <h1 class="hero-title"><i>can</i> / <i>can't</i> / <i>could</i> / <i>couldn't</i></h1>
+  <div class="hero-ar ar">الفعل المساعد — القدرة والطلب المؤدب</div>
+  <p class="hero-sub">Ability · Polite Requests · Positive · Negative · Questions · could (Past)</p>
+  <div class="hero-tags">
+    <button class="tag tag-grammar tag-btn" onclick="jumpTab('grammar')">📖 Grammar</button>
+    <button class="tag tag-other tag-btn" onclick="jumpTab('everyday')">🗣 Everyday English</button>
+    <button class="tag tag-other tag-btn" onclick="jumpTab('reading')">📚 Reading</button>
+    <button class="tag tag-other tag-btn" onclick="jumpTab('checkit')">✏️ 25 سؤال</button>
+  </div>
+</div>
+
+<div class="main-tabs">
+  <button class="main-tab active" onclick="showTab('grammar',this)">📖 Grammar</button>
+  <button class="main-tab" onclick="showTab('everyday',this)">🗣 Everyday English</button>
+  <button class="main-tab" onclick="showTab('reading',this)">📚 Reading</button>
+  <button class="main-tab" onclick="showTab('checkit',this)">✏️ Check It</button>
+</div>
+
+<div class="layout">
+
+<!-- ═══════════════════════════════════════════════════════ SIDEBAR -->
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-logo">
+      <div class="sidebar-logo-icon">A</div>
+      <div><div class="sidebar-logo-text ar">MOHAMMED ELHUSEYIN</div><div class="sidebar-logo-sub">English Learning Platform</div></div>
+    </div>
+    <div class="sidebar-label ar">الوحدات الدراسية</div>
+  </div>
+  <div class="sidebar-units">
+  <div class="su-level-hd"><span class="su-level-code lvl-a1">A1</span><span class="su-level-name">مستوى المبتدئ تماماً</span></div>
+  <a href="lesson1.html" class="su-item"><div class="su-num">1</div><div class="su-texts"><div class="su-en">Alphabet & Numbers</div><div class="su-ar">الأحرف والأرقام</div><div class="su-prog"><div class="su-prog-fill" id="sp1"></div></div></div></a>
+  <a href="lesson2.html" class="su-item"><div class="su-num">2</div><div class="su-texts"><div class="su-en">Classroom Language & Greetings</div><div class="su-ar">لغة الصف والتحيات</div><div class="su-prog"><div class="su-prog-fill" id="sp2"></div></div></div></a>
+  <a href="lesson3.html" class="su-item"><div class="su-num">3</div><div class="su-texts"><div class="su-en">Nationalities & Countries</div><div class="su-ar">الجنسيات والدول</div><div class="su-prog"><div class="su-prog-fill" id="sp3"></div></div></div></a>
+  <a href="lesson4.html" class="su-item"><div class="su-num">4</div><div class="su-texts"><div class="su-en">Singular & Plural Nouns</div><div class="su-ar">الأسماء المفردة والجمع</div><div class="su-prog"><div class="su-prog-fill" id="sp4"></div></div></div></a>
+  <a href="lesson5.html" class="su-item"><div class="su-num">5</div><div class="su-texts"><div class="su-en">Days & Telling the Time</div><div class="su-ar">الأيام وإخبار الوقت</div><div class="su-prog"><div class="su-prog-fill" id="sp5"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-a2">A2</span><span class="su-level-name">المستوى الابتدائي</span></div>
+  <a href="unit1.html" class="su-item"><div class="su-num">6</div><div class="su-texts"><div class="su-en">Verb to <i>be</i></div><div class="su-ar">فعل التكوين</div><div class="su-prog"><div class="su-prog-fill" id="sp6"></div></div></div></a>
+  <a href="unit2.html" class="su-item"><div class="su-num">7</div><div class="su-texts"><div class="su-en">Present Simple</div><div class="su-ar">المضارع البسيط</div><div class="su-prog"><div class="su-prog-fill" id="sp7"></div></div></div></a>
+  <a href="unit3.html" class="su-item"><div class="su-num">8</div><div class="su-texts"><div class="su-en">Present Continuous</div><div class="su-ar">المضارع المستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp8"></div></div></div></a>
+  <a href="unit4.html" class="su-item"><div class="su-num">9</div><div class="su-texts"><div class="su-en">Past Simple: was / were</div><div class="su-ar">الماضي البسيط: كان</div><div class="su-prog"><div class="su-prog-fill" id="sp9"></div></div></div></a>
+  <a href="unit6.html" class="su-item"><div class="su-num">10</div><div class="su-texts"><div class="su-en">Past Simple: Regular & Irreg.</div><div class="su-ar">الماضي البسيط للأفعال</div><div class="su-prog"><div class="su-prog-fill" id="sp10"></div></div></div></a>
+  <a href="unit5.html" class="su-item su-active"><div class="su-num">11</div><div class="su-texts"><div class="su-en">Can / Can't</div><div class="su-ar">القدرة والعجز</div><div class="su-prog"><div class="su-prog-fill" id="sp11"></div></div></div></a>
+  <a href="lesson12.html" class="su-item"><div class="su-num">12</div><div class="su-texts"><div class="su-en">Possessive Pronouns</div><div class="su-ar">ضمائر الملكية</div><div class="su-prog"><div class="su-prog-fill" id="sp12"></div></div></div></a>
+  <a href="unit7.html" class="su-item"><div class="su-num">13</div><div class="su-texts"><div class="su-en">There is / There are</div><div class="su-ar">يوجد / توجد</div><div class="su-prog"><div class="su-prog-fill" id="sp13"></div></div></div></a>
+  <a href="unit8.html" class="su-item"><div class="su-num">14</div><div class="su-texts"><div class="su-en">Adjectives</div><div class="su-ar">الصفات</div><div class="su-prog"><div class="su-prog-fill" id="sp14"></div></div></div></a>
+  <a href="unit9.html" class="su-item"><div class="su-num">15</div><div class="su-texts"><div class="su-en">Imperatives</div><div class="su-ar">صيغة الأمر والنهي</div><div class="su-prog"><div class="su-prog-fill" id="sp15"></div></div></div></a>
+  <a href="unit10.html" class="su-item"><div class="su-num">16</div><div class="su-texts"><div class="su-en">Object Pronouns</div><div class="su-ar">ضمائر المفعول به</div><div class="su-prog"><div class="su-prog-fill" id="sp16"></div></div></div></a>
+  <a href="unit11.html" class="su-item"><div class="su-num">17</div><div class="su-texts"><div class="su-en">Prepositions of Time & Place</div><div class="su-ar">حروف جر الوقت والمكان</div><div class="su-prog"><div class="su-prog-fill" id="sp17"></div></div></div></a>
+  <a href="unit12.html" class="su-item"><div class="su-num">18</div><div class="su-texts"><div class="su-en">Future Plans: going to</div><div class="su-ar">خطط المستقبل</div><div class="su-prog"><div class="su-prog-fill" id="sp18"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b1">B1</span><span class="su-level-name">تحت المتوسط</span></div>
+  <a href="lesson19.html" class="su-item"><div class="su-num">19</div><div class="su-texts"><div class="su-en">Present Perfect Introduction</div><div class="su-ar">مقدمة المضارع التام</div><div class="su-prog"><div class="su-prog-fill" id="sp19"></div></div></div></a>
+  <a href="lesson20.html" class="su-item"><div class="su-num">20</div><div class="su-texts"><div class="su-en">Past Continuous</div><div class="su-ar">الماضي المستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp20"></div></div></div></a>
+  <a href="lesson21.html" class="su-item"><div class="su-num">21</div><div class="su-texts"><div class="su-en">will vs. going to</div><div class="su-ar">المستقبل: إرادة أم تخطيط؟</div><div class="su-prog"><div class="su-prog-fill" id="sp21"></div></div></div></a>
+  <a href="lesson22.html" class="su-item"><div class="su-num">22</div><div class="su-texts"><div class="su-en">like / love / hate + -ing</div><div class="su-ar">التعبير عن التفضيلات</div><div class="su-prog"><div class="su-prog-fill" id="sp22"></div></div></div></a>
+  <a href="lesson23.html" class="su-item"><div class="su-num">23</div><div class="su-texts"><div class="su-en">Comparatives & Superlatives</div><div class="su-ar">المقارنة والتفضيل</div><div class="su-prog"><div class="su-prog-fill" id="sp23"></div></div></div></a>
+  <a href="lesson24.html" class="su-item"><div class="su-num">24</div><div class="su-texts"><div class="su-en">must / have to / should</div><div class="su-ar">أفعال الإلزام والنصيحة</div><div class="su-prog"><div class="su-prog-fill" id="sp24"></div></div></div></a>
+  <a href="lesson25.html" class="su-item"><div class="su-num">25</div><div class="su-texts"><div class="su-en">Infinitives & Gerunds</div><div class="su-ar">المصدر وصيغة الـ ing</div><div class="su-prog"><div class="su-prog-fill" id="sp25"></div></div></div></a>
+  <a href="lesson26.html" class="su-item"><div class="su-num">26</div><div class="su-texts"><div class="su-en">Articles: a/an / the</div><div class="su-ar">أدوات التعريف والتنكير</div><div class="su-prog"><div class="su-prog-fill" id="sp26"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b2">B2</span><span class="su-level-name">المستوى المتوسط</span></div>
+  <a href="lesson27.html" class="su-item"><div class="su-num">27</div><div class="su-texts"><div class="su-en">Present Perfect vs. Past Simple</div><div class="su-ar">المقارنة بين الماضي والتام</div><div class="su-prog"><div class="su-prog-fill" id="sp27"></div></div></div></a>
+  <a href="lesson28.html" class="su-item"><div class="su-num">28</div><div class="su-texts"><div class="su-en">Passive Voice</div><div class="su-ar">المبني للمجهول</div><div class="su-prog"><div class="su-prog-fill" id="sp28"></div></div></div></a>
+  <a href="lesson29.html" class="su-item"><div class="su-num">29</div><div class="su-texts"><div class="su-en">Zero / First / Second Cond.</div><div class="su-ar">الجمل الشرطية 0-1-2</div><div class="su-prog"><div class="su-prog-fill" id="sp29"></div></div></div></a>
+  <a href="lesson30.html" class="su-item"><div class="su-num">30</div><div class="su-texts"><div class="su-en">Reported Speech</div><div class="su-ar">الكلام غير المباشر</div><div class="su-prog"><div class="su-prog-fill" id="sp30"></div></div></div></a>
+  <a href="lesson31.html" class="su-item"><div class="su-num">31</div><div class="su-texts"><div class="su-en">Relative Clauses</div><div class="su-ar">جمل الوصل: who / which</div><div class="su-prog"><div class="su-prog-fill" id="sp31"></div></div></div></a>
+  <a href="lesson32.html" class="su-item"><div class="su-num">32</div><div class="su-texts"><div class="su-en">Quantifiers</div><div class="su-ar">محددات الكمية</div><div class="su-prog"><div class="su-prog-fill" id="sp32"></div></div></div></a>
+  <a href="lesson33.html" class="su-item"><div class="su-num">33</div><div class="su-texts"><div class="su-en">Phrasal Verbs Introduction</div><div class="su-ar">مقدمة الأفعال المركبة</div><div class="su-prog"><div class="su-prog-fill" id="sp33"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b2p">B2+</span><span class="su-level-name">فوق المتوسط</span></div>
+  <a href="lesson34.html" class="su-item"><div class="su-num">34</div><div class="su-texts"><div class="su-en">Narrative Tenses & Past Perfect</div><div class="su-ar">أزمنة السرد والماضي التام</div><div class="su-prog"><div class="su-prog-fill" id="sp34"></div></div></div></a>
+  <a href="lesson35.html" class="su-item"><div class="su-num">35</div><div class="su-texts"><div class="su-en">Future Perfect & Continuous</div><div class="su-ar">المستقبل التام والمستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp35"></div></div></div></a>
+  <a href="lesson36.html" class="su-item"><div class="su-num">36</div><div class="su-texts"><div class="su-en">Third Conditional & Regrets</div><div class="su-ar">الشرط الثالث والندم</div><div class="su-prog"><div class="su-prog-fill" id="sp36"></div></div></div></a>
+  <a href="lesson37.html" class="su-item"><div class="su-num">37</div><div class="su-texts"><div class="su-en">Causative: have/get done</div><div class="su-ar">الأفعال السببية</div><div class="su-prog"><div class="su-prog-fill" id="sp37"></div></div></div></a>
+  <a href="lesson38.html" class="su-item"><div class="su-num">38</div><div class="su-texts"><div class="su-en">Advanced Passive</div><div class="su-ar">المبني للمجهول المتقدم</div><div class="su-prog"><div class="su-prog-fill" id="sp38"></div></div></div></a>
+  <a href="lesson39.html" class="su-item"><div class="su-num">39</div><div class="su-texts"><div class="su-en">Speculation: must/might/can't</div><div class="su-ar">التخمين والاستنتاج</div><div class="su-prog"><div class="su-prog-fill" id="sp39"></div></div></div></a>
+  <a href="lesson40.html" class="su-item"><div class="su-num">40</div><div class="su-texts"><div class="su-en">Idioms & Collocations</div><div class="su-ar">المصطلحات والتعبيرات</div><div class="su-prog"><div class="su-prog-fill" id="sp40"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-c1">C1</span><span class="su-level-name">المستوى المتقدم الأكاديمي</span></div>
+  <a href="lesson41.html" class="su-item"><div class="su-num">41</div><div class="su-texts"><div class="su-en">Inversion & Emphatic Structures</div><div class="su-ar">التقديم والتأخير للتأكيد</div><div class="su-prog"><div class="su-prog-fill" id="sp41"></div></div></div></a>
+  <a href="lesson42.html" class="su-item"><div class="su-num">42</div><div class="su-texts"><div class="su-en">Mixed Conditionals</div><div class="su-ar">الجمل الشرطية المختلطة</div><div class="su-prog"><div class="su-prog-fill" id="sp42"></div></div></div></a>
+  <a href="lesson43.html" class="su-item"><div class="su-num">43</div><div class="su-texts"><div class="su-en">Advanced Gerunds & Infinitives</div><div class="su-ar">المصادر المتقدمة</div><div class="su-prog"><div class="su-prog-fill" id="sp43"></div></div></div></a>
+  <a href="lesson44.html" class="su-item"><div class="su-num">44</div><div class="su-texts"><div class="su-en">Cleft Sentences</div><div class="su-ar">الجمل المشقوقة</div><div class="su-prog"><div class="su-prog-fill" id="sp44"></div></div></div></a>
+  <a href="lesson45.html" class="su-item"><div class="su-num">45</div><div class="su-texts"><div class="su-en">Discourse Markers</div><div class="su-ar">أدوات الربط الأكاديمية</div><div class="su-prog"><div class="su-prog-fill" id="sp45"></div></div></div></a>
+  <a href="lesson46.html" class="su-item"><div class="su-num">46</div><div class="su-texts"><div class="su-en">Nuances & Euphemisms</div><div class="su-ar">الفروقات الدقيقة والتلطيف</div><div class="su-prog"><div class="su-prog-fill" id="sp46"></div></div></div></a>
+</div>
+</aside>
+
+<!-- ═══════════════════════════════════════════════════ MAIN CONTENT -->
+<div class="main-content">
+
+<!-- ══════════════════════════════════════════════════ GRAMMAR TAB -->
+<div id="tab-grammar" class="tab-panel active">
+<div style="max-width:960px;margin:0 auto">
+
+<!-- ── VISUAL SUMMARY ── -->
+<div class="card">
+  <h2 class="card-title">🗺️ Visual Summary — نظرة سريعة</h2>
+  <p class="card-ar">can لا تتغير مع الضمائر — نفس الشكل للجميع · could هي الماضي</p>
+  <div class="vs-wrap">
+    <svg viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg" font-family="Poppins,sans-serif" style="width:100%;display:block;min-width:380px">
+      <!-- background -->
+      <rect width="640" height="300" fill="#0d1b2a" rx="14"/>
+      <!-- header row -->
+      <rect x="10" y="10" width="620" height="38" rx="8" fill="#162030"/>
+      <text x="80" y="34" fill="#8899b0" font-size="11" font-weight="700" text-anchor="middle">SUBJECT</text>
+      <text x="230" y="34" fill="#22c55e" font-size="12" font-weight="900" text-anchor="middle">✅ POSITIVE</text>
+      <text x="390" y="34" fill="#ef4444" font-size="12" font-weight="900" text-anchor="middle">❌ NEGATIVE</text>
+      <text x="555" y="34" fill="#4a9eff" font-size="12" font-weight="900" text-anchor="middle">❓ QUESTION</text>
+      <!-- dividers -->
+      <line x1="150" y1="10" x2="150" y2="290" stroke="#2d4560" stroke-width="1"/>
+      <line x1="310" y1="10" x2="310" y2="290" stroke="#2d4560" stroke-width="1"/>
+      <line x1="470" y1="10" x2="470" y2="290" stroke="#2d4560" stroke-width="1"/>
+      <!-- Row 1 — I -->
+      <rect x="10" y="56" width="620" height="56" rx="4" fill="rgba(34,197,94,0.04)"/>
+      <text x="80" y="80" fill="#4a9eff" font-size="13" font-weight="800" text-anchor="middle">I</text>
+      <text x="80" y="98" fill="#8899b0" font-size="10" text-anchor="middle">أنا</text>
+      <text x="175" y="78" fill="#22c55e" font-size="14" font-weight="900" text-anchor="middle">can</text>
+      <text x="205" y="78" fill="#e8edf5" font-size="12" text-anchor="start">swim.</text>
+      <text x="175" y="97" fill="#ef4444" font-size="14" font-weight="900" text-anchor="middle">can't</text>
+      <text x="208" y="97" fill="#e8edf5" font-size="12" text-anchor="start">fly.</text>
+      <text x="340" y="78" fill="#22c55e" font-size="14" font-weight="900" text-anchor="middle">can</text>
+      <text x="370" y="78" fill="#e8edf5" font-size="12" text-anchor="start">I swim?</text>
+      <!-- Row 2 — He/She/It -->
+      <rect x="10" y="116" width="620" height="56" rx="4" fill="rgba(74,158,255,0.04)"/>
+      <text x="80" y="140" fill="#4a9eff" font-size="12" font-weight="800" text-anchor="middle">He / She / It</text>
+      <text x="80" y="158" fill="#8899b0" font-size="10" text-anchor="middle">هو / هي / هو</text>
+      <text x="175" y="138" fill="#22c55e" font-size="14" font-weight="900" text-anchor="middle">can</text>
+      <text x="205" y="138" fill="#e8edf5" font-size="12" text-anchor="start">cook.</text>
+      <text x="175" y="157" fill="#ef4444" font-size="14" font-weight="900" text-anchor="middle">can't</text>
+      <text x="208" y="157" fill="#e8edf5" font-size="12" text-anchor="start">drive.</text>
+      <text x="334" y="138" fill="#22c55e" font-size="14" font-weight="900" text-anchor="middle">Can</text>
+      <text x="360" y="138" fill="#e8edf5" font-size="12" text-anchor="start">she cook?</text>
+      <!-- Row 3 — You/We/They -->
+      <rect x="10" y="176" width="620" height="56" rx="4" fill="rgba(168,85,247,0.04)"/>
+      <text x="80" y="200" fill="#4a9eff" font-size="11.5" font-weight="800" text-anchor="middle">You / We / They</text>
+      <text x="80" y="218" fill="#8899b0" font-size="10" text-anchor="middle">أنت / نحن / هم</text>
+      <text x="175" y="198" fill="#22c55e" font-size="14" font-weight="900" text-anchor="middle">can</text>
+      <text x="205" y="198" fill="#e8edf5" font-size="12" text-anchor="start">dance.</text>
+      <text x="175" y="217" fill="#ef4444" font-size="14" font-weight="900" text-anchor="middle">can't</text>
+      <text x="208" y="217" fill="#e8edf5" font-size="12" text-anchor="start">sing.</text>
+      <text x="334" y="198" fill="#22c55e" font-size="14" font-weight="900" text-anchor="middle">Can</text>
+      <text x="360" y="198" fill="#e8edf5" font-size="12" text-anchor="start">they dance?</text>
+      <!-- Key message -->
+      <rect x="10" y="240" width="620" height="50" rx="8" fill="rgba(244,166,36,0.1)" stroke="rgba(244,166,36,0.3)" stroke-width="1"/>
+      <text x="320" y="261" fill="#f4a624" font-size="12" font-weight="800" text-anchor="middle">⭐ can / can't لا تتغير مع الضمائر — نفس الشكل لجميع الأشخاص!</text>
+      <text x="320" y="280" fill="#8899b0" font-size="11" text-anchor="middle">لا نقول: He cans · She doesn't can · Do you can? — هذه كلها أخطاء شائعة</text>
+    </svg>
+  </div>
+  <p class="vs-caption">ملاحظة: لا نستخدم do/does/don't/doesn't مع can أبداً</p>
+
+  <!-- Timeline: NOW vs PAST -->
+  <div class="cld-timeline" style="margin-top:20px">
+    <div class="cld-box">
+      <div class="cld-label past">الماضي — PAST</div>
+      <div class="cld-word past">could</div>
+      <div class="cld-neg">couldn't</div>
+      <div style="font-size:11px;color:var(--muted);margin-top:5px">When I was young, I <b style="color:var(--blue)">could</b> climb trees.</div>
+    </div>
+    <div class="cld-arrow">→</div>
+    <div class="cld-box">
+      <div class="cld-label present">الحاضر — NOW</div>
+      <div class="cld-word present">can</div>
+      <div class="cld-neg">can't</div>
+      <div style="font-size:11px;color:var(--muted);margin-top:5px">Now I <b style="color:var(--green)">can</b> drive a car.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── SUB-TABS ── -->
+<div class="card">
+  <h2 class="card-title">📐 Grammar Details — التفاصيل</h2>
+  <p class="card-ar">اختر الموضوع الي بدك تدرسه</p>
+  <div class="sub-tabs">
+    <button class="sub-tab active" onclick="showSub('pos',this)">✅ Positive</button>
+    <button class="sub-tab" onclick="showSub('neg',this)">❌ Negative</button>
+    <button class="sub-tab" onclick="showSub('qst',this)">❓ Questions</button>
+    <button class="sub-tab" onclick="showSub('cld',this)">⏪ could / couldn't</button>
+  </div>
+
+  <!-- ═══ POSITIVE ═══ -->
+  <div id="sub-pos" class="sub-panel active">
+    <div class="tts-box">
+      <button class="tts-btn" onclick="ttsGrammar('pos')">🔊 استمع للشرح</button>
+      <button class="tts-btn tts-stop" onclick="ttsStop()">⏹ Stop</button>
+    </div>
+
+    <div class="card-note ar">الإيجابي: نستخدم can مع جميع الضمائر بدون أي تغيير · نتبعها دائماً بالمصدر بدون to</div>
+
+    <div class="formula-box">
+      <div class="formula-row">
+        <span class="formula-subj">I / He / She / It</span>
+        <span class="formula-be can">can</span>
+        <span class="formula-plus">+</span>
+        <span style="color:var(--text);font-weight:700">infinitive (swim / cook / drive…)</span>
+      </div>
+      <div class="formula-row">
+        <span class="formula-subj">You / We / They</span>
+        <span class="formula-be can">can</span>
+        <span class="formula-plus">+</span>
+        <span style="color:var(--text);font-weight:700">infinitive (swim / cook / drive…)</span>
+        <span class="formula-note">نفس الشكل للجميع 🎯</span>
+      </div>
+    </div>
+
+    <p class="ex-section-title">Examples — أمثلة</p>
+    <div class="ex-list">
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('I can swim very well.')">🔊</button>
+        <div><div class="ex-en">I <b>can</b> swim very well.</div><div class="ex-ar">أنا أستطيع السباحة بشكل ممتاز.</div></div>
+      </div>
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('She can speak three languages.')">🔊</button>
+        <div><div class="ex-en">She <b>can</b> speak three languages.</div><div class="ex-ar">هي تستطيع التكلم بثلاث لغات.</div></div>
+      </div>
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('He can play the guitar and the piano.')">🔊</button>
+        <div><div class="ex-en">He <b>can</b> play the guitar and the piano.</div><div class="ex-ar">هو يستطيع العزف على الجيتار والبيانو.</div></div>
+      </div>
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('They can run five kilometres every morning.')">🔊</button>
+        <div><div class="ex-en">They <b>can</b> run five kilometres every morning.</div><div class="ex-ar">هم يستطيعون الجري خمسة كيلومترات كل صباح.</div></div>
+      </div>
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('We can meet tomorrow if you want.')">🔊</button>
+        <div><div class="ex-en">We <b>can</b> meet tomorrow if you want.</div><div class="ex-ar">نستطيع الاجتماع غداً إذا أردت.</div></div>
+      </div>
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('My cat can open the door by herself.')">🔊</button>
+        <div><div class="ex-en">My cat <b>can</b> open the door by herself.</div><div class="ex-ar">قطتي تستطيع فتح الباب وحدها.</div></div>
+      </div>
+    </div>
+
+    <!-- ── ABILITIES VOCAB GRID ── -->
+    <p class="ex-section-title" style="margin-top:22px">🎯 Skills & Abilities — مهارات وقدرات (اضغط لتسمع)</p>
+    <div class="vocab-grid">
+      <div class="vocab-item" onclick="ttsRead('swim')"><div class="vocab-en">swim</div><div class="vocab-can">can swim</div><div class="vocab-ar">يسبح</div></div>
+      <div class="vocab-item" onclick="ttsRead('drive')"><div class="vocab-en">drive</div><div class="vocab-can">can drive</div><div class="vocab-ar">يقود السيارة</div></div>
+      <div class="vocab-item" onclick="ttsRead('cook')"><div class="vocab-en">cook</div><div class="vocab-can">can cook</div><div class="vocab-ar">يطبخ</div></div>
+      <div class="vocab-item" onclick="ttsRead('sing')"><div class="vocab-en">sing</div><div class="vocab-can">can sing</div><div class="vocab-ar">يغني</div></div>
+      <div class="vocab-item" onclick="ttsRead('dance')"><div class="vocab-en">dance</div><div class="vocab-can">can dance</div><div class="vocab-ar">يرقص</div></div>
+      <div class="vocab-item" onclick="ttsRead('play guitar')"><div class="vocab-en">play guitar</div><div class="vocab-can">can play guitar</div><div class="vocab-ar">يعزف الجيتار</div></div>
+      <div class="vocab-item" onclick="ttsRead('play piano')"><div class="vocab-en">play piano</div><div class="vocab-can">can play piano</div><div class="vocab-ar">يعزف البيانو</div></div>
+      <div class="vocab-item" onclick="ttsRead('speak French')"><div class="vocab-en">speak French</div><div class="vocab-can">can speak French</div><div class="vocab-ar">يتكلم الفرنسية</div></div>
+      <div class="vocab-item" onclick="ttsRead('ride a bike')"><div class="vocab-en">ride a bike</div><div class="vocab-can">can ride a bike</div><div class="vocab-ar">يركب الدراجة</div></div>
+      <div class="vocab-item" onclick="ttsRead('ride a horse')"><div class="vocab-en">ride a horse</div><div class="vocab-can">can ride a horse</div><div class="vocab-ar">يركب الحصان</div></div>
+      <div class="vocab-item" onclick="ttsRead('fly a plane')"><div class="vocab-en">fly a plane</div><div class="vocab-can">can fly a plane</div><div class="vocab-ar">يقود الطيارة</div></div>
+      <div class="vocab-item" onclick="ttsRead('ski')"><div class="vocab-en">ski</div><div class="vocab-can">can ski</div><div class="vocab-ar">يتزلج</div></div>
+      <div class="vocab-item" onclick="ttsRead('paint')"><div class="vocab-en">paint</div><div class="vocab-can">can paint</div><div class="vocab-ar">يرسم / يصوّر</div></div>
+      <div class="vocab-item" onclick="ttsRead('write code')"><div class="vocab-en">write code</div><div class="vocab-can">can write code</div><div class="vocab-ar">يكتب برمجة</div></div>
+      <div class="vocab-item" onclick="ttsRead('play chess')"><div class="vocab-en">play chess</div><div class="vocab-can">can play chess</div><div class="vocab-ar">يلعب الشطرنج</div></div>
+      <div class="vocab-item" onclick="ttsRead('bake')"><div class="vocab-en">bake</div><div class="vocab-can">can bake</div><div class="vocab-ar">يخبز</div></div>
+      <div class="vocab-item" onclick="ttsRead('take photos')"><div class="vocab-en">take photos</div><div class="vocab-can">can take photos</div><div class="vocab-ar">يلتقط الصور</div></div>
+      <div class="vocab-item" onclick="ttsRead('speak Arabic')"><div class="vocab-en">speak Arabic</div><div class="vocab-can">can speak Arabic</div><div class="vocab-ar">يتكلم العربية</div></div>
+      <div class="vocab-item" onclick="ttsRead('make sushi')"><div class="vocab-en">make sushi</div><div class="vocab-can">can make sushi</div><div class="vocab-ar">يصنع السوشي</div></div>
+      <div class="vocab-item" onclick="ttsRead('read music')"><div class="vocab-en">read music</div><div class="vocab-can">can read music</div><div class="vocab-ar">يقرأ النوتة الموسيقية</div></div>
+    </div>
+
+    <!-- ── ROOMS GRID ── -->
+    <p class="ex-section-title" style="margin-top:28px">🏠 Rooms — ماذا تستطيع أن تفعل في كل غرفة؟</p>
+    <div class="card-note ar">كل غرفة في البيت مختلفة — فيها أشياء تقدر تعملها وأشياء ما تقدر!</div>
+    <div class="room-grid">
+
+      <div class="room-card">
+        <span class="room-icon">🍳</span>
+        <div class="room-name-en">Kitchen</div>
+        <div class="room-name-ar">المطبخ</div>
+        <ul class="room-can-list">
+          <li>cook meals</li>
+          <li>make coffee or tea</li>
+          <li>wash the dishes</li>
+          <li>store food in the fridge</li>
+        </ul>
+        <div class="room-cant-note">sleep or watch TV here!</div>
+      </div>
+
+      <div class="room-card">
+        <span class="room-icon">🛏️</span>
+        <div class="room-name-en">Bedroom</div>
+        <div class="room-name-ar">غرفة النوم</div>
+        <ul class="room-can-list">
+          <li>sleep and rest</li>
+          <li>get dressed</li>
+          <li>read in bed</li>
+          <li>listen to music quietly</li>
+        </ul>
+        <div class="room-cant-note">cook or have loud parties here!</div>
+      </div>
+
+      <div class="room-card">
+        <span class="room-icon">🛁</span>
+        <div class="room-name-en">Bathroom</div>
+        <div class="room-name-ar">الحمام</div>
+        <ul class="room-can-list">
+          <li>shower or have a bath</li>
+          <li>brush your teeth</li>
+          <li>wash your face and hands</li>
+          <li>relax in a hot bath</li>
+        </ul>
+        <div class="room-cant-note">eat food or watch TV here!</div>
+      </div>
+
+      <div class="room-card">
+        <span class="room-icon">🛋️</span>
+        <div class="room-name-en">Living Room</div>
+        <div class="room-name-ar">غرفة المعيشة / الصالة</div>
+        <ul class="room-can-list">
+          <li>watch TV and films</li>
+          <li>relax on the sofa</li>
+          <li>have guests and family</li>
+          <li>play board games</li>
+        </ul>
+        <div class="room-cant-note">cook or shower here!</div>
+      </div>
+
+      <div class="room-card">
+        <span class="room-icon">🍽️</span>
+        <div class="room-name-en">Dining Room</div>
+        <div class="room-name-ar">غرفة الطعام</div>
+        <ul class="room-can-list">
+          <li>have breakfast and dinner</li>
+          <li>eat with the family</li>
+          <li>have birthday meals</li>
+          <li>do homework on the table</li>
+        </ul>
+        <div class="room-cant-note">sleep or cook here!</div>
+      </div>
+
+      <div class="room-card">
+        <span class="room-icon">📖</span>
+        <div class="room-name-en">Study / Office</div>
+        <div class="room-name-ar">المكتب / المكتبة</div>
+        <ul class="room-can-list">
+          <li>study and do homework</li>
+          <li>use the computer</li>
+          <li>read books and articles</li>
+          <li>work from home</li>
+        </ul>
+        <div class="room-cant-note">cook food or play sports here!</div>
+      </div>
+
+      <div class="room-card">
+        <span class="room-icon">🌿</span>
+        <div class="room-name-en">Garden</div>
+        <div class="room-name-ar">الحديقة</div>
+        <ul class="room-can-list">
+          <li>sit outside in the sun</li>
+          <li>have a barbecue (BBQ)</li>
+          <li>grow plants and flowers</li>
+          <li>play football or games</li>
+        </ul>
+        <div class="room-cant-note">sleep comfortably in winter!</div>
+      </div>
+
+      <div class="room-card">
+        <span class="room-icon">🚗</span>
+        <div class="room-name-en">Garage</div>
+        <div class="room-name-ar">الكراج / الجراج</div>
+        <ul class="room-can-list">
+          <li>park the car safely</li>
+          <li>store tools and equipment</li>
+          <li>fix and repair things</li>
+          <li>use it as a workshop</li>
+        </ul>
+        <div class="room-cant-note">cook food or sleep here!</div>
+      </div>
+
+    </div><!-- /room-grid -->
+  </div><!-- /sub-pos -->
+
+  <!-- ═══ NEGATIVE ═══ -->
+  <div id="sub-neg" class="sub-panel">
+    <div class="tts-box">
+      <button class="tts-btn" onclick="ttsGrammar('neg')">🔊 استمع للشرح</button>
+      <button class="tts-btn tts-stop" onclick="ttsStop()">⏹ Stop</button>
+    </div>
+
+    <div class="card-note ar">المنفي: نضيف not بعد can — نتيجة: can't أو cannot · لا نستخدم doesn't can أبداً!</div>
+
+    <div class="formula-box">
+      <div class="formula-row">
+        <span class="formula-subj">جميع الضمائر</span>
+        <span class="formula-be neg">can't</span>
+        <span class="formula-plus">+</span>
+        <span style="color:var(--text);font-weight:700">infinitive</span>
+        <span class="formula-note">can't = cannot (نفس المعنى)</span>
+      </div>
+    </div>
+
+    <div class="imp-box">
+      <div class="imp-title">⚠️ أخطاء شائعة جداً</div>
+      <div class="imp-row"><span class="imp-wrong">She doesn't can cook.</span><span>→</span><span class="imp-right">She can't cook.</span></div>
+      <div class="imp-row"><span class="imp-wrong">He cans't drive.</span><span>→</span><span class="imp-right">He can't drive.</span></div>
+      <div class="imp-row"><span class="imp-wrong">They not can swim.</span><span>→</span><span class="imp-right">They can't swim.</span></div>
+      <div class="imp-row"><span class="imp-wrong">I am not can dance.</span><span>→</span><span class="imp-right">I can't dance.</span></div>
+    </div>
+
+    <p class="ex-section-title">Examples — أمثلة</p>
+    <div class="ex-list">
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('I can\'t hear you. Can you speak louder?')">🔊</button>
+        <div><div class="ex-en">I <b>can't</b> hear you. Can you speak louder?</div><div class="ex-ar">ما أسمعك. تقدر تحكي أعلى؟</div></div>
+      </div>
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('She can\'t cook at all. She always orders food.')">🔊</button>
+        <div><div class="ex-en">She <b>can't</b> cook at all. She always orders food.</div><div class="ex-ar">هي ما تعرف تطبخ أبداً. دائماً تطلب طعام.</div></div>
+      </div>
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('He can\'t drive yet. He doesn\'t have his licence.')">🔊</button>
+        <div><div class="ex-en">He <b>can't</b> drive yet. He doesn't have his licence.</div><div class="ex-ar">ما يقدر يسوق بعد. ما عنده رخصة.</div></div>
+      </div>
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('We can\'t come tonight. We\'re very busy.')">🔊</button>
+        <div><div class="ex-en">We <b>can't</b> come tonight. We're very busy.</div><div class="ex-ar">ما نقدر نيجي الليلة. نحنا مشغولين جداً.</div></div>
+      </div>
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('You can\'t always get what you want.')">🔊</button>
+        <div><div class="ex-en">You <b>can't</b> always get what you want.</div><div class="ex-ar">ما تقدر دائماً تحصل على ما تريد.</div></div>
+      </div>
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('They cannot use their phones in the exam.')">🔊</button>
+        <div><div class="ex-en">They <b>cannot</b> use their phones in the exam.</div><div class="ex-ar">ممنوع استخدام الجوال في الامتحان. (cannot = رسمية أكثر)</div></div>
+      </div>
+    </div>
+
+    <div class="mistake-item">
+      <div class="m-wrong">cannot't</div>
+      <div class="m-right">can't  (or)  cannot</div>
+      <div class="m-why">cannot كلمة واحدة · can't اختصارها · لكن "cannot't" غير موجودة أبداً في الإنجليزية</div>
+    </div>
+  </div><!-- /sub-neg -->
+
+  <!-- ═══ QUESTIONS ═══ -->
+  <div id="sub-qst" class="sub-panel">
+    <div class="tts-box">
+      <button class="tts-btn" onclick="ttsGrammar('qst')">🔊 استمع للشرح</button>
+      <button class="tts-btn tts-stop" onclick="ttsStop()">⏹ Stop</button>
+    </div>
+
+    <div class="card-note ar">للسؤال: نضع Can في أول الجملة · لا نستخدم do/does · الجواب المختصر: Yes, I can. / No, I can't.</div>
+
+    <div class="formula-box">
+      <div class="formula-row">
+        <span class="formula-be qmark" style="min-width:50px">Can</span>
+        <span class="formula-plus">+</span>
+        <span class="formula-subj" style="min-width:120px">subject</span>
+        <span class="formula-plus">+</span>
+        <span style="color:var(--text);font-weight:700">infinitive + ?</span>
+        <span class="formula-note">بدون do/does!</span>
+      </div>
+    </div>
+
+    <p class="ex-section-title">Yes / No Questions + Short Answers</p>
+    <table class="sa-table">
+      <thead>
+        <tr><th>Question</th><th class="sa-yes">Yes ✅</th><th class="sa-no">No ❌</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><button class="sp" onclick="ttsRead('Can I help?')">🔊</button> Can <b>I</b> help?</td><td class="sa-yes">Yes, you can.</td><td class="sa-no">No, you can't.</td></tr>
+        <tr><td><button class="sp" onclick="ttsRead('Can she swim?')">🔊</button> Can <b>she</b> swim?</td><td class="sa-yes">Yes, she can.</td><td class="sa-no">No, she can't.</td></tr>
+        <tr><td><button class="sp" onclick="ttsRead('Can he drive?')">🔊</button> Can <b>he</b> drive?</td><td class="sa-yes">Yes, he can.</td><td class="sa-no">No, he can't.</td></tr>
+        <tr><td><button class="sp" onclick="ttsRead('Can you speak Arabic?')">🔊</button> Can <b>you</b> speak Arabic?</td><td class="sa-yes">Yes, I can.</td><td class="sa-no">No, I can't.</td></tr>
+        <tr><td><button class="sp" onclick="ttsRead('Can they play guitar?')">🔊</button> Can <b>they</b> play guitar?</td><td class="sa-yes">Yes, they can.</td><td class="sa-no">No, they can't.</td></tr>
+        <tr><td><button class="sp" onclick="ttsRead('Can we come in?')">🔊</button> Can <b>we</b> come in?</td><td class="sa-yes">Yes, you can.</td><td class="sa-no">No, you can't.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="imp-box" style="margin-top:12px">
+      <div class="imp-title">⚠️ لا نستخدم do / does في الأسئلة</div>
+      <div class="imp-row"><span class="imp-wrong">Do you can swim?</span><span>→</span><span class="imp-right">Can you swim?</span></div>
+      <div class="imp-row"><span class="imp-wrong">Does she can cook?</span><span>→</span><span class="imp-right">Can she cook?</span></div>
+    </div>
+
+    <p class="ex-section-title" style="margin-top:18px">WH Questions — أسئلة WH</p>
+    <div class="wh-grid">
+      <div class="wh-row">
+        <div class="wh-q"><b>What</b> can you do?</div>
+        <div class="wh-a">I can swim, cook and speak three languages. — أستطيع السباحة والطبخ وأتكلم ثلاث لغات.</div>
+      </div>
+      <div class="wh-row">
+        <div class="wh-q"><b>How far</b> can she swim?</div>
+        <div class="wh-a">She can swim two kilometres without stopping. — تستطيع السباحة كيلومترين بدون توقف.</div>
+      </div>
+      <div class="wh-row">
+        <div class="wh-q"><b>When</b> can you come?</div>
+        <div class="wh-a">I can come on Monday or Tuesday. — أقدر أجي يوم الاثنين أو الثلاثاء.</div>
+      </div>
+      <div class="wh-row">
+        <div class="wh-q"><b>Where</b> can we eat?</div>
+        <div class="wh-a">We can eat at that new restaurant downtown. — نقدر نأكل بالمطعم الجديد بوسط البلد.</div>
+      </div>
+      <div class="wh-row">
+        <div class="wh-q"><b>Who</b> can help me?</div>
+        <div class="wh-a">Tom can help you — he's very good at this. — توم يقدر يساعدك — هو شاطر بهالشي.</div>
+      </div>
+      <div class="wh-row">
+        <div class="wh-q"><b>How well</b> can he speak French?</div>
+        <div class="wh-a">He can speak it very well — he lived in Paris for three years. — يتكلمها ممتاز — سكن بباريس ثلاث سنوات.</div>
+      </div>
+    </div>
+  </div><!-- /sub-qst -->
+
+  <!-- ═══ COULD / COULDN'T ═══ -->
+  <div id="sub-cld" class="sub-panel">
+    <div class="tts-box">
+      <button class="tts-btn" onclick="ttsGrammar('cld')">🔊 استمع للشرح</button>
+      <button class="tts-btn tts-stop" onclick="ttsStop()">⏹ Stop</button>
+    </div>
+
+    <div class="card-note ar">could هي الماضي (past) لـ can — نستخدمها للكلام عن قدرات في الماضي · نفس القاعدة: لا تتغير مع الضمائر</div>
+
+    <div class="formula-box">
+      <div class="formula-row">
+        <span class="formula-subj">جميع الضمائر</span>
+        <span class="formula-be could">could</span>
+        <span class="formula-plus">+</span>
+        <span style="color:var(--text);font-weight:700">infinitive</span>
+        <span class="formula-note">إيجابي — Positive ✅</span>
+      </div>
+      <div class="formula-row">
+        <span class="formula-subj">جميع الضمائر</span>
+        <span class="formula-be couldnt">couldn't</span>
+        <span class="formula-plus">+</span>
+        <span style="color:var(--text);font-weight:700">infinitive</span>
+        <span class="formula-note">سلبي — Negative ❌</span>
+      </div>
+      <div class="formula-row">
+        <span class="formula-be could" style="min-width:60px">Could</span>
+        <span class="formula-plus">+</span>
+        <span class="formula-subj" style="min-width:110px">subject</span>
+        <span class="formula-plus">+</span>
+        <span style="color:var(--text);font-weight:700">infinitive + ?</span>
+        <span class="formula-note">سؤال — Question ❓</span>
+      </div>
+    </div>
+
+    <p class="ex-section-title">Positive — الإيجابي</p>
+    <div class="ex-list">
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('He could play the piano when he was three years old.')">🔊</button>
+        <div><div class="ex-en">He <b>could</b> play the piano when he was three years old.</div><div class="ex-ar">كان يستطيع العزف على البيانو وهو بعمر ثلاث سنوات.</div></div>
+      </div>
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('I could ride a bike when I was five.')">🔊</button>
+        <div><div class="ex-en">I <b>could</b> ride a bike when I was five.</div><div class="ex-ar">كنت أعرف أركب الدراجة وأنا بعمر خمس سنوات.</div></div>
+      </div>
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('She could speak French before she moved to London.')">🔊</button>
+        <div><div class="ex-en">She <b>could</b> speak French before she moved to London.</div><div class="ex-ar">كانت تتكلم الفرنسية قبل ما انتقلت للندن.</div></div>
+      </div>
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('We could hear the music from the next room.')">🔊</button>
+        <div><div class="ex-en">We <b>could</b> hear the music from the next room.</div><div class="ex-ar">كنا نسمع الموسيقى من الغرفة الجانبية.</div></div>
+      </div>
+    </div>
+
+    <p class="ex-section-title" style="margin-top:14px">Negative — السلبي</p>
+    <div class="ex-list">
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('They couldn\'t use the computer in 1985.')">🔊</button>
+        <div><div class="ex-en">They <b>couldn't</b> use the computer in 1985.</div><div class="ex-ar">ما كانوا يقدرون يستخدمون الكمبيوتر سنة 1985.</div></div>
+      </div>
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('He couldn\'t swim until he was twelve.')">🔊</button>
+        <div><div class="ex-en">He <b>couldn't</b> swim until he was twelve.</div><div class="ex-ar">ما كان يعرف يسبح لحتى بلغ اثني عشر سنة.</div></div>
+      </div>
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('I couldn\'t afford the car. It was too expensive.')">🔊</button>
+        <div><div class="ex-en">I <b>couldn't</b> afford the car. It was too expensive.</div><div class="ex-ar">ما قدرت أشتري السيارة. كانت غالية جداً.</div></div>
+      </div>
+    </div>
+
+    <p class="ex-section-title" style="margin-top:14px">Questions + Short Answers</p>
+    <table class="sa-table">
+      <thead>
+        <tr><th>Question</th><th class="sa-yes">Yes ✅</th><th class="sa-no">No ❌</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><button class="sp" onclick="ttsRead('Could you ski when you were five?')">🔊</button> Could you ski when you were five?</td><td class="sa-yes">Yes, I could.</td><td class="sa-no">No, I couldn't.</td></tr>
+        <tr><td><button class="sp" onclick="ttsRead('Could she speak English as a child?')">🔊</button> Could she speak English as a child?</td><td class="sa-yes">Yes, she could.</td><td class="sa-no">No, she couldn't.</td></tr>
+        <tr><td><button class="sp" onclick="ttsRead('Could they drive in 1990?')">🔊</button> Could they drive in 1990?</td><td class="sa-yes">Yes, they could.</td><td class="sa-no">No, they couldn't.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="mistake-item" style="margin-top:14px">
+      <div class="m-wrong">I could to swim when I was young.</div>
+      <div class="m-right">I could swim when I was young.</div>
+      <div class="m-why">could (مثل can) تتبعها المصدر بدون to — لا نقول: could to swim أبداً</div>
+    </div>
+
+  </div><!-- /sub-cld -->
+
+</div><!-- /card sub-tabs -->
+</div><!-- /max-width -->
+</div><!-- /tab-grammar -->
+
+<!-- ══════════════════════════════════════ EVERYDAY ENGLISH TAB -->
+<div id="tab-everyday" class="tab-panel">
+<div style="max-width:960px;margin:0 auto">
+
+  <div class="dlg-card">
+    <div class="dlg-header">
+      <div class="dlg-meta">
+        <div class="dlg-num">Dialogue 01</div>
+        <div class="dlg-title">☕ At the Café — في المقهى</div>
+        <div class="dlg-ctx">Sara is ordering lunch. She uses Can I…? and Could you…?</div>
+      </div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Sara</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Hi! <b>Can I have</b> a flat white and a cheese toastie, please?</div>
+          <div class="chat-ar">هلا! ممكن آخذ فلات وايت وتوست جبنة؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Hi! Can I have a flat white and a cheese toastie, please?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">James</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Of course! Anything else?</div>
+          <div class="chat-ar">بكل سرور! في شي ثاني؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Of course! Anything else?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Sara</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Actually yes — <b>could you bring</b> me a glass of water too?</div>
+          <div class="chat-ar">أه فعلاً — ممكن تجيبلي كباية مي كمان؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Actually yes — could you bring me a glass of water too?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">James</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Sure, no problem! <b>Can</b> you take a seat by the window?</div>
+          <div class="chat-ar">أكيد ما في مشكلة! ممكن تاخدي مقعد عند الشباك؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Sure, no problem! Can you take a seat by the window?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Sara</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Perfect. Oh — <b>can I pay</b> by card?</div>
+          <div class="chat-ar">ممتاز. أه — ممكن أدفع بالكارت؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Perfect. Oh — can I pay by card?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">James</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Yes, of course. The machine is at the counter.</div>
+          <div class="chat-ar">أي بكل سرور. الجهاز على الكاونتر.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Yes, of course. The machine is at the counter." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Sara</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Great, thank you!</div>
+          <div class="chat-ar">رائع، شكراً!</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Great, thank you!" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dlg-card">
+    <div class="dlg-header">
+      <div class="dlg-meta">
+        <div class="dlg-num">Dialogue 02</div>
+        <div class="dlg-title">💼 At the Office — في المكتب</div>
+        <div class="dlg-ctx">Tom asks Mia for help with a computer problem.</div>
+      </div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Tom</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Mia, <b>can you help</b> me for a minute?</div>
+          <div class="chat-ar">ميا، ممكن تساعديني دقيقة؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Mia, can you help me for a minute?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Mia</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Sure! What's wrong?</div>
+          <div class="chat-ar">أكيد! في شي غلط؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Sure! What's wrong?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Tom</div>
+        <div class="chat-bubble">
+          <div class="chat-en">I <b>can't open</b> this file. <b>Can you</b> show me how?</div>
+          <div class="chat-ar">ما أقدر أفتح هالملف. تقدري تشوفيلي كيف؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="I can't open this file. Can you show me how?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Mia</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Of course! Just right-click and choose "Open With".</div>
+          <div class="chat-ar">بكل سرور! بس كليك يمين واختار "فتح مع".</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Of course! Just right-click and choose Open With." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Tom</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Oh great! And <b>could you email</b> me that new software?</div>
+          <div class="chat-ar">رائع! وممكن ترسليلي ذاك البرنامج الجديد؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Oh great! And could you email me that new software?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Mia</div>
+        <div class="chat-bubble">
+          <div class="chat-en">I <b>can</b> send it right now. Done!</div>
+          <div class="chat-ar">بقدر أرسله هلق. خلص!</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="I can send it right now. Done!" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Tom</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Amazing! You <b>can</b> fix anything, Mia!</div>
+          <div class="chat-ar">رهيبة! إنتِ بتقدري تصلحي أي شي ميا!</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Amazing! You can fix anything, Mia!" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dlg-card">
+    <div class="dlg-header">
+      <div class="dlg-meta">
+        <div class="dlg-num">Dialogue 03</div>
+        <div class="dlg-title">🏨 At the Hotel — في الفندق</div>
+        <div class="dlg-ctx">Mr. Omar checks in and makes polite requests.</div>
+      </div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Mr. Omar</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Good evening. <b>Can I have</b> a room for two nights, please?</div>
+          <div class="chat-ar">مساء الخير. ممكن غرفة ليومين من فضلك؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Good evening. Can I have a room for two nights, please?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Receptionist</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Certainly. <b>Could I have</b> your name?</div>
+          <div class="chat-ar">بكل سرور. ممكن اسمك؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Certainly. Could I have your name?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Mr. Omar</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Omar Hassan. And <b>could I have</b> a quiet room?</div>
+          <div class="chat-ar">عمر حسان. وممكن غرفة هادية؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Omar Hassan. And could I have a quiet room?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Receptionist</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Of course, Mr. Hassan. <b>Could you fill</b> in this form, please?</div>
+          <div class="chat-ar">طبعاً يا سيد حسان. ممكن تملأ هالاستمارة من فضلك؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Of course, Mr. Hassan. Could you fill in this form, please?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Mr. Omar</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Yes, sure. And <b>can you call</b> me a taxi for tomorrow at eight?</div>
+          <div class="chat-ar">أي أكيد. وتقدري تطلبيلي تاكسي بكرة الساعة ثمانية؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Yes, sure. And can you call me a taxi for tomorrow at eight?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Receptionist</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Certainly. No problem at all. Enjoy your stay!</div>
+          <div class="chat-ar">بكل سرور. ما في أي مشكلة. إقامة ممتعة!</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Certainly. No problem at all. Enjoy your stay!" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dlg-card">
+    <div class="dlg-header">
+      <div class="dlg-meta">
+        <div class="dlg-num">Dialogue 04</div>
+        <div class="dlg-title">📞 On the Phone — على التلفون</div>
+        <div class="dlg-ctx">Emma calls the office to speak to Ms. Garcia.</div>
+      </div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Assistant</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Good morning, ABC Company. How <b>can</b> I help you?</div>
+          <div class="chat-ar">صباح الخير، شركة ABC. كيف بقدر أساعدك؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Good morning, ABC Company. How can I help you?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Emma</div>
+        <div class="chat-bubble">
+          <div class="chat-en"><b>Can I speak to</b> Ms. Garcia, please?</div>
+          <div class="chat-ar">ممكن أحكي مع الآنسة غارسيا من فضلك؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Can I speak to Ms. Garcia, please?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Assistant</div>
+        <div class="chat-bubble">
+          <div class="chat-en">I'm sorry, she <b>can't</b> come to the phone right now. <b>Can</b> she call you back?</div>
+          <div class="chat-ar">آسف، هي ما بتقدر ترد هلق. بتقدر تتصل فيك؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="I'm sorry, she can't come to the phone right now. Can she call you back?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Emma</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Yes please. <b>Could you take</b> a message?</div>
+          <div class="chat-ar">أي من فضلك. ممكن تاخذ رسالة؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Yes please. Could you take a message?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Assistant</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Of course! <b>Could you tell</b> me your name?</div>
+          <div class="chat-ar">بكل سرور! ممكن تقولي اسمك؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Of course! Could you tell me your name?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Emma</div>
+        <div class="chat-bubble">
+          <div class="chat-en">It's Emma Brown. She has my number.</div>
+          <div class="chat-ar">إيما براون. عندها رقمي.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="It's Emma Brown. She has my number." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Assistant</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Perfect. I'll ask her to call you. Thank you, Ms. Brown!</div>
+          <div class="chat-ar">ممتاز. رح أطلب منها تتصل فيك. شكراً يا آنسة براون!</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Perfect. I'll ask her to call you. Thank you, Ms. Brown!" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dlg-card">
+    <div class="dlg-header">
+      <div class="dlg-meta">
+        <div class="dlg-num">Dialogue 05</div>
+        <div class="dlg-title">👫 Talking About Abilities — عن المهارات</div>
+        <div class="dlg-ctx">Ana and Leo talk about what they can / can't do — and their childhood abilities.</div>
+      </div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Ana</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Leo, <b>can you</b> swim?</div>
+          <div class="chat-ar">ليو، بتقدر تسبح؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Leo, can you swim?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Leo</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Yes I <b>can</b>! I <b>can</b> also surf! What about you?</div>
+          <div class="chat-ar">أه بقدر! وبقدر كمان أركب الأمواج! وإنتِ؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Yes I can! I can also surf! What about you?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Ana</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Lucky you! I <b>can't</b> swim at all. I'm terrified of water!</div>
+          <div class="chat-ar">محظوظ! أنا ما بقدر أسبح خالص. خايفة من المي!</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Lucky you! I can't swim at all. I'm terrified of water!" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Leo</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Really? I <b>can</b> teach you! <b>Could</b> you come to the pool on Saturday?</div>
+          <div class="chat-ar">جد؟ بقدر أعلمك! بتقدري تيجي عالمسبح يوم السبت؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Really? I can teach you! Could you come to the pool on Saturday?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Ana</div>
+        <div class="chat-bubble">
+          <div class="chat-en">That's so kind! <b>Can</b> you cook too?</div>
+          <div class="chat-ar">هاد كتير كريم منك! وبتطبخ كمان؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="That's so kind! Can you cook too?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Leo</div>
+        <div class="chat-bubble">
+          <div class="chat-en">I <b>can</b> make pasta but I <b>can't</b> bake at all. As a kid I <b>couldn't</b> even boil an egg!</div>
+          <div class="chat-ar">بقدر أعمل باستا بس ما بقدر أخبز خالص. لما كنت صغير ما كنت أقدر حتى أسلق بيضة!</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="I can make pasta but I can't bake at all. As a kid I couldn't even boil an egg!" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Ana</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Ha! Me neither! But I <b>could</b> paint really well when I was young.</div>
+          <div class="chat-ar">ها! أنا كمان! بس كنت أرسم كتير منيح لما كنت صغيرة.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Ha! Me neither! But I could paint really well when I was young." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Leo</div>
+        <div class="chat-bubble">
+          <div class="chat-en"><b>Could you</b> show me your paintings sometime?</div>
+          <div class="chat-ar">ممكن تعرفيني على رسوماتك يوم من الأيام؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Could you show me your paintings sometime?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Ana</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Of course I <b>could</b>! Come over anytime!</div>
+          <div class="chat-ar">أكيد! تعال أي وقت تحب!</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Of course I could! Come over anytime!" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /max-width -->
+</div><!-- /tab-everyday -->
+
+<!-- ══════════════════════════════════════════════ READING TAB -->
+<div id="tab-reading" class="tab-panel">
+
+  <div class="read-tts-bar">
+    <span class="read-label">📚 A Life of Music — حياة موسيقية</span>
+    <button class="tts-btn" onclick="ttsPassage()">🔊 Listen to the text</button>
+    <button class="tts-btn tts-stop" onclick="ttsStop()">⏹ Stop</button>
+  </div>
+
+  <!-- Context card -->
+  <div class="read-ctx">
+    <div class="read-ctx-fact"><span class="read-ctx-label">👤 Main character</span><span class="read-ctx-val">Maya Turner, 22</span></div>
+    <div class="read-ctx-sep"></div>
+    <div class="read-ctx-fact"><span class="read-ctx-label">📍 Location</span><span class="read-ctx-val">London, UK</span></div>
+    <div class="read-ctx-sep"></div>
+    <div class="read-ctx-fact"><span class="read-ctx-label">🎵 Topic</span><span class="read-ctx-val">Abilities — past & present</span></div>
+    <div class="read-ctx-sep"></div>
+    <div class="read-ctx-fact"><span class="read-ctx-label">📖 Grammar focus</span><span class="read-ctx-val">can / can't / could / couldn't</span></div>
+  </div>
+
+  <!-- SVG abilities timeline -->
+  <svg viewBox="0 0 640 68" xmlns="http://www.w3.org/2000/svg" font-family="Poppins,sans-serif" style="width:100%;display:block;margin-bottom:18px;max-width:640px">
+    <line x1="40" y1="34" x2="610" y2="34" stroke="#2d4560" stroke-width="2"/>
+    <circle cx="100" cy="34" r="7" fill="#1a3a6e" stroke="#ef4444" stroke-width="2"/>
+    <text x="100" y="22" text-anchor="middle" fill="#ef4444" font-size="10" font-weight="700">Age 5</text>
+    <text x="100" y="56" text-anchor="middle" fill="#8899b0" font-size="8">couldn't swim</text>
+    <circle cx="250" cy="34" r="9" fill="#f4a624" stroke="#f4a624" stroke-width="2"/>
+    <text x="250" y="21" text-anchor="middle" fill="#f4a624" font-size="11" font-weight="900">Age 8</text>
+    <text x="250" y="56" text-anchor="middle" fill="#e8edf5" font-size="8" font-weight="700">could play piano</text>
+    <circle cx="400" cy="34" r="7" fill="#1a3a6e" stroke="#a855f7" stroke-width="2"/>
+    <text x="400" y="22" text-anchor="middle" fill="#a855f7" font-size="10" font-weight="700">Age 12</text>
+    <text x="400" y="56" text-anchor="middle" fill="#8899b0" font-size="8">could swim</text>
+    <circle cx="545" cy="34" r="9" fill="#22c55e" stroke="#22c55e" stroke-width="2"/>
+    <text x="545" y="21" text-anchor="middle" fill="#22c55e" font-size="11" font-weight="900">Age 22</text>
+    <text x="545" y="56" text-anchor="middle" fill="#e8edf5" font-size="8" font-weight="700">can speak Italian</text>
+  </svg>
+
+  <!-- Reading passage -->
+  <div class="read-pass">
+    <p>Maya Turner is 22 years old and she lives in London. She <b>can</b> do many things. She <b>can</b> play the piano — she practises for three hours every day. She <b>can</b> also speak Italian, because she lived in Rome for a year. But she <b>can't</b> drive — she failed her test twice! And she <b>can't</b> cook at all. She always burns everything!</p>
+    <p>When Maya was eight years old, she <b>could</b> already play simple pieces on the piano. Her teacher was amazed. But she <b>couldn't</b> read music at that age — she learned everything by ear.</p>
+    <p>Maya's best friend is Carlos. He <b>can</b> swim very fast — he's on the university team. He <b>can</b> also cook amazing Spanish food. But he <b>can't</b> speak French and he <b>can't</b> play any musical instruments.</p>
+    <p>When Carlos was a child, he <b>couldn't</b> swim. He was scared of water. His father taught him when he was twelve. Now he <b>can</b> swim a kilometre without stopping.</p>
+    <p><em>"<b>Can</b> you teach me the piano?"</em> Carlos asked Maya one day. <em>"Of course I <b>can</b>!"</em> Maya said. <em>"<b>Could</b> you come on Saturday?"</em> <em>"Yes, I <b>could</b>! I <b>can't</b> wait!"</em></p>
+  </div>
+
+  <!-- Vocabulary -->
+  <div class="read-vocab-wrap">
+    <div class="read-vocab-title">📖 Key Vocabulary — مفردات مهمة</div>
+    <div class="read-vocab-grid">
+      <div class="read-vocab-item"><div class="read-vocab-en">practise</div><div class="read-vocab-ar">يتدرب / يتمرن</div></div>
+      <div class="read-vocab-item"><div class="read-vocab-en">amazed</div><div class="read-vocab-ar">مندهش / متفاجئ</div></div>
+      <div class="read-vocab-item"><div class="read-vocab-en">by ear</div><div class="read-vocab-ar">بالأذن (بدون قراءة)</div></div>
+      <div class="read-vocab-item"><div class="read-vocab-en">instrument</div><div class="read-vocab-ar">آلة موسيقية</div></div>
+      <div class="read-vocab-item"><div class="read-vocab-en">scared</div><div class="read-vocab-ar">خائف / يخشى</div></div>
+      <div class="read-vocab-item"><div class="read-vocab-en">kilometre</div><div class="read-vocab-ar">كيلومتر</div></div>
+    </div>
+  </div>
+
+  <div class="comp-section-title">📝 Comprehension Questions</div>
+
+  <div class="read-q">
+    <div class="read-q-text">1. What can Maya do?</div>
+    <div class="read-opts">
+      <button class="read-opt" onclick="pickComp(this)">A. She can drive and cook very well.</button>
+      <button class="read-opt" data-correct="1" onclick="pickComp(this)">B. She can play the piano and speak Italian.</button>
+      <button class="read-opt" onclick="pickComp(this)">C. She can swim and paint.</button>
+    </div>
+  </div>
+
+  <div class="read-q">
+    <div class="read-q-text">2. What can't Maya do?</div>
+    <div class="read-opts">
+      <button class="read-opt" data-correct="1" onclick="pickComp(this)">A. She can't drive — she failed her test twice.</button>
+      <button class="read-opt" onclick="pickComp(this)">B. She can't play the piano.</button>
+      <button class="read-opt" onclick="pickComp(this)">C. She can't speak any foreign languages.</button>
+    </div>
+  </div>
+
+  <div class="read-q">
+    <div class="read-q-text">3. When could Maya already play the piano?</div>
+    <div class="read-opts">
+      <button class="read-opt" onclick="pickComp(this)">A. When she was five years old.</button>
+      <button class="read-opt" data-correct="1" onclick="pickComp(this)">B. When she was eight years old.</button>
+      <button class="read-opt" onclick="pickComp(this)">C. When she was twelve years old.</button>
+    </div>
+  </div>
+
+  <div class="read-q">
+    <div class="read-q-text">4. Why couldn't Maya read music as a child?</div>
+    <div class="read-opts">
+      <button class="read-opt" data-correct="1" onclick="pickComp(this)">A. She learned everything by ear, not from written music.</button>
+      <button class="read-opt" onclick="pickComp(this)">B. She didn't have a piano at home.</button>
+      <button class="read-opt" onclick="pickComp(this)">C. Her teacher didn't teach her.</button>
+    </div>
+  </div>
+
+  <div class="read-q">
+    <div class="read-q-text">5. What can Carlos do now?</div>
+    <div class="read-opts">
+      <button class="read-opt" onclick="pickComp(this)">A. He can play the piano.</button>
+      <button class="read-opt" data-correct="1" onclick="pickComp(this)">B. He can swim a kilometre without stopping.</button>
+      <button class="read-opt" onclick="pickComp(this)">C. He can speak French and Italian.</button>
+    </div>
+  </div>
+
+  <div class="read-q">
+    <div class="read-q-text">6. What couldn't Carlos do as a child?</div>
+    <div class="read-opts">
+      <button class="read-opt" data-correct="1" onclick="pickComp(this)">A. He couldn't swim — he was scared of water.</button>
+      <button class="read-opt" onclick="pickComp(this)">B. He couldn't cook Spanish food.</button>
+      <button class="read-opt" onclick="pickComp(this)">C. He couldn't speak English.</button>
+    </div>
+  </div>
+
+</div><!-- /tab-reading -->
+
+
+<!-- ══════════════════════════════════════════════ CHECK IT TAB -->
+<div id="tab-checkit" class="tab-panel" style="padding:0">
+
+  <div class="ci-hero">
+    <div class="ci-hero-icon">✏️</div>
+    <h2 class="ci-hero-title">اختبر نفسك — Check It!</h2>
+    <p class="ci-hero-sub">25 سؤال متنوع — can / can't · could / couldn't · الأسئلة · الطلب المؤدب</p>
+    <div class="ci-hero-types">
+      <span style="background:rgba(244,166,36,.15);border:1px solid rgba(244,166,36,.35);color:var(--accent);font-size:11px;font-weight:800;padding:5px 14px;border-radius:20px">🔘 20 اختيار من متعدد</span>
+      <span style="background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.3);color:var(--blue);font-size:11px;font-weight:800;padding:5px 14px;border-radius:20px">✍️ 5 أملأ الفراغ</span>
+    </div>
+  </div>
+
+  <div class="ci-progress-wrap">
+    <div class="ci-progress-inner">
+      <div class="ci-progress-bar"><div class="ci-progress-fill" id="ciProgressFill"></div></div>
+      <div class="ci-progress-txt"><span id="ciProgressTxt">0 / 25 answered</span><span id="ciScoreLive">Score: 0</span></div>
+    </div>
+  </div>
+
+  <div class="ci-wrap">
+
+    <!-- Q1 MCQ -->
+    <div class="ci-q" id="ciq1">
+      <div class="ci-q-head"><span class="ci-q-num">1</span><span class="ci-q-tag">can — Positive</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,1)"><span class="ci-lbl">A</span>She can speak Arabic.</button>
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,1)"><span class="ci-lbl">B</span>She can speaks Arabic.</button>
+      </div>
+      <div class="ci-sol" id="sol1"><div class="ci-sol-head"></div><div class="ci-sol-body">
+        <div class="ci-sol-ans">✅ She <b>can</b> speak Arabic.</div>
+        <div class="ci-sol-exp">can + مصدر بدون s — لا نضع s على الفعل بعد can أبداً (ولا حتى مع he/she)</div>
+      </div></div>
+    </div>
+
+    <!-- Q2 MCQ -->
+    <div class="ci-q" id="ciq2">
+      <div class="ci-q-head"><span class="ci-q-num">2</span><span class="ci-q-tag">can + infinitive</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,2)"><span class="ci-lbl">A</span>I can to swim very fast.</button>
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,2)"><span class="ci-lbl">B</span>I can swim very fast.</button>
+      </div>
+      <div class="ci-sol" id="sol2"><div class="ci-sol-head"></div><div class="ci-sol-body">
+        <div class="ci-sol-ans">✅ I <b>can swim</b> very fast.</div>
+        <div class="ci-sol-exp">can + مصدر مجرد (بدون to) — لا نكتب can to swim أبداً</div>
+      </div></div>
+    </div>
+
+    <!-- Q3 FIB -->
+    <div class="ci-q ci-fib-q" id="ciq3">
+      <div class="ci-q-head"><span class="ci-q-num">3</span><span class="ci-q-tag">can't — Negative</span><span class="ci-type-badge ci-type-fib">أملأ الفراغ</span></div>
+      <div class="ci-fib-sent">He _______ drive. He doesn't have a licence.</div>
+      <div class="ci-fib-row">
+        <input class="ci-fib-input" id="fib3" placeholder="اكتب الجواب..." autocomplete="off" spellcheck="false">
+        <button class="ci-fib-check" onclick="ciFibCheck(3,[&quot;can't&quot;,'cannot'])">تحقق ✓</button>
+      </div>
+      <div class="ci-hint">💡 تلميح: المنفي من can هو can't أو cannot</div>
+      <div class="ci-sol" id="sol3"><div class="ci-sol-head"></div><div class="ci-sol-body">
+        <div class="ci-sol-ans">✅ He <b>can't</b> / <b>cannot</b> drive.</div>
+        <div class="ci-sol-exp">المنفي = can't أو cannot · نفس الشكل لجميع الضمائر</div>
+      </div></div>
+    </div>
+
+    <!-- Q4 MCQ -->
+    <div class="ci-q" id="ciq4">
+      <div class="ci-q-head"><span class="ci-q-num">4</span><span class="ci-q-tag">Question form</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,4)"><span class="ci-lbl">A</span>Can you speak French?</button>
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,4)"><span class="ci-lbl">B</span>Do you can speak French?</button>
+      </div>
+      <div class="ci-sol" id="sol4"><div class="ci-sol-head"></div><div class="ci-sol-body">
+        <div class="ci-sol-ans">✅ <b>Can</b> you speak French?</div>
+        <div class="ci-sol-exp">السؤال = Can + فاعل + مصدر؟ — لا نستخدم do/does مع can أبداً</div>
+      </div></div>
+    </div>
+
+    <!-- Q5 MCQ -->
+    <div class="ci-q" id="ciq5">
+      <div class="ci-q-head"><span class="ci-q-num">5</span><span class="ci-q-tag">Short Answer</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-q-prompt">— Can she cook Italian food?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,5)"><span class="ci-lbl">A</span>Yes, she can.</button>
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,5)"><span class="ci-lbl">B</span>Yes, she cans.</button>
+      </div>
+      <div class="ci-sol" id="sol5"><div class="ci-sol-head"></div><div class="ci-sol-body">
+        <div class="ci-sol-ans">✅ Yes, she <b>can</b>.</div>
+        <div class="ci-sol-exp">الجواب المختصر = Yes/No + ضمير + can/can't — لا تُضاف s على can في أي حال</div>
+      </div></div>
+    </div>
+
+    <!-- Q6 MCQ -->
+    <div class="ci-q" id="ciq6">
+      <div class="ci-q-head"><span class="ci-q-num">6</span><span class="ci-q-tag">Common Mistake</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,6)"><span class="ci-lbl">A</span>I don't can understand you.</button>
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,6)"><span class="ci-lbl">B</span>I can't understand you.</button>
+      </div>
+      <div class="ci-sol" id="sol6"><div class="ci-sol-head"></div><div class="ci-sol-body">
+        <div class="ci-sol-ans">✅ I <b>can't</b> understand you.</div>
+        <div class="ci-sol-exp">لا نستخدم don't/doesn't مع can — المنفي دائماً can't أو cannot</div>
+      </div></div>
+    </div>
+
+    <div class="ci-brk" id="cibrk1">
+      <div class="ci-brk-emoji">💡</div>
+      <div class="ci-brk-title">can / can't — مرجع سريع</div>
+      <div class="ci-brk-cols">
+        <div class="ci-brk-col">
+          <div class="ci-brk-col-title">can — الإيجاب</div>
+          <div class="ci-brk-text">I <b>can</b> swim.<br>He <b>can</b> cook. (no S!)<br>She <b>can</b> drive.<br>They <b>can</b> speak French.<br><br>✓ can + bare infinitive<br>✗ can to swim / can swims</div>
+        </div>
+        <div class="ci-brk-col">
+          <div class="ci-brk-col-title">can't — النفي والسؤال</div>
+          <div class="ci-brk-text">I <b>can't</b> / cannot swim.<br>He <b>can't</b> drive.<br><br><b>Can</b> you swim? → Yes, I can.<br><b>Can</b> she cook? → No, she can't.<br><br>✗ don't can / does he can?</div>
+        </div>
+      </div>
+      <div class="ci-brk-ar">19 سؤال متبقية — ممتاز! الجزء التالي عن could / couldn't في الماضي</div>
+    </div>
+
+    <!-- Q7 MCQ -->
+    <div class="ci-q" id="ciq7">
+      <div class="ci-q-head"><span class="ci-q-num">7</span><span class="ci-q-tag">could — Positive</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,7)"><span class="ci-lbl">A</span>When I was young, I could ride a horse.</button>
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,7)"><span class="ci-lbl">B</span>When I was young, I could rode a horse.</button>
+      </div>
+      <div class="ci-sol" id="sol7"><div class="ci-sol-head"></div><div class="ci-sol-body">
+        <div class="ci-sol-ans">✅ I <b>could ride</b> a horse.</div>
+        <div class="ci-sol-exp">could + مصدر مجرد — لا نستخدم could مع التصريف الثاني (rode/swam/played)</div>
+      </div></div>
+    </div>
+
+    <!-- Q8 FIB -->
+    <div class="ci-q ci-fib-q" id="ciq8">
+      <div class="ci-q-head"><span class="ci-q-num">8</span><span class="ci-q-tag">couldn't — Negative</span><span class="ci-type-badge ci-type-fib">أملأ الفراغ</span></div>
+      <div class="ci-fib-sent">She _______ speak English when she was five. She only spoke Spanish.</div>
+      <div class="ci-fib-row">
+        <input class="ci-fib-input" id="fib8" placeholder="اكتب الجواب..." autocomplete="off" spellcheck="false">
+        <button class="ci-fib-check" onclick="ciFibCheck(8,[&quot;couldn't&quot;,'could not'])">تحقق ✓</button>
+      </div>
+      <div class="ci-hint">💡 تلميح: منفي could في الماضي</div>
+      <div class="ci-sol" id="sol8"><div class="ci-sol-head"></div><div class="ci-sol-body">
+        <div class="ci-sol-ans">✅ She <b>couldn't</b> / <b>could not</b> speak English.</div>
+        <div class="ci-sol-exp">couldn't = could not = عدم القدرة في الماضي</div>
+      </div></div>
+    </div>
+
+    <!-- Q9 MCQ -->
+    <div class="ci-q" id="ciq9">
+      <div class="ci-q-head"><span class="ci-q-num">9</span><span class="ci-q-tag">can vs could</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,9)"><span class="ci-lbl">A</span>Last year she couldn't swim. Now she can.</button>
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,9)"><span class="ci-lbl">B</span>Last year she can't swim. Now she could.</button>
+      </div>
+      <div class="ci-sol" id="sol9"><div class="ci-sol-head"></div><div class="ci-sol-body">
+        <div class="ci-sol-ans">✅ Last year she <b>couldn't</b> swim. Now she <b>can</b>.</div>
+        <div class="ci-sol-exp">الماضي = could/couldn't · الحاضر = can/can't — لا نخلط بينهما</div>
+      </div></div>
+    </div>
+
+    <!-- Q10 MCQ -->
+    <div class="ci-q" id="ciq10">
+      <div class="ci-q-head"><span class="ci-q-num">10</span><span class="ci-q-tag">could — Question</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,10)"><span class="ci-lbl">A</span>Could he ski as a child?</button>
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,10)"><span class="ci-lbl">B</span>Did he could ski as a child?</button>
+      </div>
+      <div class="ci-sol" id="sol10"><div class="ci-sol-head"></div><div class="ci-sol-body">
+        <div class="ci-sol-ans">✅ <b>Could</b> he ski as a child?</div>
+        <div class="ci-sol-exp">السؤال = Could + فاعل + مصدر؟ — لا نستخدم did مع could</div>
+      </div></div>
+    </div>
+
+    <!-- Q11 MCQ -->
+    <div class="ci-q" id="ciq11">
+      <div class="ci-q-head"><span class="ci-q-num">11</span><span class="ci-q-tag">couldn't + infinitive</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,11)"><span class="ci-lbl">A</span>They couldn't find a taxi.</button>
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,11)"><span class="ci-lbl">B</span>They couldn't to find a taxi.</button>
+      </div>
+      <div class="ci-sol" id="sol11"><div class="ci-sol-head"></div><div class="ci-sol-body">
+        <div class="ci-sol-ans">✅ They <b>couldn't find</b> a taxi.</div>
+        <div class="ci-sol-exp">couldn't + مصدر مجرد — لا نكتب couldn't to find</div>
+      </div></div>
+    </div>
+
+    <!-- Q12 MCQ -->
+    <div class="ci-q" id="ciq12">
+      <div class="ci-q-head"><span class="ci-q-num">12</span><span class="ci-q-tag">Short Answer — could</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-q-prompt">— Could she read at the age of three?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,12)"><span class="ci-lbl">A</span>Yes, she could.</button>
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,12)"><span class="ci-lbl">B</span>Yes, she can.</button>
+      </div>
+      <div class="ci-sol" id="sol12"><div class="ci-sol-head"></div><div class="ci-sol-body">
+        <div class="ci-sol-ans">✅ Yes, she <b>could</b>.</div>
+        <div class="ci-sol-exp">السؤال بـ Could → الجواب بـ could (نفس الفعل) — لا نرد بـ can</div>
+      </div></div>
+    </div>
+
+    <div class="ci-brk" id="cibrk2">
+      <div class="ci-brk-emoji">⏳</div>
+      <div class="ci-brk-title">could / couldn't — الماضي</div>
+      <div class="ci-brk-cols">
+        <div class="ci-brk-col">
+          <div class="ci-brk-col-title">could — القدرة في الماضي</div>
+          <div class="ci-brk-text">I <b>could</b> swim at age 5.<br>She <b>could</b> play piano early.<br>He <b>couldn't</b> drive at 14.<br>They <b>couldn't</b> use phones.<br><br>✓ could + bare infinitive<br>✗ could swam / could to swim</div>
+        </div>
+        <div class="ci-brk-col">
+          <div class="ci-brk-col-title">الفرق: can / could</div>
+          <div class="ci-brk-text"><b>can</b> = الحاضر والمستقبل<br>I <b>can</b> swim now.<br><b>Can</b> you help me?<br><br><b>could</b> = الماضي / الأدب<br>I <b>could</b> swim at age 8.<br><b>Could</b> you help me, please?</div>
+        </div>
+      </div>
+      <div class="ci-brk-ar">13 سؤال متبقية — أنت في منتصف الطريق! الجزء التالي عن الطلب المؤدب والأسئلة</div>
+    </div>
+
+    <!-- Q13 MCQ -->
+    <div class="ci-q" id="ciq13">
+      <div class="ci-q-head"><span class="ci-q-num">13</span><span class="ci-q-tag">Polite Request</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,13)"><span class="ci-lbl">A</span>Could you help me with this, please?</button>
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,13)"><span class="ci-lbl">B</span>You could help me with this, please?</button>
+      </div>
+      <div class="ci-sol" id="sol13"><div class="ci-sol-head"></div><div class="ci-sol-body">
+        <div class="ci-sol-ans">✅ <b>Could you</b> help me with this, please?</div>
+        <div class="ci-sol-exp">الطلب المؤدب = Could/Can + you + مصدر؟ — الفاعل يأتي بعد could</div>
+      </div></div>
+    </div>
+
+    <!-- Q14 MCQ -->
+    <div class="ci-q" id="ciq14">
+      <div class="ci-q-head"><span class="ci-q-num">14</span><span class="ci-q-tag">Can I + infinitive</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,14)"><span class="ci-lbl">A</span>Can I use your phone?</button>
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,14)"><span class="ci-lbl">B</span>Can I to use your phone?</button>
+      </div>
+      <div class="ci-sol" id="sol14"><div class="ci-sol-head"></div><div class="ci-sol-body">
+        <div class="ci-sol-ans">✅ <b>Can I use</b> your phone?</div>
+        <div class="ci-sol-exp">Can I + مصدر مجرد — لا نكتب Can I to use</div>
+      </div></div>
+    </div>
+
+    <!-- Q15 MCQ -->
+    <div class="ci-q" id="ciq15">
+      <div class="ci-q-head"><span class="ci-q-num">15</span><span class="ci-q-tag">Could I — Polite</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,15)"><span class="ci-lbl">A</span>Could I have the menu, please?</button>
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,15)"><span class="ci-lbl">B</span>Could I had the menu, please?</button>
+      </div>
+      <div class="ci-sol" id="sol15"><div class="ci-sol-head"></div><div class="ci-sol-body">
+        <div class="ci-sol-ans">✅ <b>Could I have</b> the menu, please?</div>
+        <div class="ci-sol-exp">could + مصدر مجرد (have) — لا نستخدم had بعد could</div>
+      </div></div>
+    </div>
+
+    <!-- Q16 MCQ -->
+    <div class="ci-q" id="ciq16">
+      <div class="ci-q-head"><span class="ci-q-num">16</span><span class="ci-q-tag">WH Question</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,16)"><span class="ci-lbl">A</span>What can you do?</button>
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,16)"><span class="ci-lbl">B</span>What you can do?</button>
+      </div>
+      <div class="ci-sol" id="sol16"><div class="ci-sol-head"></div><div class="ci-sol-body">
+        <div class="ci-sol-ans">✅ What <b>can</b> you do?</div>
+        <div class="ci-sol-exp">ترتيب WH: What/Where/How + can + فاعل + مصدر؟ — can يأتي قبل الفاعل</div>
+      </div></div>
+    </div>
+
+    <!-- Q17 FIB -->
+    <div class="ci-q ci-fib-q" id="ciq17">
+      <div class="ci-q-head"><span class="ci-q-num">17</span><span class="ci-q-tag">Polite Request</span><span class="ci-type-badge ci-type-fib">أملأ الفراغ</span></div>
+      <div class="ci-fib-sent">"_______ I open the window? It's very hot in here." — "Of course, go ahead!"</div>
+      <div class="ci-fib-row">
+        <input class="ci-fib-input" id="fib17" placeholder="اكتب الجواب..." autocomplete="off" spellcheck="false">
+        <button class="ci-fib-check" onclick="ciFibCheck(17,['can','could','Can','Could'])">تحقق ✓</button>
+      </div>
+      <div class="ci-hint">💡 تلميح: Can أو Could — كلاهما صحيح للطلب المؤدب</div>
+      <div class="ci-sol" id="sol17"><div class="ci-sol-head"></div><div class="ci-sol-body">
+        <div class="ci-sol-ans">✅ <b>Can</b> I / <b>Could</b> I open the window?</div>
+        <div class="ci-sol-exp">Can I = عادي · Could I = أكثر أدباً — كلاهما صحيح للطلب</div>
+      </div></div>
+    </div>
+
+    <div class="ci-brk" id="cibrk3">
+      <div class="ci-brk-emoji">❓</div>
+      <div class="ci-brk-title">الأسئلة والأجوبة المختصرة</div>
+      <div class="ci-brk-cols">
+        <div class="ci-brk-col">
+          <div class="ci-brk-col-title">الأسئلة</div>
+          <div class="ci-brk-text"><b>Can</b> you swim? → Yes, I <b>can</b>.<br><b>Can</b> she drive? → No, she <b>can't</b>.<br><b>Could</b> he cook? → Yes, he <b>could</b>.<br><b>Could</b> they read? → No, they <b>couldn't</b>.<br><br>WH: What <b>can</b> you do?<br>How fast <b>can</b> you run?</div>
+        </div>
+        <div class="ci-brk-col">
+          <div class="ci-brk-col-title">الطلب المؤدب</div>
+          <div class="ci-brk-text"><b>Can</b> I use your phone?<br><b>Could</b> I sit here, please?<br><b>Can</b> you help me?<br><b>Could</b> you repeat that?<br><br>Could I = أكثر أدباً<br>Can I = أكثر شيوعاً</div>
+        </div>
+      </div>
+      <div class="ci-brk-ar">8 أسئلة متبقية — أنت قريب جداً! ركّز وأنهِ بقوة</div>
+    </div>
+
+    <!-- Q18 MCQ -->
+    <div class="ci-q" id="ciq18">
+      <div class="ci-q-head"><span class="ci-q-num">18</span><span class="ci-q-tag">can't + verb form</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,18)"><span class="ci-lbl">A</span>He can't play chess — he never learned.</button>
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,18)"><span class="ci-lbl">B</span>He can't plays chess — he never learned.</button>
+      </div>
+      <div class="ci-sol" id="sol18"><div class="ci-sol-head"></div><div class="ci-sol-body">
+        <div class="ci-sol-ans">✅ He <b>can't play</b> chess.</div>
+        <div class="ci-sol-exp">can't + مصدر مجرد — لا نضع s على الفعل بعد can't</div>
+      </div></div>
+    </div>
+
+    <!-- Q19 FIB -->
+    <div class="ci-q ci-fib-q" id="ciq19">
+      <div class="ci-q-head"><span class="ci-q-num">19</span><span class="ci-q-tag">Short Answer — Negative</span><span class="ci-type-badge ci-type-fib">أملأ الفراغ</span></div>
+      <div class="ci-q-prompt">— Can you speak Japanese?</div>
+      <div class="ci-fib-sent">No, I _______.</div>
+      <div class="ci-fib-row">
+        <input class="ci-fib-input" id="fib19" placeholder="اكتب الجواب..." autocomplete="off" spellcheck="false">
+        <button class="ci-fib-check" onclick="ciFibCheck(19,[&quot;can't&quot;,'cannot'])">تحقق ✓</button>
+      </div>
+      <div class="ci-hint">💡 تلميح: الجواب المختصر المنفي لـ can</div>
+      <div class="ci-sol" id="sol19"><div class="ci-sol-head"></div><div class="ci-sol-body">
+        <div class="ci-sol-ans">✅ No, I <b>can't</b>.</div>
+        <div class="ci-sol-exp">الجواب المختصر المنفي = No + ضمير + can't · (can't = cannot)</div>
+      </div></div>
+    </div>
+
+    <!-- Q20 MCQ -->
+    <div class="ci-q" id="ciq20">
+      <div class="ci-q-head"><span class="ci-q-num">20</span><span class="ci-q-tag">couldn't — Past context</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-q-prompt">In 1990, people _______ use smartphones. They didn't exist yet.</div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,20)"><span class="ci-lbl">A</span>couldn't</button>
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,20)"><span class="ci-lbl">B</span>can't</button>
+      </div>
+      <div class="ci-sol" id="sol20"><div class="ci-sol-head"></div><div class="ci-sol-body">
+        <div class="ci-sol-ans">✅ People <b>couldn't</b> use smartphones in 1990.</div>
+        <div class="ci-sol-exp">in 1990 = ماضٍ → couldn't · can't = للحاضر فقط</div>
+      </div></div>
+    </div>
+
+    <!-- Q21 MCQ -->
+    <div class="ci-q" id="ciq21">
+      <div class="ci-q-head"><span class="ci-q-num">21</span><span class="ci-q-tag">can't — Common Mistake</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,21)"><span class="ci-lbl">A</span>She can't come to the party tonight.</button>
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,21)"><span class="ci-lbl">B</span>She doesn't can come to the party tonight.</button>
+      </div>
+      <div class="ci-sol" id="sol21"><div class="ci-sol-head"></div><div class="ci-sol-body">
+        <div class="ci-sol-ans">✅ She <b>can't</b> come to the party tonight.</div>
+        <div class="ci-sol-exp">المنفي = can't — لا نستخدم doesn't/don't مع can أبداً</div>
+      </div></div>
+    </div>
+
+    <!-- Q22 FIB -->
+    <div class="ci-q ci-fib-q" id="ciq22">
+      <div class="ci-q-head"><span class="ci-q-num">22</span><span class="ci-q-tag">could — Past Ability</span><span class="ci-type-badge ci-type-fib">أملأ الفراغ</span></div>
+      <div class="ci-fib-sent">Mozart _______ compose music when he was only four years old.</div>
+      <div class="ci-fib-row">
+        <input class="ci-fib-input" id="fib22" placeholder="اكتب الجواب..." autocomplete="off" spellcheck="false">
+        <button class="ci-fib-check" onclick="ciFibCheck(22,['could'])">تحقق ✓</button>
+      </div>
+      <div class="ci-hint">💡 تلميح: موزارت كان يستطيع — القدرة في الماضي</div>
+      <div class="ci-sol" id="sol22"><div class="ci-sol-head"></div><div class="ci-sol-body">
+        <div class="ci-sol-ans">✅ Mozart <b>could</b> compose music at age four.</div>
+        <div class="ci-sol-exp">when he was four = ماضٍ → could (قدرة ماضية مذهلة)</div>
+      </div></div>
+    </div>
+
+    <!-- Q23 MCQ -->
+    <div class="ci-q" id="ciq23">
+      <div class="ci-q-head"><span class="ci-q-num">23</span><span class="ci-q-tag">can + verb form</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,23)"><span class="ci-lbl">A</span>I can hear music from the neighbours.</button>
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,23)"><span class="ci-lbl">B</span>I can heard music from the neighbours.</button>
+      </div>
+      <div class="ci-sol" id="sol23"><div class="ci-sol-head"></div><div class="ci-sol-body">
+        <div class="ci-sol-ans">✅ I <b>can hear</b> music from the neighbours.</div>
+        <div class="ci-sol-exp">can + مصدر مجرد (hear) — لا نستخدم التصريف الثالث (heard) بعد can</div>
+      </div></div>
+    </div>
+
+    <!-- Q24 MCQ -->
+    <div class="ci-q" id="ciq24">
+      <div class="ci-q-head"><span class="ci-q-num">24</span><span class="ci-q-tag">Present vs Past</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-q-prompt">— Can you run 5 km? — Yes, I _______ easily! I run every day.</div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,24)"><span class="ci-lbl">A</span>can</button>
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,24)"><span class="ci-lbl">B</span>could</button>
+      </div>
+      <div class="ci-sol" id="sol24"><div class="ci-sol-head"></div><div class="ci-sol-body">
+        <div class="ci-sol-ans">✅ Yes, I <b>can</b> easily!</div>
+        <div class="ci-sol-exp">السؤال بـ Can → الجواب بـ can (حاضر) · could = للماضي أو الأدب</div>
+      </div></div>
+    </div>
+
+    <!-- Q25 MCQ -->
+    <div class="ci-q" id="ciq25">
+      <div class="ci-q-head"><span class="ci-q-num">25</span><span class="ci-q-tag">couldn't — Past Context</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,25)"><span class="ci-lbl">A</span>She couldn't sleep last night — the baby was crying.</button>
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,25)"><span class="ci-lbl">B</span>She can't sleep last night — the baby was crying.</button>
+      </div>
+      <div class="ci-sol" id="sol25"><div class="ci-sol-head"></div><div class="ci-sol-body">
+        <div class="ci-sol-ans">✅ She <b>couldn't</b> sleep last night.</div>
+        <div class="ci-sol-exp">last night = ماضٍ → couldn't · "the baby was crying" يؤكد أن الحدث في الماضي</div>
+      </div></div>
+    </div>
+
+    <div class="ci-score" id="ciScore">
+      <div class="ci-score-emoji" id="ciScoreEmoji">🎉</div>
+      <div class="ci-score-num" id="ciScoreNum">0</div>
+      <div class="ci-score-of">/ 25</div>
+      <div class="ci-score-bar-wrap"><div class="ci-score-bar-fill" id="ciScoreBar"></div></div>
+      <div class="ci-score-msg" id="ciScoreMsg">Well done!</div>
+      <div class="ci-score-ar" id="ciScoreAr">أنهيت الاختبار!</div>
+      <button class="ci-reset" onclick="ciReset()">🔄 حاول مرة أخرى</button>
+    </div>
+
+  </div>
+</div><!-- /tab-checkit -->
+
+<footer>
+  <p>MOHAMMED ELHUSEYIN — English Learning Series &nbsp;·&nbsp; Unit 5: can / can't / could / couldn't</p>
+</footer>
+
+<script>
+function showTab(id,btn){
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.main-tab').forEach(b=>b.classList.remove('active'));
+  document.getElementById('tab-'+id).classList.add('active');
+  btn.classList.add('active');
+}
+function showSub(id,btn){
+  const card=btn.closest('.card');
+  card.querySelectorAll('.sub-panel').forEach(p=>p.classList.remove('active'));
+  card.querySelectorAll('.sub-tab').forEach(b=>b.classList.remove('active'));
+  document.getElementById('sub-'+id).classList.add('active');
+  btn.classList.add('active');
+}
+function jumpTab(id){
+  const btn=document.querySelector(`.main-tab[onclick*="'${id}'"]`);
+  if(btn){showTab(id,btn);window.scrollTo({top:0,behavior:'smooth'});}
+}
+function ttsRead(text,rate=0.85){
+  if(!window.speechSynthesis)return;
+  window.speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(text);
+  u.lang='en-GB';u.rate=rate;
+  window.speechSynthesis.speak(u);
+}
+function ttsStop(){if(window.speechSynthesis)window.speechSynthesis.cancel();}
+function ttsGrammar(type){
+  const t={
+    pos:"Can — positive. Can is a modal verb. It has the same form for all persons. I can swim. He can swim. She can swim. We can swim. They can swim. Notice — no S at the end for he or she. And no do or does. Just can plus the infinitive. I can speak French. She can play the piano. They can drive. Can never changes.",
+    neg:"Can — negative. The negative of can is can't, or cannot. It is the same for all persons. I can't swim. He can't cook. She can't drive. We can't come tonight. They can't use their phones here. Important: we never say doesn't can, or don't can, or am not can. Only can't or cannot. Cannot is more formal. Can't is more common in speaking.",
+    qst:"Can — questions. To make a question with can, put can first, before the subject. Can you swim? Can he drive? Can she speak French? Can they help? Short answers: Yes I can. No I can't. Yes she can. No she can't. Yes they can. No they can't. W H questions: What can you do? How far can you run? When can you come? Where can we meet? Who can help me?",
+    cld:"Could — the past of can. Could has the same form for all persons. It is followed by the infinitive without to. Positive: I could swim when I was five. He could play piano when he was three. We could hear the music. Negative: I couldn't swim. She couldn't drive. They couldn't use computers in nineteen eighty five. Questions: Could you ski as a child? Could she speak French? Short answers: Yes I could. No I couldn't. Yes she could. No she couldn't. Remember — never say could to swim. Just could swim."
+  };
+  ttsRead(t[type]);
+}
+function ttsDlg(id){
+  const t={
+    d1:"Hi! Can I have a flat white and a cheese toastie, please? Of course! Anything else? Actually yes — could you bring me a glass of water too? Sure, no problem! Can you take a seat by the window? Perfect. Oh — can I pay by card? Yes, of course. The machine is at the counter. Great, thank you!",
+    d2:"Mia, can you help me for a minute? Sure! What's wrong? I can't open this file. Can you show me how? Of course! Just right-click and choose Open With. Oh great! And could you email me that new software? I can send it right now. Done! Amazing! You can fix anything, Mia!",
+    d3:"Good evening. Can I have a room for two nights, please? Certainly. Could I have your name? Omar Hassan. And could I have a quiet room? Of course, Mr Hassan. Could you fill in this form, please? Yes, sure. And can you call me a taxi for tomorrow at eight? Certainly. No problem at all. Enjoy your stay!",
+    d4:"Good morning, ABC Company. How can I help you? Can I speak to Ms Garcia, please? I'm sorry, she can't come to the phone right now. Can she call you back? Yes please. Could you take a message? Of course! Could you tell me your name? It's Emma Brown. She has my number. Perfect. I'll ask her to call you. Thank you, Ms Brown!",
+    d5:"Leo, can you swim? Yes I can! I can also surf! What about you? Lucky you! I can't swim at all. I'm terrified of water! Really? I can teach you! Could you come to the pool on Saturday? That's so kind! Can you cook too? I can make pasta but I can't bake at all. As a kid I couldn't even boil an egg! Ha! Me neither! But I could paint really well when I was young. Could you show me your paintings sometime? Of course I could! Come over anytime!"
+  };
+  ttsRead(t[id]);
+}
+const passageText5="Maya Turner is twenty-two years old and she lives in London. She can do many things. She can play the piano. She practises for three hours every day. She can also speak Italian, because she lived in Rome for a year. But she can't drive. She failed her test twice! And she can't cook at all. She always burns everything! When Maya was eight years old, she could already play simple pieces on the piano. Her teacher was amazed. But she couldn't read music at that age. She learned everything by ear. Maya's best friend is Carlos. He can swim very fast. He's on the university team. He can also cook amazing Spanish food. But he can't speak French and he can't play any musical instruments. When Carlos was a child, he couldn't swim. He was scared of water. His father taught him when he was twelve. Now he can swim a kilometre without stopping. Can you teach me the piano? Carlos asked Maya one day. Of course I can! Maya said. Could you come on Saturday? Yes, I could! I can't wait!";
+function ttsPassage(){ttsRead(passageText5,0.82);}
+function pickComp(btn){
+  const q=btn.closest('.read-q');
+  if(btn.classList.contains('done'))return;
+  const ok=btn.dataset.correct==='1';
+  q.querySelectorAll('.read-opt').forEach(b=>b.classList.add('done'));
+  btn.classList.add(ok?'correct':'wrong');
+  if(!ok)q.querySelectorAll('.read-opt[data-correct="1"]').forEach(b=>b.classList.add('correct'));
+  playSound(ok?'correct':'wrong');
+}
+// Check It
+const ciBreaks={6:'cibrk1',12:'cibrk2',17:'cibrk3'};
+let ciScore=0,ciAnswered=0;
+const ciTotal=25;
+function ciShowSol(num,ok){
+  const sol=document.getElementById('sol'+num);
+  if(!sol)return;
+  sol.classList.add(ok?'sol-correct':'sol-wrong');
+  const head=sol.querySelector('.ci-sol-head');
+  if(head)head.textContent=ok?'✅ إجابة صحيحة':'❌ إجابة خاطئة — الحل الصحيح:';
+  sol.style.display='block';
+  setTimeout(()=>sol.scrollIntoView({behavior:'smooth',block:'nearest'}),150);
+}
+function ciCheckBreakAndDone(num){
+  document.getElementById('ciProgressFill').style.width=(ciAnswered/ciTotal*100)+'%';
+  document.getElementById('ciProgressTxt').textContent=ciAnswered+' / '+ciTotal+' answered';
+  document.getElementById('ciScoreLive').textContent='Score: '+ciScore;
+  if(ciBreaks[num]){const b=document.getElementById(ciBreaks[num]);b.style.display='block';setTimeout(()=>b.scrollIntoView({behavior:'smooth',block:'nearest'}),100);}
+  if(ciAnswered===ciTotal){
+    const pct=Math.round(ciScore/ciTotal*100);
+    const s=document.getElementById('ciScore');
+    s.style.display='block';
+    document.getElementById('ciScoreNum').textContent=ciScore;
+    document.getElementById('ciScoreEmoji').textContent=ciScore>=23?'🌟':ciScore>=20?'🎉':ciScore>=15?'👍':'💪';
+    document.getElementById('ciScoreMsg').textContent=ciScore>=23?'Excellent work!':ciScore>=20?'Very good!':ciScore>=15?'Good — keep practising!':'Review the grammar and try again!';
+    document.getElementById('ciScoreAr').textContent=ciScore>=23?'ممتاز! أتقنت can/could — أنت مستعد للوحدة القادمة!':ciScore>=20?'جيد جداً! راجع الأسئلة الخاطئة وحاول مرة أخرى.':ciScore>=15?'جيد! راجع جدول can/could وكرّر الاختبار.':'لا تستسلم — راجع القواعد بعناية وكرّر الاختبار!';
+    setTimeout(()=>{document.getElementById('ciScoreBar').style.width=pct+'%';},200);
+    setTimeout(()=>s.scrollIntoView({behavior:'smooth',block:'nearest'}),300);
+  }
+}
+function ciPick(btn,num){
+  const q=btn.closest('.ci-q');
+  if(q.classList.contains('answered'))return;
+  const ok=btn.dataset.correct==='1';
+  q.classList.add('answered');
+  q.querySelectorAll('.ci-btn').forEach(b=>b.classList.add('done'));
+  btn.classList.add(ok?'correct':'wrong');
+  if(!ok)q.querySelectorAll('.ci-btn[data-correct="1"]').forEach(b=>b.classList.add('correct'));
+  if(ok)ciScore++;
+  ciAnswered++;
+  localStorage.setItem('up5',Math.round(ciAnswered/ciTotal*100));
+  playSound(ok?'correct':'wrong');
+  ciShowSol(num,ok);
+  ciCheckBreakAndDone(num);
+}
+function ciFibCheck(num,answers){
+  const q=document.getElementById('ciq'+num);
+  if(q.classList.contains('answered'))return;
+  const inp=document.getElementById('fib'+num);
+  const val=inp.value.trim().toLowerCase();
+  if(!val)return;
+  const ok=answers.map(a=>a.toLowerCase()).includes(val);
+  q.classList.add('answered');
+  inp.disabled=true;
+  inp.style.borderColor=ok?'var(--green)':'var(--red)';
+  inp.style.background=ok?'rgba(34,197,94,0.08)':'rgba(239,68,68,0.08)';
+  const checkBtn=q.querySelector('.ci-fib-check');
+  if(checkBtn){checkBtn.disabled=true;checkBtn.textContent=ok?'✓ صح':'✗ خطأ';}
+  if(ok)ciScore++;
+  ciAnswered++;
+  playSound(ok?'correct':'wrong');
+  ciShowSol(num,ok);
+  ciCheckBreakAndDone(num);
+}
+function ciReset(){
+  document.querySelectorAll('.ci-btn').forEach(b=>b.classList.remove('correct','wrong','done'));
+  document.querySelectorAll('.ci-q').forEach(q=>q.classList.remove('answered'));
+  document.querySelectorAll('.ci-brk').forEach(b=>b.style.display='none');
+  document.querySelectorAll('.ci-sol').forEach(s=>{s.style.display='none';s.classList.remove('sol-correct','sol-wrong');});
+  document.querySelectorAll('.ci-fib-input').forEach(inp=>{inp.value='';inp.disabled=false;inp.style.borderColor='';inp.style.background='';});
+  document.querySelectorAll('.ci-fib-check').forEach(btn=>{btn.disabled=false;btn.textContent='تحقق ✓';});
+  document.getElementById('ciScore').style.display='none';
+  document.getElementById('ciProgressFill').style.width='0%';
+  document.getElementById('ciProgressTxt').textContent='0 / 25 answered';
+  document.getElementById('ciScoreLive').textContent='Score: 0';
+  document.getElementById('ciScoreBar').style.width='0%';
+  ciScore=0;ciAnswered=0;
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function playSound(type){
+  try{
+    const ctx=new(window.AudioContext||window.webkitAudioContext)();
+    const o=ctx.createOscillator(),g=ctx.createGain();
+    o.connect(g);g.connect(ctx.destination);
+    if(type==='correct'){o.frequency.setValueAtTime(523,ctx.currentTime);o.frequency.setValueAtTime(659,ctx.currentTime+0.1);o.frequency.setValueAtTime(784,ctx.currentTime+0.2);}
+    else{o.frequency.setValueAtTime(380,ctx.currentTime);o.frequency.setValueAtTime(280,ctx.currentTime+0.15);}
+    g.gain.setValueAtTime(0.25,ctx.currentTime);
+    g.gain.exponentialRampToValueAtTime(0.001,ctx.currentTime+(type==='correct'?0.5:0.4));
+    o.start(ctx.currentTime);o.stop(ctx.currentTime+(type==='correct'?0.5:0.4));
+  }catch(e){}
+}
+let spActiveGroup=null;
+function spPlay(btn,text){
+  if(spActiveGroup){const pp=spActiveGroup.querySelector('.sp-pp');if(pp)pp.textContent='⏸';}
+  spActiveGroup=btn.closest('.sp-group');
+  window.speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(text);
+  u.lang='en-GB';u.rate=0.85;
+  u.onend=u.onerror=()=>{if(spActiveGroup){const pp=spActiveGroup.querySelector('.sp-pp');if(pp)pp.textContent='⏸';}spActiveGroup=null;};
+  window.speechSynthesis.speak(u);
+}
+function spPause(btn){
+  const s=window.speechSynthesis;
+  if(s.paused){s.resume();btn.textContent='⏸';}
+  else if(s.speaking){s.pause();btn.textContent='▶';}
+}
+function spStopBtn(){
+  window.speechSynthesis.cancel();
+  if(spActiveGroup){const pp=spActiveGroup.querySelector('.sp-pp');if(pp)pp.textContent='⏸';spActiveGroup=null;}
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('button.sp').forEach(btn=>{
+    const m=btn.getAttribute('onclick').match(/ttsRead\('(.+?)'\)/);
+    if(!m)return;
+    btn.setAttribute('onclick',`spPlay(this,'${m[1]}')`);
+    const g=document.createElement('div');
+    g.className='sp-group';
+    btn.parentNode.insertBefore(g,btn);
+    g.appendChild(btn);
+    const pp=document.createElement('button');
+    pp.className='sp-pp';pp.textContent='⏸';
+    pp.addEventListener('click',()=>spPause(pp));
+    g.appendChild(pp);
+    const st=document.createElement('button');
+    st.className='sp-st';st.textContent='⏹';
+    st.addEventListener('click',()=>spStopBtn());
+    g.appendChild(st);
+  });
+});
+</script>
+</div><!-- /main-content -->
+</div><!-- /layout -->
+<script src="../media/global-player.js"></script>
+<script>
+(function(){
+  for(var i=1;i<=12;i++){
+    var f=document.getElementById('sp'+i);
+    if(f){var v=parseInt(localStorage.getItem('up'+i)||'0',10);f.style.width=v+'%';}
+  }
+})();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+(function(){
+  var map={1: "up_l1", 2: "up_l2", 3: "up_l3", 4: "up_l4", 5: "up_l5", 6: "up1", 7: "up2", 8: "up3", 9: "up4", 10: "up6", 11: "up5", 12: "up_l12", 13: "up7", 14: "up8", 15: "up9", 16: "up10", 17: "up11", 19: "up_l19", 20: "up_l20", 21: "up_l21", 22: "up_l22", 23: "up_l23", 24: "up_l24", 25: "up_l25", 26: "up_l26", 27: "up_l27", 28: "up_l28", 29: "up_l29", 30: "up_l30", 31: "up_l31", 32: "up_l32", 33: "up_l33", 34: "up_l34", 35: "up_l35", 36: "up_l36", 37: "up_l37", 38: "up_l38", 39: "up_l39", 40: "up_l40", 41: "up_l41", 42: "up_l42", 43: "up_l43", 44: "up_l44", 45: "up_l45", 46: "up_l46"};
+  for(var lid in map){
+    var f=document.getElementById('sp'+lid);
+    if(f){var v=parseInt(localStorage.getItem(map[lid])||'0',10);f.style.width=v+'%';}
+  }
+  setTimeout(function(){
+    var a=document.querySelector('.su-item.su-active');
+    if(a){var u=a.closest('.sidebar-units');if(u)u.scrollTop=Math.max(0,a.offsetTop-a.offsetHeight);}
+  },80);
+})();
+</script>
+
+<script>
+(function(){
+  // Disable right-click
+  document.addEventListener('contextmenu', function(e){ e.preventDefault(); });
+
+  // Disable keyboard shortcuts
+  document.addEventListener('keydown', function(e){
+    // F12
+    if(e.key==='F12'){e.preventDefault();return false;}
+    // Ctrl+U (view source), Ctrl+S (save), Ctrl+A (select all), Ctrl+P (print)
+    if(e.ctrlKey && ['u','U','s','S','a','A','p','P'].indexOf(e.key)!==-1){
+      e.preventDefault();return false;
+    }
+    // Ctrl+Shift+I (DevTools), Ctrl+Shift+J, Ctrl+Shift+C
+    if(e.ctrlKey && e.shiftKey && ['i','I','j','J','c','C','k','K'].indexOf(e.key)!==-1){
+      e.preventDefault();return false;
+    }
+  });
+
+  // Disable text selection via CSS
+  document.documentElement.style.webkitUserSelect='none';
+  document.documentElement.style.userSelect='none';
+
+  // Allow selection inside inputs/textareas only
+  document.addEventListener('mousedown', function(e){
+    var t=e.target.tagName;
+    if(t==='INPUT'||t==='TEXTAREA'){
+      e.target.style.userSelect='text';
+      e.target.style.webkitUserSelect='text';
+    }
+  });
+
+  // Block drag
+  document.addEventListener('dragstart', function(e){ e.preventDefault(); });
+})();
+</script>
+<button class="float-menu-btn" onclick="toggleSidebar()" aria-label="القائمة">
+  <span></span><span></span><span></span>
+</button>
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=FREE"></script>
+<script src="../media/rv.js"></script>
+</body>
+</html>

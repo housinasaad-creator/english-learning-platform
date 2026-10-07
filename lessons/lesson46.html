@@ -1,0 +1,1264 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lesson 46 — Nuances &amp; Euphemisms</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#1a3a6e;--primary-dark:#0f2548;--accent:#f4a624;--al:rgba(244,166,36,0.12);--bg:#0d1b2a;--card:#162030;--card2:#1e2d40;--border:#2d4560;--text:#e8edf5;--muted:#8899b0;--green:#22c55e;--red:#ef4444;--blue:#4a9eff;--purple:#a855f7}
+body{font-family:'Poppins','Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.ar{font-family:'Cairo','Segoe UI',Arial,sans-serif}
+.topnav{background:var(--primary-dark);border-bottom:2px solid var(--accent);padding:10px 24px;display:flex;align-items:center;justify-content:space-between}
+.hero{background:linear-gradient(135deg,#1a3a6e 0%,#0f2548 55%,#0d1f3c 100%);padding:55px 24px 48px;text-align:center;border-bottom:3px solid var(--accent);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;border-radius:50%;background:rgba(244,166,36,0.06)}
+.hero::after{content:'';position:absolute;bottom:-60px;left:-60px;width:300px;height:300px;border-radius:50%;background:rgba(74,158,255,0.05)}
+.unit-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(244,166,36,0.15);border:1px solid rgba(244,166,36,0.4);color:var(--accent);font-weight:800;padding:6px 18px;border-radius:20px;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
+.hero-title{font-size:clamp(28px,6vw,52px);font-weight:900;color:white;line-height:1.15;margin-bottom:8px}
+.hero-title i{color:var(--accent);font-style:italic}
+.hero-ar{font-size:18px;color:var(--muted);margin-bottom:12px;direction:rtl}
+.hero-sub{color:var(--muted);max-width:620px;margin:0 auto 22px;font-size:14px}
+.hero-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.tag{display:inline-flex;align-items:center;gap:6px;padding:6px 15px;border-radius:16px;font-size:12px;font-weight:700}
+.tag-grammar{background:rgba(244,166,36,0.15);color:var(--accent);border:1px solid rgba(244,166,36,0.3)}
+.tag-other{background:rgba(74,158,255,0.1);color:var(--blue);border:1px solid rgba(74,158,255,0.25)}
+.tag-btn{cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif}
+.tag-btn:hover{transform:translateY(-2px);opacity:.85}
+.main-tabs{display:flex;gap:4px;padding:14px 24px;background:var(--primary-dark);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;flex-wrap:wrap}
+.main-tab{padding:8px 18px;border-radius:8px;border:1px solid transparent;background:none;color:var(--muted);font-weight:700;cursor:pointer;font-size:13px;font-family:'Poppins',sans-serif;transition:all .2s}
+.main-tab.active{background:var(--accent);color:#0d1b2a;border-color:var(--accent)}
+.main-tab:hover:not(.active){background:rgba(244,166,36,.1);color:var(--accent);border-color:rgba(244,166,36,.3)}
+.tab-panel{display:none;padding:20px 24px}
+.tab-panel.active{display:block}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;margin-bottom:16px}
+.card-title{font-size:16px;font-weight:800;color:white;margin-bottom:5px;display:flex;align-items:center;gap:8px}
+.card-ar{font-size:13px;color:var(--muted);margin-bottom:14px;direction:rtl;font-family:'Cairo',sans-serif}
+.card-note{background:var(--al);border:1px solid rgba(244,166,36,.3);border-radius:10px;padding:10px 14px;font-size:12.5px;color:var(--accent);margin:10px 0;direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.sub-tabs{display:flex;gap:4px;margin:14px 0 18px;flex-wrap:wrap}
+.sub-tab{padding:6px 14px;border-radius:8px;border:1px solid var(--border);background:none;color:var(--muted);font-weight:700;cursor:pointer;font-size:12px;font-family:'Poppins',sans-serif;transition:all .2s}
+.sub-tab.active{background:rgba(244,166,36,.15);border-color:var(--accent);color:var(--accent)}
+.sub-tab:hover:not(.active){border-color:var(--accent);color:var(--accent)}
+.sub-panel{display:none}
+.sub-panel.active{display:block}
+.tts-box{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.tts-btn{background:var(--card2);border:1px solid var(--blue);color:var(--blue);padding:7px 16px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif}
+.tts-btn:hover{background:rgba(74,158,255,.15);transform:translateY(-1px)}
+.tts-stop{border-color:var(--muted);color:var(--muted)}
+.tts-stop:hover{background:rgba(136,153,176,.1)}
+.formula-box{background:rgba(10,30,53,0.8);border:2px solid var(--border);border-radius:14px;padding:18px 22px;margin:14px 0}
+.formula-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid rgba(45,69,96,0.4);flex-wrap:wrap}
+.formula-row:last-child{border-bottom:none}
+.formula-subj{font-size:14px;font-weight:800;color:var(--blue);min-width:160px}
+.formula-be{font-size:15px;font-weight:900;color:var(--accent);background:rgba(244,166,36,.12);padding:4px 12px;border-radius:8px}
+.formula-be.neg{color:var(--red);background:rgba(239,68,68,.1)}
+.formula-be.q{color:var(--green);background:rgba(34,197,94,.1)}
+.formula-note{font-size:11px;color:var(--muted);font-style:italic;margin-left:auto}
+.formula-plus{font-size:16px;color:var(--muted)}
+.ex-section-title{font-size:12px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin:16px 0 8px}
+.ex-list{margin-top:4px}
+.ex-item{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid rgba(45,69,96,0.3)}
+.ex-item:last-child{border-bottom:none}
+.sp{background:none;border:none;font-size:16px;cursor:pointer;color:var(--blue);flex-shrink:0;padding:2px 0;transition:transform .2s;line-height:1}
+.sp:hover{transform:scale(1.2)}
+.sp-group{display:inline-flex;align-items:center;gap:3px;flex-shrink:0}
+.sp-pp,.sp-st{background:var(--card2);border:1px solid var(--border);color:var(--muted);font-size:12px;padding:3px 7px;border-radius:6px;cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif;line-height:1;min-width:26px;text-align:center}
+.sp-pp:hover{background:rgba(74,158,255,.15);border-color:var(--blue);color:var(--blue)}
+.sp-st:hover{background:rgba(239,68,68,.1);border-color:var(--red);color:var(--red)}
+.ex-en{font-size:13.5px;color:var(--text);font-weight:600;line-height:1.4}
+.ex-en b{color:var(--accent)}
+.ex-ar{font-size:12px;color:var(--muted);margin-top:2px;direction:rtl;font-family:'Cairo',sans-serif}
+.sa-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13px}
+.sa-table th{background:rgba(26,58,110,0.5);color:var(--accent);padding:8px 12px;font-weight:800;text-align:left;border:1px solid var(--border)}
+.sa-table td{padding:8px 12px;border:1px solid rgba(45,69,96,0.4);vertical-align:middle}
+.sa-table tr:nth-child(even) td{background:rgba(30,45,64,0.3)}
+.sa-yes{color:var(--green);font-weight:800}
+.sa-no{color:var(--red);font-weight:800}
+.wh-grid{display:flex;flex-direction:column;gap:7px;margin:12px 0}
+.wh-row{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px;font-size:13px}
+.wh-q{color:var(--text);margin-bottom:3px}
+.wh-q b{color:var(--blue)}
+.wh-a{color:var(--muted);font-style:italic}
+.time-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;margin:12px 0}
+.time-item{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px}
+.time-en{font-size:13px;font-weight:700;color:var(--accent)}
+.time-ar{font-size:11px;color:var(--muted);margin-top:3px;direction:rtl;font-family:'Cairo',sans-serif}
+.time-eg{font-size:11px;color:var(--text);margin-top:4px;font-style:italic}
+.mistake-item{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.m-wrong{font-size:13px;color:var(--red);margin-bottom:3px}
+.m-wrong::before{content:'❌ '}
+.m-right{font-size:13px;color:var(--green);font-weight:700;margin-bottom:3px}
+.m-right::before{content:'✅ '}
+.m-why{font-size:11.5px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;border-top:1px solid rgba(45,69,96,.4);padding-top:5px;margin-top:5px}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:8px;margin-top:12px}
+.vocab-item{background:var(--card2);border:1px solid var(--border);border-radius:9px;padding:9px 12px;cursor:pointer;transition:border-color .2s}
+.vocab-item:hover{border-color:var(--accent)}
+.vocab-en{font-size:14px;font-weight:800;color:var(--text)}
+.vocab-past{font-size:11.5px;color:var(--accent);margin-top:2px;font-weight:700}
+.vocab-ar{font-size:11px;color:var(--muted);margin-top:3px;font-family:'Cairo',sans-serif;direction:rtl}
+.vs-wrap{overflow-x:auto;margin:18px 0;padding:4px 0}
+.vs-caption{font-size:11px;color:var(--muted);text-align:center;margin-top:8px;font-style:italic}
+.dlg-card{background:var(--card);border:1px solid var(--border);border-radius:16px;margin-bottom:16px;overflow:hidden}
+.dlg-header{background:linear-gradient(to right,var(--primary),#1a1a4e);padding:13px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.dlg-meta{flex:1}
+.dlg-num{font-size:10px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:2px}
+.dlg-title{font-weight:800;font-size:14px;color:white}
+.dlg-ctx{font-size:11px;color:rgba(255,255,255,.5);font-style:italic;margin-top:2px}
+.dlg-tts{background:rgba(244,166,36,.15);border:1px solid rgba(244,166,36,.4);color:var(--accent);padding:6px 14px;border-radius:8px;font-size:11px;font-weight:700;cursor:pointer;font-family:'Poppins',sans-serif;transition:all .2s;white-space:nowrap}
+.dlg-tts:hover{background:rgba(244,166,36,.3)}
+.dlg-body{padding:20px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:640px){.dlg-body{grid-template-columns:1fr}}
+.dlg-col-head{font-size:10px;font-weight:700;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+.bubble{padding:9px 13px;border-radius:12px;font-size:13px;line-height:1.55;margin-bottom:7px}
+.bubble-a{background:rgba(26,58,110,0.5);border:1px solid rgba(74,158,255,0.2)}
+.bubble-b{background:var(--card2);border:1px solid var(--border)}
+.bubble-name{font-size:9px;font-weight:800;color:var(--muted);margin-bottom:4px;letter-spacing:.5px;text-transform:uppercase}
+.bubble-name.b{color:var(--accent)}
+.bubble-ar{direction:rtl;font-family:'Cairo',sans-serif;font-size:13px;color:var(--text)}
+.layout{display:flex;min-height:100vh}
+.sidebar{width:30%;max-width:320px;min-width:220px;position:fixed;top:0;left:0;bottom:0;background:var(--primary-dark);border-right:2px solid var(--border);display:flex;flex-direction:column;z-index:200;overflow:hidden}
+.sidebar-header{padding:18px 20px 14px;border-bottom:2px solid var(--accent);flex-shrink:0}
+.sidebar-logo{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+.sidebar-logo-icon{width:34px;height:34px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900;color:#0d1b2a;flex-shrink:0}
+.sidebar-logo-text{font-family:'Cairo',sans-serif;font-size:15px;font-weight:800;color:white}
+.sidebar-logo-sub{font-size:10px;color:var(--muted);font-weight:500;margin-top:-1px}
+.sidebar-label{font-family:'Cairo',sans-serif;font-size:11px;font-weight:700;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-top:12px}
+.sidebar-units{flex:1;overflow-y:auto;padding:10px 12px;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+.sidebar-units::-webkit-scrollbar{width:4px}
+.sidebar-units::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+.su-item{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;text-decoration:none;margin-bottom:4px;transition:background .2s,transform .2s}
+.su-item:not(.su-locked):hover{background:rgba(244,166,36,0.12);transform:translateX(3px)}
+.su-item.su-locked{opacity:.45;cursor:default;pointer-events:none}
+.su-item.su-active{background:rgba(244,166,36,0.15);border:1px solid rgba(244,166,36,0.3)}
+.su-num{width:28px;height:28px;border-radius:7px;background:rgba(255,255,255,0.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:var(--accent);flex-shrink:0}
+.su-item:not(.su-locked) .su-num{background:rgba(244,166,36,0.12);border-color:rgba(244,166,36,0.3)}
+.su-texts{flex:1;min-width:0}
+.su-en{font-size:13px;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.su-ar{font-family:'Cairo',sans-serif;font-size:11px;color:var(--muted);direction:rtl;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.su-check{font-size:12px;flex-shrink:0}
+.su-lock{font-size:11px;color:var(--muted);flex-shrink:0}
+.main-content{margin-left:min(30%,320px);flex:1;min-width:0}
+footer{padding:20px 24px;text-align:center;color:var(--muted);font-size:12px;border-top:1px solid var(--border);margin-top:10px}
+
+/* ══ Hamburger (desktop: hidden) ══ */
+.nav-hamburger{display:none;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.3);border-radius:8px;cursor:pointer;flex-direction:column;gap:5px;padding:8px;flex-shrink:0;margin-left:6px}
+.nav-hamburger span{display:block;width:100%;height:2px;background:var(--accent);border-radius:2px}
+/* Backdrop */
+.sb-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:199}
+.sb-backdrop.sb-open{display:block}
+@media(max-width:768px){
+  .sidebar{position:fixed;left:-100%;width:82%;max-width:300px;min-width:unset;transition:left .3s ease;z-index:200}
+  .sidebar.sb-open{left:0}
+  .main-content{margin-left:0}
+  .nav-brand{display:none}
+  .nav-hamburger{display:flex}
+  .topnav{padding:10px 12px;gap:6px}
+  .nav-lesson-name{display:none}
+  .nav-left{gap:5px}
+  .hero{padding:22px 13px 20px}
+  .hero-title{font-size:22px;letter-spacing:-.5px}
+  .hero-ar{font-size:12px}
+  .hero-sub{font-size:12px}
+  .hero-tags{gap:5px;justify-content:center}
+  .tag{font-size:10px;padding:3px 9px}
+  .rule-section{padding:0 12px}
+  .read-wrap{padding:0 12px}
+  .ci-wrap{padding:12px 12px}
+  .ci-hero{padding:18px 12px}
+  .dlg-block{padding:0 12px}
+  .eu-cat-grid{grid-template-columns:1fr}
+  .nu-scale{gap:3px}
+  .nu-word{font-size:10px;padding:3px 7px}
+  .nu-cmp-head,.nu-cmp-row{grid-template-columns:1fr 1fr;font-size:10px}
+  .nu-cmp-head span:last-child,.nu-cmp-row span:last-child{display:none}
+  .reg-ladder{padding:10px 12px}
+  .cmp-table{font-size:11px}
+  .chat-wrap{padding:0 4px}
+  .ci-q{margin-bottom:10px}
+  .ci-opts{gap:5px}
+  .ci-btn{font-size:12px;padding:9px 10px}
+  .vocab-grid{grid-template-columns:1fr 1fr}
+  .rq-opts{gap:5px}
+}
+
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+/* some/any pill styles */
+.pill-wrap{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.pill{padding:5px 14px;border-radius:20px;font-size:12.5px;font-weight:800}
+.pill-green{background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.35);color:var(--green)}
+.pill-blue{background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.3);color:var(--blue)}
+.pill-red{background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3);color:var(--red)}
+/* Reading */
+.read-tts-bar{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;align-items:center}
+.read-label{font-size:12px;font-weight:700;color:var(--muted)}
+.read-pass{background:var(--card2);border:1px solid var(--border);border-radius:14px;padding:22px;font-size:14px;line-height:1.9;margin-bottom:24px}
+.read-pass p{margin-bottom:12px}
+.read-pass p:last-child{margin-bottom:0}
+.read-pass b{color:var(--accent);font-weight:700}
+.comp-section-title{font-size:14px;font-weight:800;color:var(--accent);margin-bottom:14px;text-transform:uppercase;letter-spacing:1px}
+.read-q{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:12px}
+.read-q-text{font-weight:700;font-size:14px;margin-bottom:12px;color:var(--text);line-height:1.4}
+.read-opts{display:flex;flex-direction:column;gap:7px}
+.read-opt{background:var(--card2);border:1px solid var(--border);color:var(--text);padding:9px 14px;border-radius:8px;font-size:13px;cursor:pointer;text-align:left;font-family:'Poppins',sans-serif;transition:all .2s;display:flex;align-items:center;gap:8px}
+.read-opt:hover:not(.done){background:rgba(244,166,36,.06);border-color:rgba(244,166,36,.35);transform:translateY(-1px)}
+.read-opt.correct{background:rgba(34,197,94,.12);border-color:var(--green);color:var(--green)}
+.read-opt.wrong{background:rgba(239,68,68,.12);border-color:var(--red);color:var(--red)}
+.read-opt.done{cursor:default;transform:none!important}
+.read-ctx{background:linear-gradient(135deg,rgba(26,58,110,.55),rgba(15,37,72,.55));border:1px solid rgba(244,166,36,.22);border-radius:14px;padding:16px 22px;margin-bottom:20px;display:flex;flex-wrap:wrap;gap:20px;align-items:center}
+.read-ctx-fact{display:flex;flex-direction:column;gap:2px}
+.read-ctx-label{font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+.read-ctx-val{font-size:13.5px;font-weight:800;color:var(--text)}
+.read-ctx-sep{width:1px;background:var(--border);align-self:stretch}
+.read-vocab-wrap{margin:18px 0}
+.read-vocab-title{font-size:11px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.read-vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:7px}
+.read-vocab-item{background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:8px 12px}
+.read-vocab-en{font-size:13px;font-weight:700;color:var(--accent)}
+.read-vocab-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-top:2px}
+/* Check It */
+.ci-hero{background:linear-gradient(135deg,#12285a 0%,#1a1242 60%,#0d1b2a 100%);padding:36px 24px 30px;text-align:center;border-bottom:2px solid var(--accent)}
+.ci-hero-icon{font-size:38px;margin-bottom:10px}
+.ci-hero-title{font-size:clamp(22px,5vw,36px);font-weight:900;color:white;margin-bottom:6px}
+.ci-hero-sub{color:var(--muted);font-size:13px;max-width:460px;margin:0 auto}
+.ci-hero-types{display:flex;gap:10px;justify-content:center;margin-top:14px;flex-wrap:wrap}
+.ci-progress-wrap{background:var(--primary-dark);padding:10px 24px;border-bottom:1px solid var(--border);position:sticky;top:52px;z-index:99}
+.ci-progress-inner{max-width:760px;margin:0 auto}
+.ci-progress-bar{background:rgba(255,255,255,.07);border-radius:20px;height:7px;overflow:hidden;margin-bottom:5px}
+.ci-progress-fill{background:linear-gradient(90deg,var(--accent),var(--blue));height:100%;border-radius:20px;transition:width .4s ease;width:0%}
+.ci-progress-txt{font-size:11px;color:var(--muted);font-weight:700;display:flex;justify-content:space-between}
+.ci-wrap{max-width:100%;padding:12px 16px}
+.ci-q{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px 14px;margin-bottom:7px;transition:border-color .2s;border-left:3px solid rgba(244,166,36,.4)}
+.ci-q.ci-fib-q{border-left-color:rgba(74,158,255,.5)}
+.ci-q-head{display:flex;align-items:center;gap:6px;margin-bottom:9px;flex-wrap:nowrap}
+.ci-q-num{width:22px;height:22px;border-radius:50%;background:rgba(244,166,36,.18);border:1.5px solid rgba(244,166,36,.4);color:var(--accent);font-size:10px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ci-fib-q .ci-q-num{background:rgba(74,158,255,.15);border-color:rgba(74,158,255,.4);color:var(--blue)}
+.ci-q-tag{background:rgba(244,166,36,.08);border:1px solid rgba(244,166,36,.18);color:var(--accent);font-size:9px;font-weight:800;padding:2px 8px;border-radius:8px;text-transform:uppercase;letter-spacing:.4px;white-space:nowrap}
+.ci-type-badge{font-size:9px;font-weight:800;padding:2px 8px;border-radius:8px;text-transform:uppercase;letter-spacing:.4px;margin-left:auto;flex-shrink:0}
+.ci-type-mcq{background:rgba(244,166,36,.12);border:1px solid rgba(244,166,36,.25);color:var(--accent)}
+.ci-type-fib{background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.25);color:var(--blue)}
+.ci-q-prompt{font-size:12px;color:var(--muted);font-style:italic;margin-bottom:8px;padding:5px 10px;background:rgba(255,255,255,.03);border-left:2px solid var(--border);border-radius:0 6px 6px 0}
+.ci-opts{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.ci-btn{background:var(--card2);border:1.5px solid var(--border);color:var(--text);padding:9px 12px;border-radius:9px;font-size:12.5px;cursor:pointer;text-align:left;font-family:'Poppins',sans-serif;transition:all .2s;display:flex;align-items:center;gap:9px;line-height:1.35;width:100%}
+.ci-btn:hover:not(.done){background:rgba(244,166,36,.07);border-color:rgba(244,166,36,.45);transform:translateY(-2px)}
+.ci-btn.ci-correct{background:rgba(34,197,94,.1);border-color:var(--green);color:var(--green)}
+.ci-btn.ci-wrong{background:rgba(239,68,68,.1);border-color:var(--red);color:var(--red)}
+.ci-lbl{font-size:11px;font-weight:900;background:rgba(255,255,255,.09);border-radius:5px;padding:2px 7px;flex-shrink:0;min-width:22px;text-align:center}
+.ci-btn.ci-correct .ci-lbl{background:rgba(34,197,94,.2);color:var(--green)}
+.ci-btn.ci-wrong .ci-lbl{background:rgba(239,68,68,.2);color:var(--red)}
+.ci-fib-sent{font-size:13.5px;color:var(--text);font-weight:600;line-height:1.7;margin-bottom:9px}
+.ci-fib-sent b{color:var(--accent)}
+.ci-fib-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:4px}
+.ci-fib-input{background:var(--card2);border:2px solid var(--border);color:var(--text);padding:7px 13px;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;outline:none;min-width:160px;max-width:260px;transition:border-color .2s}
+.ci-fib-input:focus{border-color:var(--accent);background:rgba(244,166,36,.04)}
+.ci-fib-check{background:var(--accent);border:none;color:#0d1b2a;padding:7px 18px;border-radius:8px;font-weight:800;cursor:pointer;font-size:12px;font-family:'Poppins',sans-serif;transition:all .2s;flex-shrink:0}
+.ci-fib-check:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 4px 12px rgba(244,166,36,.3)}
+.ci-fib-check:disabled{opacity:.35;cursor:default;transform:none!important}
+.ci-hint{font-size:10.5px;color:var(--muted);font-style:italic;margin-top:3px}
+.ci-sol{display:none;margin-top:9px;border-radius:9px;overflow:hidden;animation:fadeIn .3s ease}
+.ci-sol-head{padding:7px 12px;font-size:11.5px;font-weight:800;border-bottom:1px solid rgba(255,255,255,.05)}
+.ci-sol-body{padding:8px 12px;display:flex;flex-direction:column;gap:4px}
+.ci-sol-ans{font-size:12.5px;font-weight:700;color:var(--accent)}
+.ci-sol-exp{font-size:11.5px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.ci-brk{display:none;background:linear-gradient(135deg,#12285a,#1a1242);border:2px solid var(--accent);border-radius:20px;padding:28px 24px;margin:16px 0;text-align:center;animation:fadeIn .5s ease;position:relative;overflow:hidden}
+.ci-brk::before{content:'';position:absolute;top:-50px;right:-50px;width:200px;height:200px;border-radius:50%;background:rgba(244,166,36,.07);pointer-events:none}
+.ci-brk-emoji{font-size:44px;margin-bottom:10px}
+.ci-brk-title{font-size:17px;font-weight:900;color:var(--accent);margin-bottom:16px}
+.ci-brk-cols{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:580px;margin:0 auto;text-align:left}
+@media(max-width:580px){.ci-brk-cols{grid-template-columns:1fr}}
+.ci-brk-col{background:rgba(255,255,255,.04);border:1px solid rgba(244,166,36,.2);border-radius:12px;padding:14px 16px}
+.ci-brk-col-title{font-size:10px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid rgba(244,166,36,.2)}
+.ci-brk-text{font-size:13px;color:var(--text);line-height:1.75}
+.ci-brk-text b{color:var(--accent)}
+.ci-brk-ar{font-size:12px;color:var(--muted);margin-top:14px;direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.ci-score{display:none;background:linear-gradient(135deg,#0f2548,#1a1242);border:2px solid var(--accent);border-radius:24px;padding:44px 32px;text-align:center;margin-top:24px;position:relative;overflow:hidden;animation:fadeIn .6s ease}
+.ci-score::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,rgba(244,166,36,.07) 0%,transparent 65%);pointer-events:none}
+.ci-score-emoji{font-size:60px;margin-bottom:14px}
+.ci-score-num{font-size:68px;font-weight:900;color:var(--accent);line-height:1;margin-bottom:4px}
+.ci-score-of{font-size:18px;color:var(--muted);margin-bottom:18px}
+.ci-score-bar-wrap{background:rgba(255,255,255,.06);border-radius:20px;height:10px;max-width:320px;margin:0 auto 24px;overflow:hidden}
+.ci-score-bar-fill{height:100%;border-radius:20px;background:linear-gradient(90deg,var(--accent),var(--green));transition:width 1.2s ease;width:0%}
+.ci-score-msg{font-size:18px;font-weight:900;color:white;margin-bottom:6px}
+.ci-score-ar{font-size:14px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;margin-bottom:24px;line-height:1.6}
+.ci-reset{background:var(--accent);border:none;color:#0d1b2a;padding:13px 32px;border-radius:12px;font-weight:900;cursor:pointer;font-family:'Poppins',sans-serif;font-size:14px;transition:all .25s;letter-spacing:.5px}
+.ci-reset:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(244,166,36,.35)}
+.chat-wrap{padding:18px 24px 26px;display:flex;flex-direction:column;gap:14px;background-image:radial-gradient(circle,rgba(244,166,36,0.22) 1.5px,transparent 1.5px),radial-gradient(circle,rgba(74,158,255,0.22) 1.5px,transparent 1.5px);background-size:28px 28px;background-position:0 0,14px 14px}
+.chat-msg{display:flex;flex-direction:column;max-width:70%}
+.chat-msg.right{align-self:flex-end;align-items:flex-end}
+.chat-msg.left{align-self:flex-start;align-items:flex-start}
+.chat-name-tag{font-size:11px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;margin-bottom:5px;padding:0 4px}
+.chat-msg.right .chat-name-tag{color:var(--accent)}
+.chat-msg.left .chat-name-tag{color:var(--blue)}
+.chat-bubble{padding:14px 17px 10px;border-radius:20px;width:100%}
+.chat-msg.right .chat-bubble{background:rgba(55,36,6,0.75);border:1px solid rgba(244,166,36,0.4);border-bottom-right-radius:4px;box-shadow:0 6px 28px rgba(0,0,0,0.65),0 0 18px rgba(244,166,36,0.22)}
+.chat-msg.left .chat-bubble{background:rgba(12,32,72,0.8);border:1px solid rgba(74,158,255,0.35);border-bottom-left-radius:4px;box-shadow:0 6px 28px rgba(0,0,0,0.65),0 0 18px rgba(74,158,255,0.20)}
+.chat-en{font-size:15px;color:var(--text);line-height:1.65;font-weight:500}
+.chat-en b{color:var(--accent)}
+.chat-msg.left .chat-en b{color:var(--blue)}
+.chat-ar{font-size:14px;color:rgba(232,237,245,0.8);direction:rtl;font-family:'Cairo',sans-serif;line-height:1.75;border-top:1px solid rgba(255,255,255,0.09);padding-top:9px;margin-top:9px}
+.chat-bubble-foot{display:flex;justify-content:flex-end;margin-top:9px;padding-top:7px;border-top:1px solid rgba(255,255,255,0.07)}
+.chat-sp-btn{font-size:14px;cursor:pointer;padding:5px 13px;border-radius:20px;transition:all .2s;line-height:1;font-weight:700;letter-spacing:.3px}
+.chat-msg.right .chat-sp-btn{background:rgba(244,166,36,0.18);border:1px solid rgba(244,166,36,0.45);color:var(--accent)}
+.chat-msg.left .chat-sp-btn{background:rgba(74,158,255,0.15);border:1px solid rgba(74,158,255,0.4);color:var(--blue)}
+.chat-sp-btn:hover{transform:scale(1.08);filter:brightness(1.25)}
+.su-prog{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:6px;overflow:hidden}
+.su-prog-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:2px;width:0%;transition:width .6s ease}
+
+.su-level-hd{padding:8px 12px 5px;margin-top:8px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(255,255,255,.05)}
+.su-level-code{font-size:11px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;padding:2px 8px;border-radius:5px;display:inline-block}
+.su-level-name{font-family:'Cairo',sans-serif;font-size:12px;font-weight:700;color:#f4c430;direction:rtl;margin:0;line-height:1}
+.lvl-a1{background:rgba(52,211,153,.15);color:#34d399;border:1px solid rgba(52,211,153,.35)}
+.lvl-a2{background:rgba(74,158,255,.15);color:#4a9eff;border:1px solid rgba(74,158,255,.35)}
+.lvl-b1{background:rgba(245,158,11,.15);color:#f59e0b;border:1px solid rgba(245,158,11,.35)}
+.lvl-b2{background:rgba(244,166,36,.15);color:var(--accent);border:1px solid rgba(244,166,36,.35)}
+.lvl-b2p{background:rgba(251,146,60,.15);color:#fb923c;border:1px solid rgba(251,146,60,.35)}
+.lvl-c1{background:rgba(168,85,247,.15);color:#a855f7;border:1px solid rgba(168,85,247,.35)}
+.su-coming{opacity:.28;cursor:default;pointer-events:none}
+.su-prog{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:6px;overflow:hidden}
+.su-prog-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:2px;width:0%;transition:width .6s ease}
+
+/* Lesson 1 specific styles */
+.alpha-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(68px,1fr));gap:8px;margin:18px 0}
+.alpha-card{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:12px 8px;text-align:center;cursor:pointer;transition:all .22s;position:relative}
+.alpha-card:hover{transform:translateY(-3px);border-color:var(--accent);background:rgba(244,166,36,.08)}
+.alpha-card.vowel{border-color:rgba(244,166,36,.5);background:rgba(244,166,36,.07)}
+.alpha-card.vowel:hover{background:rgba(244,166,36,.15)}
+.alpha-up{font-size:22px;font-weight:900;color:var(--text);line-height:1}
+.alpha-lo{font-size:14px;color:var(--muted);margin:2px 0}
+.alpha-ar{font-size:10px;color:var(--accent);font-family:'Cairo',sans-serif;margin-top:4px}
+.alpha-card.vowel .alpha-up{color:var(--accent)}
+.vowel-badge{display:inline-block;background:rgba(244,166,36,.15);border:1px solid rgba(244,166,36,.4);color:var(--accent);font-size:10px;font-weight:800;padding:2px 8px;border-radius:10px;margin-right:4px}
+.cons-badge{display:inline-block;background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.3);color:var(--blue);font-size:10px;font-weight:800;padding:2px 8px;border-radius:10px;margin-right:4px}
+.num-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:9px;margin:14px 0}
+.num-card{background:var(--card2);border:1px solid var(--border);border-radius:11px;padding:12px 14px;cursor:pointer;transition:all .2s}
+.num-card:hover{transform:translateY(-2px);border-color:var(--blue)}
+.num-digit{font-size:22px;font-weight:900;color:var(--blue);line-height:1}
+.num-word{font-size:13px;font-weight:700;color:var(--text);margin-top:3px}
+.num-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-top:3px}
+.num-grid-sm{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:8px;margin:14px 0}
+.num-sm{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:9px 12px;cursor:pointer;transition:all .2s}
+.num-sm:hover{border-color:var(--blue);transform:translateY(-2px)}
+.num-sm .num-digit{font-size:17px}
+.num-sm .num-word{font-size:12px}
+.ord-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin:14px 0}
+.ord-card{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px;cursor:pointer;transition:all .2s}
+.ord-card:hover{border-color:var(--purple);transform:translateY(-2px)}
+.ord-num{font-size:18px;font-weight:900;color:var(--purple);line-height:1}
+.ord-word{font-size:12.5px;font-weight:700;color:var(--text);margin-top:3px}
+.ord-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-top:3px}
+.rule-box{background:linear-gradient(135deg,rgba(168,85,247,.12),rgba(74,158,255,.08));border:1px solid rgba(168,85,247,.3);border-radius:14px;padding:16px 20px;margin:14px 0}
+.rule-title{font-size:12px;font-weight:800;color:#a855f7;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.rule-body{font-size:13px;color:var(--text);line-height:1.75}
+.rule-body b{color:#a855f7}
+.rule-body .eg{color:var(--accent);font-style:italic}
+
+
+
+.nav-home-btn{display:inline-flex;align-items:center;gap:6px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.4);color:var(--accent);font-size:12px;font-weight:800;padding:5px 13px;border-radius:8px;text-decoration:none;transition:all .2s;white-space:nowrap;flex-shrink:0}
+.nav-home-btn:hover{background:rgba(244,166,36,.25);transform:translateY(-2px)}
+.nav-lesson-badge{background:var(--accent);color:#0a1628;font-size:12px;font-weight:900;padding:5px 13px;border-radius:7px;white-space:nowrap;letter-spacing:.3px;flex-shrink:0}
+.nav-lesson-name{font-size:13px;color:rgba(232,237,245,.7);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-sep{color:rgba(136,153,176,.5);font-size:13px;flex-shrink:0}
+.nav-left{display:flex;align-items:center;gap:8px;flex:1;min-width:0}
+.nav-right{display:flex;align-items:center;flex-shrink:0}
+
+.read-body b{color:var(--accent)}
+.read-body p b{color:var(--accent)}
+.ci-fib-lbl{font-size:11px;font-weight:800;color:var(--accent);letter-spacing:1px;text-transform:uppercase;margin:4px 0 8px 0;opacity:.85}
+
+/* ══ Lesson 46 ══ */
+.nu-intro{background:var(--card2);border-radius:12px;padding:12px 15px;margin:10px 0;font-size:12px;line-height:1.7}
+.nu-intro b{color:var(--accent)}
+
+/* Nuance scale */
+.nu-scale-wrap{margin:10px 0}
+.nu-scale-title{font-size:11px;font-weight:900;color:var(--accent);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
+.nu-scale{display:flex;gap:4px;flex-wrap:wrap;align-items:center;margin-bottom:4px}
+.nu-word{font-size:11px;font-weight:700;padding:4px 10px;border-radius:7px;cursor:pointer;transition:transform .12s}
+.nu-word:hover{transform:scale(1.08)}
+.nw-1{background:rgba(74,158,255,.12);color:var(--blue);border:1px solid rgba(74,158,255,.3)}
+.nw-2{background:rgba(74,158,255,.2);color:var(--blue);border:1px solid rgba(74,158,255,.45)}
+.nw-3{background:rgba(244,166,36,.12);color:var(--accent);border:1px solid rgba(244,166,36,.3)}
+.nw-4{background:rgba(244,166,36,.22);color:var(--accent);border:1px solid rgba(244,166,36,.45)}
+.nw-5{background:rgba(239,68,68,.15);color:var(--red);border:1px solid rgba(239,68,68,.35)}
+.nw-6{background:rgba(239,68,68,.28);color:var(--red);border:1px solid rgba(239,68,68,.5)}
+.nu-arrow{color:var(--muted);font-size:13px;flex-shrink:0}
+.nu-ar-note{font-family:'Cairo',sans-serif;font-size:10px;color:var(--muted);direction:rtl;margin-top:2px}
+.nu-ex{font-size:11px;color:rgba(232,237,245,.65);font-style:italic;margin-top:3px;line-height:1.55}
+.nu-ex b{color:var(--text);font-style:normal}
+
+/* Nuance comparison table */
+.nu-cmp{background:var(--card2);border-radius:12px;overflow:hidden;margin:10px 0}
+.nu-cmp-head{display:grid;grid-template-columns:1fr 1fr 1fr;background:rgba(255,255,255,.04);padding:7px 10px;font-size:10px;font-weight:900;letter-spacing:.4px;text-transform:uppercase;color:var(--accent)}
+.nu-cmp-row{display:grid;grid-template-columns:1fr 1fr 1fr;padding:7px 10px;border-top:1px solid var(--border);font-size:11px;line-height:1.55}
+.nu-cmp-row:hover{background:rgba(255,255,255,.025)}
+.nc-word{font-weight:800;color:var(--text)}
+.nc-reg{color:var(--blue);font-size:10px}
+.nc-note{color:var(--muted)}
+
+/* Connotation badges */
+.con-pos{background:rgba(34,197,94,.15);color:var(--green);border:1px solid rgba(34,197,94,.35);font-size:9px;font-weight:800;padding:1px 7px;border-radius:4px;display:inline-block}
+.con-neg{background:rgba(239,68,68,.15);color:var(--red);border:1px solid rgba(239,68,68,.35);font-size:9px;font-weight:800;padding:1px 7px;border-radius:4px;display:inline-block}
+.con-neu{background:rgba(136,153,176,.15);color:var(--muted);border:1px solid rgba(136,153,176,.35);font-size:9px;font-weight:800;padding:1px 7px;border-radius:4px;display:inline-block}
+
+/* Euphemism cards */
+.eu-cat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+@media(max-width:580px){.eu-cat-grid{grid-template-columns:1fr}}
+.eu-cat{border-radius:12px;padding:13px 15px;transition:transform .15s;cursor:pointer}
+.eu-cat:hover{transform:translateY(-3px)}
+.ec-death{background:rgba(136,153,176,.06);border:2px solid rgba(136,153,176,.25)}
+.ec-work {background:rgba(244,166,36,.07);border:2px solid rgba(244,166,36,.28)}
+.ec-body {background:rgba(74,158,255,.07);border:2px solid rgba(74,158,255,.28)}
+.ec-money{background:rgba(34,197,94,.07);border:2px solid rgba(34,197,94,.28)}
+.ec-war  {background:rgba(239,68,68,.06);border:2px solid rgba(239,68,68,.22)}
+.ec-lie  {background:rgba(168,85,247,.07);border:2px solid rgba(168,85,247,.28)}
+.eu-tag{font-size:9px;font-weight:900;letter-spacing:.6px;text-transform:uppercase;margin-bottom:3px}
+.ec-death .eu-tag{color:var(--muted)}
+.ec-work  .eu-tag{color:var(--accent)}
+.ec-body  .eu-tag{color:var(--blue)}
+.ec-money .eu-tag{color:var(--green)}
+.ec-war   .eu-tag{color:var(--red)}
+.ec-lie   .eu-tag{color:#a855f7}
+.eu-name{font-size:12px;font-weight:900;margin-bottom:6px}
+.ec-death .eu-name{color:var(--muted)}
+.ec-work  .eu-name{color:var(--accent)}
+.ec-body  .eu-name{color:var(--blue)}
+.ec-money .eu-name{color:var(--green)}
+.ec-war   .eu-name{color:var(--red)}
+.ec-lie   .eu-name{color:#a855f7}
+.eu-pairs{font-size:11px;line-height:1.8}
+.eu-harsh{color:var(--red);text-decoration:line-through;font-size:10px}
+.eu-soft{font-weight:700}
+.ec-death .eu-soft{color:var(--muted)}
+.ec-work  .eu-soft{color:var(--accent)}
+.ec-body  .eu-soft{color:var(--blue)}
+.ec-money .eu-soft{color:var(--green)}
+.ec-war   .eu-soft{color:var(--red)}
+.ec-lie   .eu-soft{color:#a855f7}
+
+/* Register ladder */
+.reg-ladder{background:var(--card2);border-radius:12px;padding:12px 15px;margin:8px 0}
+.reg-row{display:flex;align-items:flex-start;gap:10px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+.reg-row:last-child{border-bottom:none}
+.reg-badge{font-size:9px;font-weight:900;letter-spacing:.4px;text-transform:uppercase;padding:2px 8px;border-radius:5px;white-space:nowrap;flex-shrink:0;margin-top:2px}
+.rb-formal{background:rgba(74,158,255,.15);color:var(--blue);border:1px solid rgba(74,158,255,.35)}
+.rb-neutral{background:rgba(136,153,176,.15);color:var(--muted);border:1px solid rgba(136,153,176,.35)}
+.rb-informal{background:rgba(244,166,36,.15);color:var(--accent);border:1px solid rgba(244,166,36,.35)}
+.rb-rude{background:rgba(239,68,68,.15);color:var(--red);border:1px solid rgba(239,68,68,.35)}
+.reg-text{font-size:11.5px;color:var(--text);flex:1;line-height:1.55}
+.reg-ar{font-family:'Cairo',sans-serif;font-size:10px;color:var(--muted);direction:rtl;display:block}
+
+.warn-row{display:flex;gap:10px;align-items:flex-start;background:var(--card2);border-radius:10px;padding:10px 14px;margin:6px 0}
+.warn-icon{font-size:16px;flex-shrink:0;margin-top:2px}
+.warn-wrong{font-size:12px;color:var(--red);text-decoration:line-through}
+.warn-right{font-size:12px;color:var(--green);font-weight:700}
+.warn-ar{font-family:'Cairo',sans-serif;font-size:10px;color:var(--muted);direction:rtl;margin-top:2px}
+.tip-row{display:flex;align-items:flex-start;gap:10px;background:var(--card2);border-radius:10px;padding:10px 14px;margin:6px 0;cursor:pointer;transition:background .2s}
+.tip-row:hover{background:rgba(74,158,255,.08)}
+.tip-badge{background:rgba(74,158,255,.15);border:1px solid rgba(74,158,255,.4);color:var(--blue);font-size:11px;font-weight:900;padding:3px 9px;border-radius:7px;white-space:nowrap;flex-shrink:0}
+.tip-en{font-size:13px;color:var(--text);flex:1}
+.tip-ar{font-family:'Cairo',sans-serif;font-size:11px;color:var(--muted);direction:rtl;display:block;margin-top:2px}
+
+.su-level-hd{padding:8px 12px 5px;margin-top:8px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(255,255,255,.05)}
+.su-level-code{font-size:11px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;padding:2px 8px;border-radius:5px;display:inline-block}
+.su-level-name{font-family:'Cairo',sans-serif;font-size:12px;font-weight:700;color:#f4c430;direction:rtl;margin:0;line-height:1}
+.lvl-a1{background:rgba(52,211,153,.15);color:#34d399;border:1px solid rgba(52,211,153,.35)}
+.lvl-a2{background:rgba(74,158,255,.15);color:#4a9eff;border:1px solid rgba(74,158,255,.35)}
+.lvl-b1{background:rgba(245,158,11,.15);color:#f59e0b;border:1px solid rgba(245,158,11,.35)}
+.lvl-b2{background:rgba(244,166,36,.15);color:var(--accent);border:1px solid rgba(244,166,36,.35)}
+.lvl-b2p{background:rgba(251,146,60,.15);color:#fb923c;border:1px solid rgba(251,146,60,.35)}
+.lvl-c1{background:rgba(168,85,247,.15);color:#a855f7;border:1px solid rgba(168,85,247,.35)}
+.su-coming{opacity:.28;cursor:default;pointer-events:none}
+.su-prog{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:6px;overflow:hidden}
+.su-prog-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:2px;width:0%;transition:width .6s ease}
+
+.nav-home-btn{display:inline-flex;align-items:center;gap:6px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.4);color:var(--accent);font-size:12px;font-weight:800;padding:5px 13px;border-radius:8px;text-decoration:none;transition:all .2s;white-space:nowrap;flex-shrink:0}
+.nav-home-btn:hover{background:rgba(244,166,36,.25);transform:translateY(-2px)}
+.nav-lesson-badge{background:var(--accent);color:#0a1628;font-size:12px;font-weight:900;padding:5px 13px;border-radius:7px;white-space:nowrap;letter-spacing:.3px;flex-shrink:0}
+.nav-lesson-name{font-size:13px;color:rgba(232,237,245,.7);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-sep{color:rgba(136,153,176,.5);font-size:13px;flex-shrink:0}
+.nav-left{display:flex;align-items:center;gap:8px;flex:1;min-width:0}
+.nav-right{display:flex;align-items:center;flex-shrink:0}
+</style>
+
+<style>
+/* Watermark on print */
+@media print {
+  body::before {
+    content: 'Mohammed Elhuseyin — English Learning Platform — محمية الحقوق';
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-35deg);
+    font-size: 48px;
+    font-weight: 900;
+    color: rgba(244,166,36,0.18);
+    z-index: 9999;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+}
+</style>
+
+<style>
+.float-menu-btn{display:none;position:fixed;bottom:22px;left:18px;z-index:9998;width:48px;height:48px;background:var(--primary-dark,#0f2548);border:2px solid rgba(244,166,36,.5);border-radius:14px;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:12px;box-shadow:0 4px 20px rgba(0,0,0,.4);transition:transform .15s,box-shadow .15s}
+.float-menu-btn:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,.5)}
+.float-menu-btn span{display:block;width:22px;height:2px;background:#f4a624;border-radius:2px;transition:all .25s}
+@media(max-width:768px){.float-menu-btn{display:flex}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-logo"><div class="sidebar-logo-icon">A</div><div><div class="sidebar-logo-text">English Course</div><div class="sidebar-logo-sub">MOHAMMED ELHUSEYIN</div></div></div>
+    <div class="sidebar-label ar">الوحدات الدراسية</div>
+  </div>
+  <div class="sidebar-units">
+  <div class="su-level-hd"><span class="su-level-code lvl-a1">A1</span><span class="su-level-name">مستوى المبتدئ تماماً</span></div>
+  <a href="lesson1.html" class="su-item"><div class="su-num">1</div><div class="su-texts"><div class="su-en">Alphabet & Numbers</div><div class="su-ar">الأحرف والأرقام</div><div class="su-prog"><div class="su-prog-fill" id="sp1"></div></div></div></a>
+  <a href="lesson2.html" class="su-item"><div class="su-num">2</div><div class="su-texts"><div class="su-en">Classroom Language & Greetings</div><div class="su-ar">لغة الصف والتحيات</div><div class="su-prog"><div class="su-prog-fill" id="sp2"></div></div></div></a>
+  <a href="lesson3.html" class="su-item"><div class="su-num">3</div><div class="su-texts"><div class="su-en">Nationalities & Countries</div><div class="su-ar">الجنسيات والدول</div><div class="su-prog"><div class="su-prog-fill" id="sp3"></div></div></div></a>
+  <a href="lesson4.html" class="su-item"><div class="su-num">4</div><div class="su-texts"><div class="su-en">Singular & Plural Nouns</div><div class="su-ar">الأسماء المفردة والجمع</div><div class="su-prog"><div class="su-prog-fill" id="sp4"></div></div></div></a>
+  <a href="lesson5.html" class="su-item"><div class="su-num">5</div><div class="su-texts"><div class="su-en">Days & Telling the Time</div><div class="su-ar">الأيام وإخبار الوقت</div><div class="su-prog"><div class="su-prog-fill" id="sp5"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-a2">A2</span><span class="su-level-name">المستوى الابتدائي</span></div>
+  <a href="unit1.html" class="su-item"><div class="su-num">6</div><div class="su-texts"><div class="su-en">Verb to <i>be</i></div><div class="su-ar">فعل التكوين</div><div class="su-prog"><div class="su-prog-fill" id="sp6"></div></div></div></a>
+  <a href="unit2.html" class="su-item"><div class="su-num">7</div><div class="su-texts"><div class="su-en">Present Simple</div><div class="su-ar">المضارع البسيط</div><div class="su-prog"><div class="su-prog-fill" id="sp7"></div></div></div></a>
+  <a href="unit3.html" class="su-item"><div class="su-num">8</div><div class="su-texts"><div class="su-en">Present Continuous</div><div class="su-ar">المضارع المستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp8"></div></div></div></a>
+  <a href="unit4.html" class="su-item"><div class="su-num">9</div><div class="su-texts"><div class="su-en">Past Simple: was / were</div><div class="su-ar">الماضي البسيط: كان</div><div class="su-prog"><div class="su-prog-fill" id="sp9"></div></div></div></a>
+  <a href="unit6.html" class="su-item"><div class="su-num">10</div><div class="su-texts"><div class="su-en">Past Simple: Regular & Irreg.</div><div class="su-ar">الماضي البسيط للأفعال</div><div class="su-prog"><div class="su-prog-fill" id="sp10"></div></div></div></a>
+  <a href="unit5.html" class="su-item"><div class="su-num">11</div><div class="su-texts"><div class="su-en">Can / Can't</div><div class="su-ar">القدرة والعجز</div><div class="su-prog"><div class="su-prog-fill" id="sp11"></div></div></div></a>
+  <a href="lesson12.html" class="su-item"><div class="su-num">12</div><div class="su-texts"><div class="su-en">Possessive Pronouns</div><div class="su-ar">ضمائر الملكية</div><div class="su-prog"><div class="su-prog-fill" id="sp12"></div></div></div></a>
+  <a href="unit7.html" class="su-item"><div class="su-num">13</div><div class="su-texts"><div class="su-en">There is / There are</div><div class="su-ar">يوجد / توجد</div><div class="su-prog"><div class="su-prog-fill" id="sp13"></div></div></div></a>
+  <a href="unit8.html" class="su-item"><div class="su-num">14</div><div class="su-texts"><div class="su-en">Adjectives</div><div class="su-ar">الصفات</div><div class="su-prog"><div class="su-prog-fill" id="sp14"></div></div></div></a>
+  <a href="unit9.html" class="su-item"><div class="su-num">15</div><div class="su-texts"><div class="su-en">Imperatives</div><div class="su-ar">صيغة الأمر والنهي</div><div class="su-prog"><div class="su-prog-fill" id="sp15"></div></div></div></a>
+  <a href="unit10.html" class="su-item"><div class="su-num">16</div><div class="su-texts"><div class="su-en">Object Pronouns</div><div class="su-ar">ضمائر المفعول به</div><div class="su-prog"><div class="su-prog-fill" id="sp16"></div></div></div></a>
+  <a href="unit11.html" class="su-item"><div class="su-num">17</div><div class="su-texts"><div class="su-en">Prepositions of Time & Place</div><div class="su-ar">حروف جر الوقت والمكان</div><div class="su-prog"><div class="su-prog-fill" id="sp17"></div></div></div></a>
+  <a href="unit12.html" class="su-item"><div class="su-num">18</div><div class="su-texts"><div class="su-en">Future Plans: going to</div><div class="su-ar">خطط المستقبل</div><div class="su-prog"><div class="su-prog-fill" id="sp18"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b1">B1</span><span class="su-level-name">تحت المتوسط</span></div>
+  <a href="lesson19.html" class="su-item"><div class="su-num">19</div><div class="su-texts"><div class="su-en">Present Perfect Introduction</div><div class="su-ar">مقدمة المضارع التام</div><div class="su-prog"><div class="su-prog-fill" id="sp19"></div></div></div></a>
+  <a href="lesson20.html" class="su-item"><div class="su-num">20</div><div class="su-texts"><div class="su-en">Past Continuous</div><div class="su-ar">الماضي المستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp20"></div></div></div></a>
+  <a href="lesson21.html" class="su-item"><div class="su-num">21</div><div class="su-texts"><div class="su-en">will vs. going to</div><div class="su-ar">المستقبل: إرادة أم تخطيط؟</div><div class="su-prog"><div class="su-prog-fill" id="sp21"></div></div></div></a>
+  <a href="lesson22.html" class="su-item"><div class="su-num">22</div><div class="su-texts"><div class="su-en">like / love / hate + -ing</div><div class="su-ar">التعبير عن التفضيلات</div><div class="su-prog"><div class="su-prog-fill" id="sp22"></div></div></div></a>
+  <a href="lesson23.html" class="su-item"><div class="su-num">23</div><div class="su-texts"><div class="su-en">Comparatives & Superlatives</div><div class="su-ar">المقارنة والتفضيل</div><div class="su-prog"><div class="su-prog-fill" id="sp23"></div></div></div></a>
+  <a href="lesson24.html" class="su-item"><div class="su-num">24</div><div class="su-texts"><div class="su-en">must / have to / should</div><div class="su-ar">أفعال الإلزام والنصيحة</div><div class="su-prog"><div class="su-prog-fill" id="sp24"></div></div></div></a>
+  <a href="lesson25.html" class="su-item"><div class="su-num">25</div><div class="su-texts"><div class="su-en">Infinitives & Gerunds</div><div class="su-ar">المصدر وصيغة الـ ing</div><div class="su-prog"><div class="su-prog-fill" id="sp25"></div></div></div></a>
+  <a href="lesson26.html" class="su-item"><div class="su-num">26</div><div class="su-texts"><div class="su-en">Articles: a/an / the</div><div class="su-ar">أدوات التعريف والتنكير</div><div class="su-prog"><div class="su-prog-fill" id="sp26"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b2">B2</span><span class="su-level-name">المستوى المتوسط</span></div>
+  <a href="lesson27.html" class="su-item"><div class="su-num">27</div><div class="su-texts"><div class="su-en">Present Perfect vs. Past Simple</div><div class="su-ar">المقارنة بين الماضي والتام</div><div class="su-prog"><div class="su-prog-fill" id="sp27"></div></div></div></a>
+  <a href="lesson28.html" class="su-item"><div class="su-num">28</div><div class="su-texts"><div class="su-en">Passive Voice</div><div class="su-ar">المبني للمجهول</div><div class="su-prog"><div class="su-prog-fill" id="sp28"></div></div></div></a>
+  <a href="lesson29.html" class="su-item"><div class="su-num">29</div><div class="su-texts"><div class="su-en">Zero / First / Second Cond.</div><div class="su-ar">الجمل الشرطية 0-1-2</div><div class="su-prog"><div class="su-prog-fill" id="sp29"></div></div></div></a>
+  <a href="lesson30.html" class="su-item"><div class="su-num">30</div><div class="su-texts"><div class="su-en">Reported Speech</div><div class="su-ar">الكلام غير المباشر</div><div class="su-prog"><div class="su-prog-fill" id="sp30"></div></div></div></a>
+  <a href="lesson31.html" class="su-item"><div class="su-num">31</div><div class="su-texts"><div class="su-en">Relative Clauses</div><div class="su-ar">جمل الوصل: who / which</div><div class="su-prog"><div class="su-prog-fill" id="sp31"></div></div></div></a>
+  <a href="lesson32.html" class="su-item"><div class="su-num">32</div><div class="su-texts"><div class="su-en">Quantifiers</div><div class="su-ar">محددات الكمية</div><div class="su-prog"><div class="su-prog-fill" id="sp32"></div></div></div></a>
+  <a href="lesson33.html" class="su-item"><div class="su-num">33</div><div class="su-texts"><div class="su-en">Phrasal Verbs Introduction</div><div class="su-ar">مقدمة الأفعال المركبة</div><div class="su-prog"><div class="su-prog-fill" id="sp33"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b2p">B2+</span><span class="su-level-name">فوق المتوسط</span></div>
+  <a href="lesson34.html" class="su-item"><div class="su-num">34</div><div class="su-texts"><div class="su-en">Narrative Tenses & Past Perfect</div><div class="su-ar">أزمنة السرد والماضي التام</div><div class="su-prog"><div class="su-prog-fill" id="sp34"></div></div></div></a>
+  <a href="lesson35.html" class="su-item"><div class="su-num">35</div><div class="su-texts"><div class="su-en">Future Perfect & Continuous</div><div class="su-ar">المستقبل التام والمستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp35"></div></div></div></a>
+  <a href="lesson36.html" class="su-item"><div class="su-num">36</div><div class="su-texts"><div class="su-en">Third Conditional & Regrets</div><div class="su-ar">الشرط الثالث والندم</div><div class="su-prog"><div class="su-prog-fill" id="sp36"></div></div></div></a>
+  <a href="lesson37.html" class="su-item"><div class="su-num">37</div><div class="su-texts"><div class="su-en">Causative: have/get done</div><div class="su-ar">الأفعال السببية</div><div class="su-prog"><div class="su-prog-fill" id="sp37"></div></div></div></a>
+  <a href="lesson38.html" class="su-item"><div class="su-num">38</div><div class="su-texts"><div class="su-en">Advanced Passive</div><div class="su-ar">المبني للمجهول المتقدم</div><div class="su-prog"><div class="su-prog-fill" id="sp38"></div></div></div></a>
+  <a href="lesson39.html" class="su-item"><div class="su-num">39</div><div class="su-texts"><div class="su-en">Speculation: must/might/can't</div><div class="su-ar">التخمين والاستنتاج</div><div class="su-prog"><div class="su-prog-fill" id="sp39"></div></div></div></a>
+  <a href="lesson40.html" class="su-item"><div class="su-num">40</div><div class="su-texts"><div class="su-en">Idioms & Collocations</div><div class="su-ar">المصطلحات والتعبيرات</div><div class="su-prog"><div class="su-prog-fill" id="sp40"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-c1">C1</span><span class="su-level-name">المستوى المتقدم الأكاديمي</span></div>
+  <a href="lesson41.html" class="su-item"><div class="su-num">41</div><div class="su-texts"><div class="su-en">Inversion & Emphatic Structures</div><div class="su-ar">التقديم والتأخير للتأكيد</div><div class="su-prog"><div class="su-prog-fill" id="sp41"></div></div></div></a>
+  <a href="lesson42.html" class="su-item"><div class="su-num">42</div><div class="su-texts"><div class="su-en">Mixed Conditionals</div><div class="su-ar">الجمل الشرطية المختلطة</div><div class="su-prog"><div class="su-prog-fill" id="sp42"></div></div></div></a>
+  <a href="lesson43.html" class="su-item"><div class="su-num">43</div><div class="su-texts"><div class="su-en">Advanced Gerunds & Infinitives</div><div class="su-ar">المصادر المتقدمة</div><div class="su-prog"><div class="su-prog-fill" id="sp43"></div></div></div></a>
+  <a href="lesson44.html" class="su-item"><div class="su-num">44</div><div class="su-texts"><div class="su-en">Cleft Sentences</div><div class="su-ar">الجمل المشقوقة</div><div class="su-prog"><div class="su-prog-fill" id="sp44"></div></div></div></a>
+  <a href="lesson45.html" class="su-item"><div class="su-num">45</div><div class="su-texts"><div class="su-en">Discourse Markers</div><div class="su-ar">أدوات الربط الأكاديمية</div><div class="su-prog"><div class="su-prog-fill" id="sp45"></div></div></div></a>
+  <a href="lesson46.html" class="su-item su-active"><div class="su-num">46</div><div class="su-texts"><div class="su-en">Nuances & Euphemisms</div><div class="su-ar">الفروقات الدقيقة والتلطيف</div><div class="su-prog"><div class="su-prog-fill" id="sp46"></div></div></div></a>
+</div>
+</aside>
+<div class="main-content">
+<nav class="topnav">
+  <div class="nav-left">
+    <a href="../index.html" class="nav-home-btn">&#x1F3E0; الرئيسية</a>
+    <span class="nav-sep">&#x203A;</span>
+    <span class="nav-lesson-badge">Lesson 46</span>
+    <span class="nav-sep">&#x203A;</span>
+    <span class="nav-lesson-name">Nuances &amp; Euphemisms</span>
+  </div>
+  <div class="nav-right"><span class="nav-brand">MOHAMMED ELHUSEYIN</span></div>
+</nav>
+
+<div class="hero">
+  <div class="unit-badge">&#x1F4DA; Lesson 46 &nbsp;&middot;&nbsp; C1 Advanced &nbsp;&middot;&nbsp; &#x1F3C6; Final Lesson</div>
+  <h1 class="hero-title">Nuances &amp; Euphemisms</h1>
+  <div class="hero-ar ar">الفروقات الدقيقة والتلطيف في اللغة</div>
+  <p class="hero-sub">The difference between a <b>good</b> speaker and a <b>great</b> one is knowing not just what to say, but <em>how</em> to say it. <b>Nuances</b> are the subtle differences between similar words — connotation, register, intensity. <b>Euphemisms</b> are polite substitutes for uncomfortable truths. Together they are the hallmark of C1 mastery.</p>
+  <div class="hero-tags">
+    <span class="tag tag-grammar">&#x1F4D6; Grammar</span>
+    <span class="tag tag-other">&#x1F4AC; Everyday English</span>
+    <span class="tag tag-other">&#x1F4D8; Reading</span>
+    <span class="tag tag-green">&#x2705; Check It!</span>
+  </div>
+</div>
+
+<div class="main-tabs">
+  <button class="main-tab active" onclick="showTab('grammar',this)">&#x1F4D6; Grammar</button>
+  <button class="main-tab" onclick="showTab('everyday',this)">&#x1F4AC; Everyday English</button>
+  <button class="main-tab" onclick="showTab('reading',this)">&#x1F4D8; Reading</button>
+  <button class="main-tab" onclick="showTab('checkit',this)">&#x2705; Check It!</button>
+</div>
+
+<!-- ════ GRAMMAR ════ -->
+<div id="tab-grammar" class="tab-panel active">
+
+  <!-- Part 1: Nuances -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F50D; Part 1 — Nuances (الفروقات الدقيقة)</div>
+    <div class="rule-ar">كلمات متشابهة… لكن ليست متطابقة</div>
+    <div class="nu-intro">
+      <b>Nuance</b> = a subtle difference in meaning, tone, connotation, or register between words that seem synonymous. Using the <em>right</em> word shows mastery — using the <em>wrong</em> one can confuse, offend, or undermine your credibility.<br><br>
+      Three layers of nuance: <b>Intensity</b> (how strong?) · <b>Connotation</b> (positive/negative?) · <b>Register</b> (formal/informal?)
+    </div>
+  </div>
+
+  <!-- Intensity scales -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F4CA; Intensity Scales — درجات الشدة</div>
+    <div class="rule-ar">من الأضعف إلى الأقوى</div>
+
+    <div class="nu-scale-wrap">
+      <div class="nu-scale-title">&#x1F621; Anger ← mild to extreme →</div>
+      <div class="nu-scale"><span class="nu-word nw-1" onclick="ttsRead(&quot;annoyed&quot;,0.82)">annoyed</span><span class="nu-arrow">›</span><span class="nu-word nw-2" onclick="ttsRead(&quot;irritated&quot;,0.82)">irritated</span><span class="nu-arrow">›</span><span class="nu-word nw-3" onclick="ttsRead(&quot;angry&quot;,0.82)">angry</span><span class="nu-arrow">›</span><span class="nu-word nw-4" onclick="ttsRead(&quot;furious&quot;,0.82)">furious</span><span class="nu-arrow">›</span><span class="nu-word nw-5" onclick="ttsRead(&quot;livid&quot;,0.82)">livid</span><span class="nu-arrow">›</span><span class="nu-word nw-6" onclick="ttsRead(&quot;enraged&quot;,0.82)">enraged</span></div>
+      <div class="nu-ar-note">منزعج قليلاً ← غاضب ← غاضب جداً ← ثائر ← متفجر من الغضب</div>
+      <div class="nu-ex"><b>I was annoyed</b> by the delay. / <b>He was furious</b> when he saw the bill. / <b>She was livid</b> — she couldn't even speak.</div>
+    </div>
+
+    <div class="nu-scale-wrap">
+      <div class="nu-scale-title">&#x1F604; Happiness ← mild to extreme →</div>
+      <div class="nu-scale"><span class="nu-word nw-1" onclick="ttsRead(&quot;pleased&quot;,0.82)">pleased</span><span class="nu-arrow">›</span><span class="nu-word nw-2" onclick="ttsRead(&quot;happy&quot;,0.82)">happy</span><span class="nu-arrow">›</span><span class="nu-word nw-3" onclick="ttsRead(&quot;delighted&quot;,0.82)">delighted</span><span class="nu-arrow">›</span><span class="nu-word nw-4" onclick="ttsRead(&quot;thrilled&quot;,0.82)">thrilled</span><span class="nu-arrow">›</span><span class="nu-word nw-5" onclick="ttsRead(&quot;ecstatic&quot;,0.82)">ecstatic</span><span class="nu-arrow">›</span><span class="nu-word nw-6" onclick="ttsRead(&quot;overjoyed&quot;,0.82)">overjoyed</span></div>
+      <div class="nu-ar-note">سعيد قليلاً ← سعيد ← مسرور جداً ← متحمس ← في قمة السعادة</div>
+      <div class="nu-ex"><b>I was pleased</b> with the result. / <b>She was thrilled</b> to get the promotion. / <b>They were ecstatic</b> at the news.</div>
+    </div>
+
+    <div class="nu-scale-wrap">
+      <div class="nu-scale-title">&#x1F625; Sadness ← mild to extreme →</div>
+      <div class="nu-scale"><span class="nu-word nw-1" onclick="ttsRead(&quot;unhappy&quot;,0.82)">unhappy</span><span class="nu-arrow">›</span><span class="nu-word nw-2" onclick="ttsRead(&quot;sad&quot;,0.82)">sad</span><span class="nu-arrow">›</span><span class="nu-word nw-3" onclick="ttsRead(&quot;miserable&quot;,0.82)">miserable</span><span class="nu-arrow">›</span><span class="nu-word nw-4" onclick="ttsRead(&quot;devastated&quot;,0.82)">devastated</span><span class="nu-arrow">›</span><span class="nu-word nw-5" onclick="ttsRead(&quot;heartbroken&quot;,0.82)">heartbroken</span></div>
+      <div class="nu-ar-note">غير سعيد ← حزين ← بائس ← محطم ← منكسر القلب</div>
+      <div class="nu-ex"><b>She seemed unhappy</b> with the outcome. / <b>He was devastated</b> when the project was cancelled.</div>
+    </div>
+
+    <div class="nu-scale-wrap">
+      <div class="nu-scale-title">&#x1F634; Tiredness ← mild to extreme →</div>
+      <div class="nu-scale"><span class="nu-word nw-1" onclick="ttsRead(&quot;tired&quot;,0.82)">tired</span><span class="nu-arrow">›</span><span class="nu-word nw-2" onclick="ttsRead(&quot;weary&quot;,0.82)">weary</span><span class="nu-arrow">›</span><span class="nu-word nw-3" onclick="ttsRead(&quot;exhausted&quot;,0.82)">exhausted</span><span class="nu-arrow">›</span><span class="nu-word nw-4" onclick="ttsRead(&quot;drained&quot;,0.82)">drained</span><span class="nu-arrow">›</span><span class="nu-word nw-5" onclick="ttsRead(&quot;burnt out&quot;,0.82)">burnt out</span></div>
+      <div class="nu-ar-note">متعب ← متعب ومُثبَّط ← مُنهَك ← مُستنزَف ← محترق من العمل</div>
+      <div class="nu-ex"><b>I'm tired</b> — let's rest. / <b>She was exhausted</b> after the 14-hour shift. / <b>He's completely burnt out</b> — he needs a month off.</div>
+    </div>
+  </div>
+
+  <!-- Connotation: similar words, different feel -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F3AF; Connotation — الدلالة الضمنية</div>
+    <div class="rule-ar">نفس المعنى الأساسي — لكن بشعور مختلف</div>
+    <div class="nu-cmp">
+      <div class="nu-cmp-head"><span>Word</span><span>Connotation</span><span>Example</span></div>
+      <div class="nu-cmp-row"><span class="nc-word" onclick="ttsRead(&quot;slim&quot;,0.88)">slim &#x1F509;</span><span><span class="con-pos">positive</span></span><span class="nc-note">"She has a slim figure."</span></div>
+      <div class="nu-cmp-row"><span class="nc-word" onclick="ttsRead(&quot;slender&quot;,0.88)">slender &#x1F509;</span><span><span class="con-pos">positive/elegant</span></span><span class="nc-note">"A slender, graceful athlete."</span></div>
+      <div class="nu-cmp-row"><span class="nc-word" onclick="ttsRead(&quot;thin&quot;,0.88)">thin &#x1F509;</span><span><span class="con-neu">neutral</span></span><span class="nc-note">"He was very thin after the illness."</span></div>
+      <div class="nu-cmp-row"><span class="nc-word" onclick="ttsRead(&quot;skinny&quot;,0.88)">skinny &#x1F509;</span><span><span class="con-neg">negative/informal</span></span><span class="nc-note">"Don't call him skinny — it's rude."</span></div>
+      <div class="nu-cmp-row"><span class="nc-word" onclick="ttsRead(&quot;scrawny&quot;,0.88)">scrawny &#x1F509;</span><span><span class="con-neg">very negative</span></span><span class="nc-note">"A scrawny, underfed stray cat."</span></div>
+    </div>
+    <div class="nu-cmp" style="margin-top:10px">
+      <div class="nu-cmp-head"><span>Word</span><span>Connotation</span><span>Example</span></div>
+      <div class="nu-cmp-row"><span class="nc-word" onclick="ttsRead(&quot;affordable&quot;,0.88)">affordable &#x1F509;</span><span><span class="con-pos">positive — value</span></span><span class="nc-note">"An affordable family car."</span></div>
+      <div class="nu-cmp-row"><span class="nc-word" onclick="ttsRead(&quot;inexpensive&quot;,0.88)">inexpensive &#x1F509;</span><span><span class="con-pos">positive — neutral</span></span><span class="nc-note">"An inexpensive but reliable option."</span></div>
+      <div class="nu-cmp-row"><span class="nc-word" onclick="ttsRead(&quot;cheap&quot;,0.88)">cheap &#x1F509;</span><span><span class="con-neg">negative — low quality</span></span><span class="nc-note">"This material feels cheap."</span></div>
+      <div class="nu-cmp-row"><span class="nc-word" onclick="ttsRead(&quot;stingy&quot;,0.88)">stingy &#x1F509;</span><span><span class="con-neg">very negative</span></span><span class="nc-note">"He's so stingy — he never tips."</span></div>
+    </div>
+  </div>
+
+  <!-- Register: problem / issue / challenge -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F4CB; Register — درجة الرسمية</div>
+    <div class="rule-ar">نفس الفكرة — مستويات رسمية مختلفة</div>
+    <div class="reg-ladder">
+      <div class="reg-row"><span class="reg-badge rb-formal">Formal</span><div class="reg-text">"We encountered <b>a significant challenge</b> in the third quarter." <span class="reg-ar">تحدٍّ كبير — إيجابي، يُشير إلى إمكانية التغلب عليه</span></div></div>
+      <div class="reg-row"><span class="reg-badge rb-formal">Formal</span><div class="reg-text">"There is <b>an issue</b> we need to address regarding the timeline." <span class="reg-ar">مشكلة — أقل حدةً من problem في السياق المهني</span></div></div>
+      <div class="reg-row"><span class="reg-badge rb-neutral">Neutral</span><div class="reg-text">"We have <b>a problem</b> — the delivery was delayed by two weeks." <span class="reg-ar">مشكلة — مباشر وواضح</span></div></div>
+      <div class="reg-row"><span class="reg-badge rb-informal">Informal</span><div class="reg-text">"It's <b>a mess</b> — nobody knows what's happening." <span class="reg-ar">فوضى — غير رسمي تماماً</span></div></div>
+    </div>
+    <div class="reg-ladder" style="margin-top:10px">
+      <div class="reg-row"><span class="reg-badge rb-formal">Formal</span><div class="reg-text">"He is <b>elderly / a senior citizen</b>." <span class="reg-ar">مسن — مهذب ومحترم</span></div></div>
+      <div class="reg-row"><span class="reg-badge rb-neutral">Neutral</span><div class="reg-text">"He is <b>old</b>." <span class="reg-ar">كبير السن — محايد لكن مباشر</span></div></div>
+      <div class="reg-row"><span class="reg-badge rb-informal">Informal</span><div class="reg-text">"He's <b>ancient / past it</b>." <span class="reg-ar">قديم / تجاوز أوانه — غير مهذب، محتمل الإهانة</span></div></div>
+      <div class="reg-row"><span class="reg-badge rb-rude">Rude</span><div class="reg-text">"He's <b>over the hill / a geezer</b>." <span class="reg-ar">تجاوز ذروته / عجوز — مسيء في السياق المهني</span></div></div>
+    </div>
+  </div>
+
+  <!-- Part 2: Euphemisms -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F91D; Part 2 — Euphemisms (التلطيف)</div>
+    <div class="rule-ar">قول الحقيقة… بطريقة أكثر لطفاً</div>
+    <div class="nu-intro">
+      A <b>euphemism</b> replaces a direct, harsh, or uncomfortable word with a softer expression. Used in professional, social, and political contexts to be <em>polite, diplomatic, or indirect</em>. Overusing them can sound corporate or evasive — know when directness is better.
+    </div>
+    <div class="eu-cat-grid">
+      <div class="eu-cat ec-death" onclick="ttsRead(&quot;Death euphemisms: passed away, departed, gone, lost, no longer with us, at peace, crossed over.&quot;,0.88)">
+        <div class="eu-tag">&#x1FAE6; Death &amp; Loss</div>
+        <div class="eu-name">Passing Away</div>
+        <div class="eu-pairs">
+          <div><span class="eu-harsh">died</span> &#x2192; <span class="eu-soft">passed away / departed</span></div>
+          <div><span class="eu-harsh">dead</span> &#x2192; <span class="eu-soft">no longer with us / at peace</span></div>
+          <div><span class="eu-harsh">killed</span> &#x2192; <span class="eu-soft">lost their life / perished</span></div>
+        </div>
+      </div>
+      <div class="eu-cat ec-work" onclick="ttsRead(&quot;Job loss euphemisms: let go, laid off, made redundant, downsizing, restructuring, right-sizing.&quot;,0.88)">
+        <div class="eu-tag">&#x1F4BC; Work &amp; Jobs</div>
+        <div class="eu-name">Job Loss</div>
+        <div class="eu-pairs">
+          <div><span class="eu-harsh">fired</span> &#x2192; <span class="eu-soft">let go / dismissed</span></div>
+          <div><span class="eu-harsh">sacked</span> &#x2192; <span class="eu-soft">made redundant / laid off</span></div>
+          <div><span class="eu-harsh">mass firing</span> &#x2192; <span class="eu-soft">downsizing / restructuring</span></div>
+        </div>
+      </div>
+      <div class="eu-cat ec-body" onclick="ttsRead(&quot;Body euphemisms: full-figured, plus-size, vertically challenged, differently abled, hard of hearing, visually impaired.&quot;,0.88)">
+        <div class="eu-tag">&#x1F9D1; Body &amp; Ability</div>
+        <div class="eu-name">Physical Description</div>
+        <div class="eu-pairs">
+          <div><span class="eu-harsh">fat</span> &#x2192; <span class="eu-soft">full-figured / plus-size</span></div>
+          <div><span class="eu-harsh">short</span> &#x2192; <span class="eu-soft">vertically challenged</span></div>
+          <div><span class="eu-harsh">disabled</span> &#x2192; <span class="eu-soft">differently abled</span></div>
+          <div><span class="eu-harsh">deaf</span> &#x2192; <span class="eu-soft">hard of hearing</span></div>
+        </div>
+      </div>
+      <div class="eu-cat ec-money" onclick="ttsRead(&quot;Money euphemisms: financially challenged, cash-flow issues, in the red, negative growth, pre-owned.&quot;,0.88)">
+        <div class="eu-tag">&#x1F4B0; Money &amp; Finance</div>
+        <div class="eu-name">Financial Difficulty</div>
+        <div class="eu-pairs">
+          <div><span class="eu-harsh">broke</span> &#x2192; <span class="eu-soft">financially challenged</span></div>
+          <div><span class="eu-harsh">in debt</span> &#x2192; <span class="eu-soft">cash-flow issues / in the red</span></div>
+          <div><span class="eu-harsh">loss</span> &#x2192; <span class="eu-soft">negative growth</span></div>
+          <div><span class="eu-harsh">second-hand</span> &#x2192; <span class="eu-soft">pre-owned / previously loved</span></div>
+        </div>
+      </div>
+      <div class="eu-cat ec-war" onclick="ttsRead(&quot;War euphemisms: collateral damage, friendly fire, neutralise, take out, enhanced interrogation.&quot;,0.88)">
+        <div class="eu-tag">&#x26A0; Military &amp; Politics</div>
+        <div class="eu-name">War Language</div>
+        <div class="eu-pairs">
+          <div><span class="eu-harsh">civilian deaths</span> &#x2192; <span class="eu-soft">collateral damage</span></div>
+          <div><span class="eu-harsh">shoot own troops</span> &#x2192; <span class="eu-soft">friendly fire</span></div>
+          <div><span class="eu-harsh">kill / assassinate</span> &#x2192; <span class="eu-soft">neutralise / take out</span></div>
+          <div><span class="eu-harsh">torture</span> &#x2192; <span class="eu-soft">enhanced interrogation</span></div>
+        </div>
+      </div>
+      <div class="eu-cat ec-lie" onclick="ttsRead(&quot;Dishonesty euphemisms: economical with the truth, not entirely accurate, misleading, misspeaking, alternative facts.&quot;,0.88)">
+        <div class="eu-tag">&#x1F4AC; Truth &amp; Honesty</div>
+        <div class="eu-name">Avoiding Direct Lies</div>
+        <div class="eu-pairs">
+          <div><span class="eu-harsh">lying</span> &#x2192; <span class="eu-soft">being economical with the truth</span></div>
+          <div><span class="eu-harsh">lied</span> &#x2192; <span class="eu-soft">misspoke / was not accurate</span></div>
+          <div><span class="eu-harsh">propaganda</span> &#x2192; <span class="eu-soft">alternative facts / messaging</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mistakes -->
+  <div class="rule-section">
+    <div class="rule-title">&#x26A0; Common Mistakes — أخطاء شائعة</div>
+    <div class="warn-row">
+      <span class="warn-icon">&#x274C;</span>
+      <div>
+        <div><span class="warn-wrong">Our product is cheap and you will love it.</span>&nbsp;&#x2192;&nbsp;<span class="warn-right">Our product is affordable — and excellent value.</span></div>
+        <div class="warn-ar">"Cheap" في التسويق تعني رديئة الجودة — استخدم "affordable" أو "cost-effective"</div>
+      </div>
+    </div>
+    <div class="warn-row">
+      <span class="warn-icon">&#x274C;</span>
+      <div>
+        <div><span class="warn-wrong">I am very tired of this work.</span>&nbsp;&#x2192;&nbsp;<span class="warn-right">I feel completely drained / burnt out by this workload.</span></div>
+        <div class="warn-ar">"Tired" ضعيفة جداً لوصف الإرهاق الشديد — استخدم drained/exhausted/burnt out</div>
+      </div>
+    </div>
+    <div class="warn-row">
+      <span class="warn-icon">&#x274C;</span>
+      <div>
+        <div><span class="warn-wrong">He was fired because he was bad at his job.</span>&nbsp;&#x2192;&nbsp;<span class="warn-right">He was let go due to performance concerns.</span></div>
+        <div class="warn-ar">في السياق المهني: "fired" جرحٌ مباشر — استخدم "let go" أو "dismissed" أو "made redundant"</div>
+      </div>
+    </div>
+    <div class="warn-row">
+      <span class="warn-icon">&#x274C;</span>
+      <div>
+        <div><span class="warn-wrong">He is fat and old.</span>&nbsp;&#x2192;&nbsp;<span class="warn-right">He is full-figured and elderly.</span></div>
+        <div class="warn-ar">في الحديث عن أشخاص: "fat" و"old" غير مهذبتين — استخدم euphemisms مناسبة</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rule-section">
+    <div class="rule-title">&#x1F4A1; Quick Tips</div>
+    <div class="tip-row" onclick="ttsRead(&quot;Tip: Connotation matters as much as denotation. Slim and skinny both mean thin, but slim is a compliment and skinny can be an insult. Always consider how a word feels, not just what it means.&quot;,0.88)">
+      <span class="tip-badge">connotation</span>
+      <div><span class="tip-en"><b>Slim</b> vs <b>skinny</b>: same meaning, opposite feeling. Always consider how a word <em>feels</em>, not just what it means &#x1F509;</span><span class="tip-ar">slim مدح — skinny إهانة. الدلالة الضمنية تهمّ بقدر المعنى</span></div>
+    </div>
+    <div class="tip-row" onclick="ttsRead(&quot;Tip: Use challenge instead of problem when you want to sound positive and solution-focused. Issues is more polite than problem in professional emails.&quot;,0.88)">
+      <span class="tip-badge">register</span>
+      <div><span class="tip-en">Use <b>challenge</b> instead of "problem" to sound solution-focused; <b>issue</b> is softer than "problem" in emails &#x1F509;</span><span class="tip-ar">challenge أكثر إيجابية من problem / issue أقل حدةً في البريد الرسمي</span></div>
+    </div>
+    <div class="tip-row" onclick="ttsRead(&quot;Tip: Euphemisms are powerful but can sound evasive. In creative writing or journalism, sometimes the direct word is more honest and more powerful.&quot;,0.88)">
+      <span class="tip-badge">when to avoid</span>
+      <div><span class="tip-en">Euphemisms can sound <b>evasive or corporate</b> — sometimes directness is more honest and more powerful &#x1F509;</span><span class="tip-ar">التلطيف أحياناً يبدو تهرباً — المباشرة أحياناً أكثر صدقاً وقوة</span></div>
+    </div>
+    <div class="tip-row" onclick="ttsRead(&quot;Tip: Intensity words like livid, ecstatic, and devastated are much stronger than angry, happy, and sad. Using them correctly makes your English sound natural and vivid.&quot;,0.88)">
+      <span class="tip-badge">intensity</span>
+      <div><span class="tip-en"><b>Livid / ecstatic / devastated</b> are far more vivid than angry / happy / sad — use strong words in context &#x1F509;</span><span class="tip-ar">الكلمات القوية تجعل لغتك أكثر حيوية وتعبيراً</span></div>
+    </div>
+  </div>
+
+</div><!-- /grammar -->
+
+<!-- ════ EVERYDAY ENGLISH ════ -->
+<div id="tab-everyday" class="tab-panel">
+
+  <div class="dlg-block">
+    <div class="dlg-header">
+      <div><div class="dlg-title">&#x1F4BC; Breaking Bad News at Work</div><div class="dlg-sub ar">إيصال أخبار سيئة في العمل</div></div>
+      <div class="dlg-tags"><span class="tag tag-grammar">let go / made redundant / restructuring</span></div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;I need to speak with you privately. As you know, the company is going through a significant restructuring.&quot;,0.88)">I need to speak with you privately. As you know, the company is going through a significant <b>restructuring</b>. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">أحتاج إلى التحدث معك على انفراد. كما تعلم، تمر الشركة بإعادة هيكلة كبيرة.</div>
+          <div class="chat-bubble-foot">Manager</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;I see. Am I being let go?&quot;,0.88)">I see. Am I being <b>let go</b>? <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">أفهم. هل سيتم الاستغناء عني؟</div>
+          <div class="chat-bubble-foot">Employee</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Your position has been made redundant as part of the downsizing. It is not a reflection of your performance — you have been an exceptional contributor.&quot;,0.88)">Your position has been <b>made redundant</b> as part of the <b>downsizing</b>. It is not a reflection of your performance — you have been an exceptional contributor. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">تم إلغاء منصبك كجزء من تقليص الحجم. هذا لا يعكس أداءك — لقد كنت مساهماً استثنائياً.</div>
+          <div class="chat-bubble-foot">Manager</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;I appreciate the kind words. When is my last day?&quot;,0.88)">I appreciate the kind words. When is my last day? <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">أقدّر الكلمات الطيبة. متى سيكون آخر يوم لي؟</div>
+          <div class="chat-bubble-foot">Employee</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dlg-block">
+    <div class="dlg-header">
+      <div><div class="dlg-title">&#x1F91D; Describing People Carefully</div><div class="dlg-sub ar">وصف الناس بلطف</div></div>
+      <div class="dlg-tags"><span class="tag tag-grammar">elderly / full-figured / hard of hearing / passed away</span></div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Can you describe the witness for the report?&quot;,0.88)">Can you describe the witness for the report? <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">هل يمكنك وصف الشاهد للتقرير؟</div>
+          <div class="chat-bubble-foot">Officer</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Of course. He was elderly, perhaps in his late seventies. Full-figured, with white hair. He appeared to be hard of hearing — I had to repeat my questions.&quot;,0.88)">Of course. He was <b>elderly</b>, perhaps in his late seventies. <b>Full-figured</b>, with white hair. He appeared to be <b>hard of hearing</b> — I had to repeat my questions. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">بالطبع. كان مسناً، ربما في أواخر السبعينيات. ممتلئ الجسم، بشعر أبيض. يبدو أنه يعاني من ضعف السمع — اضطررت لتكرار أسئلتي.</div>
+          <div class="chat-bubble-foot">Detective</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Did he mention the previous owner of the property?&quot;,0.88)">Did he mention the previous owner of the property? <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">هل ذكر المالك السابق للعقار؟</div>
+          <div class="chat-bubble-foot">Officer</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Yes. He said the original owner had passed away three years ago. The family then sold the property.&quot;,0.88)">Yes. He said the original owner had <b>passed away</b> three years ago. The family then sold the property. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">نعم. قال إن المالك الأصلي قد توفي منذ ثلاث سنوات. ثم قامت العائلة ببيع العقار.</div>
+          <div class="chat-bubble-foot">Detective</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dlg-block">
+    <div class="dlg-header">
+      <div><div class="dlg-title">&#x1F4B0; Financial Difficulty — Diplomatically</div><div class="dlg-sub ar">صعوبات مالية — بدبلوماسية</div></div>
+      <div class="dlg-tags"><span class="tag tag-grammar">cash-flow issues / in the red / negative growth / pre-owned</span></div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;The Q3 report shows we experienced negative growth of eight percent.&quot;,0.88)">The Q3 report shows we experienced <b>negative growth</b> of 8%. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">يُظهر تقرير الربع الثالث أننا شهدنا نمواً سلبياً بنسبة 8%.</div>
+          <div class="chat-bubble-foot">CFO</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;You mean we lost money? Are we in the red?&quot;,0.88)">You mean we <em>lost money</em>? Are we <b>in the red</b>? <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">تقصد أننا خسرنا مالاً؟ هل نحن في العجز؟</div>
+          <div class="chat-bubble-foot">Board Member</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;We have some cash-flow challenges this quarter. However, our pre-owned vehicle division performed well and is offsetting losses elsewhere.&quot;,0.88)">We have some <b>cash-flow challenges</b> this quarter. However, our <b>pre-owned</b> vehicle division performed well and is offsetting losses elsewhere. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">لدينا بعض تحديات التدفق النقدي هذا الربع. لكن قسم السيارات المستعملة لدينا أداء جيداً ويعوض الخسائر في أماكن أخرى.</div>
+          <div class="chat-bubble-foot">CFO</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dlg-block">
+    <div class="dlg-header">
+      <div><div class="dlg-title">&#x1F921; When Nuance Gets Funny</div><div class="dlg-sub ar">حين تصبح الدقة اللغوية مضحكة</div></div>
+      <div class="dlg-tags"><span class="tag tag-grammar">economical with the truth / vertically challenged / burnt out</span></div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Did you tell your boss you finished the report?&quot;,0.88)">Did you tell your boss you finished the report? <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">هل أخبرت مديرك أنك أنهيت التقرير؟</div>
+          <div class="chat-bubble-foot">Hana</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;I was perhaps a little economical with the truth. I said it was nearly done.&quot;,0.88)">I was perhaps a little <b>economical with the truth</b>. I said it was <em>nearly</em> done. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">ربما كنت مقتصداً بعض الشيء في الحقيقة. قلت أنه شبه منتهٍ.</div>
+          <div class="chat-bubble-foot">Faris</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;So you lied. And how are you feeling generally?&quot;,0.88)">So you <em>lied</em>. And how are you feeling generally? <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">إذاً لقد كذبت. وكيف حالك بشكل عام؟</div>
+          <div class="chat-bubble-foot">Hana</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Completely burnt out. Though I prefer the term temporarily energy-deficient.&quot;,0.88)">Completely <b>burnt out</b>. Though I prefer the term <em>temporarily energy-deficient</em>. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">محترق تماماً من العمل. وإن كنت أفضل مصطلح "نقص مؤقت في الطاقة".</div>
+          <div class="chat-bubble-foot">Faris</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dlg-block">
+    <div class="dlg-header">
+      <div><div class="dlg-title">&#x1F4DD; Marketing Language</div><div class="dlg-sub ar">لغة التسويق والمبيعات</div></div>
+      <div class="dlg-tags"><span class="tag tag-grammar">affordable / pre-owned / cost-effective / challenge</span></div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;We need to rewrite the ad copy. The phrase cheap car sounds terrible.&quot;,0.88)">We need to rewrite the ad copy. The phrase "<b>cheap car</b>" sounds terrible. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">نحتاج إلى إعادة كتابة نسخة الإعلان. عبارة "سيارة رخيصة" تبدو فظيعة.</div>
+          <div class="chat-bubble-foot">Creative Dir.</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Use affordable or cost-effective instead. And for the second-hand models, say pre-owned or previously loved.&quot;,0.88)">Use <b>affordable</b> or <b>cost-effective</b> instead. And for the second-hand models, say <b>pre-owned</b> or <em>previously loved</em>. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">استخدم "بأسعار معقولة" أو "فعّال من حيث التكلفة". وللموديلات المستعملة، قل "مملوكة مسبقاً" أو "محبوبة سابقاً".</div>
+          <div class="chat-bubble-foot">Copywriter</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;And instead of saying the engine has problems, we can say it presents a unique opportunity for the mechanically inclined buyer.&quot;,0.88)">And instead of saying "the engine has problems," we can say it <em>presents a unique opportunity for the mechanically inclined buyer</em>. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">وبدلاً من القول "المحرك به مشاكل"، يمكننا القول إنه "يمثل فرصة فريدة للمشترين المهتمين بالميكانيكا".</div>
+          <div class="chat-bubble-foot">Creative Dir.</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;That is brilliant. Euphemisms are the backbone of good marketing copy.&quot;,0.88)">That is brilliant. <b>Euphemisms</b> are the backbone of good marketing copy. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">هذا رائع. التلطيف هو العمود الفقري لنسخة التسويق الجيدة.</div>
+          <div class="chat-bubble-foot">Copywriter</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /everyday -->
+
+<!-- ════ READING ════ -->
+<div id="tab-reading" class="tab-panel">
+  <div class="read-wrap">
+    <div class="read-header">
+      <div class="read-title">&#x1F4D8; The Power of the Right Word</div>
+      <div class="read-sub ar">قوة الكلمة الصحيحة</div>
+    </div>
+    <div class="read-body">
+      <p onclick="ttsRead(&quot;Language is never truly neutral. Every word we choose carries a weight of connotation, register, and intensity that shapes how our message is received. The difference between saying someone is slim rather than skinny, or that a company experienced negative growth rather than a loss, is the difference between diplomacy and bluntness.&quot;,0.88)">Language is never truly neutral. Every word we choose carries a weight of <b>connotation, register, and intensity</b> that shapes how our message is received. The difference between saying someone is <b>slim</b> rather than <em>skinny</em>, or that a company experienced <b>negative growth</b> rather than a <em>loss</em>, is the difference between diplomacy and bluntness. <span class="read-sp">&#x1F509;</span></p>
+      <p onclick="ttsRead(&quot;Euphemisms are most visible in the world of business and politics. When a government says it will neutralise a target, or when a corporation announces a downsizing rather than mass layoffs, language is being used strategically to reduce emotional impact. The listener hears the same news, but the framing changes how they process it.&quot;,0.88)">Euphemisms are most visible in the world of <b>business and politics</b>. When a government says it will <b>neutralise</b> a target, or when a corporation announces a <b>downsizing</b> rather than mass layoffs, language is being used strategically to reduce emotional impact. The listener hears the same news, but the <b>framing</b> changes how they process it. <span class="read-sp">&#x1F509;</span></p>
+      <p onclick="ttsRead(&quot;Nuance, on the other hand, is about precision rather than softening. A writer who chooses devastated over sad, or livid over angry, is not being evasive — they are being more accurate. The right word at the right intensity is what separates competent writing from compelling writing.&quot;,0.88)">Nuance, on the other hand, is about <b>precision</b> rather than softening. A writer who chooses <b>devastated</b> over <em>sad</em>, or <b>livid</b> over <em>angry</em>, is not being evasive — they are being more accurate. The right word at the right intensity is what separates competent writing from <b>compelling</b> writing. <span class="read-sp">&#x1F509;</span></p>
+      <p onclick="ttsRead(&quot;Of course, both tools can be misused. Euphemisms become dishonest when they obscure rather than soften reality. Nuanced vocabulary becomes pretentious when used unnecessarily. The skilled communicator knows when to be direct, when to be gentle, and — perhaps most importantly — when to say nothing at all.&quot;,0.88)">Of course, both tools can be misused. Euphemisms become <b>dishonest</b> when they obscure rather than soften reality. Nuanced vocabulary becomes <b>pretentious</b> when used unnecessarily. The skilled communicator knows when to be direct, when to be gentle, and — perhaps most importantly — when to say nothing at all. <span class="read-sp">&#x1F509;</span></p>
+    </div>
+
+    <div class="vocab-wrap">
+      <div class="vocab-title">&#x1F4DA; Key Vocabulary</div>
+      <div class="vocab-grid">
+        <div class="vocab-card" onclick="ttsRead(&quot;connotation&quot;,0.88)"><div class="vocab-en">connotation</div><div class="vocab-ar ar">الدلالة الضمنية</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;bluntness&quot;,0.88)"><div class="vocab-en">bluntness</div><div class="vocab-ar ar">صراحة مفرطة / جفاء</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;framing&quot;,0.88)"><div class="vocab-en">framing</div><div class="vocab-ar ar">الإطار السردي / طريقة العرض</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;compelling&quot;,0.88)"><div class="vocab-en">compelling</div><div class="vocab-ar ar">مقنع / آسر</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;obscure&quot;,0.88)"><div class="vocab-en">obscure (v.)</div><div class="vocab-ar ar">يُعتِم / يُخفي</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;pretentious&quot;,0.88)"><div class="vocab-en">pretentious</div><div class="vocab-ar ar">متكبر / متصنّع</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;strategically&quot;,0.88)"><div class="vocab-en">strategically</div><div class="vocab-ar ar">باستراتيجية / بقصد</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;precision&quot;,0.88)"><div class="vocab-en">precision</div><div class="vocab-ar ar">الدقة</div></div>
+      </div>
+    </div>
+
+    <div class="rq-wrap">
+      <div class="rq-title">&#x2753; Comprehension Questions</div>
+      <div class="rq-item" id="rq1">
+        <div class="rq-q" onclick="ttsRead(&quot;According to the article, what is the difference between nuance and euphemism?&quot;,0.88)">1. According to the article, how do nuance and euphemism differ in purpose? &#x1F509;</div>
+        <div class="rq-opts">
+          <button class="read-opt" onclick="rqPick(this,'rq1',false)">Nuance is used in business; euphemism is used in literature.</button>
+          <button class="read-opt" onclick="rqPick(this,'rq1',true)">Nuance is about precision; euphemism is about softening impact.</button>
+          <button class="read-opt" onclick="rqPick(this,'rq1',false)">Both serve the same purpose — making language more polite.</button>
+          <button class="read-opt" onclick="rqPick(this,'rq1',false)">Nuance belongs to formal English; euphemism is informal.</button>
+        </div>
+      </div>
+      <div class="rq-item" id="rq2">
+        <div class="rq-q" onclick="ttsRead(&quot;When does the article say euphemisms become dishonest?&quot;,0.88)">2. When do euphemisms become dishonest according to the article? &#x1F509;</div>
+        <div class="rq-opts">
+          <button class="read-opt" onclick="rqPick(this,'rq2',false)">When they are used in political speeches</button>
+          <button class="read-opt" onclick="rqPick(this,'rq2',false)">When they replace formal language</button>
+          <button class="read-opt" onclick="rqPick(this,'rq2',true)">When they obscure rather than soften reality</button>
+          <button class="read-opt" onclick="rqPick(this,'rq2',false)">When they are used in marketing</button>
+        </div>
+      </div>
+      <div class="rq-item" id="rq3">
+        <div class="rq-q" onclick="ttsRead(&quot;What does the article say separates competent writing from compelling writing?&quot;,0.88)">3. What separates competent writing from compelling writing? &#x1F509;</div>
+        <div class="rq-opts">
+          <button class="read-opt" onclick="rqPick(this,'rq3',false)">Using more euphemisms</button>
+          <button class="read-opt" onclick="rqPick(this,'rq3',true)">Using the right word at the right intensity</button>
+          <button class="read-opt" onclick="rqPick(this,'rq3',false)">Avoiding all negative words</button>
+          <button class="read-opt" onclick="rqPick(this,'rq3',false)">Writing longer and more detailed sentences</button>
+        </div>
+      </div>
+      <div class="rq-item" id="rq4">
+        <div class="rq-q" onclick="ttsRead(&quot;What does the article say about how framing affects communication?&quot;,0.88)">4. How does "framing" affect communication according to the article? &#x1F509;</div>
+        <div class="rq-opts">
+          <button class="read-opt" onclick="rqPick(this,'rq4',true)">The same news framed differently changes how listeners process it</button>
+          <button class="read-opt" onclick="rqPick(this,'rq4',false)">Framing only matters in political speeches</button>
+          <button class="read-opt" onclick="rqPick(this,'rq4',false)">Framing replaces the need for accurate vocabulary</button>
+          <button class="read-opt" onclick="rqPick(this,'rq4',false)">Framing is always dishonest</button>
+        </div>
+      </div>
+      <div class="rq-item" id="rq5">
+        <div class="rq-q" onclick="ttsRead(&quot;What does the article identify as a sign of a skilled communicator?&quot;,0.88)">5. What marks a skilled communicator according to the article? &#x1F509;</div>
+        <div class="rq-opts">
+          <button class="read-opt" onclick="rqPick(this,'rq5',false)">Always using formal euphemisms</button>
+          <button class="read-opt" onclick="rqPick(this,'rq5',false)">Never using direct language</button>
+          <button class="read-opt" onclick="rqPick(this,'rq5',true)">Knowing when to be direct, when to be gentle, and when to say nothing</button>
+          <button class="read-opt" onclick="rqPick(this,'rq5',false)">Using the strongest possible words for impact</button>
+        </div>
+      </div>
+      <div class="rq-score" id="rqScore46" style="display:none">
+        <div class="rqs-icon">&#x1F3AF;</div>
+        <div class="rqs-num" id="rqScoreNum46"></div>
+        <div class="rqs-msg" id="rqScoreMsg46"></div>
+        <div class="rqs-ar ar" id="rqScoreAr46"></div>
+        <button class="rqs-btn" onclick="rqReset46()">&#x1F504; Try Again</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /reading -->
+
+<!-- ════ CHECK IT! ════ -->
+<div id="tab-checkit" class="tab-panel">
+  <div class="ci-hero">
+    <div class="ci-hero-icon">&#x2705;</div>
+    <h2 class="ci-hero-title">Check It! — Final Lesson</h2>
+    <p class="ci-hero-sub">25 questions — Nuances &amp; Euphemisms — 20 MCQ + 5 FIB</p>
+    <div class="ci-hero-types"><span class="tag tag-grammar">20 Multiple Choice</span><span class="tag tag-other">5 Fill in the Blank</span></div>
+  </div>
+  <div class="ci-progress-wrap">
+    <div class="ci-progress-inner">
+      <div class="ci-progress-bar"><div class="ci-progress-fill" id="ciProgressFill46"></div></div>
+      <div class="ci-progress-txt"><span id="ciProgressTxt46">0 / 25 answered</span><span id="ciScoreTxt46">Score: 0</span></div>
+    </div>
+  </div>
+
+  <div class="ci-wrap" id="ciWrap46">
+
+    <div class="ci-q" id="ciq1"><div class="ci-q-num">Q1</div><div class="ci-q-text" onclick="ttsRead(&quot;Which word for thin has a positive connotation?&quot;,0.88)">Which word for <b>thin</b> has a <b>positive</b> connotation? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq1',false)">skinny</button><button class="ci-btn" onclick="ciPick(this,'ciq1',true)">slender</button><button class="ci-btn" onclick="ciPick(this,'ciq1',false)">scrawny</button><button class="ci-btn" onclick="ciPick(this,'ciq1',false)">bony</button></div></div>
+
+    <div class="ci-q" id="ciq2"><div class="ci-q-num">Q2</div><div class="ci-q-text" onclick="ttsRead(&quot;Which is stronger in intensity: annoyed or furious?&quot;,0.88)">Order correctly from <b>mildest to strongest</b> anger: &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq2',false)">furious → livid → annoyed</button><button class="ci-btn" onclick="ciPick(this,'ciq2',false)">livid → furious → annoyed</button><button class="ci-btn" onclick="ciPick(this,'ciq2',true)">annoyed → furious → livid</button><button class="ci-btn" onclick="ciPick(this,'ciq2',false)">annoyed → livid → furious</button></div></div>
+
+    <div class="ci-q" id="ciq3"><div class="ci-q-num">Q3</div><div class="ci-q-text" onclick="ttsRead(&quot;Your position has been made redundant. What does this euphemism really mean?&quot;,0.88)">&#x201C;Your position has been <b>made redundant</b>.&#x201D; &#x2014; real meaning? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq3',false)">You have been promoted.</button><button class="ci-btn" onclick="ciPick(this,'ciq3',false)">Your contract has been renewed.</button><button class="ci-btn" onclick="ciPick(this,'ciq3',true)">You have been fired / laid off.</button><button class="ci-btn" onclick="ciPick(this,'ciq3',false)">Your role has been expanded.</button></div></div>
+
+    <div class="ci-q" id="ciq4"><div class="ci-q-num">Q4</div><div class="ci-q-text" onclick="ttsRead(&quot;What is the euphemism for second-hand car in a sales context?&quot;,0.88)">Best polite term for a <b>second-hand car</b> in a sales ad: &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq4',false)">used</button><button class="ci-btn" onclick="ciPick(this,'ciq4',false)">old</button><button class="ci-btn" onclick="ciPick(this,'ciq4',true)">pre-owned</button><button class="ci-btn" onclick="ciPick(this,'ciq4',false)">recycled</button></div></div>
+
+    <div class="ci-q" id="ciq5"><div class="ci-q-num">Q5</div><div class="ci-q-text" onclick="ttsRead(&quot;What is the difference between affordable and cheap?&quot;,0.88)">Difference between <b>affordable</b> and <b>cheap</b>? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq5',false)">They are identical — fully interchangeable.</button><button class="ci-btn" onclick="ciPick(this,'ciq5',true)">Affordable = good value; cheap = low quality / negative connotation.</button><button class="ci-btn" onclick="ciPick(this,'ciq5',false)">Cheap is formal; affordable is informal.</button><button class="ci-btn" onclick="ciPick(this,'ciq5',false)">Affordable refers to services; cheap to goods.</button></div></div>
+
+    <div class="ci-q" id="ciq6"><div class="ci-q-num">Q6</div><div class="ci-q-text" onclick="ttsRead(&quot;What does collateral damage mean as a military euphemism?&quot;,0.88)">"<b>Collateral damage</b>" is a euphemism for: &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq6',false)">Property destroyed in an earthquake</button><button class="ci-btn" onclick="ciPick(this,'ciq6',true)">Civilian deaths or injuries caused by military action</button><button class="ci-btn" onclick="ciPick(this,'ciq6',false)">Accidental friendly fire</button><button class="ci-btn" onclick="ciPick(this,'ciq6',false)">Damage to military equipment</button></div></div>
+
+    <div class="ci-q" id="ciq7"><div class="ci-q-num">Q7</div><div class="ci-q-text" onclick="ttsRead(&quot;Which phrase is the correct euphemism for dying?&quot;,0.88)">Polite euphemism for <b>dying</b>: &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq7',false)">expired</button><button class="ci-btn" onclick="ciPick(this,'ciq7',true)">passed away</button><button class="ci-btn" onclick="ciPick(this,'ciq7',false)">croaked</button><button class="ci-btn" onclick="ciPick(this,'ciq7',false)">kicked the bucket</button></div></div>
+
+    <div class="ci-q" id="ciq8"><div class="ci-q-num">Q8</div><div class="ci-q-text" onclick="ttsRead(&quot;What does being economical with the truth mean?&quot;,0.88)">"Being <b>economical with the truth</b>" means: &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq8',false)">Saving money by not telling the full story</button><button class="ci-btn" onclick="ciPick(this,'ciq8',true)">Not telling the whole truth — misleading without a direct lie</button><button class="ci-btn" onclick="ciPick(this,'ciq8',false)">Being very precise and fact-based</button><button class="ci-btn" onclick="ciPick(this,'ciq8',false)">Simplifying complex information</button></div></div>
+
+    <div class="ci-q" id="ciq9"><div class="ci-q-num">Q9</div><div class="ci-q-text" onclick="ttsRead(&quot;Which is more intense: sad or devastated?&quot;,0.88)">Which is the strongest? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq9',false)">sad</button><button class="ci-btn" onclick="ciPick(this,'ciq9',false)">unhappy</button><button class="ci-btn" onclick="ciPick(this,'ciq9',false)">miserable</button><button class="ci-btn" onclick="ciPick(this,'ciq9',true)">heartbroken</button></div></div>
+
+    <div class="ci-q" id="ciq10"><div class="ci-q-num">Q10</div><div class="ci-q-text" onclick="ttsRead(&quot;In a professional email, which word is more appropriate: problem or issue?&quot;,0.88)">In a professional email, which is softer? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq10',false)">problem</button><button class="ci-btn" onclick="ciPick(this,'ciq10',true)">issue</button><button class="ci-btn" onclick="ciPick(this,'ciq10',false)">disaster</button><button class="ci-btn" onclick="ciPick(this,'ciq10',false)">mess</button></div></div>
+
+    <div class="ci-break" id="brk10" style="display:none">
+      <div class="ci-break-icon">&#x1F3C6;</div>
+      <div class="ci-break-title">Almost There — Final Lesson!</div>
+      <div class="ci-break-ar ar">اقتربت من النهاية — الدرس الأخير!</div>
+      <div class="ci-break-score">Score so far: <span id="ciBreakScore46"></span> / 10</div>
+    </div>
+
+    <div class="ci-q" id="ciq11"><div class="ci-q-num">Q11</div><div class="ci-q-text" onclick="ttsRead(&quot;What is the correct euphemism for hard of hearing?&quot;,0.88)">"<b>Hard of hearing</b>" is a euphemism for: &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq11',false)">partially blind</button><button class="ci-btn" onclick="ciPick(this,'ciq11',true)">deaf or partially deaf</button><button class="ci-btn" onclick="ciPick(this,'ciq11',false)">unable to concentrate</button><button class="ci-btn" onclick="ciPick(this,'ciq11',false)">socially withdrawn</button></div></div>
+
+    <div class="ci-q" id="ciq12"><div class="ci-q-num">Q12</div><div class="ci-q-text" onclick="ttsRead(&quot;Which word for tired implies long-term exhaustion and burnout?&quot;,0.88)">Which describes long-term exhaustion beyond a single day? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq12',false)">tired</button><button class="ci-btn" onclick="ciPick(this,'ciq12',false)">weary</button><button class="ci-btn" onclick="ciPick(this,'ciq12',false)">exhausted</button><button class="ci-btn" onclick="ciPick(this,'ciq12',true)">burnt out</button></div></div>
+
+    <div class="ci-q" id="ciq13"><div class="ci-q-num">Q13</div><div class="ci-q-text" onclick="ttsRead(&quot;The company experienced negative growth. What does negative growth really mean?&quot;,0.88)">"The company experienced <b>negative growth</b>." = &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq13',false)">Growth below the industry average</button><button class="ci-btn" onclick="ciPick(this,'ciq13',true)">A financial loss</button><button class="ci-btn" onclick="ciPick(this,'ciq13',false)">Slower growth than last year</button><button class="ci-btn" onclick="ciPick(this,'ciq13',false)">Reduced investment in growth</button></div></div>
+
+    <div class="ci-q" id="ciq14"><div class="ci-q-num">Q14</div><div class="ci-q-text" onclick="ttsRead(&quot;Which word has a stronger positive connotation: happy, pleased, or ecstatic?&quot;,0.88)">Strongest positive feeling: &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq14',false)">pleased</button><button class="ci-btn" onclick="ciPick(this,'ciq14',false)">happy</button><button class="ci-btn" onclick="ciPick(this,'ciq14',false)">delighted</button><button class="ci-btn" onclick="ciPick(this,'ciq14',true)">ecstatic</button></div></div>
+
+    <div class="ci-q" id="ciq15"><div class="ci-q-num">Q15</div><div class="ci-q-text" onclick="ttsRead(&quot;What does downsizing mean as a business euphemism?&quot;,0.88)">"<b>Downsizing</b>" in a business context means: &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq15',false)">Expanding to a smaller market</button><button class="ci-btn" onclick="ciPick(this,'ciq15',true)">Cutting jobs / reducing the workforce</button><button class="ci-btn" onclick="ciPick(this,'ciq15',false)">Moving to a smaller office</button><button class="ci-btn" onclick="ciPick(this,'ciq15',false)">Reducing product sizes</button></div></div>
+
+    <div class="ci-q" id="ciq16"><div class="ci-q-num">Q16</div><div class="ci-q-text" onclick="ttsRead(&quot;Using challenge instead of problem in a business context makes the speaker sound what?&quot;,0.88)">Using <b>challenge</b> instead of "problem" makes the speaker sound: &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq16',false)">Weak and avoidant</button><button class="ci-btn" onclick="ciPick(this,'ciq16',true)">Solution-focused and positive</button><button class="ci-btn" onclick="ciPick(this,'ciq16',false)">Overly casual</button><button class="ci-btn" onclick="ciPick(this,'ciq16',false)">Technically inaccurate</button></div></div>
+
+    <div class="ci-q" id="ciq17"><div class="ci-q-num">Q17</div><div class="ci-q-text" onclick="ttsRead(&quot;Which word has the most negative connotation when describing a thin person?&quot;,0.88)">Most <b>negative connotation</b> for describing a thin person: &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq17',false)">slim</button><button class="ci-btn" onclick="ciPick(this,'ciq17',false)">slender</button><button class="ci-btn" onclick="ciPick(this,'ciq17',false)">thin</button><button class="ci-btn" onclick="ciPick(this,'ciq17',true)">scrawny</button></div></div>
+
+    <div class="ci-q" id="ciq18"><div class="ci-q-num">Q18</div><div class="ci-q-text" onclick="ttsRead(&quot;Vertically challenged is a euphemism for what?&quot;,0.88)">"<b>Vertically challenged</b>" is a euphemism for: &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq18',false)">Overweight</button><button class="ci-btn" onclick="ciPick(this,'ciq18',false)">Elderly</button><button class="ci-btn" onclick="ciPick(this,'ciq18',true)">Short (in height)</button><button class="ci-btn" onclick="ciPick(this,'ciq18',false)">Physically disabled</button></div></div>
+
+    <div class="ci-q" id="ciq19"><div class="ci-q-num">Q19</div><div class="ci-q-text" onclick="ttsRead(&quot;When do euphemisms become problematic or dishonest according to good language practice?&quot;,0.88)">Euphemisms become <b>problematic</b> when: &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq19',false)">They are used in everyday conversation</button><button class="ci-btn" onclick="ciPick(this,'ciq19',true)">They obscure truth rather than soften it — making communication misleading</button><button class="ci-btn" onclick="ciPick(this,'ciq19',false)">They are shorter than the original word</button><button class="ci-btn" onclick="ciPick(this,'ciq19',false)">They are used in academic writing</button></div></div>
+
+    <div class="ci-q" id="ciq20"><div class="ci-q-num">Q20</div><div class="ci-q-text" onclick="ttsRead(&quot;Which sentence uses nuance most effectively?&quot;,0.88)">Which uses a nuanced word most <b>effectively</b>? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq20',false)">She was very very sad when she heard the news.</button><button class="ci-btn" onclick="ciPick(this,'ciq20',true)">She was devastated when she heard the news.</button><button class="ci-btn" onclick="ciPick(this,'ciq20',false)">She felt bad when she heard the news.</button><button class="ci-btn" onclick="ciPick(this,'ciq20',false)">She was unhappy about the news.</button></div></div>
+
+    <div class="ci-q ci-fib" id="ciq21"><div class="ci-q-num">Q21</div><div class="ci-fib-lbl">&#x270F; Fill in the Blank</div><div class="ci-q-text" onclick="ttsRead(&quot;We are not firing anyone — we are simply right-sizing the organisation.&quot;,0.88)">We are not firing anyone — we are simply ___ the organisation. <span class="read-sp">&#x1F509;</span></div><div class="ci-fib-wrap"><input class="ci-fib-input" id="fib21" type="text" placeholder="Type your answer..."><button class="ci-fib-btn" id="fibBtn21" onclick="ciFibCheck('fib21','fibBtn21','ciq21','fibSol21','right-sizing')">Check</button></div><div class="ci-fib-solution" id="fibSol21" style="display:none">&#x2705; Answer: <b>right-sizing</b> &nbsp;|&nbsp; <b>right-sizing</b> — a corporate euphemism for cutting jobs / workforce reduction</div></div>
+
+    <div class="ci-q ci-fib" id="ciq22"><div class="ci-q-num">Q22</div><div class="ci-fib-lbl">&#x270F; Fill in the Blank</div><div class="ci-q-text" onclick="ttsRead(&quot;He did not die — he passed away peacefully in his sleep.&quot;,0.88)">He did not die — he ___ away peacefully in his sleep. <span class="read-sp">&#x1F509;</span></div><div class="ci-fib-wrap"><input class="ci-fib-input" id="fib22" type="text" placeholder="Type your answer..."><button class="ci-fib-btn" id="fibBtn22" onclick="ciFibCheck('fib22','fibBtn22','ciq22','fibSol22','passed')">Check</button></div><div class="ci-fib-solution" id="fibSol22" style="display:none">&#x2705; Answer: <b>passed</b> &nbsp;|&nbsp; <b>passed</b> (passed away) — the standard polite euphemism for dying</div></div>
+
+    <div class="ci-q ci-fib" id="ciq23"><div class="ci-q-num">Q23</div><div class="ci-fib-lbl">&#x270F; Fill in the Blank</div><div class="ci-q-text" onclick="ttsRead(&quot;Do not say cheap in the ad — say affordable or cost-effective instead.&quot;,0.88)">Do not say cheap in the ad — say ___ instead. <span class="read-sp">&#x1F509;</span></div><div class="ci-fib-wrap"><input class="ci-fib-input" id="fib23" type="text" placeholder="Type your answer..."><button class="ci-fib-btn" id="fibBtn23" onclick="ciFibCheck('fib23','fibBtn23','ciq23','fibSol23','affordable')">Check</button></div><div class="ci-fib-solution" id="fibSol23" style="display:none">&#x2705; Answer: <b>affordable</b> &nbsp;|&nbsp; <b>affordable</b> — positive connotation: good value for money (not low quality)</div></div>
+
+    <div class="ci-q ci-fib" id="ciq24"><div class="ci-q-num">Q24</div><div class="ci-fib-lbl">&#x270F; Fill in the Blank</div><div class="ci-q-text" onclick="ttsRead(&quot;She was not just angry — she was livid. She could not speak.&quot;,0.88)">She was not just angry — she was ___. She could not speak. <span class="read-sp">&#x1F509;</span></div><div class="ci-fib-wrap"><input class="ci-fib-input" id="fib24" type="text" placeholder="Type your answer..."><button class="ci-fib-btn" id="fibBtn24" onclick="ciFibCheck('fib24','fibBtn24','ciq24','fibSol24','livid')">Check</button></div><div class="ci-fib-solution" id="fibSol24" style="display:none">&#x2705; Answer: <b>livid</b> &nbsp;|&nbsp; <b>livid</b> — extreme anger, much stronger than angry or furious</div></div>
+
+    <div class="ci-q ci-fib" id="ciq25"><div class="ci-q-num">Q25</div><div class="ci-fib-lbl">&#x270F; Fill in the Blank</div><div class="ci-q-text" onclick="ttsRead(&quot;The government called the civilian deaths collateral damage.&quot;,0.88)">The government called the civilian deaths ___ damage. <span class="read-sp">&#x1F509;</span></div><div class="ci-fib-wrap"><input class="ci-fib-input" id="fib25" type="text" placeholder="Type your answer..."><button class="ci-fib-btn" id="fibBtn25" onclick="ciFibCheck('fib25','fibBtn25','ciq25','fibSol25','collateral')">Check</button></div><div class="ci-fib-solution" id="fibSol25" style="display:none">&#x2705; Answer: <b>collateral</b> &nbsp;|&nbsp; <b>collateral</b> — military/political euphemism: collateral damage = civilian casualties</div></div>
+
+    <div class="ci-final-score" id="ciFinal46" style="display:none">
+      <div class="cif-icon">&#x1F3C6;&#x1F3C6;&#x1F3C6;</div>
+      <div class="cif-title">Course Complete! &#x2728;</div>
+      <div class="cif-ar ar">مبروك! أتممت كامل الكورس بنجاح</div>
+      <div class="cif-score"><span id="ciFinalScore46"></span> / 25</div>
+      <div class="cif-msg" id="ciFinalMsg46"></div>
+      <div class="cif-ar ar" id="ciFinalAr46"></div>
+      <div class="cif-btns">
+        <button class="cif-btn" onclick="ciReset46()">&#x1F504; Try Again</button>
+        <button class="cif-btn cif-btn-next" onclick="window.location.href='../index.html'">&#x1F3E0; Main Menu</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /checkit -->
+
+</div><!-- /main-content -->
+</div><!-- /layout -->
+
+<script src="../media/global-player.js"></script>
+<script>
+var rqScore46=0,rqAnswered46=0;
+var ciScore46=0,ciAnswered46=0,ciTotal46=25;
+function showTab(id,btn){document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.remove('active');});document.querySelectorAll('.main-tab').forEach(function(b){b.classList.remove('active');});document.getElementById('tab-'+id).classList.add('active');btn.classList.add('active');}
+function ttsRead(text,rate){speechSynthesis.cancel();var u=new SpeechSynthesisUtterance(text);u.lang='en-US';u.rate=rate||0.9;speechSynthesis.speak(u);}
+function rqPick(btn,qid,correct){var qEl=document.getElementById(qid);if(qEl.dataset.done)return;qEl.dataset.done='1';qEl.querySelectorAll('.read-opt').forEach(function(b){b.classList.add('done');if(b===btn)b.classList.add(correct?'correct':'wrong');});if(correct)rqScore46++;rqAnswered46++;if(rqAnswered46===5){var sc=document.getElementById('rqScore46');sc.style.display='block';document.getElementById('rqScoreNum46').textContent=rqScore46+'/5';var msgs=[['Keep practising!','استمر!'],['Good effort!','جهد جيد!'],['Getting there!','تتحسن!'],['Well done!','جيد جداً!'],['Great job!','رائع!'],['Perfect!','مثالي!']];var m=msgs[Math.min(rqScore46,5)];document.getElementById('rqScoreMsg46').textContent=m[0];document.getElementById('rqScoreAr46').textContent=m[1];sc.scrollIntoView({behavior:'smooth',block:'center'});}}
+function rqReset46(){rqScore46=0;rqAnswered46=0;['rq1','rq2','rq3','rq4','rq5'].forEach(function(id){var q=document.getElementById(id);if(!q)return;delete q.dataset.done;q.querySelectorAll('.read-opt').forEach(function(b){b.classList.remove('correct','wrong','done');});});document.getElementById('rqScore46').style.display='none';document.getElementById('tab-reading').scrollIntoView({behavior:'smooth',block:'start'});}
+function ciUpdateProgress46(){var pct=Math.round(ciAnswered46/ciTotal46*100);document.getElementById('ciProgressFill46').style.width=pct+'%';document.getElementById('ciProgressTxt46').textContent=ciAnswered46+' / '+ciTotal46+' answered';document.getElementById('ciScoreTxt46').textContent='Score: '+ciScore46;}
+function ciCheckBreakAndDone46(){if(ciAnswered46===10){var bEl=document.getElementById('brk10');if(bEl){bEl.style.display='block';document.getElementById('ciBreakScore46').textContent=ciScore46;}}if(ciAnswered46===ciTotal46)ciShowScore46();}
+function ciPick(btn,qid,correct){var qEl=document.getElementById(qid);if(qEl.dataset.done)return;qEl.dataset.done='1';qEl.querySelectorAll('.ci-btn').forEach(function(b){b.classList.add('done');});btn.classList.add(correct?'ci-correct':'ci-wrong');if(correct)ciScore46++;ciAnswered46++;ciUpdateProgress46();ciCheckBreakAndDone46();}
+function ciFibCheck(inputId,btnId,qid,solId,answer){var inp=document.getElementById(inputId),btn=document.getElementById(btnId),qEl=document.getElementById(qid);if(qEl.dataset.done)return;var correct=inp.value.trim().toLowerCase()===answer.toLowerCase();qEl.dataset.done='1';inp.disabled=true;btn.disabled=true;inp.style.borderColor=correct?'var(--green)':'var(--red)';inp.style.color=correct?'var(--green)':'var(--red)';var sol=document.getElementById(solId);if(sol)sol.style.display='block';if(correct)ciScore46++;ciAnswered46++;ciUpdateProgress46();ciCheckBreakAndDone46();}
+function ciShowScore46(){var el=document.getElementById('ciFinal46');el.style.display='block';document.getElementById('ciFinalScore46').textContent=ciScore46;var pct=Math.round(ciScore46/ciTotal46*100);var msgs=[['Keep studying — you can do it!','واصل الدراسة!'],['Good progress!','تقدم جيد!'],['Well done!','عمل جيد!'],['Excellent work!','ممتاز!'],['Outstanding!','رائع جداً!'],['C1 Master!','أتقنت المستوى C1!']];var idx=Math.floor(pct/20);var m=msgs[Math.min(idx,5)];document.getElementById('ciFinalMsg46').textContent=m[0];document.getElementById('ciFinalAr46').textContent=m[1];localStorage.setItem('up_l46',Math.round(ciScore46/ciTotal46*100));el.scrollIntoView({behavior:'smooth',block:'center'});}
+function ciReset46(){ciScore46=0;ciAnswered46=0;document.getElementById('ciFinal46').style.display='none';document.getElementById('brk10').style.display='none';for(var i=1;i<=25;i++){var q=document.getElementById('ciq'+i);if(!q)continue;delete q.dataset.done;q.querySelectorAll('.ci-btn').forEach(function(b){b.classList.remove('ci-correct','ci-wrong','done');});var inp=q.querySelector('.ci-fib-input');if(inp){inp.value='';inp.disabled=false;inp.style.borderColor='';inp.style.color='';}var fbtn=q.querySelector('.ci-fib-btn');if(fbtn)fbtn.disabled=false;var sol=q.querySelector('.ci-fib-solution');if(sol)sol.style.display='none';}ciUpdateProgress46();document.getElementById('tab-checkit').scrollIntoView({behavior:'smooth',block:'start'});}
+</script>
+
+<script>
+(function(){
+  var map={1: "up_l1", 2: "up_l2", 3: "up_l3", 4: "up_l4", 5: "up_l5", 6: "up1", 7: "up2", 8: "up3", 9: "up4", 10: "up6", 11: "up5", 12: "up_l12", 13: "up7", 14: "up8", 15: "up9", 16: "up10", 17: "up11", 19: "up_l19", 20: "up_l20", 21: "up_l21", 22: "up_l22", 23: "up_l23", 24: "up_l24", 25: "up_l25", 26: "up_l26", 27: "up_l27", 28: "up_l28", 29: "up_l29", 30: "up_l30", 31: "up_l31", 32: "up_l32", 33: "up_l33", 34: "up_l34", 35: "up_l35", 36: "up_l36", 37: "up_l37", 38: "up_l38", 39: "up_l39", 40: "up_l40", 41: "up_l41", 42: "up_l42", 43: "up_l43", 44: "up_l44", 45: "up_l45", 46: "up_l46"};
+  for(var lid in map){
+    var f=document.getElementById('sp'+lid);
+    if(f){var v=parseInt(localStorage.getItem(map[lid])||'0',10);f.style.width=v+'%';}
+  }
+  setTimeout(function(){
+    var a=document.querySelector('.su-item.su-active');
+    if(a){var u=a.closest('.sidebar-units');if(u)u.scrollTop=Math.max(0,a.offsetTop-a.offsetHeight);}
+  },80);
+})();
+</script>
+<script>
+function toggleSidebar(){
+  var sb=document.querySelector('.sidebar');
+  var bd=document.getElementById('sbBackdrop');
+  if(!sb||!bd)return;
+  sb.classList.toggle('sb-open');
+  bd.classList.toggle('sb-open');
+  document.body.style.overflow=sb.classList.contains('sb-open')?'hidden':'';
+}
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.su-item').forEach(function(a){
+    a.addEventListener('click',function(){
+      var sb=document.querySelector('.sidebar');
+      if(sb&&sb.classList.contains('sb-open'))toggleSidebar();
+    });
+  });
+});
+</script>
+
+<script>
+(function(){
+  // Disable right-click
+  document.addEventListener('contextmenu', function(e){ e.preventDefault(); });
+
+  // Disable keyboard shortcuts
+  document.addEventListener('keydown', function(e){
+    // F12
+    if(e.key==='F12'){e.preventDefault();return false;}
+    // Ctrl+U (view source), Ctrl+S (save), Ctrl+A (select all), Ctrl+P (print)
+    if(e.ctrlKey && ['u','U','s','S','a','A','p','P'].indexOf(e.key)!==-1){
+      e.preventDefault();return false;
+    }
+    // Ctrl+Shift+I (DevTools), Ctrl+Shift+J, Ctrl+Shift+C
+    if(e.ctrlKey && e.shiftKey && ['i','I','j','J','c','C','k','K'].indexOf(e.key)!==-1){
+      e.preventDefault();return false;
+    }
+  });
+
+  // Disable text selection via CSS
+  document.documentElement.style.webkitUserSelect='none';
+  document.documentElement.style.userSelect='none';
+
+  // Allow selection inside inputs/textareas only
+  document.addEventListener('mousedown', function(e){
+    var t=e.target.tagName;
+    if(t==='INPUT'||t==='TEXTAREA'){
+      e.target.style.userSelect='text';
+      e.target.style.webkitUserSelect='text';
+    }
+  });
+
+  // Block drag
+  document.addEventListener('dragstart', function(e){ e.preventDefault(); });
+})();
+</script>
+<button class="float-menu-btn" onclick="toggleSidebar()" aria-label="القائمة">
+  <span></span><span></span><span></span>
+</button>
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=FREE"></script>
+<script src="../media/rv.js"></script>
+</body>
+</html>

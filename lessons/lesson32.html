@@ -1,0 +1,1496 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lesson 32 — Quantifiers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#1a3a6e;--primary-dark:#0f2548;--accent:#f4a624;--al:rgba(244,166,36,0.12);--bg:#0d1b2a;--card:#162030;--card2:#1e2d40;--border:#2d4560;--text:#e8edf5;--muted:#8899b0;--green:#22c55e;--red:#ef4444;--blue:#4a9eff;--purple:#a855f7}
+body{font-family:'Poppins','Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.ar{font-family:'Cairo','Segoe UI',Arial,sans-serif}
+.topnav{background:var(--primary-dark);border-bottom:2px solid var(--accent);padding:10px 24px;display:flex;align-items:center;justify-content:space-between}
+.hero{background:linear-gradient(135deg,#1a3a6e 0%,#0f2548 55%,#0d1f3c 100%);padding:55px 24px 48px;text-align:center;border-bottom:3px solid var(--accent);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;border-radius:50%;background:rgba(244,166,36,0.06)}
+.hero::after{content:'';position:absolute;bottom:-60px;left:-60px;width:300px;height:300px;border-radius:50%;background:rgba(74,158,255,0.05)}
+.unit-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(244,166,36,0.15);border:1px solid rgba(244,166,36,0.4);color:var(--accent);font-weight:800;padding:6px 18px;border-radius:20px;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
+.hero-title{font-size:clamp(28px,6vw,52px);font-weight:900;color:white;line-height:1.15;margin-bottom:8px}
+.hero-title i{color:var(--accent);font-style:italic}
+.hero-ar{font-size:18px;color:var(--muted);margin-bottom:12px;direction:rtl}
+.hero-sub{color:var(--muted);max-width:620px;margin:0 auto 22px;font-size:14px}
+.hero-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.tag{display:inline-flex;align-items:center;gap:6px;padding:6px 15px;border-radius:16px;font-size:12px;font-weight:700}
+.tag-grammar{background:rgba(244,166,36,0.15);color:var(--accent);border:1px solid rgba(244,166,36,0.3)}
+.tag-other{background:rgba(74,158,255,0.1);color:var(--blue);border:1px solid rgba(74,158,255,0.25)}
+.tag-btn{cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif}
+.tag-btn:hover{transform:translateY(-2px);opacity:.85}
+.main-tabs{display:flex;gap:4px;padding:14px 24px;background:var(--primary-dark);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;flex-wrap:wrap}
+.main-tab{padding:8px 18px;border-radius:8px;border:1px solid transparent;background:none;color:var(--muted);font-weight:700;cursor:pointer;font-size:13px;font-family:'Poppins',sans-serif;transition:all .2s}
+.main-tab.active{background:var(--accent);color:#0d1b2a;border-color:var(--accent)}
+.main-tab:hover:not(.active){background:rgba(244,166,36,.1);color:var(--accent);border-color:rgba(244,166,36,.3)}
+.tab-panel{display:none;padding:20px 24px}
+.tab-panel.active{display:block}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;margin-bottom:16px}
+.card-title{font-size:16px;font-weight:800;color:white;margin-bottom:5px;display:flex;align-items:center;gap:8px}
+.card-ar{font-size:13px;color:var(--muted);margin-bottom:14px;direction:rtl;font-family:'Cairo',sans-serif}
+.card-note{background:var(--al);border:1px solid rgba(244,166,36,.3);border-radius:10px;padding:10px 14px;font-size:12.5px;color:var(--accent);margin:10px 0;direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.sub-tabs{display:flex;gap:4px;margin:14px 0 18px;flex-wrap:wrap}
+.sub-tab{padding:6px 14px;border-radius:8px;border:1px solid var(--border);background:none;color:var(--muted);font-weight:700;cursor:pointer;font-size:12px;font-family:'Poppins',sans-serif;transition:all .2s}
+.sub-tab.active{background:rgba(244,166,36,.15);border-color:var(--accent);color:var(--accent)}
+.sub-tab:hover:not(.active){border-color:var(--accent);color:var(--accent)}
+.sub-panel{display:none}
+.sub-panel.active{display:block}
+.tts-box{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.tts-btn{background:var(--card2);border:1px solid var(--blue);color:var(--blue);padding:7px 16px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif}
+.tts-btn:hover{background:rgba(74,158,255,.15);transform:translateY(-1px)}
+.tts-stop{border-color:var(--muted);color:var(--muted)}
+.tts-stop:hover{background:rgba(136,153,176,.1)}
+.formula-box{background:rgba(10,30,53,0.8);border:2px solid var(--border);border-radius:14px;padding:18px 22px;margin:14px 0}
+.formula-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid rgba(45,69,96,0.4);flex-wrap:wrap}
+.formula-row:last-child{border-bottom:none}
+.formula-subj{font-size:14px;font-weight:800;color:var(--blue);min-width:160px}
+.formula-be{font-size:15px;font-weight:900;color:var(--accent);background:rgba(244,166,36,.12);padding:4px 12px;border-radius:8px}
+.formula-be.neg{color:var(--red);background:rgba(239,68,68,.1)}
+.formula-be.q{color:var(--green);background:rgba(34,197,94,.1)}
+.formula-note{font-size:11px;color:var(--muted);font-style:italic;margin-left:auto}
+.formula-plus{font-size:16px;color:var(--muted)}
+.ex-section-title{font-size:12px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin:16px 0 8px}
+.ex-list{margin-top:4px}
+.ex-item{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid rgba(45,69,96,0.3)}
+.ex-item:last-child{border-bottom:none}
+.sp{background:none;border:none;font-size:16px;cursor:pointer;color:var(--blue);flex-shrink:0;padding:2px 0;transition:transform .2s;line-height:1}
+.sp:hover{transform:scale(1.2)}
+.sp-group{display:inline-flex;align-items:center;gap:3px;flex-shrink:0}
+.sp-pp,.sp-st{background:var(--card2);border:1px solid var(--border);color:var(--muted);font-size:12px;padding:3px 7px;border-radius:6px;cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif;line-height:1;min-width:26px;text-align:center}
+.sp-pp:hover{background:rgba(74,158,255,.15);border-color:var(--blue);color:var(--blue)}
+.sp-st:hover{background:rgba(239,68,68,.1);border-color:var(--red);color:var(--red)}
+.ex-en{font-size:13.5px;color:var(--text);font-weight:600;line-height:1.4}
+.ex-en b{color:var(--accent)}
+.ex-ar{font-size:12px;color:var(--muted);margin-top:2px;direction:rtl;font-family:'Cairo',sans-serif}
+.sa-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13px}
+.sa-table th{background:rgba(26,58,110,0.5);color:var(--accent);padding:8px 12px;font-weight:800;text-align:left;border:1px solid var(--border)}
+.sa-table td{padding:8px 12px;border:1px solid rgba(45,69,96,0.4);vertical-align:middle}
+.sa-table tr:nth-child(even) td{background:rgba(30,45,64,0.3)}
+.sa-yes{color:var(--green);font-weight:800}
+.sa-no{color:var(--red);font-weight:800}
+.wh-grid{display:flex;flex-direction:column;gap:7px;margin:12px 0}
+.wh-row{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px;font-size:13px}
+.wh-q{color:var(--text);margin-bottom:3px}
+.wh-q b{color:var(--blue)}
+.wh-a{color:var(--muted);font-style:italic}
+.time-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;margin:12px 0}
+.time-item{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px}
+.time-en{font-size:13px;font-weight:700;color:var(--accent)}
+.time-ar{font-size:11px;color:var(--muted);margin-top:3px;direction:rtl;font-family:'Cairo',sans-serif}
+.time-eg{font-size:11px;color:var(--text);margin-top:4px;font-style:italic}
+.mistake-item{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.m-wrong{font-size:13px;color:var(--red);margin-bottom:3px}
+.m-wrong::before{content:'❌ '}
+.m-right{font-size:13px;color:var(--green);font-weight:700;margin-bottom:3px}
+.m-right::before{content:'✅ '}
+.m-why{font-size:11.5px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;border-top:1px solid rgba(45,69,96,.4);padding-top:5px;margin-top:5px}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:8px;margin-top:12px}
+.vocab-item{background:var(--card2);border:1px solid var(--border);border-radius:9px;padding:9px 12px;cursor:pointer;transition:border-color .2s}
+.vocab-item:hover{border-color:var(--accent)}
+.vocab-en{font-size:14px;font-weight:800;color:var(--text)}
+.vocab-past{font-size:11.5px;color:var(--accent);margin-top:2px;font-weight:700}
+.vocab-ar{font-size:11px;color:var(--muted);margin-top:3px;font-family:'Cairo',sans-serif;direction:rtl}
+.vs-wrap{overflow-x:auto;margin:18px 0;padding:4px 0}
+.vs-caption{font-size:11px;color:var(--muted);text-align:center;margin-top:8px;font-style:italic}
+.dlg-card{background:var(--card);border:1px solid var(--border);border-radius:16px;margin-bottom:16px;overflow:hidden}
+.dlg-header{background:linear-gradient(to right,var(--primary),#1a1a4e);padding:13px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.dlg-meta{flex:1}
+.dlg-num{font-size:10px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:2px}
+.dlg-title{font-weight:800;font-size:14px;color:white}
+.dlg-ctx{font-size:11px;color:rgba(255,255,255,.5);font-style:italic;margin-top:2px}
+.dlg-tts{background:rgba(244,166,36,.15);border:1px solid rgba(244,166,36,.4);color:var(--accent);padding:6px 14px;border-radius:8px;font-size:11px;font-weight:700;cursor:pointer;font-family:'Poppins',sans-serif;transition:all .2s;white-space:nowrap}
+.dlg-tts:hover{background:rgba(244,166,36,.3)}
+.dlg-body{padding:20px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:640px){.dlg-body{grid-template-columns:1fr}}
+.dlg-col-head{font-size:10px;font-weight:700;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+.bubble{padding:9px 13px;border-radius:12px;font-size:13px;line-height:1.55;margin-bottom:7px}
+.bubble-a{background:rgba(26,58,110,0.5);border:1px solid rgba(74,158,255,0.2)}
+.bubble-b{background:var(--card2);border:1px solid var(--border)}
+.bubble-name{font-size:9px;font-weight:800;color:var(--muted);margin-bottom:4px;letter-spacing:.5px;text-transform:uppercase}
+.bubble-name.b{color:var(--accent)}
+.bubble-ar{direction:rtl;font-family:'Cairo',sans-serif;font-size:13px;color:var(--text)}
+.layout{display:flex;min-height:100vh}
+.sidebar{width:30%;max-width:320px;min-width:220px;position:fixed;top:0;left:0;bottom:0;background:var(--primary-dark);border-right:2px solid var(--border);display:flex;flex-direction:column;z-index:200;overflow:hidden}
+.sidebar-header{padding:18px 20px 14px;border-bottom:2px solid var(--accent);flex-shrink:0}
+.sidebar-logo{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+.sidebar-logo-icon{width:34px;height:34px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900;color:#0d1b2a;flex-shrink:0}
+.sidebar-logo-text{font-family:'Cairo',sans-serif;font-size:15px;font-weight:800;color:white}
+.sidebar-logo-sub{font-size:10px;color:var(--muted);font-weight:500;margin-top:-1px}
+.sidebar-label{font-family:'Cairo',sans-serif;font-size:11px;font-weight:700;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-top:12px}
+.sidebar-units{flex:1;overflow-y:auto;padding:10px 12px;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+.sidebar-units::-webkit-scrollbar{width:4px}
+.sidebar-units::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+.su-item{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;text-decoration:none;margin-bottom:4px;transition:background .2s,transform .2s}
+.su-item:not(.su-locked):hover{background:rgba(244,166,36,0.12);transform:translateX(3px)}
+.su-item.su-locked{opacity:.45;cursor:default;pointer-events:none}
+.su-item.su-active{background:rgba(244,166,36,0.15);border:1px solid rgba(244,166,36,0.3)}
+.su-num{width:28px;height:28px;border-radius:7px;background:rgba(255,255,255,0.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:var(--accent);flex-shrink:0}
+.su-item:not(.su-locked) .su-num{background:rgba(244,166,36,0.12);border-color:rgba(244,166,36,0.3)}
+.su-texts{flex:1;min-width:0}
+.su-en{font-size:13px;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.su-ar{font-family:'Cairo',sans-serif;font-size:11px;color:var(--muted);direction:rtl;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.su-check{font-size:12px;flex-shrink:0}
+.su-lock{font-size:11px;color:var(--muted);flex-shrink:0}
+.main-content{margin-left:min(30%,320px);flex:1;min-width:0}
+footer{padding:20px 24px;text-align:center;color:var(--muted);font-size:12px;border-top:1px solid var(--border);margin-top:10px}
+
+/* ══ Hamburger (desktop: hidden) ══ */
+.nav-hamburger{display:none;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.3);border-radius:8px;cursor:pointer;flex-direction:column;gap:5px;padding:8px;flex-shrink:0;margin-left:6px}
+.nav-hamburger span{display:block;width:100%;height:2px;background:var(--accent);border-radius:2px}
+/* Backdrop */
+.sb-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:199}
+.sb-backdrop.sb-open{display:block}
+@media(max-width:768px){
+  .sidebar{position:fixed;left:-100%;width:82%;max-width:300px;min-width:unset;transition:left .3s ease;z-index:200}
+  .sidebar.sb-open{left:0}
+  .main-content{margin-left:0}
+  .nav-brand{display:none}
+  .nav-hamburger{display:flex}
+  .topnav{padding:10px 12px;gap:6px}
+  .nav-lesson-name{display:none}
+  .nav-left{gap:5px}
+  .hero{padding:22px 13px 20px}
+  .hero-title{font-size:22px;letter-spacing:-.5px}
+  .hero-ar{font-size:12px}
+  .hero-sub{font-size:12px}
+  .hero-tags{gap:5px;justify-content:center}
+  .tag{font-size:10px;padding:3px 9px}
+  .rule-section{padding:0 12px}
+  .read-wrap{padding:0 12px}
+  .ci-wrap{padding:12px 12px}
+  .ci-hero{padding:18px 12px}
+  .dlg-block{padding:0 12px}
+  .eu-cat-grid{grid-template-columns:1fr}
+  .nu-scale{gap:3px}
+  .nu-word{font-size:10px;padding:3px 7px}
+  .nu-cmp-head,.nu-cmp-row{grid-template-columns:1fr 1fr;font-size:10px}
+  .nu-cmp-head span:last-child,.nu-cmp-row span:last-child{display:none}
+  .reg-ladder{padding:10px 12px}
+  .cmp-table{font-size:11px}
+  .chat-wrap{padding:0 4px}
+  .ci-q{margin-bottom:10px}
+  .ci-opts{gap:5px}
+  .ci-btn{font-size:12px;padding:9px 10px}
+  .vocab-grid{grid-template-columns:1fr 1fr}
+  .rq-opts{gap:5px}
+}
+
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+/* some/any pill styles */
+.pill-wrap{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.pill{padding:5px 14px;border-radius:20px;font-size:12.5px;font-weight:800}
+.pill-green{background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.35);color:var(--green)}
+.pill-blue{background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.3);color:var(--blue)}
+.pill-red{background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3);color:var(--red)}
+/* Reading */
+.read-tts-bar{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;align-items:center}
+.read-label{font-size:12px;font-weight:700;color:var(--muted)}
+.read-pass{background:var(--card2);border:1px solid var(--border);border-radius:14px;padding:22px;font-size:14px;line-height:1.9;margin-bottom:24px}
+.read-pass p{margin-bottom:12px}
+.read-pass p:last-child{margin-bottom:0}
+.read-pass b{color:var(--accent);font-weight:700}
+.comp-section-title{font-size:14px;font-weight:800;color:var(--accent);margin-bottom:14px;text-transform:uppercase;letter-spacing:1px}
+.read-q{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:12px}
+.read-q-text{font-weight:700;font-size:14px;margin-bottom:12px;color:var(--text);line-height:1.4}
+.read-opts{display:flex;flex-direction:column;gap:7px}
+.read-opt{background:var(--card2);border:1px solid var(--border);color:var(--text);padding:9px 14px;border-radius:8px;font-size:13px;cursor:pointer;text-align:left;font-family:'Poppins',sans-serif;transition:all .2s;display:flex;align-items:center;gap:8px}
+.read-opt:hover:not(.done){background:rgba(244,166,36,.06);border-color:rgba(244,166,36,.35);transform:translateY(-1px)}
+.read-opt.correct{background:rgba(34,197,94,.12);border-color:var(--green);color:var(--green)}
+.read-opt.wrong{background:rgba(239,68,68,.12);border-color:var(--red);color:var(--red)}
+.read-opt.done{cursor:default;transform:none!important}
+.read-ctx{background:linear-gradient(135deg,rgba(26,58,110,.55),rgba(15,37,72,.55));border:1px solid rgba(244,166,36,.22);border-radius:14px;padding:16px 22px;margin-bottom:20px;display:flex;flex-wrap:wrap;gap:20px;align-items:center}
+.read-ctx-fact{display:flex;flex-direction:column;gap:2px}
+.read-ctx-label{font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+.read-ctx-val{font-size:13.5px;font-weight:800;color:var(--text)}
+.read-ctx-sep{width:1px;background:var(--border);align-self:stretch}
+.read-vocab-wrap{margin:18px 0}
+.read-vocab-title{font-size:11px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.read-vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:7px}
+.read-vocab-item{background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:8px 12px}
+.read-vocab-en{font-size:13px;font-weight:700;color:var(--accent)}
+.read-vocab-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-top:2px}
+/* Check It */
+.ci-hero{background:linear-gradient(135deg,#12285a 0%,#1a1242 60%,#0d1b2a 100%);padding:36px 24px 30px;text-align:center;border-bottom:2px solid var(--accent)}
+.ci-hero-icon{font-size:38px;margin-bottom:10px}
+.ci-hero-title{font-size:clamp(22px,5vw,36px);font-weight:900;color:white;margin-bottom:6px}
+.ci-hero-sub{color:var(--muted);font-size:13px;max-width:460px;margin:0 auto}
+.ci-hero-types{display:flex;gap:10px;justify-content:center;margin-top:14px;flex-wrap:wrap}
+.ci-progress-wrap{background:var(--primary-dark);padding:10px 24px;border-bottom:1px solid var(--border);position:sticky;top:52px;z-index:99}
+.ci-progress-inner{max-width:760px;margin:0 auto}
+.ci-progress-bar{background:rgba(255,255,255,.07);border-radius:20px;height:7px;overflow:hidden;margin-bottom:5px}
+.ci-progress-fill{background:linear-gradient(90deg,var(--accent),var(--blue));height:100%;border-radius:20px;transition:width .4s ease;width:0%}
+.ci-progress-txt{font-size:11px;color:var(--muted);font-weight:700;display:flex;justify-content:space-between}
+.ci-wrap{max-width:100%;padding:12px 16px}
+.ci-q{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px 14px;margin-bottom:7px;transition:border-color .2s;border-left:3px solid rgba(244,166,36,.4)}
+.ci-q.ci-fib-q{border-left-color:rgba(74,158,255,.5)}
+.ci-q-head{display:flex;align-items:center;gap:6px;margin-bottom:9px;flex-wrap:nowrap}
+.ci-q-num{width:22px;height:22px;border-radius:50%;background:rgba(244,166,36,.18);border:1.5px solid rgba(244,166,36,.4);color:var(--accent);font-size:10px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ci-fib-q .ci-q-num{background:rgba(74,158,255,.15);border-color:rgba(74,158,255,.4);color:var(--blue)}
+.ci-q-tag{background:rgba(244,166,36,.08);border:1px solid rgba(244,166,36,.18);color:var(--accent);font-size:9px;font-weight:800;padding:2px 8px;border-radius:8px;text-transform:uppercase;letter-spacing:.4px;white-space:nowrap}
+.ci-type-badge{font-size:9px;font-weight:800;padding:2px 8px;border-radius:8px;text-transform:uppercase;letter-spacing:.4px;margin-left:auto;flex-shrink:0}
+.ci-type-mcq{background:rgba(244,166,36,.12);border:1px solid rgba(244,166,36,.25);color:var(--accent)}
+.ci-type-fib{background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.25);color:var(--blue)}
+.ci-q-prompt{font-size:12px;color:var(--muted);font-style:italic;margin-bottom:8px;padding:5px 10px;background:rgba(255,255,255,.03);border-left:2px solid var(--border);border-radius:0 6px 6px 0}
+.ci-opts{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.ci-btn{background:var(--card2);border:1.5px solid var(--border);color:var(--text);padding:9px 12px;border-radius:9px;font-size:12.5px;cursor:pointer;text-align:left;font-family:'Poppins',sans-serif;transition:all .2s;display:flex;align-items:center;gap:9px;line-height:1.35;width:100%}
+.ci-btn:hover:not(.done){background:rgba(244,166,36,.07);border-color:rgba(244,166,36,.45);transform:translateY(-2px)}
+.ci-btn.ci-correct{background:rgba(34,197,94,.1);border-color:var(--green);color:var(--green)}
+.ci-btn.ci-wrong{background:rgba(239,68,68,.1);border-color:var(--red);color:var(--red)}
+.ci-lbl{font-size:11px;font-weight:900;background:rgba(255,255,255,.09);border-radius:5px;padding:2px 7px;flex-shrink:0;min-width:22px;text-align:center}
+.ci-btn.ci-correct .ci-lbl{background:rgba(34,197,94,.2);color:var(--green)}
+.ci-btn.ci-wrong .ci-lbl{background:rgba(239,68,68,.2);color:var(--red)}
+.ci-fib-sent{font-size:13.5px;color:var(--text);font-weight:600;line-height:1.7;margin-bottom:9px}
+.ci-fib-sent b{color:var(--accent)}
+.ci-fib-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:4px}
+.ci-fib-input{background:var(--card2);border:2px solid var(--border);color:var(--text);padding:7px 13px;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;outline:none;min-width:160px;max-width:260px;transition:border-color .2s}
+.ci-fib-input:focus{border-color:var(--accent);background:rgba(244,166,36,.04)}
+.ci-fib-check{background:var(--accent);border:none;color:#0d1b2a;padding:7px 18px;border-radius:8px;font-weight:800;cursor:pointer;font-size:12px;font-family:'Poppins',sans-serif;transition:all .2s;flex-shrink:0}
+.ci-fib-check:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 4px 12px rgba(244,166,36,.3)}
+.ci-fib-check:disabled{opacity:.35;cursor:default;transform:none!important}
+.ci-hint{font-size:10.5px;color:var(--muted);font-style:italic;margin-top:3px}
+.ci-sol{display:none;margin-top:9px;border-radius:9px;overflow:hidden;animation:fadeIn .3s ease}
+.ci-sol-head{padding:7px 12px;font-size:11.5px;font-weight:800;border-bottom:1px solid rgba(255,255,255,.05)}
+.ci-sol-body{padding:8px 12px;display:flex;flex-direction:column;gap:4px}
+.ci-sol-ans{font-size:12.5px;font-weight:700;color:var(--accent)}
+.ci-sol-exp{font-size:11.5px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.ci-brk{display:none;background:linear-gradient(135deg,#12285a,#1a1242);border:2px solid var(--accent);border-radius:20px;padding:28px 24px;margin:16px 0;text-align:center;animation:fadeIn .5s ease;position:relative;overflow:hidden}
+.ci-brk::before{content:'';position:absolute;top:-50px;right:-50px;width:200px;height:200px;border-radius:50%;background:rgba(244,166,36,.07);pointer-events:none}
+.ci-brk-emoji{font-size:44px;margin-bottom:10px}
+.ci-brk-title{font-size:17px;font-weight:900;color:var(--accent);margin-bottom:16px}
+.ci-brk-cols{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:580px;margin:0 auto;text-align:left}
+@media(max-width:580px){.ci-brk-cols{grid-template-columns:1fr}}
+.ci-brk-col{background:rgba(255,255,255,.04);border:1px solid rgba(244,166,36,.2);border-radius:12px;padding:14px 16px}
+.ci-brk-col-title{font-size:10px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid rgba(244,166,36,.2)}
+.ci-brk-text{font-size:13px;color:var(--text);line-height:1.75}
+.ci-brk-text b{color:var(--accent)}
+.ci-brk-ar{font-size:12px;color:var(--muted);margin-top:14px;direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.ci-score{display:none;background:linear-gradient(135deg,#0f2548,#1a1242);border:2px solid var(--accent);border-radius:24px;padding:44px 32px;text-align:center;margin-top:24px;position:relative;overflow:hidden;animation:fadeIn .6s ease}
+.ci-score::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,rgba(244,166,36,.07) 0%,transparent 65%);pointer-events:none}
+.ci-score-emoji{font-size:60px;margin-bottom:14px}
+.ci-score-num{font-size:68px;font-weight:900;color:var(--accent);line-height:1;margin-bottom:4px}
+.ci-score-of{font-size:18px;color:var(--muted);margin-bottom:18px}
+.ci-score-bar-wrap{background:rgba(255,255,255,.06);border-radius:20px;height:10px;max-width:320px;margin:0 auto 24px;overflow:hidden}
+.ci-score-bar-fill{height:100%;border-radius:20px;background:linear-gradient(90deg,var(--accent),var(--green));transition:width 1.2s ease;width:0%}
+.ci-score-msg{font-size:18px;font-weight:900;color:white;margin-bottom:6px}
+.ci-score-ar{font-size:14px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;margin-bottom:24px;line-height:1.6}
+.ci-reset{background:var(--accent);border:none;color:#0d1b2a;padding:13px 32px;border-radius:12px;font-weight:900;cursor:pointer;font-family:'Poppins',sans-serif;font-size:14px;transition:all .25s;letter-spacing:.5px}
+.ci-reset:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(244,166,36,.35)}
+.chat-wrap{padding:18px 24px 26px;display:flex;flex-direction:column;gap:14px;background-image:radial-gradient(circle,rgba(244,166,36,0.22) 1.5px,transparent 1.5px),radial-gradient(circle,rgba(74,158,255,0.22) 1.5px,transparent 1.5px);background-size:28px 28px;background-position:0 0,14px 14px}
+.chat-msg{display:flex;flex-direction:column;max-width:70%}
+.chat-msg.right{align-self:flex-end;align-items:flex-end}
+.chat-msg.left{align-self:flex-start;align-items:flex-start}
+.chat-name-tag{font-size:11px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;margin-bottom:5px;padding:0 4px}
+.chat-msg.right .chat-name-tag{color:var(--accent)}
+.chat-msg.left .chat-name-tag{color:var(--blue)}
+.chat-bubble{padding:14px 17px 10px;border-radius:20px;width:100%}
+.chat-msg.right .chat-bubble{background:rgba(55,36,6,0.75);border:1px solid rgba(244,166,36,0.4);border-bottom-right-radius:4px;box-shadow:0 6px 28px rgba(0,0,0,0.65),0 0 18px rgba(244,166,36,0.22)}
+.chat-msg.left .chat-bubble{background:rgba(12,32,72,0.8);border:1px solid rgba(74,158,255,0.35);border-bottom-left-radius:4px;box-shadow:0 6px 28px rgba(0,0,0,0.65),0 0 18px rgba(74,158,255,0.20)}
+.chat-en{font-size:15px;color:var(--text);line-height:1.65;font-weight:500}
+.chat-en b{color:var(--accent)}
+.chat-msg.left .chat-en b{color:var(--blue)}
+.chat-ar{font-size:14px;color:rgba(232,237,245,0.8);direction:rtl;font-family:'Cairo',sans-serif;line-height:1.75;border-top:1px solid rgba(255,255,255,0.09);padding-top:9px;margin-top:9px}
+.chat-bubble-foot{display:flex;justify-content:flex-end;margin-top:9px;padding-top:7px;border-top:1px solid rgba(255,255,255,0.07)}
+.chat-sp-btn{font-size:14px;cursor:pointer;padding:5px 13px;border-radius:20px;transition:all .2s;line-height:1;font-weight:700;letter-spacing:.3px}
+.chat-msg.right .chat-sp-btn{background:rgba(244,166,36,0.18);border:1px solid rgba(244,166,36,0.45);color:var(--accent)}
+.chat-msg.left .chat-sp-btn{background:rgba(74,158,255,0.15);border:1px solid rgba(74,158,255,0.4);color:var(--blue)}
+.chat-sp-btn:hover{transform:scale(1.08);filter:brightness(1.25)}
+.su-prog{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:6px;overflow:hidden}
+.su-prog-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:2px;width:0%;transition:width .6s ease}
+
+.su-level-hd{padding:8px 12px 5px;margin-top:8px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(255,255,255,.05)}
+.su-level-code{font-size:11px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;padding:2px 8px;border-radius:5px;display:inline-block}
+.su-level-name{font-family:'Cairo',sans-serif;font-size:12px;font-weight:700;color:#f4c430;direction:rtl;margin:0;line-height:1}
+.lvl-a1{background:rgba(52,211,153,.15);color:#34d399;border:1px solid rgba(52,211,153,.35)}
+.lvl-a2{background:rgba(74,158,255,.15);color:#4a9eff;border:1px solid rgba(74,158,255,.35)}
+.lvl-b1{background:rgba(245,158,11,.15);color:#f59e0b;border:1px solid rgba(245,158,11,.35)}
+.lvl-b2{background:rgba(244,166,36,.15);color:var(--accent);border:1px solid rgba(244,166,36,.35)}
+.lvl-b2p{background:rgba(251,146,60,.15);color:#fb923c;border:1px solid rgba(251,146,60,.35)}
+.lvl-c1{background:rgba(168,85,247,.15);color:#a855f7;border:1px solid rgba(168,85,247,.35)}
+.su-coming{opacity:.28;cursor:default;pointer-events:none}
+.su-prog{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:6px;overflow:hidden}
+.su-prog-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:2px;width:0%;transition:width .6s ease}
+
+/* Lesson 1 specific styles */
+.alpha-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(68px,1fr));gap:8px;margin:18px 0}
+.alpha-card{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:12px 8px;text-align:center;cursor:pointer;transition:all .22s;position:relative}
+.alpha-card:hover{transform:translateY(-3px);border-color:var(--accent);background:rgba(244,166,36,.08)}
+.alpha-card.vowel{border-color:rgba(244,166,36,.5);background:rgba(244,166,36,.07)}
+.alpha-card.vowel:hover{background:rgba(244,166,36,.15)}
+.alpha-up{font-size:22px;font-weight:900;color:var(--text);line-height:1}
+.alpha-lo{font-size:14px;color:var(--muted);margin:2px 0}
+.alpha-ar{font-size:10px;color:var(--accent);font-family:'Cairo',sans-serif;margin-top:4px}
+.alpha-card.vowel .alpha-up{color:var(--accent)}
+.vowel-badge{display:inline-block;background:rgba(244,166,36,.15);border:1px solid rgba(244,166,36,.4);color:var(--accent);font-size:10px;font-weight:800;padding:2px 8px;border-radius:10px;margin-right:4px}
+.cons-badge{display:inline-block;background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.3);color:var(--blue);font-size:10px;font-weight:800;padding:2px 8px;border-radius:10px;margin-right:4px}
+.num-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:9px;margin:14px 0}
+.num-card{background:var(--card2);border:1px solid var(--border);border-radius:11px;padding:12px 14px;cursor:pointer;transition:all .2s}
+.num-card:hover{transform:translateY(-2px);border-color:var(--blue)}
+.num-digit{font-size:22px;font-weight:900;color:var(--blue);line-height:1}
+.num-word{font-size:13px;font-weight:700;color:var(--text);margin-top:3px}
+.num-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-top:3px}
+.num-grid-sm{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:8px;margin:14px 0}
+.num-sm{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:9px 12px;cursor:pointer;transition:all .2s}
+.num-sm:hover{border-color:var(--blue);transform:translateY(-2px)}
+.num-sm .num-digit{font-size:17px}
+.num-sm .num-word{font-size:12px}
+.ord-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin:14px 0}
+.ord-card{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px;cursor:pointer;transition:all .2s}
+.ord-card:hover{border-color:var(--purple);transform:translateY(-2px)}
+.ord-num{font-size:18px;font-weight:900;color:var(--purple);line-height:1}
+.ord-word{font-size:12.5px;font-weight:700;color:var(--text);margin-top:3px}
+.ord-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-top:3px}
+.rule-box{background:linear-gradient(135deg,rgba(168,85,247,.12),rgba(74,158,255,.08));border:1px solid rgba(168,85,247,.3);border-radius:14px;padding:16px 20px;margin:14px 0}
+.rule-title{font-size:12px;font-weight:800;color:#a855f7;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.rule-body{font-size:13px;color:var(--text);line-height:1.75}
+.rule-body b{color:#a855f7}
+.rule-body .eg{color:var(--accent);font-style:italic}
+
+
+
+.nav-home-btn{display:inline-flex;align-items:center;gap:6px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.4);color:var(--accent);font-size:12px;font-weight:800;padding:5px 13px;border-radius:8px;text-decoration:none;transition:all .2s;white-space:nowrap;flex-shrink:0}
+.nav-home-btn:hover{background:rgba(244,166,36,.25);transform:translateY(-2px)}
+.nav-lesson-badge{background:var(--accent);color:#0a1628;font-size:12px;font-weight:900;padding:5px 13px;border-radius:7px;white-space:nowrap;letter-spacing:.3px;flex-shrink:0}
+.nav-lesson-name{font-size:13px;color:rgba(232,237,245,.7);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-sep{color:rgba(136,153,176,.5);font-size:13px;flex-shrink:0}
+.nav-left{display:flex;align-items:center;gap:8px;flex:1;min-width:0}
+.nav-right{display:flex;align-items:center;flex-shrink:0}
+
+/* ── Reading bold highlight ── */
+.read-body b{color:var(--accent)}
+.read-body p b{color:var(--accent)}
+
+/* ── FIB label fix ── */
+.ci-fib-lbl{font-size:11px;font-weight:800;color:var(--accent);letter-spacing:1px;text-transform:uppercase;margin:4px 0 8px 0;opacity:.85}
+
+/* ── Lesson 32 — Quantifiers ── */
+.noun-duo{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+@media(max-width:600px){.noun-duo{grid-template-columns:1fr}}
+.noun-box{border-radius:13px;padding:15px 16px;border:2px solid}
+.noun-box.cnt{background:rgba(74,158,255,.07);border-color:rgba(74,158,255,.4)}
+.noun-box.unc{background:rgba(168,85,247,.07);border-color:rgba(168,85,247,.4)}
+.noun-box-title{font-size:12px;font-weight:900;letter-spacing:.5px;text-transform:uppercase;margin-bottom:6px}
+.noun-box.cnt .noun-box-title{color:var(--blue)}
+.noun-box.unc .noun-box-title{color:#a855f7}
+.noun-box-rule{font-size:11px;color:var(--text);margin-bottom:8px;line-height:1.5}
+.noun-chips{display:flex;flex-wrap:wrap;gap:5px}
+.noun-chip{font-size:11px;font-weight:700;padding:3px 9px;border-radius:6px}
+.noun-box.cnt .noun-chip{background:rgba(74,158,255,.15);color:var(--blue)}
+.noun-box.unc .noun-chip{background:rgba(168,85,247,.15);color:#a855f7}
+
+.qt-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:12px}
+.qt-table th{padding:10px 12px;text-align:left;font-size:11px;font-weight:900;letter-spacing:.5px;text-transform:uppercase}
+.qt-table th.qt-th-q{color:var(--accent);background:rgba(244,166,36,.07);width:18%}
+.qt-table th.qt-th-c{color:var(--blue);background:rgba(74,158,255,.07)}
+.qt-table th.qt-th-u{color:#a855f7;background:rgba(168,85,247,.07)}
+.qt-table th.qt-th-b{color:var(--green);background:rgba(34,197,94,.07)}
+.qt-table td{padding:9px 12px;border-top:1px solid var(--border);vertical-align:middle;line-height:1.6}
+.qt-table td:first-child{font-size:11px;color:var(--muted);background:rgba(255,255,255,.02);font-weight:700}
+.qt-table .td-c{color:var(--blue);font-weight:700}
+.qt-table .td-u{color:#a855f7;font-weight:700}
+.qt-table .td-b{color:var(--green);font-weight:700}
+.qt-table .td-no{color:rgba(255,255,255,.2);font-size:18px;text-align:center}
+.qt-table .td-ex{font-size:11px;color:var(--text);cursor:pointer}
+.qt-table .td-ex:hover{color:var(--accent)}
+.qt-table tr:hover td{background:rgba(255,255,255,.03)}
+
+.pair-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
+@media(max-width:600px){.pair-grid{grid-template-columns:1fr}}
+.pair-card{border-radius:11px;padding:12px 14px;cursor:pointer;transition:transform .15s}
+.pair-card:hover{transform:translateY(-2px)}
+.pair-card.neg-card{background:rgba(239,68,68,.06);border:1.5px solid rgba(239,68,68,.25)}
+.pair-card.pos-card{background:rgba(34,197,94,.06);border:1.5px solid rgba(34,197,94,.25)}
+.pc-label{font-size:10px;font-weight:900;letter-spacing:.5px;text-transform:uppercase;margin-bottom:5px}
+.neg-card .pc-label{color:var(--red)}
+.pos-card .pc-label{color:var(--green)}
+.pc-word{font-size:17px;font-weight:900;margin-bottom:4px}
+.neg-card .pc-word{color:var(--red)}
+.pos-card .pc-word{color:var(--green)}
+.pc-rule{font-size:11px;color:var(--text);margin-bottom:4px;line-height:1.5}
+.pc-ex{font-size:11px;color:var(--muted);font-style:italic}
+
+.sa-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin:14px 0}
+@media(max-width:600px){.sa-grid{grid-template-columns:1fr}}
+.sa-card{border-radius:12px;padding:12px 14px;cursor:pointer;transition:transform .15s}
+.sa-card:hover{transform:translateY(-2px)}
+.sa-card.some-card{background:rgba(34,197,94,.07);border:2px solid rgba(34,197,94,.35)}
+.sa-card.any-card{background:rgba(74,158,255,.07);border:2px solid rgba(74,158,255,.35)}
+.sa-word{font-size:18px;font-weight:900;margin-bottom:5px}
+.some-card .sa-word{color:var(--green)}
+.any-card .sa-word{color:var(--blue)}
+.sa-uses{list-style:none;padding:0;margin:0}
+.sa-uses li{font-size:11px;color:var(--text);margin:4px 0;padding-left:14px;position:relative;line-height:1.5}
+.sa-uses li::before{content:"•";position:absolute;left:0;font-weight:900}
+.some-card .sa-uses li::before{color:var(--green)}
+.any-card .sa-uses li::before{color:var(--blue)}
+.sa-ex{font-size:11px;color:var(--muted);font-style:italic;margin-top:3px}
+
+.lf-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin:14px 0}
+@media(max-width:600px){.lf-grid{grid-template-columns:1fr}}
+.lf-card{border-radius:12px;padding:12px 14px;cursor:pointer;transition:transform .15s}
+.lf-card:hover{transform:translateY(-2px)}
+.lf-card.less-c{background:rgba(244,166,36,.07);border:2px solid rgba(244,166,36,.35)}
+.lf-card.fewer-c{background:rgba(251,146,60,.07);border:2px solid rgba(251,146,60,.35)}
+.lf-word{font-size:18px;font-weight:900;margin-bottom:4px}
+.less-c .lf-word{color:var(--accent)}
+.fewer-c .lf-word{color:#fb923c}
+.lf-rule{font-size:11px;color:var(--text);margin-bottom:5px;line-height:1.5}
+.lf-ex{font-size:11px;color:var(--muted);font-style:italic}
+
+.warn-row{display:flex;gap:10px;align-items:flex-start;background:var(--card2);border-radius:10px;padding:10px 14px;margin:6px 0}
+.warn-icon{font-size:16px;flex-shrink:0;margin-top:2px}
+.warn-wrong{font-size:12px;color:var(--red);text-decoration:line-through}
+.warn-right{font-size:12px;color:var(--green);font-weight:700}
+.warn-ar{font-family:'Cairo',sans-serif;font-size:10px;color:var(--muted);direction:rtl;margin-top:2px}
+
+.tip-row{display:flex;align-items:flex-start;gap:10px;background:var(--card2);border-radius:10px;padding:10px 14px;margin:6px 0;cursor:pointer;transition:background .2s}
+.tip-row:hover{background:rgba(74,158,255,.08)}
+.tip-badge{background:rgba(74,158,255,.15);border:1px solid rgba(74,158,255,.4);color:var(--blue);font-size:11px;font-weight:900;padding:3px 9px;border-radius:7px;white-space:nowrap;flex-shrink:0}
+.tip-en{font-size:13px;color:var(--text);flex:1}
+.tip-ar{font-family:'Cairo',sans-serif;font-size:11px;color:var(--muted);direction:rtl;display:block;margin-top:2px}
+
+.su-level-hd{padding:8px 12px 5px;margin-top:8px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(255,255,255,.05)}
+.su-level-code{font-size:11px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;padding:2px 8px;border-radius:5px;display:inline-block}
+.su-level-name{font-family:'Cairo',sans-serif;font-size:12px;font-weight:700;color:#f4c430;direction:rtl;margin:0;line-height:1}
+.lvl-a1{background:rgba(52,211,153,.15);color:#34d399;border:1px solid rgba(52,211,153,.35)}
+.lvl-a2{background:rgba(74,158,255,.15);color:#4a9eff;border:1px solid rgba(74,158,255,.35)}
+.lvl-b1{background:rgba(245,158,11,.15);color:#f59e0b;border:1px solid rgba(245,158,11,.35)}
+.lvl-b2{background:rgba(244,166,36,.15);color:var(--accent);border:1px solid rgba(244,166,36,.35)}
+.lvl-b2p{background:rgba(251,146,60,.15);color:#fb923c;border:1px solid rgba(251,146,60,.35)}
+.lvl-c1{background:rgba(168,85,247,.15);color:#a855f7;border:1px solid rgba(168,85,247,.35)}
+.su-coming{opacity:.28;cursor:default;pointer-events:none}
+.su-prog{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:6px;overflow:hidden}
+.su-prog-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:2px;width:0%;transition:width .6s ease}
+
+.nav-home-btn{display:inline-flex;align-items:center;gap:6px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.4);color:var(--accent);font-size:12px;font-weight:800;padding:5px 13px;border-radius:8px;text-decoration:none;transition:all .2s;white-space:nowrap;flex-shrink:0}
+.nav-home-btn:hover{background:rgba(244,166,36,.25);transform:translateY(-2px)}
+.nav-lesson-badge{background:var(--accent);color:#0a1628;font-size:12px;font-weight:900;padding:5px 13px;border-radius:7px;white-space:nowrap;letter-spacing:.3px;flex-shrink:0}
+.nav-lesson-name{font-size:13px;color:rgba(232,237,245,.7);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-sep{color:rgba(136,153,176,.5);font-size:13px;flex-shrink:0}
+.nav-left{display:flex;align-items:center;gap:8px;flex:1;min-width:0}
+.nav-right{display:flex;align-items:center;flex-shrink:0}
+</style>
+
+<style>
+/* Watermark on print */
+@media print {
+  body::before {
+    content: 'Mohammed Elhuseyin — English Learning Platform — محمية الحقوق';
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-35deg);
+    font-size: 48px;
+    font-weight: 900;
+    color: rgba(244,166,36,0.18);
+    z-index: 9999;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+}
+</style>
+
+<style>
+.float-menu-btn{display:none;position:fixed;bottom:22px;left:18px;z-index:9998;width:48px;height:48px;background:var(--primary-dark,#0f2548);border:2px solid rgba(244,166,36,.5);border-radius:14px;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:12px;box-shadow:0 4px 20px rgba(0,0,0,.4);transition:transform .15s,box-shadow .15s}
+.float-menu-btn:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,.5)}
+.float-menu-btn span{display:block;width:22px;height:2px;background:#f4a624;border-radius:2px;transition:all .25s}
+@media(max-width:768px){.float-menu-btn{display:flex}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-logo">
+      <div class="sidebar-logo-icon">A</div>
+      <div>
+        <div class="sidebar-logo-text">English Course</div>
+        <div class="sidebar-logo-sub">MOHAMMED ELHUSEYIN</div>
+      </div>
+    </div>
+    <div class="sidebar-label ar">الوحدات الدراسية</div>
+  </div>
+  <div class="sidebar-units">
+  <div class="su-level-hd"><span class="su-level-code lvl-a1">A1</span><span class="su-level-name">مستوى المبتدئ تماماً</span></div>
+  <a href="lesson1.html" class="su-item"><div class="su-num">1</div><div class="su-texts"><div class="su-en">Alphabet & Numbers</div><div class="su-ar">الأحرف والأرقام</div><div class="su-prog"><div class="su-prog-fill" id="sp1"></div></div></div></a>
+  <a href="lesson2.html" class="su-item"><div class="su-num">2</div><div class="su-texts"><div class="su-en">Classroom Language & Greetings</div><div class="su-ar">لغة الصف والتحيات</div><div class="su-prog"><div class="su-prog-fill" id="sp2"></div></div></div></a>
+  <a href="lesson3.html" class="su-item"><div class="su-num">3</div><div class="su-texts"><div class="su-en">Nationalities & Countries</div><div class="su-ar">الجنسيات والدول</div><div class="su-prog"><div class="su-prog-fill" id="sp3"></div></div></div></a>
+  <a href="lesson4.html" class="su-item"><div class="su-num">4</div><div class="su-texts"><div class="su-en">Singular & Plural Nouns</div><div class="su-ar">الأسماء المفردة والجمع</div><div class="su-prog"><div class="su-prog-fill" id="sp4"></div></div></div></a>
+  <a href="lesson5.html" class="su-item"><div class="su-num">5</div><div class="su-texts"><div class="su-en">Days & Telling the Time</div><div class="su-ar">الأيام وإخبار الوقت</div><div class="su-prog"><div class="su-prog-fill" id="sp5"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-a2">A2</span><span class="su-level-name">المستوى الابتدائي</span></div>
+  <a href="unit1.html" class="su-item"><div class="su-num">6</div><div class="su-texts"><div class="su-en">Verb to <i>be</i></div><div class="su-ar">فعل التكوين</div><div class="su-prog"><div class="su-prog-fill" id="sp6"></div></div></div></a>
+  <a href="unit2.html" class="su-item"><div class="su-num">7</div><div class="su-texts"><div class="su-en">Present Simple</div><div class="su-ar">المضارع البسيط</div><div class="su-prog"><div class="su-prog-fill" id="sp7"></div></div></div></a>
+  <a href="unit3.html" class="su-item"><div class="su-num">8</div><div class="su-texts"><div class="su-en">Present Continuous</div><div class="su-ar">المضارع المستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp8"></div></div></div></a>
+  <a href="unit4.html" class="su-item"><div class="su-num">9</div><div class="su-texts"><div class="su-en">Past Simple: was / were</div><div class="su-ar">الماضي البسيط: كان</div><div class="su-prog"><div class="su-prog-fill" id="sp9"></div></div></div></a>
+  <a href="unit6.html" class="su-item"><div class="su-num">10</div><div class="su-texts"><div class="su-en">Past Simple: Regular & Irreg.</div><div class="su-ar">الماضي البسيط للأفعال</div><div class="su-prog"><div class="su-prog-fill" id="sp10"></div></div></div></a>
+  <a href="unit5.html" class="su-item"><div class="su-num">11</div><div class="su-texts"><div class="su-en">Can / Can't</div><div class="su-ar">القدرة والعجز</div><div class="su-prog"><div class="su-prog-fill" id="sp11"></div></div></div></a>
+  <a href="lesson12.html" class="su-item"><div class="su-num">12</div><div class="su-texts"><div class="su-en">Possessive Pronouns</div><div class="su-ar">ضمائر الملكية</div><div class="su-prog"><div class="su-prog-fill" id="sp12"></div></div></div></a>
+  <a href="unit7.html" class="su-item"><div class="su-num">13</div><div class="su-texts"><div class="su-en">There is / There are</div><div class="su-ar">يوجد / توجد</div><div class="su-prog"><div class="su-prog-fill" id="sp13"></div></div></div></a>
+  <a href="unit8.html" class="su-item"><div class="su-num">14</div><div class="su-texts"><div class="su-en">Adjectives</div><div class="su-ar">الصفات</div><div class="su-prog"><div class="su-prog-fill" id="sp14"></div></div></div></a>
+  <a href="unit9.html" class="su-item"><div class="su-num">15</div><div class="su-texts"><div class="su-en">Imperatives</div><div class="su-ar">صيغة الأمر والنهي</div><div class="su-prog"><div class="su-prog-fill" id="sp15"></div></div></div></a>
+  <a href="unit10.html" class="su-item"><div class="su-num">16</div><div class="su-texts"><div class="su-en">Object Pronouns</div><div class="su-ar">ضمائر المفعول به</div><div class="su-prog"><div class="su-prog-fill" id="sp16"></div></div></div></a>
+  <a href="unit11.html" class="su-item"><div class="su-num">17</div><div class="su-texts"><div class="su-en">Prepositions of Time & Place</div><div class="su-ar">حروف جر الوقت والمكان</div><div class="su-prog"><div class="su-prog-fill" id="sp17"></div></div></div></a>
+  <a href="unit12.html" class="su-item"><div class="su-num">18</div><div class="su-texts"><div class="su-en">Future Plans: going to</div><div class="su-ar">خطط المستقبل</div><div class="su-prog"><div class="su-prog-fill" id="sp18"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b1">B1</span><span class="su-level-name">تحت المتوسط</span></div>
+  <a href="lesson19.html" class="su-item"><div class="su-num">19</div><div class="su-texts"><div class="su-en">Present Perfect Introduction</div><div class="su-ar">مقدمة المضارع التام</div><div class="su-prog"><div class="su-prog-fill" id="sp19"></div></div></div></a>
+  <a href="lesson20.html" class="su-item"><div class="su-num">20</div><div class="su-texts"><div class="su-en">Past Continuous</div><div class="su-ar">الماضي المستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp20"></div></div></div></a>
+  <a href="lesson21.html" class="su-item"><div class="su-num">21</div><div class="su-texts"><div class="su-en">will vs. going to</div><div class="su-ar">المستقبل: إرادة أم تخطيط؟</div><div class="su-prog"><div class="su-prog-fill" id="sp21"></div></div></div></a>
+  <a href="lesson22.html" class="su-item"><div class="su-num">22</div><div class="su-texts"><div class="su-en">like / love / hate + -ing</div><div class="su-ar">التعبير عن التفضيلات</div><div class="su-prog"><div class="su-prog-fill" id="sp22"></div></div></div></a>
+  <a href="lesson23.html" class="su-item"><div class="su-num">23</div><div class="su-texts"><div class="su-en">Comparatives & Superlatives</div><div class="su-ar">المقارنة والتفضيل</div><div class="su-prog"><div class="su-prog-fill" id="sp23"></div></div></div></a>
+  <a href="lesson24.html" class="su-item"><div class="su-num">24</div><div class="su-texts"><div class="su-en">must / have to / should</div><div class="su-ar">أفعال الإلزام والنصيحة</div><div class="su-prog"><div class="su-prog-fill" id="sp24"></div></div></div></a>
+  <a href="lesson25.html" class="su-item"><div class="su-num">25</div><div class="su-texts"><div class="su-en">Infinitives & Gerunds</div><div class="su-ar">المصدر وصيغة الـ ing</div><div class="su-prog"><div class="su-prog-fill" id="sp25"></div></div></div></a>
+  <a href="lesson26.html" class="su-item"><div class="su-num">26</div><div class="su-texts"><div class="su-en">Articles: a/an / the</div><div class="su-ar">أدوات التعريف والتنكير</div><div class="su-prog"><div class="su-prog-fill" id="sp26"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b2">B2</span><span class="su-level-name">المستوى المتوسط</span></div>
+  <a href="lesson27.html" class="su-item"><div class="su-num">27</div><div class="su-texts"><div class="su-en">Present Perfect vs. Past Simple</div><div class="su-ar">المقارنة بين الماضي والتام</div><div class="su-prog"><div class="su-prog-fill" id="sp27"></div></div></div></a>
+  <a href="lesson28.html" class="su-item"><div class="su-num">28</div><div class="su-texts"><div class="su-en">Passive Voice</div><div class="su-ar">المبني للمجهول</div><div class="su-prog"><div class="su-prog-fill" id="sp28"></div></div></div></a>
+  <a href="lesson29.html" class="su-item"><div class="su-num">29</div><div class="su-texts"><div class="su-en">Zero / First / Second Cond.</div><div class="su-ar">الجمل الشرطية 0-1-2</div><div class="su-prog"><div class="su-prog-fill" id="sp29"></div></div></div></a>
+  <a href="lesson30.html" class="su-item"><div class="su-num">30</div><div class="su-texts"><div class="su-en">Reported Speech</div><div class="su-ar">الكلام غير المباشر</div><div class="su-prog"><div class="su-prog-fill" id="sp30"></div></div></div></a>
+  <a href="lesson31.html" class="su-item"><div class="su-num">31</div><div class="su-texts"><div class="su-en">Relative Clauses</div><div class="su-ar">جمل الوصل: who / which</div><div class="su-prog"><div class="su-prog-fill" id="sp31"></div></div></div></a>
+  <a href="lesson32.html" class="su-item su-active"><div class="su-num">32</div><div class="su-texts"><div class="su-en">Quantifiers</div><div class="su-ar">محددات الكمية</div><div class="su-prog"><div class="su-prog-fill" id="sp32"></div></div></div></a>
+  <a href="lesson33.html" class="su-item"><div class="su-num">33</div><div class="su-texts"><div class="su-en">Phrasal Verbs Introduction</div><div class="su-ar">مقدمة الأفعال المركبة</div><div class="su-prog"><div class="su-prog-fill" id="sp33"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b2p">B2+</span><span class="su-level-name">فوق المتوسط</span></div>
+  <a href="lesson34.html" class="su-item"><div class="su-num">34</div><div class="su-texts"><div class="su-en">Narrative Tenses & Past Perfect</div><div class="su-ar">أزمنة السرد والماضي التام</div><div class="su-prog"><div class="su-prog-fill" id="sp34"></div></div></div></a>
+  <a href="lesson35.html" class="su-item"><div class="su-num">35</div><div class="su-texts"><div class="su-en">Future Perfect & Continuous</div><div class="su-ar">المستقبل التام والمستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp35"></div></div></div></a>
+  <a href="lesson36.html" class="su-item"><div class="su-num">36</div><div class="su-texts"><div class="su-en">Third Conditional & Regrets</div><div class="su-ar">الشرط الثالث والندم</div><div class="su-prog"><div class="su-prog-fill" id="sp36"></div></div></div></a>
+  <a href="lesson37.html" class="su-item"><div class="su-num">37</div><div class="su-texts"><div class="su-en">Causative: have/get done</div><div class="su-ar">الأفعال السببية</div><div class="su-prog"><div class="su-prog-fill" id="sp37"></div></div></div></a>
+  <a href="lesson38.html" class="su-item"><div class="su-num">38</div><div class="su-texts"><div class="su-en">Advanced Passive</div><div class="su-ar">المبني للمجهول المتقدم</div><div class="su-prog"><div class="su-prog-fill" id="sp38"></div></div></div></a>
+  <a href="lesson39.html" class="su-item"><div class="su-num">39</div><div class="su-texts"><div class="su-en">Speculation: must/might/can't</div><div class="su-ar">التخمين والاستنتاج</div><div class="su-prog"><div class="su-prog-fill" id="sp39"></div></div></div></a>
+  <a href="lesson40.html" class="su-item"><div class="su-num">40</div><div class="su-texts"><div class="su-en">Idioms & Collocations</div><div class="su-ar">المصطلحات والتعبيرات</div><div class="su-prog"><div class="su-prog-fill" id="sp40"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-c1">C1</span><span class="su-level-name">المستوى المتقدم الأكاديمي</span></div>
+  <a href="lesson41.html" class="su-item"><div class="su-num">41</div><div class="su-texts"><div class="su-en">Inversion & Emphatic Structures</div><div class="su-ar">التقديم والتأخير للتأكيد</div><div class="su-prog"><div class="su-prog-fill" id="sp41"></div></div></div></a>
+  <a href="lesson42.html" class="su-item"><div class="su-num">42</div><div class="su-texts"><div class="su-en">Mixed Conditionals</div><div class="su-ar">الجمل الشرطية المختلطة</div><div class="su-prog"><div class="su-prog-fill" id="sp42"></div></div></div></a>
+  <a href="lesson43.html" class="su-item"><div class="su-num">43</div><div class="su-texts"><div class="su-en">Advanced Gerunds & Infinitives</div><div class="su-ar">المصادر المتقدمة</div><div class="su-prog"><div class="su-prog-fill" id="sp43"></div></div></div></a>
+  <a href="lesson44.html" class="su-item"><div class="su-num">44</div><div class="su-texts"><div class="su-en">Cleft Sentences</div><div class="su-ar">الجمل المشقوقة</div><div class="su-prog"><div class="su-prog-fill" id="sp44"></div></div></div></a>
+  <a href="lesson45.html" class="su-item"><div class="su-num">45</div><div class="su-texts"><div class="su-en">Discourse Markers</div><div class="su-ar">أدوات الربط الأكاديمية</div><div class="su-prog"><div class="su-prog-fill" id="sp45"></div></div></div></a>
+  <a href="lesson46.html" class="su-item"><div class="su-num">46</div><div class="su-texts"><div class="su-en">Nuances & Euphemisms</div><div class="su-ar">الفروقات الدقيقة والتلطيف</div><div class="su-prog"><div class="su-prog-fill" id="sp46"></div></div></div></a>
+</div>
+</aside>
+
+<div class="main-content">
+
+<nav class="topnav">
+  <div class="nav-left">
+    <a href="../index.html" class="nav-home-btn">&#x1F3E0; الرئيسية</a>
+    <span class="nav-sep">&#x203A;</span>
+    <span class="nav-lesson-badge">Lesson 32</span>
+    <span class="nav-sep">&#x203A;</span>
+    <span class="nav-lesson-name">Quantifiers</span>
+  </div>
+  <div class="nav-right"><span class="nav-brand">MOHAMMED ELHUSEYIN</span></div>
+</nav>
+
+<div class="hero">
+  <div class="unit-badge">&#x1F4DA; Lesson 32 &nbsp;&middot;&nbsp; B2 Intermediate</div>
+  <h1 class="hero-title">Quantifiers</h1>
+  <div class="hero-ar ar">محددات الكمية</div>
+  <p class="hero-sub">Master words that express <b>how much</b> or <b>how many</b> — including <b>many / much</b>, <b>few / little</b>, <b>some / any</b>, <b>a lot of / plenty of</b>, <b>less / fewer</b>, and more — with clear rules for countable and uncountable nouns.</p>
+  <div class="hero-tags">
+    <span class="tag tag-grammar">&#x1F4D6; Grammar</span>
+    <span class="tag tag-other">&#x1F4AC; Everyday English</span>
+    <span class="tag tag-other">&#x1F4D8; Reading</span>
+    <span class="tag tag-green">&#x2705; Check It!</span>
+  </div>
+</div>
+
+<div class="main-tabs">
+  <button class="main-tab active" onclick="showTab('grammar',this)">&#x1F4D6; Grammar</button>
+  <button class="main-tab" onclick="showTab('everyday',this)">&#x1F4AC; Everyday English</button>
+  <button class="main-tab" onclick="showTab('reading',this)">&#x1F4D8; Reading</button>
+  <button class="main-tab" onclick="showTab('checkit',this)">&#x2705; Check It!</button>
+</div>
+
+<!-- ════════════════════ GRAMMAR TAB ════════════════════ -->
+<div id="tab-grammar" class="tab-panel active">
+
+  <!-- Countable vs Uncountable -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F4CC; Countable vs Uncountable Nouns — أسماء معدودة وغير معدودة</div>
+    <div class="rule-ar">قبل تعلم المحددات، يجب معرفة نوع الاسم — لأن المحدد يختلف بحسب النوع</div>
+    <div class="noun-duo">
+      <div class="noun-box cnt">
+        <div class="noun-box-title">&#x1F535; Countable — معدود</div>
+        <div class="noun-box-rule">يمكن عدّه — له مفرد وجمع</div>
+        <div class="noun-chips">
+          <span class="noun-chip">book / books</span>
+          <span class="noun-chip">student / students</span>
+          <span class="noun-chip">car / cars</span>
+          <span class="noun-chip">idea / ideas</span>
+          <span class="noun-chip">chair / chairs</span>
+          <span class="noun-chip">question / questions</span>
+        </div>
+      </div>
+      <div class="noun-box unc">
+        <div class="noun-box-title">&#x1F7E3; Uncountable — غير معدود</div>
+        <div class="noun-box-rule">لا يُعَدّ — لا جمع له — لا نضع a/an قبله</div>
+        <div class="noun-chips">
+          <span class="noun-chip">water</span>
+          <span class="noun-chip">money</span>
+          <span class="noun-chip">information</span>
+          <span class="noun-chip">advice</span>
+          <span class="noun-chip">furniture</span>
+          <span class="noun-chip">news</span>
+          <span class="noun-chip">time</span>
+          <span class="noun-chip">knowledge</span>
+          <span class="noun-chip">traffic</span>
+          <span class="noun-chip">homework</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Master Table -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F4CA; Quantifiers Overview — جدول المحددات الكامل</div>
+    <div class="rule-ar">كل محدد مع النوع الذي يستخدم معه — معدود &#x1F535; أو غير معدود &#x1F7E3; أو كلاهما &#x1F7E2;</div>
+    <table class="qt-table">
+      <thead>
+        <tr>
+          <th class="qt-th-q">Quantifier</th>
+          <th class="qt-th-c">&#x1F535; Countable</th>
+          <th class="qt-th-u">&#x1F7E3; Uncountable</th>
+          <th class="qt-th-b">&#x1F7E2; Both</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>many</td>
+          <td class="td-c"><span class="td-ex" onclick="ttsRead(&quot;How many students are there? There are not many seats.&quot;,0.88)">many students / many seats &#x1F509;</span></td>
+          <td class="td-no">&#x2014;</td>
+          <td class="td-no">&#x2014;</td>
+        </tr>
+        <tr>
+          <td>much</td>
+          <td class="td-no">&#x2014;</td>
+          <td class="td-u"><span class="td-ex" onclick="ttsRead(&quot;How much water do you need? There is not much time left.&quot;,0.88)">much water / much time &#x1F509;</span></td>
+          <td class="td-no">&#x2014;</td>
+        </tr>
+        <tr>
+          <td>a few</td>
+          <td class="td-c"><span class="td-ex" onclick="ttsRead(&quot;I have a few friends here. It is okay.&quot;,0.88)">a few friends (= some) &#x1F509;</span></td>
+          <td class="td-no">&#x2014;</td>
+          <td class="td-no">&#x2014;</td>
+        </tr>
+        <tr>
+          <td>few</td>
+          <td class="td-c"><span class="td-ex" onclick="ttsRead(&quot;I have few friends here. I feel lonely.&quot;,0.88)">few friends (= not enough) &#x1F509;</span></td>
+          <td class="td-no">&#x2014;</td>
+          <td class="td-no">&#x2014;</td>
+        </tr>
+        <tr>
+          <td>a little</td>
+          <td class="td-no">&#x2014;</td>
+          <td class="td-u"><span class="td-ex" onclick="ttsRead(&quot;There is a little milk left. We are fine.&quot;,0.88)">a little milk (= some) &#x1F509;</span></td>
+          <td class="td-no">&#x2014;</td>
+        </tr>
+        <tr>
+          <td>little</td>
+          <td class="td-no">&#x2014;</td>
+          <td class="td-u"><span class="td-ex" onclick="ttsRead(&quot;There is little hope. The situation is bad.&quot;,0.88)">little hope (= not enough) &#x1F509;</span></td>
+          <td class="td-no">&#x2014;</td>
+        </tr>
+        <tr>
+          <td>several</td>
+          <td class="td-c"><span class="td-ex" onclick="ttsRead(&quot;I have visited Paris several times.&quot;,0.88)">several times / several people &#x1F509;</span></td>
+          <td class="td-no">&#x2014;</td>
+          <td class="td-no">&#x2014;</td>
+        </tr>
+        <tr>
+          <td>fewer</td>
+          <td class="td-c"><span class="td-ex" onclick="ttsRead(&quot;Fewer students passed this year.&quot;,0.88)">fewer students / fewer cars &#x1F509;</span></td>
+          <td class="td-no">&#x2014;</td>
+          <td class="td-no">&#x2014;</td>
+        </tr>
+        <tr>
+          <td>less</td>
+          <td class="td-no">&#x2014;</td>
+          <td class="td-u"><span class="td-ex" onclick="ttsRead(&quot;Try to eat less sugar. We have less time than I thought.&quot;,0.88)">less sugar / less time &#x1F509;</span></td>
+          <td class="td-no">&#x2014;</td>
+        </tr>
+        <tr>
+          <td>some / any</td>
+          <td class="td-no">&#x2014;</td>
+          <td class="td-no">&#x2014;</td>
+          <td class="td-b"><span class="td-ex" onclick="ttsRead(&quot;I need some water and some books. Do you have any questions?&quot;,0.88)">some/any water, some/any books &#x1F509;</span></td>
+        </tr>
+        <tr>
+          <td>a lot of</td>
+          <td class="td-no">&#x2014;</td>
+          <td class="td-no">&#x2014;</td>
+          <td class="td-b"><span class="td-ex" onclick="ttsRead(&quot;She has a lot of friends and a lot of free time.&quot;,0.88)">a lot of friends, a lot of time &#x1F509;</span></td>
+        </tr>
+        <tr>
+          <td>plenty of</td>
+          <td class="td-no">&#x2014;</td>
+          <td class="td-no">&#x2014;</td>
+          <td class="td-b"><span class="td-ex" onclick="ttsRead(&quot;We have plenty of time and plenty of seats.&quot;,0.88)">plenty of time, plenty of seats &#x1F509;</span></td>
+        </tr>
+        <tr>
+          <td>enough</td>
+          <td class="td-no">&#x2014;</td>
+          <td class="td-no">&#x2014;</td>
+          <td class="td-b"><span class="td-ex" onclick="ttsRead(&quot;Do we have enough chairs and enough food?&quot;,0.88)">enough chairs, enough food &#x1F509;</span></td>
+        </tr>
+        <tr>
+          <td>no / not any</td>
+          <td class="td-no">&#x2014;</td>
+          <td class="td-no">&#x2014;</td>
+          <td class="td-b"><span class="td-ex" onclick="ttsRead(&quot;There is no time. I have no friends here.&quot;,0.88)">no time, no friends &#x1F509;</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- few/little vs a few/a little -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F50D; few / little vs a few / a little — الفرق الدقيق</div>
+    <div class="rule-ar">الفرق بين وجود الكلمة <b>a</b> يُغيّر المعنى من سلبي إلى إيجابي</div>
+    <div class="pair-grid">
+      <div class="pair-card neg-card" onclick="ttsRead(&quot;I have few friends here. I feel lonely. Not enough.&quot;,0.88)">
+        <div class="pc-label">&#x1F534; few = NOT ENOUGH</div>
+        <div class="pc-word">few</div>
+        <div class="pc-rule">عدد قليل جداً — يشعر بالسلبية<br><b>+ countable plural</b></div>
+        <div class="pc-ex">"I have <b>few</b> friends here." (I feel lonely 😟)</div>
+      </div>
+      <div class="pair-card pos-card" onclick="ttsRead(&quot;I have a few friends here. We are okay. Some.&quot;,0.88)">
+        <div class="pc-label">&#x1F7E2; a few = SOME (okay)</div>
+        <div class="pc-word">a few</div>
+        <div class="pc-rule">بعض — يكفي — شعور إيجابي<br><b>+ countable plural</b></div>
+        <div class="pc-ex">"I have <b>a few</b> friends here." (I'm okay 😊)</div>
+      </div>
+      <div class="pair-card neg-card" onclick="ttsRead(&quot;There is little hope. The situation is bad.&quot;,0.88)">
+        <div class="pc-label">&#x1F534; little = NOT ENOUGH</div>
+        <div class="pc-word">little</div>
+        <div class="pc-rule">كمية قليلة جداً — يشعر بالسلبية<br><b>+ uncountable</b></div>
+        <div class="pc-ex">"There is <b>little</b> hope." (the situation is bad 😟)</div>
+      </div>
+      <div class="pair-card pos-card" onclick="ttsRead(&quot;There is a little milk left. We are fine.&quot;,0.88)">
+        <div class="pc-label">&#x1F7E2; a little = SOME (okay)</div>
+        <div class="pc-word">a little</div>
+        <div class="pc-rule">بعض الشيء — يكفي — شعور إيجابي<br><b>+ uncountable</b></div>
+        <div class="pc-ex">"There is <b>a little</b> milk." (we're fine 😊)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- some vs any -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F504; some vs any — متى نستخدم كل منهما؟</div>
+    <div class="rule-ar">كلاهما يُستخدم مع المعدود والغير معدود — لكن السياق يحدد الاختيار</div>
+    <div class="sa-grid">
+      <div class="sa-card some-card" onclick="ttsRead(&quot;some — used in affirmative sentences, offers and requests.&quot;,0.88)">
+        <div class="sa-word">some</div>
+        <ul class="sa-uses">
+          <li>&#x2795; Affirmative sentences<div class="sa-ex">I have <b>some</b> money. / She bought <b>some</b> books.</div></li>
+          <li>&#x1F64F; Offers / Requests<div class="sa-ex">Would you like <b>some</b> tea? / Can I have <b>some</b> water?</div></li>
+        </ul>
+      </div>
+      <div class="sa-card any-card" onclick="ttsRead(&quot;any — used in negative sentences and most questions.&quot;,0.88)">
+        <div class="sa-word">any</div>
+        <ul class="sa-uses">
+          <li>&#x274C; Negative sentences<div class="sa-ex">I don't have <b>any</b> money. / There isn't <b>any</b> milk.</div></li>
+          <li>&#x2753; Questions (genuine)<div class="sa-ex">Do you have <b>any</b> questions? / Is there <b>any</b> sugar?</div></li>
+          <li>&#x2705; "It doesn't matter which"<div class="sa-ex">Take <b>any</b> seat you like!</div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rule-box">
+      <b>Trick:</b> في العروض والطلبات نستخدم <b>some</b> حتى لو كانت جملة سؤال:<br>
+      "Would you like <b>some</b> coffee?" ✅ &nbsp;(offer — نتوقع نعم)<br>
+      "Do you have <b>any</b> coffee?" ✅ &nbsp;(genuine question — لا نعرف الإجابة)
+    </div>
+  </div>
+
+  <!-- less vs fewer -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F4C9; less vs fewer — خطأ شائع جداً</div>
+    <div class="rule-ar"><b>fewer</b> للمعدود (يُعَدّ) — <b>less</b> لغير المعدود (لا يُعَدّ)</div>
+    <div class="lf-grid">
+      <div class="lf-card less-c" onclick="ttsRead(&quot;less — used with uncountable nouns. Less water, less time, less money.&quot;,0.88)">
+        <div class="lf-word">less</div>
+        <div class="lf-rule">+ <b>uncountable</b> nouns — أسماء غير معدودة</div>
+        <div class="lf-ex">less water &nbsp;|&nbsp; less time &nbsp;|&nbsp; less money &nbsp;|&nbsp; less traffic</div>
+      </div>
+      <div class="lf-card fewer-c" onclick="ttsRead(&quot;fewer — used with countable nouns. Fewer students, fewer cars, fewer mistakes.&quot;,0.88)">
+        <div class="lf-word">fewer</div>
+        <div class="lf-rule">+ <b>countable</b> nouns (plural) — أسماء معدودة</div>
+        <div class="lf-ex">fewer students &nbsp;|&nbsp; fewer cars &nbsp;|&nbsp; fewer mistakes &nbsp;|&nbsp; fewer people</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- many vs much -->
+  <div class="rule-section">
+    <div class="rule-title">&#x2753; many vs much — في الأسئلة والنفي</div>
+    <div class="rule-ar"><b>many</b> للمعدود — <b>much</b> لغير المعدود — في الأسئلة والنفي بشكل رئيسي</div>
+    <div class="pair-grid">
+      <div class="pair-card pos-card" onclick="ttsRead(&quot;many — for countable. How many students? There are not many chairs left.&quot;,0.88)">
+        <div class="pc-label">&#x1F535; many + countable</div>
+        <div class="pc-word">many</div>
+        <div class="pc-rule">أسئلة ونفي — مع المعدود الجمع</div>
+        <div class="pc-ex">How <b>many</b> students? &nbsp;|&nbsp; not <b>many</b> seats &#x1F509;</div>
+      </div>
+      <div class="pair-card neg-card" onclick="ttsRead(&quot;much — for uncountable. How much water? There is not much time.&quot;,0.88)">
+        <div class="pc-label">&#x1F7E3; much + uncountable</div>
+        <div class="pc-word">much</div>
+        <div class="pc-rule">أسئلة ونفي — مع غير المعدود</div>
+        <div class="pc-ex">How <b>much</b> water? &nbsp;|&nbsp; not <b>much</b> time &#x1F509;</div>
+      </div>
+    </div>
+    <div class="rule-box">
+      <b>Tip:</b> في الجمل الإيجابية — نستخدم <b>a lot of</b> بدل much/many لأنها أكثر طبيعية:<br>
+      ❌ "I have <b>much</b> money." (formal/odd) &nbsp;&nbsp; ✅ "I have <b>a lot of</b> money." (natural)
+    </div>
+  </div>
+
+  <!-- Common mistakes -->
+  <div class="rule-section">
+    <div class="rule-title">&#x26A0; Common Mistakes — أخطاء شائعة</div>
+    <div class="rule-ar">هذه الأخطاء يقع فيها حتى المتعلمون المتقدمون</div>
+    <div class="warn-row">
+      <span class="warn-icon">&#x274C;</span>
+      <div><div><span class="warn-wrong">much friends</span> &nbsp;&#x2192;&nbsp; <span class="warn-right">many friends</span></div><div class="warn-ar">friends معدود ← much فقط لغير المعدود</div></div>
+    </div>
+    <div class="warn-row">
+      <span class="warn-icon">&#x274C;</span>
+      <div><div><span class="warn-wrong">less students</span> &nbsp;&#x2192;&nbsp; <span class="warn-right">fewer students</span></div><div class="warn-ar">students معدود ← نستخدم fewer وليس less</div></div>
+    </div>
+    <div class="warn-row">
+      <span class="warn-icon">&#x274C;</span>
+      <div><div><span class="warn-wrong">a few money</span> &nbsp;&#x2192;&nbsp; <span class="warn-right">a little money</span></div><div class="warn-ar">money غير معدود ← a few فقط للمعدود</div></div>
+    </div>
+    <div class="warn-row">
+      <span class="warn-icon">&#x274C;</span>
+      <div><div><span class="warn-wrong">many informations</span> &nbsp;&#x2192;&nbsp; <span class="warn-right">a lot of information</span></div><div class="warn-ar">information غير معدود — لا يُجمع — نستخدم a lot of</div></div>
+    </div>
+    <div class="warn-row">
+      <span class="warn-icon">&#x274C;</span>
+      <div><div><span class="warn-wrong">an advice</span> &nbsp;&#x2192;&nbsp; <span class="warn-right">a piece of advice / some advice</span></div><div class="warn-ar">advice غير معدود — لا يُستخدم معه a/an</div></div>
+    </div>
+    <div class="warn-row">
+      <span class="warn-icon">&#x274C;</span>
+      <div><div><span class="warn-wrong">I have much free time today.</span> &nbsp;&#x2192;&nbsp; <span class="warn-right">I have a lot of free time today.</span></div><div class="warn-ar">في الجمل الإيجابية: a lot of أكثر طبيعية من much</div></div>
+    </div>
+  </div>
+
+  <!-- Tips -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F4A1; Quick Tips</div>
+    <div class="tip-row" onclick="ttsRead(&quot;enough comes before the noun but after the adjective. Enough time, enough money. He is good enough. Not enough he is.&quot;,0.88)">
+      <span class="tip-badge">enough</span>
+      <div><span class="tip-en"><b>enough</b> + noun: "enough time" ✅ &nbsp;|&nbsp; adj + <b>enough</b>: "good <b>enough</b>" ✅ &#x1F509;</span><span class="tip-ar">enough قبل الاسم — بعد الصفة</span></div>
+    </div>
+    <div class="tip-row" onclick="ttsRead(&quot;plenty of means more than enough. We have plenty of time, do not rush.&quot;,0.88)">
+      <span class="tip-badge">plenty of</span>
+      <div><span class="tip-en"><b>plenty of</b> = more than enough (يكفي وزيادة) — "We have <b>plenty of</b> time." &#x1F509;</span><span class="tip-ar">plenty of تعني وفرة — ليس نقصاً ولا مجرد كفاية</span></div>
+    </div>
+    <div class="tip-row" onclick="ttsRead(&quot;no versus not any. There is no milk. There is not any milk. Same meaning.&quot;,0.88)">
+      <span class="tip-badge">no = not any</span>
+      <div><span class="tip-en">"There is <b>no</b> milk." = "There <b>isn't any</b> milk." — same meaning &#x1F509;</span><span class="tip-ar">no ونفي + any يؤديان نفس المعنى — no أقوى وأكثر إيجازاً</span></div>
+    </div>
+    <div class="tip-row" onclick="ttsRead(&quot;several means more than two but not very many. I have visited that city several times.&quot;,0.88)">
+      <span class="tip-badge">several</span>
+      <div><span class="tip-en"><b>several</b> = more than two but not very many — "I've been there <b>several</b> times." &#x1F509;</span><span class="tip-ar">several = أكثر من اثنين، أقل من كثير — للمعدود فقط</span></div>
+    </div>
+  </div>
+
+</div><!-- /tab-grammar -->
+
+<!-- ════════════════════ EVERYDAY ENGLISH TAB ════════════════════ -->
+<div id="tab-everyday" class="tab-panel">
+
+  <!-- Dialogue 1 -->
+  <div class="dlg-block">
+    <div class="dlg-header">
+      <div>
+        <div class="dlg-title">&#x1F6D2; At the Supermarket</div>
+        <div class="dlg-sub ar">في السوبرماركت</div>
+      </div>
+      <div class="dlg-tags"><span class="tag tag-grammar">some / any / enough</span></div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Do we have any milk at home or should I buy some?&quot;,0.88)">Do we have <b>any</b> milk at home or should I buy <b>some</b>? <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">هل لدينا أي حليب في البيت أم يجب أن أشتري بعضاً؟</div>
+          <div class="chat-bubble-foot">Khalid</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;There is a little left but not enough for the whole week. Get two cartons.&quot;,0.88)">There is <b>a little</b> left but not <b>enough</b> for the whole week. Get two cartons. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">بقي قليل لكنه لا يكفي للأسبوع كله. خذ علبتين.</div>
+          <div class="chat-bubble-foot">Nadia</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;What about fruit? Do we need any?&quot;,0.88)">What about fruit? Do we need <b>any</b>? <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">ماذا عن الفاكهة؟ هل نحتاج أي منها؟</div>
+          <div class="chat-bubble-foot">Khalid</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Yes please. Get some bananas and a few oranges. We have plenty of apples already.&quot;,0.88)">Yes please. Get <b>some</b> bananas and <b>a few</b> oranges. We have <b>plenty of</b> apples already. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">نعم من فضلك. خذ بعض الموز وعدداً قليلاً من البرتقال. لدينا تفاح وفير بالفعل.</div>
+          <div class="chat-bubble-foot">Nadia</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dialogue 2 -->
+  <div class="dlg-block">
+    <div class="dlg-header">
+      <div>
+        <div class="dlg-title">&#x1F4CA; Planning a Party</div>
+        <div class="dlg-sub ar">التخطيط لحفلة</div>
+      </div>
+      <div class="dlg-tags"><span class="tag tag-grammar">many / much / a lot of</span></div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;How many people are you inviting to the party?&quot;,0.88)">How <b>many</b> people are you inviting to the party? <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">كم شخصاً ستدعو للحفلة؟</div>
+          <div class="chat-bubble-foot">Sara</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;About thirty. We have a lot of space in the garden so it should be fine.&quot;,0.88)">About thirty. We have <b>a lot of</b> space in the garden so it should be fine. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">حوالي ثلاثين. لدينا مساحة كبيرة في الحديقة لذا يجب أن يكون بخير.</div>
+          <div class="chat-bubble-foot">Rami</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;How much food will you need? That is a lot of guests.&quot;,0.88)">How <b>much</b> food will you need? That's <b>a lot of</b> guests. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">كم من الطعام ستحتاج؟ هذا عدد كبير من الضيوف.</div>
+          <div class="chat-bubble-foot">Sara</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Plenty of it. I am not worried about that. But we have few chairs so I might need to borrow some.&quot;,0.88)">Plenty of it. I'm not worried. But we have <b>few</b> chairs so I might need to borrow <b>some</b>. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">وفير منه. لست قلقاً على ذلك. لكن لدينا كراسٍ قليلة جداً فقد أحتاج إلى استعارة بعضها.</div>
+          <div class="chat-bubble-foot">Rami</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dialogue 3 -->
+  <div class="dlg-block">
+    <div class="dlg-header">
+      <div>
+        <div class="dlg-title">&#x1F4DA; Studying Together</div>
+        <div class="dlg-sub ar">الدراسة معاً</div>
+      </div>
+      <div class="dlg-tags"><span class="tag tag-grammar">few / a few / little / a little</span></div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;How is revision going? Do you have much left to study?&quot;,0.88)">How is revision going? Do you have <b>much</b> left to study? <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">كيف سير المراجعة؟ هل لديك الكثير لتدرسه؟</div>
+          <div class="chat-bubble-foot">Lama</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;A little. I only have a few chapters left. I feel okay about it.&quot;,0.88)">A <b>little</b>. I only have <b>a few</b> chapters left. I feel okay about it. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">قليل. لديّ فقط بضعة فصول متبقية. أشعر بأنني بخير.</div>
+          <div class="chat-bubble-foot">Ziad</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Lucky you. I have little time and few notes. I am really stressed.&quot;,0.88)">Lucky you. I have <b>little</b> time and <b>few</b> notes. I'm really stressed. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">محظوظ. لديّ وقت قليل جداً وملاحظات قليلة جداً. أنا متوتر جداً.</div>
+          <div class="chat-bubble-foot">Lama</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;I can share my notes. There is still enough time if we start now.&quot;,0.88)">I can share my notes. There's still <b>enough</b> time if we start now. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">يمكنني مشاركة ملاحظاتي. لا يزال هناك وقت كافٍ إذا بدأنا الآن.</div>
+          <div class="chat-bubble-foot">Ziad</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dialogue 4 -->
+  <div class="dlg-block">
+    <div class="dlg-header">
+      <div>
+        <div class="dlg-title">&#x1F3EB; Asking for Advice</div>
+        <div class="dlg-sub ar">طلب النصيحة</div>
+      </div>
+      <div class="dlg-tags"><span class="tag tag-other">advice / information (uncountable)</span><span class="tag tag-grammar">some / no</span></div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;I need some advice about my CV. Can you help?&quot;,0.88)">I need <b>some</b> advice about my CV. Can you help? <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">أحتاج إلى بعض النصائح بشأن سيرتي الذاتية. هل يمكنك المساعدة؟</div>
+          <div class="chat-bubble-foot">Hiba</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Of course. Do you have any information about the job you are applying for?&quot;,0.88)">Of course. Do you have <b>any</b> information about the job you're applying for? <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">بالطبع. هل لديك أي معلومات عن الوظيفة التي تتقدم لها؟</div>
+          <div class="chat-bubble-foot">Coach</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;I have a little information but no experience in this field.&quot;,0.88)">I have <b>a little</b> information but <b>no</b> experience in this field. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">لديّ القليل من المعلومات لكن لا خبرة لديّ في هذا المجال.</div>
+          <div class="chat-bubble-foot">Hiba</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;That is okay. Even a few volunteer projects on your CV can make a big difference.&quot;,0.88)">That's okay. Even <b>a few</b> volunteer projects on your CV can make a big difference. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">لا بأس. حتى بعض مشاريع التطوع في سيرتك الذاتية يمكن أن تُحدث فارقاً كبيراً.</div>
+          <div class="chat-bubble-foot">Coach</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dialogue 5 -->
+  <div class="dlg-block">
+    <div class="dlg-header">
+      <div>
+        <div class="dlg-title">&#x1F31F; Less vs Fewer</div>
+        <div class="dlg-sub ar">less مقابل fewer في المحادثة</div>
+      </div>
+      <div class="dlg-tags"><span class="tag tag-grammar">less / fewer / several</span></div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;The new diet plan says we should eat less sugar and fewer processed foods.&quot;,0.88)">The new diet plan says we should eat <b>less</b> sugar and <b>fewer</b> processed foods. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">تقول خطة الحمية الجديدة يجب أن نأكل سكراً أقل وأطعمة مصنعة أقل.</div>
+          <div class="chat-bubble-foot">Dana</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;I know. I have been drinking less coffee too. Several friends told me it makes a huge difference.&quot;,0.88)">I know. I've been drinking <b>less</b> coffee too. <b>Several</b> friends told me it makes a huge difference. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">أعلم. كنت أشرب قهوة أقل أيضاً. أخبرني عدة أصدقاء أن ذلك يُحدث فارقاً كبيراً.</div>
+          <div class="chat-bubble-foot">Wael</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;And we need fewer takeaways and more home cooking.&quot;,0.88)">And we need <b>fewer</b> takeaways and more home cooking. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">ونحتاج إلى طعام جاهز أقل وطهي منزلي أكثر.</div>
+          <div class="chat-bubble-foot">Dana</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Agreed. There is plenty of healthy food that is easy to make at home.&quot;,0.88)">Agreed. There is <b>plenty of</b> healthy food that is easy to make at home. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">متفق. هناك وفرة من الطعام الصحي سهل الطهي في المنزل.</div>
+          <div class="chat-bubble-foot">Wael</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /tab-everyday -->
+
+<!-- ════════════════════ READING TAB ════════════════════ -->
+<div id="tab-reading" class="tab-panel">
+  <div class="read-wrap">
+    <div class="read-header">
+      <div class="read-title">&#x1F4D8; Feeding a City</div>
+      <div class="read-sub ar">إطعام مدينة</div>
+    </div>
+    <div class="read-body">
+      <p onclick="ttsRead(&quot;Every day, a large city needs an enormous amount of food to feed its people.&quot;,0.88)">Every day, a large city needs an enormous <b>amount of</b> food to feed its people. <span class="read-sp">&#x1F509;</span></p>
+      <p onclick="ttsRead(&quot;There is plenty of food available in supermarkets, but not all families have enough money to buy what they need.&quot;,0.88)">There is <b>plenty of</b> food available in supermarkets, but not all families have <b>enough</b> money to buy what they need. <span class="read-sp">&#x1F509;</span></p>
+      <p onclick="ttsRead(&quot;Many charities work hard to make sure that few people go to bed hungry.&quot;,0.88)">Many charities work hard to make sure that <b>few</b> people go to bed hungry. <span class="read-sp">&#x1F509;</span></p>
+      <p onclick="ttsRead(&quot;However, there is still a lot of food waste. Several studies have shown that supermarkets throw away less food than households do.&quot;,0.88)">However, there is still <b>a lot of</b> food waste. <b>Several</b> studies have shown that supermarkets throw away <b>less</b> food than households do. <span class="read-sp">&#x1F509;</span></p>
+      <p onclick="ttsRead(&quot;Experts say we need fewer single-use plastic packages and a little more creativity in using leftovers.&quot;,0.88)">Experts say we need <b>fewer</b> single-use plastic packages and <b>a little</b> more creativity in using leftovers. <span class="read-sp">&#x1F509;</span></p>
+      <p onclick="ttsRead(&quot;There is no simple solution, but with some effort from every household, a great deal of waste can be prevented.&quot;,0.88)">There is <b>no</b> simple solution, but with <b>some</b> effort from every household, <b>a great deal of</b> waste can be prevented. <span class="read-sp">&#x1F509;</span></p>
+    </div>
+
+    <div class="vocab-wrap">
+      <div class="vocab-title">&#x1F4DA; Key Vocabulary</div>
+      <div class="vocab-grid">
+        <div class="vocab-card" onclick="ttsRead(&quot;enormous&quot;,0.88)"><div class="vocab-en">enormous</div><div class="vocab-ar ar">هائل / ضخم</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;charity&quot;,0.88)"><div class="vocab-en">charity</div><div class="vocab-ar ar">جمعية خيرية</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;waste&quot;,0.88)"><div class="vocab-en">waste</div><div class="vocab-ar ar">هدر / نفايات</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;household&quot;,0.88)"><div class="vocab-en">household</div><div class="vocab-ar ar">المنزل / الأسرة</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;leftovers&quot;,0.88)"><div class="vocab-en">leftovers</div><div class="vocab-ar ar">بقايا الطعام</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;single-use&quot;,0.88)"><div class="vocab-en">single-use</div><div class="vocab-ar ar">للاستخدام مرة واحدة</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;available&quot;,0.88)"><div class="vocab-en">available</div><div class="vocab-ar ar">متاح / موجود</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;prevent&quot;,0.88)"><div class="vocab-en">prevent</div><div class="vocab-ar ar">يمنع / يتفادى</div></div>
+      </div>
+    </div>
+
+    <div class="rq-wrap">
+      <div class="rq-title">&#x2753; Comprehension Questions</div>
+      <div class="rq-item" id="rq1">
+        <div class="rq-q" onclick="ttsRead(&quot;According to the text, who wastes more food, supermarkets or households?&quot;,0.88)">1. Who wastes <b>more food</b> according to the text? &#x1F509;</div>
+        <div class="rq-opts">
+          <button class="read-opt" onclick="rqPick(this,'rq1',false)">Supermarkets</button>
+          <button class="read-opt" onclick="rqPick(this,'rq1',true)">Households</button>
+          <button class="read-opt" onclick="rqPick(this,'rq1',false)">Charities</button>
+          <button class="read-opt" onclick="rqPick(this,'rq1',false)">Restaurants</button>
+        </div>
+      </div>
+      <div class="rq-item" id="rq2">
+        <div class="rq-q" onclick="ttsRead(&quot;What does a great deal of mean in the text?&quot;,0.88)">2. "a <b>great deal of</b> waste" — this means ___. &#x1F509;</div>
+        <div class="rq-opts">
+          <button class="read-opt" onclick="rqPick(this,'rq2',false)">A little waste</button>
+          <button class="read-opt" onclick="rqPick(this,'rq2',true)">A large amount of waste</button>
+          <button class="read-opt" onclick="rqPick(this,'rq2',false)">No waste at all</button>
+          <button class="read-opt" onclick="rqPick(this,'rq2',false)">Some waste</button>
+        </div>
+      </div>
+      <div class="rq-item" id="rq3">
+        <div class="rq-q" onclick="ttsRead(&quot;What do experts say we need fewer of?&quot;,0.88)">3. What do experts say we need <b>fewer</b> of? &#x1F509;</div>
+        <div class="rq-opts">
+          <button class="read-opt" onclick="rqPick(this,'rq3',false)">Healthy food options</button>
+          <button class="read-opt" onclick="rqPick(this,'rq3',true)">Single-use plastic packages</button>
+          <button class="read-opt" onclick="rqPick(this,'rq3',false)">Supermarkets</button>
+          <button class="read-opt" onclick="rqPick(this,'rq3',false)">Charities</button>
+        </div>
+      </div>
+      <div class="rq-item" id="rq4">
+        <div class="rq-q" onclick="ttsRead(&quot;Why is fewer used with plastic packages and not less?&quot;,0.88)">4. Why is <b>fewer</b> used with "plastic packages" and not <b>less</b>? &#x1F509;</div>
+        <div class="rq-opts">
+          <button class="read-opt" onclick="rqPick(this,'rq4',false)">Because packages is uncountable</button>
+          <button class="read-opt" onclick="rqPick(this,'rq4',true)">Because packages is a countable plural noun</button>
+          <button class="read-opt" onclick="rqPick(this,'rq4',false)">Because fewer sounds more formal</button>
+          <button class="read-opt" onclick="rqPick(this,'rq4',false)">There is no difference</button>
+        </div>
+      </div>
+      <div class="rq-item" id="rq5">
+        <div class="rq-q" onclick="ttsRead(&quot;What is the charities goal according to the text?&quot;,0.88)">5. What is the charities' goal, according to the text? &#x1F509;</div>
+        <div class="rq-opts">
+          <button class="read-opt" onclick="rqPick(this,'rq5',false)">To reduce plastic waste</button>
+          <button class="read-opt" onclick="rqPick(this,'rq5',true)">To make sure few people go to bed hungry</button>
+          <button class="read-opt" onclick="rqPick(this,'rq5',false)">To stop supermarket food waste</button>
+          <button class="read-opt" onclick="rqPick(this,'rq5',false)">To open more food markets</button>
+        </div>
+      </div>
+      <div class="rq-score" id="rqScore32" style="display:none">
+        <div class="rqs-icon">&#x1F3AF;</div>
+        <div class="rqs-num" id="rqScoreNum32"></div>
+        <div class="rqs-msg" id="rqScoreMsg32"></div>
+        <div class="rqs-ar ar" id="rqScoreAr32"></div>
+        <button class="rqs-btn" onclick="rqReset32()">&#x1F504; Try Again</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /tab-reading -->
+
+<!-- ════════════════════ CHECK IT! TAB ════════════════════ -->
+<div id="tab-checkit" class="tab-panel">
+  <div class="ci-hero">
+    <div class="ci-hero-icon">&#x2705;</div>
+    <h2 class="ci-hero-title">Check It!</h2>
+    <p class="ci-hero-sub">25 questions — Quantifiers — 20 MCQ + 5 Fill-in-the-Blank</p>
+    <div class="ci-hero-types">
+      <span class="tag tag-grammar">20 Multiple Choice</span>
+      <span class="tag tag-other">5 Fill in the Blank</span>
+    </div>
+  </div>
+  <div class="ci-progress-wrap">
+    <div class="ci-progress-inner">
+      <div class="ci-progress-bar"><div class="ci-progress-fill" id="ciProgressFill32"></div></div>
+      <div class="ci-progress-txt">
+        <span id="ciProgressTxt32">0 / 25 answered</span>
+        <span id="ciScoreTxt32">Score: 0</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="ci-wrap" id="ciWrap32">
+
+    <div class="ci-q" id="ciq1"><div class="ci-q-num">Q1</div><div class="ci-q-text" onclick="ttsRead(&quot;How many students are in your class?&quot;,0.88)">How ___ students are in your class? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq1',false)">much</button><button class="ci-btn" onclick="ciPick(this,'ciq1',true)">many</button><button class="ci-btn" onclick="ciPick(this,'ciq1',false)">few</button><button class="ci-btn" onclick="ciPick(this,'ciq1',false)">little</button></div></div>
+
+    <div class="ci-q" id="ciq2"><div class="ci-q-num">Q2</div><div class="ci-q-text" onclick="ttsRead(&quot;How much time do we have left?&quot;,0.88)">How ___ time do we have left? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq2',false)">many</button><button class="ci-btn" onclick="ciPick(this,'ciq2',true)">much</button><button class="ci-btn" onclick="ciPick(this,'ciq2',false)">few</button><button class="ci-btn" onclick="ciPick(this,'ciq2',false)">several</button></div></div>
+
+    <div class="ci-q" id="ciq3"><div class="ci-q-num">Q3</div><div class="ci-q-text" onclick="ttsRead(&quot;I have a few friends in this city. It is okay.&quot;,0.88)">"I have ___ friends here." — means SOME (okay). &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq3',false)">few</button><button class="ci-btn" onclick="ciPick(this,'ciq3',true)">a few</button><button class="ci-btn" onclick="ciPick(this,'ciq3',false)">little</button><button class="ci-btn" onclick="ciPick(this,'ciq3',false)">a little</button></div></div>
+
+    <div class="ci-q" id="ciq4"><div class="ci-q-num">Q4</div><div class="ci-q-text" onclick="ttsRead(&quot;There is little hope. The situation is very bad.&quot;,0.88)">"There is ___ hope." — means NOT ENOUGH (negative). &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq4',false)">a little</button><button class="ci-btn" onclick="ciPick(this,'ciq4',true)">little</button><button class="ci-btn" onclick="ciPick(this,'ciq4',false)">a few</button><button class="ci-btn" onclick="ciPick(this,'ciq4',false)">few</button></div></div>
+
+    <div class="ci-q" id="ciq5"><div class="ci-q-num">Q5</div><div class="ci-q-text" onclick="ttsRead(&quot;We need fewer cars in the city centre. Fewer is used with countable nouns.&quot;,0.88)">We need ___ cars in the city centre. &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq5',false)">less</button><button class="ci-btn" onclick="ciPick(this,'ciq5',true)">fewer</button><button class="ci-btn" onclick="ciPick(this,'ciq5',false)">little</button><button class="ci-btn" onclick="ciPick(this,'ciq5',false)">much</button></div></div>
+
+    <div class="ci-q" id="ciq6"><div class="ci-q-num">Q6</div><div class="ci-q-text" onclick="ttsRead(&quot;Try to drink less coffee. Less is used with uncountable nouns.&quot;,0.88)">Try to drink ___ coffee. &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq6',true)">less</button><button class="ci-btn" onclick="ciPick(this,'ciq6',false)">fewer</button><button class="ci-btn" onclick="ciPick(this,'ciq6',false)">little</button><button class="ci-btn" onclick="ciPick(this,'ciq6',false)">few</button></div></div>
+
+    <div class="ci-q" id="ciq7"><div class="ci-q-num">Q7</div><div class="ci-q-text" onclick="ttsRead(&quot;Would you like some tea? Some is used in offers.&quot;,0.88)">Would you like ___ tea? (offer) &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq7',false)">any</button><button class="ci-btn" onclick="ciPick(this,'ciq7',true)">some</button><button class="ci-btn" onclick="ciPick(this,'ciq7',false)">much</button><button class="ci-btn" onclick="ciPick(this,'ciq7',false)">little</button></div></div>
+
+    <div class="ci-q" id="ciq8"><div class="ci-q-num">Q8</div><div class="ci-q-text" onclick="ttsRead(&quot;I do not have any money. Any is used in negative sentences.&quot;,0.88)">I don't have ___ money. (negative) &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq8',true)">any</button><button class="ci-btn" onclick="ciPick(this,'ciq8',false)">some</button><button class="ci-btn" onclick="ciPick(this,'ciq8',false)">many</button><button class="ci-btn" onclick="ciPick(this,'ciq8',false)">a few</button></div></div>
+
+    <div class="ci-q" id="ciq9"><div class="ci-q-num">Q9</div><div class="ci-q-text" onclick="ttsRead(&quot;Which word is uncountable? information, chair, idea, book?&quot;,0.88)">Which word is <b>uncountable</b>? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq9',false)">chair</button><button class="ci-btn" onclick="ciPick(this,'ciq9',true)">information</button><button class="ci-btn" onclick="ciPick(this,'ciq9',false)">idea</button><button class="ci-btn" onclick="ciPick(this,'ciq9',false)">book</button></div></div>
+
+    <div class="ci-q" id="ciq10"><div class="ci-q-num">Q10</div><div class="ci-q-text" onclick="ttsRead(&quot;There is plenty of food for everyone. Plenty of means more than enough.&quot;,0.88)">There is ___ food for everyone. (more than enough) &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq10',false)">enough</button><button class="ci-btn" onclick="ciPick(this,'ciq10',false)">a lot</button><button class="ci-btn" onclick="ciPick(this,'ciq10',true)">plenty of</button><button class="ci-btn" onclick="ciPick(this,'ciq10',false)">several</button></div></div>
+
+    <div class="ci-break" id="brk10" style="display:none">
+      <div class="ci-break-icon">&#x2615;</div>
+      <div class="ci-break-title">Halfway! Keep Going!</div>
+      <div class="ci-break-ar ar">منتصف الطريق! استمر</div>
+      <div class="ci-break-score">Score so far: <span id="ciBreakScore32"></span> / 10</div>
+    </div>
+
+    <div class="ci-q" id="ciq11"><div class="ci-q-num">Q11</div><div class="ci-q-text" onclick="ttsRead(&quot;Which sentence is correct? I have much friends or I have a lot of friends?&quot;,0.88)">Which is <b>correct</b>? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq11',false)">I have much friends.</button><button class="ci-btn" onclick="ciPick(this,'ciq11',true)">I have a lot of friends.</button><button class="ci-btn" onclick="ciPick(this,'ciq11',false)">I have a few money.</button><button class="ci-btn" onclick="ciPick(this,'ciq11',false)">I have many informations.</button></div></div>
+
+    <div class="ci-q" id="ciq12"><div class="ci-q-num">Q12</div><div class="ci-q-text" onclick="ttsRead(&quot;She has a little free time this week. A little is some uncountable.&quot;,0.88)">She has ___ free time this week. (= some, enough) &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq12',false)">little</button><button class="ci-btn" onclick="ciPick(this,'ciq12',true)">a little</button><button class="ci-btn" onclick="ciPick(this,'ciq12',false)">a few</button><button class="ci-btn" onclick="ciPick(this,'ciq12',false)">few</button></div></div>
+
+    <div class="ci-q" id="ciq13"><div class="ci-q-num">Q13</div><div class="ci-q-text" onclick="ttsRead(&quot;Several students failed the exam. Several means more than two.&quot;,0.88)">___ students failed the exam. (more than two, fewer than many) &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq13',false)">A little</button><button class="ci-btn" onclick="ciPick(this,'ciq13',false)">Much</button><button class="ci-btn" onclick="ciPick(this,'ciq13',true)">Several</button><button class="ci-btn" onclick="ciPick(this,'ciq13',false)">Less</button></div></div>
+
+    <div class="ci-q" id="ciq14"><div class="ci-q-num">Q14</div><div class="ci-q-text" onclick="ttsRead(&quot;There is no milk left. No equals not any.&quot;,0.88)">There is ___ milk left. (= not any) &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq14',false)">not</button><button class="ci-btn" onclick="ciPick(this,'ciq14',true)">no</button><button class="ci-btn" onclick="ciPick(this,'ciq14',false)">few</button><button class="ci-btn" onclick="ciPick(this,'ciq14',false)">little</button></div></div>
+
+    <div class="ci-q" id="ciq15"><div class="ci-q-num">Q15</div><div class="ci-q-text" onclick="ttsRead(&quot;Where does enough go? Before or after the noun?&quot;,0.88)">Where does <b>enough</b> go? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq15',false)">Always after the noun</button><button class="ci-btn" onclick="ciPick(this,'ciq15',true)">Before the noun / after the adjective</button><button class="ci-btn" onclick="ciPick(this,'ciq15',false)">Only at the end of the sentence</button><button class="ci-btn" onclick="ciPick(this,'ciq15',false)">Always before the verb</button></div></div>
+
+    <div class="ci-q" id="ciq16"><div class="ci-q-num">Q16</div><div class="ci-q-text" onclick="ttsRead(&quot;We have plenty of time so do not rush. Plenty of means more than enough.&quot;,0.88)">We have ___ time so don't rush. &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq16',false)">a few</button><button class="ci-btn" onclick="ciPick(this,'ciq16',false)">little</button><button class="ci-btn" onclick="ciPick(this,'ciq16',true)">plenty of</button><button class="ci-btn" onclick="ciPick(this,'ciq16',false)">fewer</button></div></div>
+
+    <div class="ci-q" id="ciq17"><div class="ci-q-num">Q17</div><div class="ci-q-text" onclick="ttsRead(&quot;Do you have any questions? Any is used in genuine questions.&quot;,0.88)">Do you have ___ questions? (genuine question) &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq17',false)">some</button><button class="ci-btn" onclick="ciPick(this,'ciq17',true)">any</button><button class="ci-btn" onclick="ciPick(this,'ciq17',false)">much</button><button class="ci-btn" onclick="ciPick(this,'ciq17',false)">a little</button></div></div>
+
+    <div class="ci-q" id="ciq18"><div class="ci-q-num">Q18</div><div class="ci-q-text" onclick="ttsRead(&quot;advice is uncountable. We say some advice not an advice.&quot;,0.88)""advice" is an <b>uncountable</b> noun. Which is correct? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq18',false)">an advice</button><button class="ci-btn" onclick="ciPick(this,'ciq18',false)">many advices</button><button class="ci-btn" onclick="ciPick(this,'ciq18',true)">some advice</button><button class="ci-btn" onclick="ciPick(this,'ciq18',false)">a few advices</button></div></div>
+
+    <div class="ci-q" id="ciq19"><div class="ci-q-num">Q19</div><div class="ci-q-text" onclick="ttsRead(&quot;I have few friends here means not enough friends. Negative feeling.&quot;,0.88)">"I have <b>few</b> friends here" means ___. &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq19',false)">I have some friends (okay)</button><button class="ci-btn" onclick="ciPick(this,'ciq19',true)">I don't have enough friends (negative)</button><button class="ci-btn" onclick="ciPick(this,'ciq19',false)">I have many friends</button><button class="ci-btn" onclick="ciPick(this,'ciq19',false)">I have no friends at all</button></div></div>
+
+    <div class="ci-q" id="ciq20"><div class="ci-q-num">Q20</div><div class="ci-q-text" onclick="ttsRead(&quot;Which sentence uses quantifiers correctly?&quot;,0.88)">Which sentence is <b>correct</b>? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq20',false)">There are less people today.</button><button class="ci-btn" onclick="ciPick(this,'ciq20',false)">She has much friends.</button><button class="ci-btn" onclick="ciPick(this,'ciq20',true)">We have plenty of time.</button><button class="ci-btn" onclick="ciPick(this,'ciq20',false)">I need a few informations.</button></div></div>
+
+    <div class="ci-q ci-fib" id="ciq21"><div class="ci-q-num">Q21</div><div class="ci-fib-lbl">&#x270F; Fill in the Blank</div><div class="ci-q-text" onclick="ttsRead(&quot;I have a little milk left so we are fine.&quot;,0.88)">I have ___ milk left. (some — uncountable — positive) <span class="read-sp">&#x1F509;</span></div><div class="ci-fib-wrap"><input class="ci-fib-input" id="fib21" type="text" placeholder="Type your answer..."><button class="ci-fib-btn" id="fibBtn21" onclick="ciFibCheck('fib21','fibBtn21','ciq21','fibSol21','a little')">Check</button></div><div class="ci-fib-solution" id="fibSol21" style="display:none">&#x2705; Answer: <b>a little</b> &nbsp;|&nbsp; <b>a little</b> — uncountable + positive meaning: some, enough</div></div>
+
+    <div class="ci-q ci-fib" id="ciq22"><div class="ci-q-num">Q22</div><div class="ci-fib-lbl">&#x270F; Fill in the Blank</div><div class="ci-q-text" onclick="ttsRead(&quot;There are fewer students in class today than yesterday.&quot;,0.88)">There are ___ students in class today. (countable — reduced number) <span class="read-sp">&#x1F509;</span></div><div class="ci-fib-wrap"><input class="ci-fib-input" id="fib22" type="text" placeholder="Type your answer..."><button class="ci-fib-btn" id="fibBtn22" onclick="ciFibCheck('fib22','fibBtn22','ciq22','fibSol22','fewer')">Check</button></div><div class="ci-fib-solution" id="fibSol22" style="display:none">&#x2705; Answer: <b>fewer</b> &nbsp;|&nbsp; <b>fewer</b> — countable plural noun → use fewer, not less</div></div>
+
+    <div class="ci-q ci-fib" id="ciq23"><div class="ci-q-num">Q23</div><div class="ci-fib-lbl">&#x270F; Fill in the Blank</div><div class="ci-q-text" onclick="ttsRead(&quot;I do not have any money. Can you lend me some?&quot;,0.88)">I don't have ___ money. (negative sentence) <span class="read-sp">&#x1F509;</span></div><div class="ci-fib-wrap"><input class="ci-fib-input" id="fib23" type="text" placeholder="Type your answer..."><button class="ci-fib-btn" id="fibBtn23" onclick="ciFibCheck('fib23','fibBtn23','ciq23','fibSol23','any')">Check</button></div><div class="ci-fib-solution" id="fibSol23" style="display:none">&#x2705; Answer: <b>any</b> &nbsp;|&nbsp; <b>any</b> — used in negative sentences with uncountable/countable nouns</div></div>
+
+    <div class="ci-q ci-fib" id="ciq24"><div class="ci-q-num">Q24</div><div class="ci-fib-lbl">&#x270F; Fill in the Blank</div><div class="ci-q-text" onclick="ttsRead(&quot;She has plenty of experience for this job.&quot;,0.88)">She has ___ experience for this job. (more than enough) <span class="read-sp">&#x1F509;</span></div><div class="ci-fib-wrap"><input class="ci-fib-input" id="fib24" type="text" placeholder="Type your answer..."><button class="ci-fib-btn" id="fibBtn24" onclick="ciFibCheck('fib24','fibBtn24','ciq24','fibSol24','plenty of')">Check</button></div><div class="ci-fib-solution" id="fibSol24" style="display:none">&#x2705; Answer: <b>plenty of</b> &nbsp;|&nbsp; <b>plenty of</b> — means more than enough; works with uncountable nouns</div></div>
+
+    <div class="ci-q ci-fib" id="ciq25"><div class="ci-q-num">Q25</div><div class="ci-fib-lbl">&#x270F; Fill in the Blank</div><div class="ci-q-text" onclick="ttsRead(&quot;How much sugar do you take in your coffee?&quot;,0.88)">How ___ sugar do you take in your coffee? <span class="read-sp">&#x1F509;</span></div><div class="ci-fib-wrap"><input class="ci-fib-input" id="fib25" type="text" placeholder="Type your answer..."><button class="ci-fib-btn" id="fibBtn25" onclick="ciFibCheck('fib25','fibBtn25','ciq25','fibSol25','much')">Check</button></div><div class="ci-fib-solution" id="fibSol25" style="display:none">&#x2705; Answer: <b>much</b> &nbsp;|&nbsp; <b>much</b> — sugar is uncountable → How much + uncountable</div></div>
+
+    <div class="ci-final-score" id="ciFinal32" style="display:none">
+      <div class="cif-icon">&#x1F3C6;</div>
+      <div class="cif-title">Lesson Complete!</div>
+      <div class="cif-ar ar">أحسنت! أكملت الدرس</div>
+      <div class="cif-score"><span id="ciFinalScore32"></span> / 25</div>
+      <div class="cif-msg" id="ciFinalMsg32"></div>
+      <div class="cif-ar ar" id="ciFinalAr32"></div>
+      <div class="cif-btns">
+        <button class="cif-btn" onclick="ciReset32()">&#x1F504; Try Again</button>
+        <button class="cif-btn cif-btn-next" onclick="window.location.href='../index.html'">&#x1F3E0; Main Menu</button>
+      </div>
+    </div>
+
+  </div><!-- /ciWrap32 -->
+</div><!-- /tab-checkit -->
+
+</div><!-- /main-content -->
+</div><!-- /layout -->
+
+<script src="../media/global-player.js"></script>
+<script>
+var rqScore32=0,rqAnswered32=0;
+var ciScore32=0,ciAnswered32=0,ciTotal32=25;
+
+function showTab(id,btn){
+  document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.remove('active');});
+  document.querySelectorAll('.main-tab').forEach(function(b){b.classList.remove('active');});
+  document.getElementById('tab-'+id).classList.add('active');
+  btn.classList.add('active');
+}
+function ttsRead(text,rate){
+  speechSynthesis.cancel();
+  var u=new SpeechSynthesisUtterance(text);
+  u.lang='en-US';u.rate=rate||0.9;
+  speechSynthesis.speak(u);
+}
+function rqPick(btn,qid,correct){
+  var qEl=document.getElementById(qid);
+  if(qEl.dataset.done)return;
+  qEl.dataset.done='1';
+  qEl.querySelectorAll('.read-opt').forEach(function(b){b.classList.add('done');if(b===btn)b.classList.add(correct?'correct':'wrong');});
+  if(correct)rqScore32++;
+  rqAnswered32++;
+  if(rqAnswered32===5){
+    var sc=document.getElementById('rqScore32');sc.style.display='block';
+    document.getElementById('rqScoreNum32').textContent=rqScore32+'/5';
+    var msgs=[['Keep practising!','استمر في التدريب!'],['Good effort!','جهد جيد!'],['Getting there!','أنت تتحسن!'],['Well done!','أداء جيد جداً!'],['Great job!','عمل رائع!'],['Perfect!','نتيجة مثالية!']];
+    var m=msgs[Math.min(rqScore32,5)];
+    document.getElementById('rqScoreMsg32').textContent=m[0];
+    document.getElementById('rqScoreAr32').textContent=m[1];
+    sc.scrollIntoView({behavior:'smooth',block:'center'});
+  }
+}
+function rqReset32(){
+  rqScore32=0;rqAnswered32=0;
+  ['rq1','rq2','rq3','rq4','rq5'].forEach(function(id){
+    var q=document.getElementById(id);if(!q)return;
+    delete q.dataset.done;
+    q.querySelectorAll('.read-opt').forEach(function(b){b.classList.remove('correct','wrong','done');});
+  });
+  document.getElementById('rqScore32').style.display='none';
+  document.getElementById('tab-reading').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function ciUpdateProgress32(){
+  var pct=Math.round(ciAnswered32/ciTotal32*100);
+  document.getElementById('ciProgressFill32').style.width=pct+'%';
+  document.getElementById('ciProgressTxt32').textContent=ciAnswered32+' / '+ciTotal32+' answered';
+  document.getElementById('ciScoreTxt32').textContent='Score: '+ciScore32;
+}
+function ciCheckBreakAndDone32(){
+  if(ciAnswered32===10){
+    var bEl=document.getElementById('brk10');
+    if(bEl){bEl.style.display='block';document.getElementById('ciBreakScore32').textContent=ciScore32;}
+  }
+  if(ciAnswered32===ciTotal32)ciShowScore32();
+}
+function ciPick(btn,qid,correct){
+  var qEl=document.getElementById(qid);if(qEl.dataset.done)return;
+  qEl.dataset.done='1';
+  qEl.querySelectorAll('.ci-btn').forEach(function(b){b.classList.add('done');});
+  btn.classList.add(correct?'ci-correct':'ci-wrong');
+  if(correct)ciScore32++;
+  ciAnswered32++;ciUpdateProgress32();ciCheckBreakAndDone32();
+}
+function ciFibCheck(inputId,btnId,qid,solId,answer){
+  var inp=document.getElementById(inputId),btn=document.getElementById(btnId),qEl=document.getElementById(qid);
+  if(qEl.dataset.done)return;
+  var correct=inp.value.trim().toLowerCase()===answer.toLowerCase();
+  qEl.dataset.done='1';inp.disabled=true;btn.disabled=true;
+  inp.style.borderColor=correct?'var(--green)':'var(--red)';
+  inp.style.color=correct?'var(--green)':'var(--red)';
+  var sol=document.getElementById(solId);if(sol)sol.style.display='block';
+  if(correct)ciScore32++;
+  ciAnswered32++;ciUpdateProgress32();ciCheckBreakAndDone32();
+}
+function ciShowScore32(){
+  var el=document.getElementById('ciFinal32');el.style.display='block';
+  document.getElementById('ciFinalScore32').textContent=ciScore32;
+  var pct=Math.round(ciScore32/ciTotal32*100);
+  var msgs=[['Keep studying!','واصل الدراسة!'],['Good start!','بداية جيدة!'],['Well done!','عمل جيد!'],['Great job!','أداء رائع!'],['Excellent!','ممتاز!'],['Perfect!','نتيجة مثالية!']];
+  var idx=Math.floor(pct/20);
+  var m=msgs[Math.min(idx,5)];
+  document.getElementById('ciFinalMsg32').textContent=m[0];
+  document.getElementById('ciFinalAr32').textContent=m[1];
+  localStorage.setItem('up_l32',Math.round(ciScore32/ciTotal32*100));
+  el.scrollIntoView({behavior:'smooth',block:'center'});
+}
+function ciReset32(){
+  ciScore32=0;ciAnswered32=0;
+  document.getElementById('ciFinal32').style.display='none';
+  document.getElementById('brk10').style.display='none';
+  for(var i=1;i<=25;i++){
+    var q=document.getElementById('ciq'+i);if(!q)continue;
+    delete q.dataset.done;
+    q.querySelectorAll('.ci-btn').forEach(function(b){b.classList.remove('ci-correct','ci-wrong','done');});
+    var inp=q.querySelector('.ci-fib-input');
+    if(inp){inp.value='';inp.disabled=false;inp.style.borderColor='';inp.style.color='';}
+    var fbtn=q.querySelector('.ci-fib-btn');if(fbtn)fbtn.disabled=false;
+    var sol=q.querySelector('.ci-fib-solution');if(sol)sol.style.display='none';
+  }
+  ciUpdateProgress32();
+  document.getElementById('tab-checkit').scrollIntoView({behavior:'smooth',block:'start'});
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+(function(){
+  var map={1: "up_l1", 2: "up_l2", 3: "up_l3", 4: "up_l4", 5: "up_l5", 6: "up1", 7: "up2", 8: "up3", 9: "up4", 10: "up6", 11: "up5", 12: "up_l12", 13: "up7", 14: "up8", 15: "up9", 16: "up10", 17: "up11", 19: "up_l19", 20: "up_l20", 21: "up_l21", 22: "up_l22", 23: "up_l23", 24: "up_l24", 25: "up_l25", 26: "up_l26", 27: "up_l27", 28: "up_l28", 29: "up_l29", 30: "up_l30", 31: "up_l31", 32: "up_l32", 33: "up_l33", 34: "up_l34", 35: "up_l35", 36: "up_l36", 37: "up_l37", 38: "up_l38", 39: "up_l39", 40: "up_l40", 41: "up_l41", 42: "up_l42", 43: "up_l43", 44: "up_l44", 45: "up_l45", 46: "up_l46"};
+  for(var lid in map){
+    var f=document.getElementById('sp'+lid);
+    if(f){var v=parseInt(localStorage.getItem(map[lid])||'0',10);f.style.width=v+'%';}
+  }
+  setTimeout(function(){
+    var a=document.querySelector('.su-item.su-active');
+    if(a){var u=a.closest('.sidebar-units');if(u)u.scrollTop=Math.max(0,a.offsetTop-a.offsetHeight);}
+  },80);
+})();
+</script>
+<script>
+function toggleSidebar(){
+  var sb=document.querySelector('.sidebar');
+  var bd=document.getElementById('sbBackdrop');
+  if(!sb||!bd)return;
+  sb.classList.toggle('sb-open');
+  bd.classList.toggle('sb-open');
+  document.body.style.overflow=sb.classList.contains('sb-open')?'hidden':'';
+}
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.su-item').forEach(function(a){
+    a.addEventListener('click',function(){
+      var sb=document.querySelector('.sidebar');
+      if(sb&&sb.classList.contains('sb-open'))toggleSidebar();
+    });
+  });
+});
+</script>
+
+<script>
+(function(){
+  // Disable right-click
+  document.addEventListener('contextmenu', function(e){ e.preventDefault(); });
+
+  // Disable keyboard shortcuts
+  document.addEventListener('keydown', function(e){
+    // F12
+    if(e.key==='F12'){e.preventDefault();return false;}
+    // Ctrl+U (view source), Ctrl+S (save), Ctrl+A (select all), Ctrl+P (print)
+    if(e.ctrlKey && ['u','U','s','S','a','A','p','P'].indexOf(e.key)!==-1){
+      e.preventDefault();return false;
+    }
+    // Ctrl+Shift+I (DevTools), Ctrl+Shift+J, Ctrl+Shift+C
+    if(e.ctrlKey && e.shiftKey && ['i','I','j','J','c','C','k','K'].indexOf(e.key)!==-1){
+      e.preventDefault();return false;
+    }
+  });
+
+  // Disable text selection via CSS
+  document.documentElement.style.webkitUserSelect='none';
+  document.documentElement.style.userSelect='none';
+
+  // Allow selection inside inputs/textareas only
+  document.addEventListener('mousedown', function(e){
+    var t=e.target.tagName;
+    if(t==='INPUT'||t==='TEXTAREA'){
+      e.target.style.userSelect='text';
+      e.target.style.webkitUserSelect='text';
+    }
+  });
+
+  // Block drag
+  document.addEventListener('dragstart', function(e){ e.preventDefault(); });
+})();
+</script>
+<button class="float-menu-btn" onclick="toggleSidebar()" aria-label="القائمة">
+  <span></span><span></span><span></span>
+</button>
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=FREE"></script>
+<script src="../media/rv.js"></script>
+</body>
+</html>

@@ -1,0 +1,1651 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 4: Singular &amp; Plural Nouns | MOHAMMED ELHUSEYIN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#1a3a6e;--primary-dark:#0f2548;--accent:#f4a624;--al:rgba(244,166,36,0.12);--bg:#0d1b2a;--card:#162030;--card2:#1e2d40;--border:#2d4560;--text:#e8edf5;--muted:#8899b0;--green:#22c55e;--red:#ef4444;--blue:#4a9eff;--purple:#a855f7}
+body{font-family:'Poppins','Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.ar{font-family:'Cairo','Segoe UI',Arial,sans-serif}
+.topnav{background:var(--primary-dark);border-bottom:2px solid var(--accent);padding:10px 24px;display:flex;align-items:center;justify-content:space-between}
+.hero{background:linear-gradient(135deg,#1a3a6e 0%,#0f2548 55%,#0d1f3c 100%);padding:55px 24px 48px;text-align:center;border-bottom:3px solid var(--accent);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;border-radius:50%;background:rgba(244,166,36,0.06)}
+.hero::after{content:'';position:absolute;bottom:-60px;left:-60px;width:300px;height:300px;border-radius:50%;background:rgba(74,158,255,0.05)}
+.unit-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(244,166,36,0.15);border:1px solid rgba(244,166,36,0.4);color:var(--accent);font-weight:800;padding:6px 18px;border-radius:20px;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
+.hero-title{font-size:clamp(28px,6vw,52px);font-weight:900;color:white;line-height:1.15;margin-bottom:8px}
+.hero-title i{color:var(--accent);font-style:italic}
+.hero-ar{font-size:18px;color:var(--muted);margin-bottom:12px;direction:rtl}
+.hero-sub{color:var(--muted);max-width:620px;margin:0 auto 22px;font-size:14px}
+.hero-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.tag{display:inline-flex;align-items:center;gap:6px;padding:6px 15px;border-radius:16px;font-size:12px;font-weight:700}
+.tag-grammar{background:rgba(244,166,36,0.15);color:var(--accent);border:1px solid rgba(244,166,36,0.3)}
+.tag-other{background:rgba(74,158,255,0.1);color:var(--blue);border:1px solid rgba(74,158,255,0.25)}
+.tag-btn{cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif}
+.tag-btn:hover{transform:translateY(-2px);opacity:.85}
+.main-tabs{display:flex;gap:4px;padding:14px 24px;background:var(--primary-dark);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;flex-wrap:wrap}
+.main-tab{padding:8px 18px;border-radius:8px;border:1px solid transparent;background:none;color:var(--muted);font-weight:700;cursor:pointer;font-size:13px;font-family:'Poppins',sans-serif;transition:all .2s}
+.main-tab.active{background:var(--accent);color:#0d1b2a;border-color:var(--accent)}
+.main-tab:hover:not(.active){background:rgba(244,166,36,.1);color:var(--accent);border-color:rgba(244,166,36,.3)}
+.tab-panel{display:none;padding:20px 24px}
+.tab-panel.active{display:block}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;margin-bottom:16px}
+.card-title{font-size:16px;font-weight:800;color:white;margin-bottom:5px;display:flex;align-items:center;gap:8px}
+.card-ar{font-size:13px;color:var(--muted);margin-bottom:14px;direction:rtl;font-family:'Cairo',sans-serif}
+.card-note{background:var(--al);border:1px solid rgba(244,166,36,.3);border-radius:10px;padding:10px 14px;font-size:12.5px;color:var(--accent);margin:10px 0;direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.sub-tabs{display:flex;gap:4px;margin:14px 0 18px;flex-wrap:wrap}
+.sub-tab{padding:6px 14px;border-radius:8px;border:1px solid var(--border);background:none;color:var(--muted);font-weight:700;cursor:pointer;font-size:12px;font-family:'Poppins',sans-serif;transition:all .2s}
+.sub-tab.active{background:rgba(244,166,36,.15);border-color:var(--accent);color:var(--accent)}
+.sub-tab:hover:not(.active){border-color:var(--accent);color:var(--accent)}
+.sub-panel{display:none}
+.sub-panel.active{display:block}
+.tts-box{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.tts-btn{background:var(--card2);border:1px solid var(--blue);color:var(--blue);padding:7px 16px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif}
+.tts-btn:hover{background:rgba(74,158,255,.15);transform:translateY(-1px)}
+.tts-stop{border-color:var(--muted);color:var(--muted)}
+.tts-stop:hover{background:rgba(136,153,176,.1)}
+.formula-box{background:rgba(10,30,53,0.8);border:2px solid var(--border);border-radius:14px;padding:18px 22px;margin:14px 0}
+.formula-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid rgba(45,69,96,0.4);flex-wrap:wrap}
+.formula-row:last-child{border-bottom:none}
+.formula-subj{font-size:14px;font-weight:800;color:var(--blue);min-width:160px}
+.formula-be{font-size:15px;font-weight:900;color:var(--accent);background:rgba(244,166,36,.12);padding:4px 12px;border-radius:8px}
+.formula-be.neg{color:var(--red);background:rgba(239,68,68,.1)}
+.formula-be.q{color:var(--green);background:rgba(34,197,94,.1)}
+.formula-note{font-size:11px;color:var(--muted);font-style:italic;margin-left:auto}
+.formula-plus{font-size:16px;color:var(--muted)}
+.ex-section-title{font-size:12px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin:16px 0 8px}
+.ex-list{margin-top:4px}
+.ex-item{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid rgba(45,69,96,0.3)}
+.ex-item:last-child{border-bottom:none}
+.sp{background:none;border:none;font-size:16px;cursor:pointer;color:var(--blue);flex-shrink:0;padding:2px 0;transition:transform .2s;line-height:1}
+.sp:hover{transform:scale(1.2)}
+.sp-group{display:inline-flex;align-items:center;gap:3px;flex-shrink:0}
+.sp-pp,.sp-st{background:var(--card2);border:1px solid var(--border);color:var(--muted);font-size:12px;padding:3px 7px;border-radius:6px;cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif;line-height:1;min-width:26px;text-align:center}
+.sp-pp:hover{background:rgba(74,158,255,.15);border-color:var(--blue);color:var(--blue)}
+.sp-st:hover{background:rgba(239,68,68,.1);border-color:var(--red);color:var(--red)}
+.ex-en{font-size:13.5px;color:var(--text);font-weight:600;line-height:1.4}
+.ex-en b{color:var(--accent)}
+.ex-ar{font-size:12px;color:var(--muted);margin-top:2px;direction:rtl;font-family:'Cairo',sans-serif}
+.sa-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13px}
+.sa-table th{background:rgba(26,58,110,0.5);color:var(--accent);padding:8px 12px;font-weight:800;text-align:left;border:1px solid var(--border)}
+.sa-table td{padding:8px 12px;border:1px solid rgba(45,69,96,0.4);vertical-align:middle}
+.sa-table tr:nth-child(even) td{background:rgba(30,45,64,0.3)}
+.sa-yes{color:var(--green);font-weight:800}
+.sa-no{color:var(--red);font-weight:800}
+.wh-grid{display:flex;flex-direction:column;gap:7px;margin:12px 0}
+.wh-row{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px;font-size:13px}
+.wh-q{color:var(--text);margin-bottom:3px}
+.wh-q b{color:var(--blue)}
+.wh-a{color:var(--muted);font-style:italic}
+.time-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;margin:12px 0}
+.time-item{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px}
+.time-en{font-size:13px;font-weight:700;color:var(--accent)}
+.time-ar{font-size:11px;color:var(--muted);margin-top:3px;direction:rtl;font-family:'Cairo',sans-serif}
+.time-eg{font-size:11px;color:var(--text);margin-top:4px;font-style:italic}
+.mistake-item{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.m-wrong{font-size:13px;color:var(--red);margin-bottom:3px}
+.m-wrong::before{content:'❌ '}
+.m-right{font-size:13px;color:var(--green);font-weight:700;margin-bottom:3px}
+.m-right::before{content:'✅ '}
+.m-why{font-size:11.5px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;border-top:1px solid rgba(45,69,96,.4);padding-top:5px;margin-top:5px}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:8px;margin-top:12px}
+.vocab-item{background:var(--card2);border:1px solid var(--border);border-radius:9px;padding:9px 12px;cursor:pointer;transition:border-color .2s}
+.vocab-item:hover{border-color:var(--accent)}
+.vocab-en{font-size:14px;font-weight:800;color:var(--text)}
+.vocab-past{font-size:11.5px;color:var(--accent);margin-top:2px;font-weight:700}
+.vocab-ar{font-size:11px;color:var(--muted);margin-top:3px;font-family:'Cairo',sans-serif;direction:rtl}
+.vs-wrap{overflow-x:auto;margin:18px 0;padding:4px 0}
+.vs-caption{font-size:11px;color:var(--muted);text-align:center;margin-top:8px;font-style:italic}
+.dlg-card{background:var(--card);border:1px solid var(--border);border-radius:16px;margin-bottom:16px;overflow:hidden}
+.dlg-header{background:linear-gradient(to right,var(--primary),#1a1a4e);padding:13px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.dlg-meta{flex:1}
+.dlg-num{font-size:10px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:2px}
+.dlg-title{font-weight:800;font-size:14px;color:white}
+.dlg-ctx{font-size:11px;color:rgba(255,255,255,.5);font-style:italic;margin-top:2px}
+.dlg-tts{background:rgba(244,166,36,.15);border:1px solid rgba(244,166,36,.4);color:var(--accent);padding:6px 14px;border-radius:8px;font-size:11px;font-weight:700;cursor:pointer;font-family:'Poppins',sans-serif;transition:all .2s;white-space:nowrap}
+.dlg-tts:hover{background:rgba(244,166,36,.3)}
+.dlg-body{padding:20px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:640px){.dlg-body{grid-template-columns:1fr}}
+.dlg-col-head{font-size:10px;font-weight:700;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+.bubble{padding:9px 13px;border-radius:12px;font-size:13px;line-height:1.55;margin-bottom:7px}
+.bubble-a{background:rgba(26,58,110,0.5);border:1px solid rgba(74,158,255,0.2)}
+.bubble-b{background:var(--card2);border:1px solid var(--border)}
+.bubble-name{font-size:9px;font-weight:800;color:var(--muted);margin-bottom:4px;letter-spacing:.5px;text-transform:uppercase}
+.bubble-name.b{color:var(--accent)}
+.bubble-ar{direction:rtl;font-family:'Cairo',sans-serif;font-size:13px;color:var(--text)}
+.layout{display:flex;min-height:100vh}
+.sidebar{width:30%;max-width:320px;min-width:220px;position:fixed;top:0;left:0;bottom:0;background:var(--primary-dark);border-right:2px solid var(--border);display:flex;flex-direction:column;z-index:200;overflow:hidden}
+.sidebar-header{padding:18px 20px 14px;border-bottom:2px solid var(--accent);flex-shrink:0}
+.sidebar-logo{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+.sidebar-logo-icon{width:34px;height:34px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900;color:#0d1b2a;flex-shrink:0}
+.sidebar-logo-text{font-family:'Cairo',sans-serif;font-size:15px;font-weight:800;color:white}
+.sidebar-logo-sub{font-size:10px;color:var(--muted);font-weight:500;margin-top:-1px}
+.sidebar-label{font-family:'Cairo',sans-serif;font-size:11px;font-weight:700;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-top:12px}
+.sidebar-units{flex:1;overflow-y:auto;padding:10px 12px;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+.sidebar-units::-webkit-scrollbar{width:4px}
+.sidebar-units::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+.su-item{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;text-decoration:none;margin-bottom:4px;transition:background .2s,transform .2s}
+.su-item:not(.su-locked):hover{background:rgba(244,166,36,0.12);transform:translateX(3px)}
+.su-item.su-locked{opacity:.45;cursor:default;pointer-events:none}
+.su-item.su-active{background:rgba(244,166,36,0.15);border:1px solid rgba(244,166,36,0.3)}
+.su-num{width:28px;height:28px;border-radius:7px;background:rgba(255,255,255,0.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:var(--accent);flex-shrink:0}
+.su-item:not(.su-locked) .su-num{background:rgba(244,166,36,0.12);border-color:rgba(244,166,36,0.3)}
+.su-texts{flex:1;min-width:0}
+.su-en{font-size:13px;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.su-ar{font-family:'Cairo',sans-serif;font-size:11px;color:var(--muted);direction:rtl;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.su-check{font-size:12px;flex-shrink:0}
+.su-lock{font-size:11px;color:var(--muted);flex-shrink:0}
+.main-content{margin-left:min(30%,320px);flex:1;min-width:0}
+footer{padding:20px 24px;text-align:center;color:var(--muted);font-size:12px;border-top:1px solid var(--border);margin-top:10px}
+
+/* ══ Hamburger (desktop: hidden) ══ */
+.nav-hamburger{display:none;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.3);border-radius:8px;cursor:pointer;flex-direction:column;gap:5px;padding:8px;flex-shrink:0;margin-left:6px}
+.nav-hamburger span{display:block;width:100%;height:2px;background:var(--accent);border-radius:2px}
+/* Backdrop */
+.sb-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:199}
+.sb-backdrop.sb-open{display:block}
+@media(max-width:768px){
+  .sidebar{position:fixed;left:-100%;width:82%;max-width:300px;min-width:unset;transition:left .3s ease;z-index:200}
+  .sidebar.sb-open{left:0}
+  .main-content{margin-left:0}
+  .nav-brand{display:none}
+  .nav-hamburger{display:flex}
+  .topnav{padding:10px 12px;gap:6px}
+  .nav-lesson-name{display:none}
+  .nav-left{gap:5px}
+  .hero{padding:22px 13px 20px}
+  .hero-title{font-size:22px;letter-spacing:-.5px}
+  .hero-ar{font-size:12px}
+  .hero-sub{font-size:12px}
+  .hero-tags{gap:5px;justify-content:center}
+  .tag{font-size:10px;padding:3px 9px}
+  .rule-section{padding:0 12px}
+  .read-wrap{padding:0 12px}
+  .ci-wrap{padding:12px 12px}
+  .ci-hero{padding:18px 12px}
+  .dlg-block{padding:0 12px}
+  .eu-cat-grid{grid-template-columns:1fr}
+  .nu-scale{gap:3px}
+  .nu-word{font-size:10px;padding:3px 7px}
+  .nu-cmp-head,.nu-cmp-row{grid-template-columns:1fr 1fr;font-size:10px}
+  .nu-cmp-head span:last-child,.nu-cmp-row span:last-child{display:none}
+  .reg-ladder{padding:10px 12px}
+  .cmp-table{font-size:11px}
+  .chat-wrap{padding:0 4px}
+  .ci-q{margin-bottom:10px}
+  .ci-opts{gap:5px}
+  .ci-btn{font-size:12px;padding:9px 10px}
+  .vocab-grid{grid-template-columns:1fr 1fr}
+  .rq-opts{gap:5px}
+}
+
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+/* some/any pill styles */
+.pill-wrap{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.pill{padding:5px 14px;border-radius:20px;font-size:12.5px;font-weight:800}
+.pill-green{background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.35);color:var(--green)}
+.pill-blue{background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.3);color:var(--blue)}
+.pill-red{background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3);color:var(--red)}
+/* Reading */
+.read-tts-bar{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;align-items:center}
+.read-label{font-size:12px;font-weight:700;color:var(--muted)}
+.read-pass{background:var(--card2);border:1px solid var(--border);border-radius:14px;padding:22px;font-size:14px;line-height:1.9;margin-bottom:24px}
+.read-pass p{margin-bottom:12px}
+.read-pass p:last-child{margin-bottom:0}
+.read-pass b{color:var(--accent);font-weight:700}
+.comp-section-title{font-size:14px;font-weight:800;color:var(--accent);margin-bottom:14px;text-transform:uppercase;letter-spacing:1px}
+.read-q{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:12px}
+.read-q-text{font-weight:700;font-size:14px;margin-bottom:12px;color:var(--text);line-height:1.4}
+.read-opts{display:flex;flex-direction:column;gap:7px}
+.read-opt{background:var(--card2);border:1px solid var(--border);color:var(--text);padding:9px 14px;border-radius:8px;font-size:13px;cursor:pointer;text-align:left;font-family:'Poppins',sans-serif;transition:all .2s;display:flex;align-items:center;gap:8px}
+.read-opt:hover:not(.done){background:rgba(244,166,36,.06);border-color:rgba(244,166,36,.35);transform:translateY(-1px)}
+.read-opt.correct{background:rgba(34,197,94,.12);border-color:var(--green);color:var(--green)}
+.read-opt.wrong{background:rgba(239,68,68,.12);border-color:var(--red);color:var(--red)}
+.read-opt.done{cursor:default;transform:none!important}
+.read-ctx{background:linear-gradient(135deg,rgba(26,58,110,.55),rgba(15,37,72,.55));border:1px solid rgba(244,166,36,.22);border-radius:14px;padding:16px 22px;margin-bottom:20px;display:flex;flex-wrap:wrap;gap:20px;align-items:center}
+.read-ctx-fact{display:flex;flex-direction:column;gap:2px}
+.read-ctx-label{font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+.read-ctx-val{font-size:13.5px;font-weight:800;color:var(--text)}
+.read-ctx-sep{width:1px;background:var(--border);align-self:stretch}
+.read-vocab-wrap{margin:18px 0}
+.read-vocab-title{font-size:11px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.read-vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:7px}
+.read-vocab-item{background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:8px 12px}
+.read-vocab-en{font-size:13px;font-weight:700;color:var(--accent)}
+.read-vocab-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-top:2px}
+/* Check It */
+.ci-hero{background:linear-gradient(135deg,#12285a 0%,#1a1242 60%,#0d1b2a 100%);padding:36px 24px 30px;text-align:center;border-bottom:2px solid var(--accent)}
+.ci-hero-icon{font-size:38px;margin-bottom:10px}
+.ci-hero-title{font-size:clamp(22px,5vw,36px);font-weight:900;color:white;margin-bottom:6px}
+.ci-hero-sub{color:var(--muted);font-size:13px;max-width:460px;margin:0 auto}
+.ci-hero-types{display:flex;gap:10px;justify-content:center;margin-top:14px;flex-wrap:wrap}
+.ci-progress-wrap{background:var(--primary-dark);padding:10px 24px;border-bottom:1px solid var(--border);position:sticky;top:52px;z-index:99}
+.ci-progress-inner{max-width:760px;margin:0 auto}
+.ci-progress-bar{background:rgba(255,255,255,.07);border-radius:20px;height:7px;overflow:hidden;margin-bottom:5px}
+.ci-progress-fill{background:linear-gradient(90deg,var(--accent),var(--blue));height:100%;border-radius:20px;transition:width .4s ease;width:0%}
+.ci-progress-txt{font-size:11px;color:var(--muted);font-weight:700;display:flex;justify-content:space-between}
+.ci-wrap{max-width:100%;padding:12px 16px}
+.ci-q{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px 14px;margin-bottom:7px;transition:border-color .2s;border-left:3px solid rgba(244,166,36,.4)}
+.ci-q.ci-fib-q{border-left-color:rgba(74,158,255,.5)}
+.ci-q-head{display:flex;align-items:center;gap:6px;margin-bottom:9px;flex-wrap:nowrap}
+.ci-q-num{width:22px;height:22px;border-radius:50%;background:rgba(244,166,36,.18);border:1.5px solid rgba(244,166,36,.4);color:var(--accent);font-size:10px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ci-fib-q .ci-q-num{background:rgba(74,158,255,.15);border-color:rgba(74,158,255,.4);color:var(--blue)}
+.ci-q-tag{background:rgba(244,166,36,.08);border:1px solid rgba(244,166,36,.18);color:var(--accent);font-size:9px;font-weight:800;padding:2px 8px;border-radius:8px;text-transform:uppercase;letter-spacing:.4px;white-space:nowrap}
+.ci-type-badge{font-size:9px;font-weight:800;padding:2px 8px;border-radius:8px;text-transform:uppercase;letter-spacing:.4px;margin-left:auto;flex-shrink:0}
+.ci-type-mcq{background:rgba(244,166,36,.12);border:1px solid rgba(244,166,36,.25);color:var(--accent)}
+.ci-type-fib{background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.25);color:var(--blue)}
+.ci-q-prompt{font-size:12px;color:var(--muted);font-style:italic;margin-bottom:8px;padding:5px 10px;background:rgba(255,255,255,.03);border-left:2px solid var(--border);border-radius:0 6px 6px 0}
+.ci-opts{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.ci-btn{background:var(--card2);border:1.5px solid var(--border);color:var(--text);padding:9px 12px;border-radius:9px;font-size:12.5px;cursor:pointer;text-align:left;font-family:'Poppins',sans-serif;transition:all .2s;display:flex;align-items:center;gap:9px;line-height:1.35;width:100%}
+.ci-btn:hover:not(.done){background:rgba(244,166,36,.07);border-color:rgba(244,166,36,.45);transform:translateY(-2px)}
+.ci-btn.ci-correct{background:rgba(34,197,94,.1);border-color:var(--green);color:var(--green)}
+.ci-btn.ci-wrong{background:rgba(239,68,68,.1);border-color:var(--red);color:var(--red)}
+.ci-lbl{font-size:11px;font-weight:900;background:rgba(255,255,255,.09);border-radius:5px;padding:2px 7px;flex-shrink:0;min-width:22px;text-align:center}
+.ci-btn.ci-correct .ci-lbl{background:rgba(34,197,94,.2);color:var(--green)}
+.ci-btn.ci-wrong .ci-lbl{background:rgba(239,68,68,.2);color:var(--red)}
+.ci-fib-sent{font-size:13.5px;color:var(--text);font-weight:600;line-height:1.7;margin-bottom:9px}
+.ci-fib-sent b{color:var(--accent)}
+.ci-fib-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:4px}
+.ci-fib-input{background:var(--card2);border:2px solid var(--border);color:var(--text);padding:7px 13px;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;outline:none;min-width:160px;max-width:260px;transition:border-color .2s}
+.ci-fib-input:focus{border-color:var(--accent);background:rgba(244,166,36,.04)}
+.ci-fib-check{background:var(--accent);border:none;color:#0d1b2a;padding:7px 18px;border-radius:8px;font-weight:800;cursor:pointer;font-size:12px;font-family:'Poppins',sans-serif;transition:all .2s;flex-shrink:0}
+.ci-fib-check:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 4px 12px rgba(244,166,36,.3)}
+.ci-fib-check:disabled{opacity:.35;cursor:default;transform:none!important}
+.ci-hint{font-size:10.5px;color:var(--muted);font-style:italic;margin-top:3px}
+.ci-sol{display:none;margin-top:9px;border-radius:9px;overflow:hidden;animation:fadeIn .3s ease}
+.ci-sol-head{padding:7px 12px;font-size:11.5px;font-weight:800;border-bottom:1px solid rgba(255,255,255,.05)}
+.ci-sol-body{padding:8px 12px;display:flex;flex-direction:column;gap:4px}
+.ci-sol-ans{font-size:12.5px;font-weight:700;color:var(--accent)}
+.ci-sol-exp{font-size:11.5px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.ci-brk{display:none;background:linear-gradient(135deg,#12285a,#1a1242);border:2px solid var(--accent);border-radius:20px;padding:28px 24px;margin:16px 0;text-align:center;animation:fadeIn .5s ease;position:relative;overflow:hidden}
+.ci-brk::before{content:'';position:absolute;top:-50px;right:-50px;width:200px;height:200px;border-radius:50%;background:rgba(244,166,36,.07);pointer-events:none}
+.ci-brk-emoji{font-size:44px;margin-bottom:10px}
+.ci-brk-title{font-size:17px;font-weight:900;color:var(--accent);margin-bottom:16px}
+.ci-brk-cols{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:580px;margin:0 auto;text-align:left}
+@media(max-width:580px){.ci-brk-cols{grid-template-columns:1fr}}
+.ci-brk-col{background:rgba(255,255,255,.04);border:1px solid rgba(244,166,36,.2);border-radius:12px;padding:14px 16px}
+.ci-brk-col-title{font-size:10px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid rgba(244,166,36,.2)}
+.ci-brk-text{font-size:13px;color:var(--text);line-height:1.75}
+.ci-brk-text b{color:var(--accent)}
+.ci-brk-ar{font-size:12px;color:var(--muted);margin-top:14px;direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.ci-score{display:none;background:linear-gradient(135deg,#0f2548,#1a1242);border:2px solid var(--accent);border-radius:24px;padding:44px 32px;text-align:center;margin-top:24px;position:relative;overflow:hidden;animation:fadeIn .6s ease}
+.ci-score::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,rgba(244,166,36,.07) 0%,transparent 65%);pointer-events:none}
+.ci-score-emoji{font-size:60px;margin-bottom:14px}
+.ci-score-num{font-size:68px;font-weight:900;color:var(--accent);line-height:1;margin-bottom:4px}
+.ci-score-of{font-size:18px;color:var(--muted);margin-bottom:18px}
+.ci-score-bar-wrap{background:rgba(255,255,255,.06);border-radius:20px;height:10px;max-width:320px;margin:0 auto 24px;overflow:hidden}
+.ci-score-bar-fill{height:100%;border-radius:20px;background:linear-gradient(90deg,var(--accent),var(--green));transition:width 1.2s ease;width:0%}
+.ci-score-msg{font-size:18px;font-weight:900;color:white;margin-bottom:6px}
+.ci-score-ar{font-size:14px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;margin-bottom:24px;line-height:1.6}
+.ci-reset{background:var(--accent);border:none;color:#0d1b2a;padding:13px 32px;border-radius:12px;font-weight:900;cursor:pointer;font-family:'Poppins',sans-serif;font-size:14px;transition:all .25s;letter-spacing:.5px}
+.ci-reset:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(244,166,36,.35)}
+.chat-wrap{padding:18px 24px 26px;display:flex;flex-direction:column;gap:14px;background-image:radial-gradient(circle,rgba(244,166,36,0.22) 1.5px,transparent 1.5px),radial-gradient(circle,rgba(74,158,255,0.22) 1.5px,transparent 1.5px);background-size:28px 28px;background-position:0 0,14px 14px}
+.chat-msg{display:flex;flex-direction:column;max-width:70%}
+.chat-msg.right{align-self:flex-end;align-items:flex-end}
+.chat-msg.left{align-self:flex-start;align-items:flex-start}
+.chat-name-tag{font-size:11px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;margin-bottom:5px;padding:0 4px}
+.chat-msg.right .chat-name-tag{color:var(--accent)}
+.chat-msg.left .chat-name-tag{color:var(--blue)}
+.chat-bubble{padding:14px 17px 10px;border-radius:20px;width:100%}
+.chat-msg.right .chat-bubble{background:rgba(55,36,6,0.75);border:1px solid rgba(244,166,36,0.4);border-bottom-right-radius:4px;box-shadow:0 6px 28px rgba(0,0,0,0.65),0 0 18px rgba(244,166,36,0.22)}
+.chat-msg.left .chat-bubble{background:rgba(12,32,72,0.8);border:1px solid rgba(74,158,255,0.35);border-bottom-left-radius:4px;box-shadow:0 6px 28px rgba(0,0,0,0.65),0 0 18px rgba(74,158,255,0.20)}
+.chat-en{font-size:15px;color:var(--text);line-height:1.65;font-weight:500}
+.chat-en b{color:var(--accent)}
+.chat-msg.left .chat-en b{color:var(--blue)}
+.chat-ar{font-size:14px;color:rgba(232,237,245,0.8);direction:rtl;font-family:'Cairo',sans-serif;line-height:1.75;border-top:1px solid rgba(255,255,255,0.09);padding-top:9px;margin-top:9px}
+.chat-bubble-foot{display:flex;justify-content:flex-end;margin-top:9px;padding-top:7px;border-top:1px solid rgba(255,255,255,0.07)}
+.chat-sp-btn{font-size:14px;cursor:pointer;padding:5px 13px;border-radius:20px;transition:all .2s;line-height:1;font-weight:700;letter-spacing:.3px}
+.chat-msg.right .chat-sp-btn{background:rgba(244,166,36,0.18);border:1px solid rgba(244,166,36,0.45);color:var(--accent)}
+.chat-msg.left .chat-sp-btn{background:rgba(74,158,255,0.15);border:1px solid rgba(74,158,255,0.4);color:var(--blue)}
+.chat-sp-btn:hover{transform:scale(1.08);filter:brightness(1.25)}
+.su-prog{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:6px;overflow:hidden}
+.su-prog-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:2px;width:0%;transition:width .6s ease}
+
+.su-level-hd{padding:8px 12px 5px;margin-top:8px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(255,255,255,.05)}
+.su-level-code{font-size:11px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;padding:2px 8px;border-radius:5px;display:inline-block}
+.su-level-name{font-family:'Cairo',sans-serif;font-size:12px;font-weight:700;color:#f4c430;direction:rtl;margin:0;line-height:1}
+.lvl-a1{background:rgba(52,211,153,.15);color:#34d399;border:1px solid rgba(52,211,153,.35)}
+.lvl-a2{background:rgba(74,158,255,.15);color:#4a9eff;border:1px solid rgba(74,158,255,.35)}
+.lvl-b1{background:rgba(245,158,11,.15);color:#f59e0b;border:1px solid rgba(245,158,11,.35)}
+.lvl-b2{background:rgba(244,166,36,.15);color:var(--accent);border:1px solid rgba(244,166,36,.35)}
+.lvl-b2p{background:rgba(251,146,60,.15);color:#fb923c;border:1px solid rgba(251,146,60,.35)}
+.lvl-c1{background:rgba(168,85,247,.15);color:#a855f7;border:1px solid rgba(168,85,247,.35)}
+.su-coming{opacity:.28;cursor:default;pointer-events:none}
+.su-prog{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:6px;overflow:hidden}
+.su-prog-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:2px;width:0%;transition:width .6s ease}
+
+/* Lesson 1 specific styles */
+.alpha-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(68px,1fr));gap:8px;margin:18px 0}
+.alpha-card{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:12px 8px;text-align:center;cursor:pointer;transition:all .22s;position:relative}
+.alpha-card:hover{transform:translateY(-3px);border-color:var(--accent);background:rgba(244,166,36,.08)}
+.alpha-card.vowel{border-color:rgba(244,166,36,.5);background:rgba(244,166,36,.07)}
+.alpha-card.vowel:hover{background:rgba(244,166,36,.15)}
+.alpha-up{font-size:22px;font-weight:900;color:var(--text);line-height:1}
+.alpha-lo{font-size:14px;color:var(--muted);margin:2px 0}
+.alpha-ar{font-size:10px;color:var(--accent);font-family:'Cairo',sans-serif;margin-top:4px}
+.alpha-card.vowel .alpha-up{color:var(--accent)}
+.vowel-badge{display:inline-block;background:rgba(244,166,36,.15);border:1px solid rgba(244,166,36,.4);color:var(--accent);font-size:10px;font-weight:800;padding:2px 8px;border-radius:10px;margin-right:4px}
+.cons-badge{display:inline-block;background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.3);color:var(--blue);font-size:10px;font-weight:800;padding:2px 8px;border-radius:10px;margin-right:4px}
+.num-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:9px;margin:14px 0}
+.num-card{background:var(--card2);border:1px solid var(--border);border-radius:11px;padding:12px 14px;cursor:pointer;transition:all .2s}
+.num-card:hover{transform:translateY(-2px);border-color:var(--blue)}
+.num-digit{font-size:22px;font-weight:900;color:var(--blue);line-height:1}
+.num-word{font-size:13px;font-weight:700;color:var(--text);margin-top:3px}
+.num-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-top:3px}
+.num-grid-sm{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:8px;margin:14px 0}
+.num-sm{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:9px 12px;cursor:pointer;transition:all .2s}
+.num-sm:hover{border-color:var(--blue);transform:translateY(-2px)}
+.num-sm .num-digit{font-size:17px}
+.num-sm .num-word{font-size:12px}
+.ord-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin:14px 0}
+.ord-card{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px;cursor:pointer;transition:all .2s}
+.ord-card:hover{border-color:var(--purple);transform:translateY(-2px)}
+.ord-num{font-size:18px;font-weight:900;color:var(--purple);line-height:1}
+.ord-word{font-size:12.5px;font-weight:700;color:var(--text);margin-top:3px}
+.ord-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-top:3px}
+.rule-box{background:linear-gradient(135deg,rgba(168,85,247,.12),rgba(74,158,255,.08));border:1px solid rgba(168,85,247,.3);border-radius:14px;padding:16px 20px;margin:14px 0}
+.rule-title{font-size:12px;font-weight:800;color:#a855f7;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.rule-body{font-size:13px;color:var(--text);line-height:1.75}
+.rule-body b{color:#a855f7}
+.rule-body .eg{color:var(--accent);font-style:italic}
+
+
+/* Lesson 4 specific */
+.rule-section{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px 22px;margin-bottom:14px}
+.rule-title{font-size:15px;font-weight:800;color:var(--accent);margin-bottom:4px;display:flex;align-items:center;gap:8px}
+.rule-ar{font-size:12px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-bottom:14px}
+.rule-badge{display:inline-block;background:rgba(244,166,36,.15);border:1px solid rgba(244,166,36,.4);color:var(--accent);font-size:12px;font-weight:900;padding:3px 12px;border-radius:8px;font-family:monospace;margin-bottom:10px}
+.rule-badge.blue{background:rgba(74,158,255,.12);border-color:rgba(74,158,255,.4);color:var(--blue)}
+.rule-badge.green{background:rgba(34,197,94,.1);border-color:rgba(34,197,94,.3);color:var(--green)}
+.rule-badge.red{background:rgba(239,68,68,.1);border-color:rgba(239,68,68,.3);color:var(--red)}
+.rule-cond{font-size:12px;color:var(--text);margin-bottom:10px;line-height:1.6}
+.rule-cond b{color:var(--blue)}
+.word-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;margin:10px 0}
+.word-row{background:var(--card2);border:1px solid var(--border);border-radius:9px;padding:9px 14px;display:flex;align-items:center;gap:10px;cursor:pointer;transition:border-color .2s}
+.word-row:hover{border-color:var(--accent)}
+.word-sing{font-size:13px;font-weight:700;color:var(--text);min-width:80px}
+.word-arrow{color:var(--muted);font-size:14px}
+.word-plur{font-size:13px;font-weight:800;color:var(--accent)}
+.word-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-top:2px}
+.irreg-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;margin:12px 0}
+.irreg-card{background:var(--card2);border:1px solid rgba(239,68,68,.25);border-radius:10px;padding:11px 14px;cursor:pointer;transition:all .2s}
+.irreg-card:hover{border-color:var(--red);transform:translateY(-2px)}
+.irreg-sing{font-size:14px;font-weight:700;color:var(--text)}
+.irreg-plur{font-size:15px;font-weight:900;color:var(--red);margin-top:2px}
+.irreg-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-top:4px}
+.irr-badge{display:inline-block;font-size:9px;font-weight:800;background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.3);color:var(--red);padding:1px 7px;border-radius:6px;vertical-align:middle;margin-left:6px;text-transform:uppercase;letter-spacing:.5px}
+.uncountable-grid{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.unc-chip{background:rgba(168,85,247,.1);border:1px solid rgba(168,85,247,.3);color:#a855f7;font-size:12px;font-weight:700;padding:5px 14px;border-radius:20px;cursor:pointer;transition:all .2s}
+.unc-chip:hover{background:rgba(168,85,247,.2);transform:translateY(-1px)}
+.rule-box{background:rgba(74,158,255,.07);border:1px solid rgba(74,158,255,.3);border-radius:10px;padding:12px 16px;margin:10px 0;font-size:13px;color:var(--text);line-height:1.7}
+.rule-box b{color:var(--blue)}
+
+.nav-home-btn{display:inline-flex;align-items:center;gap:6px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.4);color:var(--accent);font-size:12px;font-weight:800;padding:5px 13px;border-radius:8px;text-decoration:none;transition:all .2s;white-space:nowrap;flex-shrink:0}
+.nav-home-btn:hover{background:rgba(244,166,36,.25);transform:translateY(-2px)}
+.nav-lesson-badge{background:var(--accent);color:#0a1628;font-size:12px;font-weight:900;padding:5px 13px;border-radius:7px;white-space:nowrap;letter-spacing:.3px;flex-shrink:0}
+.nav-lesson-name{font-size:13px;color:rgba(232,237,245,.7);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-sep{color:rgba(136,153,176,.5);font-size:13px;flex-shrink:0}
+.nav-left{display:flex;align-items:center;gap:8px;flex:1;min-width:0}
+.nav-right{display:flex;align-items:center;flex-shrink:0}
+</style>
+
+<style>
+/* Watermark on print */
+@media print {
+  body::before {
+    content: 'Mohammed Elhuseyin — English Learning Platform — محمية الحقوق';
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-35deg);
+    font-size: 48px;
+    font-weight: 900;
+    color: rgba(244,166,36,0.18);
+    z-index: 9999;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+}
+</style>
+
+<style>
+.float-menu-btn{display:none;position:fixed;bottom:22px;left:18px;z-index:9998;width:48px;height:48px;background:var(--primary-dark,#0f2548);border:2px solid rgba(244,166,36,.5);border-radius:14px;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:12px;box-shadow:0 4px 20px rgba(0,0,0,.4);transition:transform .15s,box-shadow .15s}
+.float-menu-btn:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,.5)}
+.float-menu-btn span{display:block;width:22px;height:2px;background:#f4a624;border-radius:2px;transition:all .25s}
+@media(max-width:768px){.float-menu-btn{display:flex}}
+</style>
+</head>
+<body>
+
+<div class="layout">
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-logo">
+      <div class="sidebar-logo-icon">A</div>
+      <div>
+        <div class="sidebar-logo-text">English Course</div>
+        <div class="sidebar-logo-sub">MOHAMMED ELHUSEYIN</div>
+      </div>
+    </div>
+    <div class="sidebar-label">All Lessons</div>
+  </div>
+  <div class="sidebar-units">
+  <div class="su-level-hd"><span class="su-level-code lvl-a1">A1</span><span class="su-level-name">مستوى المبتدئ تماماً</span></div>
+  <a href="lesson1.html" class="su-item"><div class="su-num">1</div><div class="su-texts"><div class="su-en">Alphabet & Numbers</div><div class="su-ar">الأحرف والأرقام</div><div class="su-prog"><div class="su-prog-fill" id="sp1"></div></div></div></a>
+  <a href="lesson2.html" class="su-item"><div class="su-num">2</div><div class="su-texts"><div class="su-en">Classroom Language & Greetings</div><div class="su-ar">لغة الصف والتحيات</div><div class="su-prog"><div class="su-prog-fill" id="sp2"></div></div></div></a>
+  <a href="lesson3.html" class="su-item"><div class="su-num">3</div><div class="su-texts"><div class="su-en">Nationalities & Countries</div><div class="su-ar">الجنسيات والدول</div><div class="su-prog"><div class="su-prog-fill" id="sp3"></div></div></div></a>
+  <a href="lesson4.html" class="su-item su-active"><div class="su-num">4</div><div class="su-texts"><div class="su-en">Singular & Plural Nouns</div><div class="su-ar">الأسماء المفردة والجمع</div><div class="su-prog"><div class="su-prog-fill" id="sp4"></div></div></div></a>
+  <a href="lesson5.html" class="su-item"><div class="su-num">5</div><div class="su-texts"><div class="su-en">Days & Telling the Time</div><div class="su-ar">الأيام وإخبار الوقت</div><div class="su-prog"><div class="su-prog-fill" id="sp5"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-a2">A2</span><span class="su-level-name">المستوى الابتدائي</span></div>
+  <a href="unit1.html" class="su-item"><div class="su-num">6</div><div class="su-texts"><div class="su-en">Verb to <i>be</i></div><div class="su-ar">فعل التكوين</div><div class="su-prog"><div class="su-prog-fill" id="sp6"></div></div></div></a>
+  <a href="unit2.html" class="su-item"><div class="su-num">7</div><div class="su-texts"><div class="su-en">Present Simple</div><div class="su-ar">المضارع البسيط</div><div class="su-prog"><div class="su-prog-fill" id="sp7"></div></div></div></a>
+  <a href="unit3.html" class="su-item"><div class="su-num">8</div><div class="su-texts"><div class="su-en">Present Continuous</div><div class="su-ar">المضارع المستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp8"></div></div></div></a>
+  <a href="unit4.html" class="su-item"><div class="su-num">9</div><div class="su-texts"><div class="su-en">Past Simple: was / were</div><div class="su-ar">الماضي البسيط: كان</div><div class="su-prog"><div class="su-prog-fill" id="sp9"></div></div></div></a>
+  <a href="unit6.html" class="su-item"><div class="su-num">10</div><div class="su-texts"><div class="su-en">Past Simple: Regular & Irreg.</div><div class="su-ar">الماضي البسيط للأفعال</div><div class="su-prog"><div class="su-prog-fill" id="sp10"></div></div></div></a>
+  <a href="unit5.html" class="su-item"><div class="su-num">11</div><div class="su-texts"><div class="su-en">Can / Can't</div><div class="su-ar">القدرة والعجز</div><div class="su-prog"><div class="su-prog-fill" id="sp11"></div></div></div></a>
+  <a href="lesson12.html" class="su-item"><div class="su-num">12</div><div class="su-texts"><div class="su-en">Possessive Pronouns</div><div class="su-ar">ضمائر الملكية</div><div class="su-prog"><div class="su-prog-fill" id="sp12"></div></div></div></a>
+  <a href="unit7.html" class="su-item"><div class="su-num">13</div><div class="su-texts"><div class="su-en">There is / There are</div><div class="su-ar">يوجد / توجد</div><div class="su-prog"><div class="su-prog-fill" id="sp13"></div></div></div></a>
+  <a href="unit8.html" class="su-item"><div class="su-num">14</div><div class="su-texts"><div class="su-en">Adjectives</div><div class="su-ar">الصفات</div><div class="su-prog"><div class="su-prog-fill" id="sp14"></div></div></div></a>
+  <a href="unit9.html" class="su-item"><div class="su-num">15</div><div class="su-texts"><div class="su-en">Imperatives</div><div class="su-ar">صيغة الأمر والنهي</div><div class="su-prog"><div class="su-prog-fill" id="sp15"></div></div></div></a>
+  <a href="unit10.html" class="su-item"><div class="su-num">16</div><div class="su-texts"><div class="su-en">Object Pronouns</div><div class="su-ar">ضمائر المفعول به</div><div class="su-prog"><div class="su-prog-fill" id="sp16"></div></div></div></a>
+  <a href="unit11.html" class="su-item"><div class="su-num">17</div><div class="su-texts"><div class="su-en">Prepositions of Time & Place</div><div class="su-ar">حروف جر الوقت والمكان</div><div class="su-prog"><div class="su-prog-fill" id="sp17"></div></div></div></a>
+  <a href="unit12.html" class="su-item"><div class="su-num">18</div><div class="su-texts"><div class="su-en">Future Plans: going to</div><div class="su-ar">خطط المستقبل</div><div class="su-prog"><div class="su-prog-fill" id="sp18"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b1">B1</span><span class="su-level-name">تحت المتوسط</span></div>
+  <a href="lesson19.html" class="su-item"><div class="su-num">19</div><div class="su-texts"><div class="su-en">Present Perfect Introduction</div><div class="su-ar">مقدمة المضارع التام</div><div class="su-prog"><div class="su-prog-fill" id="sp19"></div></div></div></a>
+  <a href="lesson20.html" class="su-item"><div class="su-num">20</div><div class="su-texts"><div class="su-en">Past Continuous</div><div class="su-ar">الماضي المستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp20"></div></div></div></a>
+  <a href="lesson21.html" class="su-item"><div class="su-num">21</div><div class="su-texts"><div class="su-en">will vs. going to</div><div class="su-ar">المستقبل: إرادة أم تخطيط؟</div><div class="su-prog"><div class="su-prog-fill" id="sp21"></div></div></div></a>
+  <a href="lesson22.html" class="su-item"><div class="su-num">22</div><div class="su-texts"><div class="su-en">like / love / hate + -ing</div><div class="su-ar">التعبير عن التفضيلات</div><div class="su-prog"><div class="su-prog-fill" id="sp22"></div></div></div></a>
+  <a href="lesson23.html" class="su-item"><div class="su-num">23</div><div class="su-texts"><div class="su-en">Comparatives & Superlatives</div><div class="su-ar">المقارنة والتفضيل</div><div class="su-prog"><div class="su-prog-fill" id="sp23"></div></div></div></a>
+  <a href="lesson24.html" class="su-item"><div class="su-num">24</div><div class="su-texts"><div class="su-en">must / have to / should</div><div class="su-ar">أفعال الإلزام والنصيحة</div><div class="su-prog"><div class="su-prog-fill" id="sp24"></div></div></div></a>
+  <a href="lesson25.html" class="su-item"><div class="su-num">25</div><div class="su-texts"><div class="su-en">Infinitives & Gerunds</div><div class="su-ar">المصدر وصيغة الـ ing</div><div class="su-prog"><div class="su-prog-fill" id="sp25"></div></div></div></a>
+  <a href="lesson26.html" class="su-item"><div class="su-num">26</div><div class="su-texts"><div class="su-en">Articles: a/an / the</div><div class="su-ar">أدوات التعريف والتنكير</div><div class="su-prog"><div class="su-prog-fill" id="sp26"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b2">B2</span><span class="su-level-name">المستوى المتوسط</span></div>
+  <a href="lesson27.html" class="su-item"><div class="su-num">27</div><div class="su-texts"><div class="su-en">Present Perfect vs. Past Simple</div><div class="su-ar">المقارنة بين الماضي والتام</div><div class="su-prog"><div class="su-prog-fill" id="sp27"></div></div></div></a>
+  <a href="lesson28.html" class="su-item"><div class="su-num">28</div><div class="su-texts"><div class="su-en">Passive Voice</div><div class="su-ar">المبني للمجهول</div><div class="su-prog"><div class="su-prog-fill" id="sp28"></div></div></div></a>
+  <a href="lesson29.html" class="su-item"><div class="su-num">29</div><div class="su-texts"><div class="su-en">Zero / First / Second Cond.</div><div class="su-ar">الجمل الشرطية 0-1-2</div><div class="su-prog"><div class="su-prog-fill" id="sp29"></div></div></div></a>
+  <a href="lesson30.html" class="su-item"><div class="su-num">30</div><div class="su-texts"><div class="su-en">Reported Speech</div><div class="su-ar">الكلام غير المباشر</div><div class="su-prog"><div class="su-prog-fill" id="sp30"></div></div></div></a>
+  <a href="lesson31.html" class="su-item"><div class="su-num">31</div><div class="su-texts"><div class="su-en">Relative Clauses</div><div class="su-ar">جمل الوصل: who / which</div><div class="su-prog"><div class="su-prog-fill" id="sp31"></div></div></div></a>
+  <a href="lesson32.html" class="su-item"><div class="su-num">32</div><div class="su-texts"><div class="su-en">Quantifiers</div><div class="su-ar">محددات الكمية</div><div class="su-prog"><div class="su-prog-fill" id="sp32"></div></div></div></a>
+  <a href="lesson33.html" class="su-item"><div class="su-num">33</div><div class="su-texts"><div class="su-en">Phrasal Verbs Introduction</div><div class="su-ar">مقدمة الأفعال المركبة</div><div class="su-prog"><div class="su-prog-fill" id="sp33"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b2p">B2+</span><span class="su-level-name">فوق المتوسط</span></div>
+  <a href="lesson34.html" class="su-item"><div class="su-num">34</div><div class="su-texts"><div class="su-en">Narrative Tenses & Past Perfect</div><div class="su-ar">أزمنة السرد والماضي التام</div><div class="su-prog"><div class="su-prog-fill" id="sp34"></div></div></div></a>
+  <a href="lesson35.html" class="su-item"><div class="su-num">35</div><div class="su-texts"><div class="su-en">Future Perfect & Continuous</div><div class="su-ar">المستقبل التام والمستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp35"></div></div></div></a>
+  <a href="lesson36.html" class="su-item"><div class="su-num">36</div><div class="su-texts"><div class="su-en">Third Conditional & Regrets</div><div class="su-ar">الشرط الثالث والندم</div><div class="su-prog"><div class="su-prog-fill" id="sp36"></div></div></div></a>
+  <a href="lesson37.html" class="su-item"><div class="su-num">37</div><div class="su-texts"><div class="su-en">Causative: have/get done</div><div class="su-ar">الأفعال السببية</div><div class="su-prog"><div class="su-prog-fill" id="sp37"></div></div></div></a>
+  <a href="lesson38.html" class="su-item"><div class="su-num">38</div><div class="su-texts"><div class="su-en">Advanced Passive</div><div class="su-ar">المبني للمجهول المتقدم</div><div class="su-prog"><div class="su-prog-fill" id="sp38"></div></div></div></a>
+  <a href="lesson39.html" class="su-item"><div class="su-num">39</div><div class="su-texts"><div class="su-en">Speculation: must/might/can't</div><div class="su-ar">التخمين والاستنتاج</div><div class="su-prog"><div class="su-prog-fill" id="sp39"></div></div></div></a>
+  <a href="lesson40.html" class="su-item"><div class="su-num">40</div><div class="su-texts"><div class="su-en">Idioms & Collocations</div><div class="su-ar">المصطلحات والتعبيرات</div><div class="su-prog"><div class="su-prog-fill" id="sp40"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-c1">C1</span><span class="su-level-name">المستوى المتقدم الأكاديمي</span></div>
+  <a href="lesson41.html" class="su-item"><div class="su-num">41</div><div class="su-texts"><div class="su-en">Inversion & Emphatic Structures</div><div class="su-ar">التقديم والتأخير للتأكيد</div><div class="su-prog"><div class="su-prog-fill" id="sp41"></div></div></div></a>
+  <a href="lesson42.html" class="su-item"><div class="su-num">42</div><div class="su-texts"><div class="su-en">Mixed Conditionals</div><div class="su-ar">الجمل الشرطية المختلطة</div><div class="su-prog"><div class="su-prog-fill" id="sp42"></div></div></div></a>
+  <a href="lesson43.html" class="su-item"><div class="su-num">43</div><div class="su-texts"><div class="su-en">Advanced Gerunds & Infinitives</div><div class="su-ar">المصادر المتقدمة</div><div class="su-prog"><div class="su-prog-fill" id="sp43"></div></div></div></a>
+  <a href="lesson44.html" class="su-item"><div class="su-num">44</div><div class="su-texts"><div class="su-en">Cleft Sentences</div><div class="su-ar">الجمل المشقوقة</div><div class="su-prog"><div class="su-prog-fill" id="sp44"></div></div></div></a>
+  <a href="lesson45.html" class="su-item"><div class="su-num">45</div><div class="su-texts"><div class="su-en">Discourse Markers</div><div class="su-ar">أدوات الربط الأكاديمية</div><div class="su-prog"><div class="su-prog-fill" id="sp45"></div></div></div></a>
+  <a href="lesson46.html" class="su-item"><div class="su-num">46</div><div class="su-texts"><div class="su-en">Nuances & Euphemisms</div><div class="su-ar">الفروقات الدقيقة والتلطيف</div><div class="su-prog"><div class="su-prog-fill" id="sp46"></div></div></div></a>
+</div>
+</aside>
+
+<div class="main-content">
+
+<nav class="topnav">
+  <div class="nav-left">
+    <a href="../index.html" class="nav-home-btn">&#x1F3E0; الرئيسية</a>
+    <span class="nav-sep">&#x203A;</span>
+    <span class="nav-lesson-badge">Lesson 4</span>
+    <span class="nav-sep">&#x203A;</span>
+    <span class="nav-lesson-name">Singular &amp; Plural Nouns</span>
+  </div>
+  <div class="nav-right"><span class="nav-brand">MOHAMMED ELHUSEYIN</span></div>
+</nav>
+
+<div class="hero">
+  <div class="unit-badge">&#x1F4DA; Lesson 4 &nbsp;·&nbsp; A1 Beginner</div>
+  <h1 class="hero-title">Singular &amp; <i>Plural Nouns</i></h1>
+  <div class="hero-ar ar">الأسماء المفردة والجمع</div>
+  <p class="hero-sub">Master all the rules for making nouns plural — regular, special endings, and irregular forms.</p>
+  <div class="hero-tags">
+    <span class="tag tag-grammar">&#x1F4D6; Grammar</span>
+    <span class="tag tag-other">&#x1F4AC; Everyday English</span>
+    <span class="tag tag-other">&#x1F4D8; Reading</span>
+    <span class="tag tag-other">&#x2705; Check It!</span>
+  </div>
+</div>
+
+<div class="main-tabs">
+  <button class="main-tab active" onclick="showTab('grammar',this)">&#x1F4D6; Grammar</button>
+  <button class="main-tab" onclick="showTab('everyday',this)">&#x1F4AC; Everyday English</button>
+  <button class="main-tab" onclick="showTab('reading',this)">&#x1F4D8; Reading</button>
+  <button class="main-tab" onclick="showTab('checkit',this)">&#x2705; Check It!</button>
+</div>
+
+<!-- ══ GRAMMAR TAB ══════════════════════════════════════════════ -->
+<div id="tab-grammar" class="tab-panel active">
+
+  <!-- RULE 1: Regular -s -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F7E2; Rule 1 — Add <span style="color:var(--accent);font-family:monospace">-s</span></div>
+    <div class="rule-ar">الغالبية العظمى من الأسماء: أضف -s فقط</div>
+    <div class="rule-badge">singular + s = plural</div>
+    <div class="rule-cond">Use <b>-s</b> for most nouns (no special ending).</div>
+    <div class="word-grid">
+      <div class="word-row" onclick="ttsRead('book, books',0.88)"><span class="word-sing">book</span><span class="word-arrow">→</span><span class="word-plur">books</span><span class="word-ar">كتاب / كتب</span></div>
+      <div class="word-row" onclick="ttsRead('car, cars',0.88)"><span class="word-sing">car</span><span class="word-arrow">→</span><span class="word-plur">cars</span><span class="word-ar">سيارة / سيارات</span></div>
+      <div class="word-row" onclick="ttsRead('table, tables',0.88)"><span class="word-sing">table</span><span class="word-arrow">→</span><span class="word-plur">tables</span><span class="word-ar">طاولة / طاولات</span></div>
+      <div class="word-row" onclick="ttsRead('dog, dogs',0.88)"><span class="word-sing">dog</span><span class="word-arrow">→</span><span class="word-plur">dogs</span><span class="word-ar">كلب / كلاب</span></div>
+      <div class="word-row" onclick="ttsRead('teacher, teachers',0.88)"><span class="word-sing">teacher</span><span class="word-arrow">→</span><span class="word-plur">teachers</span><span class="word-ar">معلم / معلمون</span></div>
+      <div class="word-row" onclick="ttsRead('apple, apples',0.88)"><span class="word-sing">apple</span><span class="word-arrow">→</span><span class="word-plur">apples</span><span class="word-ar">تفاحة / تفاح</span></div>
+      <div class="word-row" onclick="ttsRead('pen, pens',0.88)"><span class="word-sing">pen</span><span class="word-arrow">→</span><span class="word-plur">pens</span><span class="word-ar">قلم / أقلام</span></div>
+      <div class="word-row" onclick="ttsRead('student, students',0.88)"><span class="word-sing">student</span><span class="word-arrow">→</span><span class="word-plur">students</span><span class="word-ar">طالب / طلاب</span></div>
+    </div>
+  </div>
+
+  <!-- RULE 2: -es -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F7E1; Rule 2 — Add <span style="color:var(--accent);font-family:monospace">-es</span></div>
+    <div class="rule-ar">الأسماء المنتهية بـ s, x, z, ch, sh: أضف -es</div>
+    <div class="rule-badge">s / x / z / ch / sh + es</div>
+    <div class="rule-cond">When a noun ends in <b>s, x, z, ch</b> or <b>sh</b> — add <b>-es</b>.</div>
+    <div class="word-grid">
+      <div class="word-row" onclick="ttsRead('bus, buses',0.88)"><span class="word-sing">bus</span><span class="word-arrow">→</span><span class="word-plur">bus<b style='color:var(--green)'>es</b></span><span class="word-ar">حافلة / حافلات</span></div>
+      <div class="word-row" onclick="ttsRead('box, boxes',0.88)"><span class="word-sing">box</span><span class="word-arrow">→</span><span class="word-plur">box<b style='color:var(--green)'>es</b></span><span class="word-ar">صندوق / صناديق</span></div>
+      <div class="word-row" onclick="ttsRead('watch, watches',0.88)"><span class="word-sing">watch</span><span class="word-arrow">→</span><span class="word-plur">watch<b style='color:var(--green)'>es</b></span><span class="word-ar">ساعة / ساعات</span></div>
+      <div class="word-row" onclick="ttsRead('dish, dishes',0.88)"><span class="word-sing">dish</span><span class="word-arrow">→</span><span class="word-plur">dish<b style='color:var(--green)'>es</b></span><span class="word-ar">صحن / صحون</span></div>
+      <div class="word-row" onclick="ttsRead('class, classes',0.88)"><span class="word-sing">class</span><span class="word-arrow">→</span><span class="word-plur">class<b style='color:var(--green)'>es</b></span><span class="word-ar">صف / صفوف</span></div>
+      <div class="word-row" onclick="ttsRead('brush, brushes',0.88)"><span class="word-sing">brush</span><span class="word-arrow">→</span><span class="word-plur">brush<b style='color:var(--green)'>es</b></span><span class="word-ar">فرشاة / فرش</span></div>
+      <div class="word-row" onclick="ttsRead('church, churches',0.88)"><span class="word-sing">church</span><span class="word-arrow">→</span><span class="word-plur">church<b style='color:var(--green)'>es</b></span><span class="word-ar">كنيسة / كنائس</span></div>
+      <div class="word-row" onclick="ttsRead('quiz, quizzes',0.88)"><span class="word-sing">quiz</span><span class="word-arrow">→</span><span class="word-plur">quiz<b style='color:var(--green)'>zes</b></span><span class="word-ar">اختبار / اختبارات</span></div>
+    </div>
+  </div>
+
+  <!-- RULE 3: -y endings -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F7E0; Rule 3 — Nouns ending in <span style="color:var(--accent);font-family:monospace">-y</span></div>
+    <div class="rule-ar">الأسماء المنتهية بـ y: انظر ما قبلها</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0">
+      <div style="background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:14px 16px">
+        <div class="rule-badge">consonant + y → ies</div>
+        <div class="rule-cond" style="margin:8px 0">Before <b>-y</b>: a consonant (b,c,d,f,g…)</div>
+        <div class="word-grid" style="grid-template-columns:1fr">
+          <div class="word-row" onclick="ttsRead('city, cities',0.88)"><span class="word-sing">city</span><span class="word-arrow">→</span><span class="word-plur">cit<b style='color:var(--green)'>ies</b></span><span class="word-ar">مدينة / مدن</span></div>
+          <div class="word-row" onclick="ttsRead('baby, babies',0.88)"><span class="word-sing">baby</span><span class="word-arrow">→</span><span class="word-plur">bab<b style='color:var(--green)'>ies</b></span><span class="word-ar">رضيع / رضّع</span></div>
+          <div class="word-row" onclick="ttsRead('country, countries',0.88)"><span class="word-sing">country</span><span class="word-arrow">→</span><span class="word-plur">countr<b style='color:var(--green)'>ies</b></span><span class="word-ar">دولة / دول</span></div>
+          <div class="word-row" onclick="ttsRead('family, families',0.88)"><span class="word-sing">family</span><span class="word-arrow">→</span><span class="word-plur">famil<b style='color:var(--green)'>ies</b></span><span class="word-ar">عائلة / عائلات</span></div>
+        </div>
+      </div>
+      <div style="background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:14px 16px">
+        <div class="rule-badge blue">vowel + y → s</div>
+        <div class="rule-cond" style="margin:8px 0">Before <b>-y</b>: a vowel (a, e, i, o, u)</div>
+        <div class="word-grid" style="grid-template-columns:1fr">
+          <div class="word-row" onclick="ttsRead('day, days',0.88)"><span class="word-sing">day</span><span class="word-arrow">→</span><span class="word-plur">day<b style='color:var(--blue)'>s</b></span><span class="word-ar">يوم / أيام</span></div>
+          <div class="word-row" onclick="ttsRead('key, keys',0.88)"><span class="word-sing">key</span><span class="word-arrow">→</span><span class="word-plur">key<b style='color:var(--blue)'>s</b></span><span class="word-ar">مفتاح / مفاتيح</span></div>
+          <div class="word-row" onclick="ttsRead('toy, toys',0.88)"><span class="word-sing">toy</span><span class="word-arrow">→</span><span class="word-plur">toy<b style='color:var(--blue)'>s</b></span><span class="word-ar">لعبة / ألعاب</span></div>
+          <div class="word-row" onclick="ttsRead('boy, boys',0.88)"><span class="word-sing">boy</span><span class="word-arrow">→</span><span class="word-plur">boy<b style='color:var(--blue)'>s</b></span><span class="word-ar">ولد / أولاد</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RULE 4: -f/-fe endings -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F7E3; Rule 4 — Nouns ending in <span style="color:var(--accent);font-family:monospace">-f / -fe</span></div>
+    <div class="rule-ar">الأسماء المنتهية بـ f أو fe: غالباً تتحول إلى -ves</div>
+    <div class="rule-badge">f / fe → ves</div>
+    <div class="rule-cond">Most nouns ending in <b>-f</b> or <b>-fe</b>: drop the f/fe and add <b>-ves</b>.</div>
+    <div class="word-grid">
+      <div class="word-row" onclick="ttsRead('leaf, leaves',0.88)"><span class="word-sing">leaf</span><span class="word-arrow">→</span><span class="word-plur">lea<b style='color:var(--green)'>ves</b></span><span class="word-ar">ورقة شجر / أوراق</span></div>
+      <div class="word-row" onclick="ttsRead('knife, knives',0.88)"><span class="word-sing">knife</span><span class="word-arrow">→</span><span class="word-plur">kni<b style='color:var(--green)'>ves</b></span><span class="word-ar">سكين / سكاكين</span></div>
+      <div class="word-row" onclick="ttsRead('wife, wives',0.88)"><span class="word-sing">wife</span><span class="word-arrow">→</span><span class="word-plur">wi<b style='color:var(--green)'>ves</b></span><span class="word-ar">زوجة / زوجات</span></div>
+      <div class="word-row" onclick="ttsRead('wolf, wolves',0.88)"><span class="word-sing">wolf</span><span class="word-arrow">→</span><span class="word-plur">wol<b style='color:var(--green)'>ves</b></span><span class="word-ar">ذئب / ذئاب</span></div>
+      <div class="word-row" onclick="ttsRead('half, halves',0.88)"><span class="word-sing">half</span><span class="word-arrow">→</span><span class="word-plur">hal<b style='color:var(--green)'>ves</b></span><span class="word-ar">نصف / أنصاف</span></div>
+      <div class="word-row" onclick="ttsRead('shelf, shelves',0.88)"><span class="word-sing">shelf</span><span class="word-arrow">→</span><span class="word-plur">shel<b style='color:var(--green)'>ves</b></span><span class="word-ar">رف / أرفف</span></div>
+    </div>
+    <div class="rule-box" style="margin-top:10px"><b>&#x26A0;&#xFE0F; Exceptions:</b> roof → <b>roofs</b> &nbsp;|&nbsp; cliff → <b>cliffs</b> &nbsp;|&nbsp; chef → <b>chefs</b> &nbsp;(just add -s)</div>
+  </div>
+
+  <!-- RULE 5: Irregular plurals -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F534; Rule 5 — Irregular Plurals <span class="irr-badge">Memorise!</span></div>
+    <div class="rule-ar">الجمع الشاذ — لا يتبع قاعدة، يجب حفظه</div>
+    <div class="irreg-grid">
+      <div class="irreg-card" onclick="ttsRead('man, men',0.88)"><div class="irreg-sing">man</div><div class="irreg-plur">men</div><div class="irreg-ar">رجل / رجال</div></div>
+      <div class="irreg-card" onclick="ttsRead('woman, women',0.88)"><div class="irreg-sing">woman</div><div class="irreg-plur">women</div><div class="irreg-ar">امرأة / نساء</div></div>
+      <div class="irreg-card" onclick="ttsRead('child, children',0.88)"><div class="irreg-sing">child</div><div class="irreg-plur">children</div><div class="irreg-ar">طفل / أطفال</div></div>
+      <div class="irreg-card" onclick="ttsRead('tooth, teeth',0.88)"><div class="irreg-sing">tooth</div><div class="irreg-plur">teeth</div><div class="irreg-ar">سن / أسنان</div></div>
+      <div class="irreg-card" onclick="ttsRead('foot, feet',0.88)"><div class="irreg-sing">foot</div><div class="irreg-plur">feet</div><div class="irreg-ar">قدم / أقدام</div></div>
+      <div class="irreg-card" onclick="ttsRead('mouse, mice',0.88)"><div class="irreg-sing">mouse</div><div class="irreg-plur">mice</div><div class="irreg-ar">فأر / فئران</div></div>
+      <div class="irreg-card" onclick="ttsRead('person, people',0.88)"><div class="irreg-sing">person</div><div class="irreg-plur">people</div><div class="irreg-ar">شخص / أشخاص</div></div>
+      <div class="irreg-card" onclick="ttsRead('goose, geese',0.88)"><div class="irreg-sing">goose</div><div class="irreg-plur">geese</div><div class="irreg-ar">إوزّة / إوز</div></div>
+    </div>
+
+    <div class="rule-box" style="border-color:rgba(239,68,68,.3);background:rgba(239,68,68,.05)">
+      <b style="color:var(--red)">&#x1F6AB; No change (singular = plural):</b><br>
+      <span style="color:var(--text)">sheep → <b>sheep</b> &nbsp;|&nbsp; fish → <b>fish</b> &nbsp;|&nbsp; deer → <b>deer</b> &nbsp;|&nbsp; aircraft → <b>aircraft</b></span><br>
+      <span style="font-size:12px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;display:block;margin-top:6px">بعض الأسماء لا تتغير في الجمع — المفرد والجمع نفس الكلمة.</span>
+    </div>
+  </div>
+
+  <!-- RULE 6: Uncountable -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F7E3; Rule 6 — Uncountable Nouns — لا تُجمع</div>
+    <div class="rule-ar">أسماء لا تُجمع — لا نضع لها -s أبداً</div>
+    <div class="uncountable-grid">
+      <span class="unc-chip" onclick="ttsRead('water',0.88)">water — ماء</span>
+      <span class="unc-chip" onclick="ttsRead('information',0.88)">information — معلومات</span>
+      <span class="unc-chip" onclick="ttsRead('music',0.88)">music — موسيقى</span>
+      <span class="unc-chip" onclick="ttsRead('money',0.88)">money — مال</span>
+      <span class="unc-chip" onclick="ttsRead('advice',0.88)">advice — نصيحة</span>
+      <span class="unc-chip" onclick="ttsRead('news',0.88)">news — أخبار</span>
+      <span class="unc-chip" onclick="ttsRead('furniture',0.88)">furniture — أثاث</span>
+      <span class="unc-chip" onclick="ttsRead('luggage',0.88)">luggage — أمتعة</span>
+      <span class="unc-chip" onclick="ttsRead('homework',0.88)">homework — واجب</span>
+      <span class="unc-chip" onclick="ttsRead('bread',0.88)">bread — خبز</span>
+    </div>
+    <div class="rule-box" style="border-color:rgba(168,85,247,.3);background:rgba(168,85,247,.05)">
+      <b style="color:#a855f7">❌ Never say:</b> <span style="text-decoration:line-through;color:var(--red)">waters / informations / advices / furnitures</span><br>
+      <b style="color:#a855f7">✅ Always say:</b> <span style="color:var(--green)">some water / a piece of information / a piece of advice</span>
+    </div>
+  </div>
+
+  <!-- Quick summary table -->
+  <div class="card">
+    <div class="card-title">&#x1F4CB; Summary Table — جدول ملخّص</div>
+    <div style="overflow-x:auto">
+    <table class="sa-table">
+      <thead><tr><th>Rule</th><th>Ending</th><th>Change</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>most nouns</td><td>+ s</td><td>book → books</td></tr>
+        <tr><td>2</td><td>s, x, z, ch, sh</td><td>+ es</td><td>bus → buses</td></tr>
+        <tr><td>3a</td><td>consonant + y</td><td>y → ies</td><td>city → cities</td></tr>
+        <tr><td>3b</td><td>vowel + y</td><td>+ s</td><td>day → days</td></tr>
+        <tr><td>4</td><td>f / fe</td><td>f/fe → ves</td><td>leaf → leaves</td></tr>
+        <tr><td>5</td><td>irregular</td><td>memorise</td><td>man → men</td></tr>
+        <tr><td>6</td><td>uncountable</td><td>no plural</td><td>water ✗ waters</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+
+</div><!-- /tab-grammar -->
+
+<!-- ══ EVERYDAY ENGLISH TAB ══════════════════════════════════════ -->
+<div id="tab-everyday" class="tab-panel">
+
+  <!-- Dialogue 1 -->
+  <div class="dlg-card">
+    <div class="dlg-header">
+      <div class="dlg-meta">
+        <div class="dlg-num">Dialogue 01</div>
+        <div class="dlg-title">At the Market &#x1F6D2;</div>
+        <div class="dlg-ctx">Sara buys fruit and vegetables</div>
+      </div>
+      <button class="dlg-tts" onclick="ttsRead('Good morning. Can I help you? Yes please. I want three apples and two oranges. How many tomatoes do you want? Five tomatoes please. And do you have potatoes? Yes, I have potatoes and onions. Great, one bag of potatoes please. Here you are. Thank you.',0.88)">&#x25B6; Listen</button>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Seller</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Good morning! Can I help you?</div>
+          <div class="chat-ar">صباح الخير! هل يمكنني مساعدتك؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('Good morning. Can I help you.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Sara</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Yes, please! I want three <b>apples</b> and two <b>oranges</b>.</div>
+          <div class="chat-ar">نعم، شكراً! أريد ثلاث تفاحات واثنتين من البرتقال.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('Yes please. I want three apples and two oranges.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Seller</div>
+        <div class="chat-bubble">
+          <div class="chat-en">How many <b>tomatoes</b> do you want?</div>
+          <div class="chat-ar">كم حبة طماطم تريدين؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('How many tomatoes do you want.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Sara</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Five <b>tomatoes</b>, please. And do you have <b>potatoes</b>?</div>
+          <div class="chat-ar">خمس طماطم من فضلك. وهل لديك بطاطا؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('Five tomatoes please. And do you have potatoes.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Seller</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Yes! I have <b>potatoes</b> and <b>onions</b>.</div>
+          <div class="chat-ar">نعم! لديّ بطاطا وبصل.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('Yes. I have potatoes and onions.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Sara</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Great! One bag of <b>potatoes</b>, please. Thank you!</div>
+          <div class="chat-ar">رائع! كيس واحد من البطاطا من فضلك. شكراً!</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('Great. One bag of potatoes please. Thank you.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dialogue 2 -->
+  <div class="dlg-card">
+    <div class="dlg-header">
+      <div class="dlg-meta">
+        <div class="dlg-num">Dialogue 02</div>
+        <div class="dlg-title">School Supplies &#x1F4CF;</div>
+        <div class="dlg-ctx">Students talk about what they need for class</div>
+      </div>
+      <button class="dlg-tts" onclick="ttsRead('Do you have all your books today? Yes, I have two books and three notebooks. What about pencils? I have four pencils but no ruler. I have two rulers. Can I borrow one? Of course. Do you have any erasers? No I do not. Let us ask the teacher.',0.88)">&#x25B6; Listen</button>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Omar</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Do you have all your <b>books</b> today?</div>
+          <div class="chat-ar">هل معك كل كتبك اليوم؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('Do you have all your books today.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Nadia</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Yes! I have two <b>books</b> and three <b>notebooks</b>.</div>
+          <div class="chat-ar">نعم! معي كتابان وثلاثة دفاتر.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('Yes. I have two books and three notebooks.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Omar</div>
+        <div class="chat-bubble">
+          <div class="chat-en">What about <b>pencils</b>?</div>
+          <div class="chat-ar">وماذا عن الأقلام؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('What about pencils.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Nadia</div>
+        <div class="chat-bubble">
+          <div class="chat-en">I have four <b>pencils</b> but no <b>ruler</b>.</div>
+          <div class="chat-ar">معي أربعة أقلام لكن لا مسطرة.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('I have four pencils but no ruler.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Omar</div>
+        <div class="chat-bubble">
+          <div class="chat-en">I have two <b>rulers</b>. Can I borrow one?</div>
+          <div class="chat-ar">معي مسطرتان. هل يمكنني استعارة واحدة؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('I have two rulers. Can I borrow one.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Nadia</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Of course! Do you have any <b>erasers</b>?</div>
+          <div class="chat-ar">بالطبع! هل معك أي ممحاة؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('Of course. Do you have any erasers.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Omar</div>
+        <div class="chat-bubble">
+          <div class="chat-en">No, I don't. Let's ask the <b>teacher</b>!</div>
+          <div class="chat-ar">لا، ليس معي. لنسأل المعلم!</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('No I do not. Lets ask the teacher.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dialogue 3 -->
+  <div class="dlg-card">
+    <div class="dlg-header">
+      <div class="dlg-meta">
+        <div class="dlg-num">Dialogue 03</div>
+        <div class="dlg-title">Talking About Family &#x1F468;&#x200D;&#x1F469;&#x200D;&#x1F467;&#x200D;&#x1F466;</div>
+        <div class="dlg-ctx">Two friends talk about their families</div>
+      </div>
+      <button class="dlg-tts" onclick="ttsRead('How many people are in your family? There are five people. I have two brothers and one sister. Wow, that is a big family. Are your brothers older than you? Yes, they are men now. One is a doctor and one is a teacher. What about the children in your family? My sister has two children, a boy and a girl. That is lovely.',0.88)">&#x25B6; Listen</button>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Lena</div>
+        <div class="chat-bubble">
+          <div class="chat-en">How many <b>people</b> are in your family?</div>
+          <div class="chat-ar">كم عدد أفراد عائلتك؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('How many people are in your family.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Tom</div>
+        <div class="chat-bubble">
+          <div class="chat-en">There are five <b>people</b>. I have two <b>brothers</b> and one <b>sister</b>.</div>
+          <div class="chat-ar">هناك خمسة أشخاص. لديّ أخوان وأخت واحدة.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('There are five people. I have two brothers and one sister.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Lena</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Wow! Are your brothers older than you?</div>
+          <div class="chat-ar">واو! هل أخواك أكبر منك؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('Wow. Are your brothers older than you.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Tom</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Yes! They are <b>men</b> now. One is a doctor, one is a teacher.</div>
+          <div class="chat-ar">نعم! هما رجلان الآن. أحدهما طبيب والآخر معلم.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('Yes. They are men now. One is a doctor, one is a teacher.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Lena</div>
+        <div class="chat-bubble">
+          <div class="chat-en">What about <b>children</b> in your family?</div>
+          <div class="chat-ar">وماذا عن الأطفال في عائلتك؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('What about children in your family.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Tom</div>
+        <div class="chat-bubble">
+          <div class="chat-en">My sister has two <b>children</b> — a boy and a girl!</div>
+          <div class="chat-ar">أختي لديها طفلان — ولد وبنت!</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('My sister has two children, a boy and a girl.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dialogue 4 -->
+  <div class="dlg-card">
+    <div class="dlg-header">
+      <div class="dlg-meta">
+        <div class="dlg-num">Dialogue 04</div>
+        <div class="dlg-title">Describing a City &#x1F3D9;&#xFE0F;</div>
+        <div class="dlg-ctx">A tourist asks about the city</div>
+      </div>
+      <button class="dlg-tts" onclick="ttsRead('Excuse me, what is in this city? There are many parks and museums. How many buses are there? There are thirty buses and five train lines. Are there many hotels? Yes, there are lots of hotels and restaurants. What about shops? There are hundreds of shops and markets. This city sounds amazing.',0.88)">&#x25B6; Listen</button>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Tourist</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Excuse me — what is in this <b>city</b>?</div>
+          <div class="chat-ar">عفواً — ماذا يوجد في هذه المدينة؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('Excuse me, what is in this city.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Local</div>
+        <div class="chat-bubble">
+          <div class="chat-en">There are many <b>parks</b> and <b>museums</b>!</div>
+          <div class="chat-ar">هناك الكثير من الحدائق والمتاحف!</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('There are many parks and museums.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Tourist</div>
+        <div class="chat-bubble">
+          <div class="chat-en">How many <b>buses</b> are there?</div>
+          <div class="chat-ar">كم عدد الحافلات؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('How many buses are there.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Local</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Thirty <b>buses</b> and five train <b>lines</b>.</div>
+          <div class="chat-ar">ثلاثون حافلة وخمسة خطوط قطار.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('Thirty buses and five train lines.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Tourist</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Are there many <b>hotels</b> and <b>restaurants</b>?</div>
+          <div class="chat-ar">هل هناك الكثير من الفنادق والمطاعم؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('Are there many hotels and restaurants.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Local</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Yes! And hundreds of <b>shops</b> and <b>markets</b>. This city is amazing!</div>
+          <div class="chat-ar">نعم! ومئات المحلات والأسواق. هذه المدينة رائعة!</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('Yes. And hundreds of shops and markets. This city is amazing.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dialogue 5 -->
+  <div class="dlg-card">
+    <div class="dlg-header">
+      <div class="dlg-meta">
+        <div class="dlg-num">Dialogue 05</div>
+        <div class="dlg-title">Plural Quiz Game &#x1F3AE;</div>
+        <div class="dlg-ctx">Teacher tests students on plurals</div>
+      </div>
+      <button class="dlg-tts" onclick="ttsRead('Let us play a plural game. I say the singular word and you give me the plural. Ready? Ready! Woman. Women! Correct. Leaf. Leaves! Well done. City. Cities! Perfect. Sheep. Sheep! Excellent, no change. Last one. Child. Children! You are all plural experts now.',0.88)">&#x25B6; Listen</button>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Teacher</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Let's play a <b>plural game</b>! I say singular — you give me plural. Ready?</div>
+          <div class="chat-ar">لنلعب لعبة الجمع! أقول المفرد وأنتم تعطونني الجمع. جاهزون؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('Lets play a plural game. I say singular and you give me plural. Ready.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Students</div>
+        <div class="chat-bubble">
+          <div class="chat-en"><b>Ready!</b></div>
+          <div class="chat-ar">جاهزون!</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('Ready.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Teacher</div>
+        <div class="chat-bubble">
+          <div class="chat-en"><b>Woman</b>...</div>
+          <div class="chat-ar">امرأة...</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('Woman.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Students</div>
+        <div class="chat-bubble">
+          <div class="chat-en"><b>Women!</b></div>
+          <div class="chat-ar">نساء!</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('Women.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Teacher</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Correct! <b>Leaf</b>...</div>
+          <div class="chat-ar">صحيح! ورقة شجر...</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('Correct. Leaf.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Students</div>
+        <div class="chat-bubble">
+          <div class="chat-en"><b>Leaves!</b> — <b>City</b> → <b>Cities</b>! — <b>Sheep</b> → <b>Sheep!</b> No change!</div>
+          <div class="chat-ar">أوراق! — مدينة → مدن! — خروف → خروف! لا تغيير!</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('Leaves. Cities. Sheep, no change.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Teacher</div>
+        <div class="chat-bubble">
+          <div class="chat-en"><b>Excellent!</b> You are all <b>plural experts</b> now!</div>
+          <div class="chat-ar">ممتاز! أنتم الآن خبراء في الجمع!</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" onclick="ttsRead('Excellent. You are all plural experts now.',0.88)">&#x1F50A;</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /tab-everyday -->
+
+<!-- ══ READING TAB ════════════════════════════════════════════════ -->
+<div id="tab-reading" class="tab-panel">
+
+  <div class="read-ctx">
+    <div class="read-ctx-fact"><div class="read-ctx-label">Level</div><div class="read-ctx-val">A1 — Beginner</div></div>
+    <div class="read-ctx-sep"></div>
+    <div class="read-ctx-fact"><div class="read-ctx-label">Words</div><div class="read-ctx-val">~150</div></div>
+    <div class="read-ctx-sep"></div>
+    <div class="read-ctx-fact"><div class="read-ctx-label">Topic</div><div class="read-ctx-val">Singular &amp; Plural</div></div>
+    <div class="read-ctx-sep"></div>
+    <div class="read-ctx-fact"><div class="read-ctx-label">Questions</div><div class="read-ctx-val">5 MCQ</div></div>
+  </div>
+
+  <div class="read-tts-bar">
+    <span class="read-label">&#x1F50A; استمع للنص:</span>
+    <button class="tts-btn" onclick="ttsRead(document.getElementById('readPassText4').innerText,0.82)">&#x25B6; تشغيل النص كاملاً</button>
+    <button class="tts-btn tts-stop" onclick="speechSynthesis.cancel()">&#x23F9; إيقاف</button>
+  </div>
+
+  <div class="read-pass" id="readPassText4">
+    <p><b>A Busy Day at the Market</b></p>
+
+    <p>Every Saturday, Mrs. Hassan goes to the market. The market has many <b>stalls</b>. There are <b>men</b> and <b>women</b> selling fruit and vegetables.</p>
+
+    <p>She buys three <b>loaves</b> of bread, two <b>boxes</b> of eggs, and four <b>bags</b> of rice. Then she goes to the vegetable stall. She picks up some <b>tomatoes</b>, <b>potatoes</b>, and <b>onions</b>.</p>
+
+    <p>Next, she visits the toy stall for her <b>children</b>. She buys two toy <b>cars</b> for her <b>boys</b> and three small <b>dolls</b> for her <b>girls</b>.</p>
+
+    <p>She also sees some beautiful <b>leaves</b> and <b>flowers</b> at the flower stall. She buys one bunch of flowers for her home.</p>
+
+    <p>At the end, Mrs. Hassan has many <b>bags</b> in her <b>hands</b>. She smiles and says, "My <b>family</b> will be very happy today!"</p>
+
+    <p>The market is full of <b>people</b>. The <b>children</b> run and play between the <b>stalls</b>. It is a wonderful Saturday morning.</p>
+  </div>
+
+  <div class="read-vocab-wrap">
+    <div class="read-vocab-title">&#x1F511; Key Vocabulary — مفردات النص</div>
+    <div class="read-vocab-grid">
+      <div class="read-vocab-item"><div class="read-vocab-en" onclick="ttsRead('stall',0.85)" style="cursor:pointer">stall</div><div class="read-vocab-ar">بسطة / كشك</div></div>
+      <div class="read-vocab-item"><div class="read-vocab-en" onclick="ttsRead('loaves',0.85)" style="cursor:pointer">loaves</div><div class="read-vocab-ar">أرغفة (جمع loaf)</div></div>
+      <div class="read-vocab-item"><div class="read-vocab-en" onclick="ttsRead('bunch',0.85)" style="cursor:pointer">bunch</div><div class="read-vocab-ar">باقة / حزمة</div></div>
+      <div class="read-vocab-item"><div class="read-vocab-en" onclick="ttsRead('doll',0.85)" style="cursor:pointer">doll</div><div class="read-vocab-ar">دمية</div></div>
+      <div class="read-vocab-item"><div class="read-vocab-en" onclick="ttsRead('picks up',0.85)" style="cursor:pointer">picks up</div><div class="read-vocab-ar">يلتقط / يختار</div></div>
+      <div class="read-vocab-item"><div class="read-vocab-en" onclick="ttsRead('selling',0.85)" style="cursor:pointer">selling</div><div class="read-vocab-ar">يبيع / للبيع</div></div>
+      <div class="read-vocab-item"><div class="read-vocab-en" onclick="ttsRead('wonderful',0.85)" style="cursor:pointer">wonderful</div><div class="read-vocab-ar">رائع / جميل</div></div>
+      <div class="read-vocab-item"><div class="read-vocab-en" onclick="ttsRead('between',0.85)" style="cursor:pointer">between</div><div class="read-vocab-ar">بين</div></div>
+    </div>
+  </div>
+
+  <div class="comp-section-title">&#x2753; Comprehension Questions — أسئلة الاستيعاب</div>
+
+  <div class="read-q" id="rq1">
+    <div class="read-q-text">1. When does Mrs. Hassan go to the market?</div>
+    <div class="read-opts">
+      <button class="read-opt" onclick="rqPick(this,'rq1',false)"><span>A</span> Every Friday</button>
+      <button class="read-opt" onclick="rqPick(this,'rq1',true)"><span>B</span> Every Saturday</button>
+      <button class="read-opt" onclick="rqPick(this,'rq1',false)"><span>C</span> Every Sunday</button>
+      <button class="read-opt" onclick="rqPick(this,'rq1',false)"><span>D</span> Every Monday</button>
+    </div>
+  </div>
+
+  <div class="read-q" id="rq2">
+    <div class="read-q-text">2. What does she buy for her boys?</div>
+    <div class="read-opts">
+      <button class="read-opt" onclick="rqPick(this,'rq2',false)"><span>A</span> Dolls</button>
+      <button class="read-opt" onclick="rqPick(this,'rq2',false)"><span>B</span> Flowers</button>
+      <button class="read-opt" onclick="rqPick(this,'rq2',true)"><span>C</span> Toy cars</button>
+      <button class="read-opt" onclick="rqPick(this,'rq2',false)"><span>D</span> Books</button>
+    </div>
+  </div>
+
+  <div class="read-q" id="rq3">
+    <div class="read-q-text">3. "Loaves" is the plural of ___.</div>
+    <div class="read-opts">
+      <button class="read-opt" onclick="rqPick(this,'rq3',false)"><span>A</span> loafs</button>
+      <button class="read-opt" onclick="rqPick(this,'rq3',false)"><span>B</span> loafes</button>
+      <button class="read-opt" onclick="rqPick(this,'rq3',true)"><span>C</span> loaf</button>
+      <button class="read-opt" onclick="rqPick(this,'rq3',false)"><span>D</span> loafing</button>
+    </div>
+  </div>
+
+  <div class="read-q" id="rq4">
+    <div class="read-q-text">4. What do the children do between the stalls?</div>
+    <div class="read-opts">
+      <button class="read-opt" onclick="rqPick(this,'rq4',false)"><span>A</span> They buy fruit</button>
+      <button class="read-opt" onclick="rqPick(this,'rq4',false)"><span>B</span> They help their mother</button>
+      <button class="read-opt" onclick="rqPick(this,'rq4',true)"><span>C</span> They run and play</button>
+      <button class="read-opt" onclick="rqPick(this,'rq4',false)"><span>D</span> They sleep</button>
+    </div>
+  </div>
+
+  <div class="read-q" id="rq5">
+    <div class="read-q-text">5. Which word in the passage is an IRREGULAR plural?</div>
+    <div class="read-opts">
+      <button class="read-opt" onclick="rqPick(this,'rq5',false)"><span>A</span> bags</button>
+      <button class="read-opt" onclick="rqPick(this,'rq5',false)"><span>B</span> stalls</button>
+      <button class="read-opt" onclick="rqPick(this,'rq5',true)"><span>C</span> men</button>
+      <button class="read-opt" onclick="rqPick(this,'rq5',false)"><span>D</span> flowers</button>
+    </div>
+  </div>
+
+  <div id="rqScore4" style="display:none;background:linear-gradient(135deg,#12285a,#1a1242);border:2px solid var(--accent);border-radius:20px;padding:32px 24px;text-align:center;margin-top:20px;animation:fadeIn .5s ease">
+    <div style="font-size:52px;margin-bottom:10px">&#x1F3C6;</div>
+    <div id="rqScoreNum4" style="font-size:56px;font-weight:900;color:var(--accent);line-height:1">0/5</div>
+    <div id="rqScoreMsg4" style="font-size:16px;font-weight:700;color:white;margin:10px 0 6px"></div>
+    <div id="rqScoreAr4" style="font-size:13px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-bottom:20px"></div>
+    <button onclick="rqReset4()" style="background:var(--accent);border:none;color:#0d1b2a;padding:12px 28px;border-radius:12px;font-weight:900;cursor:pointer;font-family:'Poppins',sans-serif;font-size:14px;transition:all .25s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">&#x1F504; Try Again</button>
+  </div>
+
+</div><!-- /tab-reading -->
+
+<!-- ══ CHECK IT TAB ════════════════════════════════════════════════ -->
+<div id="tab-checkit" class="tab-panel">
+
+  <div class="ci-hero">
+    <div class="ci-hero-icon">&#x2705;</div>
+    <h2 class="ci-hero-title">Check It!</h2>
+    <p class="ci-hero-sub">25 questions on Singular &amp; Plural Nouns — 20 MCQ + 5 Fill-in-the-Blank</p>
+    <div class="ci-hero-types">
+      <span class="tag tag-grammar">20 Multiple Choice</span>
+      <span class="tag tag-other">5 Fill in the Blank</span>
+    </div>
+  </div>
+
+  <div class="ci-progress-wrap">
+    <div class="ci-progress-inner">
+      <div class="ci-progress-bar"><div class="ci-progress-fill" id="ciProgressFill4"></div></div>
+      <div class="ci-progress-txt">
+        <span id="ciProgressTxt4">0 / 25 answered</span>
+        <span id="ciScoreTxt4">Score: 0</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="ci-wrap" id="ciWrap4">
+
+    <div class="ci-q" id="ciq1"><div class="ci-q-head"><div class="ci-q-num">1</div><div class="ci-q-tag">Rule 1</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">What is the plural of "book"?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq1',false)"><span class="ci-lbl">A</span>bookes</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq1',true)"><span class="ci-lbl">B</span>books</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq1',false)"><span class="ci-lbl">C</span>bookies</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq1',false)"><span class="ci-lbl">D</span>bookves</button>
+      </div>
+    </div>
+
+    <div class="ci-q" id="ciq2"><div class="ci-q-head"><div class="ci-q-num">2</div><div class="ci-q-tag">Rule 2</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">What is the plural of "bus"?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq2',false)"><span class="ci-lbl">A</span>buss</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq2',true)"><span class="ci-lbl">B</span>buses</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq2',false)"><span class="ci-lbl">C</span>busies</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq2',false)"><span class="ci-lbl">D</span>bus</button>
+      </div>
+    </div>
+
+    <div class="ci-q" id="ciq3"><div class="ci-q-head"><div class="ci-q-num">3</div><div class="ci-q-tag">Rule 3</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">What is the plural of "city"?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq3',false)"><span class="ci-lbl">A</span>citys</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq3',false)"><span class="ci-lbl">B</span>cityes</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq3',true)"><span class="ci-lbl">C</span>cities</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq3',false)"><span class="ci-lbl">D</span>citives</button>
+      </div>
+    </div>
+
+    <div class="ci-q" id="ciq4"><div class="ci-q-head"><div class="ci-q-num">4</div><div class="ci-q-tag">Irregular</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">What is the plural of "child"?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq4',false)"><span class="ci-lbl">A</span>childs</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq4',false)"><span class="ci-lbl">B</span>childes</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq4',true)"><span class="ci-lbl">C</span>children</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq4',false)"><span class="ci-lbl">D</span>childer</button>
+      </div>
+    </div>
+
+    <div class="ci-q" id="ciq5"><div class="ci-q-head"><div class="ci-q-num">5</div><div class="ci-q-tag">Rule 4</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">What is the plural of "leaf"?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq5',false)"><span class="ci-lbl">A</span>leafs</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq5',false)"><span class="ci-lbl">B</span>leafes</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq5',true)"><span class="ci-lbl">C</span>leaves</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq5',false)"><span class="ci-lbl">D</span>leaes</button>
+      </div>
+    </div>
+
+    <div class="ci-q" id="ciq6"><div class="ci-q-head"><div class="ci-q-num">6</div><div class="ci-q-tag">Irregular</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">What is the plural of "man"?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq6',false)"><span class="ci-lbl">A</span>mans</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq6',true)"><span class="ci-lbl">B</span>men</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq6',false)"><span class="ci-lbl">C</span>manes</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq6',false)"><span class="ci-lbl">D</span>menen</button>
+      </div>
+    </div>
+
+    <div class="ci-q" id="ciq7"><div class="ci-q-head"><div class="ci-q-num">7</div><div class="ci-q-tag">Rule 3</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">What is the plural of "day"? (vowel + y)</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq7',false)"><span class="ci-lbl">A</span>daies</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq7',true)"><span class="ci-lbl">B</span>days</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq7',false)"><span class="ci-lbl">C</span>dayes</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq7',false)"><span class="ci-lbl">D</span>dies</button>
+      </div>
+    </div>
+
+    <div class="ci-q" id="ciq8"><div class="ci-q-head"><div class="ci-q-num">8</div><div class="ci-q-tag">Rule 2</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">What is the plural of "watch"?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq8',false)"><span class="ci-lbl">A</span>watchs</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq8',false)"><span class="ci-lbl">B</span>watchies</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq8',true)"><span class="ci-lbl">C</span>watches</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq8',false)"><span class="ci-lbl">D</span>watcheves</button>
+      </div>
+    </div>
+
+    <div class="ci-q" id="ciq9"><div class="ci-q-head"><div class="ci-q-num">9</div><div class="ci-q-tag">No change</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">What is the plural of "sheep"?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq9',false)"><span class="ci-lbl">A</span>sheeps</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq9',false)"><span class="ci-lbl">B</span>sheepen</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq9',true)"><span class="ci-lbl">C</span>sheep (no change)</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq9',false)"><span class="ci-lbl">D</span>sheepes</button>
+      </div>
+    </div>
+
+    <div class="ci-q" id="ciq10"><div class="ci-q-head"><div class="ci-q-num">10</div><div class="ci-q-tag">Uncountable</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">Which word does NOT have a plural form?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq10',false)"><span class="ci-lbl">A</span>book</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq10',false)"><span class="ci-lbl">B</span>car</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq10',true)"><span class="ci-lbl">C</span>water</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq10',false)"><span class="ci-lbl">D</span>city</button>
+      </div>
+    </div>
+
+    <div class="ci-brk" id="brk10">
+      <div class="ci-brk-emoji">&#x1F4AA;</div>
+      <div class="ci-brk-title">Halfway — 10/25 done!</div>
+      <div class="ci-brk-cols">
+        <div class="ci-brk-col">
+          <div class="ci-brk-col-title">&#x26A0;&#xFE0F; Watch Out!</div>
+          <div class="ci-brk-text"><b>ch, sh, x, s, z</b> → add <b>-es</b><br><b>consonant+y</b> → <b>-ies</b><br><b>f/fe</b> → <b>-ves</b><br><b>sheep/fish</b> → no change</div>
+        </div>
+        <div class="ci-brk-col">
+          <div class="ci-brk-col-title">&#x1F9E0; Irregular List</div>
+          <div class="ci-brk-text">man→<b>men</b>, woman→<b>women</b>, child→<b>children</b>, tooth→<b>teeth</b>, foot→<b>feet</b>, mouse→<b>mice</b></div>
+        </div>
+      </div>
+      <div class="ci-brk-ar">منتصف الطريق! راجع قواعد الجمع الشاذ — هي الأصعب.</div>
+    </div>
+
+    <div class="ci-q" id="ciq11"><div class="ci-q-head"><div class="ci-q-num">11</div><div class="ci-q-tag">Rule 4</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">What is the plural of "knife"?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq11',false)"><span class="ci-lbl">A</span>knifes</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq11',true)"><span class="ci-lbl">B</span>knives</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq11',false)"><span class="ci-lbl">C</span>knifees</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq11',false)"><span class="ci-lbl">D</span>knifes</button>
+      </div>
+    </div>
+
+    <div class="ci-q" id="ciq12"><div class="ci-q-head"><div class="ci-q-num">12</div><div class="ci-q-tag">Irregular</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">What is the plural of "tooth"?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq12',false)"><span class="ci-lbl">A</span>tooths</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq12',true)"><span class="ci-lbl">B</span>teeth</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq12',false)"><span class="ci-lbl">C</span>toothes</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq12',false)"><span class="ci-lbl">D</span>teeths</button>
+      </div>
+    </div>
+
+    <div class="ci-q" id="ciq13"><div class="ci-q-head"><div class="ci-q-num">13</div><div class="ci-q-tag">Rule 3</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">What is the plural of "country"?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq13',false)"><span class="ci-lbl">A</span>countrys</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq13',false)"><span class="ci-lbl">B</span>countryes</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq13',true)"><span class="ci-lbl">C</span>countries</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq13',false)"><span class="ci-lbl">D</span>countris</button>
+      </div>
+    </div>
+
+    <div class="ci-q" id="ciq14"><div class="ci-q-head"><div class="ci-q-num">14</div><div class="ci-q-tag">Rule 2</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">What is the plural of "box"?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq14',false)"><span class="ci-lbl">A</span>boxs</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq14',true)"><span class="ci-lbl">B</span>boxes</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq14',false)"><span class="ci-lbl">C</span>boxies</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq14',false)"><span class="ci-lbl">D</span>boxves</button>
+      </div>
+    </div>
+
+    <div class="ci-q" id="ciq15"><div class="ci-q-head"><div class="ci-q-num">15</div><div class="ci-q-tag">Irregular</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">What is the plural of "person"?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq15',false)"><span class="ci-lbl">A</span>persons</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq15',false)"><span class="ci-lbl">B</span>personnes</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq15',true)"><span class="ci-lbl">C</span>people</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq15',false)"><span class="ci-lbl">D</span>persones</button>
+      </div>
+    </div>
+
+    <div class="ci-q" id="ciq16"><div class="ci-q-head"><div class="ci-q-num">16</div><div class="ci-q-tag">Rule 1</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">Which is CORRECT?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq16',false)"><span class="ci-lbl">A</span>I have two childs.</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq16',false)"><span class="ci-lbl">B</span>She has three foots.</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq16',true)"><span class="ci-lbl">C</span>There are five books on the table.</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq16',false)"><span class="ci-lbl">D</span>He has two tooths.</button>
+      </div>
+    </div>
+
+    <div class="ci-q" id="ciq17"><div class="ci-q-head"><div class="ci-q-num">17</div><div class="ci-q-tag">Uncountable</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">Which sentence is WRONG?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq17',true)"><span class="ci-lbl">A</span>I need three informations.</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq17',false)"><span class="ci-lbl">B</span>I need some information.</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq17',false)"><span class="ci-lbl">C</span>I need a piece of information.</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq17',false)"><span class="ci-lbl">D</span>I need more information.</button>
+      </div>
+    </div>
+
+    <div class="ci-q" id="ciq18"><div class="ci-q-head"><div class="ci-q-num">18</div><div class="ci-q-tag">Rule 4</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">What is the plural of "shelf"?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq18',false)"><span class="ci-lbl">A</span>shelfs</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq18',false)"><span class="ci-lbl">B</span>shelfes</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq18',true)"><span class="ci-lbl">C</span>shelves</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq18',false)"><span class="ci-lbl">D</span>shelvs</button>
+      </div>
+    </div>
+
+    <div class="ci-q" id="ciq19"><div class="ci-q-head"><div class="ci-q-num">19</div><div class="ci-q-tag">Irregular</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">What is the plural of "foot"?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq19',false)"><span class="ci-lbl">A</span>foots</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq19',false)"><span class="ci-lbl">B</span>footies</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq19',true)"><span class="ci-lbl">C</span>feet</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq19',false)"><span class="ci-lbl">D</span>feets</button>
+      </div>
+    </div>
+
+    <div class="ci-q" id="ciq20"><div class="ci-q-head"><div class="ci-q-num">20</div><div class="ci-q-tag">Mixed</div><span class="ci-type-badge ci-type-mcq">MCQ</span></div>
+      <div class="ci-q-prompt">Which ending needs -es to make plural?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" onclick="ciPick(this,'ciq20',false)"><span class="ci-lbl">A</span>-n (pen)</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq20',false)"><span class="ci-lbl">B</span>-t (cat)</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq20',true)"><span class="ci-lbl">C</span>-sh (brush)</button>
+        <button class="ci-btn" onclick="ciPick(this,'ciq20',false)"><span class="ci-lbl">D</span>-e (cake)</button>
+      </div>
+    </div>
+
+    <!-- FIB 21 -->
+    <div class="ci-q ci-fib-q" id="ciq21">
+      <div class="ci-q-head"><div class="ci-q-num">21</div><div class="ci-q-tag">Fill in</div><span class="ci-type-badge ci-type-fib">FIB</span></div>
+      <div class="ci-fib-sent">baby → ___ (plural)</div>
+      <div class="ci-fib-row">
+        <input class="ci-fib-input" id="fib21" placeholder="type here..." oninput="this.nextElementSibling.disabled=!this.value.trim()">
+        <button class="ci-fib-check" id="fibBtn21" disabled onclick="ciFibCheck('fib21','fibBtn21','ciq21','sol21','babies')">Check</button>
+      </div>
+      <div class="ci-hint">&#x1F4A1; consonant + y → ___ies</div>
+      <div class="ci-sol" id="sol21"><div class="ci-sol-head" style="background:rgba(34,197,94,.1);color:var(--green)">&#x2705; Answer</div><div class="ci-sol-body"><div class="ci-sol-ans">babies</div><div class="ci-sol-exp">baby: حرف ساكن + y → احذف y وأضف -ies</div></div></div>
+    </div>
+
+    <!-- FIB 22 -->
+    <div class="ci-q ci-fib-q" id="ciq22">
+      <div class="ci-q-head"><div class="ci-q-num">22</div><div class="ci-q-tag">Fill in</div><span class="ci-type-badge ci-type-fib">FIB</span></div>
+      <div class="ci-fib-sent">mouse → ___ (plural)</div>
+      <div class="ci-fib-row">
+        <input class="ci-fib-input" id="fib22" placeholder="type here..." oninput="this.nextElementSibling.disabled=!this.value.trim()">
+        <button class="ci-fib-check" id="fibBtn22" disabled onclick="ciFibCheck('fib22','fibBtn22','ciq22','sol22','mice')">Check</button>
+      </div>
+      <div class="ci-hint">&#x1F4A1; Irregular — memorise!</div>
+      <div class="ci-sol" id="sol22"><div class="ci-sol-head" style="background:rgba(34,197,94,.1);color:var(--green)">&#x2705; Answer</div><div class="ci-sol-body"><div class="ci-sol-ans">mice</div><div class="ci-sol-exp">mouse → mice — جمع شاذ يجب حفظه</div></div></div>
+    </div>
+
+    <!-- FIB 23 -->
+    <div class="ci-q ci-fib-q" id="ciq23">
+      <div class="ci-q-head"><div class="ci-q-num">23</div><div class="ci-q-tag">Fill in</div><span class="ci-type-badge ci-type-fib">FIB</span></div>
+      <div class="ci-fib-sent">dish → ___ (plural)</div>
+      <div class="ci-fib-row">
+        <input class="ci-fib-input" id="fib23" placeholder="type here..." oninput="this.nextElementSibling.disabled=!this.value.trim()">
+        <button class="ci-fib-check" id="fibBtn23" disabled onclick="ciFibCheck('fib23','fibBtn23','ciq23','sol23','dishes')">Check</button>
+      </div>
+      <div class="ci-hint">&#x1F4A1; ends in -sh → add ___es</div>
+      <div class="ci-sol" id="sol23"><div class="ci-sol-head" style="background:rgba(34,197,94,.1);color:var(--green)">&#x2705; Answer</div><div class="ci-sol-body"><div class="ci-sol-ans">dishes</div><div class="ci-sol-exp">dish ينتهي بـ -sh → أضف -es</div></div></div>
+    </div>
+
+    <!-- FIB 24 -->
+    <div class="ci-q ci-fib-q" id="ciq24">
+      <div class="ci-q-head"><div class="ci-q-num">24</div><div class="ci-q-tag">Fill in</div><span class="ci-type-badge ci-type-fib">FIB</span></div>
+      <div class="ci-fib-sent">woman → ___ (plural)</div>
+      <div class="ci-fib-row">
+        <input class="ci-fib-input" id="fib24" placeholder="type here..." oninput="this.nextElementSibling.disabled=!this.value.trim()">
+        <button class="ci-fib-check" id="fibBtn24" disabled onclick="ciFibCheck('fib24','fibBtn24','ciq24','sol24','women')">Check</button>
+      </div>
+      <div class="ci-hint">&#x1F4A1; Irregular — not "womans"!</div>
+      <div class="ci-sol" id="sol24"><div class="ci-sol-head" style="background:rgba(34,197,94,.1);color:var(--green)">&#x2705; Answer</div><div class="ci-sol-body"><div class="ci-sol-ans">women</div><div class="ci-sol-exp">woman → women — جمع شاذ يجب حفظه</div></div></div>
+    </div>
+
+    <!-- FIB 25 -->
+    <div class="ci-q ci-fib-q" id="ciq25">
+      <div class="ci-q-head"><div class="ci-q-num">25</div><div class="ci-q-tag">Fill in</div><span class="ci-type-badge ci-type-fib">FIB</span></div>
+      <div class="ci-fib-sent">family → ___ (plural)</div>
+      <div class="ci-fib-row">
+        <input class="ci-fib-input" id="fib25" placeholder="type here..." oninput="this.nextElementSibling.disabled=!this.value.trim()">
+        <button class="ci-fib-check" id="fibBtn25" disabled onclick="ciFibCheck('fib25','fibBtn25','ciq25','sol25','families')">Check</button>
+      </div>
+      <div class="ci-hint">&#x1F4A1; consonant + y → ___ies</div>
+      <div class="ci-sol" id="sol25"><div class="ci-sol-head" style="background:rgba(34,197,94,.1);color:var(--green)">&#x2705; Answer</div><div class="ci-sol-body"><div class="ci-sol-ans">families</div><div class="ci-sol-exp">family: حرف ساكن + y → احذف y وأضف -ies</div></div></div>
+    </div>
+
+    <div class="ci-score" id="ciScore4">
+      <div class="ci-score-emoji" id="ciScoreEmoji4">&#x1F3C6;</div>
+      <div class="ci-score-num" id="ciScoreNum4">0</div>
+      <div class="ci-score-of">out of 25</div>
+      <div class="ci-score-bar-wrap"><div class="ci-score-bar-fill" id="ciScoreBar4"></div></div>
+      <div class="ci-score-msg" id="ciScoreMsg4"></div>
+      <div class="ci-score-ar" id="ciScoreAr4"></div>
+      <button class="ci-reset" onclick="ciReset4()">&#x1F504; Try Again</button>
+    </div>
+
+  </div>
+</div><!-- /tab-checkit -->
+
+  <footer><p>Lesson 4 · Singular &amp; Plural Nouns · A1 Level · &copy; MOHAMMED ELHUSEYIN</p></footer>
+</div><!-- /main-content -->
+</div><!-- /layout -->
+
+<script src="../media/global-player.js"></script>
+<script>
+var rqScore4=0,rqAnswered4=0;
+var ciScore4=0,ciAnswered4=0,ciTotal4=25;
+var ciBreaks4={10:'brk10'};
+
+function showTab(id,btn){
+  document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.remove('active');});
+  document.querySelectorAll('.main-tab').forEach(function(b){b.classList.remove('active');});
+  document.getElementById('tab-'+id).classList.add('active');
+  btn.classList.add('active');
+}
+function ttsRead(text,rate){
+  speechSynthesis.cancel();
+  var u=new SpeechSynthesisUtterance(text);
+  u.lang='en-US';u.rate=rate||0.9;
+  speechSynthesis.speak(u);
+}
+function rqPick(btn,qid,correct){
+  var qEl=document.getElementById(qid);
+  if(qEl.dataset.done)return;
+  qEl.dataset.done='1';
+  qEl.querySelectorAll('.read-opt').forEach(function(b){b.classList.add('done');if(b===btn)b.classList.add(correct?'correct':'wrong');});
+  if(correct)rqScore4++;
+  rqAnswered4++;
+  if(rqAnswered4===5){
+    var sc=document.getElementById('rqScore4');sc.style.display='block';
+    document.getElementById('rqScoreNum4').textContent=rqScore4+'/5';
+    var msgs=[['Keep practising!','استمر في التدريب!'],['Good effort!','جهد جيد!'],['Getting there!','أنت تتحسن!'],['Well done!','أداء جيد جداً!'],['Excellent!','ممتاز!'],['Perfect!','نتيجة مثالية!']];
+    var m=msgs[Math.min(rqScore4,5)];
+    document.getElementById('rqScoreMsg4').textContent=m[0];
+    document.getElementById('rqScoreAr4').textContent=m[1];
+    sc.scrollIntoView({behavior:'smooth',block:'center'});
+  }
+}
+function rqReset4(){
+  rqScore4=0;rqAnswered4=0;
+  ['rq1','rq2','rq3','rq4','rq5'].forEach(function(id){
+    var q=document.getElementById(id);if(!q)return;
+    delete q.dataset.done;
+    q.querySelectorAll('.read-opt').forEach(function(b){b.classList.remove('correct','wrong','done');});
+  });
+  document.getElementById('rqScore4').style.display='none';
+  document.getElementById('tab-reading').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function ciUpdateProgress4(){
+  var pct=Math.round(ciAnswered4/ciTotal4*100);
+  document.getElementById('ciProgressFill4').style.width=pct+'%';
+  document.getElementById('ciProgressTxt4').textContent=ciAnswered4+' / '+ciTotal4+' answered';
+  document.getElementById('ciScoreTxt4').textContent='Score: '+ciScore4;
+}
+function ciCheckBreakAndDone4(){
+  for(var n in ciBreaks4){if(ciAnswered4===parseInt(n)){var bEl=document.getElementById(ciBreaks4[n]);if(bEl)bEl.style.display='block';}}
+  if(ciAnswered4===ciTotal4)ciShowScore4();
+}
+function ciPick(btn,qid,correct){
+  var qEl=document.getElementById(qid);if(qEl.dataset.done)return;
+  qEl.dataset.done='1';
+  qEl.querySelectorAll('.ci-btn').forEach(function(b){b.classList.add('done');});
+  btn.classList.add(correct?'ci-correct':'ci-wrong');
+  if(correct)ciScore4++;
+  ciAnswered4++;ciUpdateProgress4();ciCheckBreakAndDone4();
+}
+function ciFibCheck(inputId,btnId,qid,solId,answer){
+  var inp=document.getElementById(inputId),btn=document.getElementById(btnId),qEl=document.getElementById(qid);
+  if(qEl.dataset.done)return;
+  var correct=inp.value.trim().toLowerCase()===answer.toLowerCase();
+  qEl.dataset.done='1';inp.disabled=true;btn.disabled=true;
+  inp.style.borderColor=correct?'var(--green)':'var(--red)';
+  inp.style.color=correct?'var(--green)':'var(--red)';
+  var sol=document.getElementById(solId);if(sol)sol.style.display='block';
+  if(correct)ciScore4++;
+  ciAnswered4++;ciUpdateProgress4();ciCheckBreakAndDone4();
+}
+function ciShowScore4(){
+  var sc=document.getElementById('ciScore4');sc.style.display='block';
+  var pct=Math.round(ciScore4/ciTotal4*100);
+  document.getElementById('ciScoreNum4').textContent=ciScore4;
+  document.getElementById('ciScoreBar4').style.width=pct+'%';
+  var msgs=[['Keep going!','&#x1F4AA;','لا تستسلم، راجع القواعد!'],['Getting better!','&#x1F60A;','أنت تتحسن!'],['Good job!','&#x1F44D;','جيد! قليل من المراجعة يكفي.'],['Well done!','&#x1F31F;','أداء رائع!'],['Excellent!','&#x1F3C6;','ممتاز! أتقنت الجمع!']];
+  var idx=Math.min(Math.floor(pct/25),4);var m=msgs[idx];
+  document.getElementById('ciScoreEmoji4').innerHTML=m[1];
+  document.getElementById('ciScoreMsg4').textContent=m[0];
+  document.getElementById('ciScoreAr4').innerHTML=m[2];
+  sc.scrollIntoView({behavior:'smooth',block:'center'});
+  localStorage.setItem('up_l4',pct);
+  var f=document.getElementById('sp4');if(f)f.style.width=pct+'%';
+}
+function ciReset4(){
+  ciScore4=0;ciAnswered4=0;ciUpdateProgress4();
+  for(var i=1;i<=20;i++){
+    var q=document.getElementById('ciq'+i);if(!q)continue;
+    delete q.dataset.done;
+    q.querySelectorAll('.ci-btn').forEach(function(b){b.classList.remove('ci-correct','ci-wrong','done');});
+  }
+  [21,22,23,24,25].forEach(function(i){
+    var q=document.getElementById('ciq'+i);if(!q)return;
+    delete q.dataset.done;
+    var inp=document.getElementById('fib'+i);var btn=document.getElementById('fibBtn'+i);
+    if(inp){inp.value='';inp.disabled=false;inp.style.borderColor='';inp.style.color='';}
+    if(btn)btn.disabled=true;
+    ['sol21','sol22','sol23','sol24','sol25'].forEach(function(s){var el=document.getElementById(s);if(el)el.style.display='none';});
+  });
+  for(var bk in ciBreaks4){var bEl=document.getElementById(ciBreaks4[bk]);if(bEl)bEl.style.display='none';}
+  document.getElementById('ciScore4').style.display='none';
+  document.getElementById('tab-checkit').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function playSound(ok){try{var ctx=new(window.AudioContext||window.webkitAudioContext)();var o=ctx.createOscillator(),g=ctx.createGain();o.connect(g);g.connect(ctx.destination);o.frequency.value=ok?880:220;g.gain.setValueAtTime(0.3,ctx.currentTime);g.gain.exponentialRampToValueAtTime(0.001,ctx.currentTime+0.4);o.start(ctx.currentTime);o.stop(ctx.currentTime+0.4);}catch(e){}}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+(function(){
+  var map={1: "up_l1", 2: "up_l2", 3: "up_l3", 4: "up_l4", 5: "up_l5", 6: "up1", 7: "up2", 8: "up3", 9: "up4", 10: "up6", 11: "up5", 12: "up_l12", 13: "up7", 14: "up8", 15: "up9", 16: "up10", 17: "up11", 19: "up_l19", 20: "up_l20", 21: "up_l21", 22: "up_l22", 23: "up_l23", 24: "up_l24", 25: "up_l25", 26: "up_l26", 27: "up_l27", 28: "up_l28", 29: "up_l29", 30: "up_l30", 31: "up_l31", 32: "up_l32", 33: "up_l33", 34: "up_l34", 35: "up_l35", 36: "up_l36", 37: "up_l37", 38: "up_l38", 39: "up_l39", 40: "up_l40", 41: "up_l41", 42: "up_l42", 43: "up_l43", 44: "up_l44", 45: "up_l45", 46: "up_l46"};
+  for(var lid in map){
+    var f=document.getElementById('sp'+lid);
+    if(f){var v=parseInt(localStorage.getItem(map[lid])||'0',10);f.style.width=v+'%';}
+  }
+  setTimeout(function(){
+    var a=document.querySelector('.su-item.su-active');
+    if(a){var u=a.closest('.sidebar-units');if(u)u.scrollTop=Math.max(0,a.offsetTop-a.offsetHeight);}
+  },80);
+})();
+</script>
+<script>
+function toggleSidebar(){
+  var sb=document.querySelector('.sidebar');
+  var bd=document.getElementById('sbBackdrop');
+  if(!sb||!bd)return;
+  sb.classList.toggle('sb-open');
+  bd.classList.toggle('sb-open');
+  document.body.style.overflow=sb.classList.contains('sb-open')?'hidden':'';
+}
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.su-item').forEach(function(a){
+    a.addEventListener('click',function(){
+      var sb=document.querySelector('.sidebar');
+      if(sb&&sb.classList.contains('sb-open'))toggleSidebar();
+    });
+  });
+});
+</script>
+
+<script>
+(function(){
+  // Disable right-click
+  document.addEventListener('contextmenu', function(e){ e.preventDefault(); });
+
+  // Disable keyboard shortcuts
+  document.addEventListener('keydown', function(e){
+    // F12
+    if(e.key==='F12'){e.preventDefault();return false;}
+    // Ctrl+U (view source), Ctrl+S (save), Ctrl+A (select all), Ctrl+P (print)
+    if(e.ctrlKey && ['u','U','s','S','a','A','p','P'].indexOf(e.key)!==-1){
+      e.preventDefault();return false;
+    }
+    // Ctrl+Shift+I (DevTools), Ctrl+Shift+J, Ctrl+Shift+C
+    if(e.ctrlKey && e.shiftKey && ['i','I','j','J','c','C','k','K'].indexOf(e.key)!==-1){
+      e.preventDefault();return false;
+    }
+  });
+
+  // Disable text selection via CSS
+  document.documentElement.style.webkitUserSelect='none';
+  document.documentElement.style.userSelect='none';
+
+  // Allow selection inside inputs/textareas only
+  document.addEventListener('mousedown', function(e){
+    var t=e.target.tagName;
+    if(t==='INPUT'||t==='TEXTAREA'){
+      e.target.style.userSelect='text';
+      e.target.style.webkitUserSelect='text';
+    }
+  });
+
+  // Block drag
+  document.addEventListener('dragstart', function(e){ e.preventDefault(); });
+})();
+</script>
+<button class="float-menu-btn" onclick="toggleSidebar()" aria-label="القائمة">
+  <span></span><span></span><span></span>
+</button>
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=FREE"></script>
+<script src="../media/rv.js"></script>
+</body>
+</html>

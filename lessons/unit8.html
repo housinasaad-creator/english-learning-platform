@@ -1,0 +1,1841 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 8: Adjectives | MOHAMMED ELHUSEYIN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#1a3a6e;--primary-dark:#0f2548;--accent:#f4a624;--al:rgba(244,166,36,0.12);--bg:#0d1b2a;--card:#162030;--card2:#1e2d40;--border:#2d4560;--text:#e8edf5;--muted:#8899b0;--green:#22c55e;--red:#ef4444;--blue:#4a9eff;--purple:#a855f7}
+body{font-family:'Poppins','Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.ar{font-family:'Cairo','Segoe UI',Arial,sans-serif}
+.topnav{background:var(--primary-dark);border-bottom:2px solid var(--accent);padding:10px 24px;display:flex;align-items:center;justify-content:space-between}
+.hero{background:linear-gradient(135deg,#1a3a6e 0%,#0f2548 55%,#0d1f3c 100%);padding:55px 24px 48px;text-align:center;border-bottom:3px solid var(--accent);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;border-radius:50%;background:rgba(244,166,36,0.06)}
+.hero::after{content:'';position:absolute;bottom:-60px;left:-60px;width:300px;height:300px;border-radius:50%;background:rgba(74,158,255,0.05)}
+.unit-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(244,166,36,0.15);border:1px solid rgba(244,166,36,0.4);color:var(--accent);font-weight:800;padding:6px 18px;border-radius:20px;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
+.hero-title{font-size:clamp(28px,6vw,52px);font-weight:900;color:white;line-height:1.15;margin-bottom:8px}
+.hero-title i{color:var(--accent);font-style:italic}
+.hero-ar{font-size:18px;color:var(--muted);margin-bottom:12px;direction:rtl}
+.hero-sub{color:var(--muted);max-width:620px;margin:0 auto 22px;font-size:14px}
+.hero-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.tag{display:inline-flex;align-items:center;gap:6px;padding:6px 15px;border-radius:16px;font-size:12px;font-weight:700}
+.tag-grammar{background:rgba(244,166,36,0.15);color:var(--accent);border:1px solid rgba(244,166,36,0.3)}
+.tag-other{background:rgba(74,158,255,0.1);color:var(--blue);border:1px solid rgba(74,158,255,0.25)}
+.tag-btn{cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif}
+.tag-btn:hover{transform:translateY(-2px);opacity:.85}
+.main-tabs{display:flex;gap:4px;padding:14px 24px;background:var(--primary-dark);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;flex-wrap:wrap}
+.main-tab{padding:8px 18px;border-radius:8px;border:1px solid transparent;background:none;color:var(--muted);font-weight:700;cursor:pointer;font-size:13px;font-family:'Poppins',sans-serif;transition:all .2s}
+.main-tab.active{background:var(--accent);color:#0d1b2a;border-color:var(--accent)}
+.main-tab:hover:not(.active){background:rgba(244,166,36,.1);color:var(--accent);border-color:rgba(244,166,36,.3)}
+.tab-panel{display:none;padding:20px 24px}
+.tab-panel.active{display:block}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;margin-bottom:16px}
+.card-title{font-size:16px;font-weight:800;color:white;margin-bottom:5px;display:flex;align-items:center;gap:8px}
+.card-ar{font-size:13px;color:var(--muted);margin-bottom:14px;direction:rtl;font-family:'Cairo',sans-serif}
+.card-note{background:var(--al);border:1px solid rgba(244,166,36,.3);border-radius:10px;padding:10px 14px;font-size:12.5px;color:var(--accent);margin:10px 0;direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.sub-tabs{display:flex;gap:4px;margin:14px 0 18px;flex-wrap:wrap}
+.sub-tab{padding:6px 14px;border-radius:8px;border:1px solid var(--border);background:none;color:var(--muted);font-weight:700;cursor:pointer;font-size:12px;font-family:'Poppins',sans-serif;transition:all .2s}
+.sub-tab.active{background:rgba(244,166,36,.15);border-color:var(--accent);color:var(--accent)}
+.sub-tab:hover:not(.active){border-color:var(--accent);color:var(--accent)}
+.sub-panel{display:none}
+.sub-panel.active{display:block}
+.tts-box{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.tts-btn{background:var(--card2);border:1px solid var(--blue);color:var(--blue);padding:7px 16px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif}
+.tts-btn:hover{background:rgba(74,158,255,.15);transform:translateY(-1px)}
+.tts-stop{border-color:var(--muted);color:var(--muted)}
+.tts-stop:hover{background:rgba(136,153,176,.1)}
+.formula-box{background:rgba(10,30,53,0.8);border:2px solid var(--border);border-radius:14px;padding:18px 22px;margin:14px 0}
+.formula-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid rgba(45,69,96,0.4);flex-wrap:wrap}
+.formula-row:last-child{border-bottom:none}
+.formula-subj{font-size:14px;font-weight:800;color:var(--blue);min-width:160px}
+.formula-be{font-size:15px;font-weight:900;color:var(--accent);background:rgba(244,166,36,.12);padding:4px 12px;border-radius:8px}
+.formula-be.neg{color:var(--red);background:rgba(239,68,68,.1)}
+.formula-be.q{color:var(--green);background:rgba(34,197,94,.1)}
+.formula-be.sup{color:var(--purple);background:rgba(168,85,247,.1)}
+.formula-note{font-size:11px;color:var(--muted);font-style:italic;margin-left:auto}
+.formula-plus{font-size:16px;color:var(--muted)}
+.ex-section-title{font-size:12px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin:16px 0 8px}
+.ex-list{margin-top:4px}
+.ex-item{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid rgba(45,69,96,0.3)}
+.ex-item:last-child{border-bottom:none}
+.sp{background:none;border:none;font-size:16px;cursor:pointer;color:var(--blue);flex-shrink:0;padding:2px 0;transition:transform .2s;line-height:1}
+.sp:hover{transform:scale(1.2)}
+.sp-group{display:inline-flex;align-items:center;gap:3px;flex-shrink:0}
+.sp-pp,.sp-st{background:var(--card2);border:1px solid var(--border);color:var(--muted);font-size:12px;padding:3px 7px;border-radius:6px;cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif;line-height:1;min-width:26px;text-align:center}
+.sp-pp:hover{background:rgba(74,158,255,.15);border-color:var(--blue);color:var(--blue)}
+.sp-st:hover{background:rgba(239,68,68,.1);border-color:var(--red);color:var(--red)}
+.ex-en{font-size:13.5px;color:var(--text);font-weight:600;line-height:1.4}
+.ex-en b{color:var(--accent)}
+.ex-ar{font-size:12px;color:var(--muted);margin-top:2px;direction:rtl;font-family:'Cairo',sans-serif}
+.sa-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13px}
+.sa-table th{background:rgba(26,58,110,0.5);color:var(--accent);padding:8px 12px;font-weight:800;text-align:left;border:1px solid var(--border)}
+.sa-table td{padding:8px 12px;border:1px solid rgba(45,69,96,0.4);vertical-align:middle}
+.sa-table tr:nth-child(even) td{background:rgba(30,45,64,0.3)}
+.sa-yes{color:var(--green);font-weight:800}
+.sa-no{color:var(--red);font-weight:800}
+.sa-acc{color:var(--accent);font-weight:800}
+.sa-pur{color:var(--purple);font-weight:800}
+.wh-grid{display:flex;flex-direction:column;gap:7px;margin:12px 0}
+.wh-row{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px;font-size:13px}
+.wh-q{color:var(--text);margin-bottom:3px}
+.wh-q b{color:var(--blue)}
+.wh-a{color:var(--muted);font-style:italic}
+.spell-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px;margin:12px 0}
+.spell-item{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:11px 14px}
+.spell-rule{font-size:11px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px}
+.spell-eg{font-size:13px;color:var(--text);font-weight:600}
+.spell-eg b{color:var(--accent)}
+.spell-ar{font-size:11px;color:var(--muted);margin-top:4px;direction:rtl;font-family:'Cairo',sans-serif}
+.irr-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;margin:12px 0}
+.irr-item{background:var(--card2);border:1px solid var(--border);border-radius:9px;padding:10px 14px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.irr-base{font-size:13px;font-weight:800;color:var(--text);min-width:50px}
+.irr-arrow{color:var(--muted);font-size:13px}
+.irr-comp{font-size:13px;font-weight:900;color:var(--accent)}
+.irr-sup{font-size:13px;font-weight:900;color:var(--purple)}
+.irr-ar{font-size:11px;color:var(--muted);margin-left:auto;font-family:'Cairo',sans-serif;direction:rtl}
+.mistake-item{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.m-wrong{font-size:13px;color:var(--red);margin-bottom:3px}
+.m-wrong::before{content:'❌ '}
+.m-right{font-size:13px;color:var(--green);font-weight:700;margin-bottom:3px}
+.m-right::before{content:'✅ '}
+.m-why{font-size:11.5px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;border-top:1px solid rgba(45,69,96,.4);padding-top:5px;margin-top:5px}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:8px;margin-top:12px}
+.vocab-item{background:var(--card2);border:1px solid var(--border);border-radius:9px;padding:9px 12px;cursor:pointer;transition:border-color .2s}
+.vocab-item:hover{border-color:var(--accent)}
+.vocab-en{font-size:14px;font-weight:800;color:var(--text)}
+.vocab-past{font-size:11.5px;color:var(--accent);margin-top:2px;font-weight:700}
+.vocab-ar{font-size:11px;color:var(--muted);margin-top:3px;font-family:'Cairo',sans-serif;direction:rtl}
+.vs-wrap{overflow-x:auto;margin:18px 0;padding:4px 0}
+.vs-caption{font-size:11px;color:var(--muted);text-align:center;margin-top:8px;font-style:italic}
+.dlg-card{background:var(--card);border:1px solid var(--border);border-radius:16px;margin-bottom:16px;overflow:hidden}
+.dlg-header{background:linear-gradient(to right,var(--primary),#1a1a4e);padding:13px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.dlg-meta{flex:1}
+.dlg-num{font-size:10px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:2px}
+.dlg-title{font-weight:800;font-size:14px;color:white}
+.dlg-ctx{font-size:11px;color:rgba(255,255,255,.5);font-style:italic;margin-top:2px}
+.dlg-tts{background:rgba(244,166,36,.15);border:1px solid rgba(244,166,36,.4);color:var(--accent);padding:6px 14px;border-radius:8px;font-size:11px;font-weight:700;cursor:pointer;font-family:'Poppins',sans-serif;transition:all .2s;white-space:nowrap}
+.dlg-tts:hover{background:rgba(244,166,36,.3)}
+.dlg-body{padding:20px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:640px){.dlg-body{grid-template-columns:1fr}}
+.dlg-col-head{font-size:10px;font-weight:700;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+.bubble{padding:9px 13px;border-radius:12px;font-size:13px;line-height:1.55;margin-bottom:7px}
+.bubble-a{background:rgba(26,58,110,0.5);border:1px solid rgba(74,158,255,0.2)}
+.bubble-b{background:var(--card2);border:1px solid var(--border)}
+.bubble-name{font-size:9px;font-weight:800;color:var(--muted);margin-bottom:4px;letter-spacing:.5px;text-transform:uppercase}
+.bubble-name.b{color:var(--accent)}
+.bubble-ar{direction:rtl;font-family:'Cairo',sans-serif;font-size:13px;color:var(--text)}
+.layout{display:flex;min-height:100vh}
+.sidebar{width:30%;max-width:320px;min-width:220px;position:fixed;top:0;left:0;bottom:0;background:var(--primary-dark);border-right:2px solid var(--border);display:flex;flex-direction:column;z-index:200;overflow:hidden}
+.sidebar-header{padding:18px 20px 14px;border-bottom:2px solid var(--accent);flex-shrink:0}
+.sidebar-logo{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+.sidebar-logo-icon{width:34px;height:34px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900;color:#0d1b2a;flex-shrink:0}
+.sidebar-logo-text{font-family:'Cairo',sans-serif;font-size:15px;font-weight:800;color:white}
+.sidebar-logo-sub{font-size:10px;color:var(--muted);font-weight:500;margin-top:-1px}
+.sidebar-label{font-family:'Cairo',sans-serif;font-size:11px;font-weight:700;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-top:12px}
+.sidebar-units{flex:1;overflow-y:auto;padding:10px 12px;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+.sidebar-units::-webkit-scrollbar{width:4px}
+.sidebar-units::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+.su-item{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;text-decoration:none;margin-bottom:4px;transition:background .2s,transform .2s}
+.su-item:not(.su-locked):hover{background:rgba(244,166,36,0.12);transform:translateX(3px)}
+.su-item.su-locked{opacity:.45;cursor:default;pointer-events:none}
+.su-item.su-active{background:rgba(244,166,36,0.15);border:1px solid rgba(244,166,36,0.3)}
+.su-num{width:28px;height:28px;border-radius:7px;background:rgba(255,255,255,0.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:var(--accent);flex-shrink:0}
+.su-item:not(.su-locked) .su-num{background:rgba(244,166,36,0.12);border-color:rgba(244,166,36,0.3)}
+.su-texts{flex:1;min-width:0}
+.su-en{font-size:13px;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.su-ar{font-family:'Cairo',sans-serif;font-size:11px;color:var(--muted);direction:rtl;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.su-check{font-size:12px;flex-shrink:0}
+.su-lock{font-size:11px;color:var(--muted);flex-shrink:0}
+.main-content{margin-left:min(30%,320px);flex:1;min-width:0}
+footer{padding:20px 24px;text-align:center;color:var(--muted);font-size:12px;border-top:1px solid var(--border);margin-top:10px}
+
+/* ══ Hamburger (desktop: hidden) ══ */
+.nav-hamburger{display:none;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.3);border-radius:8px;cursor:pointer;flex-direction:column;gap:5px;padding:8px;flex-shrink:0;margin-left:6px}
+.nav-hamburger span{display:block;width:100%;height:2px;background:var(--accent);border-radius:2px}
+/* Backdrop */
+.sb-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:199}
+.sb-backdrop.sb-open{display:block}
+@media(max-width:768px){
+  .sidebar{position:fixed;left:-100%;width:82%;max-width:300px;min-width:unset;transition:left .3s ease;z-index:200}
+  .sidebar.sb-open{left:0}
+  .main-content{margin-left:0}
+  .nav-brand{display:none}
+  .nav-hamburger{display:flex}
+  .topnav{padding:10px 12px;gap:6px}
+  .nav-lesson-name{display:none}
+  .nav-left{gap:5px}
+  .hero{padding:22px 13px 20px}
+  .hero-title{font-size:22px;letter-spacing:-.5px}
+  .hero-ar{font-size:12px}
+  .hero-sub{font-size:12px}
+  .hero-tags{gap:5px;justify-content:center}
+  .tag{font-size:10px;padding:3px 9px}
+  .rule-section{padding:0 12px}
+  .read-wrap{padding:0 12px}
+  .ci-wrap{padding:12px 12px}
+  .ci-hero{padding:18px 12px}
+  .dlg-block{padding:0 12px}
+  .eu-cat-grid{grid-template-columns:1fr}
+  .nu-scale{gap:3px}
+  .nu-word{font-size:10px;padding:3px 7px}
+  .nu-cmp-head,.nu-cmp-row{grid-template-columns:1fr 1fr;font-size:10px}
+  .nu-cmp-head span:last-child,.nu-cmp-row span:last-child{display:none}
+  .reg-ladder{padding:10px 12px}
+  .cmp-table{font-size:11px}
+  .chat-wrap{padding:0 4px}
+  .ci-q{margin-bottom:10px}
+  .ci-opts{gap:5px}
+  .ci-btn{font-size:12px;padding:9px 10px}
+  .vocab-grid{grid-template-columns:1fr 1fr}
+  .rq-opts{gap:5px}
+}
+
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.read-pass{background:rgba(10,25,45,0.6);border:1px solid rgba(45,69,96,0.5);border-radius:12px;padding:18px 20px;line-height:2;font-size:14px;margin:14px 0}
+.read-pass p{margin-bottom:10px}.read-pass p:last-child{margin-bottom:0}
+.read-pass b{color:var(--accent)}
+.read-vocab-wrap{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.read-vocab-item{background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:7px 12px;display:flex;gap:8px;align-items:center}
+.rv-en{font-weight:800;font-size:13px;color:var(--text)}
+.rv-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl}
+.read-q{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:14px 16px;margin-bottom:10px}
+.rq-text{font-size:13.5px;font-weight:700;margin-bottom:10px;color:var(--text)}
+.read-opts{display:flex;flex-direction:column;gap:6px}
+.read-opt{text-align:left;background:rgba(10,25,45,0.5);border:1px solid var(--border);border-radius:8px;padding:8px 12px;font-size:12.5px;color:var(--text);cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif}
+.read-opt:hover:not(:disabled){border-color:var(--accent);color:var(--accent);transform:translateY(-1px)}
+.opt-right{background:rgba(34,197,94,0.15)!important;border-color:var(--green)!important;color:var(--green)!important;font-weight:700}
+.opt-wrong{background:rgba(239,68,68,0.12)!important;border-color:var(--red)!important;color:var(--red)!important}
+.read-ctx{display:none;background:rgba(244,166,36,0.1);border:1px solid rgba(244,166,36,0.3);border-radius:8px;padding:8px 12px;font-size:12px;color:var(--accent);margin-top:8px;font-style:italic}
+.ci-progress{height:3px;background:rgba(45,69,96,0.5);margin-bottom:16px;border-radius:2px}
+.ci-progress-fill{height:100%;background:var(--accent);border-radius:2px;transition:width .3s}
+.ci-q{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px 20px;margin-bottom:12px}
+.ci-num{font-size:10px;font-weight:800;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px}
+.ci-text{font-size:14px;font-weight:700;color:var(--text);margin-bottom:12px;line-height:1.5}
+.ci-hint{font-size:11px;color:var(--muted);font-style:italic;font-weight:400}
+.ci-opts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(max-width:520px){.ci-opts{grid-template-columns:1fr}}
+.ci-btn{background:var(--card2);border:1px solid var(--border);border-radius:9px;padding:10px 14px;color:var(--text);font-size:12.5px;font-weight:600;cursor:pointer;text-align:left;transition:all .18s;font-family:'Poppins',sans-serif;line-height:1.4}
+.ci-btn:hover:not(:disabled){border-color:var(--accent);color:var(--accent);transform:translateY(-1px)}
+.ci-correct{background:rgba(34,197,94,0.15)!important;border-color:var(--green)!important;color:var(--green)!important;font-weight:800}
+.ci-wrong{background:rgba(239,68,68,0.12)!important;border-color:var(--red)!important;color:var(--red)!important}
+.ci-fib{display:flex;gap:8px;margin-top:8px}
+.ci-fib-in{flex:1;background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:9px 12px;color:var(--text);font-size:13px;font-family:'Poppins',sans-serif;outline:none}
+.ci-fib-in:focus{border-color:var(--accent)}
+.ci-fib-btn{background:rgba(244,166,36,0.15);border:1px solid rgba(244,166,36,0.4);color:var(--accent);padding:9px 16px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;font-family:'Poppins',sans-serif;transition:all .2s;white-space:nowrap}
+.ci-fib-btn:hover:not(:disabled){background:rgba(244,166,36,0.3)}
+.ci-fib-ok{border-color:var(--green)!important;color:var(--green)!important}
+.ci-fib-err{border-color:var(--red)!important;color:var(--red)!important}
+.ci-fib-fb{display:none;font-size:12px;font-weight:700;margin-top:6px}
+.ci-brk{display:none;background:linear-gradient(135deg,rgba(244,166,36,0.15),rgba(244,166,36,0.08));border:1px solid rgba(244,166,36,0.35);border-radius:12px;padding:14px 20px;margin-bottom:12px;font-size:14px;font-weight:800;color:var(--accent);text-align:center;align-items:center;justify-content:center}
+.ci-score{background:var(--card);border:2px solid var(--accent);border-radius:16px;padding:24px;text-align:center;margin-bottom:20px}
+.ci-score-num{font-size:48px;font-weight:900;color:var(--accent);line-height:1}
+.ci-score-bar{background:rgba(45,69,96,0.5);border-radius:8px;height:12px;margin:14px 0 8px;overflow:hidden}
+.ci-score-fill{height:100%;background:linear-gradient(to right,var(--accent),#ff9500);border-radius:8px;transition:width .6s}
+.ci-score-msg{font-size:16px;font-weight:700;color:var(--text);margin-bottom:16px}
+.ci-reset-btn{background:var(--accent);color:#0d1b2a;border:none;border-radius:10px;padding:10px 28px;font-size:14px;font-weight:800;cursor:pointer;font-family:'Poppins',sans-serif;transition:all .2s}
+.ci-reset-btn:hover{transform:translateY(-2px);opacity:.9}
+.chat-wrap{padding:18px 24px 26px;display:flex;flex-direction:column;gap:14px;background-image:radial-gradient(circle,rgba(244,166,36,0.22) 1.5px,transparent 1.5px),radial-gradient(circle,rgba(74,158,255,0.22) 1.5px,transparent 1.5px);background-size:28px 28px;background-position:0 0,14px 14px}
+.chat-msg{display:flex;flex-direction:column;max-width:70%}
+.chat-msg.right{align-self:flex-end;align-items:flex-end}
+.chat-msg.left{align-self:flex-start;align-items:flex-start}
+.chat-name-tag{font-size:11px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;margin-bottom:5px;padding:0 4px}
+.chat-msg.right .chat-name-tag{color:var(--accent)}
+.chat-msg.left .chat-name-tag{color:var(--blue)}
+.chat-bubble{padding:14px 17px 10px;border-radius:20px;width:100%}
+.chat-msg.right .chat-bubble{background:rgba(55,36,6,0.75);border:1px solid rgba(244,166,36,0.4);border-bottom-right-radius:4px;box-shadow:0 6px 28px rgba(0,0,0,0.65),0 0 18px rgba(244,166,36,0.22)}
+.chat-msg.left .chat-bubble{background:rgba(12,32,72,0.8);border:1px solid rgba(74,158,255,0.35);border-bottom-left-radius:4px;box-shadow:0 6px 28px rgba(0,0,0,0.65),0 0 18px rgba(74,158,255,0.20)}
+.chat-en{font-size:15px;color:var(--text);line-height:1.65;font-weight:500}
+.chat-en b{color:var(--accent)}
+.chat-msg.left .chat-en b{color:var(--blue)}
+.chat-ar{font-size:14px;color:rgba(232,237,245,0.8);direction:rtl;font-family:'Cairo',sans-serif;line-height:1.75;border-top:1px solid rgba(255,255,255,0.09);padding-top:9px;margin-top:9px}
+.chat-bubble-foot{display:flex;justify-content:flex-end;margin-top:9px;padding-top:7px;border-top:1px solid rgba(255,255,255,0.07)}
+.chat-sp-btn{font-size:14px;cursor:pointer;padding:5px 13px;border-radius:20px;transition:all .2s;line-height:1;font-weight:700;letter-spacing:.3px}
+.chat-msg.right .chat-sp-btn{background:rgba(244,166,36,0.18);border:1px solid rgba(244,166,36,0.45);color:var(--accent)}
+.chat-msg.left .chat-sp-btn{background:rgba(74,158,255,0.15);border:1px solid rgba(74,158,255,0.4);color:var(--blue)}
+.chat-sp-btn:hover{transform:scale(1.08);filter:brightness(1.25)}
+.su-prog{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:6px;overflow:hidden}
+.su-prog-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:2px;width:0%;transition:width .6s ease}
+
+.su-level-hd{padding:8px 12px 5px;margin-top:8px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(255,255,255,.05)}
+.su-level-code{font-size:11px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;padding:2px 8px;border-radius:5px;display:inline-block}
+.su-level-name{font-family:'Cairo',sans-serif;font-size:12px;font-weight:700;color:#f4c430;direction:rtl;margin:0;line-height:1}
+.lvl-a1{background:rgba(52,211,153,.15);color:#34d399;border:1px solid rgba(52,211,153,.35)}
+.lvl-a2{background:rgba(74,158,255,.15);color:#4a9eff;border:1px solid rgba(74,158,255,.35)}
+.lvl-b1{background:rgba(245,158,11,.15);color:#f59e0b;border:1px solid rgba(245,158,11,.35)}
+.lvl-b2{background:rgba(244,166,36,.15);color:var(--accent);border:1px solid rgba(244,166,36,.35)}
+.lvl-b2p{background:rgba(251,146,60,.15);color:#fb923c;border:1px solid rgba(251,146,60,.35)}
+.lvl-c1{background:rgba(168,85,247,.15);color:#a855f7;border:1px solid rgba(168,85,247,.35)}
+.su-coming{opacity:.28;cursor:default;pointer-events:none}
+.su-prog{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:6px;overflow:hidden}
+.su-prog-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:2px;width:0%;transition:width .6s ease}
+
+.nav-home-btn{display:inline-flex;align-items:center;gap:6px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.4);color:var(--accent);font-size:12px;font-weight:800;padding:5px 13px;border-radius:8px;text-decoration:none;transition:all .2s;white-space:nowrap;flex-shrink:0}
+.nav-home-btn:hover{background:rgba(244,166,36,.25);transform:translateY(-2px)}
+.nav-lesson-badge{background:var(--accent);color:#0a1628;font-size:12px;font-weight:900;padding:5px 13px;border-radius:7px;white-space:nowrap;letter-spacing:.3px;flex-shrink:0}
+.nav-lesson-name{font-size:13px;color:rgba(232,237,245,.7);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-sep{color:rgba(136,153,176,.5);font-size:13px;flex-shrink:0}
+.nav-left{display:flex;align-items:center;gap:8px;flex:1;min-width:0}
+.nav-right{display:flex;align-items:center;flex-shrink:0}
+</style>
+
+<style>
+/* Watermark on print */
+@media print {
+  body::before {
+    content: 'Mohammed Elhuseyin — English Learning Platform — محمية الحقوق';
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-35deg);
+    font-size: 48px;
+    font-weight: 900;
+    color: rgba(244,166,36,0.18);
+    z-index: 9999;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+}
+</style>
+
+<style>
+.float-menu-btn{display:none;position:fixed;bottom:22px;left:18px;z-index:9998;width:48px;height:48px;background:var(--primary-dark,#0f2548);border:2px solid rgba(244,166,36,.5);border-radius:14px;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:12px;box-shadow:0 4px 20px rgba(0,0,0,.4);transition:transform .15s,box-shadow .15s}
+.float-menu-btn:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,.5)}
+.float-menu-btn span{display:block;width:22px;height:2px;background:#f4a624;border-radius:2px;transition:all .25s}
+@media(max-width:768px){.float-menu-btn{display:flex}}
+</style>
+</head>
+<body>
+<div class="layout">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-logo">
+      <div class="sidebar-logo-icon">A</div>
+      <div><div class="sidebar-logo-text ar">MOHAMMED ELHUSEYIN</div><div class="sidebar-logo-sub">English Learning Platform</div></div>
+    </div>
+    <div class="sidebar-label ar">الوحدات الدراسية</div>
+  </div>
+  <div class="sidebar-units">
+  <div class="su-level-hd"><span class="su-level-code lvl-a1">A1</span><span class="su-level-name">مستوى المبتدئ تماماً</span></div>
+  <a href="lesson1.html" class="su-item"><div class="su-num">1</div><div class="su-texts"><div class="su-en">Alphabet & Numbers</div><div class="su-ar">الأحرف والأرقام</div><div class="su-prog"><div class="su-prog-fill" id="sp1"></div></div></div></a>
+  <a href="lesson2.html" class="su-item"><div class="su-num">2</div><div class="su-texts"><div class="su-en">Classroom Language & Greetings</div><div class="su-ar">لغة الصف والتحيات</div><div class="su-prog"><div class="su-prog-fill" id="sp2"></div></div></div></a>
+  <a href="lesson3.html" class="su-item"><div class="su-num">3</div><div class="su-texts"><div class="su-en">Nationalities & Countries</div><div class="su-ar">الجنسيات والدول</div><div class="su-prog"><div class="su-prog-fill" id="sp3"></div></div></div></a>
+  <a href="lesson4.html" class="su-item"><div class="su-num">4</div><div class="su-texts"><div class="su-en">Singular & Plural Nouns</div><div class="su-ar">الأسماء المفردة والجمع</div><div class="su-prog"><div class="su-prog-fill" id="sp4"></div></div></div></a>
+  <a href="lesson5.html" class="su-item"><div class="su-num">5</div><div class="su-texts"><div class="su-en">Days & Telling the Time</div><div class="su-ar">الأيام وإخبار الوقت</div><div class="su-prog"><div class="su-prog-fill" id="sp5"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-a2">A2</span><span class="su-level-name">المستوى الابتدائي</span></div>
+  <a href="unit1.html" class="su-item"><div class="su-num">6</div><div class="su-texts"><div class="su-en">Verb to <i>be</i></div><div class="su-ar">فعل التكوين</div><div class="su-prog"><div class="su-prog-fill" id="sp6"></div></div></div></a>
+  <a href="unit2.html" class="su-item"><div class="su-num">7</div><div class="su-texts"><div class="su-en">Present Simple</div><div class="su-ar">المضارع البسيط</div><div class="su-prog"><div class="su-prog-fill" id="sp7"></div></div></div></a>
+  <a href="unit3.html" class="su-item"><div class="su-num">8</div><div class="su-texts"><div class="su-en">Present Continuous</div><div class="su-ar">المضارع المستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp8"></div></div></div></a>
+  <a href="unit4.html" class="su-item"><div class="su-num">9</div><div class="su-texts"><div class="su-en">Past Simple: was / were</div><div class="su-ar">الماضي البسيط: كان</div><div class="su-prog"><div class="su-prog-fill" id="sp9"></div></div></div></a>
+  <a href="unit6.html" class="su-item"><div class="su-num">10</div><div class="su-texts"><div class="su-en">Past Simple: Regular & Irreg.</div><div class="su-ar">الماضي البسيط للأفعال</div><div class="su-prog"><div class="su-prog-fill" id="sp10"></div></div></div></a>
+  <a href="unit5.html" class="su-item"><div class="su-num">11</div><div class="su-texts"><div class="su-en">Can / Can't</div><div class="su-ar">القدرة والعجز</div><div class="su-prog"><div class="su-prog-fill" id="sp11"></div></div></div></a>
+  <a href="lesson12.html" class="su-item"><div class="su-num">12</div><div class="su-texts"><div class="su-en">Possessive Pronouns</div><div class="su-ar">ضمائر الملكية</div><div class="su-prog"><div class="su-prog-fill" id="sp12"></div></div></div></a>
+  <a href="unit7.html" class="su-item"><div class="su-num">13</div><div class="su-texts"><div class="su-en">There is / There are</div><div class="su-ar">يوجد / توجد</div><div class="su-prog"><div class="su-prog-fill" id="sp13"></div></div></div></a>
+  <a href="unit8.html" class="su-item su-active"><div class="su-num">14</div><div class="su-texts"><div class="su-en">Adjectives</div><div class="su-ar">الصفات</div><div class="su-prog"><div class="su-prog-fill" id="sp14"></div></div></div></a>
+  <a href="unit9.html" class="su-item"><div class="su-num">15</div><div class="su-texts"><div class="su-en">Imperatives</div><div class="su-ar">صيغة الأمر والنهي</div><div class="su-prog"><div class="su-prog-fill" id="sp15"></div></div></div></a>
+  <a href="unit10.html" class="su-item"><div class="su-num">16</div><div class="su-texts"><div class="su-en">Object Pronouns</div><div class="su-ar">ضمائر المفعول به</div><div class="su-prog"><div class="su-prog-fill" id="sp16"></div></div></div></a>
+  <a href="unit11.html" class="su-item"><div class="su-num">17</div><div class="su-texts"><div class="su-en">Prepositions of Time & Place</div><div class="su-ar">حروف جر الوقت والمكان</div><div class="su-prog"><div class="su-prog-fill" id="sp17"></div></div></div></a>
+  <a href="unit12.html" class="su-item"><div class="su-num">18</div><div class="su-texts"><div class="su-en">Future Plans: going to</div><div class="su-ar">خطط المستقبل</div><div class="su-prog"><div class="su-prog-fill" id="sp18"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b1">B1</span><span class="su-level-name">تحت المتوسط</span></div>
+  <a href="lesson19.html" class="su-item"><div class="su-num">19</div><div class="su-texts"><div class="su-en">Present Perfect Introduction</div><div class="su-ar">مقدمة المضارع التام</div><div class="su-prog"><div class="su-prog-fill" id="sp19"></div></div></div></a>
+  <a href="lesson20.html" class="su-item"><div class="su-num">20</div><div class="su-texts"><div class="su-en">Past Continuous</div><div class="su-ar">الماضي المستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp20"></div></div></div></a>
+  <a href="lesson21.html" class="su-item"><div class="su-num">21</div><div class="su-texts"><div class="su-en">will vs. going to</div><div class="su-ar">المستقبل: إرادة أم تخطيط؟</div><div class="su-prog"><div class="su-prog-fill" id="sp21"></div></div></div></a>
+  <a href="lesson22.html" class="su-item"><div class="su-num">22</div><div class="su-texts"><div class="su-en">like / love / hate + -ing</div><div class="su-ar">التعبير عن التفضيلات</div><div class="su-prog"><div class="su-prog-fill" id="sp22"></div></div></div></a>
+  <a href="lesson23.html" class="su-item"><div class="su-num">23</div><div class="su-texts"><div class="su-en">Comparatives & Superlatives</div><div class="su-ar">المقارنة والتفضيل</div><div class="su-prog"><div class="su-prog-fill" id="sp23"></div></div></div></a>
+  <a href="lesson24.html" class="su-item"><div class="su-num">24</div><div class="su-texts"><div class="su-en">must / have to / should</div><div class="su-ar">أفعال الإلزام والنصيحة</div><div class="su-prog"><div class="su-prog-fill" id="sp24"></div></div></div></a>
+  <a href="lesson25.html" class="su-item"><div class="su-num">25</div><div class="su-texts"><div class="su-en">Infinitives & Gerunds</div><div class="su-ar">المصدر وصيغة الـ ing</div><div class="su-prog"><div class="su-prog-fill" id="sp25"></div></div></div></a>
+  <a href="lesson26.html" class="su-item"><div class="su-num">26</div><div class="su-texts"><div class="su-en">Articles: a/an / the</div><div class="su-ar">أدوات التعريف والتنكير</div><div class="su-prog"><div class="su-prog-fill" id="sp26"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b2">B2</span><span class="su-level-name">المستوى المتوسط</span></div>
+  <a href="lesson27.html" class="su-item"><div class="su-num">27</div><div class="su-texts"><div class="su-en">Present Perfect vs. Past Simple</div><div class="su-ar">المقارنة بين الماضي والتام</div><div class="su-prog"><div class="su-prog-fill" id="sp27"></div></div></div></a>
+  <a href="lesson28.html" class="su-item"><div class="su-num">28</div><div class="su-texts"><div class="su-en">Passive Voice</div><div class="su-ar">المبني للمجهول</div><div class="su-prog"><div class="su-prog-fill" id="sp28"></div></div></div></a>
+  <a href="lesson29.html" class="su-item"><div class="su-num">29</div><div class="su-texts"><div class="su-en">Zero / First / Second Cond.</div><div class="su-ar">الجمل الشرطية 0-1-2</div><div class="su-prog"><div class="su-prog-fill" id="sp29"></div></div></div></a>
+  <a href="lesson30.html" class="su-item"><div class="su-num">30</div><div class="su-texts"><div class="su-en">Reported Speech</div><div class="su-ar">الكلام غير المباشر</div><div class="su-prog"><div class="su-prog-fill" id="sp30"></div></div></div></a>
+  <a href="lesson31.html" class="su-item"><div class="su-num">31</div><div class="su-texts"><div class="su-en">Relative Clauses</div><div class="su-ar">جمل الوصل: who / which</div><div class="su-prog"><div class="su-prog-fill" id="sp31"></div></div></div></a>
+  <a href="lesson32.html" class="su-item"><div class="su-num">32</div><div class="su-texts"><div class="su-en">Quantifiers</div><div class="su-ar">محددات الكمية</div><div class="su-prog"><div class="su-prog-fill" id="sp32"></div></div></div></a>
+  <a href="lesson33.html" class="su-item"><div class="su-num">33</div><div class="su-texts"><div class="su-en">Phrasal Verbs Introduction</div><div class="su-ar">مقدمة الأفعال المركبة</div><div class="su-prog"><div class="su-prog-fill" id="sp33"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b2p">B2+</span><span class="su-level-name">فوق المتوسط</span></div>
+  <a href="lesson34.html" class="su-item"><div class="su-num">34</div><div class="su-texts"><div class="su-en">Narrative Tenses & Past Perfect</div><div class="su-ar">أزمنة السرد والماضي التام</div><div class="su-prog"><div class="su-prog-fill" id="sp34"></div></div></div></a>
+  <a href="lesson35.html" class="su-item"><div class="su-num">35</div><div class="su-texts"><div class="su-en">Future Perfect & Continuous</div><div class="su-ar">المستقبل التام والمستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp35"></div></div></div></a>
+  <a href="lesson36.html" class="su-item"><div class="su-num">36</div><div class="su-texts"><div class="su-en">Third Conditional & Regrets</div><div class="su-ar">الشرط الثالث والندم</div><div class="su-prog"><div class="su-prog-fill" id="sp36"></div></div></div></a>
+  <a href="lesson37.html" class="su-item"><div class="su-num">37</div><div class="su-texts"><div class="su-en">Causative: have/get done</div><div class="su-ar">الأفعال السببية</div><div class="su-prog"><div class="su-prog-fill" id="sp37"></div></div></div></a>
+  <a href="lesson38.html" class="su-item"><div class="su-num">38</div><div class="su-texts"><div class="su-en">Advanced Passive</div><div class="su-ar">المبني للمجهول المتقدم</div><div class="su-prog"><div class="su-prog-fill" id="sp38"></div></div></div></a>
+  <a href="lesson39.html" class="su-item"><div class="su-num">39</div><div class="su-texts"><div class="su-en">Speculation: must/might/can't</div><div class="su-ar">التخمين والاستنتاج</div><div class="su-prog"><div class="su-prog-fill" id="sp39"></div></div></div></a>
+  <a href="lesson40.html" class="su-item"><div class="su-num">40</div><div class="su-texts"><div class="su-en">Idioms & Collocations</div><div class="su-ar">المصطلحات والتعبيرات</div><div class="su-prog"><div class="su-prog-fill" id="sp40"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-c1">C1</span><span class="su-level-name">المستوى المتقدم الأكاديمي</span></div>
+  <a href="lesson41.html" class="su-item"><div class="su-num">41</div><div class="su-texts"><div class="su-en">Inversion & Emphatic Structures</div><div class="su-ar">التقديم والتأخير للتأكيد</div><div class="su-prog"><div class="su-prog-fill" id="sp41"></div></div></div></a>
+  <a href="lesson42.html" class="su-item"><div class="su-num">42</div><div class="su-texts"><div class="su-en">Mixed Conditionals</div><div class="su-ar">الجمل الشرطية المختلطة</div><div class="su-prog"><div class="su-prog-fill" id="sp42"></div></div></div></a>
+  <a href="lesson43.html" class="su-item"><div class="su-num">43</div><div class="su-texts"><div class="su-en">Advanced Gerunds & Infinitives</div><div class="su-ar">المصادر المتقدمة</div><div class="su-prog"><div class="su-prog-fill" id="sp43"></div></div></div></a>
+  <a href="lesson44.html" class="su-item"><div class="su-num">44</div><div class="su-texts"><div class="su-en">Cleft Sentences</div><div class="su-ar">الجمل المشقوقة</div><div class="su-prog"><div class="su-prog-fill" id="sp44"></div></div></div></a>
+  <a href="lesson45.html" class="su-item"><div class="su-num">45</div><div class="su-texts"><div class="su-en">Discourse Markers</div><div class="su-ar">أدوات الربط الأكاديمية</div><div class="su-prog"><div class="su-prog-fill" id="sp45"></div></div></div></a>
+  <a href="lesson46.html" class="su-item"><div class="su-num">46</div><div class="su-texts"><div class="su-en">Nuances & Euphemisms</div><div class="su-ar">الفروقات الدقيقة والتلطيف</div><div class="su-prog"><div class="su-prog-fill" id="sp46"></div></div></div></a>
+</div>
+</aside>
+
+<!-- MAIN CONTENT -->
+<div class="main-content">
+
+<nav class="topnav">
+  <div class="nav-left">
+    <a href="../index.html" class="nav-home-btn">&#x1F3E0; الرئيسية</a>
+    <span class="nav-sep">&#x203A;</span>
+    <span class="nav-lesson-badge">Lesson 14</span>
+    <span class="nav-sep">&#x203A;</span>
+    <span class="nav-lesson-name">Adjectives</span>
+  </div>
+  <div class="nav-right"><span class="nav-brand">MOHAMMED ELHUSEYIN</span></div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="unit-badge">Unit 8</div>
+  <h1 class="hero-title"><i>Adjectives</i> — الصفات</h1>
+  <div class="hero-ar ar">الصفات الوصفية · المقارنة · أعلى درجة · الشاذة</div>
+  <p class="hero-sub">Descriptive · Comparative -er / more · Superlative -est / most · Irregular: good → better → best</p>
+  <div class="hero-tags">
+    <button class="tag tag-grammar tag-btn" onclick="jumpTab('grammar')">📖 Grammar</button>
+    <button class="tag tag-other tag-btn" onclick="jumpTab('everyday')">🗣 Everyday English</button>
+    <button class="tag tag-other tag-btn" onclick="jumpTab('reading')">📚 Reading</button>
+    <button class="tag tag-other tag-btn" onclick="jumpTab('checkit')">✏️ 25 سؤال</button>
+  </div>
+</div>
+
+<!-- TABS BAR -->
+<div class="main-tabs">
+  <button class="main-tab active" onclick="showTab('grammar',this)">📖 Grammar</button>
+  <button class="main-tab" onclick="showTab('everyday',this)">🗣 Everyday English</button>
+  <button class="main-tab" onclick="showTab('reading',this)">📚 Reading</button>
+  <button class="main-tab" onclick="showTab('checkit',this)">✏️ Check It</button>
+</div>
+
+<!-- ══════════════════════════════════════ GRAMMAR TAB -->
+<div id="tab-grammar" class="tab-panel active">
+<div style="max-width:960px;margin:0 auto">
+
+<!-- VISUAL SUMMARY SVG -->
+<div class="card">
+  <h2 class="card-title">🗺️ Visual Summary — لمحة بصرية سريعة</h2>
+  <p class="card-ar">الصفات الوصفية · المقارنة بـ -er أو more · أعلى درجة بـ -est أو most</p>
+  <div class="vs-wrap">
+    <svg viewBox="0 0 640 330" xmlns="http://www.w3.org/2000/svg" font-family="Poppins,sans-serif" style="width:100%;display:block;min-width:380px">
+      <rect x="0" y="0" width="640" height="330" rx="14" fill="#0d1b2a"/>
+      <rect x="0" y="0" width="640" height="36" rx="14" fill="rgba(244,166,36,0.12)"/>
+      <rect x="0" y="22" width="640" height="14" fill="rgba(244,166,36,0.12)"/>
+      <text x="18" y="24" fill="#f4a624" font-size="12" font-weight="800" letter-spacing="1.5">ADJECTIVES — الصفات</text>
+      <text x="480" y="24" fill="#8899b0" font-size="10">وصفي · مقارنة · أعلى درجة</text>
+
+      <!-- ROW 1: Descriptive -->
+      <rect x="14" y="48" width="120" height="62" rx="10" fill="#1a3a6e" stroke="rgba(74,158,255,0.35)" stroke-width="1.5"/>
+      <text x="74" y="74" text-anchor="middle" fill="#4a9eff" font-weight="800" font-size="11">Descriptive</text>
+      <text x="74" y="91" text-anchor="middle" fill="#8899b0" font-size="10">وصفي</text>
+      <text x="147" y="82" text-anchor="middle" fill="#8899b0" font-size="20">→</text>
+      <rect x="163" y="50" width="200" height="56" rx="10" fill="rgba(244,166,36,0.1)" stroke="rgba(244,166,36,0.3)" stroke-width="1"/>
+      <text x="263" y="73" text-anchor="middle" fill="#f4a624" font-size="13" font-weight="800">adj + noun</text>
+      <text x="263" y="91" text-anchor="middle" fill="#8899b0" font-size="11">a <tspan fill="#f4a624">tall</tspan> building · a <tspan fill="#f4a624">cold</tspan> day</text>
+      <rect x="375" y="50" width="250" height="56" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(74,158,255,0.2)" stroke-width="1"/>
+      <text x="500" y="73" text-anchor="middle" fill="#e8edf5" font-size="11" font-weight="700">subject + be + adj</text>
+      <text x="500" y="91" text-anchor="middle" fill="#8899b0" font-size="11">The building <tspan fill="#f4a624">is tall</tspan>.</text>
+
+      <!-- ROW 2: Comparative -->
+      <rect x="14" y="124" width="120" height="62" rx="10" fill="#1a3a6e" stroke="rgba(244,166,36,0.4)" stroke-width="1.5"/>
+      <text x="74" y="150" text-anchor="middle" fill="#f4a624" font-weight="800" font-size="11">Comparative</text>
+      <text x="74" y="167" text-anchor="middle" fill="#8899b0" font-size="10">مقارنة</text>
+      <text x="147" y="158" text-anchor="middle" fill="#8899b0" font-size="20">→</text>
+      <rect x="163" y="126" width="200" height="56" rx="10" fill="rgba(244,166,36,0.12)" stroke="rgba(244,166,36,0.35)" stroke-width="1.5"/>
+      <text x="263" y="149" text-anchor="middle" fill="#f4a624" font-size="12" font-weight="900">adj-er / more adj</text>
+      <text x="263" y="167" text-anchor="middle" fill="#8899b0" font-size="11">tall<tspan fill="#f4a624">er</tspan> · <tspan fill="#f4a624">more</tspan> beautiful</text>
+      <rect x="375" y="126" width="250" height="56" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(244,166,36,0.2)" stroke-width="1"/>
+      <text x="500" y="149" text-anchor="middle" fill="#e8edf5" font-size="11" font-weight="700">adj-er + than</text>
+      <text x="500" y="167" text-anchor="middle" fill="#8899b0" font-size="11">She is <tspan fill="#f4a624">taller than</tspan> him.</text>
+
+      <!-- ROW 3: Superlative -->
+      <rect x="14" y="200" width="120" height="62" rx="10" fill="#1a3a6e" stroke="rgba(168,85,247,0.4)" stroke-width="1.5"/>
+      <text x="74" y="226" text-anchor="middle" fill="#a855f7" font-weight="800" font-size="11">Superlative</text>
+      <text x="74" y="243" text-anchor="middle" fill="#8899b0" font-size="10">أعلى درجة</text>
+      <text x="147" y="234" text-anchor="middle" fill="#8899b0" font-size="20">→</text>
+      <rect x="163" y="202" width="200" height="56" rx="10" fill="rgba(168,85,247,0.1)" stroke="rgba(168,85,247,0.35)" stroke-width="1.5"/>
+      <text x="263" y="225" text-anchor="middle" fill="#a855f7" font-size="12" font-weight="900">the adj-est / the most</text>
+      <text x="263" y="243" text-anchor="middle" fill="#8899b0" font-size="11">the tall<tspan fill="#a855f7">est</tspan> · <tspan fill="#a855f7">the most</tspan> beautiful</text>
+      <rect x="375" y="202" width="250" height="56" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(168,85,247,0.2)" stroke-width="1"/>
+      <text x="500" y="225" text-anchor="middle" fill="#e8edf5" font-size="11" font-weight="700">the + adj-est (in / of)</text>
+      <text x="500" y="243" text-anchor="middle" fill="#8899b0" font-size="11">She is <tspan fill="#a855f7">the tallest</tspan> in the class.</text>
+
+      <!-- ROW 4: Irregular -->
+      <rect x="14" y="276" width="120" height="44" rx="10" fill="rgba(34,197,94,0.08)" stroke="rgba(34,197,94,0.3)" stroke-width="1.5"/>
+      <text x="74" y="298" text-anchor="middle" fill="#22c55e" font-weight="800" font-size="11">Irregular</text>
+      <text x="74" y="312" text-anchor="middle" fill="#8899b0" font-size="10">شاذة</text>
+      <text x="147" y="302" text-anchor="middle" fill="#8899b0" font-size="20">→</text>
+      <rect x="163" y="278" width="462" height="40" rx="10" fill="rgba(34,197,94,0.06)" stroke="rgba(34,197,94,0.2)" stroke-width="1"/>
+      <text x="205" y="294" fill="#22c55e" font-size="11" font-weight="800">good</text><text x="205" y="309" fill="#8899b0" font-size="10">جيد</text>
+      <text x="245" y="302" fill="#8899b0" font-size="13">→</text>
+      <text x="262" y="294" fill="#f4a624" font-size="11" font-weight="800">better</text><text x="262" y="309" fill="#8899b0" font-size="10">أفضل</text>
+      <text x="310" y="302" fill="#8899b0" font-size="13">→</text>
+      <text x="328" y="294" fill="#a855f7" font-size="11" font-weight="800">best</text><text x="328" y="309" fill="#8899b0" font-size="10">الأفضل</text>
+      <text x="380" y="302" fill="#8899b0" font-size="18">|</text>
+      <text x="405" y="294" fill="#22c55e" font-size="11" font-weight="800">bad</text><text x="405" y="309" fill="#8899b0" font-size="10">سيئ</text>
+      <text x="440" y="302" fill="#8899b0" font-size="13">→</text>
+      <text x="458" y="294" fill="#f4a624" font-size="11" font-weight="800">worse</text><text x="458" y="309" fill="#8899b0" font-size="10">أسوأ</text>
+      <text x="510" y="302" fill="#8899b0" font-size="13">→</text>
+      <text x="528" y="294" fill="#a855f7" font-size="11" font-weight="800">worst</text><text x="528" y="309" fill="#8899b0" font-size="10">الأسوأ</text>
+    </svg>
+  </div>
+  <p class="vs-caption">صفة وصفية + مقارنة -er/more + than · أعلى درجة the -est/most + in/of · شاذة: good/better/best</p>
+</div>
+
+<!-- SUB TABS -->
+<div class="sub-tabs">
+  <button class="sub-tab active" onclick="showSub('desc',this)">📝 Descriptive</button>
+  <button class="sub-tab" onclick="showSub('comp',this)">➕ Comparative</button>
+  <button class="sub-tab" onclick="showSub('sup',this)">🏆 Superlative</button>
+  <button class="sub-tab" onclick="showSub('irr',this)">⚠️ Irregular</button>
+  <button class="sub-tab" onclick="showSub('tips',this)">📍 Rules & Tips</button>
+</div>
+
+<!-- ── SUB 1: Descriptive ── -->
+<div id="sub-desc" class="sub-panel active">
+  <div class="card">
+    <h3 class="card-title">📝 Descriptive Adjectives — الصفات الوصفية</h3>
+    <p class="card-ar">الصفة تصف الاسم — وتأتي قبله أو بعد فعل التكوين (be)</p>
+    <div class="tts-box">
+      <button class="tts-btn" onclick="ttsGrammar('desc')">🔊 Listen</button>
+      <button class="tts-btn tts-stop" onclick="ttsStop()">⏹ Stop</button>
+    </div>
+    <div class="formula-box">
+      <div class="formula-row">
+        <span class="formula-subj">Before noun — قبل الاسم</span>
+        <span class="formula-be">adj + noun</span>
+        <span style="font-size:13px;color:var(--text)">a <b style="color:var(--accent)">big</b> house · an <b style="color:var(--accent)">old</b> car</span>
+      </div>
+      <div class="formula-row">
+        <span class="formula-subj">After be — بعد be</span>
+        <span class="formula-be">be + adj</span>
+        <span style="font-size:13px;color:var(--text)">The house <b style="color:var(--accent)">is big</b>. The car <b style="color:var(--accent)">is old</b>.</span>
+      </div>
+    </div>
+    <div class="card-note ar">💡 الصفة في الإنجليزية لا تتغير — نفس الصيغة مع المفرد والجمع والمذكر والمؤنث<br>a big house ✅ · big houses ✅ · a big man ✅ · a big woman ✅</div>
+    <div class="ex-section-title">Opposites — أضداد الصفات</div>
+    <table class="sa-table">
+      <thead><tr><th>Adjective</th><th>الصفة</th><th>Opposite</th><th>الضد</th></tr></thead>
+      <tbody>
+        <tr><td class="sa-acc">big / large</td><td>كبير</td><td class="sa-no">small / little</td><td>صغير</td></tr>
+        <tr><td class="sa-acc">tall</td><td>طويل</td><td class="sa-no">short</td><td>قصير</td></tr>
+        <tr><td class="sa-acc">old</td><td>قديم / كبير</td><td class="sa-no">new / young</td><td>جديد / صغير</td></tr>
+        <tr><td class="sa-acc">fast / quick</td><td>سريع</td><td class="sa-no">slow</td><td>بطيء</td></tr>
+        <tr><td class="sa-acc">hot</td><td>حار</td><td class="sa-no">cold</td><td>بارد</td></tr>
+        <tr><td class="sa-acc">expensive</td><td>غالي</td><td class="sa-no">cheap</td><td>رخيص</td></tr>
+        <tr><td class="sa-acc">heavy</td><td>ثقيل</td><td class="sa-no">light</td><td>خفيف</td></tr>
+        <tr><td class="sa-acc">beautiful</td><td>جميل</td><td class="sa-no">ugly</td><td>قبيح</td></tr>
+        <tr><td class="sa-acc">easy</td><td>سهل</td><td class="sa-no">difficult / hard</td><td>صعب</td></tr>
+        <tr><td class="sa-acc">interesting</td><td>مثير للاهتمام</td><td class="sa-no">boring</td><td>ممل</td></tr>
+      </tbody>
+    </table>
+    <div class="ex-section-title">Examples — أمثلة</div>
+    <div class="ex-list">
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('It\'s a beautiful city.')">🔊</button>
+        <div><div class="ex-en">It's a <b>beautiful</b> city.</div><div class="ex-ar">إنها مدينة جميلة.</div></div>
+      </div>
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('The exam was very difficult.')">🔊</button>
+        <div><div class="ex-en">The exam was very <b>difficult</b>.</div><div class="ex-ar">كان الامتحان صعباً جداً.</div></div>
+      </div>
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('She has long dark hair.')">🔊</button>
+        <div><div class="ex-en">She has <b>long dark</b> hair.</div><div class="ex-ar">لديها شعر طويل داكن.</div></div>
+      </div>
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('This hotel is very expensive.')">🔊</button>
+        <div><div class="ex-en">This hotel is very <b>expensive</b>.</div><div class="ex-ar">هذا الفندق غالٍ جداً.</div></div>
+      </div>
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('He drives a fast red car.')">🔊</button>
+        <div><div class="ex-en">He drives a <b>fast red</b> car.</div><div class="ex-ar">يقود سيارة حمراء سريعة.</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── SUB 2: Comparative ── -->
+<div id="sub-comp" class="sub-panel">
+  <div class="card">
+    <h3 class="card-title">➕ Comparative Adjectives — المقارنة</h3>
+    <p class="card-ar">نقارن بين شيئين — نضيف -er للصفات القصيرة · more للصفات الطويلة · ودائماً than بعدها</p>
+    <div class="tts-box">
+      <button class="tts-btn" onclick="ttsGrammar('comp')">🔊 Listen</button>
+      <button class="tts-btn tts-stop" onclick="ttsStop()">⏹ Stop</button>
+    </div>
+    <div class="formula-box">
+      <div class="formula-row">
+        <span class="formula-subj">Short adj (1 syllable)</span>
+        <span class="formula-be">adj + -er + than</span>
+        <span style="font-size:12px;color:var(--muted)">tall→taller · old→older · fast→faster</span>
+      </div>
+      <div class="formula-row">
+        <span class="formula-subj">Ends in -e</span>
+        <span class="formula-be">adj + -r + than</span>
+        <span style="font-size:12px;color:var(--muted)">large→larger · nice→nicer · late→later</span>
+      </div>
+      <div class="formula-row">
+        <span class="formula-subj">CVC — حرف+حركة+حرف</span>
+        <span class="formula-be">double + -er</span>
+        <span style="font-size:12px;color:var(--muted)">big→bi<b style="color:var(--accent)">gg</b>er · hot→ho<b style="color:var(--accent)">tt</b>er · thin→thi<b style="color:var(--accent)">nn</b>er</span>
+      </div>
+      <div class="formula-row">
+        <span class="formula-subj">Ends in -y</span>
+        <span class="formula-be">y → ier + than</span>
+        <span style="font-size:12px;color:var(--muted)">happy→happ<b style="color:var(--accent)">ier</b> · easy→eas<b style="color:var(--accent)">ier</b></span>
+      </div>
+      <div class="formula-row">
+        <span class="formula-subj">Long adj (2+ syllables)</span>
+        <span class="formula-be">more + adj + than</span>
+        <span style="font-size:12px;color:var(--muted)">more beautiful · more expensive · more interesting</span>
+      </div>
+    </div>
+    <div class="card-note ar">⚠️ لا نجمع بين الاثنين! — more taller ❌ · taller ✅ · more beautiful ✅</div>
+    <div class="ex-section-title">Examples — أمثلة</div>
+    <div class="ex-list">
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('My brother is taller than me.')">🔊</button>
+        <div><div class="ex-en">My brother is <b>taller than</b> me.</div><div class="ex-ar">أخي أطول مني.</div></div>
+      </div>
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('This bag is bigger than that one.')">🔊</button>
+        <div><div class="ex-en">This bag is <b>bigger than</b> that one.</div><div class="ex-ar">هذه الحقيبة أكبر من تلك.</div></div>
+      </div>
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('The new phone is more expensive than the old one.')">🔊</button>
+        <div><div class="ex-en">The new phone is <b>more expensive than</b> the old one.</div><div class="ex-ar">الهاتف الجديد أغلى من القديم.</div></div>
+      </div>
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('Today is hotter than yesterday.')">🔊</button>
+        <div><div class="ex-en">Today is <b>hotter than</b> yesterday.</div><div class="ex-ar">اليوم أحر من الأمس.</div></div>
+      </div>
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('English is easier than Arabic for some people.')">🔊</button>
+        <div><div class="ex-en">English is <b>easier than</b> Arabic for some people.</div><div class="ex-ar">الإنجليزية أسهل من العربية لبعض الناس.</div></div>
+      </div>
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('This film is more interesting than the last one.')">🔊</button>
+        <div><div class="ex-en">This film is <b>more interesting than</b> the last one.</div><div class="ex-ar">هذا الفيلم أكثر إثارة من السابق.</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── SUB 3: Superlative ── -->
+<div id="sub-sup" class="sub-panel">
+  <div class="card">
+    <h3 class="card-title">🏆 Superlative Adjectives — أعلى درجة</h3>
+    <p class="card-ar">نصف الشيء الأعلى أو الأدنى في مجموعة — نضيف the + -est أو the most · ثم in أو of</p>
+    <div class="tts-box">
+      <button class="tts-btn" onclick="ttsGrammar('sup')">🔊 Listen</button>
+      <button class="tts-btn tts-stop" onclick="ttsStop()">⏹ Stop</button>
+    </div>
+    <div class="formula-box">
+      <div class="formula-row">
+        <span class="formula-subj">Short adj</span>
+        <span class="formula-be sup">the + adj-est</span>
+        <span style="font-size:12px;color:var(--muted)">tall→the tallest · old→the oldest · fast→the fastest</span>
+      </div>
+      <div class="formula-row">
+        <span class="formula-subj">CVC</span>
+        <span class="formula-be sup">the + double-est</span>
+        <span style="font-size:12px;color:var(--muted)">big→the bi<b style="color:var(--purple)">gg</b>est · hot→the ho<b style="color:var(--purple)">tt</b>est</span>
+      </div>
+      <div class="formula-row">
+        <span class="formula-subj">Ends in -y</span>
+        <span class="formula-be sup">the + iest</span>
+        <span style="font-size:12px;color:var(--muted)">happy→the happ<b style="color:var(--purple)">iest</b> · easy→the eas<b style="color:var(--purple)">iest</b></span>
+      </div>
+      <div class="formula-row">
+        <span class="formula-subj">Long adj</span>
+        <span class="formula-be sup">the most + adj</span>
+        <span style="font-size:12px;color:var(--muted)">the most beautiful · the most expensive</span>
+      </div>
+    </div>
+    <div class="card-note ar">💡 بعد Superlative نستخدم in مع الأماكن والمجموعات — of مع الأعداد والفترات الزمنية<br>the tallest in the class ✅ · the best of all ✅ · the oldest in the city ✅</div>
+    <div class="ex-section-title">Examples — أمثلة</div>
+    <div class="ex-list">
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('She is the tallest student in the class.')">🔊</button>
+        <div><div class="ex-en">She is <b>the tallest</b> student in the class.</div><div class="ex-ar">هي أطول طالبة في الفصل.</div></div>
+      </div>
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('Mount Everest is the highest mountain in the world.')">🔊</button>
+        <div><div class="ex-en">Mount Everest is <b>the highest</b> mountain in the world.</div><div class="ex-ar">إيفرست هو أعلى جبل في العالم.</div></div>
+      </div>
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('This is the most expensive restaurant in the city.')">🔊</button>
+        <div><div class="ex-en">This is <b>the most expensive</b> restaurant in the city.</div><div class="ex-ar">هذا أغلى مطعم في المدينة.</div></div>
+      </div>
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('January is the coldest month of the year.')">🔊</button>
+        <div><div class="ex-en">January is <b>the coldest</b> month of the year.</div><div class="ex-ar">يناير هو أبرد شهر في السنة.</div></div>
+      </div>
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('That was the most interesting film I have ever seen.')">🔊</button>
+        <div><div class="ex-en">That was <b>the most interesting</b> film I have ever seen.</div><div class="ex-ar">كان ذلك أكثر فيلم أثار اهتمامي على الإطلاق.</div></div>
+      </div>
+    </div>
+
+    <div class="ex-section-title">Comparative vs Superlative — مقارنة سريعة</div>
+    <table class="sa-table">
+      <thead><tr><th>Adjective</th><th>Comparative (مقارنة بين اثنين)</th><th>Superlative (أعلى/أدنى في مجموعة)</th></tr></thead>
+      <tbody>
+        <tr><td>tall</td><td class="sa-acc">taller than</td><td class="sa-pur">the tallest</td></tr>
+        <tr><td>big</td><td class="sa-acc">bigger than</td><td class="sa-pur">the biggest</td></tr>
+        <tr><td>hot</td><td class="sa-acc">hotter than</td><td class="sa-pur">the hottest</td></tr>
+        <tr><td>easy</td><td class="sa-acc">easier than</td><td class="sa-pur">the easiest</td></tr>
+        <tr><td>beautiful</td><td class="sa-acc">more beautiful than</td><td class="sa-pur">the most beautiful</td></tr>
+        <tr><td>expensive</td><td class="sa-acc">more expensive than</td><td class="sa-pur">the most expensive</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ── SUB 4: Irregular ── -->
+<div id="sub-irr" class="sub-panel">
+  <div class="card">
+    <h3 class="card-title">⚠️ Irregular Adjectives — الصفات الشاذة</h3>
+    <p class="card-ar">هذه الصفات لا تتبع القاعدة — يجب حفظها</p>
+    <div class="tts-box">
+      <button class="tts-btn" onclick="ttsGrammar('irr')">🔊 Listen</button>
+      <button class="tts-btn tts-stop" onclick="ttsStop()">⏹ Stop</button>
+    </div>
+    <div class="irr-grid">
+      <div class="irr-item">
+        <span class="irr-base">good</span><span class="irr-arrow">→</span><span class="irr-comp">better</span><span class="irr-arrow">→</span><span class="irr-sup">best</span><span class="irr-ar">جيد · أفضل · الأفضل</span>
+      </div>
+      <div class="irr-item">
+        <span class="irr-base">bad</span><span class="irr-arrow">→</span><span class="irr-comp">worse</span><span class="irr-arrow">→</span><span class="irr-sup">worst</span><span class="irr-ar">سيئ · أسوأ · الأسوأ</span>
+      </div>
+      <div class="irr-item">
+        <span class="irr-base">far</span><span class="irr-arrow">→</span><span class="irr-comp">further</span><span class="irr-arrow">→</span><span class="irr-sup">furthest</span><span class="irr-ar">بعيد · أبعد · الأبعد</span>
+      </div>
+      <div class="irr-item">
+        <span class="irr-base">little</span><span class="irr-arrow">→</span><span class="irr-comp">less</span><span class="irr-arrow">→</span><span class="irr-sup">least</span><span class="irr-ar">قليل · أقل · الأقل</span>
+      </div>
+      <div class="irr-item">
+        <span class="irr-base">much/many</span><span class="irr-arrow">→</span><span class="irr-comp">more</span><span class="irr-arrow">→</span><span class="irr-sup">most</span><span class="irr-ar">كثير · أكثر · الأكثر</span>
+      </div>
+    </div>
+    <div class="ex-section-title">Examples — أمثلة</div>
+    <div class="ex-list">
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('This coffee is better than that one.')">🔊</button>
+        <div><div class="ex-en">This coffee is <b>better than</b> that one.</div><div class="ex-ar">هذه القهوة أفضل من تلك. (good → better)</div></div>
+      </div>
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('She is the best student in the school.')">🔊</button>
+        <div><div class="ex-en">She is <b>the best</b> student in the school.</div><div class="ex-ar">هي أفضل طالبة في المدرسة. (good → best)</div></div>
+      </div>
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('The weather today is worse than yesterday.')">🔊</button>
+        <div><div class="ex-en">The weather today is <b>worse than</b> yesterday.</div><div class="ex-ar">الطقس اليوم أسوأ من الأمس. (bad → worse)</div></div>
+      </div>
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('This is the worst film I have ever seen.')">🔊</button>
+        <div><div class="ex-en">This is <b>the worst</b> film I have ever seen.</div><div class="ex-ar">هذا أسوأ فيلم رأيته في حياتي. (bad → worst)</div></div>
+      </div>
+      <div class="ex-item">
+        <button class="sp" onclick="ttsRead('The station is further than I thought.')">🔊</button>
+        <div><div class="ex-en">The station is <b>further than</b> I thought.</div><div class="ex-ar">المحطة أبعد مما ظننت. (far → further)</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── SUB 5: Rules & Tips ── -->
+<div id="sub-tips" class="sub-panel">
+  <div class="card">
+    <h3 class="card-title">📍 Spelling Rules & Tips — قواعد الإملاء والنصائح</h3>
+    <p class="card-ar">جدول شامل لجميع قواعد الهجاء + الأخطاء الشائعة</p>
+    <div class="tts-box">
+      <button class="tts-btn" onclick="ttsGrammar('tips')">🔊 Listen</button>
+      <button class="tts-btn tts-stop" onclick="ttsStop()">⏹ Stop</button>
+    </div>
+    <div class="spell-grid">
+      <div class="spell-item">
+        <div class="spell-rule">1 syllable → + er / est</div>
+        <div class="spell-eg">tall → tall<b>er</b> → the tall<b>est</b></div>
+        <div class="spell-eg">cold → cold<b>er</b> → the cold<b>est</b></div>
+        <div class="spell-ar">صفة قصيرة مقطع واحد</div>
+      </div>
+      <div class="spell-item">
+        <div class="spell-rule">ends in -e → + r / st</div>
+        <div class="spell-eg">large → larg<b>er</b> → the larg<b>est</b></div>
+        <div class="spell-eg">nice → nic<b>er</b> → the nic<b>est</b></div>
+        <div class="spell-ar">تنتهي بـ e — نضيف r / st فقط</div>
+      </div>
+      <div class="spell-item">
+        <div class="spell-rule">CVC → double + er / est</div>
+        <div class="spell-eg">big → bi<b>gg</b>er → the bi<b>gg</b>est</div>
+        <div class="spell-eg">hot → ho<b>tt</b>er → the ho<b>tt</b>est</div>
+        <div class="spell-ar">حرف+حركة+حرف → نضاعف الأخير</div>
+      </div>
+      <div class="spell-item">
+        <div class="spell-rule">ends in -y → y→i + er / est</div>
+        <div class="spell-eg">happy → happ<b>ier</b> → happ<b>iest</b></div>
+        <div class="spell-eg">heavy → heav<b>ier</b> → heav<b>iest</b></div>
+        <div class="spell-ar">تنتهي بـ y بعد حرف ساكن</div>
+      </div>
+      <div class="spell-item">
+        <div class="spell-rule">2+ syllables → more / most</div>
+        <div class="spell-eg"><b>more</b> beautiful → <b>the most</b> beautiful</div>
+        <div class="spell-eg"><b>more</b> expensive → <b>the most</b> expensive</div>
+        <div class="spell-ar">صفة طويلة — نضيف more/most قبلها</div>
+      </div>
+      <div class="spell-item">
+        <div class="spell-rule">two syllables (-er, -ow, -le)</div>
+        <div class="spell-eg">clever → clever<b>er</b> أو <b>more</b> clever</div>
+        <div class="spell-eg">narrow → narrow<b>er</b></div>
+        <div class="spell-ar">بعض الصفات المكونة من مقطعين تقبل الاثنين</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 class="card-title">⚠️ Common Mistakes — أخطاء شائعة</h3>
+    <p class="card-ar">أكثر الأخطاء شيوعاً عند الطلاب</p>
+    <div class="mistake-item">
+      <div class="m-wrong">She is more taller than her sister.</div>
+      <div class="m-right">She is taller than her sister.</div>
+      <div class="m-why">لا نجمع بين -er و more — نستخدم واحدة فقط</div>
+    </div>
+    <div class="mistake-item">
+      <div class="m-wrong">He is the most tallest in the team.</div>
+      <div class="m-right">He is the tallest in the team.</div>
+      <div class="m-why">لا نجمع بين -est و most — واحدة فقط</div>
+    </div>
+    <div class="mistake-item">
+      <div class="m-wrong">This phone is gooder than mine.</div>
+      <div class="m-right">This phone is better than mine.</div>
+      <div class="m-why">good شاذة — لا نضيف -er: good → better</div>
+    </div>
+    <div class="mistake-item">
+      <div class="m-wrong">Today is more hot than yesterday.</div>
+      <div class="m-right">Today is hotter than yesterday.</div>
+      <div class="m-why">hot صفة قصيرة CVC → hotter (نضاعف t)</div>
+    </div>
+    <div class="mistake-item">
+      <div class="m-wrong">She is the most best in the class.</div>
+      <div class="m-right">She is the best in the class.</div>
+      <div class="m-why">best هي Superlative لـ good — لا تحتاج إلى most</div>
+    </div>
+    <div class="mistake-item">
+      <div class="m-wrong">This is the baddest film.</div>
+      <div class="m-right">This is the worst film.</div>
+      <div class="m-why">bad شاذة → worst (وليس baddest)</div>
+    </div>
+  </div>
+</div>
+
+<!-- STANDALONE VOCAB CARD -->
+<div class="card">
+  <h3 class="card-title">📚 Vocabulary — مفردات الوحدة الثامنة</h3>
+  <p class="card-ar">24 صفة أساسية — اضغط على الكلمة للاستماع</p>
+  <div class="vocab-grid">
+    <div class="vocab-item" onclick="ttsRead('big')"><div class="vocab-en">big</div><div class="vocab-past">bigger / biggest</div><div class="vocab-ar">كبير</div></div>
+    <div class="vocab-item" onclick="ttsRead('small')"><div class="vocab-en">small</div><div class="vocab-past">smaller / smallest</div><div class="vocab-ar">صغير</div></div>
+    <div class="vocab-item" onclick="ttsRead('tall')"><div class="vocab-en">tall</div><div class="vocab-past">taller / tallest</div><div class="vocab-ar">طويل</div></div>
+    <div class="vocab-item" onclick="ttsRead('short')"><div class="vocab-en">short</div><div class="vocab-past">shorter / shortest</div><div class="vocab-ar">قصير</div></div>
+    <div class="vocab-item" onclick="ttsRead('old')"><div class="vocab-en">old</div><div class="vocab-past">older / oldest</div><div class="vocab-ar">قديم / كبير</div></div>
+    <div class="vocab-item" onclick="ttsRead('young')"><div class="vocab-en">young</div><div class="vocab-past">younger / youngest</div><div class="vocab-ar">صغير / شاب</div></div>
+    <div class="vocab-item" onclick="ttsRead('fast')"><div class="vocab-en">fast</div><div class="vocab-past">faster / fastest</div><div class="vocab-ar">سريع</div></div>
+    <div class="vocab-item" onclick="ttsRead('slow')"><div class="vocab-en">slow</div><div class="vocab-past">slower / slowest</div><div class="vocab-ar">بطيء</div></div>
+    <div class="vocab-item" onclick="ttsRead('hot')"><div class="vocab-en">hot</div><div class="vocab-past">hotter / hottest</div><div class="vocab-ar">حار</div></div>
+    <div class="vocab-item" onclick="ttsRead('cold')"><div class="vocab-en">cold</div><div class="vocab-past">colder / coldest</div><div class="vocab-ar">بارد</div></div>
+    <div class="vocab-item" onclick="ttsRead('expensive')"><div class="vocab-en">expensive</div><div class="vocab-past">more / most expensive</div><div class="vocab-ar">غالي</div></div>
+    <div class="vocab-item" onclick="ttsRead('cheap')"><div class="vocab-en">cheap</div><div class="vocab-past">cheaper / cheapest</div><div class="vocab-ar">رخيص</div></div>
+    <div class="vocab-item" onclick="ttsRead('heavy')"><div class="vocab-en">heavy</div><div class="vocab-past">heavier / heaviest</div><div class="vocab-ar">ثقيل</div></div>
+    <div class="vocab-item" onclick="ttsRead('light')"><div class="vocab-en">light</div><div class="vocab-past">lighter / lightest</div><div class="vocab-ar">خفيف</div></div>
+    <div class="vocab-item" onclick="ttsRead('beautiful')"><div class="vocab-en">beautiful</div><div class="vocab-past">more / most beautiful</div><div class="vocab-ar">جميل</div></div>
+    <div class="vocab-item" onclick="ttsRead('ugly')"><div class="vocab-en">ugly</div><div class="vocab-past">uglier / ugliest</div><div class="vocab-ar">قبيح</div></div>
+    <div class="vocab-item" onclick="ttsRead('easy')"><div class="vocab-en">easy</div><div class="vocab-past">easier / easiest</div><div class="vocab-ar">سهل</div></div>
+    <div class="vocab-item" onclick="ttsRead('difficult')"><div class="vocab-en">difficult</div><div class="vocab-past">more / most difficult</div><div class="vocab-ar">صعب</div></div>
+    <div class="vocab-item" onclick="ttsRead('interesting')"><div class="vocab-en">interesting</div><div class="vocab-past">more / most interesting</div><div class="vocab-ar">مثير للاهتمام</div></div>
+    <div class="vocab-item" onclick="ttsRead('boring')"><div class="vocab-en">boring</div><div class="vocab-past">more / most boring</div><div class="vocab-ar">ممل</div></div>
+    <div class="vocab-item" onclick="ttsRead('good')"><div class="vocab-en">good</div><div class="vocab-past">better / best ⚠️</div><div class="vocab-ar">جيد</div></div>
+    <div class="vocab-item" onclick="ttsRead('bad')"><div class="vocab-en">bad</div><div class="vocab-past">worse / worst ⚠️</div><div class="vocab-ar">سيئ</div></div>
+    <div class="vocab-item" onclick="ttsRead('comfortable')"><div class="vocab-en">comfortable</div><div class="vocab-past">more / most comfortable</div><div class="vocab-ar">مريح</div></div>
+    <div class="vocab-item" onclick="ttsRead('friendly')"><div class="vocab-en">friendly</div><div class="vocab-past">friendlier / friendliest</div><div class="vocab-ar">ودود</div></div>
+  </div>
+</div>
+
+</div><!-- /max-width -->
+</div><!-- /tab-grammar -->
+
+<!-- ══════════════════════════════════════ EVERYDAY ENGLISH TAB -->
+<div id="tab-everyday" class="tab-panel">
+<div style="max-width:960px;margin:0 auto">
+
+  <div class="dlg-card">
+    <div class="dlg-header">
+      <div class="dlg-meta">
+        <div class="dlg-num">Dialogue 01</div>
+        <div class="dlg-title">Shopping for Clothes</div>
+        <div class="dlg-ctx">Two friends comparing clothes in a shop — صديقتان تقارنان الملابس</div>
+      </div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Lena</div>
+        <div class="chat-bubble">
+          <div class="chat-en">What do you think about these two jackets? Which one is <b>better</b>?</div>
+          <div class="chat-ar">ماذا تعتقدين في هاتين الجاكيتتين؟ أيهما <b>أفضل</b>؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="What do you think about these two jackets? Which one is better?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Amy</div>
+        <div class="chat-bubble">
+          <div class="chat-en">The blue one is <b>nicer</b> than the red one. And it's <b>cheaper</b> too!</div>
+          <div class="chat-ar">الأزرق <b>أجمل</b> من الأحمر. وهو <b>أرخص</b> أيضاً!</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="The blue one is nicer than the red one. And it's cheaper too!" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Lena</div>
+        <div class="chat-bubble">
+          <div class="chat-en">But the red one looks <b>warmer</b>. Winter is coming!</div>
+          <div class="chat-ar">لكن الأحمر يبدو <b>أكثر دفئاً</b>. الشتاء قادم!</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="But the red one looks warmer. Winter is coming!" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Amy</div>
+        <div class="chat-bubble">
+          <div class="chat-en">True. But the blue one is <b>more stylish</b>. You can wear it for work too.</div>
+          <div class="chat-ar">صحيح. لكن الأزرق <b>أكثر أناقة</b>. يمكنك ارتداؤه للعمل أيضاً.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="True. But the blue one is more stylish. You can wear it for work too." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Lena</div>
+        <div class="chat-bubble">
+          <div class="chat-en">You're right. I think the blue one is <b>the best</b> choice. I'll take it!</div>
+          <div class="chat-ar">أنتِ محقة. أعتقد أن الأزرق هو <b>أفضل</b> خيار. سآخذه!</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="You're right. I think the blue one is the best choice. I'll take it!" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dlg-card">
+    <div class="dlg-header">
+      <div class="dlg-meta">
+        <div class="dlg-num">Dialogue 02</div>
+        <div class="dlg-title">Comparing Two Restaurants</div>
+        <div class="dlg-ctx">Friends deciding where to eat — أصدقاء يقررون أين يأكلون</div>
+      </div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Jack</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Should we go to Mario's or the Green Garden? Which is <b>more popular</b>?</div>
+          <div class="chat-ar">هل نذهب إلى ماريو أم الحديقة الخضراء؟ أيهما <b>أكثر شعبية</b>؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Should we go to Mario's or the Green Garden? Which is more popular?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Mia</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Mario's is <b>busier</b>, but Green Garden is <b>healthier</b> and <b>quieter</b>.</div>
+          <div class="chat-ar">ماريو <b>أكثر ازدحاماً</b>، لكن الحديقة الخضراء <b>أكثر صحة</b> و<b>أكثر هدوءاً</b>.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Mario's is busier, but Green Garden is healthier and quieter." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Jack</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Is Mario's <b>more expensive</b> than Green Garden?</div>
+          <div class="chat-ar">هل ماريو <b>أغلى</b> من الحديقة الخضراء؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Is Mario's more expensive than Green Garden?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Mia</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Yes, a bit. But the food there is <b>tastier</b> in my opinion.</div>
+          <div class="chat-ar">نعم، قليلاً. لكن الطعام هناك <b>ألذ</b> في رأيي.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Yes, a bit. But the food there is tastier in my opinion." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Jack</div>
+        <div class="chat-bubble">
+          <div class="chat-en">OK, let's go to Mario's then. It sounds like <b>the better</b> option tonight.</div>
+          <div class="chat-ar">حسناً، لنذهب إلى ماريو إذن. يبدو أنه <b>الخيار الأفضل</b> الليلة.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="OK, let's go to Mario's then. It sounds like the better option tonight." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dlg-card">
+    <div class="dlg-header">
+      <div class="dlg-meta">
+        <div class="dlg-num">Dialogue 03</div>
+        <div class="dlg-title">Talking About Films</div>
+        <div class="dlg-ctx">Two colleagues comparing films they watched — زميلان يقارنان أفلاماً شاهداها</div>
+      </div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Sam</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Did you see the new action film? I thought it was <b>more exciting</b> than the last one.</div>
+          <div class="chat-ar">هل شاهدت فيلم الأكشن الجديد؟ اعتقدت أنه <b>أكثر إثارة</b> من الأخير.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Did you see the new action film? I thought it was more exciting than the last one." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Nora</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Yes! I agree. The story was <b>more interesting</b> and the acting was <b>better</b>.</div>
+          <div class="chat-ar">نعم! أوافقك. القصة كانت <b>أكثر إثارة للاهتمام</b> والتمثيل كان <b>أفضل</b>.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Yes! I agree. The story was more interesting and the acting was better." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Sam</div>
+        <div class="chat-bubble">
+          <div class="chat-en">What about the comedy that came out last week? Was it <b>funnier</b>?</div>
+          <div class="chat-ar">ماذا عن الكوميديا التي صدرت الأسبوع الماضي؟ هل كانت <b>أكثر مرحاً</b>؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="What about the comedy that came out last week? Was it funnier?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Nora</div>
+        <div class="chat-bubble">
+          <div class="chat-en">No, I think the action film was <b>the best</b> film I've seen this year!</div>
+          <div class="chat-ar">لا، أعتقد أن فيلم الأكشن كان <b>أفضل</b> فيلم شاهدته هذا العام!</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="No, I think the action film was the best film I've seen this year!" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Sam</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Me too! It's definitely <b>more memorable</b> than anything else this season.</div>
+          <div class="chat-ar">أنا أيضاً! إنه بالتأكيد <b>أكثر تأثيراً</b> من أي شيء آخر هذا الموسم.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Me too! It's definitely more memorable than anything else this season." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dlg-card">
+    <div class="dlg-header">
+      <div class="dlg-meta">
+        <div class="dlg-num">Dialogue 04</div>
+        <div class="dlg-title">Comparing Two Cities</div>
+        <div class="dlg-ctx">Two students talking about cities they visited — طالبان يتحدثان عن مدن زاراها</div>
+      </div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Omar</div>
+        <div class="chat-bubble">
+          <div class="chat-en">I visited Paris and London last summer. Paris is <b>more beautiful</b> in my opinion.</div>
+          <div class="chat-ar">زرت باريس ولندن الصيف الماضي. باريس <b>أجمل</b> في رأيي.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="I visited Paris and London last summer. Paris is more beautiful in my opinion." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Lily</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Really? I think London is <b>more exciting</b>. There's so much to do there!</div>
+          <div class="chat-ar">حقاً؟ أعتقد أن لندن <b>أكثر إثارة</b>. يوجد الكثير لتفعله هناك!</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Really? I think London is more exciting. There's so much to do there!" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Omar</div>
+        <div class="chat-bubble">
+          <div class="chat-en">True. But Paris is <b>cheaper</b> and the food is <b>better</b>.</div>
+          <div class="chat-ar">صحيح. لكن باريس <b>أرخص</b> والطعام <b>أفضل</b>.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="True. But Paris is cheaper and the food is better." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Lily</div>
+        <div class="chat-bubble">
+          <div class="chat-en">London is <b>bigger</b> though, and the transport is <b>more efficient</b>.</div>
+          <div class="chat-ar">لكن لندن <b>أكبر</b>، والمواصلات <b>أكثر كفاءة</b>.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="London is bigger though, and the transport is more efficient." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Omar</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Both are amazing! But for me, Paris is <b>the most romantic</b> city in the world.</div>
+          <div class="chat-ar">كلتاهما رائعتان! لكن بالنسبة لي، باريس <b>أكثر المدن رومانسية</b> في العالم.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Both are amazing! But for me, Paris is the most romantic city in the world." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dlg-card">
+    <div class="dlg-header">
+      <div class="dlg-meta">
+        <div class="dlg-num">Dialogue 05</div>
+        <div class="dlg-title">Choosing a New Phone</div>
+        <div class="dlg-ctx">Customer comparing phones in a shop — زبون يقارن هواتف في المتجر</div>
+      </div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Customer</div>
+        <div class="chat-bubble">
+          <div class="chat-en">I'm looking for a new phone. Which one is <b>the most popular</b>?</div>
+          <div class="chat-ar">أبحث عن هاتف جديد. أيهما <b>الأكثر شعبية</b>؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="I'm looking for a new phone. Which one is the most popular?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Assistant</div>
+        <div class="chat-bubble">
+          <div class="chat-en">This model is our <b>best seller</b>. It's <b>faster</b> and has a <b>better</b> camera than the others.</div>
+          <div class="chat-ar">هذا الطراز هو <b>الأكثر مبيعاً</b>. إنه <b>أسرع</b> ولديه كاميرا <b>أفضل</b> من الآخرين.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="This model is our best seller. It's faster and has a better camera than the others." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Customer</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Is it <b>more expensive</b> than the silver one?</div>
+          <div class="chat-ar">هل هو <b>أغلى</b> من الفضي؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Is it more expensive than the silver one?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Assistant</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Yes, it is. But it's also <b>lighter</b> and the battery lasts <b>longer</b>.</div>
+          <div class="chat-ar">نعم. لكنه أيضاً <b>أخف</b> وعمر البطارية <b>أطول</b>.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Yes, it is. But it's also lighter and the battery lasts longer." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Customer</div>
+        <div class="chat-bubble">
+          <div class="chat-en">OK! I'll take this one. It sounds like <b>the best</b> deal.</div>
+          <div class="chat-ar">حسناً! سآخذ هذا. يبدو أنه <b>أفضل</b> صفقة.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="OK! I'll take this one. It sounds like the best deal." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /max-width -->
+</div><!-- /tab-everyday -->
+
+<!-- ══════════════════════════════════════ READING TAB -->
+<div id="tab-reading" class="tab-panel">
+<div style="max-width:960px;margin:0 auto">
+
+<div class="card">
+  <h2 class="card-title">📖 Reading — My Sister and I</h2>
+  <p class="card-ar">اقرأ النص — الصفات الوصفية والمقارنة وأعلى درجة بالخط العريض</p>
+  <div class="tts-box">
+    <button class="tts-btn" onclick="ttsPassage()">🔊 Listen to passage</button>
+    <button class="tts-btn tts-stop" onclick="ttsStop()">⏹ Stop</button>
+  </div>
+  <div class="read-pass">
+    <p>My name is Layla and I have one sister called Sara. We are very <b>different</b>!</p>
+    <p>I am <b>tall</b> and <b>slim</b>, but Sara is <b>short</b> and a little <b>heavy</b>. I have <b>long dark</b> hair and Sara has <b>short blonde</b> hair. I am <b>older</b> than Sara — I am twenty-five and she is twenty-two.</p>
+    <p>People say that Sara is <b>more beautiful</b> than me, but I think we are both pretty! Sara is <b>funnier</b> than me and she is <b>the most popular</b> person in our family. Everyone loves her.</p>
+    <p>At school, Sara was a <b>better</b> student than me. She always got <b>the best</b> marks in her class. But I was <b>better</b> at sports. I was <b>the fastest</b> runner in my school.</p>
+    <p>In our family, our father is <b>the tallest</b> — he is one hundred and ninety centimetres. Our mother is <b>the shortest</b> — she is only one hundred and fifty-five centimetres. Sara and I are somewhere in the middle.</p>
+    <p>We have <b>different</b> jobs now. My job is <b>more interesting</b> than Sara's job, but her salary is <b>higher</b> than mine! She works in <b>the most expensive</b> hotel in the city.</p>
+    <p>We are <b>different</b>, but we are <b>the best</b> friends in the world.</p>
+  </div>
+</div>
+
+<div class="card">
+  <h3 class="card-title">👥 Layla vs Sara — مقارنة سريعة</h3>
+  <div class="vs-wrap">
+    <svg viewBox="0 0 640 260" xmlns="http://www.w3.org/2000/svg" font-family="Poppins,sans-serif" style="width:100%;display:block;min-width:340px">
+      <rect x="0" y="0" width="640" height="260" rx="12" fill="#0d1b2a"/>
+      <rect x="10" y="10" width="295" height="240" rx="10" fill="rgba(26,58,110,0.4)" stroke="rgba(74,158,255,0.3)" stroke-width="1.5"/>
+      <text x="157" y="35" text-anchor="middle" fill="#4a9eff" font-weight="800" font-size="14">Layla (25)</text>
+      <text x="30" y="62" fill="#8899b0" font-size="11">Height</text><text x="295" y="62" text-anchor="end" fill="#f4a624" font-size="12" font-weight="700">tall — طويلة</text>
+      <text x="30" y="87" fill="#8899b0" font-size="11">Build</text><text x="295" y="87" text-anchor="end" fill="#f4a624" font-size="12" font-weight="700">slim — نحيفة</text>
+      <text x="30" y="112" fill="#8899b0" font-size="11">Hair</text><text x="295" y="112" text-anchor="end" fill="#f4a624" font-size="12" font-weight="700">long, dark — طويل، داكن</text>
+      <text x="30" y="137" fill="#8899b0" font-size="11">School</text><text x="295" y="137" text-anchor="end" fill="#f4a624" font-size="12" font-weight="700">better at sports</text>
+      <text x="30" y="162" fill="#8899b0" font-size="11">Personality</text><text x="295" y="162" text-anchor="end" fill="#f4a624" font-size="12" font-weight="700">serious</text>
+      <text x="30" y="187" fill="#8899b0" font-size="11">Job</text><text x="295" y="187" text-anchor="end" fill="#f4a624" font-size="12" font-weight="700">more interesting</text>
+      <text x="30" y="212" fill="#8899b0" font-size="11">Salary</text><text x="295" y="212" text-anchor="end" fill="#f4a624" font-size="12" font-weight="700">lower</text>
+      <text x="30" y="237" fill="#8899b0" font-size="11">Running</text><text x="295" y="237" text-anchor="end" fill="#22c55e" font-size="12" font-weight="800">the fastest ⚡</text>
+      <text x="320" y="136" text-anchor="middle" fill="rgba(244,166,36,0.7)" font-size="22" font-weight="900">VS</text>
+      <rect x="335" y="10" width="295" height="240" rx="10" fill="rgba(168,85,247,0.1)" stroke="rgba(168,85,247,0.35)" stroke-width="1.5"/>
+      <text x="483" y="35" text-anchor="middle" fill="#a855f7" font-weight="800" font-size="14">Sara (22)</text>
+      <text x="355" y="62" fill="#8899b0" font-size="11">Height</text><text x="625" y="62" text-anchor="end" fill="#a855f7" font-size="12" font-weight="700">short — قصيرة</text>
+      <text x="355" y="87" fill="#8899b0" font-size="11">Build</text><text x="625" y="87" text-anchor="end" fill="#a855f7" font-size="12" font-weight="700">heavy — ثقيلة</text>
+      <text x="355" y="112" fill="#8899b0" font-size="11">Hair</text><text x="625" y="112" text-anchor="end" fill="#a855f7" font-size="12" font-weight="700">short, blonde — أشقر</text>
+      <text x="355" y="137" fill="#8899b0" font-size="11">School</text><text x="625" y="137" text-anchor="end" fill="#22c55e" font-size="12" font-weight="800">the best marks ⭐</text>
+      <text x="355" y="162" fill="#8899b0" font-size="11">Personality</text><text x="625" y="162" text-anchor="end" fill="#a855f7" font-size="12" font-weight="700">funny, popular</text>
+      <text x="355" y="187" fill="#8899b0" font-size="11">Job</text><text x="625" y="187" text-anchor="end" fill="#a855f7" font-size="12" font-weight="700">less interesting</text>
+      <text x="355" y="212" fill="#8899b0" font-size="11">Salary</text><text x="625" y="212" text-anchor="end" fill="#22c55e" font-size="12" font-weight="800">higher 💰</text>
+      <text x="355" y="237" fill="#8899b0" font-size="11">Works at</text><text x="625" y="237" text-anchor="end" fill="#a855f7" font-size="12" font-weight="700">the most expensive hotel</text>
+    </svg>
+  </div>
+</div>
+
+<div class="card">
+  <h3 class="card-title">📌 Key Words — كلمات مفتاحية</h3>
+  <div class="read-vocab-wrap">
+    <div class="read-vocab-item"><span class="rv-en">slim</span><span class="rv-ar">نحيف / رفيع</span></div>
+    <div class="read-vocab-item"><span class="rv-en">blonde</span><span class="rv-ar">أشقر اللون</span></div>
+    <div class="read-vocab-item"><span class="rv-en">popular</span><span class="rv-ar">محبوب / مشهور</span></div>
+    <div class="read-vocab-item"><span class="rv-en">marks</span><span class="rv-ar">درجات / علامات</span></div>
+    <div class="read-vocab-item"><span class="rv-en">centimetre</span><span class="rv-ar">سنتيمتر</span></div>
+    <div class="read-vocab-item"><span class="rv-en">salary</span><span class="rv-ar">راتب</span></div>
+    <div class="read-vocab-item"><span class="rv-en">somewhere</span><span class="rv-ar">في مكان ما</span></div>
+    <div class="read-vocab-item"><span class="rv-en">different</span><span class="rv-ar">مختلف</span></div>
+  </div>
+</div>
+
+<div class="card">
+  <h3 class="card-title">❓ Comprehension Questions — أسئلة الفهم</h3>
+  <p class="card-ar">اختر الإجابة الصحيحة لكل سؤال</p>
+
+  <div class="read-q" id="rq1">
+    <p class="rq-text"><b>1.</b> How old is Layla?</p>
+    <div class="read-opts">
+      <button class="read-opt" onclick="pickComp(this,'wrong')">a) 20</button>
+      <button class="read-opt" onclick="pickComp(this,'wrong')">b) 22</button>
+      <button class="read-opt" onclick="pickComp(this,'right')">c) 25</button>
+      <button class="read-opt" onclick="pickComp(this,'wrong')">d) 30</button>
+    </div>
+    <div class="read-ctx" id="ctx-rq1">"I am twenty-five and she is twenty-two."</div>
+  </div>
+
+  <div class="read-q" id="rq2">
+    <p class="rq-text"><b>2.</b> Who is the most popular person in the family?</p>
+    <div class="read-opts">
+      <button class="read-opt" onclick="pickComp(this,'wrong')">a) Layla</button>
+      <button class="read-opt" onclick="pickComp(this,'right')">b) Sara</button>
+      <button class="read-opt" onclick="pickComp(this,'wrong')">c) Their mother</button>
+      <button class="read-opt" onclick="pickComp(this,'wrong')">d) Their father</button>
+    </div>
+    <div class="read-ctx" id="ctx-rq2">"Sara is the most popular person in our family."</div>
+  </div>
+
+  <div class="read-q" id="rq3">
+    <p class="rq-text"><b>3.</b> Who was better at school?</p>
+    <div class="read-opts">
+      <button class="read-opt" onclick="pickComp(this,'wrong')">a) Layla</button>
+      <button class="read-opt" onclick="pickComp(this,'right')">b) Sara</button>
+      <button class="read-opt" onclick="pickComp(this,'wrong')">c) Both were equal</button>
+      <button class="read-opt" onclick="pickComp(this,'wrong')">d) The text doesn't say</button>
+    </div>
+    <div class="read-ctx" id="ctx-rq3">"Sara was a better student than me. She always got the best marks."</div>
+  </div>
+
+  <div class="read-q" id="rq4">
+    <p class="rq-text"><b>4.</b> How tall is their father?</p>
+    <div class="read-opts">
+      <button class="read-opt" onclick="pickComp(this,'wrong')">a) 155 cm</button>
+      <button class="read-opt" onclick="pickComp(this,'wrong')">b) 175 cm</button>
+      <button class="read-opt" onclick="pickComp(this,'right')">c) 190 cm</button>
+      <button class="read-opt" onclick="pickComp(this,'wrong')">d) 180 cm</button>
+    </div>
+    <div class="read-ctx" id="ctx-rq4">"Our father is the tallest — he is one hundred and ninety centimetres."</div>
+  </div>
+
+  <div class="read-q" id="rq5">
+    <p class="rq-text"><b>5.</b> Where does Sara work?</p>
+    <div class="read-opts">
+      <button class="read-opt" onclick="pickComp(this,'wrong')">a) A school</button>
+      <button class="read-opt" onclick="pickComp(this,'wrong')">b) A hospital</button>
+      <button class="read-opt" onclick="pickComp(this,'wrong')">c) A restaurant</button>
+      <button class="read-opt" onclick="pickComp(this,'right')">d) A hotel</button>
+    </div>
+    <div class="read-ctx" id="ctx-rq5">"She works in the most expensive hotel in the city."</div>
+  </div>
+
+  <div class="read-q" id="rq6">
+    <p class="rq-text"><b>6.</b> Whose salary is higher?</p>
+    <div class="read-opts">
+      <button class="read-opt" onclick="pickComp(this,'wrong')">a) Layla's</button>
+      <button class="read-opt" onclick="pickComp(this,'right')">b) Sara's</button>
+      <button class="read-opt" onclick="pickComp(this,'wrong')">c) Their father's</button>
+      <button class="read-opt" onclick="pickComp(this,'wrong')">d) They earn the same</button>
+    </div>
+    <div class="read-ctx" id="ctx-rq6">"Her salary is higher than mine!"</div>
+  </div>
+</div>
+
+</div><!-- /max-width -->
+</div><!-- /tab-reading -->
+
+<!-- ══════════════════════════════════════ CHECK IT TAB -->
+<div id="tab-checkit" class="tab-panel" style="padding:0">
+<div style="max-width:960px;margin:0 auto;padding:20px 24px">
+
+<div class="ci-score" id="ci-score-panel" style="display:none">
+  <div class="ci-score-num" id="ci-score-num">0/25</div>
+  <div class="ci-score-bar"><div class="ci-score-fill" id="ci-score-fill"></div></div>
+  <div class="ci-score-msg" id="ci-score-msg"></div>
+  <button class="ci-reset-btn" onclick="ciReset()">🔄 Try Again</button>
+</div>
+<div class="ci-progress" id="ci-progress-bar"><div class="ci-progress-fill" id="ci-progress-fill" style="width:0%"></div></div>
+
+<div class="ci-q" id="ciq1">
+  <div class="ci-num">Q1</div>
+  <div class="ci-text">My brother is ___ than me. <span class="ci-hint">(tall)</span></div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,false)">more tall</button>
+    <button class="ci-btn" onclick="ciPick(this,true)">taller</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">tallest</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">the tallest</button>
+  </div>
+</div>
+<div class="ci-q" id="ciq2">
+  <div class="ci-num">Q2</div>
+  <div class="ci-text">This is ___ film I've ever seen. <span class="ci-hint">(good → superlative)</span></div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,true)">the best</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">better</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">the most good</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">gooder</button>
+  </div>
+</div>
+<div class="ci-q" id="ciq3">
+  <div class="ci-num">Q3</div>
+  <div class="ci-text">London is ___ than my hometown. <span class="ci-hint">(big)</span></div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,false)">more big</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">biggest</button>
+    <button class="ci-btn" onclick="ciPick(this,true)">bigger</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">the biggest</button>
+  </div>
+</div>
+<div class="ci-q" id="ciq4">
+  <div class="ci-num">Q4</div>
+  <div class="ci-text">She has ___ hair in the class. <span class="ci-hint">(long → superlative)</span></div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,false)">the most long</button>
+    <button class="ci-btn" onclick="ciPick(this,true)">the longest</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">longer</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">most long</button>
+  </div>
+</div>
+<div class="ci-q" id="ciq5">
+  <div class="ci-num">Q5</div>
+  <div class="ci-text">July is ___ month of the year. <span class="ci-hint">(hot → superlative)</span></div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,false)">the hotest</button>
+    <button class="ci-btn" onclick="ciPick(this,true)">the hottest</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">hotter</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">hottest</button>
+  </div>
+</div>
+
+<div class="ci-brk" id="cibrk1">🎉 أحسنت! كمّل باقي الأسئلة</div>
+
+<div class="ci-q" id="ciq6">
+  <div class="ci-num">Q6</div>
+  <div class="ci-text">This car is ___ than that one. <span class="ci-hint">(expensive)</span></div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,false)">expensiver</button>
+    <button class="ci-btn" onclick="ciPick(this,true)">more expensive</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">most expensive</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">the most expensive</button>
+  </div>
+</div>
+<div class="ci-q" id="ciq7">
+  <div class="ci-num">Q7</div>
+  <div class="ci-text">He is ___ student in the school. <span class="ci-hint">(bad → superlative)</span></div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,false)">the worse</button>
+    <button class="ci-btn" onclick="ciPick(this,true)">the worst</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">the baddest</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">worse</button>
+  </div>
+</div>
+<div class="ci-q" id="ciq8">
+  <div class="ci-num">Q8</div>
+  <div class="ci-text">My bag is ___ than yours. <span class="ci-hint">(heavy)</span></div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,true)">heavier</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">more heavy</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">heavyer</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">the heaviest</button>
+  </div>
+</div>
+<div class="ci-q" id="ciq9">
+  <div class="ci-num">Q9</div>
+  <div class="ci-text">She speaks ___ English than me. <span class="ci-hint">(good → comparative)</span></div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,false)">gooder</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">more good</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">best</button>
+    <button class="ci-btn" onclick="ciPick(this,true)">better</button>
+  </div>
+</div>
+<div class="ci-q" id="ciq10">
+  <div class="ci-num">Q10</div>
+  <div class="ci-text">Paris is ___ city I've visited. <span class="ci-hint">(beautiful → superlative)</span></div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,true)">the most beautiful</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">more beautiful</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">beautifuller</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">most beautiful</button>
+  </div>
+</div>
+<div class="ci-q" id="ciq11">
+  <div class="ci-num">Q11</div>
+  <div class="ci-text">January is ___ month in my country. <span class="ci-hint">(cold → superlative)</span></div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,false)">coldest</button>
+    <button class="ci-btn" onclick="ciPick(this,true)">the coldest</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">more cold</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">most cold</button>
+  </div>
+</div>
+
+<div class="ci-brk" id="cibrk2">💪 ممتاز! أكثر من النصف</div>
+
+<div class="ci-q" id="ciq12">
+  <div class="ci-num">Q12</div>
+  <div class="ci-text">He is ___ player in the team. <span class="ci-hint">(fast → superlative)</span></div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,false)">the fastes</button>
+    <button class="ci-btn" onclick="ciPick(this,true)">the fastest</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">faster</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">more fast</button>
+  </div>
+</div>
+<div class="ci-q" id="ciq13">
+  <div class="ci-num">Q13</div>
+  <div class="ci-text">This exercise is ___ than the last one. <span class="ci-hint">(easy)</span></div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,false)">more easy</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">easyer</button>
+    <button class="ci-btn" onclick="ciPick(this,true)">easier</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">easiest</button>
+  </div>
+</div>
+<div class="ci-q" id="ciq14">
+  <div class="ci-num">Q14</div>
+  <div class="ci-text">She is ___ person I know. <span class="ci-hint">(friendly → superlative)</span></div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,false)">the most friendly</button>
+    <button class="ci-btn" onclick="ciPick(this,true)">the friendliest</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">more friendly</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">friendlier</button>
+  </div>
+</div>
+<div class="ci-q" id="ciq15">
+  <div class="ci-num">Q15</div>
+  <div class="ci-text">That restaurant was ___ than ours. <span class="ci-hint">(cheap)</span></div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,true)">cheaper</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">more cheap</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">cheapest</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">the cheapest</button>
+  </div>
+</div>
+<div class="ci-q" id="ciq16">
+  <div class="ci-num">Q16</div>
+  <div class="ci-text">My sister is three years ___ than my brother. <span class="ci-hint">(young)</span></div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,false)">young</button>
+    <button class="ci-btn" onclick="ciPick(this,true)">younger</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">youngest</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">more young</button>
+  </div>
+</div>
+
+<div class="ci-brk" id="cibrk3">🏆 رائع! قاربت على الانتهاء</div>
+
+<div class="ci-q" id="ciq17">
+  <div class="ci-num">Q17</div>
+  <div class="ci-text">"bad" → the comparative form is ___</div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,false)">badder</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">more bad</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">baddest</button>
+    <button class="ci-btn" onclick="ciPick(this,true)">worse</button>
+  </div>
+</div>
+<div class="ci-q" id="ciq18">
+  <div class="ci-num">Q18</div>
+  <div class="ci-text">Which sentence is CORRECT?</div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,false)">She is more taller than me.</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">He is the most tallest.</button>
+    <button class="ci-btn" onclick="ciPick(this,true)">This is the biggest bag.</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">It's more hotter today.</button>
+  </div>
+</div>
+<div class="ci-q" id="ciq19">
+  <div class="ci-num">Q19</div>
+  <div class="ci-text">"far" → the superlative form is ___</div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,false)">the most far</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">farrest</button>
+    <button class="ci-btn" onclick="ciPick(this,true)">the furthest</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">the farest</button>
+  </div>
+</div>
+<div class="ci-q" id="ciq20">
+  <div class="ci-num">Q20</div>
+  <div class="ci-text">Which sentence is CORRECT?</div>
+  <div class="ci-opts">
+    <button class="ci-btn" onclick="ciPick(this,false)">He is the goodest student.</button>
+    <button class="ci-btn" onclick="ciPick(this,true)">She is the best student.</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">They are the most good.</button>
+    <button class="ci-btn" onclick="ciPick(this,false)">It is gooder than mine.</button>
+  </div>
+</div>
+
+<div class="ci-q" id="ciq21">
+  <div class="ci-num">Q21</div>
+  <div class="ci-text">Egypt is ___ country in Africa. <span class="ci-hint">(large → superlative)</span></div>
+  <div class="ci-fib">
+    <input type="text" class="ci-fib-in" id="fib21" placeholder="type your answer...">
+    <button class="ci-fib-btn" onclick="ciFibCheck(21,'the largest')">Check ✓</button>
+  </div>
+  <div class="ci-fib-fb" id="fib21-fb"></div>
+</div>
+<div class="ci-q" id="ciq22">
+  <div class="ci-num">Q22</div>
+  <div class="ci-text">This coffee is ___ than yesterday's. <span class="ci-hint">(good → comparative)</span></div>
+  <div class="ci-fib">
+    <input type="text" class="ci-fib-in" id="fib22" placeholder="type your answer...">
+    <button class="ci-fib-btn" onclick="ciFibCheck(22,'better')">Check ✓</button>
+  </div>
+  <div class="ci-fib-fb" id="fib22-fb"></div>
+</div>
+<div class="ci-q" id="ciq23">
+  <div class="ci-num">Q23</div>
+  <div class="ci-text">She is ___ girl in the class. <span class="ci-hint">(tall → superlative)</span></div>
+  <div class="ci-fib">
+    <input type="text" class="ci-fib-in" id="fib23" placeholder="type your answer...">
+    <button class="ci-fib-btn" onclick="ciFibCheck(23,'the tallest')">Check ✓</button>
+  </div>
+  <div class="ci-fib-fb" id="fib23-fb"></div>
+</div>
+<div class="ci-q" id="ciq24">
+  <div class="ci-num">Q24</div>
+  <div class="ci-text">Today is ___ than yesterday. <span class="ci-hint">(hot → comparative, double t!)</span></div>
+  <div class="ci-fib">
+    <input type="text" class="ci-fib-in" id="fib24" placeholder="type your answer...">
+    <button class="ci-fib-btn" onclick="ciFibCheck(24,'hotter')">Check ✓</button>
+  </div>
+  <div class="ci-fib-fb" id="fib24-fb"></div>
+</div>
+<div class="ci-q" id="ciq25">
+  <div class="ci-num">Q25</div>
+  <div class="ci-text">This film is ___ than the last one. <span class="ci-hint">(interesting → comparative)</span></div>
+  <div class="ci-fib">
+    <input type="text" class="ci-fib-in" id="fib25" placeholder="type your answer...">
+    <button class="ci-fib-btn" onclick="ciFibCheck(25,'more interesting')">Check ✓</button>
+  </div>
+  <div class="ci-fib-fb" id="fib25-fb"></div>
+</div>
+
+</div><!-- /max-width -->
+</div><!-- /tab-checkit -->
+
+<footer>Unit 8 — Adjectives · الصفات · Descriptive · Comparative · Superlative &nbsp;|&nbsp; MOHAMMED ELHUSEYIN English Learning Platform</footer>
+</div><!-- /main-content -->
+</div><!-- /layout -->
+<script>
+function showTab(id,btn){
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.main-tab').forEach(b=>b.classList.remove('active'));
+  const p=document.getElementById('tab-'+id);
+  if(p)p.classList.add('active');
+  if(btn)btn.classList.add('active');
+}
+function showSub(id,btn){
+  const wrap=btn.closest('div');
+  wrap.querySelectorAll('.sub-tab').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  const parent=wrap.parentElement;
+  parent.querySelectorAll('.sub-panel').forEach(p=>p.classList.remove('active'));
+  const target=document.getElementById('sub-'+id);
+  if(target)target.classList.add('active');
+}
+function jumpTab(id){
+  const btn=document.querySelector(`.main-tab[onclick*="'${id}'"]`);
+  if(btn){showTab(id,btn);window.scrollTo({top:0,behavior:'smooth'});}
+}
+function ttsRead(text,rate=0.85){
+  if(!window.speechSynthesis)return;
+  window.speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(text);
+  u.lang='en-GB';u.rate=rate;
+  window.speechSynthesis.speak(u);
+}
+function ttsStop(){if(window.speechSynthesis)window.speechSynthesis.cancel();}
+function ttsGrammar(type){
+  const t={
+    desc:"Descriptive adjectives describe nouns. They come before the noun or after the verb to be. A tall building. A cold day. The building is tall. The day is cold. Important: adjectives in English never change. We say a big house and big houses — not bigs houses. a beautiful woman and a beautiful man — the same form.",
+    comp:"Comparative adjectives compare two things. For short adjectives we add -er and then than. Tall becomes taller than. Old becomes older than. For adjectives ending in consonant-vowel-consonant, we double the last letter. Big becomes bigger than. Hot becomes hotter than. For adjectives ending in y, we change y to i and add er. Happy becomes happier than. For long adjectives with two or more syllables, we use more before the adjective. More beautiful than. More expensive than. Remember: never use both -er and more together. Say taller not more taller.",
+    sup:"Superlative adjectives describe the highest or lowest degree in a group. For short adjectives we add -est. Tall becomes the tallest. Old becomes the oldest. For CVC adjectives, we double the last letter. Big becomes the biggest. Hot becomes the hottest. For adjectives ending in y, we use iest. Happy becomes the happiest. For long adjectives, we use the most. The most beautiful. The most expensive. After superlatives we use in with places and groups. She is the tallest in the class. We use of with numbers and periods. The best of all. The coldest of the year.",
+    irr:"Irregular adjectives do not follow the rules. You must learn them by heart. Good — better — best. This coffee is better than that one. She is the best student in the school. Bad — worse — worst. The weather today is worse than yesterday. This is the worst film I have ever seen. Far — further — furthest. The station is further than I thought. Little — less — least. Much or many — more — most.",
+    tips:"Spelling rules for comparative and superlative adjectives. Rule one: short adjectives with one syllable, add er or est. Tall, taller, tallest. Rule two: adjectives ending in e, just add r or st. Large, larger, largest. Rule three: consonant-vowel-consonant adjectives, double the last letter and add er or est. Big, bigger, biggest. Hot, hotter, hottest. Rule four: adjectives ending in y after a consonant, change y to i and add er or est. Happy, happier, happiest. Easy, easier, easiest. Rule five: long adjectives with two or more syllables, use more and the most. More beautiful. The most beautiful. Common mistakes to avoid: never say more taller or the most tallest. Never say gooder — say better. Never say baddest — say worst."
+  };
+  ttsRead(t[type]);
+}
+function ttsDlg(id){
+  const t={
+    d1:"What do you think of this jacket? Is it nice? It's lovely! But it looks a bit small. Do you have a bigger size? Yes, this one is larger. It's also cheaper than the first one! Perfect! And the colour is nicer too. I think it's the best one in the shop. You're right. It's more comfortable than the other jacket. I'll take it!",
+    d2:"Shall we go to Mario's or the new Italian place? I think Mario's is better. The food is more delicious there. But the new place is closer and it's cheaper too. True. But Mario's has the friendliest staff in town. And it's quieter. OK, you convinced me. Mario's is definitely the best choice!",
+    d3:"Did you watch the new superhero film last night? Yes! It was amazing. I think it's better than the last one. Really? I thought it was slower. The first film was more exciting. Maybe, but the story is more interesting and the ending is the best part! Well, I think the second film in the series was the worst. This one is better at least.",
+    d4:"Where are you from, Lily? Is it bigger than this city? I'm from Manchester. It's bigger but noisier than here. I prefer it here — it's much quieter and cleaner. Really? I'm from Cairo. It's the largest city in Egypt. It's very busy but the food is the best! Wow! I'd love to visit. Is the weather hotter than here? Much hotter! Summer in Cairo is the hottest time — sometimes forty degrees!",
+    d5:"I'm looking for a new phone. Which one is better — this one or that one? Well, this model is newer and the camera is much better. But it's more expensive. And which is the cheapest phone you have with a good camera? This one here. It's the most popular model this year. The battery life is longer too. Is the screen bigger than this phone? Yes, it's slightly bigger. And it's lighter, which makes it more comfortable to hold."
+  };
+  ttsRead(t[id]);
+}
+let spActiveGroup=null;
+function spPlay(btn,text){
+  if(spActiveGroup){const pp=spActiveGroup.querySelector('.sp-pp');if(pp)pp.textContent='⏸';}
+  spActiveGroup=btn.closest('.sp-group');
+  window.speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(text);
+  u.lang='en-GB';u.rate=0.85;
+  u.onend=u.onerror=()=>{if(spActiveGroup){const pp=spActiveGroup.querySelector('.sp-pp');if(pp)pp.textContent='⏸';}spActiveGroup=null;};
+  window.speechSynthesis.speak(u);
+}
+function spPause(btn){
+  const s=window.speechSynthesis;
+  if(s.paused){s.resume();btn.textContent='⏸';}
+  else if(s.speaking){s.pause();btn.textContent='▶';}
+}
+function spStopBtn(){
+  window.speechSynthesis.cancel();
+  if(spActiveGroup){const pp=spActiveGroup.querySelector('.sp-pp');if(pp)pp.textContent='⏸';spActiveGroup=null;}
+}
+const passageText8="My name is Layla and I have one sister called Sara. We are very different! I am tall and slim, but Sara is short and a little heavy. I have long dark hair and Sara has short blonde hair. I am older than Sara — I am twenty-five and she is twenty-two. People say that Sara is more beautiful than me, but I think we are both pretty! Sara is funnier than me and she is the most popular person in our family. Everyone loves her. At school, Sara was a better student than me. She always got the best marks in her class. But I was better at sports. I was the fastest runner in my school. In our family, our father is the tallest — he is one hundred and ninety centimetres. Our mother is the shortest — she is only one hundred and fifty-five centimetres. Sara and I are somewhere in the middle. We have different jobs now. My job is more interesting than Sara's job, but her salary is higher than mine! She works in the most expensive hotel in the city. We are different, but we are the best friends in the world.";
+function ttsPassage(){ttsRead(passageText8,0.82);}
+function pickComp(btn,type){
+  const q=btn.closest('.read-q');
+  if(q.dataset.done)return;
+  q.dataset.done='1';
+  const btns=q.querySelectorAll('.read-opt');
+  btns.forEach(b=>b.disabled=true);
+  if(type==='right'){btn.classList.add('opt-right');}
+  else{btn.classList.add('opt-wrong');btns.forEach(b=>{if(b.getAttribute('onclick').includes("'right'"))b.classList.add('opt-right');});}
+  const ctx=q.querySelector('.read-ctx');
+  if(ctx)ctx.style.display='block';
+}
+const ciBreaks={6:'cibrk1',12:'cibrk2',17:'cibrk3'};
+let ciScore=0,ciAnswered=0,ciTotal=25;
+function ciUpdateProgress(){
+  const pct=Math.round((ciAnswered/ciTotal)*100);
+  const f=document.getElementById('ci-progress-fill');
+  if(f)f.style.width=pct+'%';
+
+  localStorage.setItem('up8',Math.round(ciAnswered/ciTotal*100));}
+function ciCheckBreakAndDone(){
+  if(ciBreaks[ciAnswered]){const b=document.getElementById(ciBreaks[ciAnswered]);if(b)b.style.display='flex';}
+  if(ciAnswered>=ciTotal){
+    const sp=document.getElementById('ci-score-panel');
+    if(sp){
+      sp.style.display='block';
+      document.getElementById('ci-score-num').textContent=ciScore+'/'+ciTotal;
+      const pct=Math.round((ciScore/ciTotal)*100);
+      document.getElementById('ci-score-fill').style.width=pct+'%';
+      const msgs=['حاول مرة أخرى 💪','جيد! واصل التدريب 📚','ممتاز! أداء قوي 🌟','مثالي! أنت نجم الصفات 🏆'];
+      document.getElementById('ci-score-msg').textContent=msgs[pct<40?0:pct<70?1:pct<100?2:3];
+      sp.scrollIntoView({behavior:'smooth'});
+    }
+  }
+}
+function ciPick(btn,correct){
+  const q=btn.closest('.ci-q');
+  if(q.dataset.done)return;
+  q.dataset.done='1';
+  ciAnswered++;
+  if(correct){ciScore++;btn.classList.add('ci-correct');playSound(true);}
+  else{btn.classList.add('ci-wrong');playSound(false);q.querySelectorAll('.ci-btn').forEach(b=>{if(b.getAttribute('onclick').includes('true'))b.classList.add('ci-correct');});}
+  q.querySelectorAll('.ci-btn').forEach(b=>b.disabled=true);
+  ciUpdateProgress();
+  ciCheckBreakAndDone();
+}
+function ciFibCheck(num,answer){
+  const inp=document.getElementById('fib'+num);
+  const fb=document.getElementById('fib'+num+'-fb');
+  const q=document.getElementById('ciq'+num);
+  if(q.dataset.done)return;
+  const val=inp.value.trim().toLowerCase();
+  q.dataset.done='1';
+  ciAnswered++;
+  inp.disabled=true;
+  document.querySelector('.ci-fib-btn[onclick*="ciFibCheck('+num+',"]').disabled=true;
+  if(val===answer.toLowerCase()){ciScore++;inp.classList.add('ci-fib-ok');fb.textContent='✅ Correct!';fb.style.color='var(--green)';playSound(true);}
+  else{inp.classList.add('ci-fib-err');fb.textContent='❌ Answer: '+answer;fb.style.color='var(--red)';playSound(false);}
+  fb.style.display='block';
+  ciUpdateProgress();
+  ciCheckBreakAndDone();
+}
+function ciReset(){
+  ciScore=0;ciAnswered=0;
+  document.querySelectorAll('.ci-q').forEach(q=>{
+    delete q.dataset.done;
+    q.querySelectorAll('.ci-btn').forEach(b=>{b.disabled=false;b.classList.remove('ci-correct','ci-wrong');});
+    q.querySelectorAll('.ci-fib-in').forEach(i=>{i.disabled=false;i.value='';i.classList.remove('ci-fib-ok','ci-fib-err');});
+    q.querySelectorAll('.ci-fib-btn').forEach(b=>b.disabled=false);
+    q.querySelectorAll('.ci-fib-fb').forEach(f=>{f.textContent='';f.style.display='none';});
+  });
+  document.querySelectorAll('.ci-brk').forEach(b=>b.style.display='none');
+  const sp=document.getElementById('ci-score-panel');if(sp)sp.style.display='none';
+  ciUpdateProgress();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function playSound(ok){
+  try{const ac=new AudioContext();const o=ac.createOscillator();const g=ac.createGain();o.connect(g);g.connect(ac.destination);o.frequency.value=ok?880:300;g.gain.value=0.1;o.start();o.stop(ac.currentTime+0.12);}catch(e){}
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('button.sp').forEach(btn=>{
+    const m=btn.getAttribute('onclick').match(/ttsRead\('(.+?)'\)/);
+    if(!m)return;
+    btn.setAttribute('onclick',`spPlay(this,'${m[1]}')`);
+    const g=document.createElement('div');
+    g.className='sp-group';
+    btn.parentNode.insertBefore(g,btn);
+    g.appendChild(btn);
+    const pp=document.createElement('button');
+    pp.className='sp-pp';pp.textContent='⏸';
+    pp.addEventListener('click',()=>spPause(pp));
+    g.appendChild(pp);
+    const st=document.createElement('button');
+    st.className='sp-st';st.textContent='⏹';
+    st.addEventListener('click',()=>spStopBtn());
+    g.appendChild(st);
+  });
+});
+</script>
+<script src="../media/global-player.js"></script>
+<script>
+(function(){
+  for(var i=1;i<=12;i++){
+    var f=document.getElementById('sp'+i);
+    if(f){var v=parseInt(localStorage.getItem('up'+i)||'0',10);f.style.width=v+'%';}
+  }
+})();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+(function(){
+  var map={1: "up_l1", 2: "up_l2", 3: "up_l3", 4: "up_l4", 5: "up_l5", 6: "up1", 7: "up2", 8: "up3", 9: "up4", 10: "up6", 11: "up5", 12: "up_l12", 13: "up7", 14: "up8", 15: "up9", 16: "up10", 17: "up11", 19: "up_l19", 20: "up_l20", 21: "up_l21", 22: "up_l22", 23: "up_l23", 24: "up_l24", 25: "up_l25", 26: "up_l26", 27: "up_l27", 28: "up_l28", 29: "up_l29", 30: "up_l30", 31: "up_l31", 32: "up_l32", 33: "up_l33", 34: "up_l34", 35: "up_l35", 36: "up_l36", 37: "up_l37", 38: "up_l38", 39: "up_l39", 40: "up_l40", 41: "up_l41", 42: "up_l42", 43: "up_l43", 44: "up_l44", 45: "up_l45", 46: "up_l46"};
+  for(var lid in map){
+    var f=document.getElementById('sp'+lid);
+    if(f){var v=parseInt(localStorage.getItem(map[lid])||'0',10);f.style.width=v+'%';}
+  }
+  setTimeout(function(){
+    var a=document.querySelector('.su-item.su-active');
+    if(a){var u=a.closest('.sidebar-units');if(u)u.scrollTop=Math.max(0,a.offsetTop-a.offsetHeight);}
+  },80);
+})();
+</script>
+<script>
+function toggleSidebar(){
+  var sb=document.querySelector('.sidebar');
+  var bd=document.getElementById('sbBackdrop');
+  if(!sb||!bd)return;
+  sb.classList.toggle('sb-open');
+  bd.classList.toggle('sb-open');
+  document.body.style.overflow=sb.classList.contains('sb-open')?'hidden':'';
+}
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.su-item').forEach(function(a){
+    a.addEventListener('click',function(){
+      var sb=document.querySelector('.sidebar');
+      if(sb&&sb.classList.contains('sb-open'))toggleSidebar();
+    });
+  });
+});
+</script>
+
+<script>
+(function(){
+  // Disable right-click
+  document.addEventListener('contextmenu', function(e){ e.preventDefault(); });
+
+  // Disable keyboard shortcuts
+  document.addEventListener('keydown', function(e){
+    // F12
+    if(e.key==='F12'){e.preventDefault();return false;}
+    // Ctrl+U (view source), Ctrl+S (save), Ctrl+A (select all), Ctrl+P (print)
+    if(e.ctrlKey && ['u','U','s','S','a','A','p','P'].indexOf(e.key)!==-1){
+      e.preventDefault();return false;
+    }
+    // Ctrl+Shift+I (DevTools), Ctrl+Shift+J, Ctrl+Shift+C
+    if(e.ctrlKey && e.shiftKey && ['i','I','j','J','c','C','k','K'].indexOf(e.key)!==-1){
+      e.preventDefault();return false;
+    }
+  });
+
+  // Disable text selection via CSS
+  document.documentElement.style.webkitUserSelect='none';
+  document.documentElement.style.userSelect='none';
+
+  // Allow selection inside inputs/textareas only
+  document.addEventListener('mousedown', function(e){
+    var t=e.target.tagName;
+    if(t==='INPUT'||t==='TEXTAREA'){
+      e.target.style.userSelect='text';
+      e.target.style.webkitUserSelect='text';
+    }
+  });
+
+  // Block drag
+  document.addEventListener('dragstart', function(e){ e.preventDefault(); });
+})();
+</script>
+<button class="float-menu-btn" onclick="toggleSidebar()" aria-label="القائمة">
+  <span></span><span></span><span></span>
+</button>
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=FREE"></script>
+<script src="../media/rv.js"></script>
+</body>
+</html>

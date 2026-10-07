@@ -1,0 +1,2102 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 1: Verb to be | MOHAMMED ELHUSEYIN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --primary:#1a3a6e;--primary-dark:#0f2548;
+  --accent:#f4a624;--al:rgba(244,166,36,0.12);
+  --bg:#0d1b2a;--card:#162030;--card2:#1e2d40;
+  --border:#2d4560;--text:#e8edf5;--muted:#8899b0;
+  --green:#22c55e;--red:#ef4444;--blue:#4a9eff;--purple:#a855f7;
+}
+body{font-family:'Poppins','Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.ar{font-family:'Cairo','Segoe UI',Arial,sans-serif}
+
+/* NAV */
+.topnav{background:var(--primary-dark);border-bottom:2px solid var(--accent);padding:10px 24px;display:flex;align-items:center;justify-content:space-between}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#1a3a6e 0%,#0f2548 55%,#0d1f3c 100%);padding:55px 24px 48px;text-align:center;border-bottom:3px solid var(--accent);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;border-radius:50%;background:rgba(168,85,247,0.06)}
+.hero::after{content:'';position:absolute;bottom:-60px;left:-60px;width:300px;height:300px;border-radius:50%;background:rgba(74,158,255,0.05)}
+.unit-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(168,85,247,0.15);border:1px solid rgba(168,85,247,0.4);color:var(--purple);font-weight:800;padding:6px 18px;border-radius:20px;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
+.hero-title{font-size:clamp(28px,6vw,52px);font-weight:900;color:white;line-height:1.15;margin-bottom:8px}
+.hero-ar{font-size:18px;color:var(--muted);margin-bottom:12px;direction:rtl}
+.hero-sub{color:var(--muted);max-width:620px;margin:0 auto 22px;font-size:14px}
+.hero-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.tag{display:inline-flex;align-items:center;gap:6px;padding:6px 15px;border-radius:16px;font-size:12px;font-weight:700}
+.tag-grammar{background:rgba(168,85,247,0.15);color:var(--purple);border:1px solid rgba(168,85,247,0.3)}
+.tag-other{background:rgba(244,166,36,0.1);color:var(--accent);border:1px solid rgba(244,166,36,0.25)}
+.tag-btn{cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif}
+.tag-btn:hover{transform:translateY(-2px);opacity:.85}
+
+/* MAIN TABS */
+.main-tabs{display:flex;gap:4px;padding:14px 24px;background:var(--primary-dark);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.main-tab{padding:8px 18px;border-radius:8px;border:1px solid transparent;background:none;color:var(--muted);font-weight:700;cursor:pointer;font-size:13px;font-family:'Poppins',sans-serif;transition:all .2s}
+.main-tab.active{background:var(--accent);color:#0d1b2a;border-color:var(--accent)}
+.main-tab:hover:not(.active){background:rgba(244,166,36,.1);color:var(--accent);border-color:rgba(244,166,36,.3)}
+
+/* PANELS */
+.panel{display:none;padding:20px 24px}
+.panel.active{display:block}
+
+/* SPLIT */
+.split{display:grid;grid-template-columns:1fr 390px;gap:16px;align-items:start}
+@media(max-width:900px){.split{grid-template-columns:1fr}}
+
+/* CARD */
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;margin-bottom:16px}
+.card-hd{display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:11px;border-bottom:1px solid var(--border)}
+.card-icon{font-size:17px;width:38px;height:38px;background:var(--al);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.card-title{font-size:16px;font-weight:800;color:white;margin-bottom:5px;display:flex;align-items:center;gap:8px}
+.card-sub{font-family:'Cairo',sans-serif;font-size:13px;color:var(--muted);direction:rtl;margin-top:1px}
+
+/* SUB-TABS */
+.sub-tabs{display:flex;gap:4px;margin:14px 0 18px;flex-wrap:wrap}
+.sub-tab{padding:6px 14px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;border:1px solid var(--border);background:none;color:var(--muted);transition:all .2s;font-family:'Poppins',sans-serif}
+.sub-tab:hover:not(.active){border-color:var(--accent);color:var(--accent)}
+.sub-tab.active{background:rgba(168,85,247,.15);border-color:var(--purple);color:var(--purple)}
+.sub-panel{display:none}.sub-panel.active{display:block}
+
+/* ══ PROFESSIONAL AUDIO PLAYER ══ */
+.ap{background:var(--card2);border:1px solid var(--border);border-radius:11px;padding:11px 14px;margin-bottom:13px}
+.ap-label{font-size:12px;font-weight:700;color:var(--text);margin-bottom:9px;display:flex;align-items:center;gap:6px}
+.ap-row{display:flex;align-items:center;gap:8px}
+.ap-btn{width:30px;height:30px;border-radius:8px;border:1px solid var(--border);background:var(--card);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:12px;transition:all .2s;color:var(--text);flex-shrink:0;font-family:inherit}
+.ap-btn:hover{border-color:var(--accent);color:var(--accent)}
+.ap-play{background:var(--accent) !important;border-color:var(--accent) !important;color:#0d1b2a !important;border-radius:50% !important;width:36px !important;height:36px !important;font-size:14px !important}
+.ap-play:hover{background:#e69920 !important}
+.ap-prog{flex:1;background:var(--border);border-radius:5px;height:7px;cursor:pointer;position:relative;overflow:hidden}
+.ap-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);width:0%;pointer-events:none}
+.ap-time{font-size:11px;color:var(--muted);font-family:'Courier New',monospace;min-width:60px;text-align:right;flex-shrink:0}
+audio{display:none}
+
+/* GRAMMAR TABLE */
+.gram-table{width:100%;border-collapse:separate;border-spacing:0;border-radius:9px;overflow:hidden;font-size:13px;margin-bottom:12px}
+.gram-table th{background:var(--primary);color:white;padding:7px 10px;text-align:left;font-weight:700;font-size:11px}
+.gram-table td{background:var(--card2);padding:6px 10px;border-bottom:1px solid var(--border)}
+.gram-table tr:last-child td{border-bottom:none}
+.gram-table td:first-child{font-weight:700;color:var(--accent)}
+.gram-table td:nth-child(2){font-weight:800;color:white}
+.gram-table td:nth-child(3){font-size:11px;color:var(--muted)}
+code{background:rgba(244,166,36,0.15);color:var(--accent);padding:1px 5px;border-radius:4px;font-family:'Courier New',monospace;font-size:11px}
+
+.note-box{background:rgba(244,166,36,0.08);border:1px solid rgba(244,166,36,0.3);border-radius:8px;padding:9px 12px;margin-top:10px;font-family:'Cairo',sans-serif;direction:rtl;text-align:right;font-size:13px;line-height:1.8}
+.note-red{background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.3);border-radius:8px;padding:9px 12px;margin-top:10px;font-family:'Cairo',sans-serif;direction:rtl;text-align:right;font-size:13px;line-height:1.8}
+.gram-not{background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.3);border-radius:4px;padding:1px 6px;font-size:11px;color:var(--red);display:inline-block}
+
+/* EXAMPLES */
+.sec-div{font-size:11px;font-weight:700;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin:12px 0 8px;display:flex;align-items:center;gap:7px}
+.sec-div::after{content:'';flex:1;height:1px;background:var(--border)}
+.ex-list{display:flex;flex-direction:column;gap:5px}
+.ex-item{background:var(--card2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:7px;padding:6px 10px;display:flex;align-items:center;justify-content:space-between;gap:7px}
+.ex-body{flex:1}
+.ex-text{font-size:13px;color:var(--text)}
+.ex-text b{color:var(--accent)}
+.ex-ar{font-family:'Cairo',sans-serif;font-size:11px;color:var(--muted);direction:rtl;margin-top:1px}
+.tts-btn{background:var(--al);border:1px solid rgba(244,166,36,0.3);color:var(--accent);padding:3px 7px;border-radius:6px;font-size:11px;cursor:pointer;white-space:nowrap;font-family:inherit;transition:all .2s;flex-shrink:0}
+.tts-btn:hover{background:var(--accent);color:#0d1b2a}
+
+/* Q TABLE */
+.q-table{width:100%;border-collapse:separate;border-spacing:0;border-radius:9px;overflow:hidden;font-size:12px;margin-bottom:11px}
+.q-table th{background:var(--primary);color:white;padding:6px 8px;text-align:left;font-weight:700;font-size:11px}
+.q-table td{background:var(--card2);padding:5px 8px;border-bottom:1px solid var(--border);vertical-align:top}
+.q-table tr:last-child td{border-bottom:none}
+.q-table td:first-child{font-weight:800;color:var(--accent);width:65px}
+.q-table td.be{font-weight:800;color:white;width:36px}
+.q-table td.ans{color:var(--green)}
+.q-table td.wr{color:var(--red);font-size:11px}
+
+/* MISTAKES TABLE */
+.mistake-table{width:100%;border-collapse:separate;border-spacing:0;border-radius:9px;overflow:hidden;font-size:12px}
+.mistake-table th{padding:6px 10px;text-align:left;font-weight:700;font-size:11px}
+.mistake-table th:first-child{background:rgba(239,68,68,0.25);color:var(--red)}
+.mistake-table th:last-child{background:rgba(34,197,94,0.2);color:var(--green)}
+.mistake-table td{padding:5px 10px;border-bottom:1px solid var(--border);font-size:12px}
+.mistake-table tr:last-child td{border-bottom:none}
+.mistake-table td:first-child{background:rgba(239,68,68,0.06);color:var(--red);font-style:italic}
+.mistake-table td:last-child{background:rgba(34,197,94,0.05);color:var(--green);font-weight:600}
+
+/* VOCAB GRID */
+.vocab-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.vocab-item{background:var(--card2);border:1px solid var(--border);border-radius:7px;padding:7px 10px;display:flex;align-items:center;justify-content:space-between}
+.vocab-en{font-size:12px;font-weight:700;color:white}
+.vocab-ar{font-family:'Cairo',sans-serif;font-size:12px;color:var(--accent);direction:rtl}
+
+/* CHECK IT */
+.ci-item{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:12px;margin-bottom:8px}
+.ci-num{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:var(--accent);color:#0d1b2a;border-radius:6px;font-weight:900;font-size:11px;margin-bottom:8px}
+.ci-opts{display:flex;flex-direction:column;gap:5px}
+.ci-opt{display:flex;align-items:center;gap:7px;padding:7px 11px;border-radius:7px;border:2px solid var(--border);background:var(--card);cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif;color:var(--text);font-size:12px;text-align:left;width:100%}
+.ci-opt:hover:not(:disabled){border-color:var(--accent)}
+.ci-opt:disabled{cursor:default}
+.ci-opt.correct{border-color:var(--green);background:rgba(34,197,94,0.1)}
+.ci-opt.wrong{border-color:var(--red);background:rgba(239,68,68,0.07)}
+.ci-letter{width:22px;height:22px;border-radius:5px;background:var(--card2);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:11px;flex-shrink:0;border:1px solid var(--border)}
+.ci-opt.correct .ci-letter{background:var(--green);border-color:var(--green);color:#0d1b2a}
+.ci-opt.wrong .ci-letter{background:var(--red);border-color:var(--red);color:white}
+
+/* BREAK CARDS */
+.break-card{display:none;border-radius:12px;overflow:hidden;margin-bottom:10px;border:1px solid var(--border)}
+.break-card.show{display:block;animation:fadeIn .4s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+
+/* SCORE */
+.score-box{display:none;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.3);border-radius:11px;padding:18px;text-align:center;margin-top:11px}
+.score-emoji{font-size:28px;margin-bottom:4px}
+.score-num{font-size:20px;font-weight:900;color:var(--green)}
+.score-msg{font-family:'Cairo',sans-serif;font-size:12px;color:var(--muted);margin-top:4px;direction:rtl}
+
+/* DIALOGUE PLAYER */
+.dialogue{background:var(--card2);border:1px solid var(--border);border-radius:10px;margin-bottom:9px;overflow:hidden}
+.dlg-hd{display:flex;align-items:center;gap:6px;padding:8px 13px;background:rgba(255,255,255,0.02);border-bottom:1px solid var(--border);flex-wrap:wrap}
+.dlg-num{font-size:11px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:1px;flex:1}
+.dp-btn{border:1px solid var(--border);background:var(--card);cursor:pointer;border-radius:7px;padding:4px 10px;font-size:11px;font-weight:700;color:var(--text);font-family:'Poppins',sans-serif;transition:all .2s;display:flex;align-items:center;gap:4px}
+.dp-btn:hover{border-color:var(--accent);color:var(--accent)}
+.dp-btn.dp-play-btn{background:var(--al);border-color:rgba(244,166,36,0.3);color:var(--accent)}
+.dp-btn.playing{background:var(--accent);border-color:var(--accent);color:#0d1b2a}
+.dp-bar{width:100%;background:var(--border);border-radius:3px;height:3px;margin-top:6px;overflow:hidden}
+.dp-fill{height:100%;background:var(--accent);width:0%}
+.dlg-body{padding:10px 13px;display:flex;flex-direction:column;gap:5px}
+.dlg-line{display:flex;gap:8px;align-items:flex-start}
+.dlg-sp{font-size:11px;font-weight:800;color:var(--accent);min-width:13px;padding-top:2px;flex-shrink:0}
+.dlg-sp.b{color:var(--blue)}
+.dlg-sp.c{color:var(--purple)}
+.dlg-txt{font-size:13px;color:var(--text)}
+.dlg-ar{font-family:'Cairo',sans-serif;font-size:13px;color:var(--text);direction:rtl;margin-top:1px}
+
+/* LISTENING */
+.listen-instr{background:var(--card2);border:1px solid var(--border);border-left:4px solid var(--blue);border-radius:9px;padding:10px 13px;margin-bottom:13px;font-family:'Cairo',sans-serif;font-size:13px;color:var(--text);direction:rtl;text-align:right;line-height:1.8}
+.words-grid{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:14px}
+.word-btn{padding:7px 14px;border-radius:8px;border:2px solid var(--border);background:var(--card2);color:var(--text);font-size:13px;font-weight:600;cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif}
+.word-btn:hover:not(.correct):not(.wrong){border-color:var(--accent);color:var(--accent)}
+.word-btn.selected{border-color:var(--accent);background:var(--al);color:var(--accent)}
+.word-btn.correct{border-color:var(--green);background:rgba(34,197,94,0.12);color:var(--green)}
+.word-btn.wrong{border-color:var(--red);background:rgba(239,68,68,0.1);color:var(--red)}
+.btn-row{display:flex;gap:8px;flex-wrap:wrap}
+.check-btn{background:var(--accent);border:none;color:#0d1b2a;padding:8px 22px;border-radius:9px;font-size:13px;font-weight:800;cursor:pointer;font-family:'Poppins',sans-serif;transition:all .2s}
+.check-btn:hover{background:#e69920}
+.reset-btn{background:var(--card2);border:2px solid var(--border);color:var(--muted);padding:8px 18px;border-radius:9px;font-size:13px;font-weight:700;cursor:pointer;font-family:'Poppins',sans-serif;transition:all .2s}
+.reset-btn:hover{border-color:var(--blue);color:var(--blue)}
+.listen-score{display:none;margin-top:11px;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.3);border-radius:9px;padding:11px;text-align:center;font-size:14px;font-weight:700;color:var(--green);font-family:'Cairo',sans-serif;direction:rtl}
+
+/* BOTTOM NAV */
+.bottom-nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0 24px;border-top:1px solid var(--border);margin-top:4px}
+.bnav-btn{display:inline-flex;align-items:center;gap:6px;padding:7px 15px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;text-decoration:none;border:2px solid var(--border);background:var(--card);color:var(--text);transition:all .2s;font-family:'Poppins',sans-serif}
+.bnav-btn:hover{border-color:var(--accent);color:var(--accent)}
+.bnav-btn.disabled{opacity:.35;cursor:default;pointer-events:none}
+
+/* CHECK IT PANEL */
+.ci-wrap{max-width:100%;padding:12px 16px}
+.ci-q{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px 14px;margin-bottom:7px;transition:border-color .2s;border-left:3px solid rgba(168,85,247,.4)}
+.ci-q.ci-fib-q{border-left-color:rgba(74,158,255,.5)}
+.ci-q.answered{opacity:.9}
+.ci-q-head{display:flex;align-items:center;gap:6px;margin-bottom:9px;flex-wrap:nowrap}
+.ci-q-num{width:22px;height:22px;border-radius:50%;background:rgba(168,85,247,.18);border:1.5px solid rgba(168,85,247,.4);color:var(--purple);font-size:10px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ci-fib-q .ci-q-num{background:rgba(74,158,255,.15);border-color:rgba(74,158,255,.4);color:var(--blue)}
+.ci-q-tag{background:rgba(74,158,255,.08);border:1px solid rgba(74,158,255,.18);color:var(--blue);font-size:9px;font-weight:800;padding:2px 8px;border-radius:8px;text-transform:uppercase;letter-spacing:.4px;white-space:nowrap}
+.ci-type-badge{font-size:9px;font-weight:800;padding:2px 8px;border-radius:8px;text-transform:uppercase;letter-spacing:.4px;margin-left:auto;flex-shrink:0}
+.ci-type-mcq{background:rgba(168,85,247,.12);border:1px solid rgba(168,85,247,.25);color:var(--purple)}
+.ci-type-fib{background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.25);color:var(--blue)}
+.ci-q-prompt{font-size:12px;color:var(--muted);font-style:italic;margin-bottom:8px;padding:5px 10px;background:rgba(255,255,255,.03);border-left:2px solid var(--border);border-radius:0 6px 6px 0}
+.ci-opts{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.ci-btn{background:var(--card2);border:1.5px solid var(--border);color:var(--text);padding:9px 12px;border-radius:9px;font-size:12.5px;cursor:pointer;text-align:left;font-family:'Poppins',sans-serif;transition:all .2s;display:flex;align-items:center;gap:9px;line-height:1.35;width:100%}
+.ci-btn:hover:not(.done){background:rgba(244,166,36,.07);border-color:rgba(244,166,36,.45);transform:translateY(-2px)}
+.ci-btn.correct{background:rgba(34,197,94,.1);border-color:var(--green);color:var(--green)}
+.ci-btn.wrong{background:rgba(239,68,68,.1);border-color:var(--red);color:var(--red)}
+.ci-btn.done{cursor:default;transform:none!important}
+.ci-lbl{font-size:11px;font-weight:900;background:rgba(255,255,255,.09);border-radius:5px;padding:2px 7px;flex-shrink:0;min-width:22px;text-align:center}
+.ci-btn.correct .ci-lbl{background:rgba(34,197,94,.2);color:var(--green)}
+.ci-btn.wrong .ci-lbl{background:rgba(239,68,68,.2);color:var(--red)}
+.ci-fib-sent{font-size:13.5px;color:var(--text);font-weight:600;line-height:1.7;margin-bottom:9px}
+.ci-fib-sent b{color:var(--accent)}
+.ci-fib-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:4px}
+.ci-fib-input{background:var(--card2);border:2px solid var(--border);color:var(--text);padding:7px 13px;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;outline:none;min-width:160px;max-width:240px;transition:border-color .2s,background .2s}
+.ci-fib-input:focus{border-color:var(--accent);background:rgba(244,166,36,.04)}
+.ci-fib-input:disabled{cursor:default}
+.ci-fib-check{background:var(--accent);border:none;color:#0d1b2a;padding:7px 18px;border-radius:8px;font-weight:800;cursor:pointer;font-size:12px;font-family:'Poppins',sans-serif;transition:all .2s;flex-shrink:0}
+.ci-fib-check:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 4px 12px rgba(244,166,36,.3)}
+.ci-fib-check:disabled{opacity:.35;cursor:default;transform:none!important}
+.ci-hint{font-size:10.5px;color:var(--muted);font-style:italic;margin-top:3px}
+.ci-sol{display:none;margin-top:9px;border-radius:9px;overflow:hidden;animation:fadeIn .3s ease}
+.ci-sol.sol-correct{border:1px solid rgba(34,197,94,.25);background:rgba(34,197,94,.05)}
+.ci-sol.sol-wrong{border:1px solid rgba(239,68,68,.2);background:rgba(239,68,68,.04)}
+.ci-sol-head{padding:7px 12px;font-size:11.5px;font-weight:800;border-bottom:1px solid rgba(255,255,255,.05)}
+.ci-sol.sol-correct .ci-sol-head{color:var(--green)}
+.ci-sol.sol-wrong .ci-sol-head{color:var(--red)}
+.ci-sol-body{padding:8px 12px;display:flex;flex-direction:column;gap:4px}
+.ci-sol-ans{font-size:12.5px;font-weight:700;color:var(--accent)}
+.ci-sol-exp{font-size:11.5px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.ci-brk{display:none;background:linear-gradient(135deg,#12285a,#1a1242);border:2px solid var(--purple);border-radius:16px;padding:20px;margin:10px 0;animation:fadeIn .5s ease}
+.ci-brk-emoji{font-size:36px;margin-bottom:8px;text-align:center}
+.ci-brk-title{font-size:15px;font-weight:900;color:var(--purple);margin-bottom:12px;text-align:center}
+.ci-brk-cols{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:560px;margin:0 auto}
+.ci-brk-col{background:rgba(0,0,0,.2);border-radius:10px;padding:12px}
+.ci-brk-col-title{font-size:11px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+.ci-brk-text{font-size:12px;color:var(--text);line-height:1.7}
+.ci-brk-ar{margin-top:12px;font-family:'Cairo',sans-serif;font-size:12px;color:var(--muted);direction:rtl;text-align:center;padding-top:10px;border-top:1px solid rgba(255,255,255,.07)}
+.ci-progress-bar{background:rgba(255,255,255,.07);border-radius:20px;height:7px;overflow:hidden;margin-bottom:5px}
+.ci-progress-fill{background:linear-gradient(90deg,var(--purple),var(--blue));height:100%;border-radius:20px;transition:width .4s ease;width:0%}
+.ci-progress-txt{font-size:11px;color:var(--muted);font-weight:700;display:flex;justify-content:space-between}
+.ci-score{display:none;background:linear-gradient(135deg,var(--card),var(--card2));border:2px solid var(--accent);border-radius:16px;padding:28px;text-align:center;margin-top:12px}
+.ci-score-emoji{font-size:44px;margin-bottom:6px}
+.ci-score-num{font-size:52px;font-weight:900;color:var(--accent);line-height:1}
+.ci-score-of{font-size:16px;color:var(--muted);margin-bottom:10px}
+.ci-score-bar-wrap{background:rgba(255,255,255,.07);border-radius:20px;height:8px;overflow:hidden;max-width:260px;margin:8px auto}
+.ci-score-bar-fill{height:100%;background:linear-gradient(90deg,var(--green),var(--blue));border-radius:20px;width:0%;transition:width 1s ease}
+.ci-score-msg{font-size:16px;font-weight:800;color:var(--text);margin-top:10px}
+.ci-score-ar{font-family:'Cairo',sans-serif;font-size:13px;color:var(--muted);direction:rtl;margin-top:4px}
+.ci-reset{margin-top:14px;background:var(--primary);border:2px solid var(--border);color:var(--text);padding:9px 24px;border-radius:10px;font-size:13px;font-weight:700;cursor:pointer;font-family:'Cairo',sans-serif;transition:all .2s}
+.ci-reset:hover{border-color:var(--accent);color:var(--accent)}
+.ci-hero{background:linear-gradient(135deg,#0f2548,#1a1242);border-bottom:2px solid var(--border);padding:18px 20px}
+.ci-hero-top{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.ci-hero-icon{font-size:28px}
+.ci-hero-title{font-size:19px;font-weight:900;color:var(--text)}
+.ci-hero-sub{font-size:12px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;margin-bottom:10px;text-align:right}
+.ci-hero-badges{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.ci-hero-badge{font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px;border:1px solid}
+.ci-hero-badge.mcq{background:rgba(168,85,247,.12);border-color:rgba(168,85,247,.3);color:var(--purple)}
+.ci-hero-badge.fib{background:rgba(74,158,255,.1);border-color:rgba(74,158,255,.3);color:var(--blue)}
+
+/* ═══ READING TEXT TAB — النص ═══ */
+.rt-wrap{max-width:900px;margin:0 auto}
+.rt-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;margin-bottom:20px}
+.rt-title{font-size:16px;font-weight:800;color:white;margin-bottom:4px;display:flex;align-items:center;gap:8px}
+.rt-sub{font-size:12px;color:var(--muted);margin-bottom:14px;direction:rtl;font-family:'Cairo',sans-serif}
+.rt-legend{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px;padding:10px 14px;background:var(--card2);border-radius:10px;border:1px solid var(--border)}
+.rt-legend-item{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:700}
+.rt-tts-bar{display:flex;gap:8px;margin-bottom:14px}
+.rt-tts-btn{background:var(--card2);border:1px solid var(--blue);color:var(--blue);padding:8px 18px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif}
+.rt-tts-btn:hover{background:rgba(74,158,255,.15);transform:translateY(-1px)}
+.rt-stop-btn{border-color:var(--muted);color:var(--muted)}
+.rt-stop-btn:hover{background:rgba(136,153,176,.1);transform:none}
+.rt-text{font-size:15px;line-height:2.6;color:var(--text);background:var(--card2);border-radius:12px;padding:20px 24px;border:1px solid var(--border)}
+.hl-1{background:rgba(168,85,247,.18);color:var(--purple);border-radius:4px;padding:1px 5px;font-weight:800}
+.hl-2{background:rgba(34,197,94,.15);color:var(--green);border-radius:4px;padding:1px 5px;font-weight:800}
+.hl-3{background:rgba(74,158,255,.15);color:var(--blue);border-radius:4px;padding:1px 5px;font-weight:800}
+.hl-4{background:rgba(244,166,36,.15);color:var(--accent);border-radius:4px;padding:1px 5px;font-weight:800}
+.hl-r{background:rgba(239,68,68,.15);color:var(--red);border-radius:4px;padding:1px 5px;font-weight:800}
+.rt-qs-hd{font-size:15px;font-weight:800;color:white;margin:22px 0 14px;display:flex;align-items:center;gap:8px;border-top:1px solid var(--border);padding-top:20px}
+.rt-q{background:var(--card2);border:1px solid var(--border);border-radius:14px;padding:16px 18px;margin-bottom:12px}
+.rt-q-num{font-size:11px;color:var(--accent);font-weight:800;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:7px}
+.rt-q-txt{font-size:14px;color:var(--text);margin-bottom:10px;line-height:1.6}
+.rt-q-quote{background:rgba(74,158,255,.08);border-left:3px solid var(--blue);border-radius:0 8px 8px 0;padding:8px 14px;margin-bottom:12px;font-size:14px;color:var(--blue);font-style:italic}
+.rt-opts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:4px}
+.rt-opt{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:11px 14px;cursor:pointer;font-size:13px;color:var(--text);transition:all .2s;text-align:right;font-family:'Cairo',sans-serif;direction:rtl;line-height:1.5}
+.rt-opt:hover{border-color:var(--accent);color:var(--accent)}
+.rt-opt.rt-ok{background:rgba(34,197,94,.12);border-color:var(--green);color:var(--green);cursor:default}
+.rt-opt.rt-no{background:rgba(239,68,68,.08);border-color:var(--red);color:var(--red);opacity:.6;cursor:default}
+.rt-explain{display:none;background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.2);border-radius:10px;padding:12px 15px;margin-top:10px;font-size:13px;color:#5eead4;direction:rtl;font-family:'Cairo',sans-serif;line-height:1.8}
+.rt-explain.show{display:block}
+@media(max-width:600px){.rt-opts{grid-template-columns:1fr}}
+
+/* SIDEBAR */
+.layout{display:flex;min-height:100vh}.sidebar{width:30%;max-width:320px;min-width:220px;position:fixed;top:0;left:0;bottom:0;background:var(--primary-dark);border-right:2px solid var(--border);display:flex;flex-direction:column;z-index:200;overflow:hidden}.sidebar-header{padding:18px 20px 14px;border-bottom:2px solid var(--accent);flex-shrink:0}.sidebar-logo{display:flex;align-items:center;gap:10px;margin-bottom:4px}.sidebar-logo-icon{width:34px;height:34px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900;color:#0d1b2a;flex-shrink:0}.sidebar-logo-text{font-family:'Cairo',sans-serif;font-size:15px;font-weight:800;color:white}.sidebar-logo-sub{font-size:10px;color:var(--muted);font-weight:500;margin-top:-1px}.sidebar-label{font-family:'Cairo',sans-serif;font-size:11px;font-weight:700;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-top:12px}.sidebar-units{flex:1;overflow-y:auto;padding:10px 12px;scrollbar-width:thin;scrollbar-color:var(--border) transparent}.sidebar-units::-webkit-scrollbar{width:4px}.sidebar-units::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}.su-item{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;text-decoration:none;margin-bottom:4px;transition:background .2s,transform .2s}.su-item:not(.su-locked):hover{background:rgba(244,166,36,0.12);transform:translateX(3px)}.su-item.su-locked{opacity:.45;cursor:default;pointer-events:none}.su-item.su-active{background:rgba(244,166,36,0.15);border:1px solid rgba(244,166,36,0.3)}.su-num{width:28px;height:28px;border-radius:7px;background:rgba(255,255,255,0.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:var(--accent);flex-shrink:0}.su-item:not(.su-locked) .su-num{background:rgba(244,166,36,0.12);border-color:rgba(244,166,36,0.3)}.su-texts{flex:1;min-width:0}.su-en{font-size:13px;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.su-ar{font-family:'Cairo',sans-serif;font-size:11px;color:var(--muted);direction:rtl;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.su-check{font-size:12px;flex-shrink:0}.su-lock{font-size:11px;color:var(--muted);flex-shrink:0}.main-content{margin-left:min(30%,320px);flex:1;min-width:0}
+
+/* ══ Hamburger (desktop: hidden) ══ */
+.nav-hamburger{display:none;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.3);border-radius:8px;cursor:pointer;flex-direction:column;gap:5px;padding:8px;flex-shrink:0;margin-left:6px}
+.nav-hamburger span{display:block;width:100%;height:2px;background:var(--accent);border-radius:2px}
+/* Backdrop */
+.sb-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:199}
+.sb-backdrop.sb-open{display:block}
+@media(max-width:768px){
+  .sidebar{position:fixed;left:-100%;width:82%;max-width:300px;min-width:unset;transition:left .3s ease;z-index:200}
+  .sidebar.sb-open{left:0}
+  .main-content{margin-left:0}
+  .nav-brand{display:none}
+  .nav-hamburger{display:flex}
+  .topnav{padding:10px 12px;gap:6px}
+  .nav-lesson-name{display:none}
+  .nav-left{gap:5px}
+  .hero{padding:22px 13px 20px}
+  .hero-title{font-size:22px;letter-spacing:-.5px}
+  .hero-ar{font-size:12px}
+  .hero-sub{font-size:12px}
+  .hero-tags{gap:5px;justify-content:center}
+  .tag{font-size:10px;padding:3px 9px}
+  .rule-section{padding:0 12px}
+  .read-wrap{padding:0 12px}
+  .ci-wrap{padding:12px 12px}
+  .ci-hero{padding:18px 12px}
+  .dlg-block{padding:0 12px}
+  .eu-cat-grid{grid-template-columns:1fr}
+  .nu-scale{gap:3px}
+  .nu-word{font-size:10px;padding:3px 7px}
+  .nu-cmp-head,.nu-cmp-row{grid-template-columns:1fr 1fr;font-size:10px}
+  .nu-cmp-head span:last-child,.nu-cmp-row span:last-child{display:none}
+  .reg-ladder{padding:10px 12px}
+  .cmp-table{font-size:11px}
+  .chat-wrap{padding:0 4px}
+  .ci-q{margin-bottom:10px}
+  .ci-opts{gap:5px}
+  .ci-btn{font-size:12px;padding:9px 10px}
+  .vocab-grid{grid-template-columns:1fr 1fr}
+  .rq-opts{gap:5px}
+}
+
+
+.dlg-card{background:var(--card);border:1px solid var(--border);border-radius:16px;margin-bottom:16px;overflow:hidden}
+.dlg-header{background:linear-gradient(to right,var(--primary),#1a1a4e);padding:13px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.dlg-meta{flex:1}
+.dlg-num{font-size:10px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:2px}
+.dlg-title{font-weight:800;font-size:14px;color:white}
+.dlg-ctx{font-size:11px;color:rgba(255,255,255,.5);font-style:italic;margin-top:2px}
+.dlg-tts{background:rgba(244,166,36,.15);border:1px solid rgba(244,166,36,.4);color:var(--accent);padding:6px 14px;border-radius:8px;font-size:11px;font-weight:700;cursor:pointer;font-family:'Poppins',sans-serif;transition:all .2s;white-space:nowrap}
+.dlg-tts:hover{background:rgba(244,166,36,.3)}
+.dlg-body{padding:20px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:640px){.dlg-body{grid-template-columns:1fr}}
+.dlg-col-head{font-size:10px;font-weight:700;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+.bubble{padding:9px 13px;border-radius:12px;font-size:13px;line-height:1.55;margin-bottom:7px}
+.bubble-a{background:rgba(26,58,110,0.5);border:1px solid rgba(74,158,255,0.2)}
+.bubble-b{background:var(--card2);border:1px solid var(--border)}
+.bubble-name{font-size:9px;font-weight:800;color:var(--muted);margin-bottom:4px;letter-spacing:.5px;text-transform:uppercase}
+.bubble-name.b{color:var(--accent)}
+.bubble-ar{direction:rtl;font-family:'Cairo',sans-serif;font-size:13px;color:var(--text)}
+.layout{display:flex;min-height:100vh}
+.sidebar{width:30%;max-width:320px;min-width:220px;position:fixed;top:0;left:0;bottom:0;background:var(--primary-dark);border-right:2px solid var(--border);display:flex;flex-direction:column;z-index:200;overflow:hidden}
+.sidebar-header{padding:18px 20px 14px;border-bottom:2px solid var(--accent);flex-shrink:0}
+.sidebar-logo{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+.sidebar-logo-icon{width:34px;height:34px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900;color:#0d1b2a;flex-shrink:0}
+.sidebar-logo-text{font-family:'Cairo',sans-serif;font-size:15px;font-weight:800;color:white}
+.sidebar-logo-sub{font-size:10px;color:var(--muted);font-weight:500;margin-top:-1px}
+.sidebar-label{font-family:'Cairo',sans-serif;font-size:11px;font-weight:700;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-top:12px}
+.sidebar-units{flex:1;overflow-y:auto;padding:10px 12px;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+.sidebar-units::-webkit-scrollbar{width:4px}
+.sidebar-units::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+.su-item{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;text-decoration:none;margin-bottom:4px;transition:background .2s,transform .2s}
+.su-item:not(.su-locked):hover{background:rgba(244,166,36,0.12);transform:translateX(3px)}
+.su-item.su-locked{opacity:.45;cursor:default;pointer-events:none}
+.su-item.su-active{background:rgba(244,166,36,0.15);border:1px solid rgba(244,166,36,0.3)}
+.su-num{width:28px;height:28px;border-radius:7px;background:rgba(255,255,255,0.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:var(--accent);flex-shrink:0}
+.su-item:not(.su-locked) .su-num{background:rgba(244,166,36,0.12);border-color:rgba(244,166,36,0.3)}
+.su-texts{flex:1;min-width:0}
+.su-en{font-size:13px;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.su-ar{font-family:'Cairo',sans-serif;font-size:11px;color:var(--muted);direction:rtl;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.su-check{font-size:12px;flex-shrink:0}
+.su-lock{font-size:11px;color:var(--muted);flex-shrink:0}
+.main-content{margin-left:min(30%,320px);flex:1;min-width:0}
+footer{padding:20px 24px;text-align:center;color:var(--muted);font-size:12px;border-top:1px solid var(--border);margin-top:10px}
+
+/* ══ Hamburger (desktop: hidden) ══ */
+.nav-hamburger{display:none;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.3);border-radius:8px;cursor:pointer;flex-direction:column;gap:5px;padding:8px;flex-shrink:0;margin-left:6px}
+.nav-hamburger span{display:block;width:100%;height:2px;background:var(--accent);border-radius:2px}
+/* Backdrop */
+.sb-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:199}
+.sb-backdrop.sb-open{display:block}
+@media(max-width:768px){
+  .sidebar{position:fixed;left:-100%;width:82%;max-width:300px;min-width:unset;transition:left .3s ease;z-index:200}
+  .sidebar.sb-open{left:0}
+  .main-content{margin-left:0}
+  .nav-brand{display:none}
+  .nav-hamburger{display:flex}
+  .topnav{padding:10px 12px;gap:6px}
+  .nav-lesson-name{display:none}
+  .nav-left{gap:5px}
+  .hero{padding:22px 13px 20px}
+  .hero-title{font-size:22px;letter-spacing:-.5px}
+  .hero-ar{font-size:12px}
+  .hero-sub{font-size:12px}
+  .hero-tags{gap:5px;justify-content:center}
+  .tag{font-size:10px;padding:3px 9px}
+  .rule-section{padding:0 12px}
+  .read-wrap{padding:0 12px}
+  .ci-wrap{padding:12px 12px}
+  .ci-hero{padding:18px 12px}
+  .dlg-block{padding:0 12px}
+  .eu-cat-grid{grid-template-columns:1fr}
+  .nu-scale{gap:3px}
+  .nu-word{font-size:10px;padding:3px 7px}
+  .nu-cmp-head,.nu-cmp-row{grid-template-columns:1fr 1fr;font-size:10px}
+  .nu-cmp-head span:last-child,.nu-cmp-row span:last-child{display:none}
+  .reg-ladder{padding:10px 12px}
+  .cmp-table{font-size:11px}
+  .chat-wrap{padding:0 4px}
+  .ci-q{margin-bottom:10px}
+  .ci-opts{gap:5px}
+  .ci-btn{font-size:12px;padding:9px 10px}
+  .vocab-grid{grid-template-columns:1fr 1fr}
+  .rq-opts{gap:5px}
+}
+
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+/* some/any pill styles */
+.pill-wrap{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.pill{padding:5px 14px;border-radius:20px;font-size:12.5px;font-weight:800}
+.pill-green{background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.35);color:var(--green)}
+.pill-blue{background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.3);color:var(--blue)}
+.pill-red{background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3);color:var(--red)}
+/* Reading */
+.read-tts-bar{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;align-items:center}
+.read-label{font-size:12px;font-weight:700;color:var(--muted)}
+.read-pass{background:var(--card2);border:1px solid var(--border);border-radius:14px;padding:22px;font-size:14px;line-height:1.9;margin-bottom:24px}
+.read-pass p{margin-bottom:12px}
+.read-pass p:last-child{margin-bottom:0}
+.read-pass b{color:var(--accent);font-weight:700}
+.comp-section-title{font-size:14px;font-weight:800;color:var(--accent);margin-bottom:14px;text-transform:uppercase;letter-spacing:1px}
+.read-q{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:12px}
+.read-q-text{font-weight:700;font-size:14px;margin-bottom:12px;color:var(--text);line-height:1.4}
+.read-opts{display:flex;flex-direction:column;gap:7px}
+.read-opt{background:var(--card2);border:1px solid var(--border);color:var(--text);padding:9px 14px;border-radius:8px;font-size:13px;cursor:pointer;text-align:left;font-family:'Poppins',sans-serif;transition:all .2s;display:flex;align-items:center;gap:8px}
+.read-opt:hover:not(.done){background:rgba(244,166,36,.06);border-color:rgba(244,166,36,.35);transform:translateY(-1px)}
+.read-opt.correct{background:rgba(34,197,94,.12);border-color:var(--green);color:var(--green)}
+.read-opt.wrong{background:rgba(239,68,68,.12);border-color:var(--red);color:var(--red)}
+.read-opt.done{cursor:default;transform:none!important}
+.read-ctx{background:linear-gradient(135deg,rgba(26,58,110,.55),rgba(15,37,72,.55));border:1px solid rgba(244,166,36,.22);border-radius:14px;padding:16px 22px;margin-bottom:20px;display:flex;flex-wrap:wrap;gap:20px;align-items:center}
+.read-ctx-fact{display:flex;flex-direction:column;gap:2px}
+.read-ctx-label{font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+.read-ctx-val{font-size:13.5px;font-weight:800;color:var(--text)}
+.read-ctx-sep{width:1px;background:var(--border);align-self:stretch}
+.read-vocab-wrap{margin:18px 0}
+.read-vocab-title{font-size:11px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.read-vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:7px}
+.read-vocab-item{background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:8px 12px}
+.read-vocab-en{font-size:13px;font-weight:700;color:var(--accent)}
+.read-vocab-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-top:2px}
+/* Check It */
+.ci-hero{background:linear-gradient(135deg,#12285a 0%,#1a1242 60%,#0d1b2a 100%);padding:36px 24px 30px;text-align:center;border-bottom:2px solid var(--accent)}
+.ci-hero-icon{font-size:38px;margin-bottom:10px}
+.ci-hero-title{font-size:clamp(22px,5vw,36px);font-weight:900;color:white;margin-bottom:6px}
+.ci-hero-sub{color:var(--muted);font-size:13px;max-width:460px;margin:0 auto}
+.ci-hero-types{display:flex;gap:10px;justify-content:center;margin-top:14px;flex-wrap:wrap}
+.ci-progress-wrap{background:var(--primary-dark);padding:10px 24px;border-bottom:1px solid var(--border);position:sticky;top:52px;z-index:99}
+.ci-progress-inner{max-width:760px;margin:0 auto}
+.ci-progress-bar{background:rgba(255,255,255,.07);border-radius:20px;height:7px;overflow:hidden;margin-bottom:5px}
+.ci-progress-fill{background:linear-gradient(90deg,var(--accent),var(--blue));height:100%;border-radius:20px;transition:width .4s ease;width:0%}
+.ci-progress-txt{font-size:11px;color:var(--muted);font-weight:700;display:flex;justify-content:space-between}
+.ci-wrap{max-width:100%;padding:12px 16px}
+.ci-q{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px 14px;margin-bottom:7px;transition:border-color .2s;border-left:3px solid rgba(244,166,36,.4)}
+.ci-q.ci-fib-q{border-left-color:rgba(74,158,255,.5)}
+.ci-q-head{display:flex;align-items:center;gap:6px;margin-bottom:9px;flex-wrap:nowrap}
+.ci-q-num{width:22px;height:22px;border-radius:50%;background:rgba(244,166,36,.18);border:1.5px solid rgba(244,166,36,.4);color:var(--accent);font-size:10px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ci-fib-q .ci-q-num{background:rgba(74,158,255,.15);border-color:rgba(74,158,255,.4);color:var(--blue)}
+.ci-q-tag{background:rgba(244,166,36,.08);border:1px solid rgba(244,166,36,.18);color:var(--accent);font-size:9px;font-weight:800;padding:2px 8px;border-radius:8px;text-transform:uppercase;letter-spacing:.4px;white-space:nowrap}
+.ci-type-badge{font-size:9px;font-weight:800;padding:2px 8px;border-radius:8px;text-transform:uppercase;letter-spacing:.4px;margin-left:auto;flex-shrink:0}
+.ci-type-mcq{background:rgba(244,166,36,.12);border:1px solid rgba(244,166,36,.25);color:var(--accent)}
+.ci-type-fib{background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.25);color:var(--blue)}
+.ci-q-prompt{font-size:12px;color:var(--muted);font-style:italic;margin-bottom:8px;padding:5px 10px;background:rgba(255,255,255,.03);border-left:2px solid var(--border);border-radius:0 6px 6px 0}
+.ci-opts{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.ci-btn{background:var(--card2);border:1.5px solid var(--border);color:var(--text);padding:9px 12px;border-radius:9px;font-size:12.5px;cursor:pointer;text-align:left;font-family:'Poppins',sans-serif;transition:all .2s;display:flex;align-items:center;gap:9px;line-height:1.35;width:100%}
+.ci-btn:hover:not(.done){background:rgba(244,166,36,.07);border-color:rgba(244,166,36,.45);transform:translateY(-2px)}
+.ci-btn.ci-correct{background:rgba(34,197,94,.1);border-color:var(--green);color:var(--green)}
+.ci-btn.ci-wrong{background:rgba(239,68,68,.1);border-color:var(--red);color:var(--red)}
+.ci-lbl{font-size:11px;font-weight:900;background:rgba(255,255,255,.09);border-radius:5px;padding:2px 7px;flex-shrink:0;min-width:22px;text-align:center}
+.ci-btn.ci-correct .ci-lbl{background:rgba(34,197,94,.2);color:var(--green)}
+.ci-btn.ci-wrong .ci-lbl{background:rgba(239,68,68,.2);color:var(--red)}
+.ci-fib-sent{font-size:13.5px;color:var(--text);font-weight:600;line-height:1.7;margin-bottom:9px}
+.ci-fib-sent b{color:var(--accent)}
+.ci-fib-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:4px}
+.ci-fib-input{background:var(--card2);border:2px solid var(--border);color:var(--text);padding:7px 13px;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;outline:none;min-width:160px;max-width:260px;transition:border-color .2s}
+.ci-fib-input:focus{border-color:var(--accent);background:rgba(244,166,36,.04)}
+.ci-fib-check{background:var(--accent);border:none;color:#0d1b2a;padding:7px 18px;border-radius:8px;font-weight:800;cursor:pointer;font-size:12px;font-family:'Poppins',sans-serif;transition:all .2s;flex-shrink:0}
+.ci-fib-check:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 4px 12px rgba(244,166,36,.3)}
+.ci-fib-check:disabled{opacity:.35;cursor:default;transform:none!important}
+.ci-hint{font-size:10.5px;color:var(--muted);font-style:italic;margin-top:3px}
+.ci-sol{display:none;margin-top:9px;border-radius:9px;overflow:hidden;animation:fadeIn .3s ease}
+.ci-sol-head{padding:7px 12px;font-size:11.5px;font-weight:800;border-bottom:1px solid rgba(255,255,255,.05)}
+.ci-sol-body{padding:8px 12px;display:flex;flex-direction:column;gap:4px}
+.ci-sol-ans{font-size:12.5px;font-weight:700;color:var(--accent)}
+.ci-sol-exp{font-size:11.5px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.ci-brk{display:none;background:linear-gradient(135deg,#12285a,#1a1242);border:2px solid var(--accent);border-radius:20px;padding:28px 24px;margin:16px 0;text-align:center;animation:fadeIn .5s ease;position:relative;overflow:hidden}
+.ci-brk::before{content:'';position:absolute;top:-50px;right:-50px;width:200px;height:200px;border-radius:50%;background:rgba(244,166,36,.07);pointer-events:none}
+.ci-brk-emoji{font-size:44px;margin-bottom:10px}
+.ci-brk-title{font-size:17px;font-weight:900;color:var(--accent);margin-bottom:16px}
+.ci-brk-cols{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:580px;margin:0 auto;text-align:left}
+@media(max-width:580px){.ci-brk-cols{grid-template-columns:1fr}}
+.ci-brk-col{background:rgba(255,255,255,.04);border:1px solid rgba(244,166,36,.2);border-radius:12px;padding:14px 16px}
+.ci-brk-col-title{font-size:10px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid rgba(244,166,36,.2)}
+.ci-brk-text{font-size:13px;color:var(--text);line-height:1.75}
+.ci-brk-text b{color:var(--accent)}
+.ci-brk-ar{font-size:12px;color:var(--muted);margin-top:14px;direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.ci-score{display:none;background:linear-gradient(135deg,#0f2548,#1a1242);border:2px solid var(--accent);border-radius:24px;padding:44px 32px;text-align:center;margin-top:24px;position:relative;overflow:hidden;animation:fadeIn .6s ease}
+.ci-score::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,rgba(244,166,36,.07) 0%,transparent 65%);pointer-events:none}
+.ci-score-emoji{font-size:60px;margin-bottom:14px}
+.ci-score-num{font-size:68px;font-weight:900;color:var(--accent);line-height:1;margin-bottom:4px}
+.ci-score-of{font-size:18px;color:var(--muted);margin-bottom:18px}
+.ci-score-bar-wrap{background:rgba(255,255,255,.06);border-radius:20px;height:10px;max-width:320px;margin:0 auto 24px;overflow:hidden}
+.ci-score-bar-fill{height:100%;border-radius:20px;background:linear-gradient(90deg,var(--accent),var(--green));transition:width 1.2s ease;width:0%}
+.ci-score-msg{font-size:18px;font-weight:900;color:white;margin-bottom:6px}
+.ci-score-ar{font-size:14px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;margin-bottom:24px;line-height:1.6}
+.ci-reset{background:var(--accent);border:none;color:#0d1b2a;padding:13px 32px;border-radius:12px;font-weight:900;cursor:pointer;font-family:'Poppins',sans-serif;font-size:14px;transition:all .25s;letter-spacing:.5px}
+.ci-reset:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(244,166,36,.35)}
+.chat-wrap{padding:18px 24px 26px;display:flex;flex-direction:column;gap:14px;background-image:radial-gradient(circle,rgba(244,166,36,0.22) 1.5px,transparent 1.5px),radial-gradient(circle,rgba(74,158,255,0.22) 1.5px,transparent 1.5px);background-size:28px 28px;background-position:0 0,14px 14px}
+.chat-msg{display:flex;flex-direction:column;max-width:70%}
+.chat-msg.right{align-self:flex-end;align-items:flex-end}
+.chat-msg.left{align-self:flex-start;align-items:flex-start}
+.chat-name-tag{font-size:11px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;margin-bottom:5px;padding:0 4px}
+.chat-msg.right .chat-name-tag{color:var(--accent)}
+.chat-msg.left .chat-name-tag{color:var(--blue)}
+.chat-bubble{padding:14px 17px 10px;border-radius:20px;width:100%}
+.chat-msg.right .chat-bubble{background:rgba(55,36,6,0.75);border:1px solid rgba(244,166,36,0.4);border-bottom-right-radius:4px;box-shadow:0 6px 28px rgba(0,0,0,0.65),0 0 18px rgba(244,166,36,0.22)}
+.chat-msg.left .chat-bubble{background:rgba(12,32,72,0.8);border:1px solid rgba(74,158,255,0.35);border-bottom-left-radius:4px;box-shadow:0 6px 28px rgba(0,0,0,0.65),0 0 18px rgba(74,158,255,0.20)}
+.chat-en{font-size:15px;color:var(--text);line-height:1.65;font-weight:500}
+.chat-en b{color:var(--accent)}
+.chat-msg.left .chat-en b{color:var(--blue)}
+.chat-ar{font-size:14px;color:rgba(232,237,245,0.8);direction:rtl;font-family:'Cairo',sans-serif;line-height:1.75;border-top:1px solid rgba(255,255,255,0.09);padding-top:9px;margin-top:9px}
+.chat-bubble-foot{display:flex;justify-content:flex-end;margin-top:9px;padding-top:7px;border-top:1px solid rgba(255,255,255,0.07)}
+.chat-sp-btn{font-size:14px;cursor:pointer;padding:5px 13px;border-radius:20px;transition:all .2s;line-height:1;font-weight:700;letter-spacing:.3px}
+.chat-msg.right .chat-sp-btn{background:rgba(244,166,36,0.18);border:1px solid rgba(244,166,36,0.45);color:var(--accent)}
+.chat-msg.left .chat-sp-btn{background:rgba(74,158,255,0.15);border:1px solid rgba(74,158,255,0.4);color:var(--blue)}
+.chat-sp-btn:hover{transform:scale(1.08);filter:brightness(1.25)}
+.su-prog{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:6px;overflow:hidden}
+.su-prog-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:2px;width:0%;transition:width .6s ease}
+
+.su-level-hd{padding:8px 12px 5px;margin-top:8px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(255,255,255,.05)}
+.su-level-code{font-size:11px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;padding:2px 8px;border-radius:5px;display:inline-block}
+.su-level-name{font-family:'Cairo',sans-serif;font-size:12px;font-weight:700;color:#f4c430;direction:rtl;margin:0;line-height:1}
+.lvl-a1{background:rgba(52,211,153,.15);color:#34d399;border:1px solid rgba(52,211,153,.35)}
+.lvl-a2{background:rgba(74,158,255,.15);color:#4a9eff;border:1px solid rgba(74,158,255,.35)}
+.lvl-b1{background:rgba(245,158,11,.15);color:#f59e0b;border:1px solid rgba(245,158,11,.35)}
+.lvl-b2{background:rgba(244,166,36,.15);color:var(--accent);border:1px solid rgba(244,166,36,.35)}
+.lvl-b2p{background:rgba(251,146,60,.15);color:#fb923c;border:1px solid rgba(251,146,60,.35)}
+.lvl-c1{background:rgba(168,85,247,.15);color:#a855f7;border:1px solid rgba(168,85,247,.35)}
+.su-coming{opacity:.28;cursor:default;pointer-events:none}
+.su-prog{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:6px;overflow:hidden}
+.su-prog-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:2px;width:0%;transition:width .6s ease}
+
+.nav-home-btn{display:inline-flex;align-items:center;gap:6px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.4);color:var(--accent);font-size:12px;font-weight:800;padding:5px 13px;border-radius:8px;text-decoration:none;transition:all .2s;white-space:nowrap;flex-shrink:0}
+.nav-home-btn:hover{background:rgba(244,166,36,.25);transform:translateY(-2px)}
+.nav-lesson-badge{background:var(--accent);color:#0a1628;font-size:12px;font-weight:900;padding:5px 13px;border-radius:7px;white-space:nowrap;letter-spacing:.3px;flex-shrink:0}
+.nav-lesson-name{font-size:13px;color:rgba(232,237,245,.7);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-sep{color:rgba(136,153,176,.5);font-size:13px;flex-shrink:0}
+.nav-left{display:flex;align-items:center;gap:8px;flex:1;min-width:0}
+.nav-right{display:flex;align-items:center;flex-shrink:0}
+</style>
+
+<style>
+/* Watermark on print */
+@media print {
+  body::before {
+    content: 'Mohammed Elhuseyin — English Learning Platform — محمية الحقوق';
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-35deg);
+    font-size: 48px;
+    font-weight: 900;
+    color: rgba(244,166,36,0.18);
+    z-index: 9999;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+}
+</style>
+
+<style>
+.float-menu-btn{display:none;position:fixed;bottom:22px;left:18px;z-index:9998;width:48px;height:48px;background:var(--primary-dark,#0f2548);border:2px solid rgba(244,166,36,.5);border-radius:14px;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:12px;box-shadow:0 4px 20px rgba(0,0,0,.4);transition:transform .15s,box-shadow .15s}
+.float-menu-btn:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,.5)}
+.float-menu-btn span{display:block;width:22px;height:2px;background:#f4a624;border-radius:2px;transition:all .25s}
+@media(max-width:768px){.float-menu-btn{display:flex}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-logo">
+      <div class="sidebar-logo-icon">A</div>
+      <div><div class="sidebar-logo-text ar">MOHAMMED ELHUSEYIN</div><div class="sidebar-logo-sub">English Learning Platform</div></div>
+    </div>
+    <div class="sidebar-label ar">الوحدات الدراسية</div>
+  </div>
+  <div class="sidebar-units">
+  <div class="su-level-hd"><span class="su-level-code lvl-a1">A1</span><span class="su-level-name">مستوى المبتدئ تماماً</span></div>
+  <a href="lesson1.html" class="su-item"><div class="su-num">1</div><div class="su-texts"><div class="su-en">Alphabet & Numbers</div><div class="su-ar">الأحرف والأرقام</div><div class="su-prog"><div class="su-prog-fill" id="sp1"></div></div></div></a>
+  <a href="lesson2.html" class="su-item"><div class="su-num">2</div><div class="su-texts"><div class="su-en">Classroom Language & Greetings</div><div class="su-ar">لغة الصف والتحيات</div><div class="su-prog"><div class="su-prog-fill" id="sp2"></div></div></div></a>
+  <a href="lesson3.html" class="su-item"><div class="su-num">3</div><div class="su-texts"><div class="su-en">Nationalities & Countries</div><div class="su-ar">الجنسيات والدول</div><div class="su-prog"><div class="su-prog-fill" id="sp3"></div></div></div></a>
+  <a href="lesson4.html" class="su-item"><div class="su-num">4</div><div class="su-texts"><div class="su-en">Singular & Plural Nouns</div><div class="su-ar">الأسماء المفردة والجمع</div><div class="su-prog"><div class="su-prog-fill" id="sp4"></div></div></div></a>
+  <a href="lesson5.html" class="su-item"><div class="su-num">5</div><div class="su-texts"><div class="su-en">Days & Telling the Time</div><div class="su-ar">الأيام وإخبار الوقت</div><div class="su-prog"><div class="su-prog-fill" id="sp5"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-a2">A2</span><span class="su-level-name">المستوى الابتدائي</span></div>
+  <a href="unit1.html" class="su-item su-active"><div class="su-num">6</div><div class="su-texts"><div class="su-en">Verb to <i>be</i></div><div class="su-ar">فعل التكوين</div><div class="su-prog"><div class="su-prog-fill" id="sp6"></div></div></div></a>
+  <a href="unit2.html" class="su-item"><div class="su-num">7</div><div class="su-texts"><div class="su-en">Present Simple</div><div class="su-ar">المضارع البسيط</div><div class="su-prog"><div class="su-prog-fill" id="sp7"></div></div></div></a>
+  <a href="unit3.html" class="su-item"><div class="su-num">8</div><div class="su-texts"><div class="su-en">Present Continuous</div><div class="su-ar">المضارع المستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp8"></div></div></div></a>
+  <a href="unit4.html" class="su-item"><div class="su-num">9</div><div class="su-texts"><div class="su-en">Past Simple: was / were</div><div class="su-ar">الماضي البسيط: كان</div><div class="su-prog"><div class="su-prog-fill" id="sp9"></div></div></div></a>
+  <a href="unit6.html" class="su-item"><div class="su-num">10</div><div class="su-texts"><div class="su-en">Past Simple: Regular & Irreg.</div><div class="su-ar">الماضي البسيط للأفعال</div><div class="su-prog"><div class="su-prog-fill" id="sp10"></div></div></div></a>
+  <a href="unit5.html" class="su-item"><div class="su-num">11</div><div class="su-texts"><div class="su-en">Can / Can't</div><div class="su-ar">القدرة والعجز</div><div class="su-prog"><div class="su-prog-fill" id="sp11"></div></div></div></a>
+  <a href="lesson12.html" class="su-item"><div class="su-num">12</div><div class="su-texts"><div class="su-en">Possessive Pronouns</div><div class="su-ar">ضمائر الملكية</div><div class="su-prog"><div class="su-prog-fill" id="sp12"></div></div></div></a>
+  <a href="unit7.html" class="su-item"><div class="su-num">13</div><div class="su-texts"><div class="su-en">There is / There are</div><div class="su-ar">يوجد / توجد</div><div class="su-prog"><div class="su-prog-fill" id="sp13"></div></div></div></a>
+  <a href="unit8.html" class="su-item"><div class="su-num">14</div><div class="su-texts"><div class="su-en">Adjectives</div><div class="su-ar">الصفات</div><div class="su-prog"><div class="su-prog-fill" id="sp14"></div></div></div></a>
+  <a href="unit9.html" class="su-item"><div class="su-num">15</div><div class="su-texts"><div class="su-en">Imperatives</div><div class="su-ar">صيغة الأمر والنهي</div><div class="su-prog"><div class="su-prog-fill" id="sp15"></div></div></div></a>
+  <a href="unit10.html" class="su-item"><div class="su-num">16</div><div class="su-texts"><div class="su-en">Object Pronouns</div><div class="su-ar">ضمائر المفعول به</div><div class="su-prog"><div class="su-prog-fill" id="sp16"></div></div></div></a>
+  <a href="unit11.html" class="su-item"><div class="su-num">17</div><div class="su-texts"><div class="su-en">Prepositions of Time & Place</div><div class="su-ar">حروف جر الوقت والمكان</div><div class="su-prog"><div class="su-prog-fill" id="sp17"></div></div></div></a>
+  <a href="unit12.html" class="su-item"><div class="su-num">18</div><div class="su-texts"><div class="su-en">Future Plans: going to</div><div class="su-ar">خطط المستقبل</div><div class="su-prog"><div class="su-prog-fill" id="sp18"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b1">B1</span><span class="su-level-name">تحت المتوسط</span></div>
+  <a href="lesson19.html" class="su-item"><div class="su-num">19</div><div class="su-texts"><div class="su-en">Present Perfect Introduction</div><div class="su-ar">مقدمة المضارع التام</div><div class="su-prog"><div class="su-prog-fill" id="sp19"></div></div></div></a>
+  <a href="lesson20.html" class="su-item"><div class="su-num">20</div><div class="su-texts"><div class="su-en">Past Continuous</div><div class="su-ar">الماضي المستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp20"></div></div></div></a>
+  <a href="lesson21.html" class="su-item"><div class="su-num">21</div><div class="su-texts"><div class="su-en">will vs. going to</div><div class="su-ar">المستقبل: إرادة أم تخطيط؟</div><div class="su-prog"><div class="su-prog-fill" id="sp21"></div></div></div></a>
+  <a href="lesson22.html" class="su-item"><div class="su-num">22</div><div class="su-texts"><div class="su-en">like / love / hate + -ing</div><div class="su-ar">التعبير عن التفضيلات</div><div class="su-prog"><div class="su-prog-fill" id="sp22"></div></div></div></a>
+  <a href="lesson23.html" class="su-item"><div class="su-num">23</div><div class="su-texts"><div class="su-en">Comparatives & Superlatives</div><div class="su-ar">المقارنة والتفضيل</div><div class="su-prog"><div class="su-prog-fill" id="sp23"></div></div></div></a>
+  <a href="lesson24.html" class="su-item"><div class="su-num">24</div><div class="su-texts"><div class="su-en">must / have to / should</div><div class="su-ar">أفعال الإلزام والنصيحة</div><div class="su-prog"><div class="su-prog-fill" id="sp24"></div></div></div></a>
+  <a href="lesson25.html" class="su-item"><div class="su-num">25</div><div class="su-texts"><div class="su-en">Infinitives & Gerunds</div><div class="su-ar">المصدر وصيغة الـ ing</div><div class="su-prog"><div class="su-prog-fill" id="sp25"></div></div></div></a>
+  <a href="lesson26.html" class="su-item"><div class="su-num">26</div><div class="su-texts"><div class="su-en">Articles: a/an / the</div><div class="su-ar">أدوات التعريف والتنكير</div><div class="su-prog"><div class="su-prog-fill" id="sp26"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b2">B2</span><span class="su-level-name">المستوى المتوسط</span></div>
+  <a href="lesson27.html" class="su-item"><div class="su-num">27</div><div class="su-texts"><div class="su-en">Present Perfect vs. Past Simple</div><div class="su-ar">المقارنة بين الماضي والتام</div><div class="su-prog"><div class="su-prog-fill" id="sp27"></div></div></div></a>
+  <a href="lesson28.html" class="su-item"><div class="su-num">28</div><div class="su-texts"><div class="su-en">Passive Voice</div><div class="su-ar">المبني للمجهول</div><div class="su-prog"><div class="su-prog-fill" id="sp28"></div></div></div></a>
+  <a href="lesson29.html" class="su-item"><div class="su-num">29</div><div class="su-texts"><div class="su-en">Zero / First / Second Cond.</div><div class="su-ar">الجمل الشرطية 0-1-2</div><div class="su-prog"><div class="su-prog-fill" id="sp29"></div></div></div></a>
+  <a href="lesson30.html" class="su-item"><div class="su-num">30</div><div class="su-texts"><div class="su-en">Reported Speech</div><div class="su-ar">الكلام غير المباشر</div><div class="su-prog"><div class="su-prog-fill" id="sp30"></div></div></div></a>
+  <a href="lesson31.html" class="su-item"><div class="su-num">31</div><div class="su-texts"><div class="su-en">Relative Clauses</div><div class="su-ar">جمل الوصل: who / which</div><div class="su-prog"><div class="su-prog-fill" id="sp31"></div></div></div></a>
+  <a href="lesson32.html" class="su-item"><div class="su-num">32</div><div class="su-texts"><div class="su-en">Quantifiers</div><div class="su-ar">محددات الكمية</div><div class="su-prog"><div class="su-prog-fill" id="sp32"></div></div></div></a>
+  <a href="lesson33.html" class="su-item"><div class="su-num">33</div><div class="su-texts"><div class="su-en">Phrasal Verbs Introduction</div><div class="su-ar">مقدمة الأفعال المركبة</div><div class="su-prog"><div class="su-prog-fill" id="sp33"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b2p">B2+</span><span class="su-level-name">فوق المتوسط</span></div>
+  <a href="lesson34.html" class="su-item"><div class="su-num">34</div><div class="su-texts"><div class="su-en">Narrative Tenses & Past Perfect</div><div class="su-ar">أزمنة السرد والماضي التام</div><div class="su-prog"><div class="su-prog-fill" id="sp34"></div></div></div></a>
+  <a href="lesson35.html" class="su-item"><div class="su-num">35</div><div class="su-texts"><div class="su-en">Future Perfect & Continuous</div><div class="su-ar">المستقبل التام والمستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp35"></div></div></div></a>
+  <a href="lesson36.html" class="su-item"><div class="su-num">36</div><div class="su-texts"><div class="su-en">Third Conditional & Regrets</div><div class="su-ar">الشرط الثالث والندم</div><div class="su-prog"><div class="su-prog-fill" id="sp36"></div></div></div></a>
+  <a href="lesson37.html" class="su-item"><div class="su-num">37</div><div class="su-texts"><div class="su-en">Causative: have/get done</div><div class="su-ar">الأفعال السببية</div><div class="su-prog"><div class="su-prog-fill" id="sp37"></div></div></div></a>
+  <a href="lesson38.html" class="su-item"><div class="su-num">38</div><div class="su-texts"><div class="su-en">Advanced Passive</div><div class="su-ar">المبني للمجهول المتقدم</div><div class="su-prog"><div class="su-prog-fill" id="sp38"></div></div></div></a>
+  <a href="lesson39.html" class="su-item"><div class="su-num">39</div><div class="su-texts"><div class="su-en">Speculation: must/might/can't</div><div class="su-ar">التخمين والاستنتاج</div><div class="su-prog"><div class="su-prog-fill" id="sp39"></div></div></div></a>
+  <a href="lesson40.html" class="su-item"><div class="su-num">40</div><div class="su-texts"><div class="su-en">Idioms & Collocations</div><div class="su-ar">المصطلحات والتعبيرات</div><div class="su-prog"><div class="su-prog-fill" id="sp40"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-c1">C1</span><span class="su-level-name">المستوى المتقدم الأكاديمي</span></div>
+  <a href="lesson41.html" class="su-item"><div class="su-num">41</div><div class="su-texts"><div class="su-en">Inversion & Emphatic Structures</div><div class="su-ar">التقديم والتأخير للتأكيد</div><div class="su-prog"><div class="su-prog-fill" id="sp41"></div></div></div></a>
+  <a href="lesson42.html" class="su-item"><div class="su-num">42</div><div class="su-texts"><div class="su-en">Mixed Conditionals</div><div class="su-ar">الجمل الشرطية المختلطة</div><div class="su-prog"><div class="su-prog-fill" id="sp42"></div></div></div></a>
+  <a href="lesson43.html" class="su-item"><div class="su-num">43</div><div class="su-texts"><div class="su-en">Advanced Gerunds & Infinitives</div><div class="su-ar">المصادر المتقدمة</div><div class="su-prog"><div class="su-prog-fill" id="sp43"></div></div></div></a>
+  <a href="lesson44.html" class="su-item"><div class="su-num">44</div><div class="su-texts"><div class="su-en">Cleft Sentences</div><div class="su-ar">الجمل المشقوقة</div><div class="su-prog"><div class="su-prog-fill" id="sp44"></div></div></div></a>
+  <a href="lesson45.html" class="su-item"><div class="su-num">45</div><div class="su-texts"><div class="su-en">Discourse Markers</div><div class="su-ar">أدوات الربط الأكاديمية</div><div class="su-prog"><div class="su-prog-fill" id="sp45"></div></div></div></a>
+  <a href="lesson46.html" class="su-item"><div class="su-num">46</div><div class="su-texts"><div class="su-en">Nuances & Euphemisms</div><div class="su-ar">الفروقات الدقيقة والتلطيف</div><div class="su-prog"><div class="su-prog-fill" id="sp46"></div></div></div></a>
+</div>
+</aside>
+<div class="main-content">
+
+<!-- NAV -->
+<nav class="topnav">
+  <div class="nav-left">
+    <a href="../index.html" class="nav-home-btn">&#x1F3E0; الرئيسية</a>
+    <span class="nav-sep">&#x203A;</span>
+    <span class="nav-lesson-badge">Lesson 6</span>
+    <span class="nav-sep">&#x203A;</span>
+    <span class="nav-lesson-name">Verb to <i>be</i></span>
+  </div>
+  <div class="nav-right"><span class="nav-brand">MOHAMMED ELHUSEYIN</span></div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="unit-badge">UNIT 1</div>
+  <h1 class="hero-title">Verb to <i>be</i></h1>
+  <div class="hero-ar ar">فعل التكوين — أكون / يكون / تكون</div>
+  <p class="hero-sub">am · is · are · Negatives · Questions · Short answers</p>
+  <div class="hero-tags">
+    <button class="tag tag-grammar tag-btn" onclick="jumpTab('grammar')">📖 Grammar</button>
+    <button class="tag tag-other tag-btn" onclick="jumpTab('everyday')">🗣 Everyday English</button>
+    <button class="tag tag-other tag-btn" onclick="jumpTab('listening')">🎧 Listening</button>
+    <button class="tag tag-other tag-btn" onclick="jumpTab('checkit')">✏️ Check It</button>
+  </div>
+</div>
+
+<!-- MAIN TABS -->
+<div class="main-tabs">
+  <button class="main-tab active" onclick="showTab('grammar',this)">📖 Grammar</button>
+  <button class="main-tab" onclick="showTab('everyday',this)">🗣 Everyday English</button>
+  <button class="main-tab" onclick="showTab('listening',this)">🎧 Listening</button>
+  <button class="main-tab" onclick="showTab('nass',this)">📝 النص</button>
+  <button class="main-tab" onclick="showTab('checkit',this)">✏️ Check It</button>
+</div>
+
+<!-- ══════════ GRAMMAR PANEL ══════════ -->
+<div class="panel active" id="panel-grammar">
+  <div style="max-width:960px;margin:0 auto">
+    <div>
+      <!-- GRAMMAR CARD -->
+      <div class="card">
+        <div class="card-hd">
+          <div class="card-icon">📖</div>
+          <div><div class="card-title">1.1 Verb to <i>be</i></div><div class="card-sub">فعل الكينونة في المضارع</div></div>
+        </div>
+        <div class="sub-tabs">
+          <button class="sub-tab active" onclick="showSub('pos',this)">✅ Positive</button>
+          <button class="sub-tab" onclick="showSub('neg',this)">❌ Negative</button>
+          <button class="sub-tab" onclick="showSub('qw',this)">❓ Questions</button>
+          <button class="sub-tab" onclick="showSub('yn',this)">🔄 Yes/No</button>
+        </div>
+
+        <!-- POSITIVE -->
+        <div class="sub-panel active" id="sub-pos">
+          <div class="ap" data-id="a1">
+            <div class="ap-label">🔊 Positive forms — الصيغة المثبتة</div>
+            <div class="ap-row">
+              <button class="ap-btn" onclick="apRestart(this)" title="إعادة من البداية">⏮</button>
+              <button class="ap-btn ap-play" onclick="apToggle(this)">▶</button>
+              <button class="ap-btn" onclick="apStop(this)" title="إيقاف تام">⏹</button>
+              <div class="ap-prog" onclick="apSeek(this,event)"><div class="ap-fill" id="apf-a1"></div></div>
+              <span class="ap-time" id="apt-a1">0:00</span>
+            </div>
+            <audio id="a1" src="../media/unit01/grammar/gram_1_1_1.mp3"></audio>
+          </div>
+          <table class="gram-table">
+            <thead><tr><th>Subject الضمير</th><th>Short form مختصر</th><th>Full form كامل</th></tr></thead>
+            <tbody>
+              <tr><td>I</td><td>'m</td><td>= I am</td></tr>
+              <tr><td>He / She / It</td><td>'s</td><td>= He/She/It is</td></tr>
+              <tr><td>We / You / They</td><td>'re</td><td>= We/You/They are</td></tr>
+            </tbody>
+          </table>
+          <div class="note-box"><span style="color:var(--accent);font-weight:800">💡 تذكر:</span> نستخدم الاختصار في الكلام والكتابة غير الرسمية.<br><strong style="color:var(--accent)">I am → I'm &nbsp;|&nbsp; He is → He's &nbsp;|&nbsp; They are → They're</strong></div>
+          <div class="sec-div" style="margin-top:12px">📝 Examples</div>
+          <div class="ex-list">
+            <div class="ex-item"><div class="ex-body"><div class="ex-text">They <b>'re</b> Italian.</div><div class="ex-ar ar">هم إيطاليون.</div></div><button class="tts-btn" onclick="tts('They are Italian')">🔊</button></div>
+            <div class="ex-item"><div class="ex-body"><div class="ex-text">I <b>'m</b> from Oxford.</div><div class="ex-ar ar">أنا من أوكسفورد.</div></div><button class="tts-btn" onclick="tts('I am from Oxford')">🔊</button></div>
+            <div class="ex-item"><div class="ex-body"><div class="ex-text">He <b>'s</b> twenty years old.</div><div class="ex-ar ar">عمره عشرون سنة.</div></div><button class="tts-btn" onclick="tts('He is twenty years old')">🔊</button></div>
+            <div class="ex-item"><div class="ex-body"><div class="ex-text">We <b>'re</b> students.</div><div class="ex-ar ar">نحن طلاب.</div></div><button class="tts-btn" onclick="tts('We are students')">🔊</button></div>
+            <div class="ex-item"><div class="ex-body"><div class="ex-text">She <b>'s</b> married.</div><div class="ex-ar ar">هي متزوجة.</div></div><button class="tts-btn" onclick="tts('She is married')">🔊</button></div>
+            <div class="ex-item"><div class="ex-body"><div class="ex-text">You <b>'re</b> a good student.</div><div class="ex-ar ar">أنت طالب/ة جيد/ة.</div></div><button class="tts-btn" onclick="tts('You are a good student')">🔊</button></div>
+            <div class="ex-item"><div class="ex-body"><div class="ex-text">It <b>'s</b> cold today.</div><div class="ex-ar ar">الجو بارد اليوم.</div></div><button class="tts-btn" onclick="tts('It is cold today')">🔊</button></div>
+            <div class="ex-item"><div class="ex-body"><div class="ex-text">My name <b>'s</b> Ahmed.</div><div class="ex-ar ar">اسمي أحمد.</div></div><button class="tts-btn" onclick="tts('My name is Ahmed')">🔊</button></div>
+            <div class="ex-item"><div class="ex-body"><div class="ex-text">London <b>'s</b> in England.</div><div class="ex-ar ar">لندن في إنجلترا.</div></div><button class="tts-btn" onclick="tts('London is in England')">🔊</button></div>
+            <div class="ex-item"><div class="ex-body"><div class="ex-text">My parents <b>'re</b> at home.</div><div class="ex-ar ar">والداي في البيت.</div></div><button class="tts-btn" onclick="tts('My parents are at home')">🔊</button></div>
+          </div>
+        </div>
+
+        <!-- NEGATIVE -->
+        <div class="sub-panel" id="sub-neg">
+          <div class="ap" data-id="a2">
+            <div class="ap-label">🔊 Negative forms — الصيغة المنفية</div>
+            <div class="ap-row">
+              <button class="ap-btn" onclick="apRestart(this)">⏮</button>
+              <button class="ap-btn ap-play" onclick="apToggle(this)">▶</button>
+              <button class="ap-btn" onclick="apStop(this)">⏹</button>
+              <div class="ap-prog" onclick="apSeek(this,event)"><div class="ap-fill" id="apf-a2"></div></div>
+              <span class="ap-time" id="apt-a2">0:00</span>
+            </div>
+            <audio id="a2" src="../media/unit01/grammar/gram_1_1_2.mp3"></audio>
+          </div>
+          <table class="gram-table">
+            <thead><tr><th>Subject الضمير</th><th>Short form مختصر</th><th>Full form كامل</th></tr></thead>
+            <tbody>
+              <tr><td>I</td><td>'m not</td><td>= I am not</td></tr>
+              <tr><td>He / She / It</td><td>isn't</td><td>= is not</td></tr>
+              <tr><td>We / You / They</td><td>aren't</td><td>= are not</td></tr>
+            </tbody>
+          </table>
+          <div class="note-box"><span style="color:var(--accent);font-weight:800">💡 تذكر:</span> <code>I'm not</code> — لا يوجد شكل <code>I amn't</code> في الإنجليزية!</div>
+          <div class="sec-div" style="margin-top:12px">📝 Examples</div>
+          <div class="ex-list">
+            <div class="ex-item"><div class="ex-body"><div class="ex-text">I <b>'m not</b> Spanish.</div><div class="ex-ar ar">أنا لست إسبانياً.</div></div><button class="tts-btn" onclick="tts('I am not Spanish')">🔊</button></div>
+            <div class="ex-item"><div class="ex-body"><div class="ex-text">He <b>isn't</b> twenty-five.</div><div class="ex-ar ar">عمره ليس خمسة وعشرين.</div></div><button class="tts-btn" onclick="tts('He is not twenty-five')">🔊</button></div>
+            <div class="ex-item"><div class="ex-body"><div class="ex-text">They <b>aren't</b> from Oxford.</div><div class="ex-ar ar">هم ليسوا من أوكسفورد.</div></div><button class="tts-btn" onclick="tts('They are not from Oxford')">🔊</button></div>
+            <div class="ex-item"><div class="ex-body"><div class="ex-text">She <b>isn't</b> a student.</div><div class="ex-ar ar">هي ليست طالبة.</div></div><button class="tts-btn" onclick="tts('She is not a student')">🔊</button></div>
+            <div class="ex-item"><div class="ex-body"><div class="ex-text">We <b>aren't</b> young.</div><div class="ex-ar ar">نحن لسنا صغاراً.</div></div><button class="tts-btn" onclick="tts('We are not young')">🔊</button></div>
+            <div class="ex-item"><div class="ex-body"><div class="ex-text">It <b>isn't</b> hot today.</div><div class="ex-ar ar">الجو ليس حاراً اليوم.</div></div><button class="tts-btn" onclick="tts('It is not hot today')">🔊</button></div>
+            <div class="ex-item"><div class="ex-body"><div class="ex-text">You <b>aren't</b> at school.</div><div class="ex-ar ar">أنتم لستم في المدرسة.</div></div><button class="tts-btn" onclick="tts('You are not at school')">🔊</button></div>
+            <div class="ex-item"><div class="ex-body"><div class="ex-text">My phone <b>isn't</b> here.</div><div class="ex-ar ar">هاتفي ليس هنا.</div></div><button class="tts-btn" onclick="tts('My phone is not here')">🔊</button></div>
+            <div class="ex-item"><div class="ex-body"><div class="ex-text">We <b>aren't</b> from Egypt.</div><div class="ex-ar ar">نحن لسنا من مصر.</div></div><button class="tts-btn" onclick="tts('We are not from Egypt')">🔊</button></div>
+            <div class="ex-item"><div class="ex-body"><div class="ex-text">He <b>isn't</b> a doctor, he's a nurse.</div><div class="ex-ar ar">هو ليس طبيباً، هو ممرض.</div></div><button class="tts-btn" onclick="tts('He is not a doctor, he is a nurse')">🔊</button></div>
+          </div>
+        </div>
+
+        <!-- QUESTIONS -->
+        <div class="sub-panel" id="sub-qw">
+          <div class="ap" data-id="a3">
+            <div class="ap-label">🔊 Questions with question words</div>
+            <div class="ap-row">
+              <button class="ap-btn" onclick="apRestart(this)">⏮</button>
+              <button class="ap-btn ap-play" onclick="apToggle(this)">▶</button>
+              <button class="ap-btn" onclick="apStop(this)">⏹</button>
+              <div class="ap-prog" onclick="apSeek(this,event)"><div class="ap-fill" id="apf-a3"></div></div>
+              <span class="ap-time" id="apt-a3">0:00</span>
+            </div>
+            <audio id="a3" src="../media/unit01/grammar/gram_1_1_3.mp3"></audio>
+          </div>
+          <table class="q-table">
+            <thead><tr><th>Q-word أداة</th><th class="be">be</th><th>Subject + ?</th><th>Answer</th></tr></thead>
+            <tbody>
+              <tr><td><b>What</b></td><td class="be">'s</td><td>your name?</td><td class="ans">Alicia.</td></tr>
+              <tr><td><b>What</b></td><td class="be">'s</td><td>his phone number?</td><td class="ans">07773 321456</td></tr>
+              <tr><td><b>What</b></td><td class="be">'s</td><td>your job?</td><td class="ans">I'm a teacher.</td></tr>
+              <tr><td><b>Where</b></td><td class="be">are</td><td>you from?</td><td class="ans">From London.</td></tr>
+              <tr><td><b>Where</b></td><td class="be">'s</td><td>the bank?</td><td class="ans">On Main Street.</td></tr>
+              <tr><td><b>Who</b></td><td class="be">'s</td><td>Lara?</td><td class="ans">She's my sister.</td></tr>
+              <tr><td><b>How</b></td><td class="be">are</td><td>you?</td><td class="ans">Fine, thanks.</td></tr>
+              <tr><td><b>How old</b></td><td class="be">is</td><td>he?</td><td class="ans">He's 22. <span class="gram-not">❌ NOT: I have 22</span></td></tr>
+              <tr><td><b>How old</b></td><td class="be">are</td><td>they?</td><td class="ans">They're 20.</td></tr>
+            </tbody>
+          </table>
+          <div class="sec-div">📝 Examples</div>
+          <div class="ex-list">
+            <div class="ex-item"><div class="ex-body"><div class="ex-text"><b>What's</b> his address?</div><div class="ex-ar ar">ما هو عنوانه؟</div></div><button class="tts-btn" onclick="tts('What is his address?')">🔊</button></div>
+            <div class="ex-item"><div class="ex-body"><div class="ex-text"><b>Where are</b> your parents from?</div><div class="ex-ar ar">من أين والداك؟</div></div><button class="tts-btn" onclick="tts('Where are your parents from?')">🔊</button></div>
+            <div class="ex-item"><div class="ex-body"><div class="ex-text"><b>How old is</b> Freddy?</div><div class="ex-ar ar">كم عمر فريدي؟</div></div><button class="tts-btn" onclick="tts('How old is Freddy?')">🔊</button></div>
+            <div class="ex-item"><div class="ex-body"><div class="ex-text"><b>Where's</b> the station?</div><div class="ex-ar ar">أين المحطة؟</div></div><button class="tts-btn" onclick="tts('Where is the station?')">🔊</button></div>
+            <div class="ex-item"><div class="ex-body"><div class="ex-text"><b>Who are</b> they?</div><div class="ex-ar ar">من هم؟</div></div><button class="tts-btn" onclick="tts('Who are they?')">🔊</button></div>
+            <div class="ex-item"><div class="ex-body"><div class="ex-text"><b>What's</b> your job?</div><div class="ex-ar ar">ما هي وظيفتك؟</div></div><button class="tts-btn" onclick="tts('What is your job?')">🔊</button></div>
+          </div>
+        </div>
+
+        <!-- YES/NO -->
+        <div class="sub-panel" id="sub-yn">
+          <div class="ap" data-id="a4">
+            <div class="ap-label">🔊 Yes/No questions + Short answers</div>
+            <div class="ap-row">
+              <button class="ap-btn" onclick="apRestart(this)">⏮</button>
+              <button class="ap-btn ap-play" onclick="apToggle(this)">▶</button>
+              <button class="ap-btn" onclick="apStop(this)">⏹</button>
+              <div class="ap-prog" onclick="apSeek(this,event)"><div class="ap-fill" id="apf-a4"></div></div>
+              <span class="ap-time" id="apt-a4">0:00</span>
+            </div>
+            <audio id="a4" src="../media/unit01/grammar/gram_1_1_4.mp3"></audio>
+          </div>
+          <table class="q-table">
+            <thead><tr><th class="be">be</th><th>Subject</th><th>Short answer ✅</th><th class="wr">❌ NOT</th></tr></thead>
+            <tbody>
+              <tr><td class="be"><b>Am</b></td><td>I …?</td><td class="ans">Yes, you <b>are</b>. / No, you <b>aren't</b>.</td><td></td></tr>
+              <tr><td class="be"><b>Is</b></td><td>he/she/it…?</td><td class="ans">Yes, he <b>is</b>. / No, she <b>isn't</b>.</td><td class="wr">Yes, he's. ❌</td></tr>
+              <tr><td class="be"><b>Are</b></td><td>you …?</td><td class="ans">Yes, I <b>am</b>. / No, I <b>'m not</b>.</td><td></td></tr>
+              <tr><td class="be"><b>Are</b></td><td>we/they …?</td><td class="ans">Yes, they <b>are</b>. / No, they <b>aren't</b>.</td><td></td></tr>
+            </tbody>
+          </table>
+          <div class="note-red"><span style="color:var(--red);font-weight:800">⚠️ قاعدة مهمة:</span> في الإجابات القصيرة <strong style="color:var(--red)">لا نستخدم الاختصار أبداً!</strong><br>✅ <code>Yes, he is.</code> &nbsp;&nbsp; ❌ <code>Yes, he's.</code></div>
+          <div class="sec-div" style="margin-top:12px">📝 Examples</div>
+          <div class="ex-list">
+            <div class="ex-item"><div class="ex-body"><div class="ex-text"><b>Is</b> it sunny? — No, it <b>isn't</b>.</div><div class="ex-ar ar">هل الجو مشمس؟ — لا.</div></div><button class="tts-btn" onclick="tts('Is it sunny? No, it is not.')">🔊</button></div>
+            <div class="ex-item"><div class="ex-body"><div class="ex-text"><b>Are</b> you from Madrid? — Yes, I <b>am</b>.</div><div class="ex-ar ar">هل أنت من مدريد؟ — نعم.</div></div><button class="tts-btn" onclick="tts('Are you from Madrid? Yes, I am.')">🔊</button></div>
+            <div class="ex-item"><div class="ex-body"><div class="ex-text"><b>Is</b> he Spanish? — Yes, he <b>is</b>.</div><div class="ex-ar ar">هل هو إسباني؟ — نعم.</div></div><button class="tts-btn" onclick="tts('Is he Spanish? Yes, he is.')">🔊</button></div>
+            <div class="ex-item"><div class="ex-body"><div class="ex-text"><b>Are</b> they married? — No, they <b>aren't</b>.</div><div class="ex-ar ar">هل هم متزوجون؟ — لا.</div></div><button class="tts-btn" onclick="tts('Are they married? No, they are not.')">🔊</button></div>
+            <div class="ex-item"><div class="ex-body"><div class="ex-text"><b>Is</b> she a teacher? — Yes, she <b>is</b>.</div><div class="ex-ar ar">هل هي معلمة؟ — نعم.</div></div><button class="tts-btn" onclick="tts('Is she a teacher? Yes, she is.')">🔊</button></div>
+            <div class="ex-item"><div class="ex-body"><div class="ex-text"><b>Are</b> you a doctor? — No, I <b>'m not</b>. I'm a nurse.</div><div class="ex-ar ar">هل أنت طبيب؟ — لا، أنا ممرض.</div></div><button class="tts-btn" onclick="tts('Are you a doctor? No, I am not. I am a nurse.')">🔊</button></div>
+          </div>
+        </div>
+      </div><!-- /grammar card -->
+
+      <!-- SVG GRAMMAR DIAGRAM -->
+      <div class="card">
+        <div class="card-hd">
+          <div class="card-icon">🗺</div>
+          <div><div class="card-title">Visual Summary — ملخص بصري</div><div class="card-sub">الصيغ الثلاثة دفعة واحدة</div></div>
+        </div>
+        <svg viewBox="0 0 560 190" xmlns="http://www.w3.org/2000/svg" font-family="Poppins, sans-serif" style="width:100%;display:block">
+          <!-- Row 1: I -->
+          <rect x="4" y="8" width="52" height="36" rx="8" fill="#1a3a6e"/>
+          <text x="30" y="31" text-anchor="middle" fill="#f4a624" font-weight="800" font-size="17">I</text>
+          <text x="65" y="31" fill="#8899b0" font-size="18">→</text>
+          <rect x="82" y="8" width="52" height="36" rx="8" fill="#f4a624"/>
+          <text x="108" y="31" text-anchor="middle" fill="#0d1b2a" font-weight="900" font-size="17">'m</text>
+          <text x="143" y="31" fill="#8899b0" font-size="12">= am</text>
+          <text x="200" y="27" fill="#e8edf5" font-size="13">I'm a student.</text>
+          <text x="200" y="43" fill="#8899b0" font-size="11">أنا طالب.</text>
+          <rect x="352" y="10" width="88" height="30" rx="7" fill="rgba(239,68,68,0.15)" stroke="#ef4444" stroke-width="1"/>
+          <text x="396" y="30" text-anchor="middle" fill="#ef4444" font-size="11" font-weight="700">❌ I'm not</text>
+          <text x="448" y="30" fill="#8899b0" font-size="11" dx="8">= I am not</text>
+
+          <!-- Divider -->
+          <line x1="4" y1="56" x2="556" y2="56" stroke="#2d4560" stroke-width="1"/>
+
+          <!-- Row 2: He/She/It -->
+          <rect x="4" y="68" width="86" height="36" rx="8" fill="#1a3a6e"/>
+          <text x="47" y="91" text-anchor="middle" fill="#f4a624" font-weight="700" font-size="13">He/She/It</text>
+          <text x="99" y="91" fill="#8899b0" font-size="18">→</text>
+          <rect x="116" y="68" width="52" height="36" rx="8" fill="#f4a624"/>
+          <text x="142" y="91" text-anchor="middle" fill="#0d1b2a" font-weight="900" font-size="17">'s</text>
+          <text x="177" y="91" fill="#8899b0" font-size="12">= is</text>
+          <text x="220" y="87" fill="#e8edf5" font-size="13">She's a teacher.</text>
+          <text x="220" y="103" fill="#8899b0" font-size="11">هي معلمة.</text>
+          <rect x="352" y="70" width="98" height="30" rx="7" fill="rgba(239,68,68,0.15)" stroke="#ef4444" stroke-width="1"/>
+          <text x="401" y="90" text-anchor="middle" fill="#ef4444" font-size="11" font-weight="700">❌ isn't</text>
+          <text x="458" y="90" fill="#8899b0" font-size="11" dx="4">= is not</text>
+
+          <!-- Divider -->
+          <line x1="4" y1="116" x2="556" y2="116" stroke="#2d4560" stroke-width="1"/>
+
+          <!-- Row 3: We/You/They -->
+          <rect x="4" y="128" width="108" height="36" rx="8" fill="#1a3a6e"/>
+          <text x="58" y="151" text-anchor="middle" fill="#f4a624" font-weight="700" font-size="13">We/You/They</text>
+          <text x="121" y="151" fill="#8899b0" font-size="18">→</text>
+          <rect x="138" y="128" width="54" height="36" rx="8" fill="#f4a624"/>
+          <text x="165" y="151" text-anchor="middle" fill="#0d1b2a" font-weight="900" font-size="17">'re</text>
+          <text x="202" y="151" fill="#8899b0" font-size="12">= are</text>
+          <text x="252" y="147" fill="#e8edf5" font-size="13">They're students.</text>
+          <text x="252" y="163" fill="#8899b0" font-size="11">هم طلاب.</text>
+          <rect x="352" y="130" width="100" height="30" rx="7" fill="rgba(239,68,36,0.15)" stroke="#ef4444" stroke-width="1"/>
+          <text x="402" y="150" text-anchor="middle" fill="#ef4444" font-size="11" font-weight="700">❌ aren't</text>
+          <text x="460" y="150" fill="#8899b0" font-size="11" dx="2">= are not</text>
+        </svg>
+      </div>
+
+      <!-- COMMON MISTAKES -->
+      <div class="card">
+        <div class="card-hd">
+          <div class="card-icon">⚠️</div>
+          <div><div class="card-title">أخطاء شائعة — Common Mistakes</div><div class="card-sub">تجنّب هذه الأخطاء دائماً</div></div>
+        </div>
+        <table class="mistake-table">
+          <thead><tr><th>❌ خطأ — Wrong</th><th>✅ صحيح — Correct</th></tr></thead>
+          <tbody>
+            <tr><td>He is 30 years.</td><td>He is 30 years <b>old</b>. / He's 30.</td></tr>
+            <tr><td>I have 25 years old.</td><td>I <b>am</b> 25 years old. / I'm 25.</td></tr>
+            <tr><td>They is students.</td><td>They <b>are</b> students.</td></tr>
+            <tr><td>She married.</td><td>She <b>is</b> married. / She's married.</td></tr>
+            <tr><td>I amn't tired.</td><td>I <b>'m not</b> tired.</td></tr>
+            <tr><td>Yes, he's. (short answer)</td><td>Yes, he <b>is</b>.</td></tr>
+            <tr><td>Where is you from?</td><td>Where <b>are</b> you from?</td></tr>
+            <tr><td>He are a teacher.</td><td>He <b>is</b> a teacher.</td></tr>
+            <tr><td>What's she job?</td><td>What's <b>her</b> job?</td></tr>
+            <tr><td>We is happy.</td><td>We <b>are</b> happy.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- VOCABULARY -->
+      <div class="card">
+        <div class="card-hd">
+          <div class="card-icon">📘</div>
+          <div><div class="card-title">Useful Vocabulary</div><div class="card-sub">مفردات مفيدة مع Verb to be</div></div>
+        </div>
+        <div class="vocab-grid">
+          <div class="vocab-item"><span class="vocab-en">married</span><span class="vocab-ar">متزوج</span></div>
+          <div class="vocab-item"><span class="vocab-en">single</span><span class="vocab-ar">أعزب</span></div>
+          <div class="vocab-item"><span class="vocab-en">teacher</span><span class="vocab-ar">مدرّس</span></div>
+          <div class="vocab-item"><span class="vocab-en">student</span><span class="vocab-ar">طالب</span></div>
+          <div class="vocab-item"><span class="vocab-en">doctor</span><span class="vocab-ar">طبيب</span></div>
+          <div class="vocab-item"><span class="vocab-en">engineer</span><span class="vocab-ar">مهندس</span></div>
+          <div class="vocab-item"><span class="vocab-en">tired</span><span class="vocab-ar">متعب</span></div>
+          <div class="vocab-item"><span class="vocab-en">hungry</span><span class="vocab-ar">جائع</span></div>
+          <div class="vocab-item"><span class="vocab-en">happy</span><span class="vocab-ar">سعيد</span></div>
+          <div class="vocab-item"><span class="vocab-en">cold / hot</span><span class="vocab-ar">بارد / حار</span></div>
+          <div class="vocab-item"><span class="vocab-en">young / old</span><span class="vocab-ar">شاب / كبير</span></div>
+          <div class="vocab-item"><span class="vocab-en">at home</span><span class="vocab-ar">في البيت</span></div>
+        </div>
+      </div>
+    </div><!-- /left -->
+
+  </div>
+  <div class="bottom-nav">
+    <a href="../index.html" class="bnav-btn">← الرئيسية</a>
+    <span style="font-size:12px;color:var(--muted)">Unit 1 / 12</span>
+    <span class="bnav-btn disabled">Unit 2 →</span>
+  </div>
+</div>
+
+<!-- ══════════ TEXT PANEL — النص ══════════ -->
+<div class="panel" id="panel-nass">
+<div class="rt-wrap">
+
+  <div class="rt-card">
+    <div class="rt-card-title">📖 Read the passage — اقرأ النص</div>
+    <div class="rt-text">
+      My name is Tom. <span class="hl-1">I am</span> a student. <span class="hl-3">My sister is</span> a doctor and <span class="hl-3">she is</span> very busy. <span class="hl-2">My parents are</span> teachers. <span class="hl-2">They are</span> kind and helpful. <span class="hl-1">I am</span> not a teacher — <span class="hl-1">I am</span> a student! <span class="hl-3">My school is</span> big and <span class="hl-3">it is</span> near our house. <span class="hl-2">My friends are</span> funny. <span class="hl-2">We are</span> all happy at school.
+    </div>
+    <div class="rt-legend">
+      <div class="rt-legend-item"><div class="rt-legend-dot" style="background:var(--purple)"></div> am (أنا)</div>
+      <div class="rt-legend-item"><div class="rt-legend-dot" style="background:var(--blue)"></div> is (هو / هي)</div>
+      <div class="rt-legend-item"><div class="rt-legend-dot" style="background:var(--green)"></div> are (هم / نحن / أنتم)</div>
+    </div>
+    <button class="rt-tts-btn" onclick="tts('My name is Tom. I am a student. My sister is a doctor and she is very busy. My parents are teachers. They are kind and helpful. I am not a teacher, I am a student! My school is big and it is near our house. My friends are funny. We are all happy at school.')">🔊 استمع للنص</button>
+  </div>
+
+  <div class="rt-card">
+    <div class="rt-qs-title">❓ لماذا استخدمنا هذا الفعل؟ — Why this verb?</div>
+
+    <div class="rt-q" id="rq1-1">
+      <div class="rt-q-text">في جملة "I am a student" — لماذا استخدمنا <span class="hl-1">am</span>؟</div>
+      <div class="rt-opts">
+        <button class="rt-opt" data-ok onclick="rtPick(this,'rq1-1',true)">لأن الفاعل هو I وفعل to be معها دائمًا am ✓</button>
+        <button class="rt-opt" onclick="rtPick(this,'rq1-1',false)">لأن الجملة منفية</button>
+        <button class="rt-opt" onclick="rtPick(this,'rq1-1',false)">لأن هناك أكثر من شخص</button>
+      </div>
+      <div class="rt-explain">صح! مع الضمير I نستخدم دائمًا am — وهذا استثناء خاص لا يتغير أبدًا.</div>
+    </div>
+
+    <div class="rt-q" id="rq1-2">
+      <div class="rt-q-text">في "My sister is a doctor" — لماذا استخدمنا <span class="hl-3">is</span> وليس are؟</div>
+      <div class="rt-opts">
+        <button class="rt-opt" onclick="rtPick(this,'rq1-2',false)">لأن الجملة مستقبل</button>
+        <button class="rt-opt" data-ok onclick="rtPick(this,'rq1-2',true)">لأن الفاعل مفرد (sister = هي) ✓</button>
+        <button class="rt-opt" onclick="rtPick(this,'rq1-2',false)">لأن sister كلمة إنجليزية</button>
+      </div>
+      <div class="rt-explain">بالضبط! is تُستخدم مع المفرد: he, she, it وأي اسم مفرد.</div>
+    </div>
+
+    <div class="rt-q" id="rq1-3">
+      <div class="rt-q-text">في "My parents are teachers" — لماذا <span class="hl-2">are</span>؟</div>
+      <div class="rt-opts">
+        <button class="rt-opt" onclick="rtPick(this,'rq1-3',false)">لأنها جملة سؤال</button>
+        <button class="rt-opt" onclick="rtPick(this,'rq1-3',false)">لأن الجملة ماضي</button>
+        <button class="rt-opt" data-ok onclick="rtPick(this,'rq1-3',true)">لأن parents جمع (أكثر من شخص) ✓</button>
+      </div>
+      <div class="rt-explain">صح! are تُستخدم مع الجمع: they, we, you وأي اسم جمع.</div>
+    </div>
+
+    <div class="rt-q" id="rq1-4">
+      <div class="rt-q-text">ماذا نضيف لجعل "I am a student" منفية؟</div>
+      <div class="rt-opts">
+        <button class="rt-opt" onclick="rtPick(this,'rq1-4',false)">I am no a student</button>
+        <button class="rt-opt" data-ok onclick="rtPick(this,'rq1-4',true)">I am not a student ✓</button>
+        <button class="rt-opt" onclick="rtPick(this,'rq1-4',false)">I don't am a student</button>
+      </div>
+      <div class="rt-explain">نضيف not مباشرة بعد am/is/are لتكوين النفي. لا نستخدم do/don't مع to be.</div>
+    </div>
+
+    <div class="rt-q" id="rq1-5">
+      <div class="rt-q-text">"We are all happy at school" — ما الإجابة القصيرة لـ "Are you happy?"</div>
+      <div class="rt-opts">
+        <button class="rt-opt" onclick="rtPick(this,'rq1-5',false)">Yes, I do.</button>
+        <button class="rt-opt" onclick="rtPick(this,'rq1-5',false)">Yes, we are happy.</button>
+        <button class="rt-opt" data-ok onclick="rtPick(this,'rq1-5',true)">Yes, I am. / Yes, we are. ✓</button>
+      </div>
+      <div class="rt-explain">في الإجابات القصيرة نكرر am/is/are بدون تكرار كل الجملة.</div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- ══════════ CHECK IT PANEL ══════════ -->
+<div class="panel" id="panel-checkit">
+  <div class="ci-hero">
+    <div class="ci-hero-top"><span class="ci-hero-icon">✏️</span><span class="ci-hero-title">اختبر نفسك — Check It!</span></div>
+    <p class="ci-hero-sub">25 سؤال متنوع — Verb to be · am/is/are · النفي · الأسئلة · أملأ الفراغ</p>
+    <div class="ci-hero-badges"><span class="ci-hero-badge mcq">🔘 20 اختيار من متعدد</span><span class="ci-hero-badge fib">✍️ 5 أملأ الفراغ</span></div>
+    <div class="ci-progress-bar"><div class="ci-progress-fill" id="ciProgressFill"></div></div>
+    <div class="ci-progress-txt"><span id="ciProgressTxt">0 / 25 answered</span><span id="ciScoreLive">Score: 0</span></div>
+  </div>
+  <div class="ci-wrap">
+
+    <!-- Q1 MCQ -->
+    <div class="ci-q" id="ciq1">
+      <div class="ci-q-head"><span class="ci-q-num">1</span><span class="ci-q-tag">am / is / are</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,1)"><span class="ci-lbl">A</span>I'm doctor.</button>
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,1)"><span class="ci-lbl">B</span>I'm a doctor.</button>
+      </div>
+      <div class="ci-sol" id="sol1"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ I'm <b>a</b> doctor.</div><div class="ci-sol-exp">المهنة والجنسية والديانة → لازم نضيف a/an قبلها</div></div></div>
+    </div>
+
+    <!-- Q2 MCQ -->
+    <div class="ci-q" id="ciq2">
+      <div class="ci-q-head"><span class="ci-q-num">2</span><span class="ci-q-tag">am / have</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,2)"><span class="ci-lbl">A</span>I have 29 years old.</button>
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,2)"><span class="ci-lbl">B</span>I am 29 years old.</button>
+      </div>
+      <div class="ci-sol" id="sol2"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ I <b>am</b> 29 years old.</div><div class="ci-sol-exp">العمر بالإنجليزية = I am (am/is/are) وليس have. "I have 29" = خطأ شائع عند العرب</div></div></div>
+    </div>
+
+    <!-- Q3 FIB -->
+    <div class="ci-q ci-fib-q" id="ciq3">
+      <div class="ci-q-head"><span class="ci-q-num">3</span><span class="ci-q-tag">am / is / are</span><span class="ci-type-badge ci-type-fib">أملأ الفراغ</span></div>
+      <div class="ci-fib-sent">He ___ a teacher. <b>(be)</b></div>
+      <div class="ci-fib-row">
+        <input class="ci-fib-input" id="fib3" placeholder="اكتب الجواب..." autocomplete="off" spellcheck="false">
+        <button class="ci-fib-check" onclick="ciFibCheck(3,['is'])">تحقق ✓</button>
+      </div>
+      <div class="ci-hint">💡 تلميح: he/she/it → is</div>
+      <div class="ci-sol" id="sol3"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ He <b>is</b> a teacher.</div><div class="ci-sol-exp">he/she/it → is · I → am · you/we/they → are</div></div></div>
+    </div>
+
+    <!-- Q4 MCQ -->
+    <div class="ci-q" id="ciq4">
+      <div class="ci-q-head"><span class="ci-q-num">4</span><span class="ci-q-tag">Negative</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,4)"><span class="ci-lbl">A</span>I'm not married.</button>
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,4)"><span class="ci-lbl">B</span>I no married.</button>
+      </div>
+      <div class="ci-sol" id="sol4"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ I'm <b>not</b> married.</div><div class="ci-sol-exp">النفي = am/is/are + not · "I no" خطأ - لا توجد هذه الصيغة في الإنجليزية</div></div></div>
+    </div>
+
+    <!-- Q5 MCQ -->
+    <div class="ci-q" id="ciq5">
+      <div class="ci-q-head"><span class="ci-q-num">5</span><span class="ci-q-tag">Contraction</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,5)"><span class="ci-lbl">A</span>She married.</button>
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,5)"><span class="ci-lbl">B</span>She's married.</button>
+      </div>
+      <div class="ci-sol" id="sol5"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ She'<b>s</b> married.</div><div class="ci-sol-exp">لازم نضيف is (أو 's) — She married بدون فعل = خطأ</div></div></div>
+    </div>
+
+    <!-- Q6 MCQ -->
+    <div class="ci-q" id="ciq6">
+      <div class="ci-q-head"><span class="ci-q-num">6</span><span class="ci-q-tag">Possessive 's</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,6)"><span class="ci-lbl">A</span>My sister's name is Lara.</button>
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,6)"><span class="ci-lbl">B</span>My sisters name is Lara.</button>
+      </div>
+      <div class="ci-sol" id="sol6"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ My <b>sister's</b> name is Lara.</div><div class="ci-sol-exp">الملكية = اسم + 's · بدون apostrophe = جمع وليس ملكية</div></div></div>
+    </div>
+
+    <div class="ci-brk" id="cibrk1">
+      <div class="ci-brk-emoji">💡</div>
+      <div class="ci-brk-title">am / is / are — متى نستخدم كل واحد؟</div>
+      <div class="ci-brk-cols">
+        <div class="ci-brk-col"><div class="ci-brk-col-title">القاعدة</div><div class="ci-brk-text">I → <b>am</b><br>He / She / It → <b>is</b><br>You / We / They → <b>are</b><br><br>الاختصار:<br>I am → <b>I'm</b> · She is → <b>She's</b> · They are → <b>They're</b></div></div>
+        <div class="ci-brk-col"><div class="ci-brk-col-title">أمثلة</div><div class="ci-brk-text">I'<b>m</b> a student.<br>She'<b>s</b> a doctor.<br>They'<b>re</b> from Syria.<br><br>❌ I is · She am · They is<br>✅ تذكّر الترتيب دائماً!</div></div>
+      </div>
+      <div class="ci-brk-ar">am مع I فقط · is مع المفرد الغائب · are مع الجمع ومخاطب</div>
+    </div>
+
+    <!-- Q7 MCQ -->
+    <div class="ci-q" id="ciq7">
+      <div class="ci-q-head"><span class="ci-q-num">7</span><span class="ci-q-tag">Possessive plural</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,7)"><span class="ci-lbl">A</span>My parents' house is near the park.</button>
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,7)"><span class="ci-lbl">B</span>My parent's house is near the park.</button>
+      </div>
+      <div class="ci-sol" id="sol7"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ My <b>parents'</b> house.</div><div class="ci-sol-exp">parents = جمع → الـ apostrophe بعد s · parent's = لوالد واحد</div></div></div>
+    </div>
+
+    <!-- Q8 FIB -->
+    <div class="ci-q ci-fib-q" id="ciq8">
+      <div class="ci-q-head"><span class="ci-q-num">8</span><span class="ci-q-tag">am / is / are</span><span class="ci-type-badge ci-type-fib">أملأ الفراغ</span></div>
+      <div class="ci-fib-sent">We ___ students at this school. <b>(be)</b></div>
+      <div class="ci-fib-row">
+        <input class="ci-fib-input" id="fib8" placeholder="اكتب الجواب..." autocomplete="off" spellcheck="false">
+        <button class="ci-fib-check" onclick="ciFibCheck(8,['are'])">تحقق ✓</button>
+      </div>
+      <div class="ci-hint">💡 تلميح: we → are</div>
+      <div class="ci-sol" id="sol8"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ We <b>are</b> students.</div><div class="ci-sol-exp">we/you/they → are دائماً</div></div></div>
+    </div>
+
+    <!-- Q9 MCQ -->
+    <div class="ci-q" id="ciq9">
+      <div class="ci-q-head"><span class="ci-q-num">9</span><span class="ci-q-tag">WH Question</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,9)"><span class="ci-lbl">A</span>What's you name?</button>
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,9)"><span class="ci-lbl">B</span>What's your name?</button>
+      </div>
+      <div class="ci-sol" id="sol9"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ What's <b>your</b> name?</div><div class="ci-sol-exp">your = ملكية · you = ضمير مفعول. "What's you" = خطأ</div></div></div>
+    </div>
+
+    <!-- Q10 MCQ -->
+    <div class="ci-q" id="ciq10">
+      <div class="ci-q-head"><span class="ci-q-num">10</span><span class="ci-q-tag">Possessive pronoun</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,10)"><span class="ci-lbl">A</span>What's he's address?</button>
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,10)"><span class="ci-lbl">B</span>What's his address?</button>
+      </div>
+      <div class="ci-sol" id="sol10"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ What's <b>his</b> address?</div><div class="ci-sol-exp">he's = he is (اختصار) · his = ملكية. لا يمكن استخدام he's للملكية</div></div></div>
+    </div>
+
+    <!-- Q11 MCQ -->
+    <div class="ci-q" id="ciq11">
+      <div class="ci-q-head"><span class="ci-q-num">11</span><span class="ci-q-tag">am / is / are</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,11)"><span class="ci-lbl">A</span>We is happy.</button>
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,11)"><span class="ci-lbl">B</span>We are happy.</button>
+      </div>
+      <div class="ci-sol" id="sol11"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ We <b>are</b> happy.</div><div class="ci-sol-exp">we → are دائماً · is للمفرد الغائب فقط (he/she/it)</div></div></div>
+    </div>
+
+    <!-- Q12 MCQ -->
+    <div class="ci-q" id="ciq12">
+      <div class="ci-q-head"><span class="ci-q-num">12</span><span class="ci-q-tag">am / is / are</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,12)"><span class="ci-lbl">A</span>He are a teacher.</button>
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,12)"><span class="ci-lbl">B</span>He is a teacher.</button>
+      </div>
+      <div class="ci-sol" id="sol12"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ He <b>is</b> a teacher.</div><div class="ci-sol-exp">he → is · are مع we/you/they فقط</div></div></div>
+    </div>
+
+    <div class="ci-brk" id="cibrk2">
+      <div class="ci-brk-emoji">🚫</div>
+      <div class="ci-brk-title">النفي والإجابات القصيرة</div>
+      <div class="ci-brk-cols">
+        <div class="ci-brk-col"><div class="ci-brk-col-title">النفي</div><div class="ci-brk-text">I am <b>not</b> tired.<br>She <b>isn't</b> here.<br>They <b>aren't</b> students.<br><br>❌ لا يوجد "I amn't"<br>✅ I'<b>m not</b> (فقط هكذا)</div></div>
+        <div class="ci-brk-col"><div class="ci-brk-col-title">الإجابات القصيرة</div><div class="ci-brk-text">Are you tired?<br>→ Yes, I <b>am</b>. / No, I'<b>m not</b>.<br><br>Is she a doctor?<br>→ Yes, she <b>is</b>. / No, she <b>isn't</b>.<br><br>❌ Yes, I'm. — لا اختصار هنا!</div></div>
+      </div>
+      <div class="ci-brk-ar">في الإجابات القصيرة الإيجابية لا نختصر: Yes, I am. وليس Yes, I'm.</div>
+    </div>
+
+    <!-- Q13 MCQ -->
+    <div class="ci-q" id="ciq13">
+      <div class="ci-q-head"><span class="ci-q-num">13</span><span class="ci-q-tag">Short Answer</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-q-prompt">— Are you tired?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,13)"><span class="ci-lbl">A</span>Yes, I'm.</button>
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,13)"><span class="ci-lbl">B</span>Yes, I am.</button>
+      </div>
+      <div class="ci-sol" id="sol13"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ Yes, I <b>am</b>.</div><div class="ci-sol-exp">الإجابات القصيرة الإيجابية لا تُختصر: Yes, I am. وليس Yes, I'm.</div></div></div>
+    </div>
+
+    <!-- Q14 MCQ -->
+    <div class="ci-q" id="ciq14">
+      <div class="ci-q-head"><span class="ci-q-num">14</span><span class="ci-q-tag">Possessive pronoun</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,14)"><span class="ci-lbl">A</span>What's her job?</button>
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,14)"><span class="ci-lbl">B</span>What's she job?</button>
+      </div>
+      <div class="ci-sol" id="sol14"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ What's <b>her</b> job?</div><div class="ci-sol-exp">her = ملكية هي · she = ضمير فاعل فقط. لا يمكن قول "she job"</div></div></div>
+    </div>
+
+    <!-- Q15 FIB -->
+    <div class="ci-q ci-fib-q" id="ciq15">
+      <div class="ci-q-head"><span class="ci-q-num">15</span><span class="ci-q-tag">Short Answer</span><span class="ci-type-badge ci-type-fib">أملأ الفراغ</span></div>
+      <div class="ci-fib-sent">Are you from Syria? — Yes, I ___.</div>
+      <div class="ci-fib-row">
+        <input class="ci-fib-input" id="fib15" placeholder="كلمة واحدة..." autocomplete="off" spellcheck="false">
+        <button class="ci-fib-check" onclick="ciFibCheck(15,['am'])">تحقق ✓</button>
+      </div>
+      <div class="ci-hint">💡 تلميح: I → am · لا اختصار في الإجابة</div>
+      <div class="ci-sol" id="sol15"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ Yes, I <b>am</b>.</div><div class="ci-sol-exp">الإجابة القصيرة = Yes/No + I/he/she/they + am/is/are — بدون اختصار إيجابي</div></div></div>
+    </div>
+
+    <!-- Q16 MCQ -->
+    <div class="ci-q" id="ciq16">
+      <div class="ci-q-head"><span class="ci-q-num">16</span><span class="ci-q-tag">Negative</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,16)"><span class="ci-lbl">A</span>They isn't from Italy.</button>
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,16)"><span class="ci-lbl">B</span>They aren't from Italy.</button>
+      </div>
+      <div class="ci-sol" id="sol16"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ They <b>aren't</b> from Italy.</div><div class="ci-sol-exp">they → are → النفي: aren't. isn't للمفرد الغائب فقط (he/she/it)</div></div></div>
+    </div>
+
+    <!-- Q17 MCQ -->
+    <div class="ci-q" id="ciq17">
+      <div class="ci-q-head"><span class="ci-q-num">17</span><span class="ci-q-tag">Age</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,17)"><span class="ci-lbl">A</span>I have 18 years.</button>
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,17)"><span class="ci-lbl">B</span>I'm 18 years old.</button>
+      </div>
+      <div class="ci-sol" id="sol17"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ I'm <b>18 years old</b>.</div><div class="ci-sol-exp">العمر بالإنجليزية = am/is/are + رقم + years old · "have" خطأ شائع</div></div></div>
+    </div>
+
+    <!-- Q18 MCQ -->
+    <div class="ci-q" id="ciq18">
+      <div class="ci-q-head"><span class="ci-q-num">18</span><span class="ci-q-tag">WH Question</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,18)"><span class="ci-lbl">A</span>Where is you from?</button>
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,18)"><span class="ci-lbl">B</span>Where are you from?</button>
+      </div>
+      <div class="ci-sol" id="sol18"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ Where <b>are</b> you from?</div><div class="ci-sol-exp">you → are · السؤال: Where + are + you + من؟</div></div></div>
+    </div>
+
+    <div class="ci-brk" id="cibrk3">
+      <div class="ci-brk-emoji">❓</div>
+      <div class="ci-brk-title">الأسئلة بـ am/is/are</div>
+      <div class="ci-brk-cols">
+        <div class="ci-brk-col"><div class="ci-brk-col-title">Yes/No Questions</div><div class="ci-brk-text"><b>Is</b> she a doctor? → Yes, she is.<br><b>Are</b> they from Syria? → No, they aren't.<br><b>Am</b> I late? → No, you aren't.<br><br>الترتيب: is/are/am + الفاعل + ?</div></div>
+        <div class="ci-brk-col"><div class="ci-brk-col-title">WH Questions</div><div class="ci-brk-text"><b>Where</b> are you from?<br><b>What</b> is your name?<br><b>How old</b> are you?<br><br>الترتيب: WH + is/are + الفاعل + ?<br><br>❌ How old have you?</div></div>
+      </div>
+      <div class="ci-brk-ar">آخر 7 أسئلة — ركّز على الأسئلة والنفي!</div>
+    </div>
+
+    <!-- Q19 FIB -->
+    <div class="ci-q ci-fib-q" id="ciq19">
+      <div class="ci-q-head"><span class="ci-q-num">19</span><span class="ci-q-tag">Question form</span><span class="ci-type-badge ci-type-fib">أملأ الفراغ</span></div>
+      <div class="ci-fib-sent">___ she a doctor?</div>
+      <div class="ci-fib-row">
+        <input class="ci-fib-input" id="fib19" placeholder="كلمة واحدة..." autocomplete="off" spellcheck="false">
+        <button class="ci-fib-check" onclick="ciFibCheck(19,['is','Is'])">تحقق ✓</button>
+      </div>
+      <div class="ci-hint">💡 تلميح: she → is · في السؤال is يجي أول</div>
+      <div class="ci-sol" id="sol19"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ <b>Is</b> she a doctor?</div><div class="ci-sol-exp">السؤال مع she = Is + she + ? · الترتيب معكوس عن الجملة العادية</div></div></div>
+    </div>
+
+    <!-- Q20 MCQ -->
+    <div class="ci-q" id="ciq20">
+      <div class="ci-q-head"><span class="ci-q-num">20</span><span class="ci-q-tag">Negative</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,20)"><span class="ci-lbl">A</span>I'm not tired.</button>
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,20)"><span class="ci-lbl">B</span>I amn't tired.</button>
+      </div>
+      <div class="ci-sol" id="sol20"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ I'<b>m not</b> tired.</div><div class="ci-sol-exp">"amn't" غير موجودة في الإنجليزية! النفي مع I → I'm not (فقط)</div></div></div>
+    </div>
+
+    <!-- Q21 MCQ -->
+    <div class="ci-q" id="ciq21">
+      <div class="ci-q-head"><span class="ci-q-num">21</span><span class="ci-q-tag">am / is / are</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,21)"><span class="ci-lbl">A</span>They is from Jordan.</button>
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,21)"><span class="ci-lbl">B</span>They are from Jordan.</button>
+      </div>
+      <div class="ci-sol" id="sol21"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ They <b>are</b> from Jordan.</div><div class="ci-sol-exp">they → are دائماً · is للمفرد الغائب (he/she/it) فقط</div></div></div>
+    </div>
+
+    <!-- Q22 MCQ -->
+    <div class="ci-q" id="ciq22">
+      <div class="ci-q-head"><span class="ci-q-num">22</span><span class="ci-q-tag">Short Answer</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-q-prompt">— Is he a student?</div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,22)"><span class="ci-lbl">A</span>No, he isn't.</button>
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,22)"><span class="ci-lbl">B</span>No, he isn't not.</button>
+      </div>
+      <div class="ci-sol" id="sol22"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ No, he <b>isn't</b>.</div><div class="ci-sol-exp">"isn't not" = نفيان معاً = خطأ. الإجابة القصيرة: No + he + isn't</div></div></div>
+    </div>
+
+    <!-- Q23 FIB -->
+    <div class="ci-q ci-fib-q" id="ciq23">
+      <div class="ci-q-head"><span class="ci-q-num">23</span><span class="ci-q-tag">am / is / are</span><span class="ci-type-badge ci-type-fib">أملأ الفراغ</span></div>
+      <div class="ci-fib-sent">My sister ___ (be) married.</div>
+      <div class="ci-fib-row">
+        <input class="ci-fib-input" id="fib23" placeholder="كلمة واحدة..." autocomplete="off" spellcheck="false">
+        <button class="ci-fib-check" onclick="ciFibCheck(23,['is'])">تحقق ✓</button>
+      </div>
+      <div class="ci-hint">💡 تلميح: my sister = she → is</div>
+      <div class="ci-sol" id="sol23"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ My sister <b>is</b> married.</div><div class="ci-sol-exp">my sister = she → is · يمكن اختصارها: My sister'<b>s</b> married.</div></div></div>
+    </div>
+
+    <!-- Q24 MCQ -->
+    <div class="ci-q" id="ciq24">
+      <div class="ci-q-head"><span class="ci-q-num">24</span><span class="ci-q-tag">am / is / are</span><span class="ci-type-badge ci-type-mcq">اختيار</span></div>
+      <div class="ci-opts">
+        <button class="ci-btn" data-correct="1" onclick="ciPick(this,24)"><span class="ci-lbl">A</span>It is cold today.</button>
+        <button class="ci-btn" data-correct="0" onclick="ciPick(this,24)"><span class="ci-lbl">B</span>It are cold today.</button>
+      </div>
+      <div class="ci-sol" id="sol24"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ It <b>is</b> cold today.</div><div class="ci-sol-exp">it → is دائماً — للطقس والوقت والمسافة نستخدم it + is</div></div></div>
+    </div>
+
+    <!-- Q25 FIB -->
+    <div class="ci-q ci-fib-q" id="ciq25">
+      <div class="ci-q-head"><span class="ci-q-num">25</span><span class="ci-q-tag">am / is / are</span><span class="ci-type-badge ci-type-fib">أملأ الفراغ</span></div>
+      <div class="ci-fib-sent">You and I ___ (be) from the same city.</div>
+      <div class="ci-fib-row">
+        <input class="ci-fib-input" id="fib25" placeholder="كلمة واحدة..." autocomplete="off" spellcheck="false">
+        <button class="ci-fib-check" onclick="ciFibCheck(25,['are'])">تحقق ✓</button>
+      </div>
+      <div class="ci-hint">💡 تلميح: you and I = نحن → are</div>
+      <div class="ci-sol" id="sol25"><div class="ci-sol-head"></div><div class="ci-sol-body"><div class="ci-sol-ans">✅ You and I <b>are</b> from the same city.</div><div class="ci-sol-exp">you and I = جمع → are · كلما جمعنا ضميرين → are</div></div></div>
+    </div>
+
+    <div class="ci-score" id="ciScore">
+      <div class="ci-score-emoji" id="ciScoreEmoji">🎉</div>
+      <div class="ci-score-num" id="ciScoreNum">0</div>
+      <div class="ci-score-of">/ 25</div>
+      <div class="ci-score-bar-wrap"><div class="ci-score-bar-fill" id="ciScoreBar"></div></div>
+      <div class="ci-score-msg" id="ciScoreMsg">Well done!</div>
+      <div class="ci-score-ar" id="ciScoreAr">أنهيت الاختبار!</div>
+      <button class="ci-reset" onclick="ciReset()">🔄 حاول مرة أخرى</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════ EVERYDAY ENGLISH PANEL ══════════ -->
+<div class="panel" id="panel-everyday">
+  <div class="dlg-card">
+    <div class="dlg-header">
+      <div class="dlg-meta">
+        <div class="dlg-num">Dialogue 01</div>
+        <div class="dlg-title">Greetings</div>
+        <div class="dlg-ctx">Two people greeting each other — شخصان يتبادلان التحية</div>
+      </div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-name-tag">A</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Hello, Sally. How are you?</div>
+          <div class="chat-ar">مرحباً سالي. كيف حالك؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Hello, Sally. How are you?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">B</div>
+        <div class="chat-bubble">
+          <div class="chat-en">OK, thank you. And you?</div>
+          <div class="chat-ar">بخير، شكراً. وأنت؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="OK, thank you. And you?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">A</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Fine, thanks.</div>
+          <div class="chat-ar">بخير، شكراً.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Fine, thanks." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dlg-card">
+    <div class="dlg-header">
+      <div class="dlg-meta">
+        <div class="dlg-num">Dialogue 02</div>
+        <div class="dlg-title">Informal Greeting</div>
+        <div class="dlg-ctx">Casual greeting between friends — تحية غير رسمية بين أصدقاء</div>
+      </div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-name-tag">A</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Hi, Pete. How are you?</div>
+          <div class="chat-ar">أهلاً بيت. كيف حالك؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Hi, Pete. How are you?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">B</div>
+        <div class="chat-bubble">
+          <div class="chat-en">All right, thanks. And you?</div>
+          <div class="chat-ar">على ما يرام، شكراً. وأنت؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="All right, thanks. And you?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">A</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Not bad, thank you.</div>
+          <div class="chat-ar">ليس سيئاً، شكراً.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Not bad, thank you." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dlg-card">
+    <div class="dlg-header">
+      <div class="dlg-meta">
+        <div class="dlg-num">Dialogue 03</div>
+        <div class="dlg-title">Formal Greeting</div>
+        <div class="dlg-ctx">Greeting someone formally — التحية بأسلوب رسمي</div>
+      </div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-name-tag">A</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Good morning, Mr Simpson. How are you?</div>
+          <div class="chat-ar">صباح الخير، السيد سيمبسون. كيف حالك؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Good morning, Mr Simpson. How are you?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">B</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Very well, thank you. And you?</div>
+          <div class="chat-ar">بخير جداً، شكراً. وأنت؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Very well, thank you. And you?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">A</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Fine, thank you.</div>
+          <div class="chat-ar">بخير، شكراً.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Fine, thank you." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dlg-card">
+    <div class="dlg-header">
+      <div class="dlg-meta">
+        <div class="dlg-num">Dialogue 04</div>
+        <div class="dlg-title">Saying Goodbye</div>
+        <div class="dlg-ctx">Saying goodbye in the morning — الوداع في الصباح</div>
+      </div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-name-tag">A</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Bye, Mum! It's time for school.</div>
+          <div class="chat-ar">مع السلامة يا أمي! حان وقت المدرسة.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Bye, Mum! It's time for school." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">B</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Goodbye, darling. Have a good day!</div>
+          <div class="chat-ar">مع السلامة يا حبيبي. أتمنى لك يوماً جيداً!</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Goodbye, darling. Have a good day!" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dlg-card">
+    <div class="dlg-header">
+      <div class="dlg-meta">
+        <div class="dlg-num">Dialogue 05</div>
+        <div class="dlg-title">At a Café</div>
+        <div class="dlg-ctx">Ordering a drink at a café — طلب مشروب في المقهى</div>
+      </div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Customer</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Good morning! Can I have a coffee, please?</div>
+          <div class="chat-ar">صباح الخير! هل يمكنني الحصول على قهوة من فضلك؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Good morning! Can I have a coffee, please?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Staff</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Yes, of course. Anything else?</div>
+          <div class="chat-ar">نعم بالطبع. شيء آخر؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Yes, of course. Anything else?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Customer</div>
+        <div class="chat-bubble">
+          <div class="chat-en">No, thank you.</div>
+          <div class="chat-ar">لا، شكراً.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="No, thank you." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dlg-card">
+    <div class="dlg-header">
+      <div class="dlg-meta">
+        <div class="dlg-num">Dialogue 06</div>
+        <div class="dlg-title">In a Shop</div>
+        <div class="dlg-ctx">Staff helping a customer in a shop — موظف يساعد زبوناً</div>
+      </div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Assistant</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Can I help you?</div>
+          <div class="chat-ar">هل يمكنني مساعدتك؟</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Can I help you?" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Customer</div>
+        <div class="chat-bubble">
+          <div class="chat-en">No, thank you. We're just looking.</div>
+          <div class="chat-ar">لا، شكراً. نحن نتفرج فقط.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="No, thank you. We're just looking." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dlg-card">
+    <div class="dlg-header">
+      <div class="dlg-meta">
+        <div class="dlg-num">Dialogue 07</div>
+        <div class="dlg-title">Introductions</div>
+        <div class="dlg-ctx">Introducing two people to each other — تعريف شخصين ببعضهما</div>
+      </div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-name-tag">A</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Frank, this is Gina.</div>
+          <div class="chat-ar">فرانك، هذه جينا.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Frank, this is Gina." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Frank</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Hello, Gina. Nice to meet you.</div>
+          <div class="chat-ar">مرحباً جينا. سعيد بلقائك.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Hello, Gina. Nice to meet you." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-name-tag">Gina</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Hello, Frank. Pleased to meet you too.</div>
+          <div class="chat-ar">مرحباً فرانك. أنا أيضاً سعيدة بلقائك.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Hello, Frank. Pleased to meet you too." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dlg-card">
+    <div class="dlg-header">
+      <div class="dlg-meta">
+        <div class="dlg-num">Dialogue 08</div>
+        <div class="dlg-title">End of Week</div>
+        <div class="dlg-ctx">Saying goodbye at the end of the week — وداع نهاية الأسبوع</div>
+      </div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-name-tag">A</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Thank goodness it's Friday!</div>
+          <div class="chat-ar">الحمد لله إنه الجمعة!</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Thank goodness it's Friday!" onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">Ian</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Bye, Ian. Have a good weekend.</div>
+          <div class="chat-ar">مع السلامة إيان. أتمنى لك عطلة سعيدة.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Bye, Ian. Have a good weekend." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dlg-card">
+    <div class="dlg-header">
+      <div class="dlg-meta">
+        <div class="dlg-num">Dialogue 09</div>
+        <div class="dlg-title">Goodnight</div>
+        <div class="dlg-ctx">Saying goodnight before sleeping — قول تصبح على خير</div>
+      </div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-name-tag">A</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Good night! Sleep well.</div>
+          <div class="chat-ar">تصبح على خير! نم بشكل جيد.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Good night! Sleep well." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-name-tag">B</div>
+        <div class="chat-bubble">
+          <div class="chat-en">Good night! See you in the morning.</div>
+          <div class="chat-ar">تصبح على خير! أراك في الصباح.</div>
+          <div class="chat-bubble-foot"><button class="chat-sp-btn" data-text="Good night! See you in the morning." onclick="ttsRead(this.dataset.text,0.9)">🔊 Listen</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-hd"><div class="card-icon">🔑</div><div><div class="card-title">Key Phrases</div><div class="card-sub">عبارات مفتاحية — احفظها</div></div></div>
+    <div class="vocab-grid">
+      <div class="vocab-item"><span class="vocab-en">How are you?</span><span class="vocab-ar">كيف حالك؟</span></div>
+      <div class="vocab-item"><span class="vocab-en">Fine, thanks.</span><span class="vocab-ar">بخير، شكراً.</span></div>
+      <div class="vocab-item"><span class="vocab-en">Not bad.</span><span class="vocab-ar">ليس سيئاً.</span></div>
+      <div class="vocab-item"><span class="vocab-en">All right.</span><span class="vocab-ar">على ما يرام.</span></div>
+      <div class="vocab-item"><span class="vocab-en">Nice to meet you.</span><span class="vocab-ar">سعيد بلقائك.</span></div>
+      <div class="vocab-item"><span class="vocab-en">Pleased to meet you.</span><span class="vocab-ar">يسعدني لقاؤك.</span></div>
+      <div class="vocab-item"><span class="vocab-en">Have a good day!</span><span class="vocab-ar">أتمنى لك يوماً جيداً!</span></div>
+      <div class="vocab-item"><span class="vocab-en">Have a good weekend!</span><span class="vocab-ar">أتمنى عطلة سعيدة!</span></div>
+      <div class="vocab-item"><span class="vocab-en">Good morning / evening</span><span class="vocab-ar">صباح / مساء الخير</span></div>
+      <div class="vocab-item"><span class="vocab-en">Good night</span><span class="vocab-ar">تصبح على خير</span></div>
+      <div class="vocab-item"><span class="vocab-en">See you tomorrow.</span><span class="vocab-ar">أراك غداً.</span></div>
+      <div class="vocab-item"><span class="vocab-en">Anything else?</span><span class="vocab-ar">شيء آخر؟</span></div>
+    </div>
+  </div>
+  <div class="bottom-nav">
+    <a href="../index.html" class="bnav-btn">← الرئيسية</a>
+    <span style="font-size:12px;color:var(--muted)">Unit 1 / 12</span>
+    <span class="bnav-btn disabled">Unit 2 →</span>
+  </div>
+</div>
+
+<!-- ══════════ LISTENING PANEL ══════════ -->
+<div class="panel" id="panel-listening">
+  <div class="card">
+    <div class="card-hd"><div class="card-icon">🎧</div><div><div class="card-title">Listening — عائلة جوزيف</div><div class="card-sub">استمع وانقر على أعضاء العائلة التسعة</div></div></div>
+    <div class="ap" data-id="alis">
+      <div class="ap-label">🎧 Unit 1 Listening — Joseph's Family</div>
+      <div class="ap-row">
+        <button class="ap-btn" onclick="apRestart(this)">⏮</button>
+        <button class="ap-btn ap-play" onclick="apToggle(this)">▶</button>
+        <button class="ap-btn" onclick="apStop(this)">⏹</button>
+        <div class="ap-prog" onclick="apSeek(this,event)"><div class="ap-fill" id="apf-alis"></div></div>
+        <span class="ap-time" id="apt-alis">0:00</span>
+      </div>
+      <audio id="alis" src="../media/unit01/listening/unit01_listening_1_full.mp3"></audio>
+    </div>
+    <div class="listen-instr ar">👂 <strong>استمع</strong> للتسجيل جيداً ثم <strong>انقر على الكلمات التسع</strong> التي تصف أفراد عائلة جوزيف. بعض الكلمات لن تُذكر!</div>
+    <div style="font-size:11px;font-weight:700;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin:10px 0 8px;display:flex;align-items:center;gap:7px">انقر للاختيار<span style="flex:1;height:1px;background:var(--border);display:block"></span></div>
+    <div class="words-grid" id="wordsGrid">
+      <button class="word-btn" data-correct="true"  onclick="selWord(this)">sister</button>
+      <button class="word-btn" data-correct="true"  onclick="selWord(this)">brother</button>
+      <button class="word-btn" data-correct="true"  onclick="selWord(this)">wife</button>
+      <button class="word-btn" data-correct="false" onclick="selWord(this)">cousin</button>
+      <button class="word-btn" data-correct="true"  onclick="selWord(this)">daughter</button>
+      <button class="word-btn" data-correct="false" onclick="selWord(this)">husband</button>
+      <button class="word-btn" data-correct="true"  onclick="selWord(this)">son</button>
+      <button class="word-btn" data-correct="false" onclick="selWord(this)">nephew</button>
+      <button class="word-btn" data-correct="true"  onclick="selWord(this)">parents</button>
+      <button class="word-btn" data-correct="false" onclick="selWord(this)">father</button>
+      <button class="word-btn" data-correct="true"  onclick="selWord(this)">dad</button>
+      <button class="word-btn" data-correct="false" onclick="selWord(this)">grandparents</button>
+      <button class="word-btn" data-correct="true"  onclick="selWord(this)">mum</button>
+      <button class="word-btn" data-correct="false" onclick="selWord(this)">niece</button>
+      <button class="word-btn" data-correct="true"  onclick="selWord(this)">grandmother</button>
+    </div>
+    <div class="btn-row">
+      <button class="check-btn" onclick="checkListening()">✅ تحقق من الإجابات</button>
+      <button class="reset-btn" onclick="resetListening()">🔄 حاول مجدداً</button>
+    </div>
+    <div class="listen-score" id="listenScore"></div>
+  </div>
+
+  <div class="card">
+    <div class="card-hd"><div class="card-icon">👨‍👩‍👧‍👦</div><div><div class="card-title">Family Vocabulary</div><div class="card-sub">أفراد العائلة الكاملة مع الترجمة</div></div></div>
+    <div class="vocab-grid">
+      <div class="vocab-item"><span class="vocab-en">mother / mum</span><span class="vocab-ar">أم</span></div>
+      <div class="vocab-item"><span class="vocab-en">father / dad</span><span class="vocab-ar">أب</span></div>
+      <div class="vocab-item"><span class="vocab-en">sister</span><span class="vocab-ar">أخت</span></div>
+      <div class="vocab-item"><span class="vocab-en">brother</span><span class="vocab-ar">أخ</span></div>
+      <div class="vocab-item"><span class="vocab-en">daughter</span><span class="vocab-ar">ابنة</span></div>
+      <div class="vocab-item"><span class="vocab-en">son</span><span class="vocab-ar">ابن</span></div>
+      <div class="vocab-item"><span class="vocab-en">wife</span><span class="vocab-ar">زوجة</span></div>
+      <div class="vocab-item"><span class="vocab-en">husband</span><span class="vocab-ar">زوج</span></div>
+      <div class="vocab-item"><span class="vocab-en">grandmother</span><span class="vocab-ar">جدّة</span></div>
+      <div class="vocab-item"><span class="vocab-en">grandfather</span><span class="vocab-ar">جدّ</span></div>
+      <div class="vocab-item"><span class="vocab-en">parents</span><span class="vocab-ar">الوالدان</span></div>
+      <div class="vocab-item"><span class="vocab-en">grandparents</span><span class="vocab-ar">الأجداد</span></div>
+      <div class="vocab-item"><span class="vocab-en">cousin</span><span class="vocab-ar">ابن/ابنة عم أو خال</span></div>
+      <div class="vocab-item"><span class="vocab-en">nephew</span><span class="vocab-ar">ابن الأخ/الأخت</span></div>
+      <div class="vocab-item"><span class="vocab-en">niece</span><span class="vocab-ar">ابنة الأخ/الأخت</span></div>
+      <div class="vocab-item"><span class="vocab-en">aunt / uncle</span><span class="vocab-ar">عمة/خالة — عم/خال</span></div>
+    </div>
+  </div>
+  <div class="bottom-nav">
+    <a href="../index.html" class="bnav-btn">← الرئيسية</a>
+    <span style="font-size:12px;color:var(--muted)">Unit 1 / 12</span>
+    <span class="bnav-btn disabled">Unit 2 →</span>
+  </div>
+</div>
+
+<script>
+// ══ TABS ══
+function showTab(id,btn){document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));document.querySelectorAll('.main-tab').forEach(b=>b.classList.remove('active'));document.getElementById('panel-'+id).classList.add('active');btn.classList.add('active');}
+function jumpTab(id){const btn=document.querySelector(`.main-tab[onclick*="'${id}'"]`);if(btn){showTab(id,btn);document.querySelector('.main-tabs').scrollIntoView({behavior:'smooth',block:'nearest'});}}
+function showSub(id,btn){document.querySelectorAll('.sub-panel').forEach(p=>p.classList.remove('active'));document.querySelectorAll('.sub-tab').forEach(b=>b.classList.remove('active'));document.getElementById('sub-'+id).classList.add('active');btn.classList.add('active');}
+
+// ══ PROFESSIONAL AUDIO PLAYER ══
+let curApAud=null,curApPlayBtn=null;
+function apGetCtx(el){
+  const wrap=el.closest('.ap');
+  const id=wrap.dataset.id;
+  const aud=document.getElementById(id);
+  const fill=document.getElementById('apf-'+id);
+  const time=document.getElementById('apt-'+id);
+  const playBtn=wrap.querySelector('.ap-play');
+  return{aud,fill,time,playBtn};
+}
+function apFmt(s){const m=Math.floor(s/60),sc=Math.floor(s%60);return m+':'+(sc<10?'0':'')+sc;}
+function apBind(aud,fill,time,playBtn){
+  aud.ontimeupdate=()=>{if(aud.duration){fill.style.width=(aud.currentTime/aud.duration*100)+'%';time.textContent=apFmt(aud.currentTime)+' / '+apFmt(aud.duration);}};
+  aud.onended=()=>{playBtn.textContent='▶';fill.style.width='0%';curApAud=null;curApPlayBtn=null;};
+}
+function apStopCur(){if(curApAud){curApAud.pause();curApAud.currentTime=0;if(curApPlayBtn)curApPlayBtn.textContent='▶';curApAud=null;curApPlayBtn=null;}}
+function apToggle(btn){
+  const{aud,fill,time,playBtn}=apGetCtx(btn);
+  if(curApAud&&curApAud!==aud)apStopCur();
+  if(aud.paused){aud.play();playBtn.textContent='⏸';curApAud=aud;curApPlayBtn=playBtn;apBind(aud,fill,time,playBtn);}
+  else{aud.pause();playBtn.textContent='▶';curApAud=null;}
+}
+function apStop(btn){
+  const{aud,fill,time,playBtn}=apGetCtx(btn);
+  aud.pause();aud.currentTime=0;playBtn.textContent='▶';fill.style.width='0%';
+  time.textContent='0:00';if(curApAud===aud){curApAud=null;curApPlayBtn=null;}
+}
+function apRestart(btn){
+  const{aud,fill,time,playBtn}=apGetCtx(btn);
+  if(curApAud&&curApAud!==aud)apStopCur();
+  aud.currentTime=0;
+  if(aud.paused){aud.play();playBtn.textContent='⏸';curApAud=aud;curApPlayBtn=playBtn;apBind(aud,fill,time,playBtn);}
+}
+function apSeek(prog,e){
+  const wrap=prog.closest('.ap');
+  const aud=document.getElementById(wrap.dataset.id);
+  if(!aud.duration)return;
+  const r=prog.getBoundingClientRect();
+  aud.currentTime=((e.clientX-r.left)/r.width)*aud.duration;
+}
+
+// ══ DIALOGUE PLAYER ══
+let curDpAud=null,curDpBtn=null,curDpFill=null;
+function dpGetCtx(btn){
+  const hd=btn.closest('.dlg-hd');
+  const dlg=btn.closest('.dialogue');
+  const aud=hd.querySelector('audio');
+  const playBtn=hd.querySelector('.dp-play-btn');
+  const fill=dlg.querySelector('.dp-fill');
+  return{aud,playBtn,fill};
+}
+function dpBind(aud,playBtn,fill){
+  aud.ontimeupdate=()=>{if(aud.duration)fill.style.width=(aud.currentTime/aud.duration*100)+'%';};
+  aud.onended=()=>{playBtn.textContent='🔊 استمع';playBtn.classList.remove('playing');fill.style.width='0%';curDpAud=null;};
+}
+function dpStopCur(){if(curDpAud){curDpAud.pause();curDpAud.currentTime=0;if(curDpBtn){curDpBtn.textContent='🔊 استمع';curDpBtn.classList.remove('playing');}if(curDpFill)curDpFill.style.width='0%';curDpAud=null;}}
+function dpToggle(btn){
+  const{aud,playBtn,fill}=dpGetCtx(btn);
+  if(curDpAud&&curDpAud!==aud)dpStopCur();
+  if(aud.paused){aud.play();playBtn.textContent='⏸ إيقاف';playBtn.classList.add('playing');curDpAud=aud;curDpBtn=playBtn;curDpFill=fill;dpBind(aud,playBtn,fill);}
+  else{aud.pause();playBtn.textContent='🔊 استمع';playBtn.classList.remove('playing');curDpAud=null;}
+}
+function dpStop(btn){const{aud,playBtn,fill}=dpGetCtx(btn);aud.pause();aud.currentTime=0;playBtn.textContent='🔊 استمع';playBtn.classList.remove('playing');fill.style.width='0%';if(curDpAud===aud)curDpAud=null;}
+function dpRestart(btn){const{aud,playBtn,fill}=dpGetCtx(btn);if(curDpAud&&curDpAud!==aud)dpStopCur();aud.currentTime=0;if(aud.paused){aud.play();playBtn.textContent='⏸ إيقاف';playBtn.classList.add('playing');curDpAud=aud;curDpBtn=playBtn;curDpFill=fill;dpBind(aud,playBtn,fill);}}
+
+// ══ TTS ══
+function tts(t){window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='en-GB';u.rate=0.85;window.speechSynthesis.speak(u);}
+
+function rtPick(btn, qId, ok){
+  const q = document.getElementById(qId);
+  if(q.dataset.done) return;
+  q.dataset.done = '1';
+  q.querySelectorAll('.rt-opt').forEach(o => {
+    o.classList.add(o.hasAttribute('data-ok') ? 'rt-ok' : 'rt-no');
+    o.onclick = null;
+  });
+  const ex = q.querySelector('.rt-explain');
+  if(ex) ex.classList.add('show');
+  if(typeof playSound === 'function') playSound(ok ? 'correct' : 'wrong');
+}
+// ══ WEB AUDIO SOUNDS ══
+function playSound(type){
+  try{
+    const ctx=new(window.AudioContext||window.webkitAudioContext)();
+    const osc=ctx.createOscillator();const gain=ctx.createGain();
+    osc.connect(gain);gain.connect(ctx.destination);
+    if(type==='correct'){osc.frequency.setValueAtTime(523,ctx.currentTime);osc.frequency.setValueAtTime(659,ctx.currentTime+0.08);osc.frequency.setValueAtTime(784,ctx.currentTime+0.16);}
+    else{osc.frequency.setValueAtTime(330,ctx.currentTime);osc.frequency.setValueAtTime(220,ctx.currentTime+0.12);}
+    gain.gain.setValueAtTime(0.25,ctx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.001,ctx.currentTime+0.45);
+    osc.start(ctx.currentTime);osc.stop(ctx.currentTime+0.45);
+  }catch(e){}
+}
+
+// ══ LISTENING ══
+let listenDone=false;
+function selWord(btn){if(listenDone)return;btn.classList.toggle('selected');}
+function checkListening(){
+  listenDone=true;
+  const btns=document.querySelectorAll('#wordsGrid .word-btn');
+  let ok=0;
+  btns.forEach(b=>{
+    const c=b.dataset.correct==='true',s=b.classList.contains('selected');
+    b.classList.remove('selected');
+    if(c&&s){b.classList.add('correct');ok++;}
+    else if(!c&&s||c&&!s){b.classList.add('wrong');}
+  });
+  const sc=document.getElementById('listenScore');sc.style.display='block';
+  sc.textContent=ok===9?'🏆 ممتاز! وجدت جميع الكلمات التسع الصحيحة!':ok+'/9 — استمع مرة أخرى وحاول! انقر على زر إعادة المحاولة.';
+  sc.scrollIntoView({behavior:'smooth',block:'center'});
+}
+function resetListening(){
+  listenDone=false;
+  document.querySelectorAll('#wordsGrid .word-btn').forEach(b=>{b.classList.remove('correct','wrong','selected');});
+  document.getElementById('listenScore').style.display='none';
+}
+
+// ══ CHECK IT ══
+const ciAns={};
+const breaks={3:'brk1',6:'brk2',9:'brk3',12:'brk4'};
+// ══ CHECK IT — New System ══
+const ci1Breaks={6:'cibrk1',12:'cibrk2',18:'cibrk3'};
+let ci1Score=0,ci1Answered=0;
+const ci1Total=25;
+function ciShowSol(num,ok){
+  const sol=document.getElementById('sol'+num);
+  if(!sol)return;
+  sol.classList.add(ok?'sol-correct':'sol-wrong');
+  const head=sol.querySelector('.ci-sol-head');
+  if(head)head.textContent=ok?'✅ إجابة صحيحة':'❌ إجابة خاطئة — الحل الصحيح:';
+  sol.style.display='block';
+  setTimeout(()=>sol.scrollIntoView({behavior:'smooth',block:'nearest'}),150);
+}
+function ci1UpdateProgress(num){
+  document.getElementById('ciProgressFill').style.width=(ci1Answered/ci1Total*100)+'%';
+  localStorage.setItem('up1',Math.round(ci1Answered/ci1Total*100));
+  document.getElementById('ciProgressTxt').textContent=ci1Answered+' / '+ci1Total+' answered';
+  document.getElementById('ciScoreLive').textContent='Score: '+ci1Score;
+  if(ci1Breaks[num]){const b=document.getElementById(ci1Breaks[num]);b.style.display='block';setTimeout(()=>b.scrollIntoView({behavior:'smooth',block:'nearest'}),100);}
+  if(ci1Answered===ci1Total){
+    const pct=Math.round(ci1Score/ci1Total*100);
+    const s=document.getElementById('ciScore');s.style.display='block';
+    document.getElementById('ciScoreNum').textContent=ci1Score;
+    document.getElementById('ciScoreEmoji').textContent=ci1Score>=23?'🌟':ci1Score>=20?'🎉':ci1Score>=15?'👍':'💪';
+    document.getElementById('ciScoreMsg').textContent=ci1Score>=23?'Excellent!':ci1Score>=20?'Very good!':ci1Score>=15?'Good — keep practising!':'Review and try again!';
+    document.getElementById('ciScoreAr').textContent=ci1Score>=23?'ممتاز! أنت مستعد للوحدة القادمة!':ci1Score>=20?'جيد جداً! راجع الأخطاء.':ci1Score>=15?'جيد! راجع القواعد وحاول مرة أخرى.':'راجع شرح am/is/are بعناية وكرّر الاختبار!';
+    setTimeout(()=>{document.getElementById('ciScoreBar').style.width=pct+'%';},200);
+    setTimeout(()=>s.scrollIntoView({behavior:'smooth',block:'nearest'}),300);
+  }
+}
+function ciPick(btn,num){
+  const q=btn.closest('.ci-q');
+  if(q.classList.contains('answered'))return;
+  const ok=btn.dataset.correct==='1';
+  q.classList.add('answered');
+  q.querySelectorAll('.ci-btn').forEach(b=>b.classList.add('done'));
+  btn.classList.add(ok?'correct':'wrong');
+  if(!ok)q.querySelectorAll('.ci-btn[data-correct="1"]').forEach(b=>b.classList.add('correct'));
+  if(ok)ci1Score++;
+  ci1Answered++;
+  playSound(ok?'correct':'wrong');
+  ciShowSol(num,ok);
+  ci1UpdateProgress(num);
+}
+function ciFibCheck(num,answers){
+  const q=document.getElementById('ciq'+num);
+  if(q.classList.contains('answered'))return;
+  const inp=document.getElementById('fib'+num);
+  const val=inp.value.trim().toLowerCase();
+  if(!val)return;
+  const ok=answers.map(a=>a.toLowerCase()).includes(val);
+  q.classList.add('answered');
+  inp.disabled=true;
+  inp.style.borderColor=ok?'var(--green)':'var(--red)';
+  inp.style.background=ok?'rgba(34,197,94,0.08)':'rgba(239,68,68,0.08)';
+  const checkBtn=q.querySelector('.ci-fib-check');
+  if(checkBtn){checkBtn.disabled=true;checkBtn.textContent=ok?'✓ صح':'✗ خطأ';}
+  if(ok)ci1Score++;
+  ci1Answered++;
+  playSound(ok?'correct':'wrong');
+  ciShowSol(num,ok);
+  ci1UpdateProgress(num);
+}
+function ciReset(){
+  document.querySelectorAll('.ci-btn').forEach(b=>b.classList.remove('correct','wrong','done'));
+  document.querySelectorAll('.ci-q').forEach(q=>q.classList.remove('answered'));
+  document.querySelectorAll('.ci-brk').forEach(b=>b.style.display='none');
+  document.querySelectorAll('.ci-sol').forEach(s=>{s.style.display='none';s.className='ci-sol';});
+  document.querySelectorAll('.ci-fib-input').forEach(inp=>{inp.value='';inp.disabled=false;inp.style.borderColor='';inp.style.background='';});
+  document.querySelectorAll('.ci-fib-check').forEach(btn=>{btn.disabled=false;btn.textContent='تحقق ✓';});
+  document.getElementById('ciScore').style.display='none';
+  document.getElementById('ciProgressFill').style.width='0%';
+  document.getElementById('ciProgressTxt').textContent='0 / 25 answered';
+  document.getElementById('ciScoreLive').textContent='Score: 0';
+  document.getElementById('ciScoreBar').style.width='0%';
+  ci1Score=0;ci1Answered=0;
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+// Legacy pick (kept for Listening tab)
+function pick(btn,num){
+  if(ciAns[num]!==undefined)return;
+  const opts=btn.closest('.ci-opts').querySelectorAll('.ci-opt');
+  opts.forEach(o=>o.disabled=true);
+  const ok=btn.dataset.correct==='true';
+  btn.classList.add(ok?'correct':'wrong');
+  if(!ok)opts.forEach(o=>{if(o.dataset.correct==='true')o.classList.add('correct');});
+  ciAns[num]=ok;
+  playSound(ok?'correct':'wrong');
+  if(breaks[num]){const b=document.getElementById(breaks[num]);if(b){b.classList.add('show');b.scrollIntoView({behavior:'smooth',block:'nearest'});}}
+  if(Object.keys(ciAns).length===15)showScore();
+}
+function showScore(){
+  const c=Object.values(ciAns).filter(Boolean).length;
+  const box=document.getElementById('scoreBox');if(!box)return;box.style.display='block';
+  document.getElementById('scoreNum').textContent=c+'/15';
+  if(c===15){document.getElementById('scoreEmoji').textContent='🏆';document.getElementById('scoreMsg').textContent='ممتاز!';}
+  else if(c>=11){document.getElementById('scoreEmoji').textContent='👍';document.getElementById('scoreMsg').textContent='جيد جداً!';}
+  else{document.getElementById('scoreEmoji').textContent='💪';document.getElementById('scoreMsg').textContent='راجع القواعد وأعد المحاولة!';}
+  box.scrollIntoView({behavior:'smooth',block:'center'});
+}
+</script>
+</div><!-- /main-content -->
+</div><!-- /layout -->
+<script src="../media/global-player.js"></script>
+<script>
+(function(){
+  for(var i=1;i<=12;i++){
+    var f=document.getElementById('sp'+i);
+    if(f){var v=parseInt(localStorage.getItem('up'+i)||'0',10);f.style.width=v+'%';}
+  }
+})();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+(function(){
+  var map={1: "up_l1", 2: "up_l2", 3: "up_l3", 4: "up_l4", 5: "up_l5", 6: "up1", 7: "up2", 8: "up3", 9: "up4", 10: "up6", 11: "up5", 12: "up_l12", 13: "up7", 14: "up8", 15: "up9", 16: "up10", 17: "up11", 19: "up_l19", 20: "up_l20", 21: "up_l21", 22: "up_l22", 23: "up_l23", 24: "up_l24", 25: "up_l25", 26: "up_l26", 27: "up_l27", 28: "up_l28", 29: "up_l29", 30: "up_l30", 31: "up_l31", 32: "up_l32", 33: "up_l33", 34: "up_l34", 35: "up_l35", 36: "up_l36", 37: "up_l37", 38: "up_l38", 39: "up_l39", 40: "up_l40", 41: "up_l41", 42: "up_l42", 43: "up_l43", 44: "up_l44", 45: "up_l45", 46: "up_l46"};
+  for(var lid in map){
+    var f=document.getElementById('sp'+lid);
+    if(f){var v=parseInt(localStorage.getItem(map[lid])||'0',10);f.style.width=v+'%';}
+  }
+  setTimeout(function(){
+    var a=document.querySelector('.su-item.su-active');
+    if(a){var u=a.closest('.sidebar-units');if(u)u.scrollTop=Math.max(0,a.offsetTop-a.offsetHeight);}
+  },80);
+})();
+</script>
+<script>
+function toggleSidebar(){
+  var sb=document.querySelector('.sidebar');
+  var bd=document.getElementById('sbBackdrop');
+  if(!sb||!bd)return;
+  sb.classList.toggle('sb-open');
+  bd.classList.toggle('sb-open');
+  document.body.style.overflow=sb.classList.contains('sb-open')?'hidden':'';
+}
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.su-item').forEach(function(a){
+    a.addEventListener('click',function(){
+      var sb=document.querySelector('.sidebar');
+      if(sb&&sb.classList.contains('sb-open'))toggleSidebar();
+    });
+  });
+});
+</script>
+
+<script>
+(function(){
+  // Disable right-click
+  document.addEventListener('contextmenu', function(e){ e.preventDefault(); });
+
+  // Disable keyboard shortcuts
+  document.addEventListener('keydown', function(e){
+    // F12
+    if(e.key==='F12'){e.preventDefault();return false;}
+    // Ctrl+U (view source), Ctrl+S (save), Ctrl+A (select all), Ctrl+P (print)
+    if(e.ctrlKey && ['u','U','s','S','a','A','p','P'].indexOf(e.key)!==-1){
+      e.preventDefault();return false;
+    }
+    // Ctrl+Shift+I (DevTools), Ctrl+Shift+J, Ctrl+Shift+C
+    if(e.ctrlKey && e.shiftKey && ['i','I','j','J','c','C','k','K'].indexOf(e.key)!==-1){
+      e.preventDefault();return false;
+    }
+  });
+
+  // Disable text selection via CSS
+  document.documentElement.style.webkitUserSelect='none';
+  document.documentElement.style.userSelect='none';
+
+  // Allow selection inside inputs/textareas only
+  document.addEventListener('mousedown', function(e){
+    var t=e.target.tagName;
+    if(t==='INPUT'||t==='TEXTAREA'){
+      e.target.style.userSelect='text';
+      e.target.style.webkitUserSelect='text';
+    }
+  });
+
+  // Block drag
+  document.addEventListener('dragstart', function(e){ e.preventDefault(); });
+})();
+</script>
+<button class="float-menu-btn" onclick="toggleSidebar()" aria-label="القائمة">
+  <span></span><span></span><span></span>
+</button>
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=FREE"></script>
+<script src="../media/rv.js"></script>
+</body>
+</html>

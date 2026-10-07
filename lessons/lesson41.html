@@ -1,0 +1,1446 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lesson 41 — Inversion &amp; Emphatic Structures</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#1a3a6e;--primary-dark:#0f2548;--accent:#f4a624;--al:rgba(244,166,36,0.12);--bg:#0d1b2a;--card:#162030;--card2:#1e2d40;--border:#2d4560;--text:#e8edf5;--muted:#8899b0;--green:#22c55e;--red:#ef4444;--blue:#4a9eff;--purple:#a855f7}
+body{font-family:'Poppins','Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.ar{font-family:'Cairo','Segoe UI',Arial,sans-serif}
+.topnav{background:var(--primary-dark);border-bottom:2px solid var(--accent);padding:10px 24px;display:flex;align-items:center;justify-content:space-between}
+.hero{background:linear-gradient(135deg,#1a3a6e 0%,#0f2548 55%,#0d1f3c 100%);padding:55px 24px 48px;text-align:center;border-bottom:3px solid var(--accent);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;border-radius:50%;background:rgba(244,166,36,0.06)}
+.hero::after{content:'';position:absolute;bottom:-60px;left:-60px;width:300px;height:300px;border-radius:50%;background:rgba(74,158,255,0.05)}
+.unit-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(244,166,36,0.15);border:1px solid rgba(244,166,36,0.4);color:var(--accent);font-weight:800;padding:6px 18px;border-radius:20px;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px}
+.hero-title{font-size:clamp(28px,6vw,52px);font-weight:900;color:white;line-height:1.15;margin-bottom:8px}
+.hero-title i{color:var(--accent);font-style:italic}
+.hero-ar{font-size:18px;color:var(--muted);margin-bottom:12px;direction:rtl}
+.hero-sub{color:var(--muted);max-width:620px;margin:0 auto 22px;font-size:14px}
+.hero-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.tag{display:inline-flex;align-items:center;gap:6px;padding:6px 15px;border-radius:16px;font-size:12px;font-weight:700}
+.tag-grammar{background:rgba(244,166,36,0.15);color:var(--accent);border:1px solid rgba(244,166,36,0.3)}
+.tag-other{background:rgba(74,158,255,0.1);color:var(--blue);border:1px solid rgba(74,158,255,0.25)}
+.tag-btn{cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif}
+.tag-btn:hover{transform:translateY(-2px);opacity:.85}
+.main-tabs{display:flex;gap:4px;padding:14px 24px;background:var(--primary-dark);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;flex-wrap:wrap}
+.main-tab{padding:8px 18px;border-radius:8px;border:1px solid transparent;background:none;color:var(--muted);font-weight:700;cursor:pointer;font-size:13px;font-family:'Poppins',sans-serif;transition:all .2s}
+.main-tab.active{background:var(--accent);color:#0d1b2a;border-color:var(--accent)}
+.main-tab:hover:not(.active){background:rgba(244,166,36,.1);color:var(--accent);border-color:rgba(244,166,36,.3)}
+.tab-panel{display:none;padding:20px 24px}
+.tab-panel.active{display:block}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;margin-bottom:16px}
+.card-title{font-size:16px;font-weight:800;color:white;margin-bottom:5px;display:flex;align-items:center;gap:8px}
+.card-ar{font-size:13px;color:var(--muted);margin-bottom:14px;direction:rtl;font-family:'Cairo',sans-serif}
+.card-note{background:var(--al);border:1px solid rgba(244,166,36,.3);border-radius:10px;padding:10px 14px;font-size:12.5px;color:var(--accent);margin:10px 0;direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.sub-tabs{display:flex;gap:4px;margin:14px 0 18px;flex-wrap:wrap}
+.sub-tab{padding:6px 14px;border-radius:8px;border:1px solid var(--border);background:none;color:var(--muted);font-weight:700;cursor:pointer;font-size:12px;font-family:'Poppins',sans-serif;transition:all .2s}
+.sub-tab.active{background:rgba(244,166,36,.15);border-color:var(--accent);color:var(--accent)}
+.sub-tab:hover:not(.active){border-color:var(--accent);color:var(--accent)}
+.sub-panel{display:none}
+.sub-panel.active{display:block}
+.tts-box{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.tts-btn{background:var(--card2);border:1px solid var(--blue);color:var(--blue);padding:7px 16px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif}
+.tts-btn:hover{background:rgba(74,158,255,.15);transform:translateY(-1px)}
+.tts-stop{border-color:var(--muted);color:var(--muted)}
+.tts-stop:hover{background:rgba(136,153,176,.1)}
+.formula-box{background:rgba(10,30,53,0.8);border:2px solid var(--border);border-radius:14px;padding:18px 22px;margin:14px 0}
+.formula-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid rgba(45,69,96,0.4);flex-wrap:wrap}
+.formula-row:last-child{border-bottom:none}
+.formula-subj{font-size:14px;font-weight:800;color:var(--blue);min-width:160px}
+.formula-be{font-size:15px;font-weight:900;color:var(--accent);background:rgba(244,166,36,.12);padding:4px 12px;border-radius:8px}
+.formula-be.neg{color:var(--red);background:rgba(239,68,68,.1)}
+.formula-be.q{color:var(--green);background:rgba(34,197,94,.1)}
+.formula-note{font-size:11px;color:var(--muted);font-style:italic;margin-left:auto}
+.formula-plus{font-size:16px;color:var(--muted)}
+.ex-section-title{font-size:12px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin:16px 0 8px}
+.ex-list{margin-top:4px}
+.ex-item{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid rgba(45,69,96,0.3)}
+.ex-item:last-child{border-bottom:none}
+.sp{background:none;border:none;font-size:16px;cursor:pointer;color:var(--blue);flex-shrink:0;padding:2px 0;transition:transform .2s;line-height:1}
+.sp:hover{transform:scale(1.2)}
+.sp-group{display:inline-flex;align-items:center;gap:3px;flex-shrink:0}
+.sp-pp,.sp-st{background:var(--card2);border:1px solid var(--border);color:var(--muted);font-size:12px;padding:3px 7px;border-radius:6px;cursor:pointer;transition:all .2s;font-family:'Poppins',sans-serif;line-height:1;min-width:26px;text-align:center}
+.sp-pp:hover{background:rgba(74,158,255,.15);border-color:var(--blue);color:var(--blue)}
+.sp-st:hover{background:rgba(239,68,68,.1);border-color:var(--red);color:var(--red)}
+.ex-en{font-size:13.5px;color:var(--text);font-weight:600;line-height:1.4}
+.ex-en b{color:var(--accent)}
+.ex-ar{font-size:12px;color:var(--muted);margin-top:2px;direction:rtl;font-family:'Cairo',sans-serif}
+.sa-table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13px}
+.sa-table th{background:rgba(26,58,110,0.5);color:var(--accent);padding:8px 12px;font-weight:800;text-align:left;border:1px solid var(--border)}
+.sa-table td{padding:8px 12px;border:1px solid rgba(45,69,96,0.4);vertical-align:middle}
+.sa-table tr:nth-child(even) td{background:rgba(30,45,64,0.3)}
+.sa-yes{color:var(--green);font-weight:800}
+.sa-no{color:var(--red);font-weight:800}
+.wh-grid{display:flex;flex-direction:column;gap:7px;margin:12px 0}
+.wh-row{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px;font-size:13px}
+.wh-q{color:var(--text);margin-bottom:3px}
+.wh-q b{color:var(--blue)}
+.wh-a{color:var(--muted);font-style:italic}
+.time-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;margin:12px 0}
+.time-item{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px}
+.time-en{font-size:13px;font-weight:700;color:var(--accent)}
+.time-ar{font-size:11px;color:var(--muted);margin-top:3px;direction:rtl;font-family:'Cairo',sans-serif}
+.time-eg{font-size:11px;color:var(--text);margin-top:4px;font-style:italic}
+.mistake-item{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.m-wrong{font-size:13px;color:var(--red);margin-bottom:3px}
+.m-wrong::before{content:'❌ '}
+.m-right{font-size:13px;color:var(--green);font-weight:700;margin-bottom:3px}
+.m-right::before{content:'✅ '}
+.m-why{font-size:11.5px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;border-top:1px solid rgba(45,69,96,.4);padding-top:5px;margin-top:5px}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:8px;margin-top:12px}
+.vocab-item{background:var(--card2);border:1px solid var(--border);border-radius:9px;padding:9px 12px;cursor:pointer;transition:border-color .2s}
+.vocab-item:hover{border-color:var(--accent)}
+.vocab-en{font-size:14px;font-weight:800;color:var(--text)}
+.vocab-past{font-size:11.5px;color:var(--accent);margin-top:2px;font-weight:700}
+.vocab-ar{font-size:11px;color:var(--muted);margin-top:3px;font-family:'Cairo',sans-serif;direction:rtl}
+.vs-wrap{overflow-x:auto;margin:18px 0;padding:4px 0}
+.vs-caption{font-size:11px;color:var(--muted);text-align:center;margin-top:8px;font-style:italic}
+.dlg-card{background:var(--card);border:1px solid var(--border);border-radius:16px;margin-bottom:16px;overflow:hidden}
+.dlg-header{background:linear-gradient(to right,var(--primary),#1a1a4e);padding:13px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.dlg-meta{flex:1}
+.dlg-num{font-size:10px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:2px}
+.dlg-title{font-weight:800;font-size:14px;color:white}
+.dlg-ctx{font-size:11px;color:rgba(255,255,255,.5);font-style:italic;margin-top:2px}
+.dlg-tts{background:rgba(244,166,36,.15);border:1px solid rgba(244,166,36,.4);color:var(--accent);padding:6px 14px;border-radius:8px;font-size:11px;font-weight:700;cursor:pointer;font-family:'Poppins',sans-serif;transition:all .2s;white-space:nowrap}
+.dlg-tts:hover{background:rgba(244,166,36,.3)}
+.dlg-body{padding:20px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:640px){.dlg-body{grid-template-columns:1fr}}
+.dlg-col-head{font-size:10px;font-weight:700;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+.bubble{padding:9px 13px;border-radius:12px;font-size:13px;line-height:1.55;margin-bottom:7px}
+.bubble-a{background:rgba(26,58,110,0.5);border:1px solid rgba(74,158,255,0.2)}
+.bubble-b{background:var(--card2);border:1px solid var(--border)}
+.bubble-name{font-size:9px;font-weight:800;color:var(--muted);margin-bottom:4px;letter-spacing:.5px;text-transform:uppercase}
+.bubble-name.b{color:var(--accent)}
+.bubble-ar{direction:rtl;font-family:'Cairo',sans-serif;font-size:13px;color:var(--text)}
+.layout{display:flex;min-height:100vh}
+.sidebar{width:30%;max-width:320px;min-width:220px;position:fixed;top:0;left:0;bottom:0;background:var(--primary-dark);border-right:2px solid var(--border);display:flex;flex-direction:column;z-index:200;overflow:hidden}
+.sidebar-header{padding:18px 20px 14px;border-bottom:2px solid var(--accent);flex-shrink:0}
+.sidebar-logo{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+.sidebar-logo-icon{width:34px;height:34px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900;color:#0d1b2a;flex-shrink:0}
+.sidebar-logo-text{font-family:'Cairo',sans-serif;font-size:15px;font-weight:800;color:white}
+.sidebar-logo-sub{font-size:10px;color:var(--muted);font-weight:500;margin-top:-1px}
+.sidebar-label{font-family:'Cairo',sans-serif;font-size:11px;font-weight:700;color:var(--accent);letter-spacing:2px;text-transform:uppercase;margin-top:12px}
+.sidebar-units{flex:1;overflow-y:auto;padding:10px 12px;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+.sidebar-units::-webkit-scrollbar{width:4px}
+.sidebar-units::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+.su-item{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;text-decoration:none;margin-bottom:4px;transition:background .2s,transform .2s}
+.su-item:not(.su-locked):hover{background:rgba(244,166,36,0.12);transform:translateX(3px)}
+.su-item.su-locked{opacity:.45;cursor:default;pointer-events:none}
+.su-item.su-active{background:rgba(244,166,36,0.15);border:1px solid rgba(244,166,36,0.3)}
+.su-num{width:28px;height:28px;border-radius:7px;background:rgba(255,255,255,0.06);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:var(--accent);flex-shrink:0}
+.su-item:not(.su-locked) .su-num{background:rgba(244,166,36,0.12);border-color:rgba(244,166,36,0.3)}
+.su-texts{flex:1;min-width:0}
+.su-en{font-size:13px;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.su-ar{font-family:'Cairo',sans-serif;font-size:11px;color:var(--muted);direction:rtl;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.su-check{font-size:12px;flex-shrink:0}
+.su-lock{font-size:11px;color:var(--muted);flex-shrink:0}
+.main-content{margin-left:min(30%,320px);flex:1;min-width:0}
+footer{padding:20px 24px;text-align:center;color:var(--muted);font-size:12px;border-top:1px solid var(--border);margin-top:10px}
+
+/* ══ Hamburger (desktop: hidden) ══ */
+.nav-hamburger{display:none;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.3);border-radius:8px;cursor:pointer;flex-direction:column;gap:5px;padding:8px;flex-shrink:0;margin-left:6px}
+.nav-hamburger span{display:block;width:100%;height:2px;background:var(--accent);border-radius:2px}
+/* Backdrop */
+.sb-backdrop{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:199}
+.sb-backdrop.sb-open{display:block}
+@media(max-width:768px){
+  .sidebar{position:fixed;left:-100%;width:82%;max-width:300px;min-width:unset;transition:left .3s ease;z-index:200}
+  .sidebar.sb-open{left:0}
+  .main-content{margin-left:0}
+  .nav-brand{display:none}
+  .nav-hamburger{display:flex}
+  .topnav{padding:10px 12px;gap:6px}
+  .nav-lesson-name{display:none}
+  .nav-left{gap:5px}
+  .hero{padding:22px 13px 20px}
+  .hero-title{font-size:22px;letter-spacing:-.5px}
+  .hero-ar{font-size:12px}
+  .hero-sub{font-size:12px}
+  .hero-tags{gap:5px;justify-content:center}
+  .tag{font-size:10px;padding:3px 9px}
+  .rule-section{padding:0 12px}
+  .read-wrap{padding:0 12px}
+  .ci-wrap{padding:12px 12px}
+  .ci-hero{padding:18px 12px}
+  .dlg-block{padding:0 12px}
+  .eu-cat-grid{grid-template-columns:1fr}
+  .nu-scale{gap:3px}
+  .nu-word{font-size:10px;padding:3px 7px}
+  .nu-cmp-head,.nu-cmp-row{grid-template-columns:1fr 1fr;font-size:10px}
+  .nu-cmp-head span:last-child,.nu-cmp-row span:last-child{display:none}
+  .reg-ladder{padding:10px 12px}
+  .cmp-table{font-size:11px}
+  .chat-wrap{padding:0 4px}
+  .ci-q{margin-bottom:10px}
+  .ci-opts{gap:5px}
+  .ci-btn{font-size:12px;padding:9px 10px}
+  .vocab-grid{grid-template-columns:1fr 1fr}
+  .rq-opts{gap:5px}
+}
+
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+/* some/any pill styles */
+.pill-wrap{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.pill{padding:5px 14px;border-radius:20px;font-size:12.5px;font-weight:800}
+.pill-green{background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.35);color:var(--green)}
+.pill-blue{background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.3);color:var(--blue)}
+.pill-red{background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3);color:var(--red)}
+/* Reading */
+.read-tts-bar{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;align-items:center}
+.read-label{font-size:12px;font-weight:700;color:var(--muted)}
+.read-pass{background:var(--card2);border:1px solid var(--border);border-radius:14px;padding:22px;font-size:14px;line-height:1.9;margin-bottom:24px}
+.read-pass p{margin-bottom:12px}
+.read-pass p:last-child{margin-bottom:0}
+.read-pass b{color:var(--accent);font-weight:700}
+.comp-section-title{font-size:14px;font-weight:800;color:var(--accent);margin-bottom:14px;text-transform:uppercase;letter-spacing:1px}
+.read-q{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;margin-bottom:12px}
+.read-q-text{font-weight:700;font-size:14px;margin-bottom:12px;color:var(--text);line-height:1.4}
+.read-opts{display:flex;flex-direction:column;gap:7px}
+.read-opt{background:var(--card2);border:1px solid var(--border);color:var(--text);padding:9px 14px;border-radius:8px;font-size:13px;cursor:pointer;text-align:left;font-family:'Poppins',sans-serif;transition:all .2s;display:flex;align-items:center;gap:8px}
+.read-opt:hover:not(.done){background:rgba(244,166,36,.06);border-color:rgba(244,166,36,.35);transform:translateY(-1px)}
+.read-opt.correct{background:rgba(34,197,94,.12);border-color:var(--green);color:var(--green)}
+.read-opt.wrong{background:rgba(239,68,68,.12);border-color:var(--red);color:var(--red)}
+.read-opt.done{cursor:default;transform:none!important}
+.read-ctx{background:linear-gradient(135deg,rgba(26,58,110,.55),rgba(15,37,72,.55));border:1px solid rgba(244,166,36,.22);border-radius:14px;padding:16px 22px;margin-bottom:20px;display:flex;flex-wrap:wrap;gap:20px;align-items:center}
+.read-ctx-fact{display:flex;flex-direction:column;gap:2px}
+.read-ctx-label{font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+.read-ctx-val{font-size:13.5px;font-weight:800;color:var(--text)}
+.read-ctx-sep{width:1px;background:var(--border);align-self:stretch}
+.read-vocab-wrap{margin:18px 0}
+.read-vocab-title{font-size:11px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.read-vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:7px}
+.read-vocab-item{background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:8px 12px}
+.read-vocab-en{font-size:13px;font-weight:700;color:var(--accent)}
+.read-vocab-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-top:2px}
+/* Check It */
+.ci-hero{background:linear-gradient(135deg,#12285a 0%,#1a1242 60%,#0d1b2a 100%);padding:36px 24px 30px;text-align:center;border-bottom:2px solid var(--accent)}
+.ci-hero-icon{font-size:38px;margin-bottom:10px}
+.ci-hero-title{font-size:clamp(22px,5vw,36px);font-weight:900;color:white;margin-bottom:6px}
+.ci-hero-sub{color:var(--muted);font-size:13px;max-width:460px;margin:0 auto}
+.ci-hero-types{display:flex;gap:10px;justify-content:center;margin-top:14px;flex-wrap:wrap}
+.ci-progress-wrap{background:var(--primary-dark);padding:10px 24px;border-bottom:1px solid var(--border);position:sticky;top:52px;z-index:99}
+.ci-progress-inner{max-width:760px;margin:0 auto}
+.ci-progress-bar{background:rgba(255,255,255,.07);border-radius:20px;height:7px;overflow:hidden;margin-bottom:5px}
+.ci-progress-fill{background:linear-gradient(90deg,var(--accent),var(--blue));height:100%;border-radius:20px;transition:width .4s ease;width:0%}
+.ci-progress-txt{font-size:11px;color:var(--muted);font-weight:700;display:flex;justify-content:space-between}
+.ci-wrap{max-width:100%;padding:12px 16px}
+.ci-q{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px 14px;margin-bottom:7px;transition:border-color .2s;border-left:3px solid rgba(244,166,36,.4)}
+.ci-q.ci-fib-q{border-left-color:rgba(74,158,255,.5)}
+.ci-q-head{display:flex;align-items:center;gap:6px;margin-bottom:9px;flex-wrap:nowrap}
+.ci-q-num{width:22px;height:22px;border-radius:50%;background:rgba(244,166,36,.18);border:1.5px solid rgba(244,166,36,.4);color:var(--accent);font-size:10px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ci-fib-q .ci-q-num{background:rgba(74,158,255,.15);border-color:rgba(74,158,255,.4);color:var(--blue)}
+.ci-q-tag{background:rgba(244,166,36,.08);border:1px solid rgba(244,166,36,.18);color:var(--accent);font-size:9px;font-weight:800;padding:2px 8px;border-radius:8px;text-transform:uppercase;letter-spacing:.4px;white-space:nowrap}
+.ci-type-badge{font-size:9px;font-weight:800;padding:2px 8px;border-radius:8px;text-transform:uppercase;letter-spacing:.4px;margin-left:auto;flex-shrink:0}
+.ci-type-mcq{background:rgba(244,166,36,.12);border:1px solid rgba(244,166,36,.25);color:var(--accent)}
+.ci-type-fib{background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.25);color:var(--blue)}
+.ci-q-prompt{font-size:12px;color:var(--muted);font-style:italic;margin-bottom:8px;padding:5px 10px;background:rgba(255,255,255,.03);border-left:2px solid var(--border);border-radius:0 6px 6px 0}
+.ci-opts{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.ci-btn{background:var(--card2);border:1.5px solid var(--border);color:var(--text);padding:9px 12px;border-radius:9px;font-size:12.5px;cursor:pointer;text-align:left;font-family:'Poppins',sans-serif;transition:all .2s;display:flex;align-items:center;gap:9px;line-height:1.35;width:100%}
+.ci-btn:hover:not(.done){background:rgba(244,166,36,.07);border-color:rgba(244,166,36,.45);transform:translateY(-2px)}
+.ci-btn.ci-correct{background:rgba(34,197,94,.1);border-color:var(--green);color:var(--green)}
+.ci-btn.ci-wrong{background:rgba(239,68,68,.1);border-color:var(--red);color:var(--red)}
+.ci-lbl{font-size:11px;font-weight:900;background:rgba(255,255,255,.09);border-radius:5px;padding:2px 7px;flex-shrink:0;min-width:22px;text-align:center}
+.ci-btn.ci-correct .ci-lbl{background:rgba(34,197,94,.2);color:var(--green)}
+.ci-btn.ci-wrong .ci-lbl{background:rgba(239,68,68,.2);color:var(--red)}
+.ci-fib-sent{font-size:13.5px;color:var(--text);font-weight:600;line-height:1.7;margin-bottom:9px}
+.ci-fib-sent b{color:var(--accent)}
+.ci-fib-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:4px}
+.ci-fib-input{background:var(--card2);border:2px solid var(--border);color:var(--text);padding:7px 13px;border-radius:8px;font-size:13px;font-family:'Poppins',sans-serif;outline:none;min-width:160px;max-width:260px;transition:border-color .2s}
+.ci-fib-input:focus{border-color:var(--accent);background:rgba(244,166,36,.04)}
+.ci-fib-check{background:var(--accent);border:none;color:#0d1b2a;padding:7px 18px;border-radius:8px;font-weight:800;cursor:pointer;font-size:12px;font-family:'Poppins',sans-serif;transition:all .2s;flex-shrink:0}
+.ci-fib-check:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 4px 12px rgba(244,166,36,.3)}
+.ci-fib-check:disabled{opacity:.35;cursor:default;transform:none!important}
+.ci-hint{font-size:10.5px;color:var(--muted);font-style:italic;margin-top:3px}
+.ci-sol{display:none;margin-top:9px;border-radius:9px;overflow:hidden;animation:fadeIn .3s ease}
+.ci-sol-head{padding:7px 12px;font-size:11.5px;font-weight:800;border-bottom:1px solid rgba(255,255,255,.05)}
+.ci-sol-body{padding:8px 12px;display:flex;flex-direction:column;gap:4px}
+.ci-sol-ans{font-size:12.5px;font-weight:700;color:var(--accent)}
+.ci-sol-exp{font-size:11.5px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.ci-brk{display:none;background:linear-gradient(135deg,#12285a,#1a1242);border:2px solid var(--accent);border-radius:20px;padding:28px 24px;margin:16px 0;text-align:center;animation:fadeIn .5s ease;position:relative;overflow:hidden}
+.ci-brk::before{content:'';position:absolute;top:-50px;right:-50px;width:200px;height:200px;border-radius:50%;background:rgba(244,166,36,.07);pointer-events:none}
+.ci-brk-emoji{font-size:44px;margin-bottom:10px}
+.ci-brk-title{font-size:17px;font-weight:900;color:var(--accent);margin-bottom:16px}
+.ci-brk-cols{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:580px;margin:0 auto;text-align:left}
+@media(max-width:580px){.ci-brk-cols{grid-template-columns:1fr}}
+.ci-brk-col{background:rgba(255,255,255,.04);border:1px solid rgba(244,166,36,.2);border-radius:12px;padding:14px 16px}
+.ci-brk-col-title{font-size:10px;font-weight:800;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid rgba(244,166,36,.2)}
+.ci-brk-text{font-size:13px;color:var(--text);line-height:1.75}
+.ci-brk-text b{color:var(--accent)}
+.ci-brk-ar{font-size:12px;color:var(--muted);margin-top:14px;direction:rtl;font-family:'Cairo',sans-serif;line-height:1.7}
+.ci-score{display:none;background:linear-gradient(135deg,#0f2548,#1a1242);border:2px solid var(--accent);border-radius:24px;padding:44px 32px;text-align:center;margin-top:24px;position:relative;overflow:hidden;animation:fadeIn .6s ease}
+.ci-score::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,rgba(244,166,36,.07) 0%,transparent 65%);pointer-events:none}
+.ci-score-emoji{font-size:60px;margin-bottom:14px}
+.ci-score-num{font-size:68px;font-weight:900;color:var(--accent);line-height:1;margin-bottom:4px}
+.ci-score-of{font-size:18px;color:var(--muted);margin-bottom:18px}
+.ci-score-bar-wrap{background:rgba(255,255,255,.06);border-radius:20px;height:10px;max-width:320px;margin:0 auto 24px;overflow:hidden}
+.ci-score-bar-fill{height:100%;border-radius:20px;background:linear-gradient(90deg,var(--accent),var(--green));transition:width 1.2s ease;width:0%}
+.ci-score-msg{font-size:18px;font-weight:900;color:white;margin-bottom:6px}
+.ci-score-ar{font-size:14px;color:var(--muted);direction:rtl;font-family:'Cairo',sans-serif;margin-bottom:24px;line-height:1.6}
+.ci-reset{background:var(--accent);border:none;color:#0d1b2a;padding:13px 32px;border-radius:12px;font-weight:900;cursor:pointer;font-family:'Poppins',sans-serif;font-size:14px;transition:all .25s;letter-spacing:.5px}
+.ci-reset:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(244,166,36,.35)}
+.chat-wrap{padding:18px 24px 26px;display:flex;flex-direction:column;gap:14px;background-image:radial-gradient(circle,rgba(244,166,36,0.22) 1.5px,transparent 1.5px),radial-gradient(circle,rgba(74,158,255,0.22) 1.5px,transparent 1.5px);background-size:28px 28px;background-position:0 0,14px 14px}
+.chat-msg{display:flex;flex-direction:column;max-width:70%}
+.chat-msg.right{align-self:flex-end;align-items:flex-end}
+.chat-msg.left{align-self:flex-start;align-items:flex-start}
+.chat-name-tag{font-size:11px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;margin-bottom:5px;padding:0 4px}
+.chat-msg.right .chat-name-tag{color:var(--accent)}
+.chat-msg.left .chat-name-tag{color:var(--blue)}
+.chat-bubble{padding:14px 17px 10px;border-radius:20px;width:100%}
+.chat-msg.right .chat-bubble{background:rgba(55,36,6,0.75);border:1px solid rgba(244,166,36,0.4);border-bottom-right-radius:4px;box-shadow:0 6px 28px rgba(0,0,0,0.65),0 0 18px rgba(244,166,36,0.22)}
+.chat-msg.left .chat-bubble{background:rgba(12,32,72,0.8);border:1px solid rgba(74,158,255,0.35);border-bottom-left-radius:4px;box-shadow:0 6px 28px rgba(0,0,0,0.65),0 0 18px rgba(74,158,255,0.20)}
+.chat-en{font-size:15px;color:var(--text);line-height:1.65;font-weight:500}
+.chat-en b{color:var(--accent)}
+.chat-msg.left .chat-en b{color:var(--blue)}
+.chat-ar{font-size:14px;color:rgba(232,237,245,0.8);direction:rtl;font-family:'Cairo',sans-serif;line-height:1.75;border-top:1px solid rgba(255,255,255,0.09);padding-top:9px;margin-top:9px}
+.chat-bubble-foot{display:flex;justify-content:flex-end;margin-top:9px;padding-top:7px;border-top:1px solid rgba(255,255,255,0.07)}
+.chat-sp-btn{font-size:14px;cursor:pointer;padding:5px 13px;border-radius:20px;transition:all .2s;line-height:1;font-weight:700;letter-spacing:.3px}
+.chat-msg.right .chat-sp-btn{background:rgba(244,166,36,0.18);border:1px solid rgba(244,166,36,0.45);color:var(--accent)}
+.chat-msg.left .chat-sp-btn{background:rgba(74,158,255,0.15);border:1px solid rgba(74,158,255,0.4);color:var(--blue)}
+.chat-sp-btn:hover{transform:scale(1.08);filter:brightness(1.25)}
+.su-prog{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:6px;overflow:hidden}
+.su-prog-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:2px;width:0%;transition:width .6s ease}
+
+.su-level-hd{padding:8px 12px 5px;margin-top:8px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(255,255,255,.05)}
+.su-level-code{font-size:11px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;padding:2px 8px;border-radius:5px;display:inline-block}
+.su-level-name{font-family:'Cairo',sans-serif;font-size:12px;font-weight:700;color:#f4c430;direction:rtl;margin:0;line-height:1}
+.lvl-a1{background:rgba(52,211,153,.15);color:#34d399;border:1px solid rgba(52,211,153,.35)}
+.lvl-a2{background:rgba(74,158,255,.15);color:#4a9eff;border:1px solid rgba(74,158,255,.35)}
+.lvl-b1{background:rgba(245,158,11,.15);color:#f59e0b;border:1px solid rgba(245,158,11,.35)}
+.lvl-b2{background:rgba(244,166,36,.15);color:var(--accent);border:1px solid rgba(244,166,36,.35)}
+.lvl-b2p{background:rgba(251,146,60,.15);color:#fb923c;border:1px solid rgba(251,146,60,.35)}
+.lvl-c1{background:rgba(168,85,247,.15);color:#a855f7;border:1px solid rgba(168,85,247,.35)}
+.su-coming{opacity:.28;cursor:default;pointer-events:none}
+.su-prog{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:6px;overflow:hidden}
+.su-prog-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:2px;width:0%;transition:width .6s ease}
+
+/* Lesson 1 specific styles */
+.alpha-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(68px,1fr));gap:8px;margin:18px 0}
+.alpha-card{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:12px 8px;text-align:center;cursor:pointer;transition:all .22s;position:relative}
+.alpha-card:hover{transform:translateY(-3px);border-color:var(--accent);background:rgba(244,166,36,.08)}
+.alpha-card.vowel{border-color:rgba(244,166,36,.5);background:rgba(244,166,36,.07)}
+.alpha-card.vowel:hover{background:rgba(244,166,36,.15)}
+.alpha-up{font-size:22px;font-weight:900;color:var(--text);line-height:1}
+.alpha-lo{font-size:14px;color:var(--muted);margin:2px 0}
+.alpha-ar{font-size:10px;color:var(--accent);font-family:'Cairo',sans-serif;margin-top:4px}
+.alpha-card.vowel .alpha-up{color:var(--accent)}
+.vowel-badge{display:inline-block;background:rgba(244,166,36,.15);border:1px solid rgba(244,166,36,.4);color:var(--accent);font-size:10px;font-weight:800;padding:2px 8px;border-radius:10px;margin-right:4px}
+.cons-badge{display:inline-block;background:rgba(74,158,255,.1);border:1px solid rgba(74,158,255,.3);color:var(--blue);font-size:10px;font-weight:800;padding:2px 8px;border-radius:10px;margin-right:4px}
+.num-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:9px;margin:14px 0}
+.num-card{background:var(--card2);border:1px solid var(--border);border-radius:11px;padding:12px 14px;cursor:pointer;transition:all .2s}
+.num-card:hover{transform:translateY(-2px);border-color:var(--blue)}
+.num-digit{font-size:22px;font-weight:900;color:var(--blue);line-height:1}
+.num-word{font-size:13px;font-weight:700;color:var(--text);margin-top:3px}
+.num-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-top:3px}
+.num-grid-sm{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:8px;margin:14px 0}
+.num-sm{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:9px 12px;cursor:pointer;transition:all .2s}
+.num-sm:hover{border-color:var(--blue);transform:translateY(-2px)}
+.num-sm .num-digit{font-size:17px}
+.num-sm .num-word{font-size:12px}
+.ord-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin:14px 0}
+.ord-card{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px;cursor:pointer;transition:all .2s}
+.ord-card:hover{border-color:var(--purple);transform:translateY(-2px)}
+.ord-num{font-size:18px;font-weight:900;color:var(--purple);line-height:1}
+.ord-word{font-size:12.5px;font-weight:700;color:var(--text);margin-top:3px}
+.ord-ar{font-size:11px;color:var(--muted);font-family:'Cairo',sans-serif;direction:rtl;margin-top:3px}
+.rule-box{background:linear-gradient(135deg,rgba(168,85,247,.12),rgba(74,158,255,.08));border:1px solid rgba(168,85,247,.3);border-radius:14px;padding:16px 20px;margin:14px 0}
+.rule-title{font-size:12px;font-weight:800;color:#a855f7;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.rule-body{font-size:13px;color:var(--text);line-height:1.75}
+.rule-body b{color:#a855f7}
+.rule-body .eg{color:var(--accent);font-style:italic}
+
+
+
+.nav-home-btn{display:inline-flex;align-items:center;gap:6px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.4);color:var(--accent);font-size:12px;font-weight:800;padding:5px 13px;border-radius:8px;text-decoration:none;transition:all .2s;white-space:nowrap;flex-shrink:0}
+.nav-home-btn:hover{background:rgba(244,166,36,.25);transform:translateY(-2px)}
+.nav-lesson-badge{background:var(--accent);color:#0a1628;font-size:12px;font-weight:900;padding:5px 13px;border-radius:7px;white-space:nowrap;letter-spacing:.3px;flex-shrink:0}
+.nav-lesson-name{font-size:13px;color:rgba(232,237,245,.7);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-sep{color:rgba(136,153,176,.5);font-size:13px;flex-shrink:0}
+.nav-left{display:flex;align-items:center;gap:8px;flex:1;min-width:0}
+.nav-right{display:flex;align-items:center;flex-shrink:0}
+
+/* ── Reading bold highlight ── */
+.read-body b{color:var(--accent)}
+.read-body p b{color:var(--accent)}
+
+/* ── FIB label fix ── */
+.ci-fib-lbl{font-size:11px;font-weight:800;color:var(--accent);letter-spacing:1px;text-transform:uppercase;margin:4px 0 8px 0;opacity:.85}
+
+/* ══ Lesson 41 — Inversion ══ */
+
+/* Type cards */
+.inv-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:11px;margin:12px 0}
+@media(max-width:680px){.inv-grid{grid-template-columns:1fr}}
+.inv-card{border-radius:13px;padding:14px 15px;cursor:pointer;transition:transform .15s}
+.inv-card:hover{transform:translateY(-3px)}
+.inv-neg{background:rgba(239,68,68,.07);border:2px solid rgba(239,68,68,.3)}
+.inv-cond{background:rgba(74,158,255,.07);border:2px solid rgba(74,158,255,.3)}
+.inv-so{background:rgba(168,85,247,.07);border:2px solid rgba(168,85,247,.3)}
+.inv-emph{background:rgba(34,197,94,.07);border:2px solid rgba(34,197,94,.3)}
+.inv-card-tag{font-size:9px;font-weight:900;letter-spacing:.6px;text-transform:uppercase;margin-bottom:4px}
+.inv-neg .inv-card-tag{color:var(--red)}
+.inv-cond .inv-card-tag{color:var(--blue)}
+.inv-so .inv-card-tag{color:#a855f7}
+.inv-emph .inv-card-tag{color:var(--green)}
+.inv-card-name{font-size:13px;font-weight:900;margin-bottom:5px}
+.inv-neg .inv-card-name{color:var(--red)}
+.inv-cond .inv-card-name{color:var(--blue)}
+.inv-so .inv-card-name{color:#a855f7}
+.inv-emph .inv-card-name{color:var(--green)}
+.inv-card-ex{font-size:11px;color:var(--muted);font-style:italic;line-height:1.65}
+.inv-card-ex b{font-style:normal}
+.inv-neg .inv-card-ex b{color:var(--red)}
+.inv-cond .inv-card-ex b{color:var(--blue)}
+.inv-so .inv-card-ex b{color:#a855f7}
+.inv-emph .inv-card-ex b{color:var(--green)}
+
+/* Transform rows: Normal → Inverted */
+.inv-transform{background:var(--card2);border-radius:12px;padding:12px 14px;margin:8px 0}
+.it-pair{display:grid;grid-template-columns:1fr auto 1fr;gap:8px;align-items:center;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+.it-pair:last-child{border-bottom:none}
+.it-side{font-size:11px;line-height:1.55}
+.it-lbl{font-size:9px;font-weight:900;letter-spacing:.5px;text-transform:uppercase;margin-bottom:3px}
+.it-normal .it-lbl{color:var(--muted)}
+.it-inv .it-lbl{color:var(--accent)}
+.it-normal .it-text{color:rgba(232,237,245,.65)}
+.it-inv .it-text{color:var(--text);font-weight:600}
+.it-inv .it-text b{color:var(--accent)}
+.it-arrow{color:var(--accent);font-size:16px;flex-shrink:0}
+
+/* Negative adverbials table */
+.neg-table{width:100%;border-collapse:collapse;margin:10px 0;font-size:12px}
+.neg-table th{padding:8px 12px;text-align:left;font-size:11px;font-weight:900;letter-spacing:.4px;text-transform:uppercase;background:rgba(255,255,255,.04);color:var(--muted)}
+.neg-table td{padding:7px 12px;border-top:1px solid var(--border);vertical-align:top;line-height:1.65;font-size:11px}
+.neg-table td:first-child{color:var(--red);font-weight:800;width:26%;font-size:10px;text-transform:uppercase;background:rgba(255,255,255,.02)}
+.neg-table .td-form{color:rgba(74,158,255,.9)}
+.neg-table tr:hover td{background:rgba(255,255,255,.03)}
+
+/* Conditional inversion table */
+.cond-table{width:100%;border-collapse:collapse;margin:10px 0;font-size:12px}
+.cond-table th{padding:8px 12px;text-align:left;font-size:11px;font-weight:900;letter-spacing:.4px;text-transform:uppercase;background:rgba(255,255,255,.04);color:var(--muted)}
+.cond-table th.th-if{color:var(--muted)}
+.cond-table th.th-inv{color:var(--blue)}
+.cond-table td{padding:7px 12px;border-top:1px solid var(--border);font-size:11px;line-height:1.6;vertical-align:top}
+.cond-table .td-if{color:rgba(232,237,245,.65)}
+.cond-table .td-inv{color:rgba(74,158,255,.9);font-weight:700}
+.cond-table tr:hover td{background:rgba(255,255,255,.03)}
+
+/* Emphatic do grid */
+.emph-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+@media(max-width:500px){.emph-grid{grid-template-columns:1fr}}
+.emph-card{border-radius:11px;padding:12px 14px;transition:transform .15s;cursor:pointer}
+.emph-card:hover{transform:translateY(-3px)}
+.em-cleft{background:rgba(244,166,36,.07);border:2px solid rgba(244,166,36,.28)}
+.em-do{background:rgba(34,197,94,.07);border:2px solid rgba(34,197,94,.28)}
+.em-what{background:rgba(168,85,247,.07);border:2px solid rgba(168,85,247,.28)}
+.em-the{background:rgba(74,158,255,.07);border:2px solid rgba(74,158,255,.28)}
+.emph-head{font-size:12px;font-weight:900;margin-bottom:5px}
+.em-cleft .emph-head{color:var(--accent)}
+.em-do .emph-head{color:var(--green)}
+.em-what .emph-head{color:#a855f7}
+.em-the .emph-head{color:var(--blue)}
+.emph-ex{font-size:11px;color:var(--muted);font-style:italic;line-height:1.65}
+.emph-ex b{font-style:normal}
+.em-cleft .emph-ex b{color:var(--accent)}
+.em-do .emph-ex b{color:var(--green)}
+.em-what .emph-ex b{color:#a855f7}
+.em-the .emph-ex b{color:var(--blue)}
+
+/* warn + tip */
+.warn-row{display:flex;gap:10px;align-items:flex-start;background:var(--card2);border-radius:10px;padding:10px 14px;margin:6px 0}
+.warn-icon{font-size:16px;flex-shrink:0;margin-top:2px}
+.warn-wrong{font-size:12px;color:var(--red);text-decoration:line-through}
+.warn-right{font-size:12px;color:var(--green);font-weight:700}
+.warn-ar{font-family:'Cairo',sans-serif;font-size:10px;color:var(--muted);direction:rtl;margin-top:2px}
+.tip-row{display:flex;align-items:flex-start;gap:10px;background:var(--card2);border-radius:10px;padding:10px 14px;margin:6px 0;cursor:pointer;transition:background .2s}
+.tip-row:hover{background:rgba(74,158,255,.08)}
+.tip-badge{background:rgba(74,158,255,.15);border:1px solid rgba(74,158,255,.4);color:var(--blue);font-size:11px;font-weight:900;padding:3px 9px;border-radius:7px;white-space:nowrap;flex-shrink:0}
+.tip-en{font-size:13px;color:var(--text);flex:1}
+.tip-ar{font-family:'Cairo',sans-serif;font-size:11px;color:var(--muted);direction:rtl;display:block;margin-top:2px}
+
+.su-level-hd{padding:8px 12px 5px;margin-top:8px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(255,255,255,.05)}
+.su-level-code{font-size:11px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;padding:2px 8px;border-radius:5px;display:inline-block}
+.su-level-name{font-family:'Cairo',sans-serif;font-size:12px;font-weight:700;color:#f4c430;direction:rtl;margin:0;line-height:1}
+.lvl-a1{background:rgba(52,211,153,.15);color:#34d399;border:1px solid rgba(52,211,153,.35)}
+.lvl-a2{background:rgba(74,158,255,.15);color:#4a9eff;border:1px solid rgba(74,158,255,.35)}
+.lvl-b1{background:rgba(245,158,11,.15);color:#f59e0b;border:1px solid rgba(245,158,11,.35)}
+.lvl-b2{background:rgba(244,166,36,.15);color:var(--accent);border:1px solid rgba(244,166,36,.35)}
+.lvl-b2p{background:rgba(251,146,60,.15);color:#fb923c;border:1px solid rgba(251,146,60,.35)}
+.lvl-c1{background:rgba(168,85,247,.15);color:#a855f7;border:1px solid rgba(168,85,247,.35)}
+.su-coming{opacity:.28;cursor:default;pointer-events:none}
+.su-prog{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-top:6px;overflow:hidden}
+.su-prog-fill{height:100%;background:linear-gradient(to right,var(--accent),#ffd700);border-radius:2px;width:0%;transition:width .6s ease}
+
+.nav-home-btn{display:inline-flex;align-items:center;gap:6px;background:rgba(244,166,36,.12);border:1.5px solid rgba(244,166,36,.4);color:var(--accent);font-size:12px;font-weight:800;padding:5px 13px;border-radius:8px;text-decoration:none;transition:all .2s;white-space:nowrap;flex-shrink:0}
+.nav-home-btn:hover{background:rgba(244,166,36,.25);transform:translateY(-2px)}
+.nav-lesson-badge{background:var(--accent);color:#0a1628;font-size:12px;font-weight:900;padding:5px 13px;border-radius:7px;white-space:nowrap;letter-spacing:.3px;flex-shrink:0}
+.nav-lesson-name{font-size:13px;color:rgba(232,237,245,.7);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-sep{color:rgba(136,153,176,.5);font-size:13px;flex-shrink:0}
+.nav-left{display:flex;align-items:center;gap:8px;flex:1;min-width:0}
+.nav-right{display:flex;align-items:center;flex-shrink:0}
+</style>
+
+<style>
+/* Watermark on print */
+@media print {
+  body::before {
+    content: 'Mohammed Elhuseyin — English Learning Platform — محمية الحقوق';
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-35deg);
+    font-size: 48px;
+    font-weight: 900;
+    color: rgba(244,166,36,0.18);
+    z-index: 9999;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+}
+</style>
+
+<style>
+.float-menu-btn{display:none;position:fixed;bottom:22px;left:18px;z-index:9998;width:48px;height:48px;background:var(--primary-dark,#0f2548);border:2px solid rgba(244,166,36,.5);border-radius:14px;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:12px;box-shadow:0 4px 20px rgba(0,0,0,.4);transition:transform .15s,box-shadow .15s}
+.float-menu-btn:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,.5)}
+.float-menu-btn span{display:block;width:22px;height:2px;background:#f4a624;border-radius:2px;transition:all .25s}
+@media(max-width:768px){.float-menu-btn{display:flex}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-logo">
+      <div class="sidebar-logo-icon">A</div>
+      <div>
+        <div class="sidebar-logo-text">English Course</div>
+        <div class="sidebar-logo-sub">MOHAMMED ELHUSEYIN</div>
+      </div>
+    </div>
+    <div class="sidebar-label ar">الوحدات الدراسية</div>
+  </div>
+  <div class="sidebar-units">
+  <div class="su-level-hd"><span class="su-level-code lvl-a1">A1</span><span class="su-level-name">مستوى المبتدئ تماماً</span></div>
+  <a href="lesson1.html" class="su-item"><div class="su-num">1</div><div class="su-texts"><div class="su-en">Alphabet & Numbers</div><div class="su-ar">الأحرف والأرقام</div><div class="su-prog"><div class="su-prog-fill" id="sp1"></div></div></div></a>
+  <a href="lesson2.html" class="su-item"><div class="su-num">2</div><div class="su-texts"><div class="su-en">Classroom Language & Greetings</div><div class="su-ar">لغة الصف والتحيات</div><div class="su-prog"><div class="su-prog-fill" id="sp2"></div></div></div></a>
+  <a href="lesson3.html" class="su-item"><div class="su-num">3</div><div class="su-texts"><div class="su-en">Nationalities & Countries</div><div class="su-ar">الجنسيات والدول</div><div class="su-prog"><div class="su-prog-fill" id="sp3"></div></div></div></a>
+  <a href="lesson4.html" class="su-item"><div class="su-num">4</div><div class="su-texts"><div class="su-en">Singular & Plural Nouns</div><div class="su-ar">الأسماء المفردة والجمع</div><div class="su-prog"><div class="su-prog-fill" id="sp4"></div></div></div></a>
+  <a href="lesson5.html" class="su-item"><div class="su-num">5</div><div class="su-texts"><div class="su-en">Days & Telling the Time</div><div class="su-ar">الأيام وإخبار الوقت</div><div class="su-prog"><div class="su-prog-fill" id="sp5"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-a2">A2</span><span class="su-level-name">المستوى الابتدائي</span></div>
+  <a href="unit1.html" class="su-item"><div class="su-num">6</div><div class="su-texts"><div class="su-en">Verb to <i>be</i></div><div class="su-ar">فعل التكوين</div><div class="su-prog"><div class="su-prog-fill" id="sp6"></div></div></div></a>
+  <a href="unit2.html" class="su-item"><div class="su-num">7</div><div class="su-texts"><div class="su-en">Present Simple</div><div class="su-ar">المضارع البسيط</div><div class="su-prog"><div class="su-prog-fill" id="sp7"></div></div></div></a>
+  <a href="unit3.html" class="su-item"><div class="su-num">8</div><div class="su-texts"><div class="su-en">Present Continuous</div><div class="su-ar">المضارع المستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp8"></div></div></div></a>
+  <a href="unit4.html" class="su-item"><div class="su-num">9</div><div class="su-texts"><div class="su-en">Past Simple: was / were</div><div class="su-ar">الماضي البسيط: كان</div><div class="su-prog"><div class="su-prog-fill" id="sp9"></div></div></div></a>
+  <a href="unit6.html" class="su-item"><div class="su-num">10</div><div class="su-texts"><div class="su-en">Past Simple: Regular & Irreg.</div><div class="su-ar">الماضي البسيط للأفعال</div><div class="su-prog"><div class="su-prog-fill" id="sp10"></div></div></div></a>
+  <a href="unit5.html" class="su-item"><div class="su-num">11</div><div class="su-texts"><div class="su-en">Can / Can't</div><div class="su-ar">القدرة والعجز</div><div class="su-prog"><div class="su-prog-fill" id="sp11"></div></div></div></a>
+  <a href="lesson12.html" class="su-item"><div class="su-num">12</div><div class="su-texts"><div class="su-en">Possessive Pronouns</div><div class="su-ar">ضمائر الملكية</div><div class="su-prog"><div class="su-prog-fill" id="sp12"></div></div></div></a>
+  <a href="unit7.html" class="su-item"><div class="su-num">13</div><div class="su-texts"><div class="su-en">There is / There are</div><div class="su-ar">يوجد / توجد</div><div class="su-prog"><div class="su-prog-fill" id="sp13"></div></div></div></a>
+  <a href="unit8.html" class="su-item"><div class="su-num">14</div><div class="su-texts"><div class="su-en">Adjectives</div><div class="su-ar">الصفات</div><div class="su-prog"><div class="su-prog-fill" id="sp14"></div></div></div></a>
+  <a href="unit9.html" class="su-item"><div class="su-num">15</div><div class="su-texts"><div class="su-en">Imperatives</div><div class="su-ar">صيغة الأمر والنهي</div><div class="su-prog"><div class="su-prog-fill" id="sp15"></div></div></div></a>
+  <a href="unit10.html" class="su-item"><div class="su-num">16</div><div class="su-texts"><div class="su-en">Object Pronouns</div><div class="su-ar">ضمائر المفعول به</div><div class="su-prog"><div class="su-prog-fill" id="sp16"></div></div></div></a>
+  <a href="unit11.html" class="su-item"><div class="su-num">17</div><div class="su-texts"><div class="su-en">Prepositions of Time & Place</div><div class="su-ar">حروف جر الوقت والمكان</div><div class="su-prog"><div class="su-prog-fill" id="sp17"></div></div></div></a>
+  <a href="unit12.html" class="su-item"><div class="su-num">18</div><div class="su-texts"><div class="su-en">Future Plans: going to</div><div class="su-ar">خطط المستقبل</div><div class="su-prog"><div class="su-prog-fill" id="sp18"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b1">B1</span><span class="su-level-name">تحت المتوسط</span></div>
+  <a href="lesson19.html" class="su-item"><div class="su-num">19</div><div class="su-texts"><div class="su-en">Present Perfect Introduction</div><div class="su-ar">مقدمة المضارع التام</div><div class="su-prog"><div class="su-prog-fill" id="sp19"></div></div></div></a>
+  <a href="lesson20.html" class="su-item"><div class="su-num">20</div><div class="su-texts"><div class="su-en">Past Continuous</div><div class="su-ar">الماضي المستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp20"></div></div></div></a>
+  <a href="lesson21.html" class="su-item"><div class="su-num">21</div><div class="su-texts"><div class="su-en">will vs. going to</div><div class="su-ar">المستقبل: إرادة أم تخطيط؟</div><div class="su-prog"><div class="su-prog-fill" id="sp21"></div></div></div></a>
+  <a href="lesson22.html" class="su-item"><div class="su-num">22</div><div class="su-texts"><div class="su-en">like / love / hate + -ing</div><div class="su-ar">التعبير عن التفضيلات</div><div class="su-prog"><div class="su-prog-fill" id="sp22"></div></div></div></a>
+  <a href="lesson23.html" class="su-item"><div class="su-num">23</div><div class="su-texts"><div class="su-en">Comparatives & Superlatives</div><div class="su-ar">المقارنة والتفضيل</div><div class="su-prog"><div class="su-prog-fill" id="sp23"></div></div></div></a>
+  <a href="lesson24.html" class="su-item"><div class="su-num">24</div><div class="su-texts"><div class="su-en">must / have to / should</div><div class="su-ar">أفعال الإلزام والنصيحة</div><div class="su-prog"><div class="su-prog-fill" id="sp24"></div></div></div></a>
+  <a href="lesson25.html" class="su-item"><div class="su-num">25</div><div class="su-texts"><div class="su-en">Infinitives & Gerunds</div><div class="su-ar">المصدر وصيغة الـ ing</div><div class="su-prog"><div class="su-prog-fill" id="sp25"></div></div></div></a>
+  <a href="lesson26.html" class="su-item"><div class="su-num">26</div><div class="su-texts"><div class="su-en">Articles: a/an / the</div><div class="su-ar">أدوات التعريف والتنكير</div><div class="su-prog"><div class="su-prog-fill" id="sp26"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b2">B2</span><span class="su-level-name">المستوى المتوسط</span></div>
+  <a href="lesson27.html" class="su-item"><div class="su-num">27</div><div class="su-texts"><div class="su-en">Present Perfect vs. Past Simple</div><div class="su-ar">المقارنة بين الماضي والتام</div><div class="su-prog"><div class="su-prog-fill" id="sp27"></div></div></div></a>
+  <a href="lesson28.html" class="su-item"><div class="su-num">28</div><div class="su-texts"><div class="su-en">Passive Voice</div><div class="su-ar">المبني للمجهول</div><div class="su-prog"><div class="su-prog-fill" id="sp28"></div></div></div></a>
+  <a href="lesson29.html" class="su-item"><div class="su-num">29</div><div class="su-texts"><div class="su-en">Zero / First / Second Cond.</div><div class="su-ar">الجمل الشرطية 0-1-2</div><div class="su-prog"><div class="su-prog-fill" id="sp29"></div></div></div></a>
+  <a href="lesson30.html" class="su-item"><div class="su-num">30</div><div class="su-texts"><div class="su-en">Reported Speech</div><div class="su-ar">الكلام غير المباشر</div><div class="su-prog"><div class="su-prog-fill" id="sp30"></div></div></div></a>
+  <a href="lesson31.html" class="su-item"><div class="su-num">31</div><div class="su-texts"><div class="su-en">Relative Clauses</div><div class="su-ar">جمل الوصل: who / which</div><div class="su-prog"><div class="su-prog-fill" id="sp31"></div></div></div></a>
+  <a href="lesson32.html" class="su-item"><div class="su-num">32</div><div class="su-texts"><div class="su-en">Quantifiers</div><div class="su-ar">محددات الكمية</div><div class="su-prog"><div class="su-prog-fill" id="sp32"></div></div></div></a>
+  <a href="lesson33.html" class="su-item"><div class="su-num">33</div><div class="su-texts"><div class="su-en">Phrasal Verbs Introduction</div><div class="su-ar">مقدمة الأفعال المركبة</div><div class="su-prog"><div class="su-prog-fill" id="sp33"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-b2p">B2+</span><span class="su-level-name">فوق المتوسط</span></div>
+  <a href="lesson34.html" class="su-item"><div class="su-num">34</div><div class="su-texts"><div class="su-en">Narrative Tenses & Past Perfect</div><div class="su-ar">أزمنة السرد والماضي التام</div><div class="su-prog"><div class="su-prog-fill" id="sp34"></div></div></div></a>
+  <a href="lesson35.html" class="su-item"><div class="su-num">35</div><div class="su-texts"><div class="su-en">Future Perfect & Continuous</div><div class="su-ar">المستقبل التام والمستمر</div><div class="su-prog"><div class="su-prog-fill" id="sp35"></div></div></div></a>
+  <a href="lesson36.html" class="su-item"><div class="su-num">36</div><div class="su-texts"><div class="su-en">Third Conditional & Regrets</div><div class="su-ar">الشرط الثالث والندم</div><div class="su-prog"><div class="su-prog-fill" id="sp36"></div></div></div></a>
+  <a href="lesson37.html" class="su-item"><div class="su-num">37</div><div class="su-texts"><div class="su-en">Causative: have/get done</div><div class="su-ar">الأفعال السببية</div><div class="su-prog"><div class="su-prog-fill" id="sp37"></div></div></div></a>
+  <a href="lesson38.html" class="su-item"><div class="su-num">38</div><div class="su-texts"><div class="su-en">Advanced Passive</div><div class="su-ar">المبني للمجهول المتقدم</div><div class="su-prog"><div class="su-prog-fill" id="sp38"></div></div></div></a>
+  <a href="lesson39.html" class="su-item"><div class="su-num">39</div><div class="su-texts"><div class="su-en">Speculation: must/might/can't</div><div class="su-ar">التخمين والاستنتاج</div><div class="su-prog"><div class="su-prog-fill" id="sp39"></div></div></div></a>
+  <a href="lesson40.html" class="su-item"><div class="su-num">40</div><div class="su-texts"><div class="su-en">Idioms & Collocations</div><div class="su-ar">المصطلحات والتعبيرات</div><div class="su-prog"><div class="su-prog-fill" id="sp40"></div></div></div></a>
+  <div class="su-level-hd"><span class="su-level-code lvl-c1">C1</span><span class="su-level-name">المستوى المتقدم الأكاديمي</span></div>
+  <a href="lesson41.html" class="su-item su-active"><div class="su-num">41</div><div class="su-texts"><div class="su-en">Inversion & Emphatic Structures</div><div class="su-ar">التقديم والتأخير للتأكيد</div><div class="su-prog"><div class="su-prog-fill" id="sp41"></div></div></div></a>
+  <a href="lesson42.html" class="su-item"><div class="su-num">42</div><div class="su-texts"><div class="su-en">Mixed Conditionals</div><div class="su-ar">الجمل الشرطية المختلطة</div><div class="su-prog"><div class="su-prog-fill" id="sp42"></div></div></div></a>
+  <a href="lesson43.html" class="su-item"><div class="su-num">43</div><div class="su-texts"><div class="su-en">Advanced Gerunds & Infinitives</div><div class="su-ar">المصادر المتقدمة</div><div class="su-prog"><div class="su-prog-fill" id="sp43"></div></div></div></a>
+  <a href="lesson44.html" class="su-item"><div class="su-num">44</div><div class="su-texts"><div class="su-en">Cleft Sentences</div><div class="su-ar">الجمل المشقوقة</div><div class="su-prog"><div class="su-prog-fill" id="sp44"></div></div></div></a>
+  <a href="lesson45.html" class="su-item"><div class="su-num">45</div><div class="su-texts"><div class="su-en">Discourse Markers</div><div class="su-ar">أدوات الربط الأكاديمية</div><div class="su-prog"><div class="su-prog-fill" id="sp45"></div></div></div></a>
+  <a href="lesson46.html" class="su-item"><div class="su-num">46</div><div class="su-texts"><div class="su-en">Nuances & Euphemisms</div><div class="su-ar">الفروقات الدقيقة والتلطيف</div><div class="su-prog"><div class="su-prog-fill" id="sp46"></div></div></div></a>
+</div>
+</aside>
+
+<div class="main-content">
+
+<nav class="topnav">
+  <div class="nav-left">
+    <a href="../index.html" class="nav-home-btn">&#x1F3E0; الرئيسية</a>
+    <span class="nav-sep">&#x203A;</span>
+    <span class="nav-lesson-badge">Lesson 41</span>
+    <span class="nav-sep">&#x203A;</span>
+    <span class="nav-lesson-name">Inversion &amp; Emphatic Structures</span>
+  </div>
+  <div class="nav-right"><span class="nav-brand">MOHAMMED ELHUSEYIN</span></div>
+</nav>
+
+<div class="hero">
+  <div class="unit-badge">&#x1F4DA; Lesson 41 &nbsp;&middot;&nbsp; C1 Advanced</div>
+  <h1 class="hero-title">Inversion &amp; Emphatic Structures</h1>
+  <div class="hero-ar ar">التقديم والتأخير للتأكيد</div>
+  <p class="hero-sub">In formal and advanced English, word order can be <em>reversed</em> for dramatic emphasis or stylistic effect. Master <b>negative inversion</b> (Never have I…), <b>conditional inversion</b> (Had I known…), <b>so/such inversion</b>, and four powerful <b>emphatic structures</b> used in academic writing and sophisticated speech.</p>
+  <div class="hero-tags">
+    <span class="tag tag-grammar">&#x1F4D6; Grammar</span>
+    <span class="tag tag-other">&#x1F4AC; Everyday English</span>
+    <span class="tag tag-other">&#x1F4D8; Reading</span>
+    <span class="tag tag-green">&#x2705; Check It!</span>
+  </div>
+</div>
+
+<div class="main-tabs">
+  <button class="main-tab active" onclick="showTab('grammar',this)">&#x1F4D6; Grammar</button>
+  <button class="main-tab" onclick="showTab('everyday',this)">&#x1F4AC; Everyday English</button>
+  <button class="main-tab" onclick="showTab('reading',this)">&#x1F4D8; Reading</button>
+  <button class="main-tab" onclick="showTab('checkit',this)">&#x2705; Check It!</button>
+</div>
+
+<!-- ════════════════════ GRAMMAR TAB ════════════════════ -->
+<div id="tab-grammar" class="tab-panel active">
+
+  <!-- What is inversion -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F500; What is Inversion?</div>
+    <div class="rule-ar">ما هو التقديم والتأخير؟</div>
+    <div class="rule-box">
+      <b>Inversion</b> means placing the <b>auxiliary verb before the subject</b> — reversing the normal Subject + Verb order.<br><br>
+      Normal: &nbsp; "I <u>have</u> <u>never</u> seen such a view."<br>
+      Inverted: "Never <b>have</b> <b>I</b> seen such a view." ← far more dramatic &amp; formal<br><br>
+      Used in: <b>formal writing</b>, <b>literary English</b>, <b>speeches</b>, and <b>academic texts</b>.
+    </div>
+    <div class="inv-grid">
+      <div class="inv-card inv-neg" onclick="ttsRead(&quot;Type 1: Negative adverbial inversion. Never have I seen, rarely does she, not only did they.&quot;,0.88)">
+        <div class="inv-card-tag">&#x1F534; Type 1</div>
+        <div class="inv-card-name">Negative Adverbial</div>
+        <div class="inv-card-ex"><b>Never</b> have I seen… / <b>Rarely</b> does she… / <b>Not only</b> did they…</div>
+      </div>
+      <div class="inv-card inv-cond" onclick="ttsRead(&quot;Type 2: Conditional inversion — replace if with inverted auxiliary. Had I known, were she here, should you need help.&quot;,0.88)">
+        <div class="inv-card-tag">&#x1F535; Type 2</div>
+        <div class="inv-card-name">Conditional Inversion</div>
+        <div class="inv-card-ex"><b>Had I</b> known… / <b>Were she</b> here… / <b>Should you</b> need…</div>
+      </div>
+      <div class="inv-card inv-so" onclick="ttsRead(&quot;Type 3: So and such inversion for result. So tired was she that, such was his surprise that.&quot;,0.88)">
+        <div class="inv-card-tag">&#x1F7E3; Type 3</div>
+        <div class="inv-card-name">So / Such Inversion</div>
+        <div class="inv-card-ex"><b>So</b> tired was she that… / <b>Such</b> was his anger that…</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TYPE 1: Negative adverbials -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F534; Type 1 — Negative Adverbial Inversion</div>
+    <div class="rule-ar">القلب بعد الظروف السلبية والمقيِّدة</div>
+    <div class="rule-box">
+      <b>Rule:</b> When a <b>negative or restrictive adverbial</b> begins a sentence, invert subject and auxiliary.<br>
+      &#x2022; With auxiliary already in sentence: <b>Never</b> + <u>have/has/had/will/can/would</u> + <u>subject</u> + verb<br>
+      &#x2022; With present/past simple: <b>Rarely</b> + <u>do/does/did</u> + <u>subject</u> + base verb
+    </div>
+    <table class="neg-table">
+      <thead><tr><th>Adverbial</th><th>Inverted form + example</th></tr></thead>
+      <tbody>
+        <tr><td>Never</td><td class="td-form"><span onclick="ttsRead(&quot;Never have I witnessed such dedication from a team.&quot;,0.88)">Never <b>have I</b> witnessed such dedication from a team. &#x1F509;</span></td></tr>
+        <tr><td>Rarely / Seldom</td><td class="td-form"><span onclick="ttsRead(&quot;Rarely does the committee approve requests so quickly.&quot;,0.88)">Rarely <b>does</b> the committee approve requests so quickly. &#x1F509;</span></td></tr>
+        <tr><td>Hardly / Scarcely</td><td class="td-form"><span onclick="ttsRead(&quot;Hardly had she sat down when the alarm went off.&quot;,0.88)">Hardly <b>had she</b> sat down when the alarm went off. &#x1F509;</span></td></tr>
+        <tr><td>No sooner … than</td><td class="td-form"><span onclick="ttsRead(&quot;No sooner had he left than the news broke.&quot;,0.88)">No sooner <b>had he</b> left <b>than</b> the news broke. &#x1F509;</span></td></tr>
+        <tr><td>Not only … but also</td><td class="td-form"><span onclick="ttsRead(&quot;Not only did they miss the deadline, but they also failed to notify anyone.&quot;,0.88)">Not only <b>did they</b> miss the deadline, but they also failed to notify anyone. &#x1F509;</span></td></tr>
+        <tr><td>Not until</td><td class="td-form"><span onclick="ttsRead(&quot;Not until the results were announced did we fully understand the impact.&quot;,0.88)">Not until the results were announced <b>did we</b> fully understand the impact. &#x1F509;</span></td></tr>
+        <tr><td>Under no circumstances</td><td class="td-form"><span onclick="ttsRead(&quot;Under no circumstances will we compromise on quality.&quot;,0.88)">Under no circumstances <b>will we</b> compromise on quality. &#x1F509;</span></td></tr>
+        <tr><td>Little</td><td class="td-form"><span onclick="ttsRead(&quot;Little did I know that this decision would change everything.&quot;,0.88)">Little <b>did I</b> know that this decision would change everything. &#x1F509;</span></td></tr>
+        <tr><td>Only then / Only after</td><td class="td-form"><span onclick="ttsRead(&quot;Only then did I realise how serious the situation was.&quot;,0.88)">Only then <b>did I</b> realise how serious the situation was. &#x1F509;</span></td></tr>
+        <tr><td>At no time</td><td class="td-form"><span onclick="ttsRead(&quot;At no time was the public informed of the risk.&quot;,0.88)">At no time <b>was</b> the public informed of the risk. &#x1F509;</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Transform examples -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F504; Normal → Inverted — Side by Side</div>
+    <div class="rule-ar">جمل عادية مقابل جمل مقلوبة</div>
+    <div class="inv-transform">
+      <div class="it-pair">
+        <div class="it-side it-normal"><div class="it-lbl">Normal</div><div class="it-text">I have never seen such a beautiful view.</div></div>
+        <div class="it-arrow">&#x2192;</div>
+        <div class="it-side it-inv"><div class="it-lbl">Inverted</div><div class="it-text" onclick="ttsRead(&quot;Never have I seen such a beautiful view.&quot;,0.88)">&#x1F509; <b>Never have I</b> seen such a beautiful view.</div></div>
+      </div>
+      <div class="it-pair">
+        <div class="it-side it-normal"><div class="it-lbl">Normal</div><div class="it-text">She rarely speaks in public.</div></div>
+        <div class="it-arrow">&#x2192;</div>
+        <div class="it-side it-inv"><div class="it-lbl">Inverted</div><div class="it-text" onclick="ttsRead(&quot;Rarely does she speak in public.&quot;,0.88)">&#x1F509; <b>Rarely does she</b> speak in public.</div></div>
+      </div>
+      <div class="it-pair">
+        <div class="it-side it-normal"><div class="it-lbl">Normal</div><div class="it-text">I had barely finished eating when she called.</div></div>
+        <div class="it-arrow">&#x2192;</div>
+        <div class="it-side it-inv"><div class="it-lbl">Inverted</div><div class="it-text" onclick="ttsRead(&quot;Barely had I finished eating when she called.&quot;,0.88)">&#x1F509; <b>Barely had I</b> finished eating when she called.</div></div>
+      </div>
+      <div class="it-pair">
+        <div class="it-side it-normal"><div class="it-lbl">Normal</div><div class="it-text">They not only won the award but also donated the prize money.</div></div>
+        <div class="it-arrow">&#x2192;</div>
+        <div class="it-side it-inv"><div class="it-lbl">Inverted</div><div class="it-text" onclick="ttsRead(&quot;Not only did they win the award, but they also donated the prize money.&quot;,0.88)">&#x1F509; <b>Not only did they</b> win the award, but they also donated the prize money.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TYPE 2: Conditional inversion -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F535; Type 2 — Conditional Inversion (Formal)</div>
+    <div class="rule-ar">حذف if واستبداله بالقلب — في الكتابة الرسمية</div>
+    <div class="rule-box">
+      In formal English, we can <b>omit "if"</b> and invert the auxiliary to the front instead.<br>
+      &#x2022; Only used with: <b>had</b> (3rd conditional) / <b>were</b> (2nd conditional) / <b>should</b> (1st conditional formal)
+    </div>
+    <table class="cond-table">
+      <thead><tr><th class="th-if">With "if" (standard)</th><th class="th-inv">Without "if" — inverted (formal)</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="td-if"><span onclick="ttsRead(&quot;If I had known about the problem, I would have helped.&quot;,0.88)">If I had known about the problem, I would have helped. &#x1F509;</span></td>
+          <td class="td-inv"><span onclick="ttsRead(&quot;Had I known about the problem, I would have helped.&quot;,0.88)">Had I known about the problem, I would have helped. &#x1F509;</span></td>
+        </tr>
+        <tr>
+          <td class="td-if"><span onclick="ttsRead(&quot;If she were available, she would attend the meeting.&quot;,0.88)">If she were available, she would attend the meeting. &#x1F509;</span></td>
+          <td class="td-inv"><span onclick="ttsRead(&quot;Were she available, she would attend the meeting.&quot;,0.88)">Were she available, she would attend the meeting. &#x1F509;</span></td>
+        </tr>
+        <tr>
+          <td class="td-if"><span onclick="ttsRead(&quot;If you should need any assistance, please contact us.&quot;,0.88)">If you should need any assistance, please contact us. &#x1F509;</span></td>
+          <td class="td-inv"><span onclick="ttsRead(&quot;Should you need any assistance, please contact us.&quot;,0.88)">Should you need any assistance, please contact us. &#x1F509;</span></td>
+        </tr>
+        <tr>
+          <td class="td-if"><span onclick="ttsRead(&quot;If it had not been for your support, we would have failed.&quot;,0.88)">If it had not been for your support, we would have failed. &#x1F509;</span></td>
+          <td class="td-inv"><span onclick="ttsRead(&quot;Had it not been for your support, we would have failed.&quot;,0.88)">Had it not been for your support, we would have failed. &#x1F509;</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- TYPE 3: So / Such -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F7E3; Type 3 — So / Such Inversion (Result)</div>
+    <div class="rule-ar">القلب بعد so وsuch للتأكيد على النتيجة</div>
+    <div class="rule-box">
+      &#x2022; <b>So + adjective + was/were + subject + that…</b><br>
+      &#x2022; <b>Such + was/were + subject + that…</b><br><br>
+      Used for strong emphasis on a quality or state that produced a result.
+    </div>
+    <div class="inv-transform">
+      <div class="it-pair">
+        <div class="it-side it-normal"><div class="it-lbl">Normal</div><div class="it-text">She was so tired that she fell asleep at the table.</div></div>
+        <div class="it-arrow">&#x2192;</div>
+        <div class="it-side it-inv"><div class="it-lbl">Inverted</div><div class="it-text" onclick="ttsRead(&quot;So tired was she that she fell asleep at the table.&quot;,0.88)">&#x1F509; <b>So tired was she</b> that she fell asleep at the table.</div></div>
+      </div>
+      <div class="it-pair">
+        <div class="it-side it-normal"><div class="it-lbl">Normal</div><div class="it-text">His surprise was such that he couldn't say a word.</div></div>
+        <div class="it-arrow">&#x2192;</div>
+        <div class="it-side it-inv"><div class="it-lbl">Inverted</div><div class="it-text" onclick="ttsRead(&quot;Such was his surprise that he couldn't say a word.&quot;,0.88)">&#x1F509; <b>Such was his surprise</b> that he couldn't say a word.</div></div>
+      </div>
+      <div class="it-pair">
+        <div class="it-side it-normal"><div class="it-lbl">Normal</div><div class="it-text">The demand was so great that stocks ran out within hours.</div></div>
+        <div class="it-arrow">&#x2192;</div>
+        <div class="it-side it-inv"><div class="it-lbl">Inverted</div><div class="it-text" onclick="ttsRead(&quot;So great was the demand that stocks ran out within hours.&quot;,0.88)">&#x1F509; <b>So great was the demand</b> that stocks ran out within hours.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Emphatic structures -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F4A5; Emphatic Structures — أساليب التأكيد</div>
+    <div class="rule-ar">طرق أخرى لإضافة التأكيد والقوة للجملة</div>
+    <div class="emph-grid">
+      <div class="emph-card em-cleft" onclick="ttsRead(&quot;It cleft sentence. It was John who broke the window. It is the quality that matters most. It was in 1969 that humans first landed on the moon.&quot;,0.88)">
+        <div class="emph-head">&#x1F31F; It-cleft: It is/was … that/who</div>
+        <div class="emph-ex">
+          "It was <b>John</b> who broke the window." &#x1F509;<br>
+          "It is <b>the quality</b> that matters most."<br>
+          "It was <b>in 1969</b> that humans first landed on the moon."
+        </div>
+      </div>
+      <div class="emph-card em-do" onclick="ttsRead(&quot;Emphatic do, does, did. I do understand your concern. She did call me. They do make excellent products.&quot;,0.88)">
+        <div class="emph-head">&#x2705; Emphatic do / does / did</div>
+        <div class="emph-ex">
+          "I <b>do</b> understand your concern." &#x1F509;<br>
+          "She <b>did</b> call me — I have the record."<br>
+          "They <b>do</b> make excellent products."
+        </div>
+      </div>
+      <div class="emph-card em-what" onclick="ttsRead(&quot;What cleft sentence. What I need is more time. What surprised everyone was his calm reaction. What we lack is funding.&quot;,0.88)">
+        <div class="emph-head">&#x2753; What-cleft: What … is/was</div>
+        <div class="emph-ex">
+          "<b>What</b> I need is more time." &#x1F509;<br>
+          "<b>What</b> surprised everyone was his calm reaction."<br>
+          "<b>What</b> we lack is adequate funding."
+        </div>
+      </div>
+      <div class="emph-card em-the" onclick="ttsRead(&quot;The more, the better. The more you practise, the better you get. The harder you work, the greater the reward.&quot;,0.88)">
+        <div class="emph-head">&#x1F4C8; The + comparative</div>
+        <div class="emph-ex">
+          "The more you practise, <b>the better</b> you get." &#x1F509;<br>
+          "The harder you work, <b>the greater</b> the reward."<br>
+          "The longer we wait, <b>the worse</b> it becomes."
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Common mistakes -->
+  <div class="rule-section">
+    <div class="rule-title">&#x26A0; Common Mistakes — أخطاء شائعة</div>
+    <div class="warn-row">
+      <span class="warn-icon">&#x274C;</span>
+      <div>
+        <div><span class="warn-wrong">Never I have seen such a place.</span>&nbsp;&#x2192;&nbsp;<span class="warn-right">Never have I seen such a place.</span></div>
+        <div class="warn-ar">الترتيب بعد Never: auxiliary + subject — ليس subject + auxiliary</div>
+      </div>
+    </div>
+    <div class="warn-row">
+      <span class="warn-icon">&#x274C;</span>
+      <div>
+        <div><span class="warn-wrong">Not only they won but also set a record.</span>&nbsp;&#x2192;&nbsp;<span class="warn-right">Not only did they win, but they also set a record.</span></div>
+        <div class="warn-ar">بعد Not only يجب القلب: did + they + base verb</div>
+      </div>
+    </div>
+    <div class="warn-row">
+      <span class="warn-icon">&#x274C;</span>
+      <div>
+        <div><span class="warn-wrong">Hardly I had finished when she arrived.</span>&nbsp;&#x2192;&nbsp;<span class="warn-right">Hardly had I finished when she arrived.</span></div>
+        <div class="warn-ar">بعد Hardly: had + subject — ليس subject أولاً</div>
+      </div>
+    </div>
+    <div class="warn-row">
+      <span class="warn-icon">&#x274C;</span>
+      <div>
+        <div><span class="warn-wrong">Should you will need help, call us.</span>&nbsp;&#x2192;&nbsp;<span class="warn-right">Should you need help, call us.</span></div>
+        <div class="warn-ar">في الـ conditional inversion: Should + subject + base verb — بدون will</div>
+      </div>
+    </div>
+    <div class="warn-row">
+      <span class="warn-icon">&#x274C;</span>
+      <div>
+        <div><span class="warn-wrong">So she was tired that she fell asleep.</span>&nbsp;&#x2192;&nbsp;<span class="warn-right">So tired was she that she fell asleep.</span></div>
+        <div class="warn-ar">الترتيب بعد So: So + adjective + was/were + subject + that</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tips -->
+  <div class="rule-section">
+    <div class="rule-title">&#x1F4A1; Quick Tips</div>
+    <div class="tip-row" onclick="ttsRead(&quot;Tip: Inversion is mainly formal and literary. In everyday conversation, normal word order is fine.&quot;,0.88)">
+      <span class="tip-badge">Register</span>
+      <div><span class="tip-en">Inversion is <b>formal/literary</b> — use it in essays, speeches, and formal writing; normal order is fine in everyday speech &#x1F509;</span><span class="tip-ar">القلب رسمي وأدبي — مناسب للمقالات والخطب والكتابة الرسمية</span></div>
+    </div>
+    <div class="tip-row" onclick="ttsRead(&quot;Tip: With present simple and past simple, you must add do, does, or did after the negative adverbial. Rarely does she. Little did I know.&quot;,0.88)">
+      <span class="tip-badge">do/does/did</span>
+      <div><span class="tip-en">Present/past simple → add <b>do/does/did</b>: "Rarely <b>does</b> she…" / "Little <b>did</b> I know…" &#x1F509;</span><span class="tip-ar">مع المضارع والماضي البسيط: أضف do/does/did بعد الظرف</span></div>
+    </div>
+    <div class="tip-row" onclick="ttsRead(&quot;Tip: Hardly, scarcely, and barely are followed by when or before — not than. No sooner is followed by than.&quot;,0.88)">
+      <span class="tip-badge">Hardly/No sooner</span>
+      <div><span class="tip-en">Hardly/Scarcely/Barely + <b>when</b> &nbsp;|&nbsp; No sooner + <b>than</b> — don't mix them up &#x1F509;</span><span class="tip-ar">Hardly تتبعها when | No sooner تتبعها than — لا تخلط بينهما</span></div>
+    </div>
+    <div class="tip-row" onclick="ttsRead(&quot;Tip: Conditional inversion replaces if with the auxiliary at the front. Had, were, and should are the three auxiliaries used.&quot;,0.88)">
+      <span class="tip-badge">had/were/should</span>
+      <div><span class="tip-en">Conditional inversion uses only <b>had / were / should</b> — these replace "if" and move to the front &#x1F509;</span><span class="tip-ar">ثلاثة auxiliaries فقط تُستخدم في قلب الشرط: had / were / should</span></div>
+    </div>
+  </div>
+
+</div><!-- /tab-grammar -->
+
+<!-- ════════════════════ EVERYDAY ENGLISH TAB ════════════════════ -->
+<div id="tab-everyday" class="tab-panel">
+
+  <!-- Dialogue 1 -->
+  <div class="dlg-block">
+    <div class="dlg-header">
+      <div>
+        <div class="dlg-title">&#x1F4DA; A Book Discussion</div>
+        <div class="dlg-sub ar">نقاش أدبي</div>
+      </div>
+      <div class="dlg-tags"><span class="tag tag-grammar">Never have I / Rarely does / Such was</span></div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Have you finished reading that novel yet? I couldn't put it down.&quot;,0.88)">Have you finished reading that novel yet? I couldn't put it down. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">هل انتهيت من قراءة تلك الرواية؟ لم أستطع إبعادها عن يديّ.</div>
+          <div class="chat-bubble-foot">Layla</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Never have I read a book that moved me so deeply. Such was the power of the writing that I finished it in one sitting.&quot;,0.88)">Never <b>have I</b> read a book that moved me so deeply. Such <b>was</b> the power of the writing that I finished it in one sitting. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">لم أقرأ كتاباً أثّر فيّ بهذا العمق. كانت قوة الكتابة لدرجة أنني أنهيته في جلسة واحدة.</div>
+          <div class="chat-bubble-foot">Karim</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Rarely does a debut novel achieve that level of emotional depth. What was your favourite part?&quot;,0.88)">Rarely <b>does</b> a debut novel achieve that level of emotional depth. What was your favourite part? <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">نادراً ما يصل رواية أولى لهذا العمق العاطفي. ما كان جزؤك المفضل؟</div>
+          <div class="chat-bubble-foot">Layla</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Not only did the story surprise me at every turn, but it also made me question things I had always taken for granted.&quot;,0.88)">Not only <b>did</b> the story surprise me at every turn, but it also made me question things I had always taken for granted. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">لم تفاجئني القصة في كل منعطف فحسب، بل جعلتني أيضاً أتساءل في أشياء كنت أعتبرها مسلَّمات.</div>
+          <div class="chat-bubble-foot">Karim</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dialogue 2 -->
+  <div class="dlg-block">
+    <div class="dlg-header">
+      <div>
+        <div class="dlg-title">&#x1F4BC; Formal Business Meeting</div>
+        <div class="dlg-sub ar">اجتماع عمل رسمي</div>
+      </div>
+      <div class="dlg-tags"><span class="tag tag-grammar">Under no circumstances / Not until / Should you</span></div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;I want to be absolutely clear: under no circumstances will we release the product before all safety tests are complete.&quot;,0.88)">I want to be absolutely clear: under no circumstances <b>will we</b> release the product before all safety tests are complete. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">أريد أن أكون واضحاً تماماً: لن نُطلق المنتج تحت أي ظرف قبل اكتمال جميع اختبارات السلامة.</div>
+          <div class="chat-bubble-foot">Director</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Not until the third-party audit is approved did we consider moving forward. We must follow the same process.&quot;,0.88)">Not until the third-party audit is approved <b>should we</b> consider moving forward. We must follow the same process. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">لا يجب أن نفكر في المضي قدماً إلا بعد اعتماد التدقيق الخارجي. يجب اتباع نفس العملية.</div>
+          <div class="chat-bubble-foot">Legal Team</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Should you need further clarification on the compliance requirements, contact the legal department directly.&quot;,0.88)">Should you need further clarification on the compliance requirements, contact the legal department directly. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">إذا احتجت توضيحاً إضافياً حول متطلبات الامتثال، تواصل مباشرة مع الإدارة القانونية.</div>
+          <div class="chat-bubble-foot">Director</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Not only must we meet the legal standards, but we must also exceed customer expectations. Only then will we maintain our reputation.&quot;,0.88)">Not only <b>must we</b> meet the legal standards, but we must also exceed customer expectations. Only then <b>will we</b> maintain our reputation. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">لا يجب أن نستوفي المعايير القانونية فحسب، بل يجب أن نتجاوز توقعات العملاء أيضاً. عندها فقط سنحافظ على سمعتنا.</div>
+          <div class="chat-bubble-foot">Legal Team</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dialogue 3 -->
+  <div class="dlg-block">
+    <div class="dlg-header">
+      <div>
+        <div class="dlg-title">&#x1F62E; A Surprising Story</div>
+        <div class="dlg-sub ar">قصة مفاجئة</div>
+      </div>
+      <div class="dlg-tags"><span class="tag tag-grammar">Little did I know / No sooner … than / Hardly had</span></div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Tell me about the day everything went wrong at the conference.&quot;,0.88)">Tell me about the day everything went wrong at the conference. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">أخبرني عن اليوم الذي سارت فيه الأمور بشكل خاطئ في المؤتمر.</div>
+          <div class="chat-bubble-foot">Hana</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Little did I know when I woke up that morning that it would be the most chaotic day of my career.&quot;,0.88)">Little <b>did I</b> know when I woke up that morning that it would be the most chaotic day of my career. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">لم أكن أعلم حين استيقظت تلك الصباح أنه سيكون أكثر أيام مسيرتي فوضى.</div>
+          <div class="chat-bubble-foot">Rami</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;No sooner had I arrived at the venue than the power went out completely.&quot;,0.88)">No sooner <b>had I</b> arrived at the venue <b>than</b> the power went out completely. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">لم أكد أصل إلى المكان حتى انقطع التيار الكهربائي تماماً.</div>
+          <div class="chat-bubble-foot">Rami</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Hardly had the power been restored when the main speaker announced he could not attend.&quot;,0.88)">Hardly <b>had</b> the power been restored when the main speaker announced he could not attend. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">لم يكد يُستعاد التيار حتى أعلن المتحدث الرئيسي أنه لن يتمكن من الحضور.</div>
+          <div class="chat-bubble-foot">Hana</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dialogue 4 -->
+  <div class="dlg-block">
+    <div class="dlg-header">
+      <div>
+        <div class="dlg-title">&#x1F914; Reflecting on a Decision</div>
+        <div class="dlg-sub ar">التفكير في قرار سابق</div>
+      </div>
+      <div class="dlg-tags"><span class="tag tag-grammar">Had I known / Were it not for / So great was</span></div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Had I known the project would take three years, I might have made a different choice.&quot;,0.88)">Had <b>I</b> known the project would take three years, I might have made a different choice. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">لو كنت أعلم أن المشروع سيستغرق ثلاث سنوات، ربما اتخذت قراراً مختلفاً.</div>
+          <div class="chat-bubble-foot">Nora</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;But had it not been for your persistence, the whole team would have given up in the first year.&quot;,0.88)">But had it <b>not been</b> for your persistence, the whole team would have given up in the first year. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">لكن لولا مثابرتك، لكان الفريق بأكمله قد استسلم في السنة الأولى.</div>
+          <div class="chat-bubble-foot">Sami</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;So great was the pressure at times that I genuinely considered walking away.&quot;,0.88)">So great <b>was</b> the pressure at times that I genuinely considered walking away. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">كان الضغط أحياناً شديداً لدرجة أنني فكرت فعلاً في الانسحاب.</div>
+          <div class="chat-bubble-foot">Nora</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;Were it not for the support of the team, none of this would have been possible. You should be proud.&quot;,0.88)">Were it <b>not for</b> the support of the team, none of this would have been possible. You should be proud. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">لولا دعم الفريق، ما كان شيء من هذا ممكناً. يجب أن تكوني فخورة.</div>
+          <div class="chat-bubble-foot">Sami</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dialogue 5 -->
+  <div class="dlg-block">
+    <div class="dlg-header">
+      <div>
+        <div class="dlg-title">&#x1F4AC; Emphatic Emphasis</div>
+        <div class="dlg-sub ar">التأكيد القوي في الحديث</div>
+      </div>
+      <div class="dlg-tags"><span class="tag tag-grammar">I DO / It was … who / What I need</span></div>
+    </div>
+    <div class="chat-wrap">
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;I heard you didn't agree with the proposal at the meeting.&quot;,0.88)">I heard you didn't agree with the proposal at the meeting. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">سمعت أنك لم توافق على المقترح في الاجتماع.</div>
+          <div class="chat-bubble-foot">Alia</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;I do support the overall direction — what I don't agree with is the timeline. It is the deadline that needs to change.&quot;,0.88)">I <b>do</b> support the overall direction — what I don't agree with is the timeline. It is <b>the deadline</b> that needs to change. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">أنا أؤيد التوجه العام فعلاً — ما لا أوافق عليه هو الجدول الزمني. الموعد النهائي هو ما يجب أن يتغير.</div>
+          <div class="chat-bubble-foot">Tariq</div>
+        </div>
+      </div>
+      <div class="chat-msg right">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;It was the CEO herself who approved the timeline at last quarter's review.&quot;,0.88)">It was <b>the CEO herself</b> who approved the timeline at last quarter's review. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">المديرة التنفيذية نفسها هي من وافقت على الجدول الزمني في مراجعة الربع الماضي.</div>
+          <div class="chat-bubble-foot">Alia</div>
+        </div>
+      </div>
+      <div class="chat-msg left">
+        <div class="chat-bubble">
+          <div class="chat-en" onclick="ttsRead(&quot;What we need is a proper conversation about realistic expectations. The harder we push without resources, the worse the results will be.&quot;,0.88)">What we need is a proper conversation about realistic expectations. The harder we push without resources, the worse the results will be. <span class="chat-sp-btn">&#x1F509;</span></div>
+          <div class="chat-ar ar">ما نحتاجه هو نقاش حقيقي حول التوقعات الواقعية. كلما ضغطنا أكثر دون موارد، كانت النتائج أسوأ.</div>
+          <div class="chat-bubble-foot">Tariq</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /tab-everyday -->
+
+<!-- ════════════════════ READING TAB ════════════════════ -->
+<div id="tab-reading" class="tab-panel">
+  <div class="read-wrap">
+    <div class="read-header">
+      <div class="read-title">&#x1F4D8; The Summit Decision</div>
+      <div class="read-sub ar">قرار القمة</div>
+    </div>
+    <div class="read-body">
+      <p onclick="ttsRead(&quot;Never in the history of the organisation had a decision of such magnitude been taken so swiftly.&quot;,0.88)">Never in the history of the organisation <b>had a decision</b> of such magnitude been taken so swiftly. <span class="read-sp">&#x1F509;</span></p>
+      <p onclick="ttsRead(&quot;It was the director general himself who proposed the radical restructuring plan during the emergency summit held last November.&quot;,0.88)">It was <b>the director general himself</b> who proposed the radical restructuring plan during the emergency summit held last November. <span class="read-sp">&#x1F509;</span></p>
+      <p onclick="ttsRead(&quot;Rarely had delegates gathered under such tense circumstances. No sooner had the meeting opened than a heated debate erupted over the proposed budget cuts.&quot;,0.88)">Rarely <b>had</b> delegates gathered under such tense circumstances. No sooner <b>had</b> the meeting opened <b>than</b> a heated debate erupted over the proposed budget cuts. <span class="read-sp">&#x1F509;</span></p>
+      <p onclick="ttsRead(&quot;Not only did the plan require immediate staff reductions, but it also demanded the closure of three regional offices. Such was the shock among senior members that several walked out of the hall.&quot;,0.88)">Not only <b>did</b> the plan require immediate staff reductions, but it also demanded the closure of three regional offices. Such <b>was</b> the shock among senior members that several walked out of the hall. <span class="read-sp">&#x1F509;</span></p>
+      <p onclick="ttsRead(&quot;Had the leadership communicated the plan in advance, the backlash might have been avoided. Little did the director general know that his proposal would divide the organisation so deeply.&quot;,0.88)">Had <b>the leadership</b> communicated the plan in advance, the backlash might have been avoided. Little <b>did</b> the director general know that his proposal would divide the organisation so deeply. <span class="read-sp">&#x1F509;</span></p>
+      <p onclick="ttsRead(&quot;Under no circumstances would the board reverse its decision, however. Only when an independent review confirmed the financial necessity did the majority finally accept the outcome.&quot;,0.88)">Under no circumstances <b>would</b> the board reverse its decision, however. Only when an independent review confirmed the financial necessity <b>did</b> the majority finally accept the outcome. <span class="read-sp">&#x1F509;</span></p>
+      <p onclick="ttsRead(&quot;What the episode revealed was a fundamental breakdown in internal communication. The harder the leadership pushed without consultation, the deeper the rift became.&quot;,0.88)">What the episode revealed was a fundamental breakdown in internal communication. The harder the leadership pushed without consultation, the deeper the rift became. <span class="read-sp">&#x1F509;</span></p>
+    </div>
+
+    <div class="vocab-wrap">
+      <div class="vocab-title">&#x1F4DA; Key Vocabulary</div>
+      <div class="vocab-grid">
+        <div class="vocab-card" onclick="ttsRead(&quot;magnitude&quot;,0.88)"><div class="vocab-en">magnitude</div><div class="vocab-ar ar">حجم / ضخامة / أهمية</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;restructuring&quot;,0.88)"><div class="vocab-en">restructuring</div><div class="vocab-ar ar">إعادة هيكلة</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;backlash&quot;,0.88)"><div class="vocab-en">backlash</div><div class="vocab-ar ar">ردّ فعل عنيف / موجة معارضة</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;erupted&quot;,0.88)"><div class="vocab-en">erupted</div><div class="vocab-ar ar">اندلع / انفجر فجأة</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;delegates&quot;,0.88)"><div class="vocab-en">delegates</div><div class="vocab-ar ar">مندوبون / ممثلون</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;rift&quot;,0.88)"><div class="vocab-en">rift</div><div class="vocab-ar ar">شرخ / انقسام عميق</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;breakdown&quot;,0.88)"><div class="vocab-en">breakdown</div><div class="vocab-ar ar">انهيار / فشل في التواصل</div></div>
+        <div class="vocab-card" onclick="ttsRead(&quot;consultation&quot;,0.88)"><div class="vocab-en">consultation</div><div class="vocab-ar ar">تشاور / استشارة</div></div>
+      </div>
+    </div>
+
+    <div class="rq-wrap">
+      <div class="rq-title">&#x2753; Comprehension Questions</div>
+      <div class="rq-item" id="rq1">
+        <div class="rq-q" onclick="ttsRead(&quot;Who proposed the restructuring plan?&quot;,0.88)">1. Who proposed the restructuring plan? &#x1F509;</div>
+        <div class="rq-opts">
+          <button class="read-opt" onclick="rqPick(this,'rq1',false)">The board of directors collectively</button>
+          <button class="read-opt" onclick="rqPick(this,'rq1',true)">The director general himself</button>
+          <button class="read-opt" onclick="rqPick(this,'rq1',false)">An independent review committee</button>
+          <button class="read-opt" onclick="rqPick(this,'rq1',false)">The regional office managers</button>
+        </div>
+      </div>
+      <div class="rq-item" id="rq2">
+        <div class="rq-q" onclick="ttsRead(&quot;What happened as soon as the meeting opened?&quot;,0.88)">2. What happened as soon as the meeting opened? &#x1F509;</div>
+        <div class="rq-opts">
+          <button class="read-opt" onclick="rqPick(this,'rq2',false)">Everyone agreed on the plan</button>
+          <button class="read-opt" onclick="rqPick(this,'rq2',true)">A heated debate erupted over the budget cuts</button>
+          <button class="read-opt" onclick="rqPick(this,'rq2',false)">The director general resigned</button>
+          <button class="read-opt" onclick="rqPick(this,'rq2',false)">The vote was postponed</button>
+        </div>
+      </div>
+      <div class="rq-item" id="rq3">
+        <div class="rq-q" onclick="ttsRead(&quot;What two things did the plan require?&quot;,0.88)">3. What two things did the plan require? &#x1F509;</div>
+        <div class="rq-opts">
+          <button class="read-opt" onclick="rqPick(this,'rq3',false)">New hires and budget increases</button>
+          <button class="read-opt" onclick="rqPick(this,'rq3',true)">Staff reductions and closure of three regional offices</button>
+          <button class="read-opt" onclick="rqPick(this,'rq3',false)">A new CEO and a financial audit</button>
+          <button class="read-opt" onclick="rqPick(this,'rq3',false)">Longer meetings and public consultation</button>
+        </div>
+      </div>
+      <div class="rq-item" id="rq4">
+        <div class="rq-q" onclick="ttsRead(&quot;When did the majority finally accept the decision?&quot;,0.88)">4. When did the majority finally accept the decision? &#x1F509;</div>
+        <div class="rq-opts">
+          <button class="read-opt" onclick="rqPick(this,'rq4',false)">Immediately after the director general spoke</button>
+          <button class="read-opt" onclick="rqPick(this,'rq4',false)">After a public vote was held</button>
+          <button class="read-opt" onclick="rqPick(this,'rq4',true)">Only when an independent review confirmed the financial necessity</button>
+          <button class="read-opt" onclick="rqPick(this,'rq4',false)">After the regional offices were already closed</button>
+        </div>
+      </div>
+      <div class="rq-item" id="rq5">
+        <div class="rq-q" onclick="ttsRead(&quot;What did the episode reveal according to the final paragraph?&quot;,0.88)">5. What did the episode fundamentally reveal? &#x1F509;</div>
+        <div class="rq-opts">
+          <button class="read-opt" onclick="rqPick(this,'rq5',false)">The organisation was financially successful</button>
+          <button class="read-opt" onclick="rqPick(this,'rq5',false)">The director general had acted correctly</button>
+          <button class="read-opt" onclick="rqPick(this,'rq5',true)">A fundamental breakdown in internal communication</button>
+          <button class="read-opt" onclick="rqPick(this,'rq5',false)">The board was planning to expand further</button>
+        </div>
+      </div>
+      <div class="rq-score" id="rqScore41" style="display:none">
+        <div class="rqs-icon">&#x1F3AF;</div>
+        <div class="rqs-num" id="rqScoreNum41"></div>
+        <div class="rqs-msg" id="rqScoreMsg41"></div>
+        <div class="rqs-ar ar" id="rqScoreAr41"></div>
+        <button class="rqs-btn" onclick="rqReset41()">&#x1F504; Try Again</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /tab-reading -->
+
+<!-- ════════════════════ CHECK IT! TAB ════════════════════ -->
+<div id="tab-checkit" class="tab-panel">
+  <div class="ci-hero">
+    <div class="ci-hero-icon">&#x2705;</div>
+    <h2 class="ci-hero-title">Check It!</h2>
+    <p class="ci-hero-sub">25 questions — Inversion &amp; Emphatic Structures — 20 MCQ + 5 Fill-in-the-Blank</p>
+    <div class="ci-hero-types">
+      <span class="tag tag-grammar">20 Multiple Choice</span>
+      <span class="tag tag-other">5 Fill in the Blank</span>
+    </div>
+  </div>
+  <div class="ci-progress-wrap">
+    <div class="ci-progress-inner">
+      <div class="ci-progress-bar"><div class="ci-progress-fill" id="ciProgressFill41"></div></div>
+      <div class="ci-progress-txt">
+        <span id="ciProgressTxt41">0 / 25 answered</span>
+        <span id="ciScoreTxt41">Score: 0</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="ci-wrap" id="ciWrap41">
+
+    <div class="ci-q" id="ciq1"><div class="ci-q-num">Q1</div><div class="ci-q-text" onclick="ttsRead(&quot;Never I have seen such a beautiful sunset. Is this correct?&quot;,0.88)">"Never <b>I have</b> seen such a sunset." — correct? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq1',false)">Yes — subject comes first after Never.</button><button class="ci-btn" onclick="ciPick(this,'ciq1',true)">No — "Never <b>have I</b> seen…" (auxiliary + subject)</button><button class="ci-btn" onclick="ciPick(this,'ciq1',false)">No — "Never I seen…" (drop auxiliary)</button><button class="ci-btn" onclick="ciPick(this,'ciq1',false)">Yes — normal order is kept after Never.</button></div></div>
+
+    <div class="ci-q" id="ciq2"><div class="ci-q-num">Q2</div><div class="ci-q-text" onclick="ttsRead(&quot;Rarely does she speak in public. Which rule applies here?&quot;,0.88)">"Rarely <b>does she</b> speak in public." — rule? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq2',false)">Conditional inversion</button><button class="ci-btn" onclick="ciPick(this,'ciq2',true)">Negative adverbial inversion with do/does/did</button><button class="ci-btn" onclick="ciPick(this,'ciq2',false)">So/Such inversion</button><button class="ci-btn" onclick="ciPick(this,'ciq2',false)">Emphatic do structure</button></div></div>
+
+    <div class="ci-q" id="ciq3"><div class="ci-q-num">Q3</div><div class="ci-q-text" onclick="ttsRead(&quot;Which is the correct inversion of: If I had known the truth?&quot;,0.88)">Inversion of: "If I had known the truth…" &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq3',false)">If had I known the truth…</button><button class="ci-btn" onclick="ciPick(this,'ciq3',true)">Had I known the truth…</button><button class="ci-btn" onclick="ciPick(this,'ciq3',false)">Knew I the truth…</button><button class="ci-btn" onclick="ciPick(this,'ciq3',false)">Should I have known the truth…</button></div></div>
+
+    <div class="ci-q" id="ciq4"><div class="ci-q-num">Q4</div><div class="ci-q-text" onclick="ttsRead(&quot;No sooner had he arrived than the meeting started. Which word follows no sooner?&quot;,0.88)">"No sooner had he arrived ___ the meeting started." &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq4',false)">when</button><button class="ci-btn" onclick="ciPick(this,'ciq4',true)">than</button><button class="ci-btn" onclick="ciPick(this,'ciq4',false)">before</button><button class="ci-btn" onclick="ciPick(this,'ciq4',false)">until</button></div></div>
+
+    <div class="ci-q" id="ciq5"><div class="ci-q-num">Q5</div><div class="ci-q-text" onclick="ttsRead(&quot;What is the so inversion of: She was so tired that she fell asleep?&quot;,0.88)">Inversion of: "She was so tired that she fell asleep." &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq5',false)">So she was tired that she fell asleep.</button><button class="ci-btn" onclick="ciPick(this,'ciq5',true)">So tired was she that she fell asleep.</button><button class="ci-btn" onclick="ciPick(this,'ciq5',false)">So tired she was that she fell asleep.</button><button class="ci-btn" onclick="ciPick(this,'ciq5',false)">So was she tired that she fell asleep.</button></div></div>
+
+    <div class="ci-q" id="ciq6"><div class="ci-q-num">Q6</div><div class="ci-q-text" onclick="ttsRead(&quot;What is the emphatic do form of: She called me yesterday?&quot;,0.88)">Emphatic form of: "She called me yesterday." &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq6',false)">She does call me yesterday.</button><button class="ci-btn" onclick="ciPick(this,'ciq6',true)">She did call me yesterday.</button><button class="ci-btn" onclick="ciPick(this,'ciq6',false)">She had call me yesterday.</button><button class="ci-btn" onclick="ciPick(this,'ciq6',false)">She did called me yesterday.</button></div></div>
+
+    <div class="ci-q" id="ciq7"><div class="ci-q-num">Q7</div><div class="ci-q-text" onclick="ttsRead(&quot;Which sentence uses a what-cleft correctly?&quot;,0.88)">Which is a correct <b>what-cleft</b>? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq7',false)">What I am needing is rest.</button><button class="ci-btn" onclick="ciPick(this,'ciq7',true)">What I need is more time.</button><button class="ci-btn" onclick="ciPick(this,'ciq7',false)">What need I is more time.</button><button class="ci-btn" onclick="ciPick(this,'ciq7',false)">What is I need more time.</button></div></div>
+
+    <div class="ci-q" id="ciq8"><div class="ci-q-num">Q8</div><div class="ci-q-text" onclick="ttsRead(&quot;Not only they missed the deadline, but also failed to communicate. Is this correct?&quot;,0.88)">"Not only <b>they missed</b> the deadline…" — correct? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq8',false)">Yes — subject stays in place after Not only.</button><button class="ci-btn" onclick="ciPick(this,'ciq8',true)">No — "Not only <b>did they miss</b> the deadline…"</button><button class="ci-btn" onclick="ciPick(this,'ciq8',false)">No — "Not only have they missed the deadline…" always.</button><button class="ci-btn" onclick="ciPick(this,'ciq8',false)">Yes — Not only does not trigger inversion.</button></div></div>
+
+    <div class="ci-q" id="ciq9"><div class="ci-q-num">Q9</div><div class="ci-q-text" onclick="ttsRead(&quot;Which adverbial does NOT trigger inversion? Never, Rarely, Because, Hardly?&quot;,0.88)">Which adverbial does <b>NOT</b> trigger inversion? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq9',false)">Never</button><button class="ci-btn" onclick="ciPick(this,'ciq9',false)">Rarely</button><button class="ci-btn" onclick="ciPick(this,'ciq9',true)">Because</button><button class="ci-btn" onclick="ciPick(this,'ciq9',false)">Hardly</button></div></div>
+
+    <div class="ci-q" id="ciq10"><div class="ci-q-num">Q10</div><div class="ci-q-text" onclick="ttsRead(&quot;Should you will need assistance, please call us. Is this correct?&quot;,0.88)">"Should you <b>will need</b> assistance…" — correct? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq10',false)">Yes — will shows future intent in formal English.</button><button class="ci-btn" onclick="ciPick(this,'ciq10',true)">No — "Should you <b>need</b> assistance…" (base verb, no will)</button><button class="ci-btn" onclick="ciPick(this,'ciq10',false)">No — use "Should you be needing…"</button><button class="ci-btn" onclick="ciPick(this,'ciq10',false)">Yes — should + will is standard in formal inversion.</button></div></div>
+
+    <div class="ci-break" id="brk10" style="display:none">
+      <div class="ci-break-icon">&#x2615;</div>
+      <div class="ci-break-title">Halfway! Keep Going!</div>
+      <div class="ci-break-ar ar">منتصف الطريق! استمر</div>
+      <div class="ci-break-score">Score so far: <span id="ciBreakScore41"></span> / 10</div>
+    </div>
+
+    <div class="ci-q" id="ciq11"><div class="ci-q-num">Q11</div><div class="ci-q-text" onclick="ttsRead(&quot;Hardly I had arrived when the alarm sounded. What is the correct form?&quot;,0.88)">"Hardly I had arrived when the alarm sounded." — correct form? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq11',false)">Hardly I had arrived when…</button><button class="ci-btn" onclick="ciPick(this,'ciq11',true)">Hardly had I arrived when…</button><button class="ci-btn" onclick="ciPick(this,'ciq11',false)">Hardly had I arrived than…</button><button class="ci-btn" onclick="ciPick(this,'ciq11',false)">Hardly have I arrived when…</button></div></div>
+
+    <div class="ci-q" id="ciq12"><div class="ci-q-num">Q12</div><div class="ci-q-text" onclick="ttsRead(&quot;It was the director who made the final decision. What structure is this?&quot;,0.88)">"It was <b>the director</b> who made the final decision." &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq12',false)">What-cleft sentence</button><button class="ci-btn" onclick="ciPick(this,'ciq12',true)">It-cleft sentence</button><button class="ci-btn" onclick="ciPick(this,'ciq12',false)">Emphatic do structure</button><button class="ci-btn" onclick="ciPick(this,'ciq12',false)">Negative adverbial inversion</button></div></div>
+
+    <div class="ci-q" id="ciq13"><div class="ci-q-num">Q13</div><div class="ci-q-text" onclick="ttsRead(&quot;Such was his anger that he left the room immediately. What structure is this?&quot;,0.88)">"Such was his anger that he left the room." &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq13',false)">Negative adverbial inversion</button><button class="ci-btn" onclick="ciPick(this,'ciq13',false)">Conditional inversion</button><button class="ci-btn" onclick="ciPick(this,'ciq13',true)">Such + inversion for result / emphasis</button><button class="ci-btn" onclick="ciPick(this,'ciq13',false)">Emphatic do structure</button></div></div>
+
+    <div class="ci-q" id="ciq14"><div class="ci-q-num">Q14</div><div class="ci-q-text" onclick="ttsRead(&quot;Which sentence correctly uses the the more the better structure?&quot;,0.88)">Which is correct? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq14',false)">More you study, better you get.</button><button class="ci-btn" onclick="ciPick(this,'ciq14',true)">The more you study, the better you get.</button><button class="ci-btn" onclick="ciPick(this,'ciq14',false)">The more you study, better you get.</button><button class="ci-btn" onclick="ciPick(this,'ciq14',false)">More you study, the better you get.</button></div></div>
+
+    <div class="ci-q" id="ciq15"><div class="ci-q-num">Q15</div><div class="ci-q-text" onclick="ttsRead(&quot;At no time was the staff informed of the change. Is this correct inversion?&quot;,0.88)">"At no time <b>was</b> the staff informed…" — correct? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq15',true)">Yes — "At no time" triggers inversion.</button><button class="ci-btn" onclick="ciPick(this,'ciq15',false)">No — "At no time the staff was informed."</button><button class="ci-btn" onclick="ciPick(this,'ciq15',false)">No — "At no time did the staff informed."</button><button class="ci-btn" onclick="ciPick(this,'ciq15',false)">Yes — but "at no time" never triggers inversion.</button></div></div>
+
+    <div class="ci-q" id="ciq16"><div class="ci-q-num">Q16</div><div class="ci-q-text" onclick="ttsRead(&quot;What is the inverted form of: If it had not been for your help?&quot;,0.88)">Inversion of: "If it had not been for your help…" &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq16',false)">Were it not been for your help…</button><button class="ci-btn" onclick="ciPick(this,'ciq16',true)">Had it not been for your help…</button><button class="ci-btn" onclick="ciPick(this,'ciq16',false)">Should it not be for your help…</button><button class="ci-btn" onclick="ciPick(this,'ciq16',false)">Not had it been for your help…</button></div></div>
+
+    <div class="ci-q" id="ciq17"><div class="ci-q-num">Q17</div><div class="ci-q-text" onclick="ttsRead(&quot;Only then did I understand how serious the problem was. What does only then mean here?&quot;,0.88)">"Only then <b>did I</b> understand how serious it was." — "Only then" means? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq17',false)">At no point did I understand</button><button class="ci-btn" onclick="ciPick(this,'ciq17',true)">At that particular moment, and not before</button><button class="ci-btn" onclick="ciPick(this,'ciq17',false)">Only I understood it</button><button class="ci-btn" onclick="ciPick(this,'ciq17',false)">I understood it only for a moment</button></div></div>
+
+    <div class="ci-q" id="ciq18"><div class="ci-q-num">Q18</div><div class="ci-q-text" onclick="ttsRead(&quot;Which three auxiliaries are used in conditional inversion?&quot;,0.88)">Which three are used in conditional inversion? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq18',false)">will / would / could</button><button class="ci-btn" onclick="ciPick(this,'ciq18',true)">had / were / should</button><button class="ci-btn" onclick="ciPick(this,'ciq18',false)">do / does / did</button><button class="ci-btn" onclick="ciPick(this,'ciq18',false)">have / has / had</button></div></div>
+
+    <div class="ci-q" id="ciq19"><div class="ci-q-num">Q19</div><div class="ci-q-text" onclick="ttsRead(&quot;Inversion is mainly used in which type of English?&quot;,0.88)">Inversion is mainly used in ___ English. &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq19',false)">Everyday casual conversation</button><button class="ci-btn" onclick="ciPick(this,'ciq19',true)">Formal, literary, and academic writing</button><button class="ci-btn" onclick="ciPick(this,'ciq19',false)">Text messages and social media</button><button class="ci-btn" onclick="ciPick(this,'ciq19',false)">Informal speech between friends</button></div></div>
+
+    <div class="ci-q" id="ciq20"><div class="ci-q-num">Q20</div><div class="ci-q-text" onclick="ttsRead(&quot;Hardly had I sat down when the phone rang. Is this correct?&quot;,0.88)">"Hardly <b>had I</b> sat down when the phone rang." — correct? &#x1F509;</div><div class="ci-opts"><button class="ci-btn" onclick="ciPick(this,'ciq20',true)">Yes — correct negative adverbial inversion.</button><button class="ci-btn" onclick="ciPick(this,'ciq20',false)">No — "Hardly I had sat down when…"</button><button class="ci-btn" onclick="ciPick(this,'ciq20',false)">No — "Hardly had I sat down than…"</button><button class="ci-btn" onclick="ciPick(this,'ciq20',false)">No — Hardly does not trigger inversion.</button></div></div>
+
+    <div class="ci-q ci-fib" id="ciq21"><div class="ci-q-num">Q21</div><div class="ci-fib-lbl">&#x270F; Fill in the Blank</div><div class="ci-q-text" onclick="ttsRead(&quot;Never have I seen such dedication from a team.&quot;,0.88)">Never ___ I seen such dedication from a team. <span class="read-sp">&#x1F509;</span></div><div class="ci-fib-wrap"><input class="ci-fib-input" id="fib21" type="text" placeholder="Type your answer..."><button class="ci-fib-btn" id="fibBtn21" onclick="ciFibCheck('fib21','fibBtn21','ciq21','fibSol21','have')">Check</button></div><div class="ci-fib-solution" id="fibSol21" style="display:none">&#x2705; Answer: <b>have</b> &nbsp;|&nbsp; <b>have</b> — Never + auxiliary (have) + subject (I) + past participle</div></div>
+
+    <div class="ci-q ci-fib" id="ciq22"><div class="ci-q-num">Q22</div><div class="ci-fib-lbl">&#x270F; Fill in the Blank</div><div class="ci-q-text" onclick="ttsRead(&quot;Rarely does she leave the office before eight.&quot;,0.88)">Rarely ___ she leave the office before eight. <span class="read-sp">&#x1F509;</span></div><div class="ci-fib-wrap"><input class="ci-fib-input" id="fib22" type="text" placeholder="Type your answer..."><button class="ci-fib-btn" id="fibBtn22" onclick="ciFibCheck('fib22','fibBtn22','ciq22','fibSol22','does')">Check</button></div><div class="ci-fib-solution" id="fibSol22" style="display:none">&#x2705; Answer: <b>does</b> &nbsp;|&nbsp; <b>does</b> — present simple inversion: Rarely + does + subject + base verb</div></div>
+
+    <div class="ci-q ci-fib" id="ciq23"><div class="ci-q-num">Q23</div><div class="ci-fib-lbl">&#x270F; Fill in the Blank</div><div class="ci-q-text" onclick="ttsRead(&quot;Not only did they win the match, but they also broke the record.&quot;,0.88)">Not only ___ they win the match, but they also broke the record. <span class="read-sp">&#x1F509;</span></div><div class="ci-fib-wrap"><input class="ci-fib-input" id="fib23" type="text" placeholder="Type your answer..."><button class="ci-fib-btn" id="fibBtn23" onclick="ciFibCheck('fib23','fibBtn23','ciq23','fibSol23','did')">Check</button></div><div class="ci-fib-solution" id="fibSol23" style="display:none">&#x2705; Answer: <b>did</b> &nbsp;|&nbsp; <b>did</b> — Not only + did + subject + base verb (past simple inversion)</div></div>
+
+    <div class="ci-q ci-fib" id="ciq24"><div class="ci-q-num">Q24</div><div class="ci-fib-lbl">&#x270F; Fill in the Blank</div><div class="ci-q-text" onclick="ttsRead(&quot;Had I known about the issue, I would have acted sooner.&quot;,0.88)">___ I known about the issue, I would have acted sooner. <span class="read-sp">&#x1F509;</span></div><div class="ci-fib-wrap"><input class="ci-fib-input" id="fib24" type="text" placeholder="Type your answer..."><button class="ci-fib-btn" id="fibBtn24" onclick="ciFibCheck('fib24','fibBtn24','ciq24','fibSol24','Had')">Check</button></div><div class="ci-fib-solution" id="fibSol24" style="display:none">&#x2705; Answer: <b>Had</b> &nbsp;|&nbsp; <b>Had</b> — conditional inversion: Had replaces "If I had"</div></div>
+
+    <div class="ci-q ci-fib" id="ciq25"><div class="ci-q-num">Q25</div><div class="ci-fib-lbl">&#x270F; Fill in the Blank</div><div class="ci-q-text" onclick="ttsRead(&quot;Hardly had I sat down when the alarm went off.&quot;,0.88)">Hardly ___ I sat down when the alarm went off. <span class="read-sp">&#x1F509;</span></div><div class="ci-fib-wrap"><input class="ci-fib-input" id="fib25" type="text" placeholder="Type your answer..."><button class="ci-fib-btn" id="fibBtn25" onclick="ciFibCheck('fib25','fibBtn25','ciq25','fibSol25','had')">Check</button></div><div class="ci-fib-solution" id="fibSol25" style="display:none">&#x2705; Answer: <b>had</b> &nbsp;|&nbsp; <b>had</b> — Hardly + had + subject + past participle + when</div></div>
+
+    <div class="ci-final-score" id="ciFinal41" style="display:none">
+      <div class="cif-icon">&#x1F3C6;</div>
+      <div class="cif-title">Lesson Complete!</div>
+      <div class="cif-ar ar">أحسنت! أتقنت التقديم والتأخير</div>
+      <div class="cif-score"><span id="ciFinalScore41"></span> / 25</div>
+      <div class="cif-msg" id="ciFinalMsg41"></div>
+      <div class="cif-ar ar" id="ciFinalAr41"></div>
+      <div class="cif-btns">
+        <button class="cif-btn" onclick="ciReset41()">&#x1F504; Try Again</button>
+        <button class="cif-btn cif-btn-next" onclick="window.location.href='../index.html'">&#x1F3E0; Main Menu</button>
+      </div>
+    </div>
+
+  </div><!-- /ciWrap41 -->
+</div><!-- /tab-checkit -->
+
+</div><!-- /main-content -->
+</div><!-- /layout -->
+
+<script src="../media/global-player.js"></script>
+<script>
+var rqScore41=0,rqAnswered41=0;
+var ciScore41=0,ciAnswered41=0,ciTotal41=25;
+
+function showTab(id,btn){
+  document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.remove('active');});
+  document.querySelectorAll('.main-tab').forEach(function(b){b.classList.remove('active');});
+  document.getElementById('tab-'+id).classList.add('active');
+  btn.classList.add('active');
+}
+function ttsRead(text,rate){
+  speechSynthesis.cancel();
+  var u=new SpeechSynthesisUtterance(text);
+  u.lang='en-US';u.rate=rate||0.9;
+  speechSynthesis.speak(u);
+}
+function rqPick(btn,qid,correct){
+  var qEl=document.getElementById(qid);
+  if(qEl.dataset.done)return;
+  qEl.dataset.done='1';
+  qEl.querySelectorAll('.read-opt').forEach(function(b){b.classList.add('done');if(b===btn)b.classList.add(correct?'correct':'wrong');});
+  if(correct)rqScore41++;
+  rqAnswered41++;
+  if(rqAnswered41===5){
+    var sc=document.getElementById('rqScore41');sc.style.display='block';
+    document.getElementById('rqScoreNum41').textContent=rqScore41+'/5';
+    var msgs=[['Keep practising!','استمر في التدريب!'],['Good effort!','جهد جيد!'],['Getting there!','أنت تتحسن!'],['Well done!','أداء جيد جداً!'],['Great job!','عمل رائع!'],['Perfect!','نتيجة مثالية!']];
+    var m=msgs[Math.min(rqScore41,5)];
+    document.getElementById('rqScoreMsg41').textContent=m[0];
+    document.getElementById('rqScoreAr41').textContent=m[1];
+    sc.scrollIntoView({behavior:'smooth',block:'center'});
+  }
+}
+function rqReset41(){
+  rqScore41=0;rqAnswered41=0;
+  ['rq1','rq2','rq3','rq4','rq5'].forEach(function(id){
+    var q=document.getElementById(id);if(!q)return;
+    delete q.dataset.done;
+    q.querySelectorAll('.read-opt').forEach(function(b){b.classList.remove('correct','wrong','done');});
+  });
+  document.getElementById('rqScore41').style.display='none';
+  document.getElementById('tab-reading').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function ciUpdateProgress41(){
+  var pct=Math.round(ciAnswered41/ciTotal41*100);
+  document.getElementById('ciProgressFill41').style.width=pct+'%';
+  document.getElementById('ciProgressTxt41').textContent=ciAnswered41+' / '+ciTotal41+' answered';
+  document.getElementById('ciScoreTxt41').textContent='Score: '+ciScore41;
+}
+function ciCheckBreakAndDone41(){
+  if(ciAnswered41===10){
+    var bEl=document.getElementById('brk10');
+    if(bEl){bEl.style.display='block';document.getElementById('ciBreakScore41').textContent=ciScore41;}
+  }
+  if(ciAnswered41===ciTotal41)ciShowScore41();
+}
+function ciPick(btn,qid,correct){
+  var qEl=document.getElementById(qid);if(qEl.dataset.done)return;
+  qEl.dataset.done='1';
+  qEl.querySelectorAll('.ci-btn').forEach(function(b){b.classList.add('done');});
+  btn.classList.add(correct?'ci-correct':'ci-wrong');
+  if(correct)ciScore41++;
+  ciAnswered41++;ciUpdateProgress41();ciCheckBreakAndDone41();
+}
+function ciFibCheck(inputId,btnId,qid,solId,answer){
+  var inp=document.getElementById(inputId),btn=document.getElementById(btnId),qEl=document.getElementById(qid);
+  if(qEl.dataset.done)return;
+  var correct=inp.value.trim().toLowerCase()===answer.toLowerCase();
+  qEl.dataset.done='1';inp.disabled=true;btn.disabled=true;
+  inp.style.borderColor=correct?'var(--green)':'var(--red)';
+  inp.style.color=correct?'var(--green)':'var(--red)';
+  var sol=document.getElementById(solId);if(sol)sol.style.display='block';
+  if(correct)ciScore41++;
+  ciAnswered41++;ciUpdateProgress41();ciCheckBreakAndDone41();
+}
+function ciShowScore41(){
+  var el=document.getElementById('ciFinal41');el.style.display='block';
+  document.getElementById('ciFinalScore41').textContent=ciScore41;
+  var pct=Math.round(ciScore41/ciTotal41*100);
+  var msgs=[['Keep studying!','واصل الدراسة!'],['Good start!','بداية جيدة!'],['Well done!','عمل جيد!'],['Great job!','أداء رائع!'],['Excellent!','ممتاز!'],['Perfect!','نتيجة مثالية!']];
+  var idx=Math.floor(pct/20);
+  var m=msgs[Math.min(idx,5)];
+  document.getElementById('ciFinalMsg41').textContent=m[0];
+  document.getElementById('ciFinalAr41').textContent=m[1];
+  localStorage.setItem('up_l41',Math.round(ciScore41/ciTotal41*100));
+  el.scrollIntoView({behavior:'smooth',block:'center'});
+}
+function ciReset41(){
+  ciScore41=0;ciAnswered41=0;
+  document.getElementById('ciFinal41').style.display='none';
+  document.getElementById('brk10').style.display='none';
+  for(var i=1;i<=25;i++){
+    var q=document.getElementById('ciq'+i);if(!q)continue;
+    delete q.dataset.done;
+    q.querySelectorAll('.ci-btn').forEach(function(b){b.classList.remove('ci-correct','ci-wrong','done');});
+    var inp=q.querySelector('.ci-fib-input');
+    if(inp){inp.value='';inp.disabled=false;inp.style.borderColor='';inp.style.color='';}
+    var fbtn=q.querySelector('.ci-fib-btn');if(fbtn)fbtn.disabled=false;
+    var sol=q.querySelector('.ci-fib-solution');if(sol)sol.style.display='none';
+  }
+  ciUpdateProgress41();
+  document.getElementById('tab-checkit').scrollIntoView({behavior:'smooth',block:'start'});
+}
+</script>
+
+
+
+
+
+
+
+<script>
+(function(){
+  var map={1: "up_l1", 2: "up_l2", 3: "up_l3", 4: "up_l4", 5: "up_l5", 6: "up1", 7: "up2", 8: "up3", 9: "up4", 10: "up6", 11: "up5", 12: "up_l12", 13: "up7", 14: "up8", 15: "up9", 16: "up10", 17: "up11", 19: "up_l19", 20: "up_l20", 21: "up_l21", 22: "up_l22", 23: "up_l23", 24: "up_l24", 25: "up_l25", 26: "up_l26", 27: "up_l27", 28: "up_l28", 29: "up_l29", 30: "up_l30", 31: "up_l31", 32: "up_l32", 33: "up_l33", 34: "up_l34", 35: "up_l35", 36: "up_l36", 37: "up_l37", 38: "up_l38", 39: "up_l39", 40: "up_l40", 41: "up_l41", 42: "up_l42", 43: "up_l43", 44: "up_l44", 45: "up_l45", 46: "up_l46"};
+  for(var lid in map){
+    var f=document.getElementById('sp'+lid);
+    if(f){var v=parseInt(localStorage.getItem(map[lid])||'0',10);f.style.width=v+'%';}
+  }
+  setTimeout(function(){
+    var a=document.querySelector('.su-item.su-active');
+    if(a){var u=a.closest('.sidebar-units');if(u)u.scrollTop=Math.max(0,a.offsetTop-a.offsetHeight);}
+  },80);
+})();
+</script>
+<script>
+function toggleSidebar(){
+  var sb=document.querySelector('.sidebar');
+  var bd=document.getElementById('sbBackdrop');
+  if(!sb||!bd)return;
+  sb.classList.toggle('sb-open');
+  bd.classList.toggle('sb-open');
+  document.body.style.overflow=sb.classList.contains('sb-open')?'hidden':'';
+}
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.su-item').forEach(function(a){
+    a.addEventListener('click',function(){
+      var sb=document.querySelector('.sidebar');
+      if(sb&&sb.classList.contains('sb-open'))toggleSidebar();
+    });
+  });
+});
+</script>
+
+<script>
+(function(){
+  // Disable right-click
+  document.addEventListener('contextmenu', function(e){ e.preventDefault(); });
+
+  // Disable keyboard shortcuts
+  document.addEventListener('keydown', function(e){
+    // F12
+    if(e.key==='F12'){e.preventDefault();return false;}
+    // Ctrl+U (view source), Ctrl+S (save), Ctrl+A (select all), Ctrl+P (print)
+    if(e.ctrlKey && ['u','U','s','S','a','A','p','P'].indexOf(e.key)!==-1){
+      e.preventDefault();return false;
+    }
+    // Ctrl+Shift+I (DevTools), Ctrl+Shift+J, Ctrl+Shift+C
+    if(e.ctrlKey && e.shiftKey && ['i','I','j','J','c','C','k','K'].indexOf(e.key)!==-1){
+      e.preventDefault();return false;
+    }
+  });
+
+  // Disable text selection via CSS
+  document.documentElement.style.webkitUserSelect='none';
+  document.documentElement.style.userSelect='none';
+
+  // Allow selection inside inputs/textareas only
+  document.addEventListener('mousedown', function(e){
+    var t=e.target.tagName;
+    if(t==='INPUT'||t==='TEXTAREA'){
+      e.target.style.userSelect='text';
+      e.target.style.webkitUserSelect='text';
+    }
+  });
+
+  // Block drag
+  document.addEventListener('dragstart', function(e){ e.preventDefault(); });
+})();
+</script>
+<button class="float-menu-btn" onclick="toggleSidebar()" aria-label="القائمة">
+  <span></span><span></span><span></span>
+</button>
+<script src="https://code.responsivevoice.org/responsivevoice.js?key=FREE"></script>
+<script src="../media/rv.js"></script>
+</body>
+</html>
